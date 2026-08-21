@@ -1225,7 +1225,7 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
 
 def render_404(site_root: str) -> str:
     return (f"<h1>Page not found</h1><p>This capture or model page does not exist (or "
-            f"its URL changed pre-launch). The <a href='{esc(site_root)}'>"
+            f"the URL is mistyped). The <a href='{esc(site_root)}'>"
             f"index</a> lists every tracked source, and the "
             f"<a href='{esc(site_root)}status/'>status page</a> shows every model. "
             f"If a cited permalink 404s, please report it: it should not happen.</p>")

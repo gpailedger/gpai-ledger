@@ -57,8 +57,8 @@ instead.
 ## Publishing and bootstrap
 
 The corpus was bootstrapped 11–19 August 2026 under manually triggered local runs;
-the automated daily schedule (`.github/workflows/ledger.yml`, 05:47 UTC) applies
-from the repository's publication. Re-captures whose bytes changed but whose content
+the automated daily schedule (`.github/workflows/ledger.yml`, 05:47 UTC) has run
+in GitHub Actions since 21 August 2026. Re-captures whose bytes changed but whose content
 is identical (banner churn, re-serialization) may be pruned via
 `crawler/prune_capture.py`; every prune is logged in `data/events.jsonl` with the
 pruned file's hash; the prune rule only ever removes captures whose content
