@@ -1,0 +1,39 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "provider-live",
+  "sha256": "ca2ecd78dfd4f744631788754a825cf1c5882ef0683d7ed6557e3919ba232757",
+  "size_bytes": 80635,
+  "stored_as": "raw.html",
+  "text_sha256": "ef246084fca6231c34ede1ce6f4d0cfef8c3ad5e2ce4524d555717b713b109c6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "final_url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-21T11:05:27Z"
+  },
+  "prior_sha256": "0f824c4720915305f668611aca2af536fafa38eca1008f252c4b9150693f693f",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260821110530/https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "at": "2026-08-21T11:05:47Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-21T11:05:52Z"
+  }
+}

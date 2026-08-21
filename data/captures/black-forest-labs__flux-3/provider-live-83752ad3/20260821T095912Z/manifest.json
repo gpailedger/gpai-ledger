@@ -27,9 +27,8 @@
   "prior_sha256": "0073a17c80487665009993dc9e0cccbb75807eda355ca833bd42e2efbf8c94f3",
   "wayback": {
     "ok": false,
-    "status_code": 500,
-    "snapshot": null,
-    "at": "2026-08-21T10:06:23Z"
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://bfl.ai/transparency?tab=training-data-summaries (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "at": "2026-08-21T11:12:47Z"
   },
   "ots": {
     "ok": true,
@@ -48,6 +47,12 @@
       "status_code": 500,
       "snapshot": null,
       "at": "2026-08-21T09:59:23Z"
+    },
+    {
+      "ok": false,
+      "status_code": 500,
+      "snapshot": null,
+      "at": "2026-08-21T10:06:23Z"
     }
   ]
 }
