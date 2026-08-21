@@ -1,0 +1,47 @@
+{
+  "source_id": "thinking-machines/inkling-small",
+  "provider": "Thinking Machines",
+  "model": "Inkling Small",
+  "target_kind": "provider-live",
+  "sha256": "01df116716f944232d2275d2349f165160832917774d59e905c0079e1c158b20",
+  "size_bytes": 208473,
+  "stored_as": "raw.pdf",
+  "text_sha256": "649c4da22de478e86da706b42ca3c81de87cf0780c66f36c60572efe3f413d4f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://thinkingmachines.ai/documents/inkling-small-public-summary-training-content.pdf",
+    "final_url": "https://thinkingmachines.ai/documents/inkling-small-public-summary-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"dd859f1e1822b89a11cc091267074472\"",
+    "last_modified": null,
+    "content_length": "208473",
+    "fetched_at": "2026-08-17T08:40:08Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112834/https://thinkingmachines.ai/documents/inkling-small-public-summary-training-content.pdf",
+    "at": "2026-08-19T11:28:44Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:40:22Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:40:10Z"
+    }
+  ]
+}

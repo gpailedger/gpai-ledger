@@ -1,0 +1,35 @@
+{
+  "source_id": "fastweb/fastwebmiia",
+  "provider": "Fastweb",
+  "model": "FastwebMIIA",
+  "target_kind": "aial-archive",
+  "sha256": "86ea0b5c0fccbeeff157f731fba535b55dae073e4f84156413e87f5d8c29110d",
+  "size_bytes": 487223,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Sintesi_2026_07_22.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Sintesi_2026_07_22.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"timjw2afxz\"",
+    "last_modified": "Thu, 23 Jul 2026 11:00:02 GMT",
+    "content_length": "487223",
+    "fetched_at": "2026-08-11T10:32:40Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:32:46Z"
+  },
+  "text_sha256": "56fa17f517f4749f197d99ed44149bb66cc17357f6041c26fdea808506a41352"
+}

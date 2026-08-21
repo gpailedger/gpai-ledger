@@ -1,0 +1,39 @@
+{
+  "source_id": "eu-commission/gpai-code-of-practice",
+  "provider": "European Commission",
+  "model": "GPAI Code of Practice page (signatories)",
+  "target_kind": "watch-page",
+  "sha256": "e367833213b9d63d805f78dd6e100753ddfc14fa845440ca7061f5fa368a5876",
+  "size_bytes": 60504,
+  "stored_as": "raw.html",
+  "text_sha256": "99c3f7cd37ee4ee37741bcb2539a11ba1b6e06e00ebde3ef4128cbf4bf929adc",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "final_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"1787151761-gzip\"",
+    "last_modified": "Wed, 19 Aug 2026 15:02:41 GMT",
+    "content_length": "10925",
+    "fetched_at": "2026-08-19T15:07:10Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150716/https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "at": "2026-08-19T15:07:38Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:07:49Z"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "provider-live",
+  "sha256": "99e1acc080c60af53f82397ad0d15774a8cf64148f1c5c0721987d1029b03ee9",
+  "size_bytes": 299517,
+  "stored_as": "raw.pdf",
+  "text_sha256": "c6a519c025a08101b85e6d4491fde9b2bfc300e5266fb9ceb865d86554a9bcb5",
+  "extraction_notes": [
+    "repaired 2026-08-17: stored as .bin (extensionless URL, octet-stream); magic-byte sniffed to PDF, text extracted; bytes and .ots unchanged"
+  ],
+  "http": {
+    "url": "https://drive.google.com/uc?export=download&id=1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi",
+    "final_url": "https://drive.usercontent.google.com/download?id=1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi&export=download",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": null,
+    "last_modified": "Sun, 02 Aug 2026 13:46:27 GMT",
+    "content_length": "299517",
+    "fetched_at": "2026-08-17T08:41:32Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112354/https://drive.usercontent.google.com/download?id=1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi&export=download",
+    "at": "2026-08-19T11:24:00Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:41:50Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 500,
+      "snapshot": null,
+      "at": "2026-08-17T08:41:38Z"
+    }
+  ]
+}

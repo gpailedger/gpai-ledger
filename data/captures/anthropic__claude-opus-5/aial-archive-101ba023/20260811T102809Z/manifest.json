@@ -1,0 +1,35 @@
+{
+  "source_id": "anthropic/claude-opus-5",
+  "provider": "Anthropic",
+  "model": "Claude Opus 5",
+  "target_kind": "aial-archive",
+  "sha256": "06dfc855a9905ffd6a949942abc6857889a558d5dbed756d6f0fd3a908bbc1d2",
+  "size_bytes": 285312,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_5_2026_08_03.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_5_2026_08_03.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tj6qz1645c\"",
+    "last_modified": "Mon, 03 Aug 2026 08:45:01 GMT",
+    "content_length": "285312",
+    "fetched_at": "2026-08-11T10:28:09Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:28:15Z"
+  },
+  "text_sha256": "47ecd6712f71c2988c3765a78bb8859c44ca6402d04f742725d5bbda7ca056a4"
+}

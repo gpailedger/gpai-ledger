@@ -1,0 +1,35 @@
+{
+  "source_id": "xai/grok-4-5",
+  "provider": "xAI",
+  "model": "Grok 4.5",
+  "target_kind": "aial-archive",
+  "sha256": "55873c4a8cdb65eaafadda18eefa7aa1c956c8be7447f818ade6331a7bdb2bf8",
+  "size_bytes": 214200,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Grok_4_5_2026_07_17.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Grok_4_5_2026_07_17.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tjcwbw4la0\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": "214200",
+    "fetched_at": "2026-08-11T10:38:30Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:38:38Z"
+  },
+  "text_sha256": "e7662f1be6f28ae5bb6d8c82f9ab9ee183e6528e81fed147a323f3fcb46b34b8"
+}

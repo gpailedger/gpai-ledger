@@ -1,0 +1,41 @@
+{
+  "source_id": "google/transparency-bucket",
+  "provider": "Google",
+  "model": "Transparency-report bucket listing",
+  "target_kind": "watch-page",
+  "sha256": "e6f78ffdd15ae2792c0097e10cca8646560077956960cc6c327fbd57842a38e9",
+  "size_bytes": 70674,
+  "stored_as": "raw.bin",
+  "text_sha256": "e6f78ffdd15ae2792c0097e10cca8646560077956960cc6c327fbd57842a38e9",
+  "extraction_notes": [
+    "bucket listing is machine-readable XML; extracted as text for display, stored raw for change detection"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "final_url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "status_code": 200,
+    "content_type": "application/xml",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "70674",
+    "fetched_at": "2026-08-17T14:41:30Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260817144240/https://storage.googleapis.com/transparencyreport?prefix=report-downloads%2F",
+    "at": "2026-08-17T14:42:44Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T14:42:56Z"
+  }
+}

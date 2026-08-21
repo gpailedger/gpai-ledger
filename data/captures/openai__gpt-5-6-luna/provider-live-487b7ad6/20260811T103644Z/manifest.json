@@ -1,0 +1,41 @@
+{
+  "source_id": "openai/gpt-5-6-luna",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Luna",
+  "target_kind": "provider-live",
+  "sha256": "0d92de5d44874b7a82948c2daafd4ab4e8ef3ec7775854a2521f6d9bb67d07ca",
+  "size_bytes": 207613,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf",
+    "final_url": "https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 31 Jul 2026 15:10:19 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:36:44Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811103647/https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf",
+    "at": "2026-08-11T10:36:54Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:37:05Z"
+  },
+  "text_sha256": "a7a34dda65142db088495b3491cd0cdc84ea36562f079bd25bc41a4663ff26f5"
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "mistral-ai/model-catalog",
+  "provider": "Mistral AI",
+  "model": "AI-governance model list",
+  "target_kind": "watch-page",
+  "sha256": "ed708010d954fa80e146b42174308e404c4bccc70bbe86e1645317c1a21d4511",
+  "size_bytes": 142288,
+  "stored_as": "raw.html",
+  "text_sha256": "5e050d6a1431dad77f886a9deb32af3ea8630eb187966bd9a236715e7db237c6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/ai-governance/models",
+    "final_url": "https://legal.mistral.ai/ai-governance/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"yl8zzuzjur31fc-df\"",
+    "last_modified": null,
+    "content_length": "12770",
+    "fetched_at": "2026-08-19T15:04:14Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150419/https://legal.mistral.ai/ai-governance/models",
+    "at": "2026-08-19T15:04:34Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:04:47Z"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "source_id": "openai/gpt-image-2",
+  "provider": "OpenAI",
+  "model": "GPT Image 2",
+  "target_kind": "provider-live",
+  "sha256": "8a3ac329e248433d3a2db555236fcc94684c0294d2a705bbaf2a60995c216b3a",
+  "size_bytes": 206602,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
+    "final_url": "https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 07 Aug 2026 20:07:36 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-11T11:10:46Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811111049/https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
+    "at": "2026-08-11T11:10:56Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:11:08Z"
+  },
+  "text_sha256": "cfcfa03999a8f813182de1c0f7f59ef4823220556561ad2f85834fa9e187eb64"
+}

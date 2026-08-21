@@ -1,0 +1,47 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "provider-live",
+  "sha256": "2a9c8cbb812369ee0ba8f46d17114404b1bc43f2f4a0b2b7acd0639f4b6e045c",
+  "size_bytes": 243413,
+  "stored_as": "raw.html",
+  "text_sha256": "1769563382326319bd69c953132308cdf71a6e15b3d3ff2fde48f5da56fb0737",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://www.domyn.com/summary-of-training-data/domyn-large",
+    "final_url": "https://www.domyn.com/summary-of-training-data/domyn-large",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Tue, 18 Aug 2026 16:39:56 GMT",
+    "content_length": "243413",
+    "fetched_at": "2026-08-18T17:01:56Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 8,
+    "consent_dismissed": "Decline",
+    "consent_nodes_removed": 1,
+    "frames_captured": []
+  },
+  "prior_sha256": "e671750cf304a13c3097c4e1e52ac98f8622fc99270136c487e110a7c323607e",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260818170202/https://www.domyn.com/summary-of-training-data/domyn-large",
+    "at": "2026-08-18T17:02:22Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T17:02:33Z"
+  }
+}

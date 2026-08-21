@@ -1,0 +1,57 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "provider-live",
+  "sha256": "f7cb2e6b384483ee5830a261eea82f51f34287cf61f0f0bcfa97b382adc71798",
+  "size_bytes": 287869,
+  "stored_as": "raw.html",
+  "text_sha256": "f7f24f3238ec73d5db1c63f004334d104d33c2de2856dff0be8757e0583f72b8",
+  "extraction_notes": [
+    "cookie-consent banners are excluded from this text extraction (site navigation is preserved); the stored raw capture is untouched — re-extraction after the change produced identical text"
+  ],
+  "http": {
+    "url": "https://bria.ai/eu-policy",
+    "final_url": "https://bria.ai/eu-policy",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"13v0kge6a896635\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-17T08:04:51Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112324/https://bria.ai/eu-policy",
+    "at": "2026-08-19T11:23:39Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:05:05Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:04:53Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:33:01Z"
+    }
+  ]
+}

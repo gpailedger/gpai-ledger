@@ -1,0 +1,1789 @@
+{
+  "generated_utc": "2026-08-20T15:04:16Z",
+  "seed": {
+    "aial_repo": "https://github.com/AIAccountabilityLab/gpai-training-transparency",
+    "aial_head": "0a9c5d873c165928044f4919c57e7acecc9d493e"
+  },
+  "counts": {
+    "published": 46,
+    "missing": 21,
+    "watch": 12,
+    "regulatory": 1,
+    "total": 80
+  },
+  "sources": [
+    {
+      "id": "adobe/adobe-firefly",
+      "provider": "Adobe",
+      "model": "Adobe Firefly",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Adobe_Firefly_2026_07_22.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/adobe-firefly.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/adobe-firefly/",
+        "public_summary_date": "2025-11-01",
+        "model_publication_date": "2025-11-28",
+        "evaluation_date": "2026-07-22",
+        "category": "New model",
+        "archive_file_name": "Adobe_Firefly_2026_07_22.pdf"
+      }
+    },
+    {
+      "id": "swiss-ai-initiative/apertus-1-5",
+      "provider": "Swiss AI Initiative",
+      "model": "Apertus v1.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "cop-doc",
+          "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Apertus_1_5_2026_08_05.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/apertus-1-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/apertus-1-5/",
+        "public_summary_date": "2026-07-17",
+        "model_publication_date": "2026-07-14",
+        "evaluation_date": "2026-08-05",
+        "category": "New model",
+        "archive_file_name": "Apertus_1_5_2026_08_05.pdf"
+      }
+    },
+    {
+      "id": "swiss-ai-initiative/apertus",
+      "provider": "Swiss AI Initiative",
+      "model": "Apertus",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/swiss-ai/Apertus-70B-2509/resolve/main/Apertus_EU_Public_Summary.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Apertus_2025_11_12.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/apertus.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/apertus/",
+        "public_summary_date": "2025-09-01",
+        "model_publication_date": "2025-09-02",
+        "evaluation_date": "2026-03-30",
+        "category": "New model",
+        "archive_file_name": "Apertus_2025_11_12.pdf"
+      }
+    },
+    {
+      "id": "servicenow/apriel-1-5",
+      "provider": "ServiceNow",
+      "model": "Apriel 1.5 15B Thinker",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/apriel-1-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/apriel-1-5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-30",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "speakleash/bielik",
+      "provider": "SpeakLeash",
+      "model": "Bielik v3 11B Instruct",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Bielik_3_2026_01_12.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bielik.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bielik/",
+        "public_summary_date": "2026-01-01",
+        "model_publication_date": "2025-12-31",
+        "evaluation_date": "2026-03-30",
+        "category": "Fine-tuned model",
+        "archive_file_name": "Bielik_3_2026_01_12.pdf"
+      }
+    },
+    {
+      "id": "bria-ai/bria",
+      "provider": "Bria AI",
+      "model": "Bria 3.2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://bria.ai/eu-policy",
+          "note": "manually verified direct URL",
+          "render": true,
+          "inpage": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Bria_32_2026_01_12.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bria.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bria/",
+        "public_summary_date": "2026-01-06",
+        "model_publication_date": "2025-06-10",
+        "evaluation_date": "2026-03-31",
+        "category": "New model",
+        "archive_file_name": "Bria_32_2026_01_12.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-haiku-4-5",
+      "provider": "Anthropic",
+      "model": "Claude Haiku 4.5",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-haiku-4-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-haiku-4-5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-10-15",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-mythos-5-fable-5",
+      "provider": "Anthropic",
+      "model": "Claude Mythos 5 / Claude Fable 5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_5_Fable_5_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-mythos-5-fable-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-mythos-5-fable-5/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-06-09",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Mythos_5_Fable_5_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-mythos-preview",
+      "provider": "Anthropic",
+      "model": "Claude Mythos Preview",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_Preview_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-mythos-preview.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-mythos-preview/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-06-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Mythos_Preview_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-4-1",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.1",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-4-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-1/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-08-05",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-4-5",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.5",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-4-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-11-24",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-4-6",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.6",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-4-6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-6/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-02-05",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-4-7",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.7",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_7_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-4-7.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-7/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-04-16",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Opus_4_7_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-4-8",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_8_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-4-8.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-8/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-05-28",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Opus_4_8_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5",
+      "provider": "Anthropic",
+      "model": "Claude Opus 5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_5_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-opus-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-5/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-07-23",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Opus_5_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-4-5",
+      "provider": "Anthropic",
+      "model": "Claude Sonnet 4.5",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-sonnet-4-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-4-5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-29",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-4-6",
+      "provider": "Anthropic",
+      "model": "Claude Sonnet 4.6",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/claude-sonnet-4-6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-4-6/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-02-17",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5",
+      "provider": "Anthropic",
+      "model": "Claude Sonnet 5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Sonnet_5_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/claude-sonnet-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-5/",
+        "public_summary_date": "2026-07-24",
+        "model_publication_date": "2026-06-30",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Claude_Sonnet_5_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "cohere/command-a-plus",
+      "provider": "Cohere",
+      "model": "C4AI Command A Plus",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-page",
+          "url": "https://docs.cohere.com/docs/command-a-plus",
+          "note": "manually verified direct URL",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Command_A_Plus_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/command-a-plus.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/command-a-plus/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-05-20",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Command_A_Plus_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "domyn/domyn",
+      "provider": "Domyn",
+      "model": "Domyn Large",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://www.domyn.com/summary-of-training-data/domyn-large",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true,
+          "inpage": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Domyn_2026_07_21.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/domyn.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/domyn/",
+        "public_summary_date": "2026-03-19",
+        "model_publication_date": "2026-03-20",
+        "evaluation_date": "2026-07-21",
+        "category": "New model",
+        "archive_file_name": "Domyn_2026_07_21.pdf"
+      }
+    },
+    {
+      "id": "fastweb/fastwebmiia",
+      "provider": "Fastweb",
+      "model": "FastwebMIIA",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://www.fastweb.it/grandi-aziende/artificial-intelligence/fastweb-miia/documentazione-trasparenza-ai/sintesi%20contenuti%20training.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Sintesi_2026_07_22.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/fastwebmiia.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/fastwebmiia/",
+        "public_summary_date": "2026-03-23",
+        "model_publication_date": "2026-03-23",
+        "evaluation_date": "2026-07-22",
+        "category": "New model",
+        "archive_file_name": "Sintesi_2026_07_22.pdf"
+      }
+    },
+    {
+      "id": "bria-ai/fibo",
+      "provider": "Bria AI",
+      "model": "FIBO",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://drive.google.com/uc?export=download&id=1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/FIBO_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/fibo.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/fibo/",
+        "public_summary_date": "2026-08-02",
+        "model_publication_date": "2026-03-30",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "FIBO_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-2-klein",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.2 Klein",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/flux-2-klein.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-klein/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-01-15",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-2-max",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.2 [max]",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/flux-2-max.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-max/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-11-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-2",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.2",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/flux-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-11-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-3",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://bfl.ai/transparency?tab=training-data-summaries",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.sanity.io/files/2gpum2i6/production/f9dbcc8cc160256d7102a365f42be4ae33286c3c.pdf",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/FLUX_3_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/flux-3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-3/",
+        "public_summary_date": "2026-08-01",
+        "model_publication_date": "2026-07-16",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "FLUX_3_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "google/gemini-3-pro",
+      "provider": "Google",
+      "model": "Gemini 3 Pro",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Gemini_2026_07_21.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-3-pro.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3-pro/",
+        "public_summary_date": "2026-07-02",
+        "model_publication_date": "2025-11-18",
+        "evaluation_date": "2026-07-21",
+        "category": "New model",
+        "archive_file_name": "Gemini_2026_07_21.pdf"
+      }
+    },
+    {
+      "id": "google/gemma-4",
+      "provider": "Google",
+      "model": "Gemma 4",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-nn_2026-7-31_2026-7-31_en_v1.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Gemma_4_2028_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemma-4.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemma-4/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-04-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Gemma_4_2028_08_03.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-2",
+      "provider": "OpenAI",
+      "model": "GPT-5.2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-5-2-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_2_2026_08_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-2/",
+        "public_summary_date": "2026-07-30",
+        "model_publication_date": "2025-12-11",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "GPT_5_2_2026_08_17.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-4-nano",
+      "provider": "OpenAI",
+      "model": "GPT-5.4 Nano",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_4_Nano_2026_08_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-4-nano.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-4-nano/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-03-12",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "GPT_5_4_Nano_2026_08_17.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-5",
+      "provider": "OpenAI",
+      "model": "GPT-5.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/eb1f5ac3-009e-4d51-b2da-f5f327913115/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_5_2026_07_14.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-5/",
+        "public_summary_date": "2026-06-26",
+        "model_publication_date": "2025-08-07",
+        "evaluation_date": "2026-07-09",
+        "category": "New model",
+        "archive_file_name": "GPT_5_5_2026_07_14.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-6-luna",
+      "provider": "OpenAI",
+      "model": "GPT-5.6 Luna",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_6_Luna_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-6-luna.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-luna/",
+        "public_summary_date": "2026-07-23",
+        "model_publication_date": "2026-07-09",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "GPT_5_6_Luna_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-6-sol",
+      "provider": "OpenAI",
+      "model": "GPT-5.6 Sol",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-6-sol.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-sol/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-09",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/gpt-5-6-terra",
+      "provider": "OpenAI",
+      "model": "GPT-5.6 Terra",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/gpt-5-6-terra.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-terra/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-09",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/gpt-image-2",
+      "provider": "OpenAI",
+      "model": "GPT Image 2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_Image_2_2026_08_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gpt-image-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-image-2/",
+        "public_summary_date": "2026-07-30",
+        "model_publication_date": "2026-04-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "GPT_Image_2_2026_08_17.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-oss",
+      "provider": "OpenAI",
+      "model": "GPT-OSS",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/gpt-oss.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-oss/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-08-05",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "ibm/granite-4-0-h",
+      "provider": "IBM",
+      "model": "Granite 4.0 H",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/granite-4-0-h.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-0-h/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-16",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "ibm/granite-4-1",
+      "provider": "IBM",
+      "model": "Granite 4.1",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/granite-4-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-1/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-04-06",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "xai/grok-4-5",
+      "provider": "xAI",
+      "model": "Grok 4.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://media.x.ai/v1/website/public-summary-of-training-content-for-grok-4.5_8jul2026.docx-fc25014a.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Grok_4_5_2026_07_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/grok-4.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/grok-4.5/",
+        "public_summary_date": "2026-07-08",
+        "model_publication_date": "2026-07-09",
+        "evaluation_date": "2026-07-20",
+        "category": "New model",
+        "archive_file_name": "Grok_4_5_2026_07_17.pdf"
+      }
+    },
+    {
+      "id": "xai/grok-voice-think-fast-2",
+      "provider": "xAI",
+      "model": "Grok Voice Think Fast 2.0",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://media.x.ai/v1/website/public-summary-of-training-content-grok-voice-think-fast-2.0_29jul2026-0fb8805e.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Grok_Voice_Think_Fast_2_0_2026_07_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/grok-voice-think-fast-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/grok-voice-think-fast-2/",
+        "public_summary_date": "2026-07-29",
+        "model_publication_date": "2026-07-29",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Grok_Voice_Think_Fast_2_0_2026_07_17.pdf"
+      }
+    },
+    {
+      "id": "thinking-machines/inkling-small",
+      "provider": "Thinking Machines",
+      "model": "Inkling Small",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://thinkingmachines.ai/training-data-documentation/",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://thinkingmachines.ai/documents/inkling-small-public-summary-training-content.pdf",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Inkling_Small_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/inkling-small.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/inkling-small/",
+        "public_summary_date": "2026-07-30",
+        "model_publication_date": "2026-07-30",
+        "evaluation_date": "2026-07-20",
+        "category": "New model",
+        "archive_file_name": "Inkling_Small_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "thinking-machines/inkling",
+      "provider": "Thinking Machines",
+      "model": "Inkling",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://thinkingmachines.ai/documents/inkling-public-summary-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Inkling_2026_07_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/inkling.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/inkling/",
+        "public_summary_date": "2026-07-16",
+        "model_publication_date": "2026-07-16",
+        "evaluation_date": "2026-07-20",
+        "category": "New model",
+        "archive_file_name": "Inkling_2026_07_17.pdf"
+      }
+    },
+    {
+      "id": "microsoft/mai-code-1-flash",
+      "provider": "Microsoft",
+      "model": "MAI-Code-1-Flash",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Code_1_Flash_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-code-1-flash.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-code-1-flash/",
+        "public_summary_date": "2026-06-02",
+        "model_publication_date": "2026-06-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "MAI_Code_1_Flash_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "microsoft/mai-cyber-1-flash",
+      "provider": "Microsoft",
+      "model": "MAI-Cyber-1-Flash",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Cyber-1-Flash-Data-Card.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-cyber-1-flash.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-cyber-1-flash/",
+        "public_summary_date": "2026-07-27",
+        "model_publication_date": "2026-07-27",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/mai-image-2",
+      "provider": "Microsoft",
+      "model": "MAI-Image-2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_2026_07_21.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-image-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2/",
+        "public_summary_date": "2026-03-19",
+        "model_publication_date": "2026-03-19",
+        "evaluation_date": "2026-07-21",
+        "category": "New model",
+        "archive_file_name": "MAI_Image_2_2026_07_21.pdf"
+      }
+    },
+    {
+      "id": "microsoft/mai-image-2-5",
+      "provider": "Microsoft",
+      "model": "MAI-Image-2.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Image-2.5-Data-Card.PDF",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_5_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-image-2_5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2_5/",
+        "public_summary_date": "2026-05-31",
+        "model_publication_date": "2026-06-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "MAI_Image_2_5_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "minimax/minimax-m3",
+      "provider": "Minimax",
+      "model": "Minimax M3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://file.cdn.minimax.io/public/0674772e-317a-4928-8af9-2489903d1c09.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Minimax_M3_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/minimax-m3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/minimax-m3/",
+        "public_summary_date": "2026-07-22",
+        "model_publication_date": "2026-06-01",
+        "evaluation_date": "2026-08-05",
+        "category": "New model",
+        "archive_file_name": "Minimax_M3_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/ministral-3-14b",
+      "provider": "Mistral AI",
+      "model": "Ministral 3 14B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Ministral_3_14B_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/ministral-3-14B.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-14B/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Ministral_3_14B_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/ministral-3-3b",
+      "provider": "Mistral AI",
+      "model": "Ministral 3 3B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://legal.cms.mistral.ai/assets/a46dbe23-1c74-4dae-8a16-ace1f9bdb995",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Ministral_3_3B_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/ministral-3-3B.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-3B/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Ministral_3_3B_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/ministral-3-8b",
+      "provider": "Mistral AI",
+      "model": "Ministral 3 8B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Ministral_3_8B_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/ministral-3-8B.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-8B/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Ministral_3_8B_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/mistral-large-3",
+      "provider": "Mistral AI",
+      "model": "Mistral Large 3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Mistral_Large_3_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mistral-large-3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mistral-large-3/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Mistral_Large_3_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/mistral-small-4",
+      "provider": "Mistral AI",
+      "model": "Mistral Small 4",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://legal.cms.mistral.ai/assets/5f6ed10f-4320-41b2-9f76-d6718533c744",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Mistral_Small_4_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mistral-small-4.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mistral-small-4/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-03-16",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Mistral_Small_4_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "meta/muse-glimmer",
+      "provider": "Meta",
+      "model": "Muse Glimmer",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/muse-glimmer.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/muse-glimmer/",
+        "public_summary_date": "2026-08-10",
+        "model_publication_date": "2026-08-10",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Muse_Glimmer_2026_08_17.pdf"
+      }
+    },
+    {
+      "id": "meta/muse-image",
+      "provider": "Meta",
+      "model": "Muse Image",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Image_2026_07_21.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/muse-image.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/muse-image/",
+        "public_summary_date": "2026-07-06",
+        "model_publication_date": "2026-07-07",
+        "evaluation_date": "2026-07-21",
+        "category": "New model",
+        "archive_file_name": "Muse_Image_2026_07_21.pdf"
+      }
+    },
+    {
+      "id": "meta/muse-spark",
+      "provider": "Meta",
+      "model": "Muse Spark",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Spark_2026_07_21.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/muse-spark.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/muse-spark/",
+        "public_summary_date": "2026-07-08",
+        "model_publication_date": "2026-04-08",
+        "evaluation_date": "2026-07-21",
+        "category": "New model",
+        "archive_file_name": "Muse_Spark_2026_07_21.pdf"
+      }
+    },
+    {
+      "id": "cohere/north-mini-code",
+      "provider": "Cohere",
+      "model": "North Mini Code 1.0",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/north-mini-code.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/north-mini-code/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-06-05",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "amazon/nova-2-lite",
+      "provider": "Amazon",
+      "model": "Nova 2 Lite",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/overview.html",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/samples/nova-2-lite-training-data-summary.zip",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Nova_2_Lite_2026_08_03.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/nova-2-lite.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-lite/",
+        "public_summary_date": "2026-07-27",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "2026-08-04",
+        "category": "New model",
+        "archive_file_name": "Nova_2_Lite_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "writer/palmyra-x5",
+      "provider": "WRITER",
+      "model": "Palmyra X5",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/palmyra-x5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/palmyra-x5/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-01-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/phi-4",
+      "provider": "Microsoft",
+      "model": "Phi-4",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/phi-4/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/phi-4/raw/main/data_summary_card.md",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi_4_2026_02_05.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-4.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-4/",
+        "public_summary_date": "2025-11-24",
+        "model_publication_date": "2024-12-12",
+        "evaluation_date": "2026-03-31",
+        "category": "New model",
+        "archive_file_name": "Phi_4_2026_02_05.pdf"
+      }
+    },
+    {
+      "id": "ministry-of-digital-affairs-of-poland/pllum",
+      "provider": "Ministry of Digital Affairs of Poland",
+      "model": "PLLuM 2512 Base",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/resolve/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_base_2026_08_06.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/pllum.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/pllum/",
+        "public_summary_date": "2026-05-11",
+        "model_publication_date": "2026-05-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "PLLuM_2512_base_2026_08_06.pdf"
+      }
+    },
+    {
+      "id": "huggingface/smollm3",
+      "provider": "HuggingFace",
+      "model": "SmolLM3-3B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true,
+          "inpage": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/SmolLM_33B_2025_11_12.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/smollm3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/smollm3/",
+        "public_summary_date": "2025-07-25",
+        "model_publication_date": "2025-07-08",
+        "evaluation_date": "2026-03-31",
+        "category": "Fine-tuned model",
+        "archive_file_name": "SmolLM_33B_2025_11_12.pdf"
+      }
+    },
+    {
+      "id": "openai/sora-2",
+      "provider": "OpenAI",
+      "model": "Sora 2",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/sora-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/sora-2/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-30",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/veo-3-1",
+      "provider": "Google",
+      "model": "Veo 3.1",
+      "status": "missing",
+      "targets": [],
+      "aial": {
+        "eval_yaml": "evals/veo-3-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/veo-3-1/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-10-15",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/model-catalog",
+      "provider": "OpenAI",
+      "model": "Model catalog (developer docs)",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://developers.openai.com/api/docs/models",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "anthropic/model-catalog",
+      "provider": "Anthropic",
+      "model": "Model catalog (developer docs)",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "mistral-ai/model-catalog",
+      "provider": "Mistral AI",
+      "model": "AI-governance model list",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://legal.mistral.ai/ai-governance/models",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "cohere/model-catalog",
+      "provider": "Cohere",
+      "model": "Model catalog (developer docs)",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://docs.cohere.com/docs/models",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "xai/model-catalog",
+      "provider": "xAI",
+      "model": "Model catalog (developer docs)",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://docs.x.ai/developers/models",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "microsoft/model-catalog",
+      "provider": "Microsoft",
+      "model": "MAI models index",
+      "status": "watch",
+      "note": "Model-catalog watch: a new model appearing on this page becomes a candidate for the summary hunt, independent of any third-party tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://microsoft.ai/models/",
+          "note": "provider model catalog (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "eu-commission/gpai-code-of-practice",
+      "provider": "European Commission",
+      "model": "GPAI Code of Practice page (signatories)",
+      "status": "watch",
+      "note": "Provider-universe feed: organisations signing the GPAI Code of Practice self-declare GPAI-provider status. A new signatory here is a new candidate provider for the hunt, independent of any tracker.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+          "note": "CoP page incl. signatories (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "osai-index/tracker",
+      "provider": "European Open Source AI Index",
+      "model": "OSAI index (open-source model releases)",
+      "status": "watch",
+      "note": "New-entrant feed for open-source GPAI providers (the index AIAL's own discovery methodology used). Changes here surface new providers and models for the hunt.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://osai-index.eu/",
+          "note": "OSAI index front page (Tier-0 discovery)"
+        }
+      ]
+    },
+    {
+      "id": "eu-commission/explanatory-notice-and-template",
+      "provider": "European Commission",
+      "model": "Explanatory Notice + Template C(2025) 8311 final",
+      "status": "regulatory",
+      "note": "The Commission's official template and explanatory notice that every provider summary must follow — archived because summaries are judged against it, and so template changes are themselves on the record. One capture uses the German regulator BNetzA's official mirror of the original July 2025 issue (C(2025) 5235) for reissue comparison.",
+      "targets": [
+        {
+          "kind": "regulatory",
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+          "note": "Official Notice+Template PDF (EN), as served by the EC library page"
+        },
+        {
+          "kind": "regulatory",
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+          "note": "Official editable Template DOC"
+        },
+        {
+          "kind": "regulatory",
+          "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+          "note": "BNetzA mirror of the original C(2025) 5235 final of 24.7.2025 (for reissue diffing)"
+        }
+      ]
+    },
+    {
+      "id": "eu-commission/template-pages",
+      "provider": "European Commission",
+      "model": "Template library + FAQ pages",
+      "status": "watch",
+      "note": "The Commission pages that distribute the official template. Monitored because a template revision, or the launch of the online form / central registry the Commission has said it aims to provide, would appear here first.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models",
+          "note": "Watch: online-form/registry launch would appear here first"
+        },
+        {
+          "kind": "watch-page",
+          "url": "https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+          "note": "Commission FAQ on the template"
+        }
+      ]
+    },
+    {
+      "id": "microsoft/mai-thinking-1",
+      "provider": "Microsoft",
+      "model": "MAI-Thinking-1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
+          "note": "found by Tier-3 hunt 17 Aug 2026; summary v1.0 dated 12 Aug 2026; not linked from the model page as of discovery (found via the /pdf/ filename convention)"
+        }
+      ]
+    },
+    {
+      "id": "microsoft/mai-code-1-1-flash",
+      "provider": "Microsoft",
+      "model": "MAI-Code-1.1-Flash",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+          "note": "found by Tier-3 hunt 17 Aug 2026; Data Card v1.0 uploaded 11 Aug 2026"
+        }
+      ]
+    },
+    {
+      "id": "microsoft/mai-voice-2",
+      "provider": "Microsoft",
+      "model": "MAI-Voice-2",
+      "status": "missing",
+      "targets": [],
+      "note": "on microsoft.ai/models index by 17 Aug 2026 with no training-content summary found; absent from AIAL metadata"
+    },
+    {
+      "id": "microsoft/mai-transcribe-1-5",
+      "provider": "Microsoft",
+      "model": "MAI-Transcribe-1.5",
+      "status": "missing",
+      "targets": [],
+      "note": "on microsoft.ai/models index by 17 Aug 2026 with no training-content summary found; absent from AIAL metadata"
+    },
+    {
+      "id": "google/transparency-bucket",
+      "provider": "Google",
+      "model": "Transparency-report file store (watched for summary drops)",
+      "note": "Google serves its Art. 53 summaries as PDFs from this public storage location. Its machine-readable file listing is captured so a new or replaced summary file shows up as a change here before anything links to it.",
+      "status": "watch",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+          "note": "anonymous XML object listing of the bucket serving Google's Art. 53 summaries — new summary PDFs appear here as new objects"
+        }
+      ]
+    },
+    {
+      "id": "anthropic/trust-center-bundle",
+      "provider": "Anthropic",
+      "model": "Anthropic trust-center bundle",
+      "status": "watch",
+      "targets": [],
+      "note": "The bulk download publicly offered on trust.anthropic.com ('Download all documents'). It contains Anthropic's Art. 53(1)(d) training-data summaries for 7 Claude models in 6 documents (Opus 4.7, Opus 4.8, Opus 5, Sonnet 5, Mythos Preview, and Mythos 5 + Fable 5 jointly), alongside their other public trust documents. Captured on a stable key so the rotating download token never mints versions; inner per-file SHA-256s give per-document change tracking."
+    },
+    {
+      "id": "aial/tracker",
+      "provider": "AI Accountability Lab (AIAL)",
+      "model": "GPAI Training Transparency tracker",
+      "status": "watch",
+      "note": "AIAL (AI Accountability Lab, Trinity College Dublin) maintains the tracker whose metadata seeds this ledger's model list and document locations. Their pages are archived here so this ledger's provenance chain includes its own upstream source.",
+      "targets": [
+        {
+          "kind": "watch-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/list_summaries",
+          "note": "Discovery feed: new summaries and archive links appear here"
+        },
+        {
+          "kind": "watch-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/",
+          "note": "Tracker main page (graded/missing counts)"
+        }
+      ]
+    }
+  ]
+}

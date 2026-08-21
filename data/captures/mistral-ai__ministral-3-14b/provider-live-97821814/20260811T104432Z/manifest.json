@@ -1,0 +1,43 @@
+{
+  "source_id": "mistral-ai/ministral-3-14b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 14B",
+  "target_kind": "provider-live",
+  "sha256": "4198542c9ac7776856d379c957c323113950408dd0a72ecaa0095f7ed0c1f28d",
+  "size_bytes": 225906,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",
+    "final_url": "https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 31 Jul 2026 12:51:58 GMT",
+    "content_length": "225906",
+    "fetched_at": "2026-08-11T10:44:32Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811104434/https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",
+    "at": "2026-08-11T10:44:41Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:44:53Z"
+  },
+  "text_sha256": "fedd67ba3850d15f0a295a2cb2d9564c20d3040729040bb6dbebab23486efbd5"
+}

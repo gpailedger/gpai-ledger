@@ -1,0 +1,41 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AIAL",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "watch-page",
+  "sha256": "0ab9691371e039527e1f58eedecd291f7800cf0d0ddc0bc51f4b8a4a7781c55a",
+  "size_bytes": 26290,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/list_summaries",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/list_summaries",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcx0ikaa\"",
+    "last_modified": "Thu, 06 Aug 2026 16:41:06 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-11T11:04:17Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811110438/https://aial.ie/research/gpai-training-transparency/list_summaries",
+    "at": "2026-08-11T11:04:56Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:05:08Z"
+  },
+  "text_sha256": "f46429f8409625ba81b21902d1c47a5d526164fd891aab65e36e6f425f14c90d"
+}

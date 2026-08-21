@@ -1,0 +1,45 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "provider-live",
+  "sha256": "fa3321b0f687d4c98b825ef4beba96be53043c1843f51805f42a2ac6af72bb3c",
+  "size_bytes": 877324,
+  "stored_as": "raw.html",
+  "text_sha256": "0199d158034bcc608eac097fda4741e958c194ebe607e7a470fe09d808b0417a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "final_url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "877324",
+    "fetched_at": "2026-08-18T17:21:48Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "96e68d29604cf10034ada90f683af05c546f08ebc6be8bd2b157ab9b7b4b40af",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260818164610/https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "at": "2026-08-18T17:21:57Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T17:22:09Z"
+  }
+}

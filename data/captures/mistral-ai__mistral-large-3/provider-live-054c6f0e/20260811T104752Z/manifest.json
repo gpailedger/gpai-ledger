@@ -1,0 +1,57 @@
+{
+  "source_id": "mistral-ai/mistral-large-3",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3",
+  "target_kind": "provider-live",
+  "sha256": "22c6cae662df2b80486a79eeb30c8f99959bd0cf78d52950290141ec52c824bc",
+  "size_bytes": 218727,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
+    "final_url": "https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 31 Jul 2026 11:38:00 GMT",
+    "content_length": "218727",
+    "fetched_at": "2026-08-11T10:47:52Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260812212426/https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
+    "at": "2026-08-12T21:24:38Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:48:11Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260811104754/https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
+      "at": "2026-08-11T10:48:00Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "snapshot": null,
+      "at": "2026-08-11T16:14:27Z"
+    }
+  ],
+  "text_sha256": "ddd7c8a41049c05be10a6c3738d666a9a517a271fb68d795ab6f40d10e6a9ce4"
+}

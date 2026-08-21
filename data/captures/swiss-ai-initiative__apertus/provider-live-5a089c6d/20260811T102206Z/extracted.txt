@@ -1,0 +1,275 @@
+Apertus_EU_Public_Summary.pdf · swiss-ai/Apertus-70B-2509 at main
+
+Hugging Face
+
+ Models
+ Datasets
+ Spaces
+ Buckets
+new
+ Docs
+ Enterprise
+
+Pricing
+
+Website
+
+Tasks
+
+HuggingChat
+
+Collections
+
+Languages
+
+Organizations
+
+Community
+
+Blog
+
+Posts
+
+Daily Papers
+
+Hardware
+
+Learn
+
+Discord
+
+Forum
+
+GitHub
+
+Solutions
+
+Team & Enterprise
+
+Hugging Face PRO
+
+Enterprise Support
+
+Inference Providers
+
+Inference Endpoints
+
+Storage Buckets
+
+Log In
+
+Sign Up
+
+swiss-ai
+
+/
+
+Apertus-70B-2509
+
+like
+
+158
+
+Follow
+
+Swiss AI Initiative
+
+1.34k
+
+Text Generation
+
+Transformers
+
+Safetensors
+
+apertus
+
+multilingual
+
+compliant
+
+swiss-ai
+
+arxiv:
+
+2509.14233
+
+License:
+
+apache-2.0
+
+Model card
+
+Files
+
+Files and versions
+
+xet
+
+ Deploy
+
+ Copy to bucket
+new
+
+ Use this model
+
+Instructions to use swiss-ai/Apertus-70B-2509 with libraries, inference providers, notebooks, and local apps. Follow these links to get started.
+
+Libraries
+
+Transformers
+
+How to use swiss-ai/Apertus-70B-2509 with Transformers:
+
+# Use a pipeline as a high-level helper
+from transformers import pipeline
+
+pipe = pipeline("text-generation", model="swiss-ai/Apertus-70B-2509")
+
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("swiss-ai/Apertus-70B-2509")
+model = AutoModelForCausalLM.from_pretrained("swiss-ai/Apertus-70B-2509", device_map="auto")
+
+Notebooks
+
+Google Colab
+
+Kaggle
+
+Local Apps
+
+Settings
+
+vLLM
+
+How to use swiss-ai/Apertus-70B-2509 with vLLM:
+
+Install from pip and serve model
+
+# Install vLLM from pip:
+pip install vllm
+# Start the vLLM server:
+vllm serve "swiss-ai/Apertus-70B-2509"
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:8000/v1/completions" \
+	-H "Content-Type: application/json" \
+	--data '{
+		"model": "swiss-ai/Apertus-70B-2509",
+		"prompt": "Once upon a time,",
+		"max_tokens": 512,
+		"temperature": 0.5
+	}'
+Use Docker
+
+docker model run hf.co/swiss-ai/Apertus-70B-2509
+
+SGLang
+
+How to use swiss-ai/Apertus-70B-2509 with SGLang:
+
+Install from pip and serve model
+
+# Install SGLang from pip:
+pip install sglang
+# Start the SGLang server:
+python3 -m sglang.launch_server \
+    --model-path "swiss-ai/Apertus-70B-2509" \
+    --host 0.0.0.0 \
+    --port 30000
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:30000/v1/completions" \
+	-H "Content-Type: application/json" \
+	--data '{
+		"model": "swiss-ai/Apertus-70B-2509",
+		"prompt": "Once upon a time,",
+		"max_tokens": 512,
+		"temperature": 0.5
+	}'
+Use Docker images
+
+docker run --gpus all \
+    --shm-size 32g \
+    -p 30000:30000 \
+    -v ~/.cache/huggingface:/root/.cache/huggingface \
+    --env "HF_TOKEN=<secret>" \
+    --ipc=host \
+    lmsysorg/sglang:latest \
+    python3 -m sglang.launch_server \
+        --model-path "swiss-ai/Apertus-70B-2509" \
+        --host 0.0.0.0 \
+        --port 30000
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:30000/v1/completions" \
+	-H "Content-Type: application/json" \
+	--data '{
+		"model": "swiss-ai/Apertus-70B-2509",
+		"prompt": "Once upon a time,",
+		"max_tokens": 512,
+		"temperature": 0.5
+	}'
+
+Docker Model Runner
+
+How to use swiss-ai/Apertus-70B-2509 with Docker Model Runner:
+
+docker model run hf.co/swiss-ai/Apertus-70B-2509
+
+ main
+
+Apertus-70B-2509
+
+/
+
+Apertus_EU_Public_Summary.pdf
+
+mjaggi
+
+initial EU AI act documentation
+
+2614136
+
+verified
+
+11 months ago
+
+ Download
+
+ Download with hf CLI
+
+Copy download link
+ History
+
+ Blame
+
+Safe
+
+ 329 kB
+
+Xet Pointer Details
+
+(
+
+ Raw pointer file
+
+)
+
+Xet hash:
+
+95f599d066dce5869d06e9890dd28ce2011560e35531e177913bfa55e9f452b5
+
+Size of remote file:
+
+329 kB
+
+·
+
+SHA256:
+
+787b7e5122765cd8f5a5832a248bd21843c2e300d9e36b5832246f9bd0dd6010
+
+Xet efficiently stores Large Files inside Git, intelligently splitting files into unique chunks and
+								accelerating uploads and downloads.
+More info
+.

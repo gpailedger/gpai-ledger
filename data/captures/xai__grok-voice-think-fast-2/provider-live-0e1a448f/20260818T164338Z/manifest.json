@@ -1,0 +1,39 @@
+{
+  "source_id": "xai/grok-voice-think-fast-2",
+  "provider": "xAI",
+  "model": "Grok Voice Think Fast 2.0",
+  "target_kind": "provider-live",
+  "sha256": "03b534c895b34039ecd18a7d94495626b24ca3286797da617b0666acb4e33d97",
+  "size_bytes": 263755,
+  "stored_as": "raw.pdf",
+  "text_sha256": "98c9cc84d50dcc1a3d9e298b18483e5986f9d4031b50d8bd3e1268ccacca1352",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://media.x.ai/v1/website/public-summary-of-training-content-grok-voice-think-fast-2.0_29jul2026-0fb8805e.pdf",
+    "final_url": "https://media.x.ai/v1/website/public-summary-of-training-content-grok-voice-think-fast-2.0_29jul2026-0fb8805e.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"0a92dbd1aad07055ac8d84a39f6a4a48\"",
+    "last_modified": "Wed, 05 Aug 2026 22:57:12 GMT",
+    "content_length": "263755",
+    "fetched_at": "2026-08-18T16:43:37Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260818164340/https://media.x.ai/v1/website/public-summary-of-training-content-grok-voice-think-fast-2.0_29jul2026-0fb8805e.pdf",
+    "at": "2026-08-18T16:43:51Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T16:44:04Z"
+  }
+}

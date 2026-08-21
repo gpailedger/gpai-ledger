@@ -1,0 +1,43 @@
+{
+  "source_id": "minimax/minimax-m3",
+  "provider": "Minimax",
+  "model": "Minimax M3",
+  "target_kind": "provider-live",
+  "sha256": "66d4680e045df3dec4775f3f19ce7858eee811e23b134a341410e8224d12cc5a",
+  "size_bytes": 398743,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://file.cdn.minimax.io/public/0674772e-317a-4928-8af9-2489903d1c09.pdf",
+    "final_url": "https://file.cdn.minimax.io/public/0674772e-317a-4928-8af9-2489903d1c09.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"C3D774D09AF394EA2963EA1EA8936354\"",
+    "last_modified": "Sat, 01 Aug 2026 05:12:39 GMT",
+    "content_length": "398743",
+    "fetched_at": "2026-08-11T10:43:24Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811104351/https://file.cdn.minimax.io/public/0674772e-317a-4928-8af9-2489903d1c09.pdf",
+    "at": "2026-08-11T10:43:59Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:44:10Z"
+  },
+  "text_sha256": "9ee1520eb4ff488c450747dcc729c8a4123c2925807e7e8c08cfb37f00af7a96"
+}

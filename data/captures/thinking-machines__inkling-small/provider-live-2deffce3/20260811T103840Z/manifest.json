@@ -1,0 +1,41 @@
+{
+  "source_id": "thinking-machines/inkling-small",
+  "provider": "Thinking Machines",
+  "model": "Inkling Small",
+  "target_kind": "provider-live",
+  "sha256": "a2bfa962f8ed746dce7080d9fca841dcb24ac7ad2b10cb6a8c5ac30459355770",
+  "size_bytes": 19868,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://thinkingmachines.ai/training-data-documentation/",
+    "final_url": "https://thinkingmachines.ai/training-data-documentation/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:38:40Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260726014736/https://thinkingmachines.ai/training-data-documentation/",
+    "at": "2026-08-11T10:39:42Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:39:53Z"
+  },
+  "text_sha256": "d49a2967723784aebd0cab3f6f3485eb1b5cf38c236a0e5ca969fdf57cb80b2d"
+}

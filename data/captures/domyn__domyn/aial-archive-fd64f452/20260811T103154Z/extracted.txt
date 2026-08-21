@@ -1,0 +1,414 @@
+Summary of training data
+Domyn Large
+Version of the Summary: v1 - Last update: 19 March 2026
+This page outlines the summary of the
+training data used for Domyn Large, in
+accordance with the requirements set out
+in Article 53 (1)(d) of Regulation (EU)
+2024/1689 (AI Act). The purpose of this
+summary is to enhance transparency and
+enable stakeholders to better understand
+the nature of the training data. This
+summary has been prepared following the
+template issued by the AI Ofﬁce and
+reﬂects our commitment to complying with
+the AI Act’s obligations while promoting
+responsible and transparent AI
+development.
+1. General Information
+Table of
+contents
+1. General
+Information
+2. List of Data
+Sources
+3. Other Relevant
+Data Processing
+Aspects
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+1 of 11 23/07/2026, 12:10
+1.1 Model and Provider Identiﬁcation
+Provider's name and contact: Domyn S.p.A., Piazza
+Gae Aulenti 8, 20154 Milan, Italy, email:
+legal@domyn.com
+Versioned Model Name(s): Domyn Large
+Model Dependencies: The model is a modiﬁcation of
+a general-purpose AI model already placed on the
+Union market, speciﬁcally Colosseum 355B
+1.2 Date of Placement on the Market
+and Knowledge Cut-off Date
+Date of placement on the Union market: 20 March
+2026
+Knowledge cut-off date: September 2024 (based on
+pre-training dataset cut-off)
+1.3 Overall Training Data Size,
+Modalities and Characteristics
+Data Size by Modality
+Modality Overall Size Status
+Text Number of tokens or
+bytes: 11.1 Trillions Used
+Image
+Number of images (or
+pairs with other
+media): 0
+Not
+Used
+Video
+Number of minutes (or
+pairs with other
+media): 0
+Not
+Used
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+2 of 11 23/07/2026, 12:10
+Audio
+Number of minutes (or
+pairs with other
+media): 0
+Not
+Used
+Other
+Number of images (or
+pairs with other
+media): 0
+Not
+Used
+Content Categories by Modality
+Text
+Fictional texts,
+literature
+Social
+communication (e.g.,
+messages)
+Scientiﬁc and
+educative texts
+Promotion,
+advertising, product
+and service reviews
+News, journalism and
+opinions Other text
+Legal and ofﬁcial
+documents
+Image
+Photography Illustration & graphic
+design
+Paintings & ﬁne-arts Social / personal
+images
+Infographics
+Special
+Source code
+Structured data (e.g.,
+calendar, maps)
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+3 of 11 23/07/2026, 12:10
+Other
+Video
+PhotographMovies,
+shows,
+performancesy
+Video news and
+journalism
+Animated video
+content
+User content, short
+videos
+Other video content
+(e.g., experimental
+art, video effects)
+Documentaries
+Audio
+Music Radio shows and
+podcasts
+Narrative and ﬁction
+(e.g., audiobooks)
+Social
+communication
+(phone calls, voice
+messages)
+Non-ﬁction
+educative audio
+content
+Other (e.g., sounds
+and ambient)
+Description of linguistic, regional, demographic
+and other relevant characteristics
+Linguistic characteristics:
+Primary language: English (majority of pre-training
+and CPT data)
+Multilingual coverage: 56 languages extracted from
+FineWeb2-HQ and HPLT, with tiered weighting.
+Post-training multilingual: SFT data includes
+dedicated multilingual splits (Spanish, French, German,
+Italian etc.)
+Code languages: Python, C++, Java, JavaScript, SQL,
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+4 of 11 23/07/2026, 12:10
+and others (via The Stack V2)
+Regional characteristics:
+Data is predominantly sourced from the open web
+(CommonCrawl-derived corpora: DCML, Dolma), which
+skews toward English-speaking and Western European
+web content.
+Multilingual data intentionally upweights European
+languages (Tier A: ES, IT, FR, DE) to align with Domyn's
+regulated-enterprise customer base in European
+markets.
+Academic data (ArXiv, peS2o) reﬂects global English-
+language research output.
+Wikipedia dumps cover all available language
+editions, with representation proportional to each
+Wikipedia's size.
+Demographic characteristics:
+No explicit demographic annotation or sampling was
+applied to the training data.
+Web-crawled data inherits the demographic biases of
+internet content production — disproportionately
+represents populations with higher internet access,
+literacy, and digital participation.
+Academic corpora reﬂect the demographics of
+academic publishing (predominantly English-speaking,
+university-afﬁliated researchers).
+Other relevant characteristics:
+Domain coverage: General web, code, academic/
+STEM, mathematics, Wikipedia/encyclopedic, function
+calling/tool use.
+Temporal range: Web crawls primarily from 2023–
+2024; academic and code corpora reﬂect historical
+archives.
+2. List of Data
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+5 of 11 23/07/2026, 12:10
+Sources
+2.1 Publicly Accessible Datasets
+The model was trained on text-only data drawn from
+publicly available datasets.
+Main large publicly available datasets used for
+pretraining:
+1. DCML (September 2024)
+2. The Stack v2 (September 2024)
+3. HPLT (September 2024)
+4. HuggingFaceFW ﬁneweb-2 (September 2025)
+General description of other publicly available
+datasets
+The remaining training data comprises approximately
+5–6 trillion tokens in total, drawn from the following
+categories:
+1. Web crawls — Text-only, multilingual web data
+sourced primarily from DCML.
+2. Code — Machine-readable source code derived
+from The Stack v2.
+3. Academic — Text-only scientiﬁc and mathematical
+content, including ProofPile 2 (arXiv).
+4. Wiki — Text-only encyclopaedic content extracted
+from Wikipedia dumps.
+5. Multilingual — Text-only web crawls in multiple
+languages, drawn mainly from HPLT and
+FineWeb-2.
+6. Synthetic — Machine-generated text comprising
+more than ﬁve datasets of QA-style content,
+produced from high-quality web documents.
+2.2 Private non-publicly available
+datasets obtained from third
+parties
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+6 of 11 23/07/2026, 12:10
+We have not used private, non-publicly
+accessible datasets of third parties.
+2.3.  Data crawled and scraped from
+online sources
+We have not crawled, scraped, or otherwise directly
+compiled data from online sources ourselves or
+through third parties on our behalf (excluding publicly
+available third-party datasets covered under 2.1.
+above).
+2.4 User data
+No user data collected by our services and products,
+including through mail services, social media platforms,
+content platforms or interaction with our’ AI models
+and/or systems was used to train the Model.
+2.5 Synthetic Data
+A portion of the training data consists of synthetic AI-
+generated data created by us or on our behalf.
+Modality of the synthetic data: Text only
+Name of AI model used to generate the synthetic
+data:
+1. Colosseum 355B
+2. Phi 3 Medium
+3. Llama-3_1-Nemotron-Ultra-253B-v1
+2.6 Other sources of data
+No data falling outside the categories described in the
+previous sections was used for training.
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+7 of 11 23/07/2026, 12:10
+3. Other Relevant
+Data Processing
+Aspects
+3.1 Respect of reservation of rights
+from text and data mining
+exception or limitation
+We are a Signatory to the Code of Practice for general-
+purpose AI models that includes commitments to
+respect reservations of rights from the text and data
+mining TDM exception or limitation
+Measures implemented to respect reservations of
+rights from the text and data-mining exception under
+Art.4(3) DSM Directive during data collection:
+1. Speciﬁcation of opt-out protocols: All open
+dataset have used web crawlers that honor
+machine-readable opt-out signals—such as
+robots.txt and standard metadata
+2. Solutions honoured by the provider: A public
+feedback channel is maintained for rights-holders
+to request removal. Updates are applied
+dynamically to domain-/URL-level blocks based on
+requests.
+3. Measures implemented after data collection is
+completed to identify and remove content for
+which rights have been reserved by the
+rightsholders: URL/domain-based blocking of
+ﬂagged sources, ML classiﬁers trained to detect
+protected content, Manual review and removal
+triggered by rights-holder notiﬁcations.
+3.2 Removal of Unwanted Content
+Description of content deemed unwanted by the
+provider as part of the training data:
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+8 of 11 23/07/2026, 12:10
+1. Materials explicitly opted out under copyright
+2. Illegal or hateful content
+3. Content from sources involved in systematic
+copyright infringement.
+List of measures taken to avoid and/or remove
+such content:
+Blacklists: Dynamic domain/URL blacklists maintained
+based on rights-holder input or legal considerations.
+Also, We leverage the publicly maintained Université
+Toulouse 1 Capitole URL blacklists—the UT1 blacklists—
+for ﬁltering undesirable domains.
+Keywords: We maintain a curated list of sensitive
+keywords and phrases used to identify and ﬁlter out
+unwanted content, including but not limited to:
+1. Copyright-related markers (e.g. “©”, “All rights
+reserved”, “Unauthorized reproduction”)
+2. Adult content indicators (“porn”, “hard
+pornography”, “adult site”, “XXX”)
+3. Hate speech slurs or explicit offensive terms
+4. calls for violence or extremist content
+5. gambling-related terms (“betting”, “casino”,
+“gambling site”)
+6. malware/phishing language (“download here”, “free
+crack”, “keygen”)
+These keywords are matched both in URLs and in page
+content; any document exceeding a threshold score is
+excluded.
+List of measures taken to avoid and/or remove
+such content:
+Model-based classiﬁers: We curate both positive and
+negative examples (e.g., unwanted vs. acceptable
+content) as well as general classiﬁers for high-quality
+data, often using authoritative sources such as
+Wikipedia to deﬁne positive examples. We have found
+that combining multiple classiﬁers yields strong
+performance with a low error rate. For training, we
+primarily use transformer-based models such as BERT
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+9 of 11 23/07/2026, 12:10
+or RoBERTa, optimized for compact and efﬁcient
+deployment. Additionally, we iteratively sample false
+positives from earlier classiﬁer versions, generate
+synthetic “mirrored” examples, and retrain the models
+to signiﬁcantly reduce false positives. Finally, we
+maintain separate validation and hold-out sets to
+reliably estimate real-world error rates and ensure
+robust generalization.
+Other measures: Manual review upon ﬂagging.
+Measures applied by the curators of listed datasets:
+1. DCML: Curated source domains with known
+copyright compliance. They employ a combination
+of model-based ﬁltering and heuristic methods to
+curate content, aiming to exclude material that may
+be subject to copyright reservations.
+2. The Stack v2: Mainly includes code under open-
+source licenses. To facilitate compliance with
+licensing requirements, The Stack v2 dataset
+provides provenance information for each data
+point, allowing users to trace the origin and
+licensing terms of the included code.
+3. ProofPile 2 (arXiv): Includes academic content with
+explicit author/reviewer permissions.
+4. HPLT / multilingual web crawls: Apply open-license
+ﬁltering and language-based exclusion.
+5. Synthetic QA datasets: Generated from high-
+quality web documents cleared for reuse; measures
+to respect rights reservations respected.
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+10 of 11 23/07/2026, 12:10
+© 2025 Domyn S.p.A. All
+rights reserved.
+Legal address
+Piazza Gae Aulenti, 8, 20154
+Milano MI
+North America HQ
+115 Broadway, New York, NY
+10006
+VAT number: 08523180969
+Products
+Technology
+LegalCompany
+Resources
+Agents
+Platform
+AI Sentinel
+Models
+Supercomputer
+Terms and Conditions
+Privacy
+Cookies
+Software Licenses
+Disclaimer
+Compliance
+Whistleblowing report
+Mission
+Team
+Board
+Careers
+Gender Equality Plan
+Blog
+News
+Research
+Media Kit
+Agents Platform Models Compute
+Governance Company Resources
+Contact Us
+Domyn | Summary of training data Domyn Large https://www.domyn.com/summary-of-training-data/domyn...
+11 of 11 23/07/2026, 12:10

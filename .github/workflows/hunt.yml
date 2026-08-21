@@ -1,0 +1,56 @@
+name: relocation-hunt
+
+on:
+  schedule:
+    - cron: "30 6 * * 1"   # weekly, Monday 06:30 UTC (after the daily sweep)
+  workflow_dispatch:
+
+concurrency:
+  group: ledger-sweep      # never overlap with the daily sweep's commits
+  cancel-in-progress: false
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r crawler/requirements.txt
+
+      - name: Tier-0 discovery (HF org releases feed)
+        run: python crawler/org_watch.py
+
+      - name: Tier-2 relocation hunt (bounded site crawl, fingerprint-confirmed)
+        run: python crawler/site_hunt.py
+
+      - name: Commit hunt results
+        env:
+          PUSH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "gpai-ledger-hunt"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${{ github.repository }}.git"
+          git add crawler/relocations.json reports/hunt-latest.md reports/org-watch-latest.md
+          if git diff --cached --quiet; then
+            echo "no hunt changes"
+          else
+            git commit -m "hunt: $(date -u +%Y-%m-%dT%H:%MZ)"
+            pushed=0
+            for i in 1 2 3; do
+              if git push origin HEAD:main; then pushed=1; break; fi
+              git pull --rebase origin main || exit 1
+            done
+            [ "$pushed" = 1 ] || { echo "push failed after 3 attempts"; exit 1; }
+          fi
+          git remote set-url origin "https://github.com/${{ github.repository }}.git"

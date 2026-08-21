@@ -1,0 +1,35 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "aial-archive",
+  "sha256": "6d0dce769e8b2edd5ef6f6963fb31facca5211c9344970016434cf300d2a3729",
+  "size_bytes": 258200,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Spark_2026_07_21.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Spark_2026_07_21.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"timjw25j88\"",
+    "last_modified": "Thu, 23 Jul 2026 11:00:02 GMT",
+    "content_length": "258200",
+    "fetched_at": "2026-08-11T11:14:28Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:14:34Z"
+  },
+  "text_sha256": "fe327ddcc0f506779d9b1b42304cfcfb2eb2e03f08f61732efa1b623d17d3f9a"
+}

@@ -1,0 +1,53 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "provider-live",
+  "sha256": "09275f31dffa639f993c8727ccc10f950e1e4fa6c6a15be9d9c44989577e9fd4",
+  "size_bytes": 305928,
+  "stored_as": "raw.pdf",
+  "text_sha256": "f1e4949fbb90ec37689f2f0de731165c25ee5982a3976e049640ca1d0207efe3",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "final_url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"2e402933d6d2f60f1f938a418cc98869c30d4df2aea5560a8113dc14b0e2cae4\"",
+    "last_modified": null,
+    "content_length": "305928",
+    "fetched_at": "2026-08-17T08:05:10Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112812/https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "at": "2026-08-19T11:28:19Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:05:24Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:05:13Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:35:07Z"
+    }
+  ]
+}

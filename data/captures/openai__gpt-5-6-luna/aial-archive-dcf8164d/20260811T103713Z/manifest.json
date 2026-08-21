@@ -1,0 +1,35 @@
+{
+  "source_id": "openai/gpt-5-6-luna",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Luna",
+  "target_kind": "aial-archive",
+  "sha256": "0d92de5d44874b7a82948c2daafd4ab4e8ef3ec7775854a2521f6d9bb67d07ca",
+  "size_bytes": 207613,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_6_Luna_2026_08_03.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_6_Luna_2026_08_03.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tjcwbw4g71\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": "207613",
+    "fetched_at": "2026-08-11T10:37:13Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:37:19Z"
+  },
+  "text_sha256": "a7a34dda65142db088495b3491cd0cdc84ea36562f079bd25bc41a4663ff26f5"
+}

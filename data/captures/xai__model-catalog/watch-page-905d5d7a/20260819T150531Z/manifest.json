@@ -1,0 +1,39 @@
+{
+  "source_id": "xai/model-catalog",
+  "provider": "xAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "c937225e53f0d53878fac8626e6139b322a3e24a677ce5a7b5e72381a792dcb4",
+  "size_bytes": 424925,
+  "stored_as": "raw.html",
+  "text_sha256": "46e2490deb87935adec1ee1a6d183a2f12a217aeb6f111ca1193b5f73d09da88",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.x.ai/developers/models",
+    "final_url": "https://docs.x.ai/developers/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-19T15:05:31Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150538/https://docs.x.ai/developers/models",
+    "at": "2026-08-19T15:05:52Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:06:04Z"
+  }
+}

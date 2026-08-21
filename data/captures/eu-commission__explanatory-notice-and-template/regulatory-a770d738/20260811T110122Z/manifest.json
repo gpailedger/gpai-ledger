@@ -1,0 +1,42 @@
+{
+  "source_id": "eu-commission/explanatory-notice-and-template",
+  "provider": "European Commission",
+  "model": "Explanatory Notice + Template C(2025) 8311 final",
+  "target_kind": "regulatory",
+  "sha256": "ec803008a5263a485146b24497a3445e2ea32f8b73f818e67652ad70de40f09b",
+  "size_bytes": 70622,
+  "stored_as": "raw.docx",
+  "extraction_notes": [
+    "no extractor for .docx",
+    "stored as .bin at capture (origin served Content-Type '/'); magic-byte identified as .docx on 19 Aug 2026 and renamed; bytes and SHA-256 unchanged"
+  ],
+  "http": {
+    "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+    "final_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+    "status_code": 200,
+    "content_type": "/",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T11:01:22Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260101102548/https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+    "at": "2026-08-11T11:01:49Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:02:00Z"
+  },
+  "text_sha256": null
+}

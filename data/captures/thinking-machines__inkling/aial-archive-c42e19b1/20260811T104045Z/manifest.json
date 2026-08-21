@@ -1,0 +1,35 @@
+{
+  "source_id": "thinking-machines/inkling",
+  "provider": "Thinking Machines",
+  "model": "Inkling",
+  "target_kind": "aial-archive",
+  "sha256": "d66ee3d0dfca1872b653b3356ce6204149da812b6cf8993c7f9a6e08edb77c61",
+  "size_bytes": 208288,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Inkling_2026_07_17.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Inkling_2026_07_17.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"til9d24gps\"",
+    "last_modified": "Wed, 22 Jul 2026 18:15:02 GMT",
+    "content_length": "208288",
+    "fetched_at": "2026-08-11T10:40:45Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:40:52Z"
+  },
+  "text_sha256": "55924e3452475e75053c9fff74b0761f1eeac42112451ae43f1335d554959108"
+}

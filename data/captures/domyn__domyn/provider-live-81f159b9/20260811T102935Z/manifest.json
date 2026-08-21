@@ -1,0 +1,50 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "provider-live",
+  "sha256": "7f964677a1bea51857644cd370badeaa5b61eccd75852d6d392a3e982064af88",
+  "size_bytes": 163652,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://www.domyn.com/summary-of-training-data/domyn-large",
+    "final_url": "https://www.domyn.com/summary-of-training-data/domyn-large",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Tue, 11 Aug 2026 10:29:35 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:29:35Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811103158/https://www.domyn.com/summary-of-training-data/domyn-large",
+    "at": "2026-08-11T16:12:31Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:31:49Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "at": "2026-08-11T10:31:36Z"
+    }
+  ],
+  "text_sha256": "a6fb2a8c3911c6ab94eb679dabe8a191538cd5e38d49e1bc78e5e4c66c95d09a"
+}

@@ -1,0 +1,35 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "aial-archive",
+  "sha256": "22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7",
+  "size_bytes": 124112,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Command_A_Plus_2026_08_03.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Command_A_Plus_2026_08_03.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tj6qz12nrk\"",
+    "last_modified": "Mon, 03 Aug 2026 08:45:01 GMT",
+    "content_length": "124112",
+    "fetched_at": "2026-08-11T10:29:26Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:29:33Z"
+  },
+  "text_sha256": "61c5e639da21cdc74c9de633dc46527ab1d19477cc9aac0f733fdc2e9fef3487"
+}

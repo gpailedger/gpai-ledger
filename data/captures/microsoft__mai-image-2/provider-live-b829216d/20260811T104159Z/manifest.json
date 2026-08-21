@@ -1,0 +1,43 @@
+{
+  "source_id": "microsoft/mai-image-2",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2",
+  "target_kind": "provider-live",
+  "sha256": "0c29e9f3ad0f006260da86742c482616d649ee9df3ad4537a180656fa0aaaa34",
+  "size_bytes": 298611,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf",
+    "final_url": "https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"69bc0430-48e73\"",
+    "last_modified": "Thu, 19 Mar 2026 14:12:00 GMT",
+    "content_length": "298611",
+    "fetched_at": "2026-08-11T10:41:59Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260807211706/https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf",
+    "at": "2026-08-11T10:42:08Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:42:20Z"
+  },
+  "text_sha256": "6c05144fd9a1f826778db79fd9aebe2cc1d2a999147bb473710279788ccab7d6"
+}

@@ -1,0 +1,58 @@
+{
+  "source_id": "swiss-ai-initiative/apertus",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus",
+  "target_kind": "provider-live",
+  "sha256": "787b7e5122765cd8f5a5832a248bd21843c2e300d9e36b5832246f9bd0dd6010",
+  "size_bytes": 329423,
+  "stored_as": "raw.pdf",
+  "text_sha256": "d81e71822dfd178555d34bbb05b91b1a490719675765eda511d18d06c8cf84b7",
+  "extraction_notes": [
+    "text_sha256 migrated 18 Aug 2026 to canonical whitespace-collapsed formula (pre-hardening capture)"
+  ],
+  "http": {
+    "url": "https://huggingface.co/swiss-ai/Apertus-70B-2509/resolve/main/Apertus_EU_Public_Summary.pdf",
+    "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/68b63f4c0b12a06a843048b1/95f599d066dce5869d06e9890dd28ce2011560e35531e177913bfa55e9f452b5?X-Xet-Cas-Uid=public&user_id=public&response-content-type=application%2Fpdf&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27Apertus_EU_Public_Summary.pdf%3B+filename%3D%22Apertus_EU_Public_Summary.pdf%22%3B&Expires=1786572280&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjhiNjNmNGMwYjEyYTA2YTg0MzA0OGIxLzk1ZjU5OWQwNjZkY2U1ODY5ZDA2ZTk4OTBkZDI4Y2UyMDExNTYwZTM1NTMxZTE3NzkxM2JmYTU1ZTlmNDUyYjVcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZ1c2VyX2lkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZwZGYmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN0FwZXJ0dXNfRVVfUHVibGljX1N1bW1hcnkucGRmJTNCK2ZpbGVuYW1lJTNEJTIyQXBlcnR1c19FVV9QdWJsaWNfU3VtbWFyeS5wZGYlMjIlM0IiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVwb2NoVGltZSI6MTc4NjU3MjI4MH19fV19&Signature=MEUCIBrNqOfbc7uVIB0UJCsmnUjip6oMs8usQmb7p1I5g6CeAiEAttI8iIHPgFmXa54TbMh3yXGebaa3wHNknS-L-y8v7Gg_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"95f599d066dce5869d06e9890dd28ce2011560e35531e177913bfa55e9f452b5\"",
+    "last_modified": null,
+    "content_length": "329423",
+    "fetched_at": "2026-08-12T21:04:43Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260813170026/https://us.aws.cdn.hf.co/xet-bridge-us/68b63f4c0b12a06a843048b1/95f599d066dce5869d06e9890dd28ce2011560e35531e177913bfa55e9f452b5?user_id=public&response-content-type=application%2Fpdf&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27Apertus_EU_Public_Summary.pdf%3B+filename%3D%22Apertus_EU_Public_Summary.pdf%22%3B&Expires=1786644024&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjhiNjNmNGMwYjEyYTA2YTg0MzA0OGIxLzk1ZjU5OWQwNjZkY2U1ODY5ZDA2ZTk4OTBkZDI4Y2UyMDExNTYwZTM1NTMxZTE3NzkxM2JmYTU1ZTlmNDUyYjVcXD91c2VyX2lkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZwZGYmWC1YZXQtQ2FzLVVpZD1wdWJsaWMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN0FwZXJ0dXNfRVVfUHVibGljX1N1bW1hcnkucGRmJTNCK2ZpbGVuYW1lJTNEJTIyQXBlcnR1c19FVV9QdWJsaWNfU3VtbWFyeS5wZGYlMjIlM0IiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVwb2NoVGltZSI6MTc4NjY0NDAyNH19fV19&Signature=MEUCIGBT6z4kLZedjtbTP6KvW3-~5ODkVaoyuuyus-TjJwT-AiEA2wS9N8vIXzGN46Nkk1i~vNvbHc71GEEjt3ecq-hIAlw_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F",
+    "at": "2026-08-13T17:00:32Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [
+      "https://b.pool.opentimestamps.org: HTTPError('500 Server Error: Internal Server Error for url: https://b.pool.opentimestamps.org/digest')"
+    ],
+    "at": "2026-08-12T21:05:25Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 429,
+      "snapshot": null,
+      "at": "2026-08-12T21:05:10Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "snapshot": null,
+      "at": "2026-08-12T21:24:52Z"
+    }
+  ]
+}

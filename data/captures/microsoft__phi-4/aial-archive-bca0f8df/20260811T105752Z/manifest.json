@@ -1,0 +1,35 @@
+{
+  "source_id": "microsoft/phi-4",
+  "provider": "Microsoft",
+  "model": "Phi-4",
+  "target_kind": "aial-archive",
+  "sha256": "24c96bd185377648dae68c35041a4adc43245b9a0413714758007365e01f01cd",
+  "size_bytes": 101302,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi_4_2026_02_05.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Phi_4_2026_02_05.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tba9z3265y\"",
+    "last_modified": "Mon, 02 Mar 2026 17:59:27 GMT",
+    "content_length": "101302",
+    "fetched_at": "2026-08-11T10:57:52Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:57:58Z"
+  },
+  "text_sha256": "8efe362f6514a1c4d98416ef46cb29f17ab1c912a8646b44a6bf933258359ace"
+}

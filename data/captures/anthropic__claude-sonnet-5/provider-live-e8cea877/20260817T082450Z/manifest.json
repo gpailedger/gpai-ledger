@@ -1,0 +1,56 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "provider-live",
+  "sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+  "size_bytes": 216234,
+  "stored_as": "raw.html",
+  "text_sha256": "e3425c0e212377dfbe4ea1335faa36cdc478e82e8975b0508ab1d565353fa37d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Sat, 15 Aug 2026 00:16:30 GMT",
+    "content_length": "216234",
+    "fetched_at": "2026-08-17T08:23:22Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0
+  },
+  "prior_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112015/https://trust.anthropic.com/resources",
+    "at": "2026-08-19T11:22:08Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:25:03Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:24:51Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:32:32Z"
+    }
+  ]
+}

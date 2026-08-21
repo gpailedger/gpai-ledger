@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "4e17d9a4beb3b8e72fe80ffdc315abd7fc7d6281bb7961af30cc441eed9d763d",
+  "size_bytes": 229234,
+  "stored_as": "raw.html",
+  "text_sha256": "7eef0a15bb46d4d25813bb4204c60a7c11b0d62890786941b0e66aa521e03147",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Wed, 19 Aug 2026 14:59:51 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-19T15:06:06Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150639/https://microsoft.ai/models/",
+    "at": "2026-08-19T15:06:56Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:07:08Z"
+  }
+}

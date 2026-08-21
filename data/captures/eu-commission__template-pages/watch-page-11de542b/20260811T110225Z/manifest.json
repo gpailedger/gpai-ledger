@@ -1,0 +1,41 @@
+{
+  "source_id": "eu-commission/template-pages",
+  "provider": "European Commission",
+  "model": "Template library + FAQ pages",
+  "target_kind": "watch-page",
+  "sha256": "9883766e1e7a26cca9ab9f843fe7b2a51951ac77862d18f4da337327ffc2d829",
+  "size_bytes": 71698,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models",
+    "final_url": "https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"1786442767-gzip\"",
+    "last_modified": "Tue, 11 Aug 2026 10:06:07 GMT",
+    "content_length": "8526",
+    "fetched_at": "2026-08-11T11:02:25Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811110308/https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models",
+    "at": "2026-08-11T11:03:21Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:03:34Z"
+  },
+  "text_sha256": "eeb3b915062e896ef26bf536f55a7b05e40ed8c55e029c3845ed9a2ab6236d89"
+}

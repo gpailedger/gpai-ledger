@@ -1,0 +1,418 @@
+Cohere's Command A+ Model | Cohere
+For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+docs
+v2 API
+v2 API
+Search
+/
+Ask AI
+DASHBOARD
+PLAYGROUND
+DOCS
+COMMUNITY
+LOG IN
+Guides and concepts
+API Reference
+Release Notes
+LLMU
+Cookbooks
+Search
+/
+Ask AI
+v2 API
+v2 API
+Guides and concepts
+API Reference
+Release Notes
+LLMU
+Cookbooks
+Get Started
+Welcome to Cohere
+Cohere Platform
+Overview
+Installation
+Creating a client
+Quickstart
+Playground
+FAQs
+Model Vault
+Overview
+Quickstart
+Deploy & manage
+Operate & observe
+Standard Vault
+Encrypted Vault
+Model Vault with North
+Models
+An Overview of Cohere's Models
+Audio
+Aya
+Command
+Command A+
+Command A
+Command A Reasoning
+Command A Translate
+Command A Vision
+Command R7B
+Command R+
+Command R
+Embed
+North
+Rerank
+Text Generation
+Introduction to Text Generation at Cohere
+Using the Chat API
+Reasoning
+Image Inputs
+Streaming Responses
+Structured Outputs
+Predictable Outputs
+Advanced Generation Parameters
+Retrieval Augmented Generation (RAG)
+Tool Use
+Tokens and Tokenizers
+Summarizing Text
+Safety Modes
+Embeddings (Vectors, Search, Retrieval)
+Introduction to Embeddings at Cohere
+Semantic Search with Embeddings
+Multimodal Embeddings
+Batch Embedding Jobs
+Reranking
+Going to Production
+API Keys and Rate Limits
+Going Live
+Deprecations
+How Does Cohere's Pricing Work?
+Integrations
+Integrating Embedding Models with Other Tools
+Cohere and LangChain
+LlamaIndex and Cohere
+Deployment Options
+Overview
+SDK Compatibility
+Private Deployment
+Cloud AI Services
+Tutorials
+Cookbooks
+LLM University
+Build Things with Cohere!
+Agentic RAG
+Cohere on Azure
+Responsible Use
+Cohere Trust Center
+Security
+Usage Policy
+Command A Technical Report
+Command R and Command R+ Model Card
+Cohere Web Crawlers
+Cohere Labs
+Cohere Labs Acceptable Use Policy
+More Resources
+Cohere Toolkit
+Datasets
+Improve Cohere Docs
+Welcome to Cohere
+Overview
+Installation
+Creating a client
+RAG
+Reranking
+Semantic Search
+Text Generation
+Tool Use & Agents
+Transcribing Audio
+Playground
+FAQs
+Overview
+Quickstart
+Home Page
+Creating a Vault
+Managing Vaults
+Monitoring
+Overview
+Supported Models
+Calling the API
+Pricing
+Overview
+Supported Models
+Calling the API
+Confidential Computing Primer
+Security Model
+Remote Attestation
+Verifying Your Deployment
+Encryption & Key Management
+Compliance
+Pricing
+FAQ
+Model Vault with North
+An Overview of Cohere's Models
+Cohere Transcribe
+Cohere Transcribe Arabic
+Aya
+Aya Vision
+Aya Expanse
+Tiny Aya
+Command A+
+Command A
+Command A Reasoning
+Command A Translate
+Command A Vision
+Command R7B
+Command R+
+Command R
+Embed
+North Mini Code
+Rerank
+Introduction to Text Generation at Cohere
+Using the Chat API
+Reasoning
+Image Inputs
+Streaming Responses
+Structured Outputs
+Parameter Types in Structured Outputs (JSON)
+Predictable Outputs
+Advanced Generation Parameters
+Basic usage
+End-to-end example
+Streaming
+Citations
+Tool Use
+Basic usage
+Usage patterns
+Parameter types
+Streaming
+Citations
+Tokens and Tokenizers
+Summarizing Text
+Safety Modes
+Introduction to Embeddings at Cohere
+Semantic Search with Embeddings
+Multimodal Embeddings
+Batch Embedding Jobs
+Rerank Overview
+Rerank Best Practices
+API Keys and Rate Limits
+Going Live
+Deprecations
+How Does Cohere's Pricing Work?
+Integrating Embedding Models with Other Tools
+Elasticsearch and Cohere
+MongoDB and Cohere
+Redis and Cohere
+Haystack and Cohere
+Pinecone and Cohere
+Weaviate and Cohere
+Open Search and Cohere
+Vespa and Cohere
+Qdrant and Cohere
+Milvus and Cohere
+Zilliz and Cohere
+Chroma and Cohere
+Cohere and LangChain
+Chat on LangChain
+Embed on LangChain
+Rerank on LangChain
+Tools on LangChain
+LlamaIndex and Cohere
+Overview
+SDK Compatibility
+Overview
+Setting Up
+Model Deployment
+Model Deployment - AWS
+Usage
+Cohere on AWS
+Amazon Bedrock
+Amazon SageMaker
+Deploy Your Own Finetuned Command-R-0824 Model from AWS Marketplace
+Cohere on Azure
+Cohere on Oracle Cloud Infrastructure (OCI)
+Cookbooks
+LLM University
+Build Things with Cohere!
+Cohere Text Generation Tutorial
+Building a Chatbot with Cohere
+Semantic Search with Cohere
+Reranking with Cohere
+RAG with Cohere
+Building an Agent with Cohere
+Agentic RAG
+Routing Queries to Data Sources
+Generating Parallel Queries
+Performing Tasks Sequentially
+Generating Multi-Faceted Queries
+Querying Structured Data (Tables)
+Querying Structured Data (SQL)
+Cohere on Azure
+Text Generation
+Semantic Search
+Reranking
+Retrieval Augmented Generation (RAG)
+Tool Use & Agents
+Usage Policy
+Command R and Command R+ Model Card
+Cohere Web Crawlers
+Cohere Labs Acceptable Use Policy
+Cohere Toolkit
+Datasets
+Improve Cohere Docs
+DASHBOARD
+PLAYGROUND
+DOCS
+COMMUNITY
+LOG IN
+Light
+On this page
+Description
+What Can Command A+ Be Used For?
+General
+Model Properties
+Distribution and Technical Integration
+Model Data and Training
+Scroll to top
+Models
+Command
+Cohere’s Command A+ Model
+Copy page
+Capabilities
+Reasoning
+Multilingual
+Image Inputs
+Safety Modes
+Citations
+Tool Use
+Structured Outputs
+Pricing
+For both trial keys and production keys,
+Command A+
+ is free until rate limits are reached. Learn more about rate limits for different models and key types
+
+here
+.
+Command A+ can be used in production through Cohere's
+Model Vault
+.
+Specifications
+Context Window:
+
+128,000
+ tokens
+Max Output Tokens:
+
+64,000
+ tokens
+Knowledge Cutoff:
+
+April 1, 2025
+API Endpoints
+Model ID
+command-a-plus-05-2026
+Chat V2
+Chat Completions
+Chat V1
+Try in Playground
+
+Description
+
+Command A+ is Cohere’s first Mixture of Experts model, bringing together the power of a strong agentic model, supporting vision and text on input, and expanding the language support to 48 languages, including all of the official European Union languages. With the MoE architecture, the model brings balance with providing a highly accurate user experience, while balancing out the need for enterprises to have a high throughput, low latency solution that minimizes the amount of GPUs required per instance, offering 1xB200 / 2xH100 support.
+
+What Can Command A+ Be Used For?
+
+Command A+ is excellent for:
+
+Complex, Multimodal Agentic Tasks
+: With mixed modality (vision / text) inputs, the model can autonomously take actions and interact with its environment to solve complex tasks.
+
+Multilingual Tasks
+: With support for 48 languages, combined with the model’s reasoning, agentic problem solving & vision processing capabilities, Command A+ expands not only the number of languages supported, but what enterprises across the globe can do with Cohere’s models.
+
+Balancing Accuracy & Efficiency
+: Providing support for deploying the model with as few as a single B200 or two H100 chips, and with vast improvements in reasoning, image processing, and agentic tasks over the rest of the Command A family, Command A+ is the fastest and most performant model in the Command A family by far.
+
+There’s more to be said about token budgets, enabling and disabling the
+thinking
+ operation, etc., which can be found in our dedicated
+Reasoning guide
+.
+
+General
+
+Name of the model provider
+: Cohere Inc.
+
+Release Date
+: May 20, 2026
+
+Model dependencies
+: N/A
+
+Contact
+:
+support@cohere.com
+
+Model Properties
+
+Model architecture
+: Command A+ is a sparse mixture-of-experts model.
+
+Input modalities
+: Text, image
+
+Output modalities
+: Text
+
+Model Size
+: 218B total, 25B active
+
+Distribution and Technical Integration
+
+Cohere Deployment
+:
+Deployment options
+ are subject to terms of use applicable to the deployment type or platform. Usage is subject to limitations set out in commercial agreements with customers, which includes Cohere’s
+Usage Policy
+.
+
+Open Source Deployment
+: Command A+ is available under an Apache 2.0 License on
+Hugging Face
+.
+
+Technical Integration and Required Software (if any)
+: For Cohere Deployments, see our
+Installation Guide
+ on getting started with Command A+. For Open Source Deployments, instructions are available on the
+HuggingFace page
+.
+
+Required Hardware
+: 1× B200 at W4A4 or 2× H100s at W4A4
+
+Model Data and Training
+
+Pre-training
+: The model was trained on a large-scale collection of unlabelled data using self-supervised learning to learn general patterns, syntax, and semantics across multiple languages.
+
+Post-training
+: During post training, labelled datasets were used with supervised fine-tuning (SFT) and reinforcement learning (RL) techniques to maximize the model’s performance over a wide spectrum of domains and capabilities.
+
+Data
+: Across both pre-training and post-training, various data sources and modalities are used, which include text and image content sourced from publicly available information, proprietary datasets developed or generated by Cohere with human annotation or through automated means, including synthetic data, and datasets sourced from specialized data vendors. In most cases, Cohere customers use Cohere models in their own environments, meaning Cohere has no access to inputs submitted to its models and does not use them for model training. De-identified data from the use of Cohere models on Cohere-hosted environments (e.g. user inputs) may be used in limited circumstances where permitted by user controls and Cohere’s relevant terms of service.
+
+Training Data Processing
+: Cohere employs various techniques to ensure data quality and suitability for training, including deduplication, filtering for toxic or harmful content, and quality filtering.
+
+EU AI Act Article 53(1)(d)
+:
+Public Summary of Training Content
+
+Was this page helpful?
+Yes
+No
+Edit this page
+Previous
+Command A
+Our largest, most performant model, ideal for building enterprise agents with a low compute footprint.
+Next
+Built with

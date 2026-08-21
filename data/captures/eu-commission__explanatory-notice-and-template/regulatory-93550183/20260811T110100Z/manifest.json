@@ -1,0 +1,43 @@
+{
+  "source_id": "eu-commission/explanatory-notice-and-template",
+  "provider": "European Commission",
+  "model": "Explanatory Notice + Template C(2025) 8311 final",
+  "target_kind": "regulatory",
+  "sha256": "be6cdf10131c3fd9eb9265e592b23609fd7df2d2c9692517017f739188d408be",
+  "size_bytes": 321595,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "stored as .bin at capture (origin served Content-Type '/'); magic-byte identified as .pdf on 19 Aug 2026 and renamed; bytes and SHA-256 unchanged"
+  ],
+  "http": {
+    "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+    "final_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+    "status_code": 200,
+    "content_type": "/",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T11:01:00Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811110102/https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+    "at": "2026-08-11T11:01:08Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:01:20Z"
+  },
+  "text_sha256": "8411c84b8a2eb51c8cb93d4942b9ca54dc855864f1c582dfe72658fe88633979"
+}

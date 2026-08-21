@@ -1,0 +1,9 @@
+* text=auto
+data/captures/** -text
+*.pdf binary
+*.ots binary
+*.zip binary
+*.docx binary
+*.doc binary
+# append-only log: union-merge so a push-rebase race never drops the other writer
+data/events.jsonl merge=union

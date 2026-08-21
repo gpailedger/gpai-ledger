@@ -1,0 +1,211 @@
+Template for general-purpose AI model providers to summarise their training content | Shaping Europe’s digital future
+
+Skip to main content
+
+en
+Select your language
+Close
+bg
+български
+es
+español
+cs
+čeština
+da
+dansk
+de
+Deutsch
+et
+eesti
+el
+ελληνικά
+en
+English
+fr
+français
+ga
+Gaeilge
+hr
+hrvatski
+it
+italiano
+lv
+latviešu
+lt
+lietuvių
+hu
+magyar
+mt
+Malti
+nl
+Nederlands
+pl
+polski
+pt
+português
+ro
+română
+sk
+slovenčina
+sl
+slovenščina
+fi
+suomi
+sv
+svenska
+
+Search
+Search
+
+Shaping Europe’s digital future
+
+Menu
+Close
+Menu
+Back
+Previous items
+Next items
+Home
+Policies
+Activities
+News
+Library
+Funding
+Calendar
+Consultations
+AI Office
+
+Home
+FAQs
+Template for general-purpose AI model providers to summarise their training content
+Template for general-purpose AI model providers to summarise their training content
+
+The Template aims to provide a common minimal baseline for the information to be made publicly available in the Summary of Training Content for general-purpose AI models.
+
+    Page Contents
+
+Page Contents
+General FAQ
+
+General FAQ
+
+What is the purpose and scope of the Template?
+All providers of general-purpose AI models are required to publish a summary of the content used to train their models, based on a template provided by the Commission. This public summary is designed to increase transparency about the model’s training data and assist parties with legitimate interests, such as copyright holders, in exercising their rights under Union law. The template outlines the required content for the public summary, along with accompanying explanations to help providers fulfil their obligations.
+
+How did the Commission develop the template?
+The
+Template
+ was created with input from a
+multi-stakeholder consultation on general-purpose AI models
+, organised by the AI Office from 30 July to 18 September 2024. During this period, over 430 responses were received from a wide range of stakeholders. Using this input, the AI Office drafted its preliminary approach to the Template and allowed participants involved in developing the
+Code of Practice on General-Purpose AI
+ to provide additional written feedback. The current version of the Template also reflects comments received from 111 stakeholders, including providers of general-purpose AI models, business associations, rightsholder organisations, academia, civil society, and public authorities. The draft Template was also presented and discussed with the AI Board Steering subgroup on General-Purpose AI and with the European Parliament’s (IMCO-LIBE Committees) working group on AI.
+
+How do these guidelines and the template support providers of general-purpose AI models in complying with the AI Act’s obligation?
+Under Article 53(1)(d) of the
+AI Act
+, using the Template is mandatory. It enables providers to meet their transparency requirements in a simple, consistent, and effective manner, while minimising the administrative burden to only what is necessary to fulfil the objective of the Summary.
+
+Who is expected to publish a summary of the training content?
+Any provider of general-purpose AI models, including those with systemic risks, that places such models on the Union market is required to publish respective summaries. This requirement also applies to providers of models released under free and open-source licenses.
+
+When will the obligation for the public summary start to apply?
+The obligation to publish the summary becomes applicable as of 2 August 2025. For models placed on the market before this date, providers should take the necessary steps to make the corresponding summaries available no later than 2 August 2027.
+If a provider of a model placed on the market before 2 August 2025 cannot, despite best efforts, provide certain information required for the summary because the information is unavailable or its retrieval would impose a disproportionate burden, the provider should clearly state and justify these information gaps in the published summary.
+
+What is the added value of the public summary for promoting trust and fundamental rights protection in the EU?
+General-purpose AI models are trained with large quantities of data but there is only limited information available regarding its origin. The template and resulting summaries provide crucial details about the training data, increasing transparency. This increased transparency enables parties with legitimate interests to exercise their rights under Union law. These may refer to copyright, related rights, and other intellectual property rights, as well as other rights protected under Union law, such as data protection, consumer protection, non-discrimination, and freedom of science.
+
+Will providers have to disclose trade secrets?
+The Template seeks to strike a balance between serving the interests of parties with legitimate interests and promoting meaningful transparency of the training content while respecting the rights of all parties concerned, particularly taking into account the need to protect trade secrets and confidential business information. The decision on which details should be disclosed has been the result of a careful balancing exercise carried out by the Commission, and the Template requires different levels of detail depending on the data source to protect providers’ trade secrets.
+
+What type of information should the summary contain?
+The Template provides a uniform baseline for information to be publicly disclosed in the Summary, consisting of three main sections:
+General information:
+This section includes details identifying the provider and the model, information on the types of training content (e.g., text, video, audio, size per modality within broad ranges, and general characteristics of the training data.
+List of data sources:
+ This section requires disclosure of information about various data sources, such as publicly available datasets, private datasets, data scraped from online sources, user data and synthetic data. More detailed requirements for each type of source are outlined in the Template.
+Relevant data processing aspects:
+ This section requires information on certain data processing aspects important for exercising the rights of parties with legitimate interests under Union law, such as copyright, and includes details about the removal of illegal content.
+Each section allows providers to give additional information on a voluntary basis.
+
+How are copyright and intellectual property rights addressed?
+The transparency of the training data will help rightsholders in obtaining relevant information on the content used in the training of general-purpose AI models. The information provided through the template summary will specifically allow rightsholders to better assess what data modalities and type of content was used and to what extent the conditions for lawful text and data mining, as provided for in the Copyright in the
+Digital Single Market Directive
+, have been respected.
+They will also receive detailed descriptions of both public and private datasets, a list of all large publicly available datasets, and detailed information regarding the data scraped from online sources. This includes names of crawlers used, period of collection, comprehensive detailed description of the content scraped, and a list the top 10% of all domains that have been scraped from the internet
+(for SMEs top 5% or 1000, whichever is lower).
+
+What about personal data or user data?
+The Template also requires providers to disclose whether their model has been trained on data collected through user interactions with all their services and products, including interactions with their AI models.
+In this context, the Template requires disclosure of the modalities of the user data and a description of the related services and products, while not requiring the disclosure of any personal information.
+Further details regarding the use of personal data by providers for training activities may be found in their respective privacy statements.
+
+When and where must the summary be published?
+The Summary must be made publicly available no later than when a model is placed on the Union market. It should be published on the provider's official website in a clearly visible and accessible manner, making clear which model(s) (and possibly model version(s)) is/are covered by the Summary. The Summary should also be made publicly available alongside the model across all its public distribution channels, such as online platforms.
+
+Should the Summary be updated?
+Yes, the Summary should be updated if a provider has further trained the model on additional data which requires an update of the content of the Summary. The Summary should be updated at six-month intervals, or sooner if the new data used for further training requires a materially significant update of the content of the Summary, whichever event is sooner. In such cases, the Summary should reflect the additional training data and include the date of the update. The updated Summary should be made publicly available in parallel with the modified model.
+
+What about modified or fine-tuned models by the same or other providers?
+When a general-purpose AI model already placed on the Union market is modified by a downstream entity in such a way that the downstream entity becomes the provider of the resulting general-purpose AI model [see
+Commission guidelines on General-Purpose AI model
+], the Template should only include information about the training content used for the modification. The name of the modified model(s) should be clearly disclosed.
+Different models or model versions may be covered by the same Summary, if the content of their Summaries is identical. In such cases, it should clearly specify which models and model versions the Summary applies to.
+If different models or model versions are based on an existing general-purpose AI model placed on the Union market, and the training data used for each varies (thus requiring separate Summaries), the Summaries only need to address the training data specifically used for further modification or fine-tuning. A clear reference to the original model and its corresponding Summary should be included in each Summary for the modified versions.
+
+What are the consequences if a provider fails to publish a summary?
+The publication of a summary of training content is mandatory. Failure to provide this summary can lead to enforcement actions by the AI Office as of 2 August 2026. Non-compliance may result in fines of up to 3% of the provider's annual total worldwide turnover in the preceding financial year, or 15 000 000 Euros, whichever is higher.
+Providers of models already placed on the market before 2 August 2025 should take the necessary steps to make available the corresponding Summary no later than 2 August 2027. If a provider, despite best efforts, cannot provide parts of the information due to unavailability or a disproportionate burden in retrieving the data, the provider should clearly state and justify these information gaps in the Summary.
+
+How do the Explanatory Notice and the Template relate to the Code of Practice for general-purpose AI, and the recently published General-Purpose AI Guidelines?
+The
+Explanatory Notice (in all EU official languages)
+ and the Template complement the
+Code of Practice
+and the
+Guidelines on General-Purpose AI models
+, by facilitating compliance with the obligation under Article 53(1)(d) AI Act for the public summaries of training content. Notably, using the template is mandatory and serves as the sole guidance for providing those public summaries.
+By contrast, adherence to the Code of Practice is voluntary and addresses other obligations, such as the copyright policy that providers must put in place under Article 53(1)(c) AI Act. However, the Template and the related Explanatory Notice are part of the same package designed to facilitate compliance with rules on general-purpose AI models. Therefore, providers and stakeholders are encouraged to consider all these resources in parallel.
+
+Related content
+
+Policy
+Guidelines for providers of general-purpose AI models
+The Commission has issued guidelines to clarify the scope of the obligations for providers of general-purpose AI models under the AI Act. These obligations entered into application on 2 August 2025.
+
+Last update
+
+26 March 2026
+
+Print as PDF
+
+Shaping Europe’s digital future
+This site is managed by:
+Directorate-General for Communications Networks, Content and Technology
+Digital EU on Mastadon
+Digital EU on LinkedIn
+Digital EU on Facebook
+Digital EU on Youtube
+Digital EU on Instagram
+Digital EU on X
+
+    About us
+Privacy statement
+Copyright notice
+About Directorate-General CONNECT
+Language Policy
+Follow the European Commission
+Mastodon
+LinkedIn
+Bluesky
+Facebook
+Youtube
+Other
+Contact us
+Report an IT vulnerability
+Languages on our websites
+Cookies
+Privacy policy
+Legal notice
+Accessibility

@@ -1,0 +1,53 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "Command A Plus",
+  "target_kind": "provider-live",
+  "sha256": "22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7",
+  "size_bytes": 124112,
+  "stored_as": "raw.pdf",
+  "text_sha256": "61c5e639da21cdc74c9de633dc46527ab1d19477cc9aac0f733fdc2e9fef3487",
+  "extraction_notes": [
+    "fetched via page-embedded pre-signed URL; stable key = unsigned base URL",
+    {
+      "stable_base": "https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs.buildwithfern.com/22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7/assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf"
+    }
+  ],
+  "http": {
+    "url": "https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs.buildwithfern.com/22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7/assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA6KXJSKKNFOCF7G4B%2F20260814%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260814T232114Z&X-Amz-Expires=604800&X-Amz-Signature=7b4379fd6ab5fabf6e9bb5c39040898814cb0ef20e49e62e6b881568f1ed7458&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+    "final_url": "https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs.buildwithfern.com/22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7/assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA6KXJSKKNFOCF7G4B%2F20260814%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260814T232114Z&X-Amz-Expires=604800&X-Amz-Signature=7b4379fd6ab5fabf6e9bb5c39040898814cb0ef20e49e62e6b881568f1ed7458&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"c57b35f72cbd2f994551779578df96c6\"",
+    "last_modified": "Fri, 31 Jul 2026 17:32:00 GMT",
+    "content_length": "124112",
+    "fetched_at": "2026-08-17T08:06:29Z"
+  },
+  "wayback": {
+    "ok": false,
+    "status_code": 500,
+    "snapshot": null,
+    "at": "2026-08-17T08:33:35Z",
+    "gave_up": "signed URL; save must use a freshly mined URL"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:06:46Z"
+  },
+  "prior_sha256": null,
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 500,
+      "snapshot": null,
+      "at": "2026-08-17T08:06:40Z"
+    }
+  ]
+}

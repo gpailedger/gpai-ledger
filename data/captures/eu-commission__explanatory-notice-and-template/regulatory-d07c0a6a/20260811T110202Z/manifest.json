@@ -1,0 +1,43 @@
+{
+  "source_id": "eu-commission/explanatory-notice-and-template",
+  "provider": "European Commission",
+  "model": "Explanatory Notice + Template C(2025) 8311 final",
+  "target_kind": "regulatory",
+  "sha256": "3245f6efbf00694a71bce67ea0b0c66a766428d1f631f9fcbfba9cb76f87dbc3",
+  "size_bytes": 363262,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+    "final_url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"777ebf7ba1df946a759b9566271d8b80-gzip\"",
+    "last_modified": "Tue, 11 Aug 2026 11:02:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-11T11:02:02Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260125055205/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+    "at": "2026-08-11T11:02:13Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:02:23Z"
+  },
+  "text_sha256": "43a95a2cb0497637357ded9aa22f879be16ac91da8c61adadd5029ea29164727"
+}

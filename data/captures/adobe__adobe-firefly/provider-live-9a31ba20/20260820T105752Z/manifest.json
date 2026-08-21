@@ -1,0 +1,53 @@
+{
+  "source_id": "adobe/adobe-firefly",
+  "provider": "Adobe",
+  "model": "Adobe Firefly",
+  "target_kind": "provider-live",
+  "sha256": "4bd528f863edf343f7780271463f34e72d9048ec5788a8645d2d044a58b29783",
+  "size_bytes": 1141438,
+  "stored_as": "raw.pdf",
+  "text_sha256": "44d023c501922f06b3b8f564e31766d2dd05dc1d27a7b52c3e35a946fcf5a9d2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "final_url": "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "W/\"b17a850518f5f359c8882efe9221a11e\"",
+    "last_modified": "Fri, 30 Jan 2026 03:09:50 GMT",
+    "content_length": "1141438",
+    "fetched_at": "2026-08-20T10:57:51Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260821100558/https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "at": "2026-08-21T10:06:05Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-20T10:58:06Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260820105756/https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+      "at": "2026-08-20T10:58:00Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260820105756/https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+      "at": "2026-08-20T11:11:20Z"
+    }
+  ]
+}

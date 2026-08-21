@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/mai-thinking-1",
+  "provider": "Microsoft",
+  "model": "MAI-Thinking-1",
+  "target_kind": "provider-live",
+  "sha256": "1d8241363c5e427dbcd9325e64bdd03863654bf5b13a05fb3d369b8cd0dfd20e",
+  "size_bytes": 271872,
+  "stored_as": "raw.pdf",
+  "text_sha256": "84868bc5c745d6cf62d3a061fc2864dae4de2184534e8f728c3bb877000d4ad3",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
+    "final_url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"6a7d188b-42600\"",
+    "last_modified": "Thu, 13 Aug 2026 01:06:19 GMT",
+    "content_length": "271872",
+    "fetched_at": "2026-08-17T14:40:41Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260817144043/https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
+    "at": "2026-08-17T14:40:50Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T14:41:03Z"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "SpeakLeash",
+  "model": "Bielik v3 11B Instruct",
+  "target_kind": "provider-live",
+  "sha256": "53ee117f30b8e6b89cdd95d2b50413811cf58e30e0831bd2e5c1ae4b68ba449b",
+  "size_bytes": 360352,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf",
+    "final_url": "https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Tue, 30 Dec 2025 21:54:09 GMT",
+    "content_length": "360352",
+    "fetched_at": "2026-08-11T10:22:54Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811102256/https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf",
+    "at": "2026-08-11T10:23:03Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:23:14Z"
+  },
+  "text_sha256": "fb25e9ba17b788ff7b902a0b458908083c56b2fd7430c789e36b89fe0ecd47c3"
+}

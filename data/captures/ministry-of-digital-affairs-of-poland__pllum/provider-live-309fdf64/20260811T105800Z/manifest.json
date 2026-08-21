@@ -1,0 +1,57 @@
+{
+  "source_id": "ministry-of-digital-affairs-of-poland/pllum",
+  "provider": "Ministry of Digital Affairs of Poland",
+  "model": "PLLuM 2512 Base",
+  "target_kind": "provider-live",
+  "sha256": "5a2e3f9a42da7bd3f1add295c67aa2234917a4aa5d4cbbd573a7e56f5352a054",
+  "size_bytes": 97258,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/blob/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+    "final_url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/blob/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"17bea-QkoQMja+F07zrK7TJeTjiDVFM6o\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:58:00Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260812212323/https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/blob/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+    "at": "2026-08-12T21:23:34Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:58:20Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260811105802/https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/blob/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+      "at": "2026-08-11T10:58:08Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "snapshot": null,
+      "at": "2026-08-11T16:13:20Z"
+    }
+  ],
+  "text_sha256": "504b8bf61235bba8b4b6009f2cf555f3069b18251b7b56d9cec1345bbcdd9681"
+}

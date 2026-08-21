@@ -1,0 +1,53 @@
+{
+  "source_id": "black-forest-labs/flux-3",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.3",
+  "target_kind": "provider-live",
+  "sha256": "f2b22ca065a915e19eb81fe7bf6e4234deed1d1b1302ea091c835632650fbd47",
+  "size_bytes": 217879,
+  "stored_as": "raw.html",
+  "text_sha256": "437efdd14fdce52b6a911fa7388cebfdba4c64226f5d8d4804620f468bc52b30",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://bfl.ai/transparency?tab=training-data-summaries",
+    "final_url": "https://bfl.ai/transparency?tab=training-data-summaries",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "217879",
+    "fetched_at": "2026-08-21T09:59:12Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 5,
+    "consent_dismissed": "Reject all",
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "0073a17c80487665009993dc9e0cccbb75807eda355ca833bd42e2efbf8c94f3",
+  "wayback": {
+    "ok": false,
+    "status_code": 500,
+    "snapshot": null,
+    "at": "2026-08-21T10:06:23Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-21T09:59:29Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 500,
+      "snapshot": null,
+      "at": "2026-08-21T09:59:23Z"
+    }
+  ]
+}

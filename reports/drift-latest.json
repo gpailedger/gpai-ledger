@@ -1,0 +1,520 @@
+[
+  {
+    "id": "adobe/adobe-firefly",
+    "model": "Adobe Firefly",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "swiss-ai-initiative/apertus-1-5",
+    "model": "Apertus v1.5",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "swiss-ai-initiative/apertus",
+    "model": "Apertus",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "speakleash/bielik",
+    "model": "Bielik v3 11B Instruct",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "bria-ai/bria",
+    "model": "Bria 3.2",
+    "verdict": "inpage-baseline",
+    "note": "in-page document with a single capture — drift detection starts from its next content change"
+  },
+  {
+    "id": "anthropic/claude-mythos-5-fable-5",
+    "model": "Claude Mythos 5 / Claude Fable 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-mythos-preview",
+    "model": "Claude Mythos Preview",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-4-7",
+    "model": "Claude Opus 4.7",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-4-8",
+    "model": "Claude Opus 4.8",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-5",
+    "model": "Claude Opus 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-sonnet-5",
+    "model": "Claude Sonnet 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "cohere/command-a-plus",
+    "model": "C4AI Command A Plus",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "domyn/domyn",
+    "model": "Domyn Large",
+    "verdict": "capture-method-change",
+    "similarity": 0.9881,
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit"
+  },
+  {
+    "id": "fastweb/fastwebmiia",
+    "model": "FastwebMIIA",
+    "verdict": "DRIFT-CANDIDATE",
+    "similarity": 0.6243,
+    "changes": [
+      {
+        "op": "insert",
+        "old": "",
+        "new": "DEL REGOLAMENTO UE 2024/1689 -"
+      },
+      {
+        "op": "replace",
+        "old": "23.03.2026",
+        "new": "30.07.2026 v3"
+      },
+      {
+        "op": "replace",
+        "old": "pre - addestramento",
+        "new": "pre-addestramento"
+      },
+      {
+        "op": "replace",
+        "old": "in dicare",
+        "new": "indicare"
+      },
+      {
+        "op": "replace",
+        "old": "dati",
+        "new": "d ati"
+      },
+      {
+        "op": "replace",
+        "old": "INFORMAZIONI GENERALI A.",
+        "new": "1. Informazioni generali 1.1"
+      },
+      {
+        "op": "replace",
+        "old": "Ragione sociale",
+        "new": "e recapiti Nome e recapiti"
+      },
+      {
+        "op": "replace",
+        "old": "S.P.A. con sede in Milano",
+        "new": "S.p.A."
+      },
+      {
+        "op": "insert",
+        "old": "",
+        "new": "Adriano"
+      },
+      {
+        "op": "replace",
+        "old": "societ",
+        "new": "20139 Milano Italia. Societ"
+      },
+      {
+        "op": "delete",
+        "old": "e",
+        "new": ""
+      },
+      {
+        "op": "insert",
+        "old": "",
+        "new": "direzione e"
+      },
+      {
+        "op": "delete",
+        "old": "e",
+        "new": ""
+      },
+      {
+        "op": "delete",
+        "old": "direzione della societ",
+        "new": ""
+      },
+      {
+        "op": "replace",
+        "old": "AG di seguito Fastweb . B. Nome e Identificatore univoco della versione",
+        "new": "AG. Rappresentante autorizzato N/A fornitore stabilito in UE. 1.2 Identificazione"
+      },
+      {
+        "op": "replace",
+        "old": "Modelli della famiglia FastwebMIIA:",
+        "new": "Nome/i del modello e versione: FastwebMIIA"
+      },
+      {
+        "op": "replace",
+        "old": "d",
+        "new": "di"
+      },
+      {
+        "op": "replace",
+        "old": "C.",
+        "new": "Dipendenze del modello: N/A Data di immissione sul mercato dell Unione: 29/05/2025 FastwebMIIA -7B 23/03/2026 FastwebMIIA-7B-2603"
+      },
+      {
+        "op": "replace",
+        "old": "Modello",
+        "new": "modello"
+      },
+      {
+        "op": "replace",
+        "old": "D. Base models N/A E. Rappresentante Autorizzato N/A F. Rilascio Data di rilascio 29/05/2025 23/03/2026 G. Dimensione",
+        "new": "1.3. Modalit dimensione"
+      },
+      {
+        "op": "delete",
+        "old": "modalit",
+        "new": ""
+      },
+      {
+        "op": "insert",
+        "old": "",
+        "new": "altre"
+      },
+      {
+        "op": "replace",
+        "old": "Tipologia",
+        "new": "Modalit Testo Immagine Audio Video Altro Dimensione"
+      },
+      {
+        "op": "replace",
+        "old": "training:",
+        "new": "addestramento Testo - da 1 miliardo"
+      },
+      {
+        "op": "replace",
+        "old": "testuali b immagini c video d audio e altro",
+        "new": "10.000 miliardi di token circa 1 5 2 10 token ."
+      },
+      {
+        "op": "insert",
+        "old": "",
+        "new": "esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramente esemplificativo e"
+      },
+      {
+        "op": "replace",
+        "old": "multimodale stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a",
+        "new": "esaustivo:"
+      },
+      {
+        "op": "delete",
+        "old": "b",
+        "new": ""
+      },
+      {
+        "op": "replace",
+        "old": "c notizie giornalismo e opinioni d",
+        "new": "pubblicazioni giornalistiche"
+      },
+      {
+        "op": "replace",
+        "old": "e comunicazione sociale es. messaggi f promozione pubblicit recensioni di prodotti e servizi g altro a testi di narrativa e letteratura b testi scientifici ed educativi c notizie giornalismo e opinioni d documenti legali e ufficiali f promozione pubblicit recensioni di prodotti e servizi g altri",
+        "new": "informazioni promozionali codice informatico"
+      },
+      {
+        "op": "replace",
+        "old": "tra cui esempi di codici informatici testi storici e un set di dati sintetici come da sezioni X e Y. I.",
+        "new": "storici."
+      },
+      {
+        "op": "replace",
+        "old": "grafici: a fotografia b dipinti e belle arti c infografiche d illustrazione e design grafico e immagini tratte da social/personali",
+        "new": "grafici N/A"
+      },
+      {
+        "op": "delete",
+        "old": "J.",
+        "new": ""
+      },
+      {
+        "op": "delete",
+        "old": "video: a film spettacolo b contenuti",
+        "new": ""
+      },
+      {
+        "op": "replace",
+        "old": "animati c filmati di videogiochi e immersivi es. 3D d documentati",
+        "new": "N/A"
+      },
+      {
+        "op": "delete",
+        "old": "e notizie video e giornalismo f contenuti degli utenti dei social g altri contenuti video K.",
+        "new": ""
+      },
+      {
+        "op": "delete",
+        "old": "audio: a musica b narrazione e narrativa es. audiolibri c contenuti",
+        "new": ""
+      },
+      {
+        "op": "replace",
+        "old": "educativi non",
+        "new": "N/A Non presenti Data pi recente"
+      },
+      {
+        "op": "replace",
+        "old": "narrativa d programmi radiofonici e podcast e comunicazione sociale telefonate messaggi vocali f altro Non presenti. L. Tipologia contenuti speciali: a codice sorgente b",
+        "new": "acquisi zione/raccolta dei"
+      },
+      {
+        "op": "replace",
+        "old": "strutturati es. calendario mappe etc. c altro descrivere a codice sorgente M.",
+        "new": "per l addestramento del modello Maggio 2025"
+      }
+    ]
+  },
+  {
+    "id": "bria-ai/fibo",
+    "model": "FIBO",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "black-forest-labs/flux-3",
+    "model": "FLUX.3",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "google/gemini-3-pro",
+    "model": "Gemini 3 Pro",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "google/gemma-4",
+    "model": "Gemma 4",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "openai/gpt-5-2",
+    "model": "GPT-5.2",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "openai/gpt-5-4-nano",
+    "model": "GPT-5.4 Nano",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "openai/gpt-5-5",
+    "model": "GPT-5.5",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "openai/gpt-5-6-luna",
+    "model": "GPT-5.6 Luna",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "openai/gpt-image-2",
+    "model": "GPT Image 2",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "xai/grok-4-5",
+    "model": "Grok 4.5",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "xai/grok-voice-think-fast-2",
+    "model": "Grok Voice Think Fast 2.0",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "thinking-machines/inkling-small",
+    "model": "Inkling Small",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "thinking-machines/inkling",
+    "model": "Inkling",
+    "verdict": "same-content",
+    "similarity": 1.0
+  },
+  {
+    "id": "microsoft/mai-code-1-flash",
+    "model": "MAI-Code-1-Flash",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "microsoft/mai-cyber-1-flash",
+    "model": "MAI-Cyber-1-Flash",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "microsoft/mai-image-2",
+    "model": "MAI-Image-2",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "microsoft/mai-image-2-5",
+    "model": "MAI-Image-2.5",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "model": "Minimax M3",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "mistral-ai/ministral-3-14b",
+    "model": "Ministral 3 14B",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "mistral-ai/ministral-3-3b",
+    "model": "Ministral 3 3B",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "mistral-ai/ministral-3-8b",
+    "model": "Ministral 3 8B",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "mistral-ai/mistral-large-3",
+    "model": "Mistral Large 3",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "mistral-ai/mistral-small-4",
+    "model": "Mistral Small 4",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "meta/muse-glimmer",
+    "model": "Muse Glimmer",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "meta/muse-image",
+    "model": "Muse Image",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "meta/muse-spark",
+    "model": "Muse Spark",
+    "verdict": "DRIFT-CANDIDATE",
+    "similarity": 0.9926,
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Content Version",
+        "new": "ContentVersion"
+      },
+      {
+        "op": "replace",
+        "old": "V2",
+        "new": "V3"
+      },
+      {
+        "op": "replace",
+        "old": "7/8/261.",
+        "new": "August 4 20261."
+      },
+      {
+        "op": "replace",
+        "old": "N/A Date",
+        "new": "N/ADate"
+      },
+      {
+        "op": "replace",
+        "old": "market:4/8/261.3.",
+        "new": "market:April 8 20261.3."
+      },
+      {
+        "op": "replace",
+        "old": "June",
+        "new": "July"
+      },
+      {
+        "op": "replace",
+        "old": "multi-lingual",
+        "new": "multilingual"
+      },
+      {
+        "op": "replace",
+        "old": "partiesYesHave",
+        "new": "partiesHave"
+      },
+      {
+        "op": "replace",
+        "old": "not licensed",
+        "new": "notlicensed"
+      },
+      {
+        "op": "replace",
+        "old": "from providers",
+        "new": "fromproviders"
+      },
+      {
+        "op": "insert",
+        "old": "",
+        "new": "YesIf yes specify the modality ies of the content covered by the datasetsconcerned:"
+      },
+      {
+        "op": "replace",
+        "old": "Yes If",
+        "new": "YesIf"
+      },
+      {
+        "op": "replace",
+        "old": "June",
+        "new": "July"
+      }
+    ]
+  },
+  {
+    "id": "amazon/nova-2-lite",
+    "model": "Nova 2 Lite",
+    "verdict": "same-content",
+    "similarity": 1.0
+  },
+  {
+    "id": "microsoft/phi-4",
+    "model": "Phi-4",
+    "verdict": "same-content",
+    "similarity": 0.9996
+  },
+  {
+    "id": "ministry-of-digital-affairs-of-poland/pllum",
+    "model": "PLLuM 2512 Base",
+    "verdict": "identical-bytes"
+  },
+  {
+    "id": "huggingface/smollm3",
+    "model": "SmolLM3-3B",
+    "verdict": "capture-method-change",
+    "similarity": 0.0528,
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit"
+  },
+  {
+    "id": "microsoft/mai-thinking-1",
+    "model": "MAI-Thinking-1",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "microsoft/mai-code-1-1-flash",
+    "model": "MAI-Code-1.1-Flash",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  }
+]

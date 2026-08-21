@@ -1,0 +1,57 @@
+{
+  "source_id": "google/gemini-3-pro",
+  "provider": "Google",
+  "model": "Gemini 3 Pro",
+  "target_kind": "provider-live",
+  "sha256": "1513fea5261d75056fa3d0bcce5df65d9fd484e5d87454cb1213a4b885b89b73",
+  "size_bytes": 95225,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf",
+    "final_url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"2fa3d463065723ffa66515262f95116d\"",
+    "last_modified": "Thu, 02 Jul 2026 13:20:45 GMT",
+    "content_length": "95225",
+    "fetched_at": "2026-08-11T10:34:56Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260812212258/https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf",
+    "at": "2026-08-12T21:23:09Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:35:16Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260811103458/https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf",
+      "at": "2026-08-11T10:35:05Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "snapshot": null,
+      "at": "2026-08-11T16:12:45Z"
+    }
+  ],
+  "text_sha256": "87b80769a90f9c0c87cbcf0b95fb3483d9b9028ce49d28b2eee3c95bc038a498"
+}

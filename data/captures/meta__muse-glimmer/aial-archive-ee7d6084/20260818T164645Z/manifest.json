@@ -1,0 +1,33 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "aial-archive",
+  "sha256": "5f29be94fba3e80df8125748f3748a2dc4083aa04ca12c718fe5366fc34486b4",
+  "size_bytes": 271900,
+  "stored_as": "raw.pdf",
+  "text_sha256": "14b3530481d8d791fb3331f25bbd2826e009531fc158d00cd231d2409d73f9ac",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tjwyq25tss\"",
+    "last_modified": "Mon, 17 Aug 2026 12:30:02 GMT",
+    "content_length": "271900",
+    "fetched_at": "2026-08-18T16:46:44Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T16:46:51Z"
+  }
+}

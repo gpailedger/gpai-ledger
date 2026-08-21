@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-2",
+  "provider": "OpenAI",
+  "model": "GPT-5.2",
+  "target_kind": "aial-archive",
+  "sha256": "e929185c681e02a2eafc2ba33da9c0b099cb6227abe55a70ddddc63380a9a025",
+  "size_bytes": 207172,
+  "stored_as": "raw.pdf",
+  "text_sha256": "dc0d299eb80ae3f7d5d06d0dae1407701c995952f4d6ae3c9e46ad1c8bb6c5d1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_2_2026_08_17.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_2_2026_08_17.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tjwyq24fus\"",
+    "last_modified": "Mon, 17 Aug 2026 12:30:02 GMT",
+    "content_length": "207172",
+    "fetched_at": "2026-08-18T16:42:15Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T16:42:23Z"
+  }
+}

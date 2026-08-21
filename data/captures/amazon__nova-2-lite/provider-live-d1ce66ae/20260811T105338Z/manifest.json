@@ -1,0 +1,43 @@
+{
+  "source_id": "amazon/nova-2-lite",
+  "provider": "Amazon",
+  "model": "Nova 2 Lite",
+  "target_kind": "provider-live",
+  "sha256": "c26e002296828ca2a285d1ceb241e7aba1aa515aa0331289c9e51ec4a6847a80",
+  "size_bytes": 292692,
+  "stored_as": "raw.zip",
+  "extraction_notes": [
+    {
+      "inner_file": "nova-2-lite-training-data-summary.pdf",
+      "inner_sha256": "b073bdc1de04f384330754dbb3a8a5871aa3c524f63ff5cf46f29063ed6f9884"
+    }
+  ],
+  "http": {
+    "url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/samples/nova-2-lite-training-data-summary.zip",
+    "final_url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/samples/nova-2-lite-training-data-summary.zip",
+    "status_code": 200,
+    "content_type": "application/zip",
+    "etag": "\"8Wr0aL0hhmBjYdQaqTJOKlievzM=\"",
+    "last_modified": "Tue, 11 Aug 2026 04:23:26 GMT",
+    "content_length": "292692",
+    "fetched_at": "2026-08-11T10:53:38Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811105340/https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/samples/nova-2-lite-training-data-summary.zip",
+    "at": "2026-08-11T10:53:47Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:53:59Z"
+  }
+}

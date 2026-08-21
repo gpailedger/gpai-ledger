@@ -1,0 +1,47 @@
+{
+  "source_id": "microsoft/mai-code-1-1-flash",
+  "provider": "Microsoft",
+  "model": "MAI-Code-1.1-Flash",
+  "target_kind": "provider-live",
+  "sha256": "fac4efe11133b9d7f8bada16d820a888e69e47ba6e05a604efd0879a9641c22b",
+  "size_bytes": 352608,
+  "stored_as": "raw.pdf",
+  "text_sha256": "8424ffc5447e4ffdac24b4b33f74af89b9da9b5e653f5c2b862cb941c3befa76",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+    "final_url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"6a7b4f04-56160\"",
+    "last_modified": "Tue, 11 Aug 2026 16:34:12 GMT",
+    "content_length": "352608",
+    "fetched_at": "2026-08-17T14:41:06Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112726/https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+    "at": "2026-08-19T11:27:35Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T14:41:27Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": "https://web.archive.org/web/20260817144108/https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+      "at": "2026-08-17T14:41:14Z"
+    }
+  ]
+}

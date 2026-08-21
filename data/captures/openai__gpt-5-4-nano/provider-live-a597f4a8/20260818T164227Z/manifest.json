@@ -1,0 +1,41 @@
+{
+  "source_id": "openai/gpt-5-4-nano",
+  "provider": "OpenAI",
+  "model": "GPT-5.4 Nano",
+  "target_kind": "provider-live",
+  "sha256": "133a5a71e93918278b5464075e016e0080948d7bbfc7f27525e3857494422230",
+  "size_bytes": 206642,
+  "stored_as": "raw.pdf",
+  "text_sha256": "4108d9fdd51fa64bb98c8a36aff94e7e668c362f564d0b0483434171d63ef661",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
+    "final_url": "https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 07 Aug 2026 20:07:58 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-18T16:42:26Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260818164231/https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
+    "at": "2026-08-18T16:42:40Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T16:42:52Z"
+  }
+}

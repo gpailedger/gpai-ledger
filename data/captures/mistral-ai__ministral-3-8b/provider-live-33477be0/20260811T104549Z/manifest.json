@@ -1,0 +1,43 @@
+{
+  "source_id": "mistral-ai/ministral-3-8b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 8B",
+  "target_kind": "provider-live",
+  "sha256": "e7f6855bea94bdb663a9cd4aa622d3040efc8589a34da762080c0cc54fc977ea",
+  "size_bytes": 225777,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",
+    "final_url": "https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Fri, 31 Jul 2026 12:51:38 GMT",
+    "content_length": "225777",
+    "fetched_at": "2026-08-11T10:45:49Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811104718/https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",
+    "at": "2026-08-11T10:47:22Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:47:33Z"
+  },
+  "text_sha256": "ae3b807a12fa8d310ba6284e0b8542da93074ce475587d3242761797e93f3ac9"
+}

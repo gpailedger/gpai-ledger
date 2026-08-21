@@ -1,0 +1,43 @@
+{
+  "source_id": "swiss-ai-initiative/apertus",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus",
+  "target_kind": "provider-live",
+  "sha256": "6ad4b1e7a61c9cfcb2482c8392d5ec65952a61113392b9e00b389af495eef86e",
+  "size_bytes": 138616,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf",
+    "final_url": "https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"21d78-ZAfd+yq/e2HwDnixcMyaT+HPQJM\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:22:06Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260621221015/https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf",
+    "at": "2026-08-11T10:22:17Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:22:29Z"
+  },
+  "text_sha256": "b249707fe05abbbbf8dc93a337831697bc6659b9445a9757a3df3ffa644304ad"
+}

@@ -1,0 +1,35 @@
+{
+  "source_id": "swiss-ai-initiative/apertus",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus",
+  "target_kind": "aial-archive",
+  "sha256": "787b7e5122765cd8f5a5832a248bd21843c2e300d9e36b5832246f9bd0dd6010",
+  "size_bytes": 329423,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Apertus_2025_11_12.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Apertus_2025_11_12.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tba9z3726n\"",
+    "last_modified": "Mon, 02 Mar 2026 17:59:27 GMT",
+    "content_length": "329423",
+    "fetched_at": "2026-08-11T10:22:44Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:22:50Z"
+  },
+  "text_sha256": "d81e71822dfd178555d34bbb05b91b1a490719675765eda511d18d06c8cf84b7"
+}

@@ -1,0 +1,464 @@
+Fastweb S.p.A. - Sede legale e amministrativa Piazza Adriano Olivetti, 1 - 20139 Milano Tel. [+39] 02.45451
+Capitale Sociale euro 41.344.209,40 i.v. Codice Fiscale, Partita Iva e Iscrizione nel Registro Imprese di Milano 12878470157
+Fastweb S.p.A. - Società soggetta all’attività di direzione e coordinamento di Swisscom AG
+
+SINTESI DEI CONTENUTI USATI PER L’ADDESTRAMENTO DEL MODELLO EX. ART 53 PAR. 1 LETT D) DEL
+REGOLAMENTO (UE) 2024/1689 - EU AI ACT
+30.07.2026 – v3
+Il presente documento contiene l’indicazione dei contenuti utilizzati per il training del modello ai sensi dell’art. 53 par. 1 lett
+d) del Regolamento n. 2024/1689 (EU AI Act), dalla fase di pre-training alla fase di fine-tuning.
+Tale documentazione è resa pubblicamente disponibile con l’obiettivo di aumentare la trasparenza sui dati utilizzati nelle
+fasi di pre-addestramento e addestramento del modello di AI per finalità generali, al fine di agevolare le parti con interessi
+legittimi (inclusi i titolari del diritto d’autore e gli interessati) nell’esercitare e far rispettare i loro diritti ai sensi della normativa
+dell’Unione, rispettando al contempo i segreti industriali.
+Tale documentazione deve essere di carattere generale e narrativo, anziché dettagliata sotto il profilo tecnico, deve cioè
+indicare le principali raccolte o serie di dati che sono state inserite nell’addestramento del modello, quali grandi banche d ati
+o archivi di dati privati o pubblici.
+1. Informazioni generali
+1.1 Identificazione del fornitore e recapiti Nome e recapiti del fornitore Fastweb S.p.A., Piazza Adriano Olivetti 1,
+20139 Milano, Italia.
+Società a socio unico soggetta all'attività di
+direzione e coordinamento di Swisscom
+AG.
+Rappresentante autorizzato N/A, fornitore stabilito in UE.
+1.2 Identificazione del modello  Nome/i del modello e versione: FastwebMIIA ( Modello Italiano di
+Intelligenza Artificiale)
+• FastwebMIIA-7B
+
+• FastwebMIIA-7B-2603
+Dipendenze del modello: N/A
+Data di immissione sul mercato
+dell'Unione:
+29/05/2025 (FastwebMIIA -7B)
+23/03/2026 (FastwebMIIA-7B-2603)
+Descrizione del modello  FastwebMIIA è un auto -regressive Large
+Language Model (LLM) basato su
+un’architettura di dense decoder -only
+Transformer. Fastweb ha inserito alcuni
+moduli custom come il tokenizzatore,
+sviluppato in -house. Nella sua versione
+FastwebMIIA-7B-2603, il modello è
+ottimizzato per il function calling, per
+abilitare interazioni con strumenti esterni
+tramite chiamate a funzioni, ed il
+Contextual QA e per rispondere a
+domande su testi e documenti secondo il
+framework standard della RAG – Retrieval
+Augmented Generation. Il modello non
+presenta un rischio sistemico ai sensi
+dell’AI Act.
+1.3. Modalità, dimensione complessiva
+dei dati di addestramento e altre
+caratteristiche
+
+Modalità ☒ Testo
+☐ Immagine
+☐ Audio
+☐ Video
+
+☐ Altro
+Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di
+token (circa 1,5 × 2 × 10¹² token). Il modello
+è esclusivamente un modello testuale.
+Tipi di contenuto per dati testuali  A titolo meramente esemplificativo e non
+esaustivo: testi di narrativa e letteratura ,
+testi scientifici ed educativi , pubblicazioni
+giornalistiche, documenti legali  e ufficiali,
+informazioni promozionali, codice
+informatico, dati storici.
+
+Tipologia contenuti grafici
+
+N/A
+Non presenti.
+Tipologia contenuti video
+
+N/A
+Non presenti.
+Tipologia contenuti audio N/A
+Non presenti
+Data più recente di acquisi zione/raccolta
+dei dati per l’addestramento del modello
+Maggio 2025
+Descrizione delle caratteristiche
+linguistiche dei dati di addestramento
+complessivi
+Il modello è stato addestrato su un corpus
+eterogeneo di dati esclusivamente
+testuali, raccolti prevalentemente in lingua
+italiana e inglese, con una minore presenza
+di testi in altre lingue europee e non
+europee. La distribuzione  linguistica
+riflette un focus specifico sull’italiano, al
+fine di garantire una buona performance
+del modello su questa lingua.
+
+Altre caratteristiche rilevanti dei dati di
+addestramento complessivi
+Il dataset copre una vasta gamma di aree
+tematiche, tra cui:
+• Letteratura e scienze umane: testi
+narrativi, saggistica, filosofia, critica
+letteraria;
+• Materie scientifiche: testi relativi a
+matematica, fisica, biologia,
+informatica, ingegneria;
+• Scrittura di codice informatico :
+esempi di codice, principalmente
+python, documentazione tecnica;
+• Nozioni storiche e cultura
+generale: contenuti enciclopedici,
+fonti educative e divulgative;
+• Altri ambiti di uso generale: tra cui
+diritto, economia, arte, attualità e
+linguaggio conversazionale;
+• Scrittura creativa : contenuti da
+quotidiani e articoli divulgativi.
+
+Per quanto riguarda la modalità, i dati
+utilizzati sono esclusivamente testuali.
+Non sono stati inclusi dati multimodali (es.
+immagini, audio o video).
+
+Tutti questi dati sono stati utilizzati sia in
+formato ‘plain text’ durante la fase di pre -
+training, sia in formato Q&A o multiturn
+per le fasi di post-training.
+Ulteriori osservazioni È stata predisposta una sezione di
+trasparenza pubblicamente accessibile,
+con l'obiettivo di fornire informazioni
+precise, chiare e in un linguaggio
+
+comprensibile su quanto realizzato per
+addestrare FastwebMIIA e sul suo
+funzionamento. Vedasi: FastwebMIIA -
+Prodotti Artificial Intelligence | Grandi
+Aziende | Fastweb
+2. Elenco delle fonti dei dati
+2.1 Set di dati disponibili al pubblico Sono stati utilizzati dataset pubblicamente
+disponibili per addestrare il modello?
+☒ Sì
+Modalità dei contenuti coperti ☒ Testo
+Elenco dei set di dati di grandi dimensioni
+disponibili al pubblico
+Common Crawl
+Archivio web pre -compilato, realizzato
+attraverso scraping non indiscrim inato sul
+web, che rappresenta circa l'85% del
+corpus di addestramento totale.
+Secondo quanto dichiarato dalla stessa
+organizzazione, Common Crawl rispetta le
+regole "robots.txt" specificate dai siti web,
+che governano l'accesso dei web crawler ai
+loro contenuti e non effettua il crawling di
+pagine esplicitamente vietate da queste
+regole.
+Sono state utilizzate solo porzioni del
+dataset, selezionate tramite filtraggio
+qualitativo, filtraggio linguistico e
+deduplica.
+Periodo di raccolta: marzo 2024 – febbraio
+2025
+Si rinvia a Common Crawl - FAQ, in cui si
+esplicitano le attività di scraping condotte
+nel rispetto del protocollo robot.txt, e
+facendo inoltre il possibile per individuare
+e rispettare altre riserve espresse sui diritti
+
+ai sensi dell’art. 4, par. 3, Direttiva
+2019/790
+RedPajama
+RedPajama-Data-v2 è un dataset aperto
+per il pre -training di LLM, costruito a
+partire da 84 snapshot di Common Crawl.
+Contiene oltre 30 trilioni di token filtrati e
+deduplicati (più di 100 trilioni di token
+grezzi) in cinque lingue: inglese, francese,
+spagnolo, tedesco e italiano.
+Periodo di raccolta: marzo 2024 – febbraio
+2025
+FineWeb Edu – FineWeb Edu è un dataset
+aperto per il pre -training di LLM, derivato
+da FineWeb — a sua volta costruito a
+partire da Common Crawl. Contiene oltre
+18,5 trilioni di token di testi in inglese,
+filtrati, deduplicati e selezionati per il loro
+contenuto di natura educativa.
+Periodo di raccolta: marzo 2024 – febbraio
+2025
+Wikipedia - wikimedia/wikipedia ·
+Datasets at Hugging Face
+Rappresenta circa l'1% del corpus di
+addestramento totale. Acquisito tramite
+libreria Hugging Face.
+Periodo di raccolta: marzo 2024 – febbraio
+2025
+2.2 Set di dati privati non disponibili al pubblico ottenuti da terze parti
+2.2.1 Dataset concessi in licenza dai
+titolari dei diritti o dai loro
+rappresentanti
+Sono stati conclusi accordi di licenza
+commerciale con titolari dei diritti o con i
+loro rappresentanti?
+☒ Sì
+Modalità dei contenuti coperti ☒ Testo
+
+Descrizione generale dei set di dati privati
+non di dominio pubblico ottenuti da terze
+parti
+Contenuti editoriali, didattici, divulgativi e
+statistico-istituzionali in lingua italiana,
+acquisiti tramite accordi di licenza
+commerciale stipulati direttamente con i
+rispettivi titolari dei diritti. Tali accordi
+autorizzano espressamente l'utilizzo dei
+contenuti per finalità di addestramento di
+modelli di intelligenza artificiale.
+2.2.2 Set di dati privati ottenuti da terze
+parti
+Sono stati ottenuti dataset privati da terze
+parti non concessi in licenza come
+descritto nella Sezione 2.2.1?
+☒ No
+
+2.3 Dati ottenuti tramite crawling e
+scraping da fonti online
+Sono stati utilizzati crawler dal fornitore o
+per conto del fornitore?
+☒ No
+Ulteriori osservazioni Fastweb non ha condotto alcuna attività
+diretta di crawling o scraping di fonti
+online. Tutti i dati provenienti da fonti
+online sono stati acquisiti esclusivamente
+attraverso dataset pre -compilati e
+pubblicamente disponibili come descritto
+nella Sezione 2.1. Nessun crawler
+proprietario è stato sviluppato o operato
+da Fastweb o per suo conto.
+2.4 Dati degli utenti  Sono stati utilizzati dati provenienti
+dall'interazione degli utenti con il modello
+di AI (es. input e prompt degli utenti) per
+addestrare il modello?
+☒ No
+
+Sono stati utilizzati dati raccolti
+dall'interazione degli utenti con altri servizi
+o prodotti del fornitore per addestrare il
+modello?
+☒ No
+Ulteriori osservazioni Nessun dato proveniente dall'interazione
+degli utenti con il modello è stato utilizzato
+
+per il training.  Inoltre, i dati inseriti dagli
+utenti durante l'utilizzo di FastwebMIIA
+non vengono raccolti né utilizzati per
+attività di retraining o fine -tuning del
+modello. In nessun caso vengono utilizzati
+dati dei clienti di Fastweb per
+l'addestramento del modello.
+
+Per maggiori informazioni , vedasi  la
+sezione “Data Journey ” in FastwebMIIA -
+Prodotti Artificial Intelligence | Grandi
+Aziende | Fastweb
+2.5 Dati sintetici  Sono stati creati dati sintetici generati da
+AI dal fornitore o per suo conto per
+addestrare il modello?
+☒ Sì
+Modalità dei dati sintetici: ☒ Testo
+Modello/i di AI per finalità generali
+utilizzato/i per generare i dati sintetici:
+Phi 3.5 (Microsoft), rilasciato sotto licenza
+MIT
+Dimensione Inferiore all'1% del corpus di
+addestramento totale.
+2.6 Altre fonti di dati  Sono state utilizzate fonti di dati diverse da
+quelle descritte nelle Sezioni 2.1 -2.5 per
+addestrare il modello?
+☒ No
+3. Aspetti relativi al trattamento dei dati
+3.1 Rispetto della riserva di diritti
+concernenti le eccezioni o limitazioni
+relative all'estrazione di testo e di dati
+Siete firmatari del Code of Practice per i
+modelli di AI per finalità generali che
+include impegni a rispettare le riserve dei
+diritti dall'eccezione TDM?
+☒ Sì
+Descrivere le misure implementate prima
+dell'addestramento del modello per
+rispettare le riserve dei diritti
+Fastweb ha utilizzato esclusivamente fonti
+autorizzate (dataset licenziati e
+partnership) e dataset pre -compilati
+pubblicamente disponibili (Common
+
+dall'eccezione TDM, inclusi i protocolli e le
+soluzioni di opt-out onorati dal fornitore
+Crawl, RedPajama, FineWeb Edu) che,
+secondo quanto dichiarato dai rispettivi
+operatori, rispettano i protocolli robots.txt
+che governano l'accesso dei web crawler ai
+contenuti e non effettuano il crawling di
+pagine esplicitamente vietate da tali
+regole.
+
+È stato predisposto un canale di
+comunicazione pubblicamente accessibile
+per consentire ai titolari dei diritti di
+esercitare il proprio diritto di opt -out ai
+sensi dell'art. 4, par. 3, della Direttiva (UE)
+2019/790. Per maggiori informazioni ,
+vedasi la sezione “Riserva dei diritti ” in
+FastwebMIIA - Prodotti Artificial
+Intelligence | Grandi Aziende | Fastweb
+3.2 Rimozione dei contenuti illegali  Descrizione generale delle misure
+adottate per evitare o rimuovere dai dati di
+addestramento i contenuti illegali ai sensi
+del diritto dell'Unione
+Fastweb mantiene e aggiorna
+regolarmente una blacklist di siti
+potenzialmente dannosi o contenenti dati
+personali, applicata per filtrare alla fonte gli
+URL presenti nei dati di Common Crawl.
+È stata  altresì sviluppata una pipeline di
+pulizia dei dati personalizzata e
+progressiva, che incorpora le migliori
+pratiche presenti in letteratura, al fine di
+generare un corpus italiano progettato per
+l'addestramento di LLM specifici per la
+lingua. La pipeline prevede:
+• pulizia e normalizzazione dei dati
+testuali grezzi;
+• deduplica;
+
+• filtraggio basato sull'identificazione
+della lingua e sulla qualità semantica
+dei documenti;
+• rimozione delle Personal Identifiable
+Information (PII): per ciascun
+documento viene applicata
+un'euristica di rilevamento PII — se
+vengono rilevate meno di 5 istanze,
+queste vengono mascherate/rimosse ,
+se ne vengono rilevate 5 o più, l'intero
+documento viene rimosso dal corpus;
+• selezione delle fonti con esclusione dei
+dataset contenenti informazioni
+sensibili o non conformi alle normative
+sulla privacy.
+Il corpus di addestramento è stato più volte
+bilanciato durante il processo di training
+per garantire la rappresentatività dei
+diversi domini e la copertura dei task
+desiderati.
+3.3 Altre informazioni  Altre informazioni pertinenti sul
+trattamento dei dati
+Occorre chiarire  il progetto in cui si
+inserisce la presente valutazione. Per
+garantire l’efficace funzionamento di un
+modello di AI per fi nalità generali  è
+fondamentale che lo stesso sia addestrato
+con dati testuali, nei quali possono essere
+anche compresi potenzialmente dati
+personali. Tali dati, infatti, sono essenziali
+per garantire un livello adeguato di
+conoscenza fattuale e contestuale,
+
+nonché per migliorare la comprensione e la
+generazione del linguaggio naturale.
+Fastweb, occorre precisarlo, non ha
+interesse a sfruttare direttamente dati
+personali in chiaro al fine di ottenere un
+beneficio economico diretto, ma di
+garantire l’efficacia di un modello
+linguistico di grandi dimensioni che solo
+per mezzo dell’addestramento tramite tali
+dati può risultare performante.
+Ed invero, senza l'impiego di tali
+informazioni, il modello risulterebbe
+limitato nella sua capacità di fornire
+risposte accurate e contestualizzate,
+compromettendo la sua utilità e
+affidabilità. E’ per tale ragione che Fastweb
+ha necessità di trattare alc uni dati
+personali come, ad esempio, quelli relativi
+ad eventi storico -scientifici, fatti notori
+rilevanti sotto il profilo culturale globale,
+europeo o nazionale.
+L’addestramento di un modello linguistico
+di grandi dimensioni (LLM) comporta un
+equilibrio tra l’esigenza di utilizzare dati
+testuali, inclusi potenzialmente dati
+personali, e la necessità di garantire la
+tutela della privacy. Per ridurre al minimo il
+rischio per gli interessati, Fastweb ha
+implementato diverse misure di
+mitigazione, tra le quali:
+1. selezione accurata delle fonti dati,
+escludendo dataset contenenti
+informazioni sensibili o non
+
+conformi alle normative sulla
+privacy;
+2. pipeline di pulizia e
+anonimizzazione, che rimuove dati
+personali e informazioni
+identificabili prima
+dell’addestramento, assicurando
+minor impatto e presenza dei dati
+personali. In particolare, per ogni
+documento, viene applicata
+un'euristica di rimozione delle
+Personal Identifiable Information
+(PII), se presenti in numero
+inferiore a 5, altrimenti viene
+rimosso l'intero documento.
+Si sottolinea, infine, che la principale fonte
+di dati personali utilizzati per il training è
+Wikipedia, per la quale valgono le seguenti
+considerazioni:
+1. l’insieme delle versioni utilizzate, in
+italiano ed inglese, rappresenta
+solo circa l’1% dell’intero corpus di
+dati utilizzati;
+2. Wikipedia contiene in larga misura
+informazioni di personaggi storici o
+famosi (le cui informazioni sono di
+facile accesso pubblico in ogni
+caso) o legati a fatti di cronaca
+esposti mediaticamente (riportate
+in atti pubblici);
+3. la natura principalmente
+enciclopedica dei contenuti e dei
+
+dati personali ivi pubblicati fa
+propendere per una bassa
+rischiosità del trattamento degli
+stessi;
+4. la pipeline di pulizia per le fonti
+provenienti da Internet descritta
+sopra, comprensiva anche di forme
+di esclusione e masking delle
+informazioni riferite a persone
+fisiche identificate o identificabili,
+viene applicata per tutte le fonti ad
+eccezione di Wikipedia.
+Non sono presenti immagini nel dataset
+usato.
+È stata  predisposta una sezione di
+trasparenza pubblicamente accessibile  a
+questo link, con l'obiettivo di fornire
+informazioni precise, chiare e in un
+linguaggio comprensibile su quanto
+realizzato per addestrare FastwebMIIA e
+sul suo funzionamento. La sezione
+descrive il data journey dei dati personali
+attraverso tutte le fasi del ciclo di  vita del
+modello e documenta le misure adottate
+per assicurare il rispetto degli standard
+legali ed etici stabiliti dall'AI Act, dalla
+Direttiva Copyright e dal GDPR. È inoltre
+presente un canale di comunicazione
+diretto per l ’esercizio dei di ritti degli
+interessati.

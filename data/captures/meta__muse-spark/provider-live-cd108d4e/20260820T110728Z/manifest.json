@@ -1,0 +1,46 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "provider-live",
+  "sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+  "size_bytes": 257787,
+  "stored_as": "raw.pdf",
+  "text_sha256": "062b4de103f62795093b0607e15a8aff800421d4b21ab51c86911ad77f4ae2ea",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = unsigned CDN path",
+    {
+      "stable_base": "https://scontent-mxp1-1.xx.fbcdn.net/m1/v/t0.84174-6/An_FRNs4SBgBP-25psN50ZmPdjiJKewbOP2ZVfOXrTF_PfKb16y6pkNhkYa2ekzAfEb8rqL1RBf0KMJ4eGnMhW-UykoM22GMFn4ZSJPvk8NsFeWFVzFOCQCqQU8gZiQNBv59Bxs",
+      "hub_period": "2026 - Muse Spark"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-mxp1-1.xx.fbcdn.net/m1/v/t0.84174-6/An_FRNs4SBgBP-25psN50ZmPdjiJKewbOP2ZVfOXrTF_PfKb16y6pkNhkYa2ekzAfEb8rqL1RBf0KMJ4eGnMhW-UykoM22GMFn4ZSJPvk8NsFeWFVzFOCQCqQU8gZiQNBv59Bxs?_nc_gid=zfhHqhIGgnvQzA8oIh2Rmg&_nc_oc=AdrVXLhN95Iu72u9WiDRslDKCpDRP1T0IY1CgheYtRu4aHZd-ODmErLLEwZ6zwZQW7M&ccb=10-5&oh=00_AQEeqNqXe34N8_8PxZesttdcYEKuZjb1dX_5MtRzV4I8TQ&oe=6A88C201&_nc_sid=68f2c3",
+    "final_url": "https://scontent-mxp1-1.xx.fbcdn.net/m1/v/t0.84174-6/An_FRNs4SBgBP-25psN50ZmPdjiJKewbOP2ZVfOXrTF_PfKb16y6pkNhkYa2ekzAfEb8rqL1RBf0KMJ4eGnMhW-UykoM22GMFn4ZSJPvk8NsFeWFVzFOCQCqQU8gZiQNBv59Bxs?_nc_gid=zfhHqhIGgnvQzA8oIh2Rmg&_nc_oc=AdrVXLhN95Iu72u9WiDRslDKCpDRP1T0IY1CgheYtRu4aHZd-ODmErLLEwZ6zwZQW7M&ccb=10-5&oh=00_AQEeqNqXe34N8_8PxZesttdcYEKuZjb1dX_5MtRzV4I8TQ&oe=6A88C201&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "-3472697498977791906",
+    "last_modified": null,
+    "content_length": "257787",
+    "fetched_at": "2026-08-20T11:07:28Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 500,
+    "snapshot": null,
+    "at": "2026-08-20T11:07:30Z",
+    "gave_up": "signed URL; save must use a freshly mined URL"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-20T11:07:37Z"
+  }
+}

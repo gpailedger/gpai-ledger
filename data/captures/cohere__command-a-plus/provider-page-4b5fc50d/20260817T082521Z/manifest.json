@@ -1,0 +1,58 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "3ab458e0f3cf869c1e9cb81f2bf5f51f42c622d1114de9f335abb17cb4f36a02",
+  "size_bytes": 893627,
+  "stored_as": "raw.html",
+  "text_sha256": "db094d6476e79db37fa629c18acbbfa6462685ae9022092ee870ad70252ef3b0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "893627",
+    "fetched_at": "2026-08-17T08:25:21Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3
+  },
+  "prior_sha256": "83e7404c5f92a89bb44cc41bf58eb9eceecce25ebaae0accff2a9660d3094fa9",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112415/https://docs.cohere.com/docs/command-a-plus",
+    "at": "2026-08-19T11:24:52Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:25:34Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:25:22Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:34:01Z"
+    }
+  ]
+}

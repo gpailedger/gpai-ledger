@@ -1,0 +1,41 @@
+{
+  "source_id": "cohere/model-catalog",
+  "provider": "Cohere",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "b5c8ede22b7c63a54209f4cde30f7bef29ea58f88bb31617998c9353dfd8aeea",
+  "size_bytes": 812630,
+  "stored_as": "raw.html",
+  "text_sha256": "5b64001b1fb13e4c00e7672de4ccf856bd8a7f336a6ea1aa7c47c6cf04bf2d76",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/models",
+    "final_url": "https://docs.cohere.com/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"17g0ewyussaheyi\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-19T15:04:49Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150456/https://docs.cohere.com/docs/models",
+    "at": "2026-08-19T15:05:16Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:05:28Z"
+  }
+}

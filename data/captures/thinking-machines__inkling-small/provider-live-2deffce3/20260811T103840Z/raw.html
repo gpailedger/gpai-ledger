@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+  
+  <meta name="author" content="Thinking Machines Lab">
+
+  
+  
+  <meta name="description" content="Training Data Documentation
+This document provides information regarding the datasets used by Thinking Machines Lab to develop its generative artificial intelligence systems and services, including its models (collectively “AI services”). This information reflects general practices, not specific to any single model.
+1. Dataset Sources
+Thinking Machines Lab’s AI services are developed using a variety of data sources, including publicly available data, data provided by partners via access agreements, and internally generated data, including synthetic data.">
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+  
+  
+  
+  
+  
+  
+  
+  <link rel="preload" href="/fonts/iowan-old-style/iowan-old-style_regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="high">
+  <link rel="preload" href="/fonts/iowan-old-style/iowan-old-style_bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/iowan-old-style/iowan-old-style_italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="high">
+  
+  
+  <link rel="preload" href="/fonts/gt-america/GT-America-Standard-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/gt-america/GT-America-Standard-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/gt-america/GT-America-Standard-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/chakra-petch/chakra-petch-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/chakra-petch/chakra-petch-v12-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/chakra-petch/chakra-petch-v12-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+
+  
+  
+  <meta name="keywords" content='thinky thinkingmachines machine learning deep learning ai'>
+  
+
+  
+  
+  
+  
+  
+  
+
+<script>
+  
+  (function() {
+    function pageHasMath() {
+      try {
+        const text = document.body ? document.body.textContent : '';
+        if (!text) return false;
+        
+        const block = /\$\$[\s\S]*?\$\$/;
+        const paren = /\\\([\s\S]*?\\\)/;
+        const bracket = /\\\[[\s\S]*?\\\]/;
+        const inline = /(^|\s)\$(?!\$)[^\n]+?\$(?=\s|[\.,;:!?)]|$)/;
+        return block.test(text) || paren.test(text) || bracket.test(text) || inline.test(text);
+      } catch (e) {
+        return true; 
+      }
+    }
+
+    function loadStyle(href) {
+      var preload = document.createElement('link');
+      preload.rel = 'preload';
+      preload.as = 'style';
+      preload.href = href;
+      document.head.appendChild(preload);
+
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      link.media = 'print';
+      link.onload = function(){ this.media = 'all'; };
+      document.head.appendChild(link);
+
+      var noscript = document.createElement('noscript');
+      noscript.innerHTML = '<link rel="stylesheet" href="' + href + '">';
+      document.head.appendChild(noscript);
+    }
+
+    function loadScript(src) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    function renderAllMath(root) {
+      if (!window.renderMathInElement) return;
+      window.renderMathInElement(root || document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError: false,
+        
+        ignoredTags: ['script','noscript','style','textarea','pre','code'],
+      });
+    }
+
+    function init() {
+      if (!pageHasMath()) return;
+      var base = '\/katex\/';
+      var cssHref = base + 'katex.min.css?v=1785792484';
+      var katexJs = base + 'katex.min.js?v=1785792484';
+      var autorenderJs = base + 'contrib/auto-render.min.js?v=1785792484';
+
+      loadStyle(cssHref);
+      loadScript(katexJs)
+        .then(function(){ return loadScript(autorenderJs); })
+        .then(function(){
+          
+          renderAllMath(document.body);
+          
+          setTimeout(function(){ renderAllMath(document.body); }, 0);
+          
+          try {
+            var observer = new MutationObserver(function(mutations){
+              for (var i=0; i<mutations.length; i++) {
+                var m = mutations[i];
+                if (m.addedNodes && m.addedNodes.length) {
+                  for (var j=0; j<m.addedNodes.length; j++) {
+                    var node = m.addedNodes[j];
+                    if (node.nodeType === 1) {
+                      renderAllMath(node);
+                    }
+                  }
+                }
+              }
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+          } catch (e) {   }
+        })
+        .catch(function(){   });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+
+
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+  <link rel="canonical" href="https://thinkingmachines.ai/training-data-documentation/">
+
+  
+  
+  
+  <meta itemprop="name" content="Training Data Documentation">
+  <meta itemprop="description" content="Training Data Documentation This document provides information regarding the datasets used by Thinking Machines Lab to develop its generative artificial intelligence systems and services, including its models (collectively “AI services”). This information reflects general practices, not specific to any single model.
+1. Dataset Sources Thinking Machines Lab’s AI services are developed using a variety of data sources, including publicly available data, data provided by partners via access agreements, and internally generated data, including synthetic data.">
+  <meta itemprop="wordCount" content="431">
+
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/common.css?v=1785792484" fetchpriority="high">
+  
+  <link rel="stylesheet" href="https://thinkingmachines.ai/css/ui.css?v=1785792484">
+  
+  <link rel="preload" as="style" href="/css/typography.css?v=1785792484">
+  <link rel="stylesheet" href="/css/typography.css?v=1785792484" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/typography.css?v=1785792484"></noscript>
+  
+  <link rel="preload" as="style" href="/css/fonts.css?v=1785792484">
+  <link rel="stylesheet" href="/css/fonts.css?v=1785792484" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/fonts.css?v=1785792484"></noscript>
+  <link rel="preload" as="style" href="/css/syntax.css?v=1785792484">
+  <link rel="stylesheet" href="/css/syntax.css?v=1785792484" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/syntax.css?v=1785792484"></noscript>
+
+  
+  
+  <title>Training Data Documentation - Thinking Machines Lab</title>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
+  
+  <meta property="og:title" content="Training Data Documentation">
+  <meta property="og:description" content="Training Data Documentation
+This document provides information regarding the datasets used by Thinking Machines Lab to develop its generative artificial intelligence systems and services, including its models (collectively “AI services”). This information reflects general practices, not specific to any single model.
+1. Dataset Sources
+Thinking Machines Lab’s AI services are developed using a variety of data sources, including publicly available data, data provided by partners via access agreements, and internally generated data, including synthetic data.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://thinkingmachines.ai/training-data-documentation/">
+  <meta property="og:site_name" content="Thinking Machines Lab">
+  <meta property="og:image" content="https://thinkingmachines.ai/images/home.png">
+  
+  
+  <meta property="og:image:alt" content="Training Data Documentation">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Training Data Documentation">
+  <meta name="twitter:description" content="Training Data Documentation
+This document provides information regarding the datasets used by Thinking Machines Lab to develop its generative artificial intelligence systems and services, including its models (collectively “AI services”). This information reflects general practices, not specific to any single model.
+1. Dataset Sources
+Thinking Machines Lab’s AI services are developed using a variety of data sources, including publicly available data, data provided by partners via access agreements, and internally generated data, including synthetic data.">
+  <meta name="twitter:image" content="https://thinkingmachines.ai/images/home.png">
+  
+  
+  <meta name="twitter:image:alt" content="Training Data Documentation">
+
+  
+
+
+
+
+  
+  
+  <style>/* Keep the legal pages visually consistent with the Inkling model card and AUP. */
+#main.content article.content,
+#main.content article.content h1,
+#main.content article.content h2,
+#main.content article.content h3,
+#main.content article.content h4,
+#main.content article.content h5,
+#main.content article.content h6,
+#main.content article.content p,
+#main.content article.content li,
+#main.content article.content a {
+  font-family: var(--font-sans) !important;
+}
+
+#main.content article.content {
+  font-size: 15px;
+}
+
+#main.content article.content h1:first-child {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  text-align: left;
+}
+
+#main.content article.content h1,
+#main.content article.content h2 {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+}
+
+#main.content article.content h1 {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+#main.content article.content h1:first-child + p {
+  margin-top: 2.5rem;
+}
+
+#main.content article.content .model-summary {
+  margin-top: 3rem;
+  margin-bottom: -0.5rem;
+}
+
+#main.content article.content h2 {
+  font-size: 23px;
+  line-height: 1.4;
+}
+
+/* Third-level section headings continue the legal-page type scale. */
+#main.content article.content h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em;
+}
+
+/* Lower-level labels use the compact muted treatment. */
+#main.content article.content :is(h4, h5, h6) {
+  color: var(--fg3);
+  font-size: 15px;
+  line-height: 1.4;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: normal;
+}
+
+#main.content article.content h1 + h3 {
+  color: var(--fg3);
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  text-align: left !important;
+}
+
+/* Legal pages use medium, not bold, emphasis throughout. */
+#main.content article.content :is(strong, b, th) {
+  font-weight: 500 !important;
+}
+
+#main.content article.content .legal-medium {
+  font-weight: 500 !important;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div id="wrapper">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="header">
+  
+  <div id="site-header" class="site-header">
+    
+    
+    <div class="navbar-logo">
+      <a href="/">THINKING MACHINES</a>
+    </div>
+    
+
+    
+    <div class="nav-group">
+      
+      <nav class="top-nav">
+        
+        <a href="/inkling/">Inkling</a>
+        
+        
+        <a href="/tinker/">Tinker</a>
+        
+        <a href="/blog/">Connectionism</a>
+        <a href="/news/">News</a>
+        <a href="/#join-us">Join us</a>
+      </nav>
+
+      
+      <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+  
+  
+  <div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true" hidden>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile">
+      <a href="/">Home</a>
+        
+        <a href="/inkling/">Inkling</a>
+        
+        
+        <a href="/tinker/">Tinker</a>
+        
+      <a href="/blog/">Connectionism</a>
+      <a href="/news/">News</a>
+      <a href="/#join-us">Join us</a>
+    </nav>
+  </div>
+  
+  
+</header>
+
+    
+
+
+
+
+
+
+
+
+<main id="main" class="content">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="content ">
+    
+      <h1 id="training-data-documentation">Training Data Documentation</h1>
+<p>This document provides information regarding the datasets used by Thinking Machines Lab to develop its generative artificial intelligence systems and services, including its models (collectively “AI services”). This information reflects general practices, not specific to any single model.</p>
+<h2 id="1-dataset-sources">1. Dataset Sources</h2>
+<p>Thinking Machines Lab’s AI services are developed using a variety of data sources, including publicly available data, data provided by partners via access agreements, and internally generated data, including synthetic data.</p>
+<h2 id="2-intended-purpose">2. Intended Purpose</h2>
+<p>Thinking Machines Lab uses the collected data to develop its AI services, which are designed to understand and generate content, which may include text, images, audio, and video. The datasets are selected and curated to enable the AI services to develop broad capabilities, which may include language understanding, reasoning, visual comprehension, and audio and video processing.</p>
+<h2 id="3-data-types-and-amount">3. Data Types and Amount</h2>
+<p>Thinking Machines Lab’s AI services are developed using datasets containing trillions of tokens. The training data consists of a broad variety of content types, including text, images, audio, and video, drawn from publicly available sources or acquired from third-parties. Thinking Machines Lab also uses synthetically generated data to supplement its training datasets.</p>
+<h2 id="4-inclusion-of-public-domain-or-ip-protected-data">4. Inclusion of Public Domain or IP-protected Data</h2>
+<p>The datasets Thinking Machines Lab uses to develop its AI services includes content that is in the public domain as well as content that may be subject to intellectual property protection.</p>
+<h2 id="5-data-acquisition">5. Data Acquisition</h2>
+<p>Thinking Machines Lab’s services were developed using publicly available content obtained from the open internet and publicly accessible data repositories. Certain datasets were also obtained from third parties.</p>
+<h2 id="6-inclusion-of-personal-information-or-aggregate-consumer-information">6. Inclusion of Personal Information or Aggregate Consumer Information</h2>
+<p>Thinking Machines Lab’s training datasets may contain personal information or aggregate personal information, as defined under applicable laws, such as names or other details that individuals share publicly on the internet or with Thinking Machines Labs.</p>
+<h2 id="7-cleaning-processing-and-other-modification-to-datasets">7. Cleaning, Processing, and Other Modification to Datasets</h2>
+<p>Thinking Machines Lab takes steps to clean, process, and modify datasets used for its AI services. These processing steps, which vary by data type, may include deduplication and filtering to remove junk or other low-quality data, and are intended to improve the data’s usefulness for model training and support the responsible development of the AI services.</p>
+<h2 id="8-data-collection-and-use-timeline">8. Data Collection and Use Timeline</h2>
+<p>Thinking Machines Lab collects and uses datasets to train and improve its AI services on an ongoing basis. Thinking Machines Lab began collecting and using datasets for model development in 2025.</p>
+<h2 id="9-use-of-synthetic-data">9. Use of Synthetic Data</h2>
+<p>Thinking Machines Lab generates and uses synthetic data in the development of its AI services.</p>
+<p class="model-summary">Model Summary:</p>
+<ul>
+<li><a href="/documents/inkling-public-summary-training-content.pdf" download>Inkling</a></li>
+<li><a href="/documents/inkling-small-public-summary-training-content.pdf" download>Inkling-Small</a></li>
+</ul>
+
+    
+  </article>
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+</main>
+
+
+<script type="module">
+  import mediumZoom from "https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.esm.min.js";
+
+  const getZoomContainer = () => ({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    top: window.innerHeight * 0.15,
+    right: window.innerWidth * 0.15,
+    bottom: window.innerHeight * 0.15,
+    left: window.innerWidth * 0.15
+  });
+
+  const zoom = mediumZoom('[data-zoomable]', {
+    background: '#fff',
+    container: getZoomContainer(),
+    margin: 0
+  });
+
+  window.addEventListener('resize', () => {
+    zoom.update({ container: getZoomContainer() });
+  });
+</script>
+
+    <footer id="footer">
+  <div class="footer-columns">
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Models</h4>
+        <ul>
+          <li><a href="/news/introducing-inkling/">Inkling</a></li>
+          <li><a href="/news/inkling-small/">Inkling-Small</a></li>
+          <li><a href="/blog/interaction-models/">Interaction</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Tinker</h4>
+        <ul>
+          <li><a href="/tinker/">Overview</a></li>
+          <li><a href="https://tinker-docs.thinkingmachines.ai/tinker/">Docs</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog/the-future-worth-building-is-human/">About</a></li>
+          <li><a href="/blog/">Connectionism</a></li>
+          <li><a href="/news/">News</a></li>
+          <li><a href="https://jobs.ashbyhq.com/ThinkingMachines">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/terms/">Terms of service</a></li>
+          <li><a href="/legal/privacy/">Privacy notice</a></li>
+        </ul>
+        <h4 class="footer-subheading">Security</h4>
+        <ul>
+          <li><a href="/security/disclosure-policy/">Disclosure policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://x.com/thinkymachines">X</a></li>
+          <li><a href="https://www.linkedin.com/company/thinkingmachinesai/">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@thinkymachines">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <span>Thinking Machines Lab © 2026</span>
+  </div>
+</footer>
+
+  </div>
+
+  
+  
+  <script src="/js/script.min.48ab8d2a9033a20e82e68c386d117ebd8e3941bb19ad9797b88c737d93e67ea5.js" integrity="sha256-SKuNKpAzog6C5ow4bRF&#43;vY45QbsZrZeXuIxzfZPmfqU=" defer></script>
+
+  
+  
+
+  
+  
+
+  
+  
+
+</body>
+
+</html>

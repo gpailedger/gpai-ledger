@@ -1,0 +1,35 @@
+{
+  "source_id": "mistral-ai/mistral-large-3",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3",
+  "target_kind": "aial-archive",
+  "sha256": "22c6cae662df2b80486a79eeb30c8f99959bd0cf78d52950290141ec52c824bc",
+  "size_bytes": 218727,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Mistral_Large_3_2026_08_03.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Mistral_Large_3_2026_08_03.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tj6qz24orr\"",
+    "last_modified": "Mon, 03 Aug 2026 08:45:02 GMT",
+    "content_length": "218727",
+    "fetched_at": "2026-08-11T10:48:25Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:48:31Z"
+  },
+  "text_sha256": "ddd7c8a41049c05be10a6c3738d666a9a517a271fb68d795ab6f40d10e6a9ce4"
+}

@@ -1,0 +1,35 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "aial-archive",
+  "sha256": "418aeaa4855786e444d17afff5a830be1bf9452e33a3d5ce8a9a11d7a85ac808",
+  "size_bytes": 265032,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Bria_32_2026_01_12.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Bria_32_2026_01_12.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tba9z35oi0\"",
+    "last_modified": "Mon, 02 Mar 2026 17:59:27 GMT",
+    "content_length": "265032",
+    "fetched_at": "2026-08-11T10:24:17Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:24:27Z"
+  },
+  "text_sha256": "4115bda039938604d371587cbd75d0f613459f1ab3bf247ef83496fa04674c62"
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/model-catalog",
+  "provider": "OpenAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "3a08fcdfb2e11956c07fd16eb3aaa4b563073cadc81204b620d637c4351c647d",
+  "size_bytes": 346462,
+  "stored_as": "raw.html",
+  "text_sha256": "a8d5971d688a082c9cca831a843d317f1ecc25999a3f7c7569af938a10df1129",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://developers.openai.com/api/docs/models",
+    "final_url": "https://developers.openai.com/api/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-21T10:03:10Z"
+  },
+  "prior_sha256": "62e6b3cfd7a43ec36b44bbde1807f5774cc18cecb3879890ab13e96667b2f2ff",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260821100317/https://developers.openai.com/api/docs/models",
+    "at": "2026-08-21T10:03:38Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-21T10:03:44Z"
+  }
+}

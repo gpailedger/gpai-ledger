@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-image-2",
+  "provider": "OpenAI",
+  "model": "GPT Image 2",
+  "target_kind": "aial-archive",
+  "sha256": "8a3ac329e248433d3a2db555236fcc94684c0294d2a705bbaf2a60995c216b3a",
+  "size_bytes": 206602,
+  "stored_as": "raw.pdf",
+  "text_sha256": "cfcfa03999a8f813182de1c0f7f59ef4823220556561ad2f85834fa9e187eb64",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_Image_2_2026_08_17.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_Image_2_2026_08_17.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tjwyq24fey\"",
+    "last_modified": "Mon, 17 Aug 2026 12:30:02 GMT",
+    "content_length": "206602",
+    "fetched_at": "2026-08-18T16:43:21Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-18T16:43:29Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "eu-commission/template-pages",
+  "provider": "European Commission",
+  "model": "Template library + FAQ pages",
+  "target_kind": "watch-page",
+  "sha256": "9460799f1536f729e7429746b4645bd5079f9a0063980f81dfe18727a359a4e8",
+  "size_bytes": 70957,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+    "final_url": "https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"1786446221-gzip\"",
+    "last_modified": "Tue, 11 Aug 2026 11:03:41 GMT",
+    "content_length": "12244",
+    "fetched_at": "2026-08-11T11:03:43Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260713230319/https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+    "at": "2026-08-11T11:04:04Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:04:15Z"
+  },
+  "text_sha256": "292ab98566db012d4b4fee23e7525a20823d5f7fa1a7f71f3710fe4361e486fa"
+}

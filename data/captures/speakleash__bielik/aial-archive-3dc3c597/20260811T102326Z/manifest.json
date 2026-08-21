@@ -1,0 +1,35 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "SpeakLeash",
+  "model": "Bielik v3 11B Instruct",
+  "target_kind": "aial-archive",
+  "sha256": "53ee117f30b8e6b89cdd95d2b50413811cf58e30e0831bd2e5c1ae4b68ba449b",
+  "size_bytes": 360352,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Bielik_3_2026_01_12.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Bielik_3_2026_01_12.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tba9z37q1s\"",
+    "last_modified": "Mon, 02 Mar 2026 17:59:27 GMT",
+    "content_length": "360352",
+    "fetched_at": "2026-08-11T10:23:26Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:23:37Z"
+  },
+  "text_sha256": "fb25e9ba17b788ff7b902a0b458908083c56b2fd7430c789e36b89fe0ecd47c3"
+}

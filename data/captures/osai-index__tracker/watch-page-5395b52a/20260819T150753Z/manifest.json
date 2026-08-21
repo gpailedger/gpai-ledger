@@ -1,0 +1,39 @@
+{
+  "source_id": "osai-index/tracker",
+  "provider": "European Open Source AI Index",
+  "model": "OSAI index (open-source model releases)",
+  "target_kind": "watch-page",
+  "sha256": "7a8633bfc002ce522d41998a25cf4299ba0b4a448604c5a7569ebcdb659e4fb2",
+  "size_bytes": 866239,
+  "stored_as": "raw.html",
+  "text_sha256": "8cfb87c3cbe2e638efb63f0f0cc666797f60d10f741936eb77eed9465cc8f847",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://osai-index.eu/",
+    "final_url": "https://osai-index.eu/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"6a50fa2d-d37bf\"",
+    "last_modified": "Fri, 10 Jul 2026 13:57:01 GMT",
+    "content_length": "51323",
+    "fetched_at": "2026-08-19T15:07:52Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819150757/https://osai-index.eu/",
+    "at": "2026-08-19T15:08:13Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-19T15:08:25Z"
+  }
+}

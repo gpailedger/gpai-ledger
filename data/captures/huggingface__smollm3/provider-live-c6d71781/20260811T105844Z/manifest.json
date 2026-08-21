@@ -1,0 +1,41 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "provider-live",
+  "sha256": "2c511d1f7ff71a48239cdbff827ed170e033afb9f49092320c37c740c5b5be13",
+  "size_bytes": 59689,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "final_url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"e929-FyNsmn7n1g0uuamqGNCEgWLYvtg\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:58:44Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811110016/https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "at": "2026-08-11T11:00:34Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:00:46Z"
+  },
+  "text_sha256": "bf4ed8a90fb3a49dc883ba4fd2c75472969f0f63ed20706abf59cbec38b85787"
+}

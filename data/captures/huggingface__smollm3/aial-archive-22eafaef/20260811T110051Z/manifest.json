@@ -1,0 +1,36 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "aial-archive",
+  "sha256": "3d9a0ef7e142c45f397a6870a7e13c3033fc3c40a8cead9d17024574826146e6",
+  "size_bytes": 77887,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "14 character(s) (typographic ligatures such as the 'ffi' in 'Office') could not be decoded from the source file's embedded font and are shown as �; this affects only this text rendering — the stored file is exact",
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/SmolLM_33B_2025_11_12.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/SmolLM_33B_2025_11_12.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tba9z31o3j\"",
+    "last_modified": "Mon, 02 Mar 2026 17:59:27 GMT",
+    "content_length": "77887",
+    "fetched_at": "2026-08-11T11:00:51Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T11:00:57Z"
+  },
+  "text_sha256": "03390233e718e5b88a2f9cb204972c17870f1211c6c7cb08db344aac012b424e"
+}

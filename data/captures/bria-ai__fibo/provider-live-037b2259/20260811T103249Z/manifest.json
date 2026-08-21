@@ -1,0 +1,43 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "provider-live",
+  "sha256": "0f824c4720915305f668611aca2af536fafa38eca1008f252c4b9150693f693f",
+  "size_bytes": 78837,
+  "stored_as": "raw.html",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "final_url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-11T10:32:49Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811103253/https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "at": "2026-08-11T10:33:09Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:33:23Z"
+  },
+  "text_sha256": "cef234c99041f6e73d1b8da44f5bd0e4c71935d2f4ab083ea66d89bafd6261d6"
+}

@@ -1,0 +1,43 @@
+{
+  "source_id": "microsoft/phi-4",
+  "provider": "Microsoft",
+  "model": "Phi-4",
+  "target_kind": "provider-live",
+  "sha256": "3571ffd8d9f63dbd09c882880219cc6b254a85cc25a7d5308f6566d12c43f3f7",
+  "size_bytes": 4767,
+  "stored_as": "raw.txt",
+  "text_sha256": "367a5d7d41f9bb92f4a46dda96c9070f76792ef976d6e1d7a82de16133f34b3e",
+  "extraction_notes": [
+    "text_sha256 migrated 18 Aug 2026 to canonical whitespace-collapsed formula (pre-hardening capture)"
+  ],
+  "http": {
+    "url": "https://huggingface.co/microsoft/phi-4/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/phi-4/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/data_summary_card.md?%2Fmicrosoft%2Fphi-4%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%22e736b6fa688eeae045ef56be10d2225813f017fb%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e736b6fa688eeae045ef56be10d2225813f017fb\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-12T21:17:08Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260812211710/https://huggingface.co/api/resolve-cache/models/microsoft/phi-4/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/data_summary_card.md?%2Fmicrosoft%2Fphi-4%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%22e736b6fa688eeae045ef56be10d2225813f017fb%22",
+    "at": "2026-08-12T21:17:20Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-12T21:17:32Z"
+  }
+}

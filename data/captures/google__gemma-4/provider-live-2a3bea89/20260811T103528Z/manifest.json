@@ -1,0 +1,43 @@
+{
+  "source_id": "google/gemma-4",
+  "provider": "Google",
+  "model": "Gemma 4",
+  "target_kind": "provider-live",
+  "sha256": "6e6966d9022d0a981d532d0eda75eabad26ecfd746214c35640bbbf82235ec59",
+  "size_bytes": 214250,
+  "stored_as": "raw.pdf",
+  "extraction_notes": [
+    "text_sha256 recorded 20 Aug 2026 from the extracted.txt stored at capture time (bootstrap captures predate this field); raw bytes unchanged"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-nn_2026-7-31_2026-7-31_en_v1.pdf",
+    "final_url": "https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-nn_2026-7-31_2026-7-31_en_v1.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"0d67cac4e5759572f898d39228032781\"",
+    "last_modified": "Fri, 31 Jul 2026 21:00:25 GMT",
+    "content_length": "214250",
+    "fetched_at": "2026-08-11T10:35:28Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260811103530/https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-nn_2026-7-31_2026-7-31_en_v1.pdf",
+    "at": "2026-08-11T10:35:37Z",
+    "snapshot_verified": "2026-08-20T14:30:00Z",
+    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-11T10:35:48Z"
+  },
+  "text_sha256": "9ea1a01bf4e62d7f62375fba34abdcd7854031016f5e810925aba7eac52214f7"
+}

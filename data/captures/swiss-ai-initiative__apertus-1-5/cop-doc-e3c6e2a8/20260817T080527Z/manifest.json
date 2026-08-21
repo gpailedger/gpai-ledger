@@ -1,0 +1,53 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "cop-doc",
+  "sha256": "2e4b304b04e445632f074ae10481386a72e97945c8a6b8ae8788a73f2b3c72e5",
+  "size_bytes": 151960,
+  "stored_as": "raw.pdf",
+  "text_sha256": "9de55cea1d5f03c92b19ee53483d70a4a64636aa2c58a48437ae0ebabb07b311",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "final_url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"f0249c108848af023efb92cb9ffc61737776f515de3dfaf348422c1e8ced71e9\"",
+    "last_modified": null,
+    "content_length": "151960",
+    "fetched_at": "2026-08-17T08:05:26Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260819112749/https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "at": "2026-08-19T11:27:59Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-17T08:05:39Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:05:28Z"
+    },
+    {
+      "ok": false,
+      "status_code": 404,
+      "snapshot": null,
+      "at": "2026-08-17T08:34:54Z"
+    }
+  ]
+}
