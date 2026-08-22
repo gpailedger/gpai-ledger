@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 WF_DIR = ROOT / ".github" / "workflows"
 NAMES = ["ledger.yml", "hunt.yml", "verify.yml"]
 
-# the seven continue-on-error sweep steps the red-flag gate must re-surface
-SWEEP_STEP_IDS = ["capture", "metahub", "derived", "waybackretry",
+# the eight continue-on-error sweep steps the red-flag gate must re-surface
+SWEEP_STEP_IDS = ["registry", "capture", "metahub", "derived", "waybackretry",
                   "otsupgrade", "drift", "verify"]
 PUBLISH_GATE_IDS = ["sitebuild", "sitelint", "commit", "verify"]
 
@@ -92,19 +92,43 @@ def test_ledger_commit_step_confines_push_token():
     assert "x-access-token" not in seturl[-1] and "PUSH_TOKEN" not in seturl[-1]
 
 
-def test_ledger_parachute_bundle_step_runs_only_on_commit_failure():
+def test_ledger_parachute_bundle_step_runs_whenever_the_commit_did_not_succeed():
+    # a failed push AND a commit step skipped by cancellation/timeout both leave
+    # the day's evidence only on the runner: the parachute must fire for both
     wf = doc("ledger.yml")
     bundles = [s for s in all_steps(wf)
                if "git bundle create" in s.get("run", "")]
     assert len(bundles) == 1
-    assert bundles[0]["if"] == "always() && steps.commit.outcome == 'failure'"
+    assert bundles[0]["if"] == "always() && steps.commit.outcome != 'success'"
+    assert "git add -A data" in bundles[0]["run"]   # uncommitted captures enter the bundle
 
 
 def test_ledger_parachute_upload_is_pinned_and_errors_on_missing_bundle():
     s = step_by_uses_prefix(doc("ledger.yml"), "actions/upload-artifact@")
     assert re.fullmatch(r"actions/upload-artifact@[0-9a-f]{40}", s["uses"])
-    assert s["if"] == "always() && steps.commit.outcome == 'failure'"
+    assert s["if"] == "always() && steps.commit.outcome != 'success'"
     assert s["with"]["if-no-files-found"] == "error"
+
+
+def test_ledger_commit_step_strips_the_token_on_every_exit_path():
+    s = step_by_id(doc("ledger.yml"), "commit")
+    exits = [ln for ln in s["run"].splitlines() if "exit 1" in ln]
+    assert exits
+    for ln in exits:
+        assert "git remote set-url origin" in ln and "x-access-token" not in ln, ln
+
+
+def test_ledger_commit_stages_only_corpus_paths():
+    s = step_by_id(doc("ledger.yml"), "commit")
+    adds = [ln.strip() for ln in s["run"].splitlines() if ln.strip().startswith("git add")]
+    assert adds == ["git add -A data crawler/sources.json crawler/relocations.json reports"]
+
+
+def test_ledger_job_permissions_are_least_privilege():
+    wf = doc("ledger.yml")
+    assert wf["jobs"]["sweep"]["permissions"] == {"contents": "write"}
+    assert wf["jobs"]["deploy"]["permissions"] == {"pages": "write", "id-token": "write"}
+    assert "permissions" not in wf   # no workflow-wide grant
 
 
 # --- ledger.yml: publish + health gates ---
@@ -120,7 +144,7 @@ def test_ledger_publish_step_requires_all_four_success_outcomes(prefix):
             f"{prefix} if-gate misses {sid}"
 
 
-def test_ledger_red_flag_step_names_all_seven_sweep_step_ids():
+def test_ledger_red_flag_step_names_every_sweep_step_id():
     wf = doc("ledger.yml")
     gates = [s for s in all_steps(wf)
              if "exit 1" in s.get("run", "") and "steps.capture.outcome" in s.get("run", "")]

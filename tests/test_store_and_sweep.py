@@ -383,6 +383,10 @@ def _seed(data_root, day, absence="unconfirmed", outcome="error"):
 
 
 def _day1(tmp_path, monkeypatch, sources=None):
+    # pin the clock for the whole test: these tests derive "today" and "days
+    # ago" from it, and a UTC-midnight crossing mid-test must never flake them
+    frozen = cap.utc_now()
+    monkeypatch.setattr(cap, "utc_now", lambda: frozen)
     reg = _write_registry(tmp_path, sources or [_src("prov/model", "https://ex.org/doc.txt")])
     data_root = tmp_path / "data"
     monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
@@ -744,6 +748,34 @@ def test_sibling_live_fetch_supersedes_an_earlier_absence_claim_in_the_run(tmp_p
     assert [o["status_code"] for o in recovery["observations"]] == [404, 404]
     assert sibling["source"] == "prov/b" and sibling["outcome"] == "unchanged"
     assert ("prov/a", tslug) not in rc_mod.absence_streaks(data_root / "events.jsonl")
+
+
+def test_sweep_time_budget_skips_remaining_targets_and_reddens(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(rc_mod, "SWEEP_BUDGET_S", -1)          # already exhausted
+    monkeypatch.setattr(cap, "fetch", _boom)                    # nothing may be fetched
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["outcome"] == "sweep-budget-exhausted"
+    assert e["skipped"] == ["prov/model::" + TARGET] and e["checked"] == 0
+    assert "source" not in e                                    # run-level, not a target check
+
+
+def test_304_is_not_replayed_to_a_sibling_without_a_capture(tmp_path, monkeypatch):
+    shared = "https://ex.org/portal.txt"
+    body = (b"shared\n", _meta(shared, "text/plain"))
+    reg = _write_registry(tmp_path, [_src("prov/a", shared)])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch", _seq([body]))
+    assert _run_wb(monkeypatch, reg, data_root) == 0             # prov/a holds a capture
+    reg = _write_registry(tmp_path, [_src("prov/a", shared), _src("prov/b", shared)])
+    meta304 = dict(_meta(shared, "text/plain"), status_code=304)
+    monkeypatch.setattr(cap, "fetch", _seq([(None, meta304), body]))   # a: 304; b: full fetch
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    a, b = _events(data_root)[-2:]
+    assert a["source"] == "prov/a" and a["outcome"] == "unchanged" and a["not_modified"]
+    assert b["source"] == "prov/b" and b["outcome"] == "new" and b["sha256"]
 
 
 def test_absence_event_dates_come_from_the_event_clock(tmp_path, monkeypatch):

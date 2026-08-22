@@ -9,6 +9,7 @@ Gate 1 and the Commission's own regulatory baseline documents.
 """
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -313,7 +314,12 @@ def org_slug(org: str) -> str:
     return slugify(org.strip()) or "unknown"
 
 
-def main(aial_repo: str) -> None:
+# Source ids the operator has deliberately retired: the only ids the refresh may
+# drop from the committed registry (every other disappearance fails the refresh).
+RETIRED_SOURCE_IDS: set = set()
+
+
+def main(aial_repo: str, out_path=None) -> None:
     repo = Path(aial_repo)
     evals = sorted((repo / "evals").glob("*.yaml"))
     if not evals:
@@ -469,8 +475,21 @@ def main(aial_repo: str) -> None:
         "sources": sources,
     }
 
-    out = Path(__file__).parent / "sources.json"
-    out.write_text(json.dumps(registry, indent=2, ensure_ascii=False), encoding="utf-8")
+    out = Path(out_path) if out_path else Path(__file__).parent / "sources.json"
+    # Fail closed: the refresh must never drop a source the committed registry
+    # already tracks — an upstream rename or removal would otherwise unpublish
+    # that model's permalinks. The step fails, the committed registry stays in
+    # force, and the run reddens so the change is handled deliberately.
+    if out.exists():
+        prev_ids = {s["id"] for s in json.loads(out.read_text(encoding="utf-8")).get("sources", [])}
+        missing = sorted(prev_ids - {s["id"] for s in sources} - RETIRED_SOURCE_IDS)
+        if missing:
+            sys.exit(f"refusing to write a registry that drops {len(missing)} tracked "
+                     f"source id(s): {', '.join(missing[:8])} — add them to "
+                     f"RETIRED_SOURCE_IDS or remap them deliberately")
+    tmp = out.with_name(out.name + ".tmp")
+    tmp.write_text(json.dumps(registry, indent=2, ensure_ascii=False), encoding="utf-8")
+    os.replace(tmp, out)
     digest = hashlib.sha256(out.read_bytes()).hexdigest()
     print(f"wrote {out} — {status_counts} total={len(sources)}; sha256={digest[:16]}…")
     for s in sources:

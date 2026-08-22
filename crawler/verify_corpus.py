@@ -88,6 +88,9 @@ def verify(data_root: Path) -> int:
                 n_ots += 1
                 if not _ots_matches(ots_p, raw):
                     fail("C2", ots_p, "ots digest does not match raw file SHA-256")
+            elif (m.get("ots") or {}).get("ok"):
+                fail("C2", ots_p, "manifest records a successful stamp but the proof "
+                                  "file is absent")
             # C5 text — ZIP bundles use the inner-member hash key (format-agnostic
             # dedupe for regenerated archives); everything else uses canonical text
             txt_p = cap_dir / "extracted.txt"
@@ -100,6 +103,13 @@ def verify(data_root: Path) -> int:
                         json.dumps(pairs, ensure_ascii=False).encode("utf-8")).hexdigest()
                     if recomputed != m["text_sha256"]:
                         fail("C5", cap_dir, f"zip content key mismatch: {recomputed[:16]} vs manifest {m['text_sha256'][:16]}")
+                    # the bundle's served extracted.txt is verifiable when the
+                    # manifest carries its own canonical hash (captures since the
+                    # field was introduced; older manifests have no claim to check)
+                    if m.get("extracted_text_sha256") and txt_p.exists():
+                        recomputed_txt = canonical_text_sha(txt_p.read_text(encoding="utf-8"))
+                        if recomputed_txt != m["extracted_text_sha256"]:
+                            fail("C5", txt_p, f"bundle extracted.txt sha mismatch: disk {recomputed_txt[:16]} vs manifest {m['extracted_text_sha256'][:16]}")
                 elif txt_p.exists():
                     recomputed = canonical_text_sha(txt_p.read_text(encoding="utf-8"))
                     if recomputed != m["text_sha256"]:

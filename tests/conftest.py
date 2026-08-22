@@ -115,6 +115,14 @@ def corpus(tmp_path):
     return CorpusBuilder(tmp_path / "data")
 
 
+@pytest.fixture(autouse=True)
+def _offline_url_guard(monkeypatch):
+    """The suite is offline: the URL guard must never resolve hostnames here
+    (its resolution path has dedicated tests with a stubbed resolver)."""
+    import capture
+    monkeypatch.setattr(capture, "RESOLVE_HOSTS", False)
+
+
 def load_module(path, name):
     """Import a script by path under a private name (site/build.py, lint.py and
     the crawler entrypoints are scripts, not packages)."""

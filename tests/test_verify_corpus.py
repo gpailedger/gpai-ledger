@@ -125,6 +125,15 @@ def test_c2_ots_digest_for_different_document(corpus):
     assert _codes() == ["C2"] and "digest does not match" in _msgs()[0]
 
 
+def test_c2_claimed_stamp_with_missing_proof_file(corpus):
+    d, _ = corpus.add_capture()
+    root = corpus.finish()
+    assert_clean(root)
+    (d / "raw.pdf.ots").unlink()                 # manifest still says ots.ok
+    assert VC.verify(root) == 1
+    assert _codes() == ["C2"] and "proof file is absent" in _msgs()[0]
+
+
 def test_c2_orphan_ots_beside_deleted_raw(corpus):
     d, _ = corpus.add_capture()
     root = corpus.finish()
@@ -289,6 +298,18 @@ def test_c5_zip_content_key_clean_passes(corpus):
     root = corpus.finish()
     assert VC.verify(root) == 0
     assert VC.FAILS == []
+
+
+def test_c5_bundle_extracted_text_verified_when_the_manifest_hashes_it(corpus):
+    d, _ = add_zip_capture(corpus)
+    root = corpus.finish()
+    (d / "extracted.txt").write_text("bundle text", encoding="utf-8", newline="\n")
+    edit_json(d / "manifest.json",
+              lambda m: m.update(extracted_text_sha256=canon_sha("bundle text")))
+    assert_clean(root)
+    (d / "extracted.txt").write_text("bundle text, altered", encoding="utf-8", newline="\n")
+    assert VC.verify(root) == 1
+    assert _codes() == ["C5"] and "extracted.txt sha mismatch" in _msgs()[0]
 
 
 def test_c5_zip_content_key_mismatch(corpus):

@@ -55,8 +55,15 @@ def store_document(store: cap.Store, source_id: str, provider: str, model: str,
     if ext == ".zip":
         # Scope filter FIRST: provider bundles can contain confidential-marked
         # documents; only Art. 53 members are stored/served, the rest recorded by
-        # name+hash.
-        raw, excluded_members = cap.filter_zip_art53(raw)
+        # name+hash. A bundle over the zip caps is an error event, not a version.
+        try:
+            raw, excluded_members = cap.filter_zip_art53(raw)
+        except Exception as exc:  # noqa: BLE001
+            store.event(source=source_id, target=tslug, url=stable_key,
+                        kind="provider-live", outcome="error",
+                        error=f"bundle rejected: {exc!r}", via="derived-targets")
+            print(f"  ERROR {source_id}: bundle rejected: {exc!r}")
+            return "error"
     text, notes = cap.extract_text(raw, ext)
     sha = cap.sha256_hex(raw)
     if ext == ".zip":
@@ -103,7 +110,10 @@ def cohere(store: cap.Store) -> bool:
     html = render_watch_page("https://docs.cohere.com/docs/command-a-plus")
     if not html:
         return False
-    m = re.search(r'https://fdr-prod-docs-files-public\.s3[^"\s]+eu-ai-public-summary[^"\s]*', html)
+    # host anchored to the bucket's amazonaws.com origin: a link injected into the
+    # docs page must not redirect the miner to a look-alike host
+    m = re.search(r'https://fdr-prod-docs-files-public\.s3(?:[.-][a-z0-9-]+)*\.amazonaws\.com/'
+                  r'[^"\s?]*eu-ai-public-summary[^"\s]*', html)
     if not m:
         print("  cohere: no signed summary URL on docs page — layout changed?")
         return False

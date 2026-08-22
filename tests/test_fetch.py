@@ -202,6 +202,65 @@ def test_assert_public_http_accepts(url):
     assert cap._assert_public_http(url) is None
 
 
+@pytest.mark.parametrize("url", [
+    "http://localhost/", "http://LOCALHOST:8080/x", "http://svc.localhost/",
+    "http://2130706433/", "http://0x7f000001/", "http://0177.0.0.1/", "http://127.1/",
+    "http://[::ffff:127.0.0.1]/", "http://169.254.169.254/metadata",
+])
+def test_assert_public_http_rejects_loopback_spellings(url):
+    with pytest.raises(RuntimeError):
+        cap._assert_public_http(url)
+
+
+def _resolver(addresses):
+    def getaddrinfo(host, port, *a, **k):
+        return [(None, None, None, None, (addr, 0)) for addr in addresses]
+    return getaddrinfo
+
+
+def test_assert_public_http_rejects_host_resolving_to_private_address(monkeypatch):
+    monkeypatch.setattr(cap, "RESOLVE_HOSTS", True)
+    monkeypatch.setattr(cap.socket, "getaddrinfo", _resolver(["93.184.216.34", "10.0.0.5"]))
+    with pytest.raises(RuntimeError, match="non-public"):
+        cap._assert_public_http("https://provider.example/doc.pdf")
+
+
+def test_assert_public_http_accepts_host_resolving_publicly(monkeypatch):
+    monkeypatch.setattr(cap, "RESOLVE_HOSTS", True)
+    monkeypatch.setattr(cap.socket, "getaddrinfo",
+                        _resolver(["93.184.216.34", "2606:2800:220:1:248:1893:25c8:1946"]))
+    assert cap._assert_public_http("https://provider.example/doc.pdf") is None
+
+
+def test_assert_public_http_unresolvable_host_is_left_to_the_fetch(monkeypatch):
+    monkeypatch.setattr(cap, "RESOLVE_HOSTS", True)
+
+    def boom(*a, **k):
+        raise cap.socket.gaierror("no such host")
+    monkeypatch.setattr(cap.socket, "getaddrinfo", boom)
+    assert cap._assert_public_http("https://nonexistent.example/") is None
+
+
+def test_fetch_refuses_redirect_into_private_address_without_reading_body(monkeypatch, sleeps):
+    hop = FakeResp(302, url="https://example.org/doc")
+    final = FakeResp(200, url="http://127.0.0.1:8080/secret", chunks=(b"INTERNAL",))
+    final.history = [hop]
+    fake = _wire(monkeypatch, final)
+    with pytest.raises(cap.PermanentFetchError, match="non-public"):
+        cap.fetch("https://example.org/doc")
+    assert final.iter_calls == 0 and final.closed and len(fake.calls) == 1
+
+
+def test_fetch_refuses_private_hop_even_when_final_url_is_public(monkeypatch, sleeps):
+    hop = FakeResp(302, url="http://10.1.2.3/internal-bounce")
+    final = FakeResp(200, url="https://example.org/final")
+    final.history = [hop]
+    _wire(monkeypatch, final)
+    with pytest.raises(cap.PermanentFetchError):
+        cap.fetch("https://example.org/doc")
+    assert final.iter_calls == 0
+
+
 # --- guess_ext: branch order is content-type -> URL suffix -> magic bytes ---
 
 @pytest.mark.parametrize("ctype,ext", [

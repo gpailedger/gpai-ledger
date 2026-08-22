@@ -17,7 +17,8 @@ robots.txt, but we:
   full fetch per URL per week);
 - honor HTTP 429 / `Retry-After` and back off;
 - do not retry permanent 4xx;
-- cap every response body (60 MB) and reject decompression bombs;
+- cap every response body (60 MB), reject decompression bombs, and bound the time
+  spent parsing any document;
 - honor any provider opt-out request (email the contact address) — a provider that
   objects is switched to structured-facts treatment: the registry entry gets a
   `restricted` flag, after which the site publishes hashes, sizes, and provenance

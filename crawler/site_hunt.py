@@ -124,13 +124,24 @@ def same_site(url: str, domain: str) -> bool:
     return bool(dom) and (host == dom or host.endswith("." + dom))
 
 
-def probe_redirect(url: str, domain: str):
-    """Return the redirect target only if it stays on the provider's site."""
+def probe_redirect(url: str, domain: str, max_hops: int = 5):
+    """Return the redirect target only if it stays on the provider's site. Hops
+    are followed one at a time and only while they stay on-site, so an off-site
+    Location is never requested (CRAWLING.md: the hunt never leaves the domain)."""
+    cur = url
     try:
-        r = requests.head(url, headers=cap.HEADERS, timeout=30, allow_redirects=True)
-        if r.url.rstrip("/") != url.rstrip("/") and r.status_code == 200 \
-                and same_site(r.url, domain):
-            return r.url
+        for _ in range(max_hops):
+            r = requests.head(cur, headers=cap.HEADERS, timeout=30, allow_redirects=False)
+            loc = r.headers.get("Location") or ""
+            if r.status_code in (301, 302, 303, 307, 308) and loc:
+                nxt = urljoin(cur, loc)
+                if not same_site(nxt, domain):
+                    return None
+                cur = nxt
+                continue
+            if r.status_code == 200 and cur.rstrip("/") != url.rstrip("/"):
+                return cur
+            return None
     except Exception:  # noqa: BLE001
         pass
     return None

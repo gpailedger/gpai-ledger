@@ -51,6 +51,24 @@ def _delay_from_env() -> float:
 
 RECHECK_DELAY = _delay_from_env()
 MAX_WITNESSES_PER_RUN = 5
+
+
+def _budget_from_env() -> float:
+    raw = os.environ.get("GPAI_SWEEP_BUDGET", "6000")
+    try:
+        v = float(raw)
+    except ValueError:
+        print(f"WARNING: GPAI_SWEEP_BUDGET={raw!r} is not a number; using 6000", flush=True)
+        v = 6000.0
+    return max(60.0, min(v, 14400.0))
+
+
+# Wall-clock budget for one sweep. A host that accepts connections but never
+# answers costs minutes per target (three 90 s attempts), and a job killed by the
+# CI timeout commits nothing: past the budget the remaining targets are skipped,
+# the skip is recorded in the event log, and the run is marked red — while every
+# capture already on disk still reaches the commit step.
+SWEEP_BUDGET_S = _budget_from_env()
 # Second route to confirmation: the witness is often inconclusive (Save Page Now
 # cannot always capture an error page), so an absence observed on this many
 # distinct UTC dates in the current unbroken streak — the most recent prior one
@@ -181,6 +199,8 @@ def main() -> int:
     witnesses_used = 0
     witness_halt = None  # "rate-limited" once SPN answered 429: no more witnesses this run
     streaks = absence_streaks(store.events_path)
+    t_start = time.monotonic()
+    budget_skipped = []  # "source::target" keys not checked: the time budget ran out
 
     for source in registry["sources"]:
         if args.only:
@@ -192,6 +212,9 @@ def main() -> int:
         for target in source.get("targets", []):
             url, kind = target["url"], target["kind"]
             tslug = cap.target_slug(kind, url)
+            if time.monotonic() - t_start > SWEEP_BUDGET_S:
+                budget_skipped.append(f"{source['id']}::{tslug}")
+                continue
             rendered = bool(target.get("render"))
             stats["checked"] += 1
             cache_key = (url, rendered)
@@ -206,7 +229,10 @@ def main() -> int:
                         raw, meta = cap.fetch(
                             url, validators=validators_for(store, data_root,
                                                            source["id"], tslug, url))
-                    fetch_cache[cache_key] = (raw, meta)
+                    # a 304 vouches only for THIS source's prior capture (its own
+                    # validators): never replay it to a sibling sharing the URL
+                    if raw is not None:
+                        fetch_cache[cache_key] = (raw, meta)
                     stale = absence_memo.pop(cache_key, None)
             except Exception as exc:  # noqa: BLE001
                 status = getattr(exc, "status_code", None)
@@ -433,6 +459,15 @@ def main() -> int:
                   f"{len(raw):,}B text={'y' if text else 'n'}", flush=True)
             time.sleep(args.throttle)
 
+    if budget_skipped:
+        stats["skipped"] = len(budget_skipped)
+        stats["errors"] += 1
+        failures.append(("sweep", "", f"time budget of {SWEEP_BUDGET_S:.0f}s exhausted: "
+                                      f"{len(budget_skipped)} target(s) not checked this run"))
+        store.event(outcome="sweep-budget-exhausted", budget_s=SWEEP_BUDGET_S,
+                    checked=stats["checked"], skipped=budget_skipped)
+        print(f"  BUDGET  {len(budget_skipped)} target(s) skipped after "
+              f"{SWEEP_BUDGET_S:.0f}s", flush=True)
     store.save_state()
     print("\n=== sweep summary ===")
     for k, v in stats.items():

@@ -14,6 +14,7 @@ import io
 import json
 import os
 import re
+import socket
 import time
 import zipfile
 from datetime import datetime, timezone
@@ -184,22 +185,68 @@ def _read_capped(r, limit: int = MAX_FETCH_BYTES) -> bytes:
     return b"".join(chunks)
 
 
+# Hostnames are resolved and every address checked: a name can point at a
+# loopback, LAN or link-local address (deliberately, or via DNS rebinding). The
+# offline test suite switches resolution off; production never does.
+RESOLVE_HOSTS = True
+
+
+def _is_public_ip(ip) -> bool:
+    ip = getattr(ip, "ipv4_mapped", None) or ip
+    return bool(ip.is_global)
+
+
 def _assert_public_http(url: str) -> None:
-    """Refuse non-http(s) schemes and private/loopback literal-IP hosts. Mined URLs
-    come out of rendered third-party DOMs — never let one point the crawler at
-    file:, javascript:, or an internal address."""
+    """Refuse non-http(s) schemes and hosts that are — or resolve to — private,
+    loopback, link-local or otherwise non-public addresses. Registry URLs are
+    refreshed daily from third-party metadata and mined URLs come out of rendered
+    third-party DOMs: never let one point the crawler at file:, javascript:, or an
+    internal address. Callers apply it to the request URL, every redirect hop and
+    the final URL."""
     import ipaddress
     from urllib.parse import urlsplit
     parts = urlsplit(url)
     if parts.scheme not in ("http", "https"):
         raise RuntimeError(f"refusing non-http(s) URL scheme: {url[:120]}")
-    host = parts.hostname or ""
+    host = (parts.hostname or "").rstrip(".").lower()
+    if not host:
+        raise RuntimeError(f"refusing URL without a host: {url[:120]}")
+    if host == "localhost" or host.endswith(".localhost"):
+        raise RuntimeError(f"refusing loopback host {host} in {url[:120]}")
     try:
         ip = ipaddress.ip_address(host)
     except ValueError:
-        return  # hostname, not an IP literal
-    if not ip.is_global:
-        raise RuntimeError(f"refusing non-public address {host} in {url[:120]}")
+        ip = None
+    if ip is not None:
+        if not _is_public_ip(ip):
+            raise RuntimeError(f"refusing non-public address {host} in {url[:120]}")
+        return
+    if all(re.fullmatch(r"0x[0-9a-f]+|[0-9]+", label) for label in host.split(".")):
+        # numeric spellings (2130706433, 0x7f000001, 0177.0.0.1, 127.1) are
+        # addresses the ipaddress module rejects but resolvers accept
+        raise RuntimeError(f"refusing numeric host spelling {host} in {url[:120]}")
+    if not RESOLVE_HOSTS:
+        return
+    try:
+        infos = socket.getaddrinfo(host, None)
+    except socket.gaierror:
+        return  # unresolvable: the fetch itself fails with its normal error
+    for info in infos:
+        try:
+            addr = ipaddress.ip_address(info[4][0])
+        except ValueError:
+            continue
+        if not _is_public_ip(addr):
+            raise RuntimeError(f"refusing host {host} resolving to non-public "
+                               f"address {addr} in {url[:120]}")
+
+
+def _is_public_url(url: str) -> bool:
+    try:
+        _assert_public_http(url)
+        return True
+    except RuntimeError:
+        return False
 
 
 def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None):
@@ -224,6 +271,15 @@ def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None
         try:
             r = requests.get(url, headers=headers, timeout=timeout,
                              allow_redirects=True, stream=True)
+            # a public origin may redirect into a private address: every hop and
+            # the final URL must pass the guard before a single body byte is kept
+            try:
+                for hop in getattr(r, "history", []) or []:
+                    _assert_public_http(getattr(hop, "url", None) or url)
+                _assert_public_http(getattr(r, "url", None) or url)
+            except RuntimeError as exc:
+                r.close()
+                raise PermanentFetchError(f"redirect into a non-public address: {exc}")
             declared = r.headers.get("Content-Length")
             if declared and declared.isdigit() and int(declared) > MAX_FETCH_BYTES:
                 r.close()
@@ -286,6 +342,65 @@ def extract_pdf_text(data: bytes) -> str:
     return "\n".join((page.extract_text() or "") for page in reader.pages)
 
 
+def _timeout_from_env(name: str, default: float, hi: float) -> float:
+    raw = os.environ.get(name, "")
+    try:
+        v = float(raw) if raw else default
+    except ValueError:
+        v = default
+    return max(1.0, min(v, hi))
+
+
+# Parsing is the one untrusted-input step that is CPU-bound rather than
+# network-bound: a malformed PDF can send a parser into an unbounded loop, and an
+# unattended sweep that hangs loses the day's evidence to the job timeout. PDF
+# parsing therefore runs in a disposable worker process with a hard deadline.
+EXTRACT_TIMEOUT_S = _timeout_from_env("GPAI_EXTRACT_TIMEOUT", 120.0, 900.0)
+
+
+def _pdf_text_bounded(data: bytes, timeout: float = None, fn=None) -> str:
+    """extract_pdf_text in a worker process that is killed at the deadline. The
+    worker's own exception (encrypted, damaged file) propagates unchanged; a
+    stall raises RuntimeError, so the caller records 'extraction failed' and
+    keeps the bytes — text is derived, the document is the evidence."""
+    import multiprocessing as mp
+    timeout = EXTRACT_TIMEOUT_S if timeout is None else timeout
+    ctx = mp.get_context("spawn")
+    with ctx.Pool(1) as pool:
+        res = pool.apply_async(fn or extract_pdf_text, (data,))
+        try:
+            return res.get(timeout=timeout)
+        except mp.TimeoutError:
+            pool.terminate()
+            raise RuntimeError(f"pdf text extraction exceeded {timeout:.0f}s "
+                               f"(parser stalled on the input; bytes stored, text omitted)")
+
+
+def _bounded_zip_members(zf):
+    """Yield (info, bytes) for every member of an open ZipFile under the zip-bomb
+    caps: member count, advertised per-member and total sizes, and a bounded read
+    with a cumulative counter (a hostile archive can lie about its sizes). Sorted
+    by filename: entry order is nondeterministic for on-demand-generated ZIPs and
+    the member list doubles as a content key."""
+    infos = sorted(zf.infolist(), key=lambda i: i.filename)
+    if len(infos) > MAX_ZIP_MEMBERS:
+        raise RuntimeError(f"zip has {len(infos)} members (> {MAX_ZIP_MEMBERS})")
+    if sum(i.file_size for i in infos) > MAX_ZIP_TOTAL_BYTES:
+        raise RuntimeError("zip advertised uncompressed size exceeds cap")
+    total = 0
+    for info in infos:
+        if info.file_size > MAX_ZIP_MEMBER_BYTES:
+            raise RuntimeError(f"zip member {info.filename} exceeds cap")
+        with zf.open(info) as fh:
+            inner = fh.read(MAX_ZIP_MEMBER_BYTES + 1)
+        if len(inner) > MAX_ZIP_MEMBER_BYTES:
+            raise RuntimeError(f"zip member {info.filename} over-reads cap")
+        total += len(inner)
+        if total > MAX_ZIP_TOTAL_BYTES:
+            raise RuntimeError("zip cumulative decompressed size exceeds cap")
+        yield info, inner
+
+
 def extract_html_text(data: bytes) -> str:
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(data, "html.parser")
@@ -322,42 +437,24 @@ def extract_text(data: bytes, ext: str):
 
     try:
         if ext == ".pdf":
-            return _finish(normalize(extract_pdf_text(data)))
+            return _finish(normalize(_pdf_text_bounded(data)))
         if ext == ".html":
             return normalize(extract_html_text(data)), notes
         if ext in (".md", ".txt", ".json"):
             return normalize(data.decode("utf-8", errors="replace")), notes
         if ext == ".zip":
-            # Zip-bomb guards: a hostile bundle can advertise a small compressed size
-            # yet expand to gigabytes. Cap member count and total + per-member
-            # decompressed bytes; read each member through a bounded read.
-            # sort by filename: archive entry order is nondeterministic for
-            # on-demand-generated ZIPs, and text must be a stable content key.
+            # Zip-bomb guards live in _bounded_zip_members (shared with the
+            # Art. 53 scope filter so the two can never drift apart).
             parts = []
             with zipfile.ZipFile(io.BytesIO(data)) as zf:
-                infos = sorted(zf.infolist(), key=lambda i: i.filename)
-                if len(infos) > MAX_ZIP_MEMBERS:
-                    raise RuntimeError(f"zip has {len(infos)} members (> {MAX_ZIP_MEMBERS})")
-                if sum(i.file_size for i in infos) > MAX_ZIP_TOTAL_BYTES:
-                    raise RuntimeError("zip advertised uncompressed size exceeds cap")
-                total = 0
-                for info in infos:
-                    if info.file_size > MAX_ZIP_MEMBER_BYTES:
-                        raise RuntimeError(f"zip member {info.filename} exceeds cap")
-                    with zf.open(info) as fh:
-                        inner = fh.read(MAX_ZIP_MEMBER_BYTES + 1)
-                    if len(inner) > MAX_ZIP_MEMBER_BYTES:
-                        raise RuntimeError(f"zip member {info.filename} over-reads cap")
-                    total += len(inner)
-                    if total > MAX_ZIP_TOTAL_BYTES:
-                        raise RuntimeError("zip cumulative decompressed size exceeds cap")
+                for info, inner in _bounded_zip_members(zf):
                     notes.append({"inner_file": info.filename, "inner_sha256": sha256_hex(inner)})
                     if info.filename.lower().endswith(".pdf"):
                         # One encrypted/damaged member must never abort the archive:
                         # its bytes are hashed above; only its text is omitted.
                         try:
                             parts.append(f"===== {info.filename} =====\n"
-                                         + extract_pdf_text(inner))
+                                         + _pdf_text_bounded(inner))
                         except Exception as exc:  # noqa: BLE001 — member-scoped
                             notes.append(f"text extraction failed for zip member "
                                          f"{info.filename}: {type(exc).__name__} "
@@ -384,11 +481,16 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
     """
     from playwright.sync_api import sync_playwright
 
+    _assert_public_http(url)
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         try:
             page = browser.new_page(user_agent=USER_AGENT)
             resp = page.goto(url, wait_until="load", timeout=timeout_ms)
+            try:
+                _assert_public_http(page.url)
+            except RuntimeError as exc:
+                raise PermanentFetchError(f"navigation ended at a non-public address: {exc}")
             try:
                 page.wait_for_load_state("networkidle", timeout=20000)
             except Exception:
@@ -432,7 +534,8 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
             # noise by requiring real text content; give websocket apps time to paint.
             frame_sections, frame_urls = [], []
             child_frames = [f for f in page.frames if f != page.main_frame
-                            and (f.url or "").startswith("http")]
+                            and (f.url or "").startswith("http")
+                            and _is_public_url(f.url)]
             if child_frames:
                 page.wait_for_timeout(4000)
 
@@ -502,8 +605,9 @@ def filter_zip_art53(raw: bytes):
     excluded = []
     with zipfile.ZipFile(io.BytesIO(raw)) as zin, \
          zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zout:
-        for info in sorted(zin.infolist(), key=lambda i: i.filename):
-            data = zin.read(info)
+        # same zip-bomb caps as extract_text: this filter runs FIRST on a fetched
+        # bundle, so it must never inflate an unbounded member into memory
+        for info, data in _bounded_zip_members(zin):
             if ZIP_ART53_MEMBER.search(info.filename) and \
                     not ZIP_NOT_ART53_MEMBER.search(info.filename):
                 zi = zipfile.ZipInfo(info.filename, date_time=(2026, 1, 1, 0, 0, 0))
@@ -766,6 +870,10 @@ def store_new_version(store: Store, *, source_id: str, provider: str, model: str
         "http": meta,
         "prior_sha256": store.last_sha(source_id, tslug),
     }
+    if ext == ".zip" and text:
+        # for bundles text_sha256 is the inner-member hash key, so the served
+        # extracted.txt carries its own verifiable hash (verify_corpus C5)
+        manifest["extracted_text_sha256"] = canonical_text_sha(text)
     if wayback_url is not None:
         manifest["wayback"] = wayback_save(wayback_url)
     if do_ots:

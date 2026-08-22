@@ -63,6 +63,64 @@ def _events(data_root):
             (Path(data_root) / "events.jsonl").read_text(encoding="utf-8").splitlines()]
 
 
+# --- 0. hostile-input bounds: parser deadline, zip caps in the scope filter ---
+
+import time as _time
+
+
+def _stall(data):
+    _time.sleep(30)
+    return "never"
+
+
+def test_pdf_text_bounded_kills_a_stalled_parser_and_the_bytes_survive():
+    t0 = _time.time()
+    with pytest.raises(RuntimeError, match="exceeded"):
+        cap._pdf_text_bounded(b"%PDF-1.4", timeout=2, fn=_stall)
+    assert _time.time() - t0 < 20
+    # the normal failure contract still holds through the worker: damaged
+    # bytes -> no text, a note, no exception
+    text, notes = cap.extract_text(b"%PDF-1.4 not really a pdf", ".pdf")
+    assert text is None and notes and "extraction failed" in notes[-1]
+
+
+def _bomb_zip(member_size):
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr("Training-Data-Summary.pdf", b"\0" * member_size)
+    return buf.getvalue()
+
+
+def test_filter_zip_art53_rejects_bundles_over_the_zip_caps(monkeypatch):
+    monkeypatch.setattr(cap, "MAX_ZIP_MEMBER_BYTES", 1024)
+    monkeypatch.setattr(cap, "MAX_ZIP_TOTAL_BYTES", 1024)
+    with pytest.raises(RuntimeError, match="cap"):
+        cap.filter_zip_art53(_bomb_zip(4096))
+
+
+def test_store_document_rejected_bundle_is_an_error_event_not_a_version(tmp_path, monkeypatch):
+    monkeypatch.setattr(cap, "MAX_ZIP_MEMBER_BYTES", 1024)
+    monkeypatch.setattr(cap, "MAX_ZIP_TOTAL_BYTES", 1024)
+    store = cap.Store(tmp_path / "data")
+    bomb = _bomb_zip(4096)
+    monkeypatch.setattr(cap, "fetch", lambda url, **k: (bomb, _meta(url, "application/zip")))
+    assert dt.store_document(store, "prov/bundle", "Prov", "Bundle",
+                             "https://ex.org/bundle.zip?r=1", "https://ex.org/bundle.zip",
+                             "note") == "error"
+    (e,) = _events(tmp_path / "data")
+    assert e["outcome"] == "error" and "bundle rejected" in e["error"]
+    assert not list((tmp_path / "data" / "captures").rglob("manifest.json"))
+
+
+def test_cohere_miner_ignores_look_alike_hosts(monkeypatch):
+    evil = ('<a href="https://fdr-prod-docs-files-public.s3.attacker.example/'
+            'eu-ai-public-summary.pdf?x=1">x</a>')
+    monkeypatch.setattr(cap, "fetch_rendered", lambda url, **k: (evil.encode(), {}))
+    calls = []
+    monkeypatch.setattr(dt, "store_document", lambda *a, **k: calls.append(a) or "new")
+    assert dt.cohere(None) is False and calls == []
+
+
 def _manifests(data_root):
     return sorted(Path(data_root).rglob("manifest.json"))
 

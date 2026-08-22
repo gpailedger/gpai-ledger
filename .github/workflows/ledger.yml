@@ -51,6 +51,7 @@ jobs:
         run: python -m pytest tests/ -q
 
       - name: Refresh registry from AIAL metadata (attributed)
+        id: registry
         continue-on-error: true   # falls back to the committed sources.json
         run: |
           git clone --depth 1 --filter=blob:none --sparse https://github.com/AIAccountabilityLab/gpai-training-transparency.git /tmp/aial-repo
@@ -115,22 +116,27 @@ jobs:
             pushed=0
             for i in 1 2 3; do
               if git push origin HEAD:main; then pushed=1; break; fi
-              git pull --rebase origin main || exit 1
+              git pull --rebase origin main || { git remote set-url origin "https://github.com/${{ github.repository }}.git"; exit 1; }
             done
-            [ "$pushed" = 1 ] || { echo "push failed after 3 attempts"; exit 1; }
+            [ "$pushed" = 1 ] || { echo "push failed after 3 attempts"; git remote set-url origin "https://github.com/${{ github.repository }}.git"; exit 1; }
           fi
           git remote set-url origin "https://github.com/${{ github.repository }}.git"
 
-      # If the push failed, the day's captures + OTS proofs exist ONLY on this
-      # ephemeral runner — parachute them out as a git bundle before it vanishes.
+      # If the push failed — or the commit step never ran because the job was
+      # cancelled or timed out — the day's captures + OTS proofs exist ONLY on
+      # this ephemeral runner: parachute them out as a git bundle before it
+      # vanishes (always() steps still run during cancellation).
       - name: Preserve unpushed evidence as an artifact
-        if: always() && steps.commit.outcome == 'failure'
+        if: always() && steps.commit.outcome != 'success'
         run: |
           git rebase --abort 2>/dev/null || true
+          git add -A data crawler/sources.json crawler/relocations.json reports
+          git -c user.name=gpai-ledger-sweep -c user.email=41898282+github-actions[bot]@users.noreply.github.com \
+            commit -q -m "unpushed evidence (parachute)" || true
           git bundle create "$RUNNER_TEMP/unpushed-evidence.bundle" origin/main..HEAD \
             || git bundle create "$RUNNER_TEMP/unpushed-evidence.bundle" HEAD
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        if: always() && steps.commit.outcome == 'failure'
+        if: always() && steps.commit.outcome != 'success'
         with:
           name: unpushed-evidence
           path: ${{ runner.temp }}/unpushed-evidence.bundle
@@ -181,7 +187,8 @@ jobs:
       - name: Fail the run if any capture step failed
         if: always()
         run: |
-          if [ "${{ steps.capture.outcome }}" != "success" ] || \
+          if [ "${{ steps.registry.outcome }}" != "success" ] || \
+             [ "${{ steps.capture.outcome }}" != "success" ] || \
              [ "${{ steps.metahub.outcome }}" != "success" ] || \
              [ "${{ steps.derived.outcome }}" != "success" ] || \
              [ "${{ steps.waybackretry.outcome }}" != "success" ] || \
