@@ -676,6 +676,29 @@
     "to_sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
     "computed_at": "2026-08-22T23:24:49Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z": {
+    "verdict": "method-changed",
+    "similarity": 0.9732,
+    "word_delta": 92,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v3",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Cohere We and our partners use cookies, scripts and certain similar technologies Cookies to collect data from visitors to this site, including IP address, clicks, and other details about them and their use of the site and other sites. This helps us operate site features, identify visitors, understan",
+        "new": "Model Cohere For AI"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z",
+    "from_sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
+    "to_sha256": "e99c75b05229ec52e9cb9c5c38709ad028838258183f974da13f5e900343829c",
+    "computed_at": "2026-08-22T23:55:51Z"
+  },
   "domyn/domyn::provider-live-81f159b9::captures/domyn__domyn/provider-live-81f159b9/20260811T102935Z>captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z": {
     "verdict": "method-changed",
     "similarity": 0.9852,
