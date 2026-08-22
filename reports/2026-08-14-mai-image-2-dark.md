@@ -74,6 +74,6 @@ The URL remains under daily watch. Post-restoration sweeps (15 and 17 Aug) repor
 200/unchanged against the pre-dark hash; any future change or disappearance mints a
 new event on the same record.
 
-*Correction (20 Aug 2026):* an earlier revision described this document as absent from AIAL's tracker and asserted a Microsoft rename; AIAL does evaluate MAI Cyber 1 Flash, and no rename is evidenced. The context paragraph above was restated as observables only.
+*Correction (20 Aug 2026):* an earlier revision described MAI Cyber 1 Flash's summary as absent from AIAL's tracker, asserted a Microsoft rename, and presented a naming anomaly as "why AIAL never found" this document — a claim about AIAL's internal process this project cannot know. AIAL does evaluate that model, and no rename is evidenced. The context paragraph above was restated as observables only.
 
 *Addendum (22 Aug 2026):* GitHub-hosted runners observed the URL three times today — HTTP 404 at 07:24 UTC, 200 at 08:05 UTC, 404 at 08:50 UTC — while residential-IP checks returned 200 at ~07:45 UTC and 200 at ~09:05 UTC with the known bytes. The pattern is consistent with an intermittent edge-level inconsistency at the provider's CDN rather than a second removal; the daily event log continues to record each check, and any sustained absence will show there as consecutive errors.

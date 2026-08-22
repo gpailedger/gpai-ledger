@@ -582,7 +582,7 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                       f"date the OTS proof attests)</span></td></tr>")
     kind_label = KIND_LABELS.get(m["target_kind"], m["target_kind"])
     cop_warn = ("<p class='muted'><strong>Note:</strong> this is a GPAI Code of "
-                "Practice document (Art. 53(1)(b)–(c) — model documentation and "
+                "Practice document (Art. 53(1)(a)–(c) — model documentation and "
                 "copyright policy), <em>not</em> the Art. 53(1)(d) public "
                 "training-data summary.</p>"
                 if m["target_kind"] == "cop-doc" else "")
@@ -1144,8 +1144,10 @@ def render_privacy() -> str:
 <p>This site sets no cookies, runs no analytics, embeds no third-party resources,
 and loads no external fonts or scripts. Every asset — including the heading font —
 is served from this site's own origin.</p>
-<p>Hosting is provided by GitHub Pages, which may log requests (IP address, user
-agent) for operational purposes under
+<p>Hosting is provided by GitHub Pages. GitHub logs and stores each visitor's IP
+address for security purposes (see
+<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub
+Pages: data collection</a>) and processes request data under
 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's
 privacy statement</a>. This project itself collects nothing.</p>
 <p>Email sent to the contact address is used solely to handle the correspondence

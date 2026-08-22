@@ -19,7 +19,7 @@ a new "Last Update" date:
 Word-level diffs (sha-pinned, full opcode enumeration — no length filter) show the same
 edits in every document:
 
-- **An authorized-representative (Article 54 AI Act) postal address was added** to section 1.1:
+- **An authorised-representative (Article 54 AI Act) postal address was added** to section 1.1:
   "Merrion Road Dublin 4 D04 X2K5 Ireland".
 - **The support-contact URL (`https://ai.meta.com/help`) was replaced with "N/A".**
 - The market-placement date was reformatted (e.g. "7/7/26" → "July 7 2026").
