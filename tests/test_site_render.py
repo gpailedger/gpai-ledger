@@ -197,6 +197,49 @@ def _first(r):
     return {r["sha"]: r["ts"]}
 
 
+def test_row_note_ledger_identical_text_overrides_text_sha_difference():
+    # stored text hashes differ (different extractor eras) but the ledger's
+    # common-extractor verdict says the text is identical: no content-change claim
+    r = mk_row(prior_sha="1" * 64, text_sha="a", prior_text_sha="b",
+               diff_verdict="identical-text")
+    out = build.version_row_html(r, set(), _first(r))
+    assert "extracted text is identical" in out and "content changed" not in out
+
+
+def test_row_note_ledger_changed_reports_word_count():
+    r = mk_row(prior_sha="1" * 64, text_sha="a", prior_text_sha="a",
+               diff_verdict="changed", diff_words=3)
+    out = build.version_row_html(r, set(), _first(r))
+    assert "content changed vs the previous capture of this target (3 word(s) differ" in out
+
+
+def test_row_note_ledger_method_change_is_not_a_content_claim():
+    r = mk_row(prior_sha="1" * 64, text_sha="a", prior_text_sha="b",
+               stored_as="raw.html", diff_verdict="method-changed")
+    out = build.version_row_html(r, set(), _first(r))
+    assert "captured with a different method" in out and "content changed" not in out
+
+
+def test_row_note_non_document_page_says_page_text_not_content():
+    r = mk_row(prior_sha="1" * 64, stored_as="raw.html", kind="watch-page",
+               url="https://example.org/catalog", diff_verdict="changed", diff_words=7)
+    out = build.version_row_html(r, set(), _first(r))
+    assert "page text changed vs the previous capture" in out and "content changed" not in out
+
+
+def test_row_note_unverified_change_is_not_published_as_a_content_change():
+    r = mk_row(prior_sha="1" * 64, diff_verdict="changed-unverified", diff_words=2)
+    out = build.version_row_html(r, set(), _first(r))
+    assert "not verified as a content change" in out and "content changed" not in out
+
+
+def test_row_note_ledger_no_text_makes_no_content_claim():
+    r = mk_row(prior_sha="1" * 64, text_sha=None, prior_text_sha=None,
+               diff_verdict="no-text")
+    out = build.version_row_html(r, set(), _first(r))
+    assert "no extracted text on one side" in out and "content changed" not in out
+
+
 def test_row_note_inpage():
     r = mk_row()
     out = build.version_row_html(r, {r["url"]}, _first(r))
@@ -357,6 +400,114 @@ def run_lint(monkeypatch, dist):
                         lambda *a, **k: lines.append(" ".join(map(str, a))))
     rc = lint.main()
     return rc, [ln[2:] for ln in lines if ln.startswith("  L")]
+
+
+# --- F2. full build: the version-diffs ledger governs change notes and the feed ---
+
+FULL_SRC = {"id": "prov/model", "provider": "Prov", "model": "Model", "status": "published",
+            "targets": [{"kind": "provider-live", "url": "https://example.org/doc.pdf"}]}
+V1, V2 = "20260801T060000Z", "20260815T060000Z"
+
+
+def _build_site(tmp_path, monkeypatch, data_root, vdiffs=None, drift=None):
+    root = tmp_path / "root"
+    (root / "crawler").mkdir(parents=True)
+    (root / "reports").mkdir()
+    (root / "crawler" / "sources.json").write_text(
+        json.dumps({"sources": [FULL_SRC]}), encoding="utf-8")
+    if vdiffs is not None:
+        (root / "reports" / "version-diffs.json").write_text(json.dumps(vdiffs), encoding="utf-8")
+    if drift is not None:
+        (root / "reports" / "drift-latest.json").write_text(json.dumps(drift), encoding="utf-8")
+    for name, val in (("ROOT", root), ("DATA", data_root),
+                      ("DIST", root / "site" / "dist"), ("STATIC", root / "site" / "static")):
+        monkeypatch.setattr(build, name, val)
+    assert build.main(generated="2026-08-22 00:00 UTC") == 0
+    return root / "site" / "dist"
+
+
+def _two_versions(corpus):
+    # stored extracts differ (as two extractor eras would leave them)
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 v1", text="stable body text")
+    corpus.add_capture(ts=V2, raw=b"%PDF-1.4 v2", text="stable body text updated")
+    root = corpus.finish()
+    key = "prov/model::provider-live-aaaa1111"
+    st = json.loads((root / "state.json").read_text(encoding="utf-8"))[key]
+    return root, st["versions"][0]["dir"], st["versions"][1]["dir"]
+
+
+def _ledger(verdict, from_dir, to_dir, **extra):
+    rec = {"verdict": verdict, "source": "prov/model", "target": "provider-live-aaaa1111",
+           "from_dir": from_dir, "to_dir": to_dir, "same_tool": True,
+           "compared_via": "re-extracted from the stored bytes with test"}
+    rec.update(extra)
+    return {f"prov/model::provider-live-aaaa1111::{from_dir}>{to_dir}": rec}
+
+
+def test_build_ledger_identical_text_suppresses_change_note_and_feed_entry(corpus, tmp_path, monkeypatch):
+    data, d1, d2 = _two_versions(corpus)
+    dist = _build_site(tmp_path, monkeypatch, data, vdiffs=_ledger("identical-text", d1, d2))
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "extracted text is identical" in model and "content changed" not in model
+    changes = (dist / "changes" / "index.html").read_text(encoding="utf-8")
+    assert "content changed" not in changes
+
+
+def test_build_ledger_changed_drives_change_note_feed_entry_and_banner(corpus, tmp_path, monkeypatch):
+    data, d1, d2 = _two_versions(corpus)
+    drift = [{"id": "prov/model", "model": "Model", "verdict": "identical-bytes",
+              "self_history": {"verdict": "changed", "word_delta": 1, "from_dir": d1,
+                               "to_dir": d2, "same_tool": True,
+                               "compared_via": "re-extracted from the stored bytes with test"}}]
+    dist = _build_site(tmp_path, monkeypatch, data,
+                       vdiffs=_ledger("changed", d1, d2, word_delta=1), drift=drift)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "content changed vs the previous capture of this target (1 word(s) differ" in model
+    assert "Latest version differs from the previous one:" in model
+    assert "both extracted with the same tool" in model
+    changes = (dist / "changes" / "index.html").read_text(encoding="utf-8")
+    assert "content changed (1 word(s) differ in the extracted text) between" in changes
+
+
+def test_build_without_ledger_record_falls_back_to_text_hashes(corpus, tmp_path, monkeypatch):
+    data, _, _ = _two_versions(corpus)
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "content changed vs the previous capture of this target" in model
+
+
+def test_build_near_identical_banner_states_observables_only(corpus, tmp_path, monkeypatch):
+    data, d1, d2 = _two_versions(corpus)
+    drift = [{"id": "prov/model", "model": "Model", "verdict": "near-identical",
+              "similarity": 0.9983, "word_delta": 2, "same_tool": False,
+              "compared_via": "re-extracted from the stored bytes: pypdf 6 (archive) vs utf-8 decode (live)"}]
+    dist = _build_site(tmp_path, monkeypatch, data, drift=drift)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "Small difference observed:" in model and "2 word(s)" in model and "0.9983" in model
+    assert "same tool" not in model        # two extractors: never claimed
+
+
+def test_build_pure_move_is_reported_as_reordering_not_change(corpus, tmp_path, monkeypatch):
+    data, d1, d2 = _two_versions(corpus)
+    dist = _build_site(tmp_path, monkeypatch, data,
+                       vdiffs=_ledger("changed", d1, d2, word_delta=0, moved_words=5))
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "text re-ordered vs the previous capture of this target (5 word(s) moved, none changed)" in model
+    assert "content changed" not in model
+    assert "content changed" not in (dist / "changes" / "index.html").read_text(encoding="utf-8")
+
+
+def test_build_retired_source_keeps_pages_with_a_note_and_leaves_the_count(corpus, tmp_path, monkeypatch):
+    data, _, _ = _two_versions(corpus)
+    retired = dict(FULL_SRC, retired="retired 2026-08-22: upstream eval removed")
+    monkeypatch.setattr(sys.modules[__name__], "FULL_SRC", retired)
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "No longer tracked:" in model and "upstream eval removed" in model
+    assert "permalinks stay valid" in model
+    status = (dist / "status" / "index.html").read_text(encoding="utf-8")
+    assert "(no longer tracked)" in status
+    assert "0 models tracked" in (dist / "index.html").read_text(encoding="utf-8")
 
 
 def test_lint_l2_l6_ignore_third_party_extract_but_police_generator_text(tmp_path, monkeypatch):

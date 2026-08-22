@@ -353,6 +353,22 @@ def write(path: Path, title: str, body: str, desc: str = "",
 # hashes of full bundles replaced by an Art. 53 scope repack (scope-repack
 # events); filled by main() before any version page renders
 REPACKED_SHAS = set()
+# (source, target, from_dir, to_dir) -> analyze_drift's version-diffs ledger
+# record: the common-extractor verdict on whether consecutive versions differ in
+# text. Filled by main(); every "content changed" note and /changes/ entry for a
+# pair that has a record comes from here, never from the stored text hashes.
+VDIFFS = {}
+
+
+def load_version_diffs() -> dict:
+    p = ROOT / "reports" / "version-diffs.json"
+    if not p.exists():
+        return {}
+    out = {}
+    for rec in json.loads(p.read_text(encoding="utf-8")).values():
+        if all(k in rec for k in ("source", "target", "from_dir", "to_dir", "verdict")):
+            out[(rec["source"], rec["target"], rec["from_dir"], rec["to_dir"])] = rec
+    return out
 
 
 def last_checked_map():
@@ -599,9 +615,8 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                        f"(<a href='https://opentimestamps.org'>opentimestamps.org</a>) "
                        + ("proves the bytes existed no later than the stamp date"
                           if restamped else "proves the capture time")
-                       + f" (fresh proofs report "
-                       f"'pending' until bitcoin-anchored, typically within a "
-                       f"day).</p>")
+                       + " (fresh proofs report 'pending' until bitcoin-anchored, "
+                       "typically within a day).</p>")
     notes = reader_notes(m)
     notes_row = (f"<tr><th>Notes</th><td>{esc('; '.join(notes))}</td></tr>"
                  if notes else "")
@@ -656,10 +671,38 @@ def version_row_html(r, inpage_urls, sha_first) -> str:
                      "later captures store the fully rendered page")
     if "/blob/" in r["url"]:
         notes.append("HuggingFace viewer page around the file, not the file itself")
+    if "drive.google.com/file/" in r["url"]:
+        notes.append("Google Drive viewer page around the file, not the file itself")
     if "fbcdn.net" in r["url"]:
         notes.append("Meta CDN-hosted PDF (signed URL)")
     if sha_first[r["sha"]] != r["ts"]:
         notes.append(f"bytes identical to {sha_first[r['sha']]}")
+    elif r.get("diff_verdict") == "changed":
+        # the version-diffs ledger compared both captures on one extractor; a
+        # page that is not the document (hub, catalog, viewer) changed its text,
+        # not "content" in the sense of the summary
+        what = "content" if is_document(r, inpage_urls) else "page text"
+        if not (r.get("diff_words") or 0) and (r.get("diff_moved") or 0):
+            notes.append(f"text re-ordered vs the previous capture of this target "
+                         f"({r.get('diff_moved')} word(s) moved, none changed)")
+        else:
+            notes.append(f"{what} changed vs the previous capture of this target "
+                         f"({r.get('diff_words')} word(s) differ in the extracted text)")
+    elif r.get("diff_verdict") == "changed-unverified":
+        notes.append(f"extracted text differs from the previous capture "
+                     f"({r.get('diff_words')} word(s) by the stored extracts) — the two "
+                     f"captures could not be re-extracted with one tool, so this is not "
+                     f"verified as a content change")
+    elif r.get("diff_verdict") == "identical-text":
+        notes.append("bytes differ from the previous capture but the extracted text "
+                     "is identical (re-serialization, not a content change)")
+    elif r.get("diff_verdict") == "method-changed":
+        notes.append("captured with a different method than the previous capture "
+                     "(rendering, frame or consent handling changed): the extracted "
+                     "text differs, which is not evidence of a content change")
+    elif r.get("diff_verdict") == "no-text":
+        notes.append("bytes differ from the previous capture; no extracted text on "
+                     "one side to compare")
     elif r["prior_text_sha"] is not None and r["text_sha"] is not None:
         if r["prior_text_sha"] != r["text_sha"]:
             notes.append("content changed vs the previous capture of this target")
@@ -732,7 +775,20 @@ def render_model_page(source, vsections, checked):
     sid = source["id"]
     status = source["status"]
     aial = source.get("aial", {})
-    if status == "missing":
+    retired = bool(source.get("retired"))
+    if status == "missing" and retired:
+        if aial:
+            missing_note = ("While this model was listed in the AI Accountability Lab "
+                            "(AIAL) registry, AIAL assessed it as covered by the EU "
+                            "disclosure obligation and found no published summary — "
+                            "their research assessment, not a legal ruling. The model "
+                            "has since left that registry and is no longer checked here.")
+        else:
+            missing_note = ("No published summary was located by this project's "
+                            "monitoring while the model was tracked; whether the model "
+                            "is obligated under Art. 53 has not been assessed. It is no "
+                            "longer checked here.")
+    elif status == "missing":
         if aial:
             missing_note = ("The AI Accountability Lab (AIAL) assesses this model as "
                             "covered by the EU disclosure obligation but has found no "
@@ -760,7 +816,15 @@ def render_model_page(source, vsections, checked):
 
     last_ts = checked.get(sid) or (max(checked.values()) if checked else "")
     checked_line = ""
-    if last_ts:
+    if last_ts and retired:
+        label = "Last checked" if sid in checked else "Last sweep"
+        checked_line = (f"<p class='muted'>{label}: {esc(last_ts[:10])} "
+                        f"(no longer checked — the model left the registry this "
+                        f"project follows; see "
+                        f"<a href='{PREFIX}methodology/'>Methodology</a>). "
+                        f"Seen a summary we missed? See the "
+                        f"<a href='{PREFIX}corrections/'>Corrections</a> page.</p>")
+    elif last_ts:
         label = "Last checked" if sid in checked else "Last sweep"
         checked_line = (f"<p class='muted'>{label}: {esc(last_ts[:10])} "
                         f"(re-checked on the daily schedule — see "
@@ -863,6 +927,11 @@ def model_page_desc(source, rows_data, inpage_urls) -> str:
                 f"({source['provider']}), archived since {human_date(first)}: "
                 f"every version with capture date, SHA-256 hash and "
                 f"OpenTimestamps proof.")
+    if source["status"] == "missing" and source.get("retired"):
+        return (f"No Article 53(1)(d) training-data summary was located for "
+                f"{source['model']} ({source['provider']}) while it was tracked; "
+                f"the model has left the registry this project follows and is no "
+                f"longer checked.")
     if source["status"] == "missing":
         return (f"No Article 53(1)(d) training-data summary located for "
                 f"{source['model']} ({source['provider']}). Tracked daily; "
@@ -1217,8 +1286,10 @@ def render_changes_page(changes) -> str:
             before = (f"<a href='{esc(c['prior_link'])}'>capture of "
                       f"{esc(c['prior_date'])}</a>" if c.get("prior_link")
                       else "the previous capture")
+            delta = (f" ({int(c['word_delta'])} word(s) differ in the extracted text)"
+                     if c.get("word_delta") is not None else "")
             return (f"<li><strong><time datetime='{esc(c['iso'])}'>{esc(c['date'])}</time></strong> — "
-                    f"{esc(c['model'])} ({esc(c['provider'])}): content changed "
+                    f"{esc(c['model'])} ({esc(c['provider'])}): content changed{delta} "
                     f"between {before} and the "
                     f"<a href='{esc(c['link'])}'>capture of {esc(c['date'])}</a>. "
                     f"<span class='muted'>Dates are capture dates; the provider's "
@@ -1328,16 +1399,22 @@ CORRECTION_LOG = [
 # ---------------------------------------------------------------------------
 
 def main(generated: str = None) -> int:
-    global GENERATED, BUILD_STAMP
+    global GENERATED, BUILD_STAMP, VDIFFS
     GENERATED = generated or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     registry = json.loads((ROOT / "crawler" / "sources.json").read_text(encoding="utf-8"))
     drift_p = ROOT / "reports" / "drift-latest.json"
-    drift_notes = {}
+    drift_notes, near_notes, history_notes = {}, {}, {}
     if drift_p.exists():
         for rrec in json.loads(drift_p.read_text(encoding="utf-8")):
             if rrec.get("verdict") == "DRIFT-CANDIDATE" and "similarity" in rrec:
                 drift_notes[rrec["id"]] = rrec["similarity"]
+            elif rrec.get("verdict") == "near-identical" and "similarity" in rrec:
+                near_notes[rrec["id"]] = rrec
+            sh = rrec.get("self_history") or {}
+            if sh.get("verdict") == "changed" and sh.get("word_delta"):
+                history_notes[rrec["id"]] = sh
+    VDIFFS = load_version_diffs()
     state = (json.loads((DATA / "state.json").read_text(encoding="utf-8"))
              if (DATA / "state.json").exists() else {})
     # every sha still held in the corpus — used to annotate prior-capture
@@ -1356,7 +1433,7 @@ def main(generated: str = None) -> int:
     global BUILD_STAMP
     _n_ver = sum(len(e.get("versions", [])) for e in state.values())
     _n_models = sum(1 for s in registry["sources"]
-                    if s["status"] in ("published", "missing"))
+                    if s["status"] in ("published", "missing") and not s.get("retired"))
     BUILD_STAMP = (f"Build: {GENERATED} · {_n_ver} archived versions · "
                    f"{_n_models} models tracked")
 
@@ -1386,6 +1463,7 @@ def main(generated: str = None) -> int:
             prior_sha = None
             prior_text_sha = None
             prior_slug = None
+            prior_dir = None
             for ver in tstate.get("versions", []):
                 cap_dir = DATA / ver["dir"]
                 manifest_path = cap_dir / "manifest.json"
@@ -1437,6 +1515,8 @@ def main(generated: str = None) -> int:
                                 raw_src.exists(), ots_src.exists(),
                                 (prior_slug, iso_date(prior_slug))
                                 if prior_slug else None))
+                pair = (VDIFFS.get((sid, tslug, prior_dir, ver["dir"]))
+                        if prior_dir else None)
                 row = {
                     "ts": cap_slug, "kind": m["target_kind"],
                     "url": m["http"]["url"], "stored_as": m["stored_as"],
@@ -1449,6 +1529,10 @@ def main(generated: str = None) -> int:
                     "prior_sha": prior_sha,
                     "text_sha": m.get("text_sha256"),
                     "prior_text_sha": prior_text_sha,
+                    # the ledger's common-extractor verdict for previous -> this
+                    "diff_verdict": pair["verdict"] if pair else None,
+                    "diff_words": pair.get("word_delta") if pair else None,
+                    "diff_moved": pair.get("moved_words") if pair else None,
                 }
                 rows_data.append(row)
                 n_versions_total += 1
@@ -1464,17 +1548,26 @@ def main(generated: str = None) -> int:
                     "wayback": bool((m.get("wayback") or {}).get("ok")),
                     "permalink": f"{PREFIX}ledger/{sid}/v/{cap_slug}/",
                 })
-                # a genuine content change (both hashes known, different) feeds
-                # the /changes/ log and the Atom feed
-                if (row["prior_text_sha"] is not None
-                        and row["text_sha"] is not None
-                        and row["prior_text_sha"] != row["text_sha"]
-                        and is_document(row, inpage_urls)):
+                # a genuine content change feeds the /changes/ log and the Atom
+                # feed. The ledger's common-extractor verdict decides whether one
+                # exists for this pair; only a pair without a record falls back
+                # to the stored text hashes (which an extractor change can alter)
+                if pair:
+                    # a pure move (a running header on another page) changes no words
+                    changed = pair["verdict"] == "changed" and bool(pair.get("word_delta"))
+                else:
+                    changed = (row["prior_text_sha"] is not None
+                               and row["text_sha"] is not None
+                               and row["prior_text_sha"] != row["text_sha"])
+                if changed and is_document(row, inpage_urls):
                     change_entries.append({
                         "iso": iso_date(cap_slug), "ts": cap_slug,
                         "date": human_date(cap_slug),
                         "model": source["model"], "provider": source["provider"],
-                        "what": "summary content changed vs the previous capture",
+                        "what": ("summary content changed vs the previous capture"
+                                 + (f" ({pair['word_delta']} word(s) differ in the "
+                                    f"extracted text)" if pair else "")),
+                        "word_delta": pair.get("word_delta") if pair else None,
                         "link": f"{PREFIX}ledger/{sid}/v/{cap_slug}/",
                         "prior_link": (f"{PREFIX}ledger/{sid}/v/{prior_slug}/"
                                        if prior_slug else None),
@@ -1484,6 +1577,7 @@ def main(generated: str = None) -> int:
                 prior_sha = m["sha256"]
                 prior_text_sha = m.get("text_sha256")
                 prior_slug = cap_slug
+                prior_dir = ver["dir"]
 
         # pass 2: write version pages (needs sha_first for canonical-of-duplicate)
         sha_first_page = {}
@@ -1555,6 +1649,36 @@ def main(generated: str = None) -> int:
                 f"{drift_notes[sid]:.2f}). The rows below serve both — compare "
                 f"the extracted text of the two document versions to see the "
                 f"difference.</p>"))
+        elif sid in near_notes:
+            nr = near_notes[sid]
+            n_words, n_moved = int(nr.get("word_delta") or 0), int(nr.get("moved_words") or 0)
+            what = (f"differ in {n_words} word(s) of extracted text" if n_words else
+                    f"differ only in the position of {n_moved} word(s) of extracted text "
+                    f"(a block moved; no words changed)")
+            vsections.insert(0, (
+                f"<p><strong>Small difference observed:</strong> the newest live "
+                f"copy and the archived third-party copy of this summary {what} "
+                f"(similarity {float(nr['similarity']):.4f}"
+                + ("; both copies extracted with the same tool" if nr.get("same_tool") else "")
+                + "). The differing words are listed in the repository's drift "
+                "report; compare the extracted text of the two document versions "
+                "below.</p>"))
+        if sid in history_notes:
+            hn = history_notes[sid]
+            f_ts = str(hn.get("from_dir", "")).rsplit("/", 1)[-1]
+            t_ts = str(hn.get("to_dir", "")).rsplit("/", 1)[-1]
+            vsections.insert(0, (
+                f"<p><strong>Latest version differs from the previous one:</strong> "
+                f"{int(hn.get('word_delta') or 0)} word(s) of extracted text changed "
+                f"between the captures of {esc(human_date(f_ts))} and "
+                f"{esc(human_date(t_ts))}"
+                + (" (both extracted with the same tool)" if hn.get("same_tool") else "")
+                + "; both versions are archived below with their full text.</p>"))
+        if source.get("retired"):
+            vsections.insert(0, (
+                f"<p><strong>No longer tracked:</strong> {esc(str(source['retired']))}. "
+                f"The versions archived below remain, and their permalinks stay "
+                f"valid.</p>"))
         model_body, page_title = render_model_page(source, vsections, checked)
         crumb_items = [("GPAI Ledger", PREFIX),
                        (f"{source['model']} ({source['provider']})", None)]
@@ -1576,7 +1700,9 @@ def main(generated: str = None) -> int:
                                and c["provider"] == source["provider"]]
             last_change = max((c["date"] for c in content_changes), default="—")
             badge = (f"<strong class='tag tag-{esc(source['status'])}'>"
-                     f"{esc(STATUS_LABELS.get(source['status'], source['status']))}</strong>")
+                     f"{esc(STATUS_LABELS.get(source['status'], source['status']))}</strong>"
+                     + (" <span class='muted'>(no longer tracked)</span>"
+                        if source.get("retired") else ""))
             status_rows.append((
                 (source["provider"].lower(), source["model"].lower()),
                 f"<tr><td>{esc(source['provider'])}</td>"
@@ -1588,9 +1714,10 @@ def main(generated: str = None) -> int:
             other_rows.append(((source["provider"].lower(), source["model"].lower()), row))
 
     # ---- site-level pages -------------------------------------------------
-    n_published = sum(1 for s in registry["sources"] if s["status"] == "published")
-    n_missing = sum(1 for s in registry["sources"] if s["status"] == "missing")
-    providers = {s["provider"] for s in registry["sources"]
+    tracked = [s for s in registry["sources"] if not s.get("retired")]
+    n_published = sum(1 for s in tracked if s["status"] == "published")
+    n_missing = sum(1 for s in tracked if s["status"] == "missing")
+    providers = {s["provider"] for s in tracked
                  if s["status"] in ("published", "missing")}
     last_sweep = max(checked.values(), default="")[:10]
     stats = {

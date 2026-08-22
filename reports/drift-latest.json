@@ -2,28 +2,43 @@
   {
     "id": "adobe/adobe-firefly",
     "model": "Adobe Firefly",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "swiss-ai-initiative/apertus-1-5",
     "model": "Apertus v1.5",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "swiss-ai-initiative/apertus",
     "model": "Apertus",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "speakleash/bielik",
     "model": "Bielik v3 11B Instruct",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "bria-ai/bria",
     "model": "Bria 3.2",
     "verdict": "inpage-baseline",
-    "note": "in-page document with a single capture — drift detection starts from its next content change"
+    "note": "in-page document with a single capture — drift detection starts from its next content change",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "anthropic/claude-mythos-5-fable-5",
@@ -64,293 +79,366 @@
   {
     "id": "cohere/command-a-plus",
     "model": "C4AI Command A Plus",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "domyn/domyn",
     "model": "Domyn Large",
     "verdict": "capture-method-change",
-    "similarity": 0.9881,
-    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit"
+    "similarity": 0.9885,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "same_tool": true,
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
+    "self_history": {
+      "verdict": "method-changed",
+      "similarity": 0.9885,
+      "word_delta": 44,
+      "moved_words": 0,
+      "changes": [
+        {
+          "op": "delete",
+          "old": "it English Italian This website uses cookies This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy. Read more Strictly necessary Performance Targeting Functionality Accept all Decline all Show details Hide details",
+          "new": "Notes it"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+      "same_tool": true,
+      "from_dir": "captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z",
+      "to_dir": "captures/domyn__domyn/provider-live-81f159b9/20260818T170156Z"
+    }
   },
   {
     "id": "fastweb/fastwebmiia",
     "model": "FastwebMIIA",
+    "similarity": 0.6255,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
+    "self_history": {
+      "verdict": "single-version"
+    },
     "verdict": "DRIFT-CANDIDATE",
-    "similarity": 0.6243,
+    "word_delta": 1644,
+    "moved_words": 34,
     "changes": [
       {
-        "op": "insert",
-        "old": "",
-        "new": "DEL REGOLAMENTO UE 2024/1689 -"
+        "op": "moved",
+        "old": "Per maggiori",
+        "new": "Per maggiori"
       },
       {
-        "op": "replace",
-        "old": "23.03.2026",
-        "new": "30.07.2026 v3"
+        "op": "moved",
+        "old": "Common Crawl,",
+        "new": "Common Crawl"
       },
       {
-        "op": "replace",
-        "old": "pre - addestramento",
-        "new": "pre-addestramento"
+        "op": "moved",
+        "old": "all 1% del corpus di",
+        "new": "all 1% del corpus di"
       },
       {
-        "op": "replace",
-        "old": "in dicare",
-        "new": "indicare"
+        "op": "moved",
+        "old": "concessi in licenza dai titolari dei diritti o dai loro rappresentanti",
+        "new": "concessi in licenza dai titolari dei diritti o dai loro rappresentanti"
       },
       {
-        "op": "replace",
-        "old": "dati",
-        "new": "d ati"
+        "op": "moved",
+        "old": "che governano l accesso dei web crawler ai",
+        "new": "che governano l accesso dei web crawler ai"
       },
       {
-        "op": "replace",
-        "old": "INFORMAZIONI GENERALI A.",
-        "new": "1. Informazioni generali 1.1"
-      },
-      {
-        "op": "replace",
-        "old": "Ragione sociale",
-        "new": "e recapiti Nome e recapiti"
-      },
-      {
-        "op": "replace",
-        "old": "S.P.A. con sede in Milano",
-        "new": "S.p.A."
+        "op": "moved",
+        "old": "il crawling di pagine esplicitamente vietate",
+        "new": "il crawling di pagine esplicitamente vietate"
       },
       {
         "op": "insert",
-        "old": "",
-        "new": "Adriano"
+        "old": "LETT D EU AI",
+        "new": "D DEL REGOLAMENTO UE 2024/1689 -"
       },
       {
         "op": "replace",
-        "old": "societ",
-        "new": "20139 Milano Italia. Societ"
+        "old": "ACT 23.03.2026 Il presente",
+        "new": "AI ACT 30.07.2026 v3 Il"
+      },
+      {
+        "op": "replace",
+        "old": "o pubblici. INFORMAZIONI GENERALI A. Identificazione",
+        "new": "pubblici. 1. Informazioni generali 1.1 Identificazione"
+      },
+      {
+        "op": "replace",
+        "old": "fornitore Ragione sociale del",
+        "new": "fornitore e recapiti Nome e recapiti del"
+      },
+      {
+        "op": "replace",
+        "old": "Fastweb S.P.A., con sede in Milano, Piazza Olivetti, 1, società a",
+        "new": "Fastweb S.p.A., Piazza Adriano Olivetti 1, 20139 Milano, Italia. Società a"
       },
       {
         "op": "delete",
-        "old": "e",
-        "new": ""
+        "old": "unico e soggetta",
+        "new": "socio unico soggetta all"
+      },
+      {
+        "op": "replace",
+        "old": "attività di coordinamento e di direzione della società Swisscom AG di seguito, Fastweb . B. Nome e Identificatore univoco della versione del",
+        "new": "di direzione e coordinamento di Swisscom AG. Rappresentante autorizzato N/A, fornitore stabilito in UE. 1.2 Identificazione del"
+      },
+      {
+        "op": "replace",
+        "old": "modello Modelli della famiglia FastwebMIIA:",
+        "new": "modello Nome/i del modello e versione: FastwebMIIA Modello"
       },
       {
         "op": "insert",
-        "old": "",
-        "new": "direzione e"
+        "old": "Italiano d Intelligenza Artificiale",
+        "new": "Italiano di Intelligenza"
+      },
+      {
+        "op": "replace",
+        "old": "FastwebMIIA-7B-2603 C. Descrizione",
+        "new": "FastwebMIIA-7B-2603 Dipendenze del modello: N/A Data di immissione sul mercato dell Unione: 29/05/2025 FastwebMIIA -7B 23/03/2026 FastwebMIIA-7B-2603 Descrizione"
+      },
+      {
+        "op": "replace",
+        "old": "del Modello FastwebMIIA",
+        "new": "del modello FastwebMIIA"
+      },
+      {
+        "op": "replace",
+        "old": "Act. D. Base models N/A E. Rappresentante Autorizzato N/A F. Rilascio Data di rilascio 29/05/2025 23/03/2026 G. Dimensione complessiva",
+        "new": "Act. 1.3. Modalità, dimensione complessiva"
+      },
+      {
+        "op": "replace",
+        "old": "addestramento, modalità e caratteristiche Tipologia dati di training: a testuali b immagini c video d audio e altro Il modello non è multimodale, è stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a test",
+        "new": "addestramento e altre caratteristiche Modalità ☒ Testo ☐ Immagine ☐ Audio ☐ Video ☐ Altro Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di token circa 1,5 2 10¹² token . Il modello è esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramen"
       },
       {
         "op": "delete",
-        "old": "e",
-        "new": ""
+        "old": "letteratura b testi",
+        "new": "e letteratura , testi scientifici"
+      },
+      {
+        "op": "replace",
+        "old": "ed educativi c notizie, giornalismo e opinioni d documenti",
+        "new": ", pubblicazioni giornalistiche, documenti legali"
+      },
+      {
+        "op": "replace",
+        "old": "ufficiali e comunicazione sociale es. messaggi f promozione, pubblicità, recensioni di prodotti e servizi g altro a testi di narrativa e letteratura b testi scientifici ed educativi c notizie, giornalismo e opinioni d documenti legali e ufficiali f promozione, pubblicità, recensioni di prodotti e se",
+        "new": "ufficiali, informazioni promozionali, codice informatico, dati storici. Tipologia contenuti"
+      },
+      {
+        "op": "replace",
+        "old": "grafici: a fotografia b dipinti e belle arti c infografiche d illustrazione e design grafico e immagini tratte da social/personali Non presenti. J. Tipologia",
+        "new": "grafici N/A Non presenti. Tipologia contenuti"
+      },
+      {
+        "op": "replace",
+        "old": "video: a film, spettacolo b contenuti video animati c filmati di videogiochi e immersivi es. 3D d documentati Non presenti. e notizie video e giornalismo f contenuti degli utenti dei social g altri contenuti video K. Tipologia",
+        "new": "video N/A Non presenti. Tipologia contenuti"
+      },
+      {
+        "op": "replace",
+        "old": "audio: a musica b narrazione e narrativa es. audiolibri c contenuti audio educativi non di narrativa d programmi radiofonici e podcast e comunicazione sociale telefonate, messaggi vocali f altro Non",
+        "new": "audio N/A Non"
+      },
+      {
+        "op": "replace",
+        "old": "presenti. L. Tipologia contenuti speciali: a codice sorgente b dati strutturati es. calendario, mappe, etc. c altro, descrivere a codice sorgente M. Descrizione",
+        "new": "presenti Data più recente di acquisi zione/raccolta dei dati per l addestramento del modello Maggio 2025 Descrizione"
       },
       {
         "op": "delete",
-        "old": "direzione della societ",
-        "new": ""
+        "old": "linguistiche, regionali, demografiche e altre rilevanti dei",
+        "new": "caratteristiche linguistiche dei dati"
       },
       {
         "op": "replace",
-        "old": "AG di seguito Fastweb . B. Nome e Identificatore univoco della versione",
-        "new": "AG. Rappresentante autorizzato N/A fornitore stabilito in UE. 1.2 Identificazione"
+        "old": "lingua. Dal punto di vista del dominio, il dataset",
+        "new": "lingua. Altre caratteristiche rilevanti dei dati di addestramento complessivi Il dataset"
       },
       {
         "op": "replace",
-        "old": "Modelli della famiglia FastwebMIIA:",
-        "new": "Nome/i del modello e versione: FastwebMIIA"
+        "old": "di post-training. informazioni vedasi Documentazione Trasparenza AI al seguente link. FONTI DATI N. Descrizione generale Descrizione delle modalità con cui i dati sono stati ottenuti e selezionati I dati con cui viene addestrato il",
+        "new": "post-training. Ulteriori osservazioni È stata predisposta una sezione di trasparenza pubblicamente accessibile, con l obiettivo di fornire informazioni precise, chiare e in un linguaggio comprensibile su quanto realizzato per addestrare FastwebMIIA e sul suo funzionamento. Vedasi: FastwebMIIA - Prod"
       },
       {
         "op": "replace",
-        "old": "d",
-        "new": "di"
+        "old": "modello hanno provenienza molteplice. In particolare: 1 Circa l 85% del dataset è tratto da Common Crawl CC , un archivio realizzato",
+        "new": "modello ☒ Sì Modalità dei contenuti coperti ☒ Testo Elenco dei set di dati di grandi dimensioni disponibili al pubblico Common Crawl Archivio web pre -compilato, realizzato"
       },
       {
         "op": "replace",
-        "old": "C.",
-        "new": "Dipendenze del modello: N/A Data di immissione sul mercato dell Unione: 29/05/2025 FastwebMIIA -7B 23/03/2026 FastwebMIIA-7B-2603"
+        "old": "web, mantenendo la relativa fonte tracciata. secondo quanto",
+        "new": "web, che rappresenta circa l 85% del corpus di addestramento totale. Secondo quanto"
       },
       {
         "op": "replace",
-        "old": "Modello",
-        "new": "modello"
+        "old": "regole 2 Fastweb, inoltre, ha sottoscritto specifici accordi per utilizzare, a fini di addestramento del modello, i dati di alcuni soggetti terzi con cui ha concluso opportuni accordi di licenza ad esempio Mondadori, Bignami, Istat, ecc 3 Una parte minore di dati è stata individuata e acquisita in l",
+        "new": "regole. Sono state utilizzate solo porzioni del dataset, selezionate tramite filtraggio qualitativo, filtraggio linguistico e deduplica. Periodo di raccolta: marzo 2024 febbraio 2025"
       },
       {
         "op": "replace",
-        "old": "D. Base models N/A E. Rappresentante Autorizzato N/A F. Rilascio Data di rilascio 29/05/2025 23/03/2026 G. Dimensione",
-        "new": "1.3. Modalit dimensione"
-      },
-      {
-        "op": "delete",
-        "old": "modalit",
-        "new": ""
-      },
-      {
-        "op": "insert",
-        "old": "",
-        "new": "altre"
+        "old": "2019/790. U. Identificazione dei crawler, loro scopo e comportamento Tutte le fonti utilizzate sono state raccolte esclusivamente in modalità testuale. I principali Crawler utilizzati sono: 1 Common Crawl 2 Red Pajama 3 FineWeb Edu V. Spiegazione del contenuto che è stato mirato Sono state predilett",
+        "new": "2019/790 RedPajama RedPajama-Data-v2 è un dataset aperto per il pre -training di LLM, costruito a partire da 84 snapshot di Common Crawl. Contiene oltre 30 trilioni di token filtrati e deduplicati più di 100 trilioni di token grezzi in cinque lingue: inglese, francese, spagnolo, tedesco e italiano. "
       },
       {
         "op": "replace",
-        "old": "Tipologia",
-        "new": "Modalit Testo Immagine Audio Video Altro Dimensione"
+        "old": "dati degli utenti Y. Elenco dei servizi/prodotti del fornitore da cui i dati sono raccolti N/A, non vengono utilizzati dati degli utenti Z. Dati",
+        "new": "dati dei clienti di Fastweb per l addestramento del modello. informazioni , vedasi la sezione Data Journey in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 2.5 Dati"
       },
       {
         "op": "replace",
-        "old": "training:",
-        "new": "addestramento Testo - da 1 miliardo"
+        "old": "sintetici auto-generati dataset Dimensione complessiva per modalità I dati sintetici costituiscono complessivamente meno del 1% dell intero corpus. AA. Nome del modello di AI Generati tramite Phi 3.5, rilasciati sotto",
+        "new": "sintetici Sono stati creati dati sintetici generati da AI dal fornitore o per suo conto per addestrare il modello ☒ Sì Modalità dei dati sintetici: ☒ Testo Modello/i di AI per finalità generali utilizzato/i per generare i dati sintetici: Phi 3.5 Microsoft , rilasciato sotto"
       },
       {
         "op": "replace",
-        "old": "testuali b immagini c video d audio e altro",
-        "new": "10.000 miliardi di token circa 1 5 2 10 token ."
-      },
-      {
-        "op": "insert",
-        "old": "",
-        "new": "esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramente esemplificativo e"
+        "old": "MIT. BB. Dati acquisiti dal fornitore tramite altri mezzi Dimensione complessiva per modalità N/A CC. Mezzi di acquisizione N/A ASPETTI RILEVANTI IN MERITO AL TRATTAMENTO DEI DATI DD. Rispetto del diritto d autore e dei diritti connessi Misure implementate per rispettare",
+        "new": "licenza MIT Dimensione Inferiore addestramento totale. 2.6 Altre fonti di dati Sono state utilizzate fonti di dati diverse da quelle descritte nelle Sezioni 2.1 -2.5 per addestrare il modello ☒ No 3. Aspetti relativi al trattamento dei dati 3.1 Rispetto della riserva di diritti concernenti le eccezi"
       },
       {
         "op": "replace",
-        "old": "multimodale stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a",
-        "new": "esaustivo:"
-      },
-      {
-        "op": "delete",
-        "old": "b",
-        "new": ""
+        "old": "riserve di diritti dall eccezione di text e data- mining ai sensi dell Art.4 3 della Direttiva DSM durante la raccolta dei dati, incluse le specifiche dei protocolli di opt-out e delle soluzioni onorate dal fornitore Fastweb",
+        "new": "riserve dei diritti Fastweb ha"
       },
       {
         "op": "replace",
-        "old": "c notizie giornalismo e opinioni d",
-        "new": "pubblicazioni giornalistiche"
+        "old": "ha utilizzato fonti autorizzate da partnership o dati provenienti da web scraping non indiscriminato che rispettano le regole di nofollow e robots.txt . EE. Misure implementate dopo il completamento della raccolta dei dati per identificare e rimuovere i contenuti per i quali i diritti sono stati ris",
+        "new": "utilizzato esclusivamente fonti autorizzate dataset licenziati e partnership e dataset pre -compilati pubblicamente disponibili Common dall eccezione TDM, inclusi i protocolli e le soluzioni di opt-out onorati dal fornitore Crawl, RedPajama, FineWeb Edu che, secondo quanto dichiarato dai rispettivi "
       },
       {
         "op": "replace",
-        "old": "e comunicazione sociale es. messaggi f promozione pubblicit recensioni di prodotti e servizi g altro a testi di narrativa e letteratura b testi scientifici ed educativi c notizie giornalismo e opinioni d documenti legali e ufficiali f promozione pubblicit recensioni di prodotti e servizi g altri",
-        "new": "informazioni promozionali codice informatico"
+        "old": "per garantire l esercizio dell opt",
+        "new": "per consentire ai titolari dei diritti di esercitare il proprio diritto di opt"
       },
       {
         "op": "replace",
-        "old": "tra cui esempi di codici informatici testi storici e un set di dati sintetici come da sezioni X e Y. I.",
-        "new": "storici."
-      },
-      {
-        "op": "replace",
-        "old": "grafici: a fotografia b dipinti e belle arti c infografiche d illustrazione e design grafico e immagini tratte da social/personali",
-        "new": "grafici N/A"
-      },
-      {
-        "op": "delete",
-        "old": "J.",
-        "new": ""
-      },
-      {
-        "op": "delete",
-        "old": "video: a film spettacolo b contenuti",
-        "new": ""
-      },
-      {
-        "op": "replace",
-        "old": "animati c filmati di videogiochi e immersivi es. 3D d documentati",
-        "new": "N/A"
-      },
-      {
-        "op": "delete",
-        "old": "e notizie video e giornalismo f contenuti degli utenti dei social g altri contenuti video K.",
-        "new": ""
-      },
-      {
-        "op": "delete",
-        "old": "audio: a musica b narrazione e narrativa es. audiolibri c contenuti",
-        "new": ""
-      },
-      {
-        "op": "replace",
-        "old": "educativi non",
-        "new": "N/A Non presenti Data pi recente"
-      },
-      {
-        "op": "replace",
-        "old": "narrativa d programmi radiofonici e podcast e comunicazione sociale telefonate messaggi vocali f altro Non presenti. L. Tipologia contenuti speciali: a codice sorgente b",
-        "new": "acquisi zione/raccolta dei"
-      },
-      {
-        "op": "replace",
-        "old": "strutturati es. calendario mappe etc. c altro descrivere a codice sorgente M.",
-        "new": "per l addestramento del modello Maggio 2025"
+        "old": "-out. Vedasi sezione Documentazione Trasparenza AI al seguente link. FF. Descrivere i contenuti ritenuti indesiderati dal fornitore come parte dei dati di addestramento La rimozione dei",
+        "new": "-out ai sensi dell art. 4, par. 3, della Direttiva UE 2019/790. Per maggiori informazioni , vedasi la sezione Riserva dei diritti in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 3.2 Rimozione dei"
       }
     ]
   },
   {
     "id": "bria-ai/fibo",
     "model": "FIBO",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "black-forest-labs/flux-3",
     "model": "FLUX.3",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "google/gemini-3-pro",
     "model": "Gemini 3 Pro",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "google/gemma-4",
     "model": "Gemma 4",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "openai/gpt-5-2",
     "model": "GPT-5.2",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "openai/gpt-5-4-nano",
     "model": "GPT-5.4 Nano",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "openai/gpt-5-5",
     "model": "GPT-5.5",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "openai/gpt-5-6-luna",
     "model": "GPT-5.6 Luna",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "openai/gpt-image-2",
     "model": "GPT Image 2",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "xai/grok-4-5",
     "model": "Grok 4.5",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "xai/grok-voice-think-fast-2",
     "model": "Grok Voice Think Fast 2.0",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "thinking-machines/inkling-small",
     "model": "Inkling Small",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "thinking-machines/inkling",
     "model": "Inkling",
-    "verdict": "same-content",
-    "similarity": 1.0
+    "similarity": 1.0,
+    "compared_via": "stored extracts",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "verdict": "same-content"
   },
   {
     "id": "microsoft/mai-code-1-flash",
     "model": "MAI-Code-1-Flash",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "microsoft/mai-cyber-1-flash",
@@ -361,490 +449,423 @@
   {
     "id": "microsoft/mai-image-2",
     "model": "MAI-Image-2",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "microsoft/mai-image-2-5",
     "model": "MAI-Image-2.5",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "minimax/minimax-m3",
     "model": "Minimax M3",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "mistral-ai/ministral-3-14b",
     "model": "Ministral 3 14B",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "mistral-ai/ministral-3-3b",
     "model": "Ministral 3 3B",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "mistral-ai/ministral-3-8b",
     "model": "Ministral 3 8B",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "mistral-ai/mistral-large-3",
     "model": "Mistral Large 3",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "mistral-ai/mistral-small-4",
     "model": "Mistral Small 4",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "meta/muse-glimmer",
     "model": "Muse Glimmer",
-    "verdict": "DRIFT-CANDIDATE",
-    "similarity": 0.9943,
+    "similarity": 0.9968,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
+    "self_history": {
+      "verdict": "changed",
+      "similarity": 0.9968,
+      "word_delta": 12,
+      "moved_words": 2,
+      "changes": [
+        {
+          "op": "moved",
+          "old": "Transparency Report",
+          "new": "Transparency Report"
+        },
+        {
+          "op": "replace",
+          "old": "number: V1Last Update: August 10, 20261.",
+          "new": "number: V1.1Last Update: August 21, 20261. General"
+        },
+        {
+          "op": "insert",
+          "old": "Limited MPIL Authorized representative",
+          "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+        },
+        {
+          "op": "replace",
+          "old": "s and purposes of",
+          "new": "s :Purposes of"
+        },
+        {
+          "op": "replace",
+          "old": "training datasets.3.2 Other",
+          "new": "training datasets.3.3 Other"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+      "same_tool": true,
+      "from_dir": "captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z",
+      "to_dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
+    },
+    "verdict": "near-identical",
+    "word_delta": 12,
+    "moved_words": 2,
     "changes": [
       {
-        "op": "replace",
-        "old": "V1Last",
-        "new": "V1.1Last"
-      },
-      {
-        "op": "replace",
-        "old": "10",
-        "new": "21"
-      },
-      {
-        "op": "replace",
-        "old": "Authorized",
-        "new": "Merrion Road Dublin 4 D04 X2K5 IrelandAuthorized"
-      },
-      {
-        "op": "replace",
-        "old": "training: Up",
-        "new": "training:Up"
-      },
-      {
-        "op": "replace",
-        "old": "data: N/A Additional",
-        "new": "data:N/AAdditional"
-      },
-      {
-        "op": "replace",
-        "old": "datasets:Training",
-        "new": "datasets: Training"
-      },
-      {
-        "op": "replace",
-        "old": "Center. General",
-        "new": "Center.General"
-      },
-      {
-        "op": "replace",
-        "old": "Yes If",
-        "new": "YesIf"
-      },
-      {
-        "op": "replace",
-        "old": "and purposes",
-        "new": ":Purposes"
-      },
-      {
-        "op": "replace",
-        "old": ":It",
-        "new": "It"
-      },
-      {
-        "op": "delete",
+        "op": "moved",
         "old": "Transparency Report",
-        "new": ""
+        "new": "Transparency Report"
       },
       {
         "op": "replace",
-        "old": "domainnames crawled: See",
-        "new": "domain names crawled:See"
+        "old": "number: V1Last Update: August 10, 20261.",
+        "new": "number: V1.1Last Update: August 21, 20261. General"
+      },
+      {
+        "op": "insert",
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
       },
       {
         "op": "replace",
-        "old": "crawlers.Additional",
-        "new": "crawlers. Transparency Report Additional"
+        "old": "s and purposes of",
+        "new": "s :Purposes of"
       },
       {
         "op": "replace",
-        "old": "covered:",
-        "new": "covered"
-      },
-      {
-        "op": "replace",
-        "old": "data:N/AAdditional",
-        "new": "dataN/AAdditional"
-      },
-      {
-        "op": "replace",
-        "old": "datasets.3.2",
-        "new": "datasets.3.3"
+        "old": "training datasets.3.2 Other",
+        "new": "training datasets.3.3 Other"
       }
     ]
   },
   {
     "id": "meta/muse-image",
     "model": "Muse Image",
+    "similarity": 0.9936,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
+    "self_history": {
+      "verdict": "changed",
+      "similarity": 0.9936,
+      "word_delta": 17,
+      "moved_words": 5,
+      "changes": [
+        {
+          "op": "moved",
+          "old": "Public Summary of Training Content",
+          "new": "Public Summary of Training Content"
+        },
+        {
+          "op": "replace",
+          "old": "number: V1Last Update: 7/6/20261. General",
+          "new": "number: V1.1 Last Update: 8/21/2026 1."
+        },
+        {
+          "op": "insert",
+          "old": "Limited MPIL Authorized representative",
+          "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, Ireland Authorized"
+        },
+        {
+          "op": "replace",
+          "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+          "new": "details: N/A 1.2."
+        },
+        {
+          "op": "replace",
+          "old": "Union market:7/7/261.3. Modalities,",
+          "new": "Union market:July 7, 2026 1.3."
+        },
+        {
+          "op": "replace",
+          "old": "s :Purposes of",
+          "new": "s and purposes of"
+        },
+        {
+          "op": "replace",
+          "old": "training datasets.3.2 Other",
+          "new": "datasets. 3.3 Other"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+      "same_tool": true,
+      "from_dir": "captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z",
+      "to_dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z"
+    },
     "verdict": "DRIFT-CANDIDATE",
-    "similarity": 0.9897,
+    "word_delta": 17,
+    "moved_words": 5,
     "changes": [
       {
-        "op": "replace",
-        "old": "ContentVersion",
-        "new": "Content Version"
+        "op": "moved",
+        "old": "Public Summary of Training Content",
+        "new": "Public Summary of Training Content"
       },
       {
         "op": "replace",
-        "old": "V1Last",
-        "new": "V1.1 Last"
-      },
-      {
-        "op": "replace",
-        "old": "7/6/20261.",
-        "new": "8/21/2026 1."
+        "old": "number: V1Last Update: 7/6/20261. General",
+        "new": "number: V1.1 Last Update: 8/21/2026 1."
       },
       {
         "op": "insert",
-        "old": "",
-        "new": "Merrion Road Dublin 4 D04 X2K5 Ireland"
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, Ireland Authorized"
       },
       {
         "op": "replace",
-        "old": "Support Contact: https://ai.meta.com/help1.2.",
-        "new": "N/A 1.2."
+        "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+        "new": "details: N/A 1.2."
       },
       {
         "op": "replace",
-        "old": "market:7/7/261.3.",
-        "new": "market:July 7 2026 1.3."
+        "old": "Union market:7/7/261.3. Modalities,",
+        "new": "Union market:July 7, 2026 1.3."
       },
       {
         "op": "replace",
-        "old": "N/A1.3.1",
-        "new": "N/A 1.3.1"
+        "old": "s :Purposes of",
+        "new": "s and purposes of"
       },
       {
         "op": "replace",
-        "old": "CharacteristicsLatest",
-        "new": "Characteristics Latest"
-      },
-      {
-        "op": "replace",
-        "old": "training: Knowledge",
-        "new": "training:Knowledge"
-      },
-      {
-        "op": "replace",
-        "old": "2026Description",
-        "new": "2026 Description"
-      },
-      {
-        "op": "replace",
-        "old": "languages.Other",
-        "new": "languages. Other"
-      },
-      {
-        "op": "replace",
-        "old": "data: N/AAdditional",
-        "new": "data:N/A Additional"
-      },
-      {
-        "op": "replace",
-        "old": "https://transparency.meta.com/features/ai-at-meta-training-data/2.",
-        "new": "https://transparency.meta.com/features/ai-at-meta-training-data/ 2."
-      },
-      {
-        "op": "replace",
-        "old": "YesIf",
-        "new": "Yes If"
-      },
-      {
-        "op": "replace",
-        "old": "N/A2.2.",
-        "new": "N/A 2.2."
-      },
-      {
-        "op": "replace",
-        "old": "parties2.2.1.",
-        "new": "parties 2.2.1."
-      },
-      {
-        "op": "replace",
-        "old": "representativesHave",
-        "new": "representatives Have"
-      },
-      {
-        "op": "replace",
-        "old": "YesIf",
-        "new": "Yes If"
-      },
-      {
-        "op": "replace",
-        "old": "partiesHave",
-        "new": "parties Have"
-      },
-      {
-        "op": "replace",
-        "old": "YesIf",
-        "new": "Yes Public Summary of Training Content If"
-      },
-      {
-        "op": "replace",
-        "old": "personnel.Additional",
-        "new": "personnel. Additional"
-      },
-      {
-        "op": "replace",
-        "old": "N/A2.3.",
-        "new": "N/A 2.3."
-      },
-      {
-        "op": "delete",
-        "old": "Public Summary of Training Content",
-        "new": ""
-      },
-      {
-        "op": "replace",
-        "old": "YesIf",
-        "new": "Yes If"
-      },
-      {
-        "op": "replace",
-        "old": ":Purposes",
-        "new": "and purposes"
-      },
-      {
-        "op": "replace",
-        "old": "It",
-        "new": ":It"
-      },
-      {
-        "op": "replace",
-        "old": "crawlerbehaviour:",
-        "new": "crawler behaviour:"
-      },
-      {
-        "op": "replace",
-        "old": "practices.Period",
-        "new": "practices. Period"
-      },
-      {
-        "op": "replace",
-        "old": "2026Comprehensive",
-        "new": "2026 Comprehensive"
-      },
-      {
-        "op": "replace",
-        "old": "crawlers.Type",
-        "new": "crawlers. Type"
-      },
-      {
-        "op": "replace",
-        "old": "domainnames crawled: See",
-        "new": "domain names crawled:See"
-      },
-      {
-        "op": "replace",
-        "old": "crawlers.Additional",
-        "new": "crawlers. Additional"
-      },
-      {
-        "op": "replace",
-        "old": "N/A2.4.",
-        "new": "N/A 2.4."
-      },
-      {
-        "op": "replace",
-        "old": "dataWas",
-        "new": "data Was"
-      },
-      {
-        "op": "replace",
-        "old": "YesWas",
-        "new": "Yes Was"
-      },
-      {
-        "op": "replace",
-        "old": "YesIf",
-        "new": "Yes If"
-      },
-      {
-        "op": "replace",
-        "old": "data:Data",
-        "new": "data: Data"
-      },
-      {
-        "op": "replace",
-        "old": "Instagram.Type",
-        "new": "Instagram. Type"
-      },
-      {
-        "op": "replace",
-        "old": "covered",
-        "new": "covered:"
-      },
-      {
-        "op": "replace",
-        "old": "N/A2.5.",
-        "new": "N/A 2.5."
+        "old": "training datasets.3.2 Other",
+        "new": "datasets. 3.3 Other"
       }
     ]
   },
   {
     "id": "meta/muse-spark",
     "model": "Muse Spark",
+    "similarity": 0.9871,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
+    "self_history": {
+      "verdict": "changed",
+      "similarity": 0.9944,
+      "word_delta": 15,
+      "moved_words": 5,
+      "changes": [
+        {
+          "op": "moved",
+          "old": "Public Summary of Training Content",
+          "new": "Public Summary of Training Content"
+        },
+        {
+          "op": "insert",
+          "old": "number: V3 Last Update:",
+          "new": "number: V3.1Last Update:"
+        },
+        {
+          "op": "replace",
+          "old": "August 4, 20261.",
+          "new": "August 21, 20261."
+        },
+        {
+          "op": "insert",
+          "old": "Limited MPIL Authorized representative",
+          "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+        },
+        {
+          "op": "replace",
+          "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+          "new": "details: N/A1.2. Model"
+        },
+        {
+          "op": "replace",
+          "old": "s :Purposes of",
+          "new": "s and purposes of"
+        },
+        {
+          "op": "replace",
+          "old": "training datasets.3.2 Other",
+          "new": "training datasets.3.3 Other"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+      "same_tool": true,
+      "from_dir": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z",
+      "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
+    },
     "verdict": "DRIFT-CANDIDATE",
-    "similarity": 0.9833,
+    "word_delta": 35,
+    "moved_words": 5,
     "changes": [
       {
-        "op": "replace",
-        "old": "Content Version",
-        "new": "ContentVersion"
-      },
-      {
-        "op": "replace",
-        "old": "V2 Last",
-        "new": "V3.1Last"
-      },
-      {
-        "op": "replace",
-        "old": "7/8/261.",
-        "new": "August 21 20261."
-      },
-      {
-        "op": "replace",
-        "old": "Authorized",
-        "new": "Merrion Road Dublin 4 D04 X2K5 IrelandAuthorized"
-      },
-      {
-        "op": "replace",
-        "old": "Support Contact: https://ai.meta.com/help1.2.",
-        "new": "N/A1.2."
-      },
-      {
-        "op": "replace",
-        "old": "N/A Date",
-        "new": "N/ADate"
-      },
-      {
-        "op": "replace",
-        "old": "market:4/8/261.3.",
-        "new": "market:April 8 20261.3."
-      },
-      {
-        "op": "replace",
-        "old": "training: Up",
-        "new": "training:Up"
-      },
-      {
-        "op": "replace",
-        "old": "June",
-        "new": "July"
-      },
-      {
-        "op": "replace",
-        "old": "data: N/AAdditional",
-        "new": "data:N/A Additional"
-      },
-      {
-        "op": "replace",
-        "old": "multi-lingual",
-        "new": "multilingual"
-      },
-      {
-        "op": "replace",
-        "old": "partiesYesHave",
-        "new": "partiesHave"
-      },
-      {
-        "op": "replace",
-        "old": "not licensed",
-        "new": "notlicensed"
-      },
-      {
-        "op": "replace",
-        "old": "from providers",
-        "new": "fromproviders"
-      },
-      {
-        "op": "insert",
-        "old": "",
-        "new": "YesIf yes specify the modality ies of the content covered by the datasetsconcerned:"
-      },
-      {
-        "op": "replace",
-        "old": ":Purposes",
-        "new": "and purposes"
-      },
-      {
-        "op": "replace",
-        "old": "It",
-        "new": ":It"
-      },
-      {
-        "op": "replace",
-        "old": "crawlerbehaviour: Meta",
-        "new": "crawler behaviour:Meta"
-      },
-      {
-        "op": "replace",
-        "old": "June 2026 Public Summary of Training Content Comprehensive",
-        "new": "July 2026Comprehensive"
-      },
-      {
-        "op": "insert",
-        "old": "",
+        "op": "moved",
+        "old": "Public Summary of Training Content",
         "new": "Public Summary of Training Content"
       },
       {
         "op": "replace",
-        "old": "domainnames crawled: See",
-        "new": "domain names crawled:See"
+        "old": "number: V2 Last Update: 7/8/261. General",
+        "new": "number: V3.1Last Update: August 21, 20261. General"
+      },
+      {
+        "op": "insert",
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
       },
       {
         "op": "replace",
-        "old": "covered",
-        "new": "covered:"
+        "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+        "new": "details: N/A1.2. Model"
       },
       {
         "op": "replace",
-        "old": "dataN/AAdditional",
-        "new": "data:N/AAdditional"
+        "old": "Union market:4/8/261.3. Modalities,",
+        "new": "Union market:April 8, 20261.3. Modalities,"
       },
       {
         "op": "replace",
-        "old": "datasets.3.2",
-        "new": "datasets.3.3"
+        "old": "to June 2026Description",
+        "new": "to July 2026Description"
+      },
+      {
+        "op": "delete",
+        "old": "third partiesYesHave you",
+        "new": "third partiesHave you"
+      },
+      {
+        "op": "insert",
+        "old": "data intermediaries Text Image",
+        "new": "intermediaries YesIf yes, specify the modality ies of the content covered by the datasetsconcerned: Text"
+      },
+      {
+        "op": "replace",
+        "old": "s :Purposes of",
+        "new": "s and purposes of"
+      },
+      {
+        "op": "replace",
+        "old": "to June 2026",
+        "new": "to July 2026Comprehensive"
+      },
+      {
+        "op": "replace",
+        "old": "training datasets.3.2 Other",
+        "new": "training datasets.3.3 Other"
       }
     ]
   },
   {
     "id": "amazon/nova-2-lite",
     "model": "Nova 2 Lite",
-    "verdict": "same-content",
-    "similarity": 1.0
+    "similarity": 1.0,
+    "compared_via": "stored extracts",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "verdict": "same-content"
   },
   {
     "id": "microsoft/phi-4",
     "model": "Phi-4",
-    "verdict": "same-content",
-    "similarity": 0.9996
+    "similarity": 0.9996,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "applicable 1 1.3.1.G",
+        "new": "Not applicable 1.3.1.G Video"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.3 Personal",
+        "new": "limitations 2.3 Personal"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
   },
   {
     "id": "ministry-of-digital-affairs-of-poland/pllum",
     "model": "PLLuM 2512 Base",
-    "verdict": "identical-bytes"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "capture-method-change",
-    "similarity": 0.0528,
-    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit"
+    "similarity": 0.0522,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "same_tool": true,
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
+    "self_history": {
+      "verdict": "method-changed",
+      "similarity": 0.0522,
+      "word_delta": 1114,
+      "moved_words": 0,
+      "changes": [
+        {
+          "op": "insert",
+          "old": "repository... Refreshing",
+          "new": "Refreshing SmolLM3-3B EU Data Transparency SmolLM3-3B Public Summary of Training Content Summary v1.0 - Last updated: 25/07/2025 This Space contains the transparency report for the SmolLM3-3B GPAI model developed by Hugging Face following the guidelines provided by the AI Office. It may serve as an "
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+      "same_tool": true,
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260811T105844Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z"
+    }
   },
   {
     "id": "microsoft/mai-thinking-1",

@@ -44,15 +44,56 @@ page), or any party disputes a capture:
 
 ## Drift events (a provider changed a summary)
 
-`analyze_drift.py` runs in the daily sweep; a `DRIFT-CANDIDATE` verdict in
-`reports/drift-latest.md` means comparable captures differ below the 0.995
-similarity threshold.
+`analyze_drift.py` runs in the daily sweep and maintains two things:
 
-1. Confirm the diff from the stored `extracted.txt` pair, sha-pinned (never
-   compare by path order).
+- **`reports/version-diffs.json`** — a durable ledger with one record per
+  consecutive version pair of every target (`source::target::from_dir>to_dir`):
+  `identical-text` (bytes changed, the extracted text did not — re-serialisation),
+  `changed` (with `word_delta`, `similarity` and the word-level opcodes in
+  `changes`), `method-changed` (the text differs but the two captures were made
+  with different capture methods — rendering, frames or consent handling — so
+  the difference is not evidence of a content change) or `no-text`. Stored
+  extracts are compared first; when they differ,
+  BOTH captures are re-extracted from their stored bytes with the current
+  extractor before the verdict is given, so a change of extractor version can
+  never read as a provider edit (`compared_via` names the tool used on each
+  side — pypdf for PDF/ZIP, beautifulsoup4 for HTML, a plain decode for
+  markdown/text — and `same_tool` says whether it was one tool on both sides).
+  When a side cannot be re-extracted (bytes missing, extractor failure or
+  deadline) the stored extracts decide and the verdict is `changed-unverified`:
+  a candidate that the site reports as "not verified as a content change" and
+  never publishes as one. Identity is case-sensitive on Unicode word
+  characters, keeps tick/cross glyphs (the template's boxes) and digit
+  separators (1.5 and 1,5 are not 15), and ignores spacing, hyphenation and
+  other punctuation; a block of whole words that only moved — four or more
+  words anywhere, or a shorter block of two or more that is the entire deleted
+  or inserted run (a running header on another page) — is counted under
+  `moved_words`, not `word_delta`; a transposition inside a word is an edit,
+  and a phrase two rewritten paragraphs happen to share counts as changed. Each record names
+  the rule version it was computed under; if the rule changes, the record is
+  recomputed and the earlier verdict kept under `prior_verdicts`. The site
+  takes every "content changed" row note and every `/changes/` (Atom) entry
+  from this ledger, falling back to the stored text hashes (or, for documents
+  without text, the byte hashes) only for a pair that has no record yet.
+- **`reports/drift-latest.md` / `.json`** — the live-vs-archive view per
+  published source, overwritten each run: `identical-bytes`; `same-content`
+  (extracted text identical under the same treatment); `near-identical`
+  (similarity ≥ 0.995 but the text differs — `word_delta` and the opcodes are
+  listed: a one-word edit in a long document lands here, never under
+  `same-content`); `DRIFT-CANDIDATE` (similarity < 0.995); and the structural
+  verdicts `capture-method-change`, `bundle-covered`, `inpage-baseline`,
+  `format-mismatch`, `incomplete`. Every row that has a document capture also
+  carries `self_history`: the newest version's ledger verdict against its own
+  previous version.
+
+Procedure:
+
+1. `near-identical`, `DRIFT-CANDIDATE`, `self_history: changed` and
+   `changed-unverified` are candidates, never conclusions. Read the opcodes (`changes`) and confirm from
+   the two `extracted.txt` files, sha-pinned (never compare by path order).
 2. Classify: substantive disclosure change vs layout/date churn. Single-word
-   changes can be substantive (the Muse Spark June→July date extension) — read
-   the actual opcodes, do not filter by length.
+   changes can be substantive (the Muse Spark June→July date extension) — the
+   ledger surfaces them; do not filter by length.
 3. If substantive: write a dated report under `reports/`, quoting old/new with
    both capture ids and hashes.
 4. Never overwrite a verdict: corrections to an earlier report are appended as
@@ -145,3 +186,47 @@ Both run inside the daily sweep and need no operator action:
   `retry_wayback.py --verify` re-checks recorded snapshots and demotes dead
   ones so they re-enter the retry queue. Run `--verify` manually about once a
   month — Save Page Now acceptance does not guarantee durable indexing.
+
+## Registry refresh red (a tracked source id would disappear)
+
+`build_registry.py` rebuilds `crawler/sources.json` from AIAL's eval metadata
+every sweep and **fails closed** if the rebuilt registry would drop a source id
+the committed registry tracks (an upstream rename or removal): the step fails,
+the committed registry stays in force, the sweep and the deploy proceed
+normally, and the run is red until the change is handled. The failure message
+names the missing ids.
+
+1. Find the cause in the AIAL repo (`evals/*.yaml`): renamed file, changed
+   `organization` string, or removed model.
+2. A rename or re-labelling: map it explicitly (`MODEL_NAME_OVERRIDES` /
+   the id derivation) so the existing id — and its permalinks — survive.
+3. A genuine removal: add the id to `RETIRED_SOURCE_IDS` (id → dated reason).
+   The refresh then carries the source's last committed entry forward flagged
+   `retired`, the sweep stops fetching it, and the site keeps its pages and
+   permalinks with a "no longer tracked" note and drops it from the tracked
+   count — never unpublished.
+4. Never let a stale "per AIAL's assessment" attribution stand: that is the
+   reason the refresh fails closed instead of carrying the source forward.
+
+## Dependency refresh
+
+Direct dependencies are pinned in `crawler/requirements.txt`; every transitive
+package is pinned in `crawler/constraints.txt`; the test and lint tools (pytest,
+ruff) are pinned in the workflow install lines. All three workflows install with
+`-r crawler/requirements.txt -c crawler/constraints.txt`, so a run never
+resolves anything to "latest". Refresh deliberately — quarterly, or when an
+advisory names a pinned package:
+
+1. In a fresh scratch venv (never the operator's base environment):
+   `pip install -r crawler/requirements.txt` with the intended bumps, then
+   `pip check`.
+2. Run the full test suite there, then re-extract every archived PDF with the
+   new extractor and compare canonical text against the stored extracts (the
+   22 Aug 2026 pypdf 5→6 trial: 35/85 differed slightly, none under the 0.995
+   drift threshold; the AES-encrypted Adobe PDFs need `cryptography`).
+3. Write the resolved set into `constraints.txt` (`pip freeze` minus the direct
+   dependencies), commit both files, and watch the next sweep.
+4. Do not bump Playwright, beautifulsoup4 or pyyaml casually: a rendering or
+   HTML-extraction change mints noise versions across every rendered target.
+5. No Dependabot: its merged PRs would add `dependabot[bot]` to the public
+   contributor list, which must stay exactly `gpailedger` + `github-actions[bot]`.
