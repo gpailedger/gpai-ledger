@@ -229,6 +229,32 @@ def test_verify_has_action_pin_self_check_step():
     assert "exit 1" in steps[0]["run"]
 
 
+# --- dependency lock ---
+
+@pytest.mark.parametrize("name", NAMES)
+def test_every_requirements_install_uses_the_constraints_lock(name):
+    installs = [s["run"] for s in all_steps(doc(name))
+                if "pip install" in s.get("run", "") and "crawler/requirements.txt" in s["run"]]
+    assert installs, f"{name}: no requirements install step"
+    for run in installs:
+        assert "-c crawler/constraints.txt" in run, f"{name}: unconstrained install"
+
+
+def test_constraints_lock_is_pinned_and_disjoint_from_requirements():
+    pin = re.compile(r"^([A-Za-z0-9_.-]+)==[0-9][^\s]*$")
+
+    def names(path):
+        out = set()
+        for ln in (ROOT / "crawler" / path).read_text(encoding="utf-8").splitlines():
+            if ln.strip() and not ln.startswith("#"):
+                m = pin.match(ln.strip())
+                assert m, f"{path}: unpinned line {ln!r}"
+                out.add(m.group(1).lower().replace("_", "-"))
+        return out
+    req, con = names("requirements.txt"), names("constraints.txt")
+    assert req and con and not (req & con)
+
+
 # --- cross-file: every scripted entrypoint exists ---
 
 def test_every_python_entrypoint_in_workflows_exists_on_disk():

@@ -31,7 +31,7 @@ jobs:
           cache-dependency-path: crawler/requirements.txt
 
       - name: Install dependencies
-        run: pip install -r crawler/requirements.txt pytest==9.1.1 ruff==0.14.14
+        run: pip install -r crawler/requirements.txt -c crawler/constraints.txt pytest==9.1.1 ruff==0.14.14
 
       - name: Unit tests
         run: python -m pytest tests/ -q

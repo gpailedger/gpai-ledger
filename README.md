@@ -33,7 +33,7 @@ See `reports/` for findings.
 ## Running (Linux/macOS/Windows, Python 3.12)
 
 ```
-pip install -r crawler/requirements.txt
+pip install -r crawler/requirements.txt -c crawler/constraints.txt   # direct + transitive pins
 python -m playwright install --with-deps chromium   # --with-deps needed on Linux
 
 # optional: refresh the registry from AIAL metadata (sources.json is committed,

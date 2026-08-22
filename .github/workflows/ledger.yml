@@ -30,7 +30,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install -r crawler/requirements.txt pytest==9.1.1
+        run: pip install -r crawler/requirements.txt -c crawler/constraints.txt pytest==9.1.1
 
       - name: Cache Playwright browser
         id: pw-cache

@@ -26,7 +26,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install -r crawler/requirements.txt
+        run: pip install -r crawler/requirements.txt -c crawler/constraints.txt
 
       - name: Tier-0 discovery (HF org releases feed)
         run: python crawler/org_watch.py
