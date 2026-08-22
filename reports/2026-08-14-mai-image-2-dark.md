@@ -75,3 +75,5 @@ The URL remains under daily watch. Post-restoration sweeps (15 and 17 Aug) repor
 new event on the same record.
 
 *Correction (20 Aug 2026):* an earlier revision described this document as absent from AIAL's tracker and asserted a Microsoft rename; AIAL does evaluate MAI Cyber 1 Flash, and no rename is evidenced. The context paragraph above was restated as observables only.
+
+*Addendum (22 Aug 2026):* the first scheduled autonomous sweep observed HTTP 404 for the same URL at 07:24 UTC from a GitHub-hosted runner; a residential-IP check at ~07:45 UTC returned 200 with the known bytes. Whether this was a brief second outage or a CDN-edge inconsistency cannot be distinguished from two observations; the daily event log continues to record each check.

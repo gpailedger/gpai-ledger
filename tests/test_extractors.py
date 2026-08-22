@@ -15,11 +15,13 @@ mh = load_module(str(ROOT / "crawler" / "meta_hub.py"), "meta_hub_mod")
 dt = load_module(str(ROOT / "crawler" / "derived_targets.py"), "derived_targets_mod")
 
 SPARK_SIGNED = "https://scontent.xx.fbcdn.net/v/muse-spark.pdf?sig=AAA"
-# the stable identity is the content-addressed PATH only: fbcdn hostnames are
-# rotating CDN shards, so the host must never be part of the key
-SPARK_STABLE = "/v/muse-spark.pdf"
+# the stable identity is the hub EDITION label: Meta content-addresses every
+# upload, so both the fbcdn hostname (rotating shard) and the path (new per
+# re-issue) change while the document stays the same logical edition
+SPARK_STABLE = "meta-hub:2026 - Muse Spark"
+SPARK_PATH = "/v/muse-spark.pdf"
 GLIMMER_SIGNED = "https://scontent.xx.fbcdn.net/v/muse-glimmer.pdf?sig=BBB"
-GLIMMER_STABLE = "/v/muse-glimmer.pdf"
+GLIMMER_STABLE = "meta-hub:2026 - Muse Glimmer"
 
 # edition objects exactly as they sit in the hub's JSON payload: \/ escapes in
 # URLs, key order varying per object, dash as the literal – escape sequence
@@ -131,7 +133,7 @@ def test_meta_main_derives_source_id_and_model_from_period(tmp_path, monkeypatch
     m = json.loads(mans[0].read_text(encoding="utf-8"))
     assert m["source_id"] == "meta/muse-spark"
     assert m["provider"] == "Meta" and m["model"] == "Muse Spark"
-    assert {"stable_base": SPARK_STABLE,
+    assert {"stable_base": SPARK_PATH, "edition_key": SPARK_STABLE,
             "hub_period": "2026 - Muse Spark"} in m["extraction_notes"]
 
 

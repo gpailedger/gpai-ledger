@@ -1460,44 +1460,12 @@
     "last_capture": "captures/meta__muse-image/provider-live-30ef0986/20260820T110739Z",
     "retired": "duplicate target identity minted 20 Aug 2026 when Meta's CDN shard hostname rotated; bytes identical to the canonical target, which now tracks the content-addressed path only"
   },
-  "meta/muse-glimmer::provider-live-2ed49dd7": {
+  "meta/muse-glimmer::provider-live-7d5a5ed8": {
     "versions": [
       {
         "sha256": "5f29be94fba3e80df8125748f3748a2dc4083aa04ca12c718fe5366fc34486b4",
         "dir": "captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z"
-      }
-    ],
-    "last_sha256": "5f29be94fba3e80df8125748f3748a2dc4083aa04ca12c718fe5366fc34486b4",
-    "last_text_sha256": "14b3530481d8d791fb3331f25bbd2826e009531fc158d00cd231d2409d73f9ac",
-    "last_capture": "captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z",
-    "managed": "meta_hub"
-  },
-  "meta/muse-image::provider-live-5589fd23": {
-    "versions": [
-      {
-        "sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
-        "dir": "captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z"
-      }
-    ],
-    "last_sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
-    "last_text_sha256": "887ffc19fc0e6cc1bf74980553dbadf23b72fe890d99d56a27c191738abc2f42",
-    "last_capture": "captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z",
-    "managed": "meta_hub"
-  },
-  "meta/muse-spark::provider-live-3e5c0029": {
-    "versions": [
-      {
-        "sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
-        "dir": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z"
-      }
-    ],
-    "last_sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
-    "last_text_sha256": "062b4de103f62795093b0607e15a8aff800421d4b21ab51c86911ad77f4ae2ea",
-    "last_capture": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z",
-    "managed": "meta_hub"
-  },
-  "meta/muse-glimmer::provider-live-4d91704b": {
-    "versions": [
+      },
       {
         "sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
         "dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
@@ -1505,11 +1473,15 @@
     ],
     "last_sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
     "last_text_sha256": "055485ff5ef01e616873911247a41b73a773243b7b37f0706cfdfbb0e541c2e0",
-    "managed": "meta_hub",
-    "last_capture": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
+    "last_capture": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z",
+    "managed": "meta_hub"
   },
-  "meta/muse-image::provider-live-a63bf5b9": {
+  "meta/muse-image::provider-live-e520ba83": {
     "versions": [
+      {
+        "sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
+        "dir": "captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z"
+      },
       {
         "sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
         "dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z"
@@ -1517,11 +1489,15 @@
     ],
     "last_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
     "last_text_sha256": "9f178c4405ce249109a9cedf6045d6eaf42814ed95207f5c33766767f63f413a",
-    "managed": "meta_hub",
-    "last_capture": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z"
+    "last_capture": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z",
+    "managed": "meta_hub"
   },
-  "meta/muse-spark::provider-live-10891b9c": {
+  "meta/muse-spark::provider-live-df0a7357": {
     "versions": [
+      {
+        "sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+        "dir": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z"
+      },
       {
         "sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
         "dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
@@ -1529,7 +1505,7 @@
     ],
     "last_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
     "last_text_sha256": "18d4606aa93affa23918fddef57f4867ce7dbcc73ee5065322370ab28af4e883",
-    "managed": "meta_hub",
-    "last_capture": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
+    "last_capture": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
+    "managed": "meta_hub"
   }
 }

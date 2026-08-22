@@ -3,8 +3,9 @@
 Meta serves Art. 53(1)(d) summaries through signed, expiring CDN URLs embedded in
 the hub page's JSON payload (no stable document URLs exist). This module renders the
 hub, isolates the "EU AI Act Transparency Reports" series, and captures each edition
-keyed on the STABLE part of its CDN path (content-addressed by Meta), so rotating
-signatures don't mint versions but content changes do.
+keyed on its hub EDITION label (Meta content-addresses every upload, so the CDN
+path rotates per re-issue), so signatures and re-uploads never mint versions but
+text changes do.
 
 Run after the main sweep: python crawler/meta_hub.py
 """
@@ -53,12 +54,15 @@ def main() -> int:
     print(f"{SERIES}: {len(editions)} editions on hub")
     changed = errors = 0
     for ed in editions:
-        # stable identity = the content-addressed PATH only: the fbcdn hostname
-        # is a rotating CDN shard (scontent-mxp2-1 vs -mxp1-1 for identical
-        # bytes), so including it would mint a fresh target per shard rotation
+        # stable identity = the hub EDITION ("2026 - Muse Spark"), not the CDN
+        # path: Meta content-addresses every upload, so the path rotates on
+        # each re-issue (21 Aug 2026: all three editions re-uploaded as V1.1/
+        # V3.1 at new paths). Keying on the edition keeps one version chain
+        # per document; the current path is recorded in the manifest notes.
         from urllib.parse import urlsplit
-        stable = urlsplit(ed["url"]).path
+        path = urlsplit(ed["url"]).path
         model = re.sub(r"^\d{4}\s*-\s*", "", ed["period"])          # "2026 - Muse Spark" -> "Muse Spark"
+        stable = f"meta-hub:{ed['period']}"
         source_id = f"meta/{slug(model)}"
         if source_id not in registry_ids:
             # capture anyway (evidence first), but surface loudly: a source id the
@@ -83,14 +87,13 @@ def main() -> int:
                         outcome="unchanged", sha256=sha, via="meta-hub")
             print(f"  unchanged {ed['period']} ({sha[:12]})")
             continue
-        ext = cap.guess_ext(meta["content_type"], stable, raw)
+        ext = cap.guess_ext(meta["content_type"], path, raw)
         text, notes = cap.extract_text(raw, ext)
         text_sha = (cap.zip_content_key(notes) if ext == ".zip"
                     else cap.canonical_text_sha(text) if text else None)
-        # if an edition ever becomes an HTML page, its bytes churn per fetch —
-        # a version exists only when the text changed (same rule as run_capture)
-        if (ext == ".html" and text_sha
-                and text_sha == store.last_text_sha(source_id, tslug)):
+        # a re-issued file whose canonical text is unchanged (re-render, metadata
+        # churn) is not a new version — same rule as run_capture applies to HTML
+        if (text_sha and text_sha == store.last_text_sha(source_id, tslug)):
             store.event(source=source_id, target=tslug, url=stable,
                         kind="provider-live", outcome="unchanged-content",
                         sha256=sha, text_sha256=text_sha, via="meta-hub")
@@ -103,8 +106,9 @@ def main() -> int:
             text_sha=text_sha, wayback_url=ed["url"],
             extra_notes=[
                 "fetched via signed CDN URL embedded in transparency hub JSON; "
-                "stable key = unsigned CDN path",
-                {"stable_base": stable, "hub_period": ed["period"]}],
+                "stable key = hub edition label (CDN path rotates per re-issue)",
+                {"stable_base": path, "hub_period": ed["period"],
+                 "edition_key": stable}],
             managed="meta_hub", event_extra={"via": "meta-hub"})
         changed += 1
         print(f"  NEW {ed['period']} sha={sha[:12]} {len(raw):,}B ots={manifest['ots'].get('ok')}")
