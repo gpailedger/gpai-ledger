@@ -1,0 +1,45 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "513baec5a6de83a19c35e2cf950242746b239c6adc0a7a147a7d970d9171f134",
+  "size_bytes": 862729,
+  "stored_as": "raw.html",
+  "text_sha256": "dd2d961a598bd3a1040ce1f42a891e921dde3e5edb441667df58a80462a9f82d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "862729",
+    "fetched_at": "2026-08-22T08:50:04Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 1,
+    "frames_captured": []
+  },
+  "prior_sha256": "3e9bd60a56bc6bd14ea4a3ac228d6131f6dcea61b089ed427021dd855801327d",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260822072227/https://docs.cohere.com/docs/command-a-plus",
+    "at": "2026-08-22T08:50:12Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-22T08:50:16Z"
+  }
+}
