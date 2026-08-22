@@ -947,7 +947,7 @@ anyone can verify a capture without trusting this site.</p>
 <li><strong>Fetch.</strong> Each tracked URL is fetched on a daily schedule
 (conditional GETs
 spare origins a re-download when nothing changed). JavaScript-only pages are
-rendered in a real browser and stored as the rendered page, marked as such.</li>
+rendered in a real browser and stored as the rendered page, marked as such. A fetch failure seen from the automated runner is not treated as an absence on its own: the target is re-checked after a pause and then cross-checked against an independent witness (a fresh Wayback Machine capture, accepted only if it is genuinely fresh); every check is logged with the vantage point it was made from, and an absence counts only once it is corroborated — by the witness, or by being observed again on a later day.</li>
 <li><strong>Dedupe.</strong> A new version is stored only when content actually
 changes: byte hash for documents, a whitespace-insensitive text hash for rendered
 pages, an inner-file hash set for provider bundles.</li>

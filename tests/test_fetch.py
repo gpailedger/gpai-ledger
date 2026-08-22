@@ -235,3 +235,134 @@ def test_guess_ext_sniffs_html_with_leading_whitespace():
 def test_guess_ext_defaults_to_bin():
     assert cap.guess_ext("application/weird", "https://a/x", b"\x00\x01") == ".bin"
     assert cap.guess_ext(None, "https://a/x") == ".bin"
+
+
+# --- absence-claim support: diagnostic errors, vantage, independent witness ---
+
+def test_permanent_error_carries_status_and_diagnostic_headers(monkeypatch):
+    resp = FakeResp(status=404, headers={"Server": "AzureFrontDoor", "X-Azure-Ref": "ref1",
+                                         "X-Irrelevant": "x"})
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    monkeypatch.setattr(cap.time, "sleep", lambda s: None)
+    with pytest.raises(cap.PermanentFetchError) as ei:
+        cap.fetch("https://example.org/doc")
+    assert ei.value.status_code == 404
+    assert ei.value.headers == {"Server": "AzureFrontDoor", "X-Azure-Ref": "ref1"}
+
+
+def test_events_record_vantage(tmp_path, monkeypatch):
+    store = cap.Store(tmp_path / "data")
+    store.event(source="s", target="t", outcome="error")
+    line = (tmp_path / "data" / "events.jsonl").read_text(encoding="utf-8")
+    assert '"vantage": "operator"' in line or '"vantage": "github-runner"' in line
+
+
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
+
+SNAP = "https://web.archive.org/web/20260822090000/https://x/d.pdf"
+
+
+def _memento(age_s=0):
+    return format_datetime(datetime.now(timezone.utc) - timedelta(seconds=age_s))
+
+
+def _witness_env(monkeypatch, save, replay_responses):
+    monkeypatch.setattr(cap, "wayback_save", lambda url, **k: save)
+    fake = FakeGet(*replay_responses)
+    monkeypatch.setattr(cap.requests, "get", fake)
+    sleeps = []
+    monkeypatch.setattr(cap.time, "sleep", lambda s: sleeps.append(s))
+    return fake, sleeps
+
+
+OK_SAVE = {"ok": True, "status_code": 200, "snapshot": SNAP, "at": "t"}
+
+
+def test_witness_live_when_fresh_replay_is_200(monkeypatch):
+    _witness_env(monkeypatch, OK_SAVE, [FakeResp(200, url=SNAP, headers={
+        "Memento-Datetime": _memento(5), "X-Archive-Orig-Server": "AzureFrontDoor"})])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["status"], w["origin_server"]) == ("live", 200, "AzureFrontDoor")
+    assert w["final_url"] == SNAP and w["memento_datetime"]
+
+
+@pytest.mark.parametrize("status", [404, 410])
+def test_witness_absent_when_fresh_replay_is_absence_status(monkeypatch, status):
+    _witness_env(monkeypatch, OK_SAVE, [FakeResp(status, headers={"Memento-Datetime": _memento(5)})])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["status"]) == ("absent", status)
+
+
+def test_witness_stale_snapshot_is_inconclusive(monkeypatch):
+    # Wayback redirected to the NEAREST (old) capture: a 404 from months ago is
+    # not evidence about now — and neither would a 200 be
+    fake, sleeps = _witness_env(monkeypatch, OK_SAVE, [
+        FakeResp(404, headers={"Memento-Datetime": _memento(86400 * 30)})] * 4)
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["saw"] == "inconclusive" and w["reason"] == "stale-snapshot"
+    assert w["status"] is None and len(fake.calls) == 4 and len(sleeps) == 3
+
+
+def test_witness_200_without_memento_is_inconclusive_not_live(monkeypatch):
+    fake, _ = _witness_env(monkeypatch, OK_SAVE, [FakeResp(200)] * 4)
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["status"], w["reason"]) == ("inconclusive", None, "not-replayable")
+
+
+def test_witness_fresh_non_absence_status_is_inconclusive_with_status(monkeypatch):
+    _witness_env(monkeypatch, OK_SAVE, [FakeResp(503, headers={"Memento-Datetime": _memento(5)})])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["status"], w["reason"]) == ("inconclusive", 503, "replay-status-503")
+
+
+def test_witness_retries_until_fresh_capture_appears(monkeypatch):
+    fake, sleeps = _witness_env(monkeypatch, OK_SAVE, [
+        FakeResp(200), FakeResp(404, headers={"Memento-Datetime": _memento(1)})])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["saw"] == "absent" and len(fake.calls) == 2 and sleeps == [cap.WITNESS_POLL_S]
+
+
+def test_witness_inconclusive_when_every_replay_raises(monkeypatch):
+    fake, sleeps = _witness_env(monkeypatch, OK_SAVE, [RuntimeError("net")] * 4)
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["saw"] == "inconclusive" and w["reason"].startswith("replay-error")
+    assert len(sleeps) == 3
+
+
+def test_witness_inconclusive_when_save_has_no_capture(monkeypatch):
+    fake, _ = _witness_env(monkeypatch, {"ok": False, "status_code": 523, "snapshot": None}, [])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["saw"] == "inconclusive" and "spn-no-capture" in w["reason"]
+    assert w["spn_status"] == 523 and fake.calls == []
+
+
+def test_witness_rate_limited_is_flagged(monkeypatch):
+    _witness_env(monkeypatch, {"ok": False, "status_code": 429, "snapshot": None}, [])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["reason"]) == ("inconclusive", "rate-limited")
+
+
+def test_wayback_save_snapshot_from_content_location(monkeypatch):
+    resp = FakeResp(200, url="https://web.archive.org/save/https://x/d.pdf",
+                    headers={"Content-Location": "/web/20260822090000/https://x/d.pdf"})
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    s = cap.wayback_save("https://x/d.pdf")
+    assert s["ok"] and s["snapshot"] == SNAP
+
+
+def test_wayback_save_snapshot_from_first_redirect_hop(monkeypatch):
+    # no Content-Location; r.url is an OLDER nearest capture — must not be used
+    hop = FakeResp(302, headers={"Location": SNAP})
+    resp = FakeResp(200, url="https://web.archive.org/web/20200101000000/https://x/d.pdf")
+    resp.history = [hop]
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    s = cap.wayback_save("https://x/d.pdf")
+    assert s["ok"] and s["snapshot"] == SNAP
+
+
+def test_wayback_save_not_ok_without_any_capture(monkeypatch):
+    resp = FakeResp(523, url="https://web.archive.org/save/https://x/d.pdf")
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    s = cap.wayback_save("https://x/d.pdf")
+    assert not s["ok"] and s["snapshot"] is None and s["status_code"] == 523

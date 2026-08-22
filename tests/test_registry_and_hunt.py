@@ -76,3 +76,35 @@ def test_provider_live_success_suppresses_sibling(tmp_path):
         {"source": "s", "target": "doc2", "outcome": "new", "kind": "provider-live", "ts": "3"},
     ])
     assert ("s", "doc") not in site_hunt.error_streaks(p)
+
+
+def test_unconfirmed_absence_does_not_feed_streak(tmp_path):
+    # a 404 from one vantage point that the independent witness did not
+    # corroborate must never trigger a relocation hunt
+    p = _events(tmp_path, [
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "1", "absence": "unconfirmed"},
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "2", "absence": "unconfirmed"},
+    ])
+    assert ("s", "t") not in site_hunt.error_streaks(p)
+
+
+def test_confirmed_absence_still_feeds_streak(tmp_path):
+    p = _events(tmp_path, [
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "1", "absence": "confirmed"},
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "2", "absence": "confirmed"},
+    ])
+    assert site_hunt.error_streaks(p)[("s", "t")]["streak"] == 2
+
+
+def test_contradicted_absence_does_not_feed_streak(tmp_path):
+    p = _events(tmp_path, [
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "1", "absence": "contradicted"},
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "2", "absence": "contradicted"},
+    ])
+    assert ("s", "t") not in site_hunt.error_streaks(p)

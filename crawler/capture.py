@@ -24,6 +24,9 @@ import requests
 USER_AGENT = ("GPAI-Ledger/0.1 (public-interest archive of EU AI Act Article 53(1)(d) "
               "training-data summaries; contact: contact@gpailedger.com)")
 HEADERS = {"User-Agent": USER_AGENT}
+# Where an observation was made from. Absence claims are only as strong as their
+# vantage point: a datacenter runner can see a 404 an origin never shows to others.
+VANTAGE = "github-runner" if os.environ.get("GITHUB_ACTIONS") else "operator"
 OTS_CALENDARS = [
     "https://a.pool.opentimestamps.org",
     "https://b.pool.opentimestamps.org",
@@ -153,7 +156,22 @@ CONSENT_STRIP_JS = """() => {
 
 class PermanentFetchError(RuntimeError):
     """Definitive fetch failure (permanent 4xx, oversized body): retrying is
-    useless and hammers origins, so the retry loop re-raises immediately."""
+    useless and hammers origins, so the retry loop re-raises immediately.
+    status_code and headers (a diagnostic subset) let callers classify and
+    record what the origin actually answered."""
+
+    def __init__(self, message: str, status_code: int = None, headers: dict = None):
+        super().__init__(message)
+        self.status_code = status_code
+        self.headers = headers or {}
+
+
+DIAG_HEADERS = ("Server", "Via", "X-Cache", "X-Azure-Ref", "X-Served-By", "CF-Ray",
+                "X-Request-Id", "Date")
+
+
+def diag_headers(r) -> dict:
+    return {h: r.headers.get(h) for h in DIAG_HEADERS if r.headers.get(h)}
 
 
 def _read_capped(r, limit: int = MAX_FETCH_BYTES) -> bytes:
@@ -228,7 +246,9 @@ def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None
                 return body, meta
             r.close()
             if r.status_code in NO_RETRY_STATUS:
-                raise PermanentFetchError(f"HTTP {r.status_code} for {url}")
+                raise PermanentFetchError(f"HTTP {r.status_code} for {url}",
+                                          status_code=r.status_code,
+                                          headers=diag_headers(r))
             last = RuntimeError(f"HTTP {r.status_code} for {url}")
             retry_after = r.headers.get("Retry-After")
             if retry_after and retry_after.isdigit():
@@ -454,6 +474,15 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
                 "consent_nodes_removed": consent_removed,
                 "frames_captured": frame_urls,
             }
+            status = resp.status if resp else None
+            if isinstance(status, int) and status >= 400:
+                # a rendered error page is not the document — route it into the
+                # same absence handling as a plain-fetch 4xx (run_capture)
+                hdrs = {k: v for k, v in (resp.headers or {}).items()
+                        if k.lower() in ("server", "via", "x-cache", "date",
+                                         "x-azure-ref", "cf-ray", "x-served-by")}
+                raise PermanentFetchError(f"HTTP {status} for {url} (rendered)",
+                                          status_code=status, headers=hdrs)
             return dom, meta
         finally:
             browser.close()
@@ -506,16 +535,98 @@ def wayback_save(url: str, timeout: int = 120):
         r = requests.get("https://web.archive.org/save/" + url,
                          headers=HEADERS, timeout=timeout, allow_redirects=True)
         loc = r.headers.get("Content-Location") or ""
+        snapshot = None
         if loc.startswith("/web/"):
             snapshot = "https://web.archive.org" + loc
-        elif r.url.startswith("https://web.archive.org/web/"):
-            snapshot = r.url
         else:
-            snapshot = None
-        return {"ok": r.status_code in (200, 302), "status_code": r.status_code,
+            # the FIRST redirect hop names the capture SPN assigned; r.url after
+            # redirects may be an older nearest capture, so it is not used
+            for hop in getattr(r, "history", []) or []:
+                hop_loc = hop.headers.get("Location") or ""
+                if re.match(r"^https://web\.archive\.org/web/\d{14}/", hop_loc):
+                    snapshot = hop_loc
+                    break
+        # "accepted" = SPN assigned a capture timestamp (it does so even when the
+        # origin answered 4xx: the error page is archived); durable presence in
+        # the index is established later by retry_wayback.py --verify
+        return {"ok": snapshot is not None, "status_code": r.status_code,
                 "snapshot": snapshot, "at": utc_now()}
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "error": repr(exc), "at": utc_now()}
+
+
+WITNESS_FRESH_SLACK_S = 120
+WITNESS_ATTEMPTS = 4
+WITNESS_POLL_S = 15
+
+
+def wayback_witness(url: str) -> dict:
+    """Ask an independent network (the Internet Archive's crawler — a second
+    datacenter vantage, not a residential one) what a URL serves RIGHT NOW.
+
+    Triggers Save Page Now, then reads the assigned capture back through its
+    replay. A replay is a genuine capture only if it carries Memento-Datetime,
+    and it describes the present only if that Memento-Datetime is not older
+    than the request (Wayback redirects exact-timestamp URLs to the NEAREST
+    capture, and SPN can hand back a deduplicated capture up to ~30 min old).
+    Result: saw = "live" (fresh replay 200) | "absent" (fresh replay 404/410) |
+    "inconclusive" (everything else — never treated as absence). Every field an
+    auditor needs is recorded: SPN status, replayed URL, Memento-Datetime,
+    replay status, redirect chain, origin server header, and a reason.
+    """
+    from email.utils import parsedate_to_datetime
+    t0 = datetime.now(timezone.utc)
+    save = wayback_save(url)
+    out = {"witness": "wayback", "saw": "inconclusive", "status": None,
+           "snapshot": save.get("snapshot"), "spn_status": save.get("status_code"),
+           "requested_at": t0.strftime("%Y-%m-%dT%H:%M:%SZ"), "memento_datetime": None,
+           "final_url": None, "redirects": [], "origin_server": None, "reason": None,
+           "at": utc_now()}
+    if save.get("status_code") == 429:
+        out["reason"] = "rate-limited"
+        return out
+    snap = save.get("snapshot")
+    if not snap:
+        out["reason"] = "spn-no-capture" + (f" (SPN {save.get('status_code')})"
+                                            if save.get("status_code") else "")
+        return out
+    for attempt in range(WITNESS_ATTEMPTS):
+        try:
+            r = requests.get(snap, headers=HEADERS, timeout=60,
+                             allow_redirects=True, stream=True)
+            status, memento = r.status_code, r.headers.get("Memento-Datetime")
+            out["final_url"] = getattr(r, "url", None)
+            out["redirects"] = [(h.status_code, h.headers.get("Location"))
+                                for h in (getattr(r, "history", []) or [])]
+            out["origin_server"] = r.headers.get("X-Archive-Orig-Server")
+            getattr(r, "close", lambda: None)()
+        except Exception as exc:  # noqa: BLE001
+            out["reason"] = f"replay-error: {exc!r}"[:200]
+            if attempt < WITNESS_ATTEMPTS - 1:
+                time.sleep(WITNESS_POLL_S)
+            continue
+        if memento:
+            out["memento_datetime"] = memento
+            try:
+                fresh = (parsedate_to_datetime(memento)
+                         >= t0 - __import__("datetime").timedelta(seconds=WITNESS_FRESH_SLACK_S))
+            except Exception:  # noqa: BLE001
+                fresh = False
+            if fresh:
+                out["status"] = status
+                if status == 200:
+                    out["saw"], out["reason"] = "live", None
+                elif status in (404, 410):
+                    out["saw"], out["reason"] = "absent", None
+                else:
+                    out["reason"] = f"replay-status-{status}"
+                return out
+            out["reason"] = "stale-snapshot"      # an older capture was served
+        else:
+            out["reason"] = "not-replayable"      # capture not (yet) available
+        if attempt < WITNESS_ATTEMPTS - 1:
+            time.sleep(WITNESS_POLL_S)
+    return out
 
 
 def ots_stamp(digest: bytes):
@@ -590,6 +701,7 @@ class Store:
 
     def event(self, **kw) -> None:
         kw.setdefault("ts", utc_now())
+        kw.setdefault("vantage", VANTAGE)
         with self.events_path.open("a", encoding="utf-8", newline="\n") as fh:
             fh.write(json.dumps(kw, ensure_ascii=False) + "\n")
 

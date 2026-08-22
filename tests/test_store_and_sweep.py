@@ -323,3 +323,364 @@ def test_main_fetch_cache_dedupes_shared_url(tmp_path, monkeypatch):
     assert _run(monkeypatch, reg, data_root) == 0
     assert calls == [shared]
     assert len(_capture_dirs(data_root)) == 2
+
+
+
+
+# --- D. absence claims: re-check, independent witness, confirmed / unconfirmed /
+#        contradicted, consecutive days, shared URLs (docs/runbooks.md "Absence claims")
+
+import pytest
+from datetime import date, timedelta
+
+
+def _run_wb(monkeypatch, registry, data_root):
+    """Like _run but WITHOUT --no-wayback so the witness path is reachable;
+    the Wayback save itself is stubbed."""
+    monkeypatch.setattr(cap, "wayback_save",
+                        lambda url, **k: {"ok": True, "snapshot": "s", "at": "t"})
+    monkeypatch.setattr(sys, "argv", [
+        "run_capture.py", "--registry", str(registry), "--data-root",
+        str(data_root), "--no-ots", "--throttle", "0"])
+    return rc_mod.main()
+
+
+def _err(status=404, headers=None):
+    return cap.PermanentFetchError(f"HTTP {status} for u", status_code=status,
+                                   headers=headers if headers is not None
+                                   else {"Server": "AzureFrontDoor"})
+
+
+def _seq(responses):
+    """fetch stub: pops (body, meta) tuples or raises queued exceptions."""
+    def fake(url, **k):
+        item = responses.pop(0)
+        if isinstance(item, Exception):
+            raise item
+        return item
+    return fake
+
+
+def _w(saw, status=None):
+    return lambda url: {"witness": "wayback", "saw": saw, "status": status,
+                        "snapshot": "s", "reason": None, "at": "t"}
+
+
+BODY = (b"summary body v1\n", _meta("https://ex.org/doc.txt", "text/plain"))
+TARGET = cap.target_slug("provider-live", "https://ex.org/doc.txt")
+
+
+def _seed(data_root, day, absence="unconfirmed", outcome="error"):
+    """Append a prior event for prov/model dated `day` (YYYY-MM-DD)."""
+    ev = {"ts": f"{day}T06:00:00Z", "source": "prov/model", "target": TARGET,
+          "url": "https://ex.org/doc.txt", "kind": "provider-live", "outcome": outcome}
+    if outcome == "error":
+        ev["error"] = "HTTP 404"
+        if absence:
+            ev["absence"] = absence
+    with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps(ev) + "\n")
+
+
+def _day1(tmp_path, monkeypatch, sources=None):
+    reg = _write_registry(tmp_path, sources or [_src("prov/model", "https://ex.org/doc.txt")])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch", _seq([BODY] * (len(sources) if sources else 1)))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    return reg, data_root
+
+
+def _today():
+    return cap.utc_now()[:10]
+
+
+def _days_ago(n):
+    return (date.fromisoformat(_today()) - timedelta(days=n)).isoformat()
+
+
+def test_recheck_recovers_transient_404(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(404), BODY]))
+    monkeypatch.setattr(cap, "wayback_witness", _boom)
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    outcomes = [e["outcome"] for e in _events(data_root)]
+    assert outcomes == ["new", "recheck-recovered", "unchanged"]
+    rec = _events(data_root)[1]
+    assert rec["observations"][0]["status_code"] == 404
+    assert rec["observations"][0]["headers"] == {"Server": "AzureFrontDoor"}
+
+
+@pytest.mark.parametrize("status", [404, 410])
+def test_witness_absent_confirms_for_each_absence_status(tmp_path, monkeypatch, status):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(status), _err(status)]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", status))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["witness"]
+    assert e["status_code"] == status and e["consecutive_absent_days"] == 1
+    assert [o["status_code"] for o in e["observations"]] == [status, status]
+    assert e["vantage"] == cap.VANTAGE
+
+
+def test_witness_live_contradicts_and_stays_green(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("live", 200))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "contradicted" and e["confirmed_by"] == []
+
+
+def test_live_witness_vetoes_the_day_route(tmp_path, monkeypatch):
+    # the 22 Aug MAI pattern persisting into day 2: runner 404, everyone else 200
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1))
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("live", 200))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    assert _events(data_root)[-1]["absence"] == "contradicted"
+
+
+def test_persistent_contradiction_becomes_a_vantage_alert(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2), absence="contradicted")
+    _seed(data_root, _days_ago(1), absence="contradicted")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("live", 200))
+    assert _run_wb(monkeypatch, reg, data_root) == 1     # red, but NOT an absence claim
+    e = _events(data_root)[-1]
+    assert e["absence"] == "contradicted" and e["consecutive_absent_days"] == 3
+
+
+def test_inconclusive_witness_first_day_is_unconfirmed(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "unconfirmed" and e["absent_on"] == [_today()]
+
+
+def test_second_day_within_window_confirms(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1))
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["consecutive-days"]
+    assert e["absent_on"] == [_days_ago(1), _today()]
+
+
+def test_missed_sweep_does_not_break_the_day_route(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(3))      # one missed day in between is tolerated
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+
+
+def test_old_absence_outside_window_does_not_confirm(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, "2000-01-01")      # no success since, but far too old
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "unconfirmed" and e["consecutive_absent_days"] == 2
+
+
+def test_same_day_rerun_counts_once(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _today())
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    assert _events(data_root)[-1]["consecutive_absent_days"] == 1
+
+
+def test_success_between_absences_resets_the_streak(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1))
+    monkeypatch.setattr(cap, "fetch", _seq([BODY]))
+    assert _run_wb(monkeypatch, reg, data_root) == 0          # a success since
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    assert _events(data_root)[-1]["consecutive_absent_days"] == 1
+
+
+def test_plain_error_between_absences_neither_resets_nor_counts(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2))
+    _seed(data_root, _days_ago(1), absence=None)              # plain 503-style error
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    assert _events(data_root)[-1]["absent_on"] == [_days_ago(2), _today()]
+
+
+def test_recheck_failing_for_non_absence_reason_is_a_plain_error(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch",
+                        _seq([_err(404, {"X-Azure-Ref": "first"}), RuntimeError("HTTP 503")]))
+    monkeypatch.setattr(cap, "wayback_witness", _boom)       # never consulted
+    assert _run_wb(monkeypatch, reg, data_root) == 1          # red, like any failure
+    e = _events(data_root)[-1]
+    assert "absence" not in e and "HTTP 503" in e["error"]
+    assert e["status_code"] is None and e["headers"] == {}   # never backfilled
+    assert e["observations"][0]["headers"] == {"X-Azure-Ref": "first"}
+    assert e["observations"][1]["status_code"] is None
+
+
+def test_both_observations_keep_their_own_headers(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(404, {"X-Azure-Ref": "first"}),
+                                            _err(404, {"X-Azure-Ref": "second"})]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    _run_wb(monkeypatch, reg, data_root)
+    e = _events(data_root)[-1]
+    assert [o["headers"]["X-Azure-Ref"] for o in e["observations"]] == ["first", "second"]
+    assert e["headers"] == {"X-Azure-Ref": "second"}
+
+
+def test_never_captured_target_is_a_plain_error_without_witness(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path, [_src("prov/model", "https://ex.org/doc.txt")])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "wayback_witness", _boom)
+    monkeypatch.setattr(cap, "fetch", _seq([_err()]))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    (e,) = _events(data_root)
+    assert "absence" not in e and e["status_code"] == 404
+
+
+def test_no_wayback_skips_witness_with_reason(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _boom)
+    assert _run(monkeypatch, reg, data_root) == 0            # --no-wayback
+    e = _events(data_root)[-1]
+    assert e["witness"] is None and e["witness_skipped"] == "no-wayback"
+    assert e["absence"] == "unconfirmed"
+
+
+def test_witness_budget_boundary(tmp_path, monkeypatch):
+    sources = [_src("prov/a", "https://ex.org/a.txt"), _src("prov/b", "https://ex.org/b.txt")]
+    reg, data_root = _day1(tmp_path, monkeypatch, sources)
+    monkeypatch.setattr(rc_mod, "MAX_WITNESSES_PER_RUN", 1)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err(), _err(), _err()]))
+    calls = []
+
+    def witness(url):
+        calls.append(url)
+        return _w("inconclusive")(url)
+    monkeypatch.setattr(cap, "wayback_witness", witness)
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    evs = [e for e in _events(data_root) if e["outcome"] == "error"]
+    assert calls == ["https://ex.org/a.txt"]
+    assert evs[0]["witness_skipped"] is None and evs[1]["witness_skipped"] == "budget"
+
+
+def test_rate_limited_witness_stops_further_witnesses(tmp_path, monkeypatch):
+    sources = [_src("prov/a", "https://ex.org/a.txt"), _src("prov/b", "https://ex.org/b.txt")]
+    reg, data_root = _day1(tmp_path, monkeypatch, sources)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err(), _err(), _err()]))
+    calls = []
+
+    def witness(url):
+        calls.append(url)
+        return {"witness": "wayback", "saw": "inconclusive", "status": None,
+                "snapshot": None, "reason": "rate-limited", "at": "t"}
+    monkeypatch.setattr(cap, "wayback_witness", witness)
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    assert calls == ["https://ex.org/a.txt"]
+
+
+def test_shared_url_siblings_reuse_one_recheck_and_witness(tmp_path, monkeypatch):
+    shared = "https://ex.org/portal.txt"
+    sources = [_src("prov/a", shared), _src("prov/b", shared)]
+    reg = _write_registry(tmp_path, sources)
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch", _seq([(b"shared\n", _meta(shared, "text/plain"))]))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    fetches, calls = [], []
+
+    def fetch(url, **k):
+        fetches.append(url)
+        raise _err()
+    monkeypatch.setattr(cap, "fetch", fetch)
+
+    def witness(url):
+        calls.append(url)
+        return _w("inconclusive")(url)
+    monkeypatch.setattr(cap, "wayback_witness", witness)
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    evs = [e for e in _events(data_root) if e["outcome"] == "error"]
+    assert len(evs) == 2 and calls == [shared]               # one witness, two events
+    assert len(fetches) == 3                                  # a: first + re-check; b: first only
+    assert "shared_from" not in evs[0] and evs[1]["shared_from"] == "prov/a"
+    assert evs[0]["witness"] == evs[1]["witness"]
+
+
+def test_rendered_404_with_prior_capture_enters_absence_path(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path,
+                          [_src("prov/model", "https://ex.org/page", render=True)])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch_rendered",
+                        lambda url, **k: (b"<html>hello world</html>",
+                                          dict(_meta(url, "text/html"), rendered=True)))
+    monkeypatch.setattr(cap, "fetch", _boom)
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    renders = []
+
+    def render(url, **k):
+        renders.append(url)
+        raise _err(404, {"Server": "x"})
+    monkeypatch.setattr(cap, "fetch_rendered", render)
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and len(renders) == 2   # re-check used the renderer
+
+
+def test_rendered_failure_without_status_is_a_plain_error(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path,
+                          [_src("prov/model", "https://ex.org/page", render=True)])
+    data_root = tmp_path / "data"
+
+    def _raise(url, **k):
+        raise RuntimeError("render failed")
+    monkeypatch.setattr(cap, "fetch_rendered", _raise)
+    monkeypatch.setattr(cap, "fetch", _boom)
+    assert _run(monkeypatch, reg, data_root) == 1
+    (e,) = _events(data_root)
+    assert e["outcome"] == "error" and "absence" not in e
+
+
+def test_absence_streaks_reader(tmp_path):
+    p = tmp_path / "events.jsonl"
+    rows = [
+        {"source": "s", "target": "t", "outcome": "error", "absence": "unconfirmed", "ts": "2026-08-20T06:00:00Z"},
+        {"source": "s", "target": "t", "outcome": "error", "ts": "2026-08-21T06:00:00Z"},   # plain
+        {"source": "s", "target": "t", "outcome": "error", "absence": "contradicted", "ts": "2026-08-22T06:00:00Z"},
+        {"source": "s", "target": "u", "outcome": "error", "absence": "confirmed", "ts": "2026-08-22T06:00:00Z"},
+        {"source": "s", "target": "u", "outcome": "unchanged", "ts": "2026-08-23T06:00:00Z"},
+    ]
+    p.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+    s = rc_mod.absence_streaks(p)
+    assert s[("s", "t")] == {"absent_on": {"2026-08-20"}, "contradicted_on": {"2026-08-22"}}
+    assert ("s", "u") not in s
+
+
+def test_recheck_delay_env_parse_is_guarded(monkeypatch):
+    monkeypatch.setenv("GPAI_RECHECK_DELAY", "not-a-number")
+    assert rc_mod._delay_from_env() == 45.0
+    monkeypatch.setenv("GPAI_RECHECK_DELAY", "9999")
+    assert rc_mod._delay_from_env() == 300.0
+    monkeypatch.setenv("GPAI_RECHECK_DELAY", "0")
+    assert rc_mod._delay_from_env() == 0.0

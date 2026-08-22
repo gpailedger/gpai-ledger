@@ -65,6 +65,11 @@ def error_streaks(events_path: Path):
         except json.JSONDecodeError:
             continue
         key = (e.get("source"), e.get("target"))
+        if e.get("outcome") == "error" and e.get("absence") not in (None, "confirmed"):
+            # an absence claim that is unconfirmed (one vantage point, no
+            # corroboration) or contradicted (a fresh witness saw the document
+            # live) is not evidence the document moved — no hunt
+            continue
         if e.get("outcome") == "error":
             entry = last.setdefault(key, {"streak": 0, "url": e.get("url"),
                                           "kind": e.get("kind"), "last_ts": ""})

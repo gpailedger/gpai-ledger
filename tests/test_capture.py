@@ -128,8 +128,9 @@ def test_state_written_with_posix_separators(tmp_path):
 # --- wayback_save snapshot parsing (mocked) ---
 
 class _Resp:
-    def __init__(self, status, url, headers=None):
+    def __init__(self, status, url, headers=None, history=None):
         self.status_code, self.url, self.headers = status, url, (headers or {})
+        self.history = history or []
     def close(self): pass
 
 def test_wayback_content_location_branch(monkeypatch):
@@ -139,11 +140,23 @@ def test_wayback_content_location_branch(monkeypatch):
     out = cap.wayback_save("https://x")
     assert out["ok"] and out["snapshot"] == "https://web.archive.org/web/2026/x"
 
-def test_wayback_redirected_url_branch(monkeypatch):
+def test_wayback_redirect_hop_branch(monkeypatch):
+    # snapshot comes from the FIRST redirect hop's Location (the capture SPN just
+    # assigned), never from r.url — which after redirects may be an older nearest
+    # capture. The hop timestamp must be 14 digits.
+    hop = _Resp(302, "", {"Location": "https://web.archive.org/web/20260822090000/x"})
+    monkeypatch.setattr(cap.requests, "get",
+                        lambda *a, **k: _Resp(200, "https://web.archive.org/web/20200101000000/x",
+                                              {}, history=[hop]))
+    out = cap.wayback_save("https://x")
+    assert out["ok"] and out["snapshot"] == "https://web.archive.org/web/20260822090000/x"
+
+def test_wayback_bare_url_without_hop_is_no_snapshot(monkeypatch):
+    # r.url alone is not trusted: no Content-Location, no redirect hop -> None
     monkeypatch.setattr(cap.requests, "get",
                         lambda *a, **k: _Resp(200, "https://web.archive.org/web/2026/x", {}))
     out = cap.wayback_save("https://x")
-    assert out["snapshot"] == "https://web.archive.org/web/2026/x"
+    assert out["snapshot"] is None and not out["ok"]
 
 def test_wayback_no_snapshot_branch(monkeypatch):
     monkeypatch.setattr(cap.requests, "get",

@@ -14,19 +14,104 @@ Politeness: non-rendered targets send If-None-Match/If-Modified-Since from the
 prior capture; a 304 is logged as an origin-asserted "unchanged" (not_modified
 marker). One day a week per URL (stable digest schedule) the fetch is forced
 unconditional so a lying origin can never park a target on stale 304s.
+Absence claims: a 404/410 for a target with a prior capture is re-checked, then
+cross-checked against an independent witness before it is trusted — see
+docs/runbooks.md, "Absence claims", and absence_streaks() below.
 """
 import argparse
 import hashlib
 import json
+import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import capture as cap
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WAYBACK_DEFAULT_KINDS = {"provider-live", "provider-page", "regulatory", "watch-page", "cop-doc"}
+
+# A 404/410 for a target we have captured before is an ABSENCE CLAIM, and a single
+# vantage point (a datacenter runner) is not enough to make one: re-check after a
+# pause, then ask an independent witness. Only a corroborated absence is an error
+# the health gate should redden the run for. See docs/runbooks.md, "Absence claims".
+ABSENCE_STATUSES = {404, 410}
+
+
+def _delay_from_env() -> float:
+    raw = os.environ.get("GPAI_RECHECK_DELAY", "45")
+    try:
+        v = float(raw)
+    except ValueError:
+        print(f"WARNING: GPAI_RECHECK_DELAY={raw!r} is not a number; using 45", flush=True)
+        v = 45.0
+    return max(0.0, min(v, 300.0))
+
+
+RECHECK_DELAY = _delay_from_env()
+MAX_WITNESSES_PER_RUN = 5
+# Second route to confirmation: the witness is often inconclusive (Save Page Now
+# cannot always capture an error page), so an absence observed on this many
+# distinct UTC dates in the current unbroken streak — the most recent prior one
+# within ABSENCE_WINDOW_DAYS, so a single missed sweep does not break it — is
+# also treated as corroborated. Same-day re-runs count once; any success resets.
+CONFIRM_AFTER_DAYS = 2
+ABSENCE_WINDOW_DAYS = 3
+# A fresh witness seeing the document LIVE contradicts the claim outright; if that
+# keeps happening the runner itself is blind to this document — surface it (red,
+# but as a vantage problem, never as an absence) after this many days.
+CONTRADICTED_ALERT_DAYS = 3
+
+
+def absence_streaks(events_path: Path) -> dict:
+    """(source, target) -> {"absent_on": {dates}, "contradicted_on": {dates}} for
+    the target's current unbroken streak of absence events, reset by any success
+    outcome. Plain errors (an 'error' event with no 'absence' field) neither reset
+    nor count. Read once per run from the append-only event log."""
+    tail = {}
+    if not events_path.exists():
+        return {}
+    for line in events_path.read_text(encoding="utf-8").splitlines():
+        try:
+            e = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        key = (e.get("source"), e.get("target"))
+        out, absence = e.get("outcome"), e.get("absence")
+        day = (e.get("ts") or "")[:10]
+        if out == "error" and absence and day:
+            entry = tail.setdefault(key, {"absent_on": set(), "contradicted_on": set()})
+            if absence == "contradicted":
+                entry["contradicted_on"].add(day)
+            else:
+                entry["absent_on"].add(day)
+        elif out in ("new", "unchanged", "unchanged-content", "recheck-recovered"):
+            tail.pop(key, None)
+    return tail
+
+
+def _days_between(a: str, b: str) -> int:
+    return (date.fromisoformat(a) - date.fromisoformat(b)).days
+
+
+def _obs(exc) -> dict:
+    """One observation: exactly what this exception carried, never backfilled."""
+    return {"status_code": getattr(exc, "status_code", None),
+            "headers": getattr(exc, "headers", None) or {},
+            "error": repr(exc), "ts": cap.utc_now()}
+
+
+def _recheck(url: str, rendered: bool):
+    """Second observation after RECHECK_DELAY, with the SAME capture method as the
+    first (a rendered target must be re-rendered, not plain-fetched). Returns
+    (raw, meta, None) on success or (None, None, exc) on failure."""
+    time.sleep(RECHECK_DELAY)
+    try:
+        raw, meta = cap.fetch_rendered(url) if rendered else cap.fetch(url)
+        return raw, meta, None
+    except Exception as exc2:  # noqa: BLE001
+        return None, None, exc2
 
 
 def validators_for(store: cap.Store, data_root: Path, source_id: str, tslug: str,
@@ -69,9 +154,14 @@ def main() -> int:
     store = cap.Store(data_root)
 
     stats = {"checked": 0, "new": 0, "unchanged": 0, "errors": 0,
+             "unconfirmed_absence": 0, "vantage_blocked": 0,
              "wayback_ok": 0, "wayback_fail": 0, "ots_ok": 0, "ots_fail": 0}
     failures = []
     fetch_cache = {}  # url -> (raw, meta); several sources share one portal URL
+    absence_memo = {}  # cache_key -> {source, second, witness, witness_skipped}
+    witnesses_used = 0
+    streaks = absence_streaks(store.events_path)
+    today = cap.utc_now()[:10]
 
     for source in registry["sources"]:
         if args.only:
@@ -85,8 +175,8 @@ def main() -> int:
             tslug = cap.target_slug(kind, url)
             rendered = bool(target.get("render"))
             stats["checked"] += 1
+            cache_key = (url, rendered)
             try:
-                cache_key = (url, rendered)
                 if cache_key in fetch_cache:
                     raw, meta = fetch_cache[cache_key]
                 else:
@@ -98,13 +188,117 @@ def main() -> int:
                                                            source["id"], tslug, url))
                     fetch_cache[cache_key] = (raw, meta)
             except Exception as exc:  # noqa: BLE001
-                stats["errors"] += 1
-                failures.append((source["id"], url, repr(exc)))
-                store.event(source=source["id"], target=tslug, url=url,
-                            kind=kind, outcome="error", error=repr(exc))
-                print(f"  ERROR  {source['id']} [{kind}] {exc!r}", flush=True)
-                time.sleep(args.throttle)
-                continue
+                status = getattr(exc, "status_code", None)
+                first = _obs(exc)
+                had_capture = bool(store.last_sha(source["id"], tslug))
+                if not (status in ABSENCE_STATUSES and had_capture):
+                    # not an absence claim: a plain error, red like any failure
+                    stats["errors"] += 1
+                    failures.append((source["id"], url, repr(exc)))
+                    store.event(source=source["id"], target=tslug, url=url,
+                                kind=kind, outcome="error", error=repr(exc),
+                                **({"status_code": status} if status else {}),
+                                **({"headers": first["headers"]} if first["headers"] else {}))
+                    print(f"  ERROR  {source['id']} [{kind}] {exc!r}", flush=True)
+                    time.sleep(args.throttle)
+                    continue
+
+                memo = absence_memo.get(cache_key)
+                shared_from = memo["source"] if memo else None
+                if memo is None:
+                    # 1. re-check once after a pause, SAME capture method
+                    raw, meta, exc2 = _recheck(url, rendered)
+                    if exc2 is None:
+                        fetch_cache[cache_key] = (raw, meta)
+                        store.event(source=source["id"], target=tslug, url=url,
+                                    kind=kind, outcome="recheck-recovered",
+                                    observations=[first], rechecked_after_s=RECHECK_DELAY)
+                        print(f"  RECOVERED {source['id']} [{kind}] {status} then OK "
+                              f"on re-check", flush=True)
+                        # memo stays None; fall through to normal processing below
+                    else:
+                        second = _obs(exc2)
+                        witness, skipped = None, None
+                        if second["status_code"] in ABSENCE_STATUSES:
+                            # 2. ask an independent witness before calling it absent
+                            if args.no_wayback:
+                                skipped = "no-wayback"
+                            elif witnesses_used >= MAX_WITNESSES_PER_RUN:
+                                skipped = "budget"
+                            else:
+                                witnesses_used += 1
+                                witness = cap.wayback_witness(url)
+                                if (witness or {}).get("reason") == "rate-limited":
+                                    witnesses_used = MAX_WITNESSES_PER_RUN
+                        memo = {"source": source["id"], "second": second,
+                                "witness": witness, "witness_skipped": skipped}
+                        absence_memo[cache_key] = memo
+
+                if memo is not None:
+                    second = memo["second"]
+                    witness, skipped = memo["witness"], memo["witness_skipped"]
+                    common = {"observations": [first, second],
+                              "rechecked_after_s": RECHECK_DELAY,
+                              "status_code": second["status_code"],
+                              "headers": second["headers"]}
+                    if shared_from:
+                        common["shared_from"] = shared_from
+                    if second["status_code"] not in ABSENCE_STATUSES:
+                        # the re-check failed for a NON-absence reason: plain error
+                        stats["errors"] += 1
+                        failures.append((source["id"], url, second["error"]))
+                        store.event(source=source["id"], target=tslug, url=url,
+                                    kind=kind, outcome="error", error=second["error"],
+                                    **common)
+                        print(f"  ERROR  {source['id']} [{kind}] {second['error']} "
+                              f"(after {status} on first try)", flush=True)
+                        time.sleep(args.throttle)
+                        continue
+
+                    # 3. classify the absence claim
+                    streak = streaks.get((source["id"], tslug),
+                                         {"absent_on": set(), "contradicted_on": set()})
+                    witness_saw = (witness or {}).get("saw")
+                    if witness_saw == "live":
+                        # the runner cannot fetch a document the witness sees live
+                        prior = streak["contradicted_on"] - {today}
+                        dates = sorted(prior | {today})
+                        within = bool(prior) and _days_between(today, max(prior)) <= ABSENCE_WINDOW_DAYS
+                        absence, confirmed_by = "contradicted", []
+                        stats["vantage_blocked"] += 1
+                        if len(dates) >= CONTRADICTED_ALERT_DAYS and within:
+                            stats["errors"] += 1
+                            failures.append((source["id"], url,
+                                             f"vantage problem: this runner cannot fetch a "
+                                             f"document the witness sees live ({len(dates)} days)"))
+                        extra = {"contradicted_on": dates}
+                    else:
+                        prior = streak["absent_on"] - {today}
+                        dates = sorted(prior | {today})
+                        within = bool(prior) and _days_between(today, max(prior)) <= ABSENCE_WINDOW_DAYS
+                        confirmed_by = []
+                        if witness_saw == "absent":
+                            confirmed_by.append("witness")
+                        if len(dates) >= CONFIRM_AFTER_DAYS and within:
+                            confirmed_by.append("consecutive-days")
+                        if confirmed_by:
+                            absence = "confirmed"
+                            stats["errors"] += 1
+                            failures.append((source["id"], url, second["error"]))
+                        else:
+                            absence = "unconfirmed"
+                            stats["unconfirmed_absence"] += 1
+                        extra = {"absent_on": dates}
+                    store.event(source=source["id"], target=tslug, url=url,
+                                kind=kind, outcome="error", error=second["error"],
+                                witness=witness, witness_skipped=skipped,
+                                absence=absence, confirmed_by=confirmed_by,
+                                consecutive_absent_days=len(dates), **extra, **common)
+                    print(f"  ERROR  {source['id']} [{kind}] {second['error']} — absence "
+                          f"{absence}" + (f" (witness saw {witness_saw})" if witness else
+                                          f" (witness skipped: {skipped})"), flush=True)
+                    time.sleep(args.throttle)
+                    continue
 
             if raw is None:
                 # 304 Not Modified: the origin asserts no change against the prior
@@ -175,9 +369,12 @@ def main() -> int:
         print("\n=== failures ===")
         for sid, url, err in failures:
             print(f"  {sid}: {url}\n    {err}")
-    # non-zero on fetch errors so CI shows red — the workflow runs this step with
-    # continue-on-error, so captured data is still committed, but a partial sweep
-    # is never silently reported as a success
+    # non-zero on CONFIRMED errors so CI shows red — the workflow runs this step
+    # with continue-on-error, so captured data is still committed, but a partial
+    # sweep is never silently reported as a success. Unconfirmed and contradicted
+    # absences (a 404 from this vantage point that an independent witness did not
+    # corroborate, or that it refuted) are fully logged but do not redden the run,
+    # except a persistent contradiction, which reddens as a vantage problem.
     return 1 if stats.get("errors") else 0
 
 
