@@ -100,6 +100,18 @@ def test_confirmed_absence_still_feeds_streak(tmp_path):
     assert site_hunt.error_streaks(p)[("s", "t")]["streak"] == 2
 
 
+def test_recheck_recovered_breaks_streak(tmp_path):
+    # a sibling's live fetch in the same run supersedes an earlier claim
+    p = _events(tmp_path, [
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "1", "absence": "confirmed"},
+        {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",
+         "ts": "2", "absence": "confirmed"},
+        {"source": "s", "target": "t", "outcome": "recheck-recovered", "kind": "provider-live", "ts": "3"},
+    ])
+    assert ("s", "t") not in site_hunt.error_streaks(p)
+
+
 def test_contradicted_absence_does_not_feed_streak(tmp_path):
     p = _events(tmp_path, [
         {"source": "s", "target": "t", "outcome": "error", "url": "u", "kind": "provider-live",

@@ -451,7 +451,8 @@ def test_persistent_contradiction_becomes_a_vantage_alert(tmp_path, monkeypatch)
     monkeypatch.setattr(cap, "wayback_witness", _w("live", 200))
     assert _run_wb(monkeypatch, reg, data_root) == 1     # red, but NOT an absence claim
     e = _events(data_root)[-1]
-    assert e["absence"] == "contradicted" and e["consecutive_absent_days"] == 3
+    assert e["absence"] == "contradicted" and e["consecutive_contradicted_days"] == 3
+    assert "absent_on" not in e and "consecutive_absent_days" not in e
 
 
 def test_inconclusive_witness_first_day_is_unconfirmed(tmp_path, monkeypatch):
@@ -597,6 +598,9 @@ def test_rate_limited_witness_stops_further_witnesses(tmp_path, monkeypatch):
     monkeypatch.setattr(cap, "wayback_witness", witness)
     assert _run_wb(monkeypatch, reg, data_root) == 0
     assert calls == ["https://ex.org/a.txt"]
+    evs = [e for e in _events(data_root) if e["outcome"] == "error"]
+    assert evs[0]["witness"]["reason"] == "rate-limited" and evs[0]["witness_skipped"] is None
+    assert evs[1]["witness"] is None and evs[1]["witness_skipped"] == "rate-limited"
 
 
 def test_shared_url_siblings_reuse_one_recheck_and_witness(tmp_path, monkeypatch):
@@ -662,19 +666,117 @@ def test_rendered_failure_without_status_is_a_plain_error(tmp_path, monkeypatch)
     assert e["outcome"] == "error" and "absence" not in e
 
 
+def test_live_witness_yesterday_restarts_streak_and_vetoes_the_day_route(tmp_path, monkeypatch):
+    # the MAI pattern across days: runner 404 daily; witness inconclusive (d-2),
+    # LIVE (d-1), inconclusive (today) — the day route must not confirm over a
+    # sighting that proved the document existed yesterday
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2))
+    _seed(data_root, _days_ago(1), absence="contradicted")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "unconfirmed" and e["confirmed_by"] == []
+    assert e["absent_on"] == [_today()] and e["consecutive_absent_days"] == 1
+    assert e["last_live_witness"] == _days_ago(1)
+
+
+def test_day_route_resumes_once_the_live_sighting_ages_out(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(4), absence="contradicted")   # outside the window
+    _seed(data_root, _days_ago(2))
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["confirmed_by"] == ["consecutive-days"]
+    assert e["absent_on"] == [_days_ago(2), _today()] and "last_live_witness" not in e
+
+
+def test_fresh_absent_witness_confirms_despite_a_live_witness_yesterday(tmp_path, monkeypatch):
+    # the witness route is the strong one: a document removed since yesterday
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1), absence="contradicted")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["witness"]
+
+
+def test_vantage_alert_survives_an_inconclusive_day_in_between(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(3), absence="contradicted")
+    _seed(data_root, _days_ago(2), absence="contradicted")
+    _seed(data_root, _days_ago(1))                              # inconclusive that day
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("live", 200))
+    assert _run_wb(monkeypatch, reg, data_root) == 1           # red as a vantage problem
+    e = _events(data_root)[-1]
+    assert e["absence"] == "contradicted" and e["consecutive_contradicted_days"] == 3
+
+
+def test_sibling_live_fetch_supersedes_an_earlier_absence_claim_in_the_run(tmp_path, monkeypatch):
+    # registry sources share portal URLs; if the first sibling's fetch and re-check
+    # 404 but a later sibling fetches the URL live minutes later, the run itself
+    # proves the 404 was transient: the claim is superseded and the gate corrected
+    shared = "https://ex.org/portal.txt"
+    body = (b"shared\n", _meta(shared, "text/plain"))
+    tslug = cap.target_slug("provider-live", shared)
+    reg = _write_registry(tmp_path, [_src("prov/a", shared), _src("prov/b", shared)])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch", _seq([body]))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    with open(data_root / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": f"{_days_ago(1)}T06:00:00Z", "source": "prov/a",
+                             "target": tslug, "url": shared, "kind": "provider-live",
+                             "outcome": "error", "error": "HTTP 404",
+                             "absence": "unconfirmed"}) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err(), body]))   # a: 404, 404; b: 200
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    claim, recovery, sibling = _events(data_root)[-3:]
+    assert claim["source"] == "prov/a" and claim["absence"] == "confirmed"
+    assert recovery["source"] == "prov/a" and recovery["outcome"] == "recheck-recovered"
+    assert recovery["recovered_by"] == "prov/b" and recovery["prior_absence"] == "confirmed"
+    assert [o["status_code"] for o in recovery["observations"]] == [404, 404]
+    assert sibling["source"] == "prov/b" and sibling["outcome"] == "unchanged"
+    assert ("prov/a", tslug) not in rc_mod.absence_streaks(data_root / "events.jsonl")
+
+
+def test_absence_event_dates_come_from_the_event_clock(tmp_path, monkeypatch):
+    # a run crossing UTC midnight must not stamp today's event with yesterday's dates
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    clock = iter(["2026-08-22T23:59:59Z"] + ["2026-08-23T00:00:05Z"] * 50)
+    monkeypatch.setattr(cap, "utc_now", lambda: next(clock))
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    _run_wb(monkeypatch, reg, data_root)
+    e = _events(data_root)[-1]
+    assert e["ts"] == "2026-08-23T00:00:05Z" and e["absent_on"] == ["2026-08-23"]
+
+
 def test_absence_streaks_reader(tmp_path):
     p = tmp_path / "events.jsonl"
     rows = [
         {"source": "s", "target": "t", "outcome": "error", "absence": "unconfirmed", "ts": "2026-08-20T06:00:00Z"},
         {"source": "s", "target": "t", "outcome": "error", "ts": "2026-08-21T06:00:00Z"},   # plain
         {"source": "s", "target": "t", "outcome": "error", "absence": "contradicted", "ts": "2026-08-22T06:00:00Z"},
+        {"source": "s", "target": "t", "outcome": "error", "absence": "unconfirmed", "ts": "2026-08-23T06:00:00Z"},
+        {"source": "s", "target": "t", "outcome": "error", "absence": "unconfirmed", "ts": "2026-8-24T06:00:00Z"},  # damaged
+        {"source": "s", "target": "t", "outcome": "error", "absence": "unconfirmed", "ts": 20260825},           # damaged
         {"source": "s", "target": "u", "outcome": "error", "absence": "confirmed", "ts": "2026-08-22T06:00:00Z"},
         {"source": "s", "target": "u", "outcome": "unchanged", "ts": "2026-08-23T06:00:00Z"},
+        {"source": "s", "target": "v", "outcome": "error", "absence": "confirmed", "ts": "2026-08-22T06:00:00Z"},
+        {"source": "s", "target": "v", "outcome": "recheck-recovered", "ts": "2026-08-23T06:00:00Z"},
     ]
     p.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
     s = rc_mod.absence_streaks(p)
-    assert s[("s", "t")] == {"absent_on": {"2026-08-20"}, "contradicted_on": {"2026-08-22"}}
-    assert ("s", "u") not in s
+    # a live-witness day restarts the absence streak; damaged timestamps are skipped
+    assert s[("s", "t")] == {"absent_on": {"2026-08-23"}, "contradicted_on": {"2026-08-22"}}
+    assert ("s", "u") not in s and ("s", "v") not in s
 
 
 def test_recheck_delay_env_parse_is_guarded(monkeypatch):

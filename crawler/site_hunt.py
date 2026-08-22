@@ -76,7 +76,8 @@ def error_streaks(events_path: Path):
             entry["streak"] += 1
             entry["url"] = e.get("url") or entry["url"]
             entry["last_ts"] = e.get("ts") or entry["last_ts"]
-        elif e.get("outcome") in ("new", "unchanged", "unchanged-content"):
+        elif e.get("outcome") in ("new", "unchanged", "unchanged-content",
+                                  "recheck-recovered"):
             last.pop(key, None)  # streak broken for this target
             ts = e.get("ts") or ""
             # Only a live-DOCUMENT success suppresses a sibling's hunt. A provider-page

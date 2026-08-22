@@ -546,11 +546,20 @@ def wayback_save(url: str, timeout: int = 120):
                 if re.match(r"^https://web\.archive\.org/web/\d{14}/", hop_loc):
                     snapshot = hop_loc
                     break
+        # SPN's own answer is the redirect hop that named the capture (else the
+        # final response). status_code stays the FINAL response: after a redirect
+        # that is the replay of the capture, so it reads 404 for a correctly
+        # archived error page — never mistake it for SPN's verdict.
+        spn_status = r.status_code
+        for hop in getattr(r, "history", []) or []:
+            if snapshot and (hop.headers.get("Location") or "") == snapshot:
+                spn_status = hop.status_code
+                break
         # "accepted" = SPN assigned a capture timestamp (it does so even when the
         # origin answered 4xx: the error page is archived); durable presence in
         # the index is established later by retry_wayback.py --verify
         return {"ok": snapshot is not None, "status_code": r.status_code,
-                "snapshot": snapshot, "at": utc_now()}
+                "spn_status": spn_status, "snapshot": snapshot, "at": utc_now()}
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "error": repr(exc), "at": utc_now()}
 
@@ -574,18 +583,22 @@ def wayback_witness(url: str) -> dict:
     auditor needs is recorded: SPN status, replayed URL, Memento-Datetime,
     replay status, redirect chain, origin server header, and a reason.
     """
+    from datetime import timedelta
     from email.utils import parsedate_to_datetime
     t0 = datetime.now(timezone.utc)
     save = wayback_save(url)
+    spn_status = save.get("spn_status", save.get("status_code"))
     out = {"witness": "wayback", "saw": "inconclusive", "status": None,
-           "snapshot": save.get("snapshot"), "spn_status": save.get("status_code"),
+           "snapshot": save.get("snapshot"), "spn_status": spn_status,
            "requested_at": t0.strftime("%Y-%m-%dT%H:%M:%SZ"), "memento_datetime": None,
            "final_url": None, "redirects": [], "origin_server": None, "reason": None,
            "at": utc_now()}
-    if save.get("status_code") == 429:
+    snap = save.get("snapshot")
+    if not snap and 429 in (spn_status, save.get("status_code")):
+        # SPN itself refused us. A 429 from the replay of an ACCEPTED capture is
+        # left to the poll loop below and does not halt witnessing for the run.
         out["reason"] = "rate-limited"
         return out
-    snap = save.get("snapshot")
     if not snap:
         out["reason"] = "spn-no-capture" + (f" (SPN {save.get('status_code')})"
                                             if save.get("status_code") else "")
@@ -608,10 +621,13 @@ def wayback_witness(url: str) -> dict:
         if memento:
             out["memento_datetime"] = memento
             try:
-                fresh = (parsedate_to_datetime(memento)
-                         >= t0 - __import__("datetime").timedelta(seconds=WITNESS_FRESH_SLACK_S))
-            except Exception:  # noqa: BLE001
-                fresh = False
+                md = parsedate_to_datetime(memento)
+                if md.tzinfo is None:      # "-0000" parses naive; Wayback means UTC
+                    md = md.replace(tzinfo=timezone.utc)
+                fresh = md >= t0 - timedelta(seconds=WITNESS_FRESH_SLACK_S)
+            except Exception:  # noqa: BLE001 — a header that cannot be evaluated
+                out["reason"] = "memento-unparsable"   # re-polling cannot fix it
+                return out
             if fresh:
                 out["status"] = status
                 if status == 200:

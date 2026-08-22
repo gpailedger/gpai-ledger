@@ -343,6 +343,41 @@ def test_witness_rate_limited_is_flagged(monkeypatch):
     assert (w["saw"], w["reason"]) == ("inconclusive", "rate-limited")
 
 
+def test_wayback_save_records_spn_answer_separately_from_the_replay(monkeypatch):
+    # SPN answered 302 (capture assigned); the final hop is the replay of an
+    # archived 404 page — status_code keeps the final hop, spn_status SPN's verdict
+    hop = FakeResp(302, headers={"Location": SNAP})
+    resp = FakeResp(404, url=SNAP, headers={"Memento-Datetime": _memento(1)})
+    resp.history = [hop]
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    s = cap.wayback_save("https://x/d.pdf")
+    assert s["ok"] and s["snapshot"] == SNAP
+    assert (s["spn_status"], s["status_code"]) == (302, 404)
+
+
+def test_witness_replay_429_behind_an_accepted_capture_is_not_rate_limited(monkeypatch):
+    save = {"ok": True, "status_code": 429, "spn_status": 302, "snapshot": SNAP, "at": "t"}
+    fake, _ = _witness_env(monkeypatch, save, [FakeResp(429)] * 4)
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["reason"] != "rate-limited" and w["spn_status"] == 302
+    assert w["saw"] == "inconclusive" and len(fake.calls) == 4
+
+
+def test_witness_unparsable_memento_is_flagged_without_repolling(monkeypatch):
+    fake, sleeps = _witness_env(monkeypatch, OK_SAVE, [
+        FakeResp(404, headers={"Memento-Datetime": "not a date"})] * 4)
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert (w["saw"], w["reason"]) == ("inconclusive", "memento-unparsable")
+    assert len(fake.calls) == 1 and sleeps == []
+
+
+def test_witness_naive_memento_is_read_as_utc(monkeypatch):
+    naive = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S -0000")
+    _witness_env(monkeypatch, OK_SAVE, [FakeResp(404, headers={"Memento-Datetime": naive})])
+    w = cap.wayback_witness("https://x/d.pdf")
+    assert w["saw"] == "absent"
+
+
 def test_wayback_save_snapshot_from_content_location(monkeypatch):
     resp = FakeResp(200, url="https://web.archive.org/save/https://x/d.pdf",
                     headers={"Content-Location": "/web/20260822090000/https://x/d.pdf"})

@@ -87,27 +87,45 @@ with a prior stored capture, `run_capture.py` therefore:
    `live`, fresh 404/410 ⇒ `absent`, anything else ⇒ `inconclusive` (a stale
    snapshot, an un-replayable capture, an SPN refusal or rate limit — the reason
    is recorded). The witness is the Internet Archive's crawler: a *second
-   datacenter vantage*, not a residential one. At most `MAX_WITNESSES_PER_RUN`
-   witnesses are consulted per run; an SPN 429 stops further witnesses for the
-   run. Under `--no-wayback` no witness is consulted (`witness_skipped` says why).
+   datacenter vantage*, not a residential one. The witness record carries SPN's
+   own answer (`spn_status`) separately from the replay it may have redirected
+   to. At most `MAX_WITNESSES_PER_RUN` witnesses are consulted per run, and an
+   SPN refusal with 429 stops further witnesses for the run; whenever no witness
+   is consulted, `witness_skipped` records why (`no-wayback`, `budget`,
+   `rate-limited`).
 3. **Classifies and records** the event with `vantage`, both `observations`
    (status, diagnostic headers, error — never backfilled across observations),
    `witness` (or `witness_skipped`), `absent_on` (the distinct UTC dates of the
-   current unbroken absence streak, including today), and
+   current unbroken absence streak, including today; the event's `ts` and these
+   dates come from one clock reading), and
    `absence`: **`confirmed`** when the witness replayed a fresh 404/410
    (`confirmed_by: ["witness"]`) OR when the absence has been observed on
    `CONFIRM_AFTER_DAYS` distinct UTC dates with the most recent prior one within
    `ABSENCE_WINDOW_DAYS` (`confirmed_by: ["consecutive-days"]` — same vantage
    point, weaker than the witness; same-day re-runs count once; any successful
    fetch resets the streak; plain errors neither reset nor count; calendar
-   adjacency is not required so a single missed sweep does not break it);
+   adjacency is not required so a single missed sweep does not break it; a day
+   on which a fresh witness saw the document live restarts the streak and vetoes
+   this route until that sighting is older than `ABSENCE_WINDOW_DAYS` — the
+   witness outranks the runner's own vantage, and the veto is recorded as
+   `last_live_witness`);
    **`contradicted`** when a fresh witness saw the document live — the runner
-   cannot see what other networks can; **`unconfirmed`** otherwise.
+   cannot see what other networks can (these events carry `contradicted_on` and
+   `consecutive_contradicted_days` instead of `absent_on`); **`unconfirmed`**
+   otherwise.
+   Several registry sources can share one URL: if a later source fetches that
+   URL live in the same run, every claim already recorded for it in that run is
+   superseded by a `recheck-recovered` event (`recovered_by` names the source
+   whose fetch succeeded, `prior_absence` what it supersedes) and the run's
+   health gate is corrected — the run itself holds the proof the 404 was
+   transient.
 
 Only **confirmed** absences count toward the health gate and toward
 relocation-hunt streaks. Unconfirmed and contradicted absences are fully logged
-and do not redden the run — except that `CONTRADICTED_ALERT_DAYS` consecutive
-contradicted days redden it with a distinct "vantage problem" failure, without
+and do not redden the run — except that contradictions on
+`CONTRADICTED_ALERT_DAYS` distinct dates of the current streak (the most recent
+prior one within `ABSENCE_WINDOW_DAYS`; an inconclusive day in between does not
+reset the count) redden it with a distinct "vantage problem" failure, without
 claiming absence. Neither confirmation route is a residential observation: a
 published dark-window report must cite at least two independent observations,
 at least one of them non-datacenter (the operator's own check).
