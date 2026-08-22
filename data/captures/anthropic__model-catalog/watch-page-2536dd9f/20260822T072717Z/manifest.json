@@ -1,0 +1,39 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
+  "size_bytes": 948150,
+  "stored_as": "raw.html",
+  "text_sha256": "fa3dbdd560cbfec676e415d8d9b69d0a11db38f5eaf49b95ac81f3c7e9a99921",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-22T07:27:17Z"
+  },
+  "prior_sha256": "aed90a9e92a262d91709a19a97c818090a14c01a7f38f262ca4ac124d41f59c3",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260822012523/https://platform.claude.com/docs/en/about-claude/models/overview",
+    "at": "2026-08-22T07:28:18Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-22T07:28:22Z"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "provider-live",
+  "sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
+  "size_bytes": 258815,
+  "stored_as": "raw.pdf",
+  "text_sha256": "9f178c4405ce249109a9cedf6045d6eaf42814ed95207f5c33766767f63f413a",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = unsigned CDN path",
+    {
+      "stable_base": "/m1/v/t0.84174-6/An-TWEhcecqio5SX1To6264jnvrDnu2h2w5JcmKLJ7W-Oju3R0_G4czYpEyBu34nl4Z5f2m936NrtEGdg6xi8kG4XC-tareHqKg2jCyn46zinSXZUm1yS37RyJfKkVg8F8KoxiA",
+      "hub_period": "2026 - Muse Image"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-ams2-1.xx.fbcdn.net/m1/v/t0.84174-6/An-TWEhcecqio5SX1To6264jnvrDnu2h2w5JcmKLJ7W-Oju3R0_G4czYpEyBu34nl4Z5f2m936NrtEGdg6xi8kG4XC-tareHqKg2jCyn46zinSXZUm1yS37RyJfKkVg8F8KoxiA?_nc_gid=DtOeQCAJi4WlLYl9vQUpHw&_nc_oc=Adpa6zpXchoGWad-utKIaK0UQ4p-Wa6ZTT3zqW4ZoazG3-uX6qPCpXU1Ntnvrm6fSlU&ccb=10-5&oh=00_AQFGhE-4OQlbB-UTcmUw4k5rCDH8GgRlJjw1buuWfuiXtg&oe=6A8B37B7&_nc_sid=68f2c3",
+    "final_url": "https://scontent-ams2-1.xx.fbcdn.net/m1/v/t0.84174-6/An-TWEhcecqio5SX1To6264jnvrDnu2h2w5JcmKLJ7W-Oju3R0_G4czYpEyBu34nl4Z5f2m936NrtEGdg6xi8kG4XC-tareHqKg2jCyn46zinSXZUm1yS37RyJfKkVg8F8KoxiA?_nc_gid=DtOeQCAJi4WlLYl9vQUpHw&_nc_oc=Adpa6zpXchoGWad-utKIaK0UQ4p-Wa6ZTT3zqW4ZoazG3-uX6qPCpXU1Ntnvrm6fSlU&ccb=10-5&oh=00_AQFGhE-4OQlbB-UTcmUw4k5rCDH8GgRlJjw1buuWfuiXtg&oe=6A8B37B7&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "749582973061030574",
+    "last_modified": null,
+    "content_length": "258815",
+    "fetched_at": "2026-08-22T07:31:06Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260822073225/https://scontent-ams2-1.xx.fbcdn.net/m1/v/t0.84174-6/An-TWEhcecqio5SX1To6264jnvrDnu2h2w5JcmKLJ7W-Oju3R0_G4czYpEyBu34nl4Z5f2m936NrtEGdg6xi8kG4XC-tareHqKg2jCyn46zinSXZUm1yS37RyJfKkVg8F8KoxiA?_nc_gid=DtOeQCAJi4WlLYl9vQUpHw&_nc_oc=Adpa6zpXchoGWad-utKIaK0UQ4p-Wa6ZTT3zqW4ZoazG3-uX6qPCpXU1Ntnvrm6fSlU&ccb=10-5&oh=00_AQFGhE-4OQlbB-UTcmUw4k5rCDH8GgRlJjw1buuWfuiXtg&oe=6A8B37B7&_nc_sid=68f2c3",
+    "at": "2026-08-22T07:32:32Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-22T07:32:36Z"
+  }
+}

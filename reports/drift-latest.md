@@ -1,9 +1,11 @@
-# Live-vs-archive drift — 2026-08-21
+# Live-vs-archive drift — 2026-08-22
 
 | Model | Verdict | Similarity / note |
 |---|---|---|
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6243 |
-| Muse Spark | DRIFT-CANDIDATE | 0.9926 |
+| Muse Glimmer | DRIFT-CANDIDATE | 0.9943 |
+| Muse Image | DRIFT-CANDIDATE | 0.9897 |
+| Muse Spark | DRIFT-CANDIDATE | 0.9833 |
 | MAI-Code-1.1-Flash | incomplete | live=1 archive=n |
 | MAI-Cyber-1-Flash | incomplete | live=1 archive=n |
 | MAI-Thinking-1 | incomplete | live=1 archive=n |
@@ -25,8 +27,6 @@
 | C4AI Command A Plus | identical-bytes |  |
 | Gemini 3 Pro | identical-bytes |  |
 | Gemma 4 | identical-bytes |  |
-| Muse Glimmer | identical-bytes |  |
-| Muse Image | identical-bytes |  |
 | MAI-Code-1-Flash | identical-bytes |  |
 | MAI-Image-2 | identical-bytes |  |
 | MAI-Image-2.5 | identical-bytes |  |

@@ -1084,11 +1084,15 @@
       {
         "sha256": "570412c89b4c5bd21246ed298e5a722d6e59239230f7f6c01a20336e2be25a44",
         "dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z"
+      },
+      {
+        "sha256": "1b4581bfbee6e7dc233084f8bf8e2429ec3df47b076e79c87d0b06ddbe9b9411",
+        "dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z"
       }
     ],
-    "last_sha256": "570412c89b4c5bd21246ed298e5a722d6e59239230f7f6c01a20336e2be25a44",
-    "last_text_sha256": "f1819b179fcf3a80f913617c16b09227ff946f9231e18092e8dc3235af440674",
-    "last_capture": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z"
+    "last_sha256": "1b4581bfbee6e7dc233084f8bf8e2429ec3df47b076e79c87d0b06ddbe9b9411",
+    "last_text_sha256": "dd2d961a598bd3a1040ce1f42a891e921dde3e5edb441667df58a80462a9f82d",
+    "last_capture": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z"
   },
   "cohere/command-a-plus::provider-live-9d5f4d88": {
     "versions": [
@@ -1303,11 +1307,15 @@
       {
         "sha256": "3a08fcdfb2e11956c07fd16eb3aaa4b563073cadc81204b620d637c4351c647d",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260821T100311Z"
+      },
+      {
+        "sha256": "460f2eb9bc4fe7e06b9c0c782291ac3a0310a9b6dd20228641cc081115aa39b9",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z"
       }
     ],
-    "last_sha256": "3a08fcdfb2e11956c07fd16eb3aaa4b563073cadc81204b620d637c4351c647d",
-    "last_text_sha256": "a8d5971d688a082c9cca831a843d317f1ecc25999a3f7c7569af938a10df1129",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20260821T100311Z"
+    "last_sha256": "460f2eb9bc4fe7e06b9c0c782291ac3a0310a9b6dd20228641cc081115aa39b9",
+    "last_text_sha256": "f268cffe333fb8d0ad9f3941b5a80fd39f11ea709bcd442ee0c84b90c8556c95",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -1318,11 +1326,15 @@
       {
         "sha256": "aed90a9e92a262d91709a19a97c818090a14c01a7f38f262ca4ac124d41f59c3",
         "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z"
+      },
+      {
+        "sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
+        "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z"
       }
     ],
-    "last_sha256": "aed90a9e92a262d91709a19a97c818090a14c01a7f38f262ca4ac124d41f59c3",
-    "last_text_sha256": "371dccd9c0089f6050de28fa99f76bef4f311624c2aee8d249ad6b329877a2a3",
-    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z"
+    "last_sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
+    "last_text_sha256": "fa3dbdd560cbfec676e415d8d9b69d0a11db38f5eaf49b95ac81f3c7e9a99921",
+    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z"
   },
   "mistral-ai/model-catalog::watch-page-de362d33": {
     "versions": [
@@ -1355,11 +1367,15 @@
       {
         "sha256": "3b5e0e18fea9642173a27c2864d45b77623707485d9567f3f77f6e4bd121c4b8",
         "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260820T110521Z"
+      },
+      {
+        "sha256": "40c2ba912e30c54e2f5e6436453b078ec2b208336cfc9546f99a25fb69db0ed6",
+        "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z"
       }
     ],
-    "last_sha256": "3b5e0e18fea9642173a27c2864d45b77623707485d9567f3f77f6e4bd121c4b8",
-    "last_text_sha256": "8554a7e6b90b15bc90516d56f56a7d14efd8de10bb9682b727c98b2d4b6e9597",
-    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20260820T110521Z"
+    "last_sha256": "40c2ba912e30c54e2f5e6436453b078ec2b208336cfc9546f99a25fb69db0ed6",
+    "last_text_sha256": "bf055d6531635af0f86d10325ac3d4fd853c9c81982ce0d141e1c9eabf93434c",
+    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z"
   },
   "microsoft/model-catalog::watch-page-72b310dd": {
     "versions": [
@@ -1479,5 +1495,41 @@
     "last_text_sha256": "062b4de103f62795093b0607e15a8aff800421d4b21ab51c86911ad77f4ae2ea",
     "last_capture": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z",
     "managed": "meta_hub"
+  },
+  "meta/muse-glimmer::provider-live-4d91704b": {
+    "versions": [
+      {
+        "sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
+        "dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
+      }
+    ],
+    "last_sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
+    "last_text_sha256": "055485ff5ef01e616873911247a41b73a773243b7b37f0706cfdfbb0e541c2e0",
+    "managed": "meta_hub",
+    "last_capture": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
+  },
+  "meta/muse-image::provider-live-a63bf5b9": {
+    "versions": [
+      {
+        "sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
+        "dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z"
+      }
+    ],
+    "last_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
+    "last_text_sha256": "9f178c4405ce249109a9cedf6045d6eaf42814ed95207f5c33766767f63f413a",
+    "managed": "meta_hub",
+    "last_capture": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z"
+  },
+  "meta/muse-spark::provider-live-10891b9c": {
+    "versions": [
+      {
+        "sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
+        "dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
+      }
+    ],
+    "last_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
+    "last_text_sha256": "18d4606aa93affa23918fddef57f4867ce7dbcc73ee5065322370ab28af4e883",
+    "managed": "meta_hub",
+    "last_capture": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
   }
 }
