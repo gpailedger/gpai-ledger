@@ -209,6 +209,11 @@ def main() -> int:
                     continue
             elif args.only.lower() not in source["id"].lower():
                 continue
+        if source.get("retired"):
+            # retired sources keep their archived versions and permalinks but are
+            # no longer fetched
+            print(f"  SKIP   {source['id']} — retired: {source['retired']}", flush=True)
+            continue
         for target in source.get("targets", []):
             url, kind = target["url"], target["kind"]
             tslug = cap.target_slug(kind, url)

@@ -761,6 +761,16 @@ def test_sweep_time_budget_skips_remaining_targets_and_reddens(tmp_path, monkeyp
     assert "source" not in e                                    # run-level, not a target check
 
 
+def test_retired_source_is_never_fetched(tmp_path, monkeypatch):
+    src = dict(_src("prov/model", "https://ex.org/doc.txt"),
+               retired="retired 2026-08-22: upstream eval removed")
+    reg = _write_registry(tmp_path, [src])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(cap, "fetch", _boom)
+    assert _run(monkeypatch, reg, data_root) == 0
+    assert not (data_root / "events.jsonl").exists() or _events(data_root) == []
+
+
 def test_304_is_not_replayed_to_a_sibling_without_a_capture(tmp_path, monkeypatch):
     shared = "https://ex.org/portal.txt"
     body = (b"shared\n", _meta(shared, "text/plain"))

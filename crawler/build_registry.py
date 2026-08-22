@@ -314,9 +314,12 @@ def org_slug(org: str) -> str:
     return slugify(org.strip()) or "unknown"
 
 
-# Source ids the operator has deliberately retired: the only ids the refresh may
-# drop from the committed registry (every other disappearance fails the refresh).
-RETIRED_SOURCE_IDS: set = set()
+# Source ids the operator has deliberately retired (id -> dated reason). A retired
+# source is never dropped: the refresh carries its last committed entry forward
+# flagged "retired", the sweep stops fetching it, and the site keeps its pages and
+# permalinks with a "no longer tracked" note. Every other disappearance of a
+# tracked id fails the refresh.
+RETIRED_SOURCE_IDS: dict = {}
 
 
 def main(aial_repo: str, out_path=None) -> None:
@@ -464,6 +467,20 @@ def main(aial_repo: str, out_path=None) -> None:
             if t["url"] in INPAGE_DOC_URLS:
                 t["inpage"] = True
 
+    out = Path(out_path) if out_path else Path(__file__).parent / "sources.json"
+    prev_sources = ({s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))
+                     .get("sources", [])} if out.exists() else {})
+    new_ids = {s["id"] for s in sources}
+    for rid, reason in RETIRED_SOURCE_IDS.items():
+        if rid in new_ids:
+            for s in sources:
+                if s["id"] == rid:
+                    s["retired"] = reason
+        elif rid in prev_sources:
+            carried = dict(prev_sources[rid])
+            carried["retired"] = reason
+            sources.append(carried)
+
     status_counts = {}
     for s in sources:
         status_counts[s["status"]] = status_counts.get(s["status"], 0) + 1
@@ -475,18 +492,15 @@ def main(aial_repo: str, out_path=None) -> None:
         "sources": sources,
     }
 
-    out = Path(out_path) if out_path else Path(__file__).parent / "sources.json"
     # Fail closed: the refresh must never drop a source the committed registry
     # already tracks — an upstream rename or removal would otherwise unpublish
     # that model's permalinks. The step fails, the committed registry stays in
     # force, and the run reddens so the change is handled deliberately.
-    if out.exists():
-        prev_ids = {s["id"] for s in json.loads(out.read_text(encoding="utf-8")).get("sources", [])}
-        missing = sorted(prev_ids - {s["id"] for s in sources} - RETIRED_SOURCE_IDS)
-        if missing:
-            sys.exit(f"refusing to write a registry that drops {len(missing)} tracked "
-                     f"source id(s): {', '.join(missing[:8])} — add them to "
-                     f"RETIRED_SOURCE_IDS or remap them deliberately")
+    missing = sorted(set(prev_sources) - {s["id"] for s in sources})
+    if missing:
+        sys.exit(f"refusing to write a registry that drops {len(missing)} tracked "
+                 f"source id(s): {', '.join(missing[:8])} — retire them in "
+                 f"RETIRED_SOURCE_IDS (with a dated reason) or remap them deliberately")
     tmp = out.with_name(out.name + ".tmp")
     tmp.write_text(json.dumps(registry, indent=2, ensure_ascii=False), encoding="utf-8")
     os.replace(tmp, out)

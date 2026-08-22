@@ -92,6 +92,19 @@ def test_build_registry_refuses_to_drop_a_tracked_source(tmp_path):
     assert not out.with_name(out.name + ".tmp").exists()
 
 
+def test_build_registry_carries_a_retired_source_forward_flagged(tmp_path, monkeypatch):
+    out = tmp_path / "sources.json"
+    br.main(str(_fake_aial(tmp_path, ["alpha", "beta"])), out_path=out)
+    (tmp_path / "aial" / "evals" / "beta.yaml").unlink()
+    monkeypatch.setattr(br, "RETIRED_SOURCE_IDS",
+                        {"testorg/beta": "retired 2026-08-22: upstream eval removed"})
+    br.main(str(tmp_path / "aial"), out_path=out)
+    by_id = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert by_id["testorg/beta"]["retired"] == "retired 2026-08-22: upstream eval removed"
+    assert by_id["testorg/beta"]["targets"]                     # last committed targets kept
+    assert "retired" not in by_id["testorg/alpha"]
+
+
 # --- site_hunt.error_streaks logic ---
 
 def _events(tmp_path, rows):
