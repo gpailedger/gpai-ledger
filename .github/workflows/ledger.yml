@@ -100,7 +100,7 @@ jobs:
       # must never be lost to a tooling error.
       - name: Commit corpus changes
         id: commit
-        if: always()
+        if: success() || failure()
         env:
           PUSH_TOKEN: ${{ github.token }}
         run: |
@@ -139,7 +139,7 @@ jobs:
 
       - name: Build site
         id: sitebuild
-        if: always()
+        if: success() || failure()
         env:
           # repo Variables (Settings -> Secrets and variables -> Actions -> Variables)
           # flip the site to the custom domain without a commit:
@@ -154,7 +154,7 @@ jobs:
 
       - name: Reader-lens site lint
         id: sitelint
-        if: always()
+        if: success() || failure()
         env:
           # must mirror the Build site step's env: L1 resolves against the same
           # prefix, and L15 verifies the domain-mode SEO surface actually shipped
