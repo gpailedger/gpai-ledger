@@ -23,7 +23,7 @@ See `reports/` for findings.
   - `prune_capture.py` — the only sanctioned capture-removal tool (refuses content-bearing versions; logs provenance)
   - `capture.py` — core library (fetching incl. conditional GETs, rendering, extraction, `store_new_version` write path)
 - `data/` — the corpus
-  - `captures/<provider>/<model>/<target>/<utc-ts>/` — raw bytes, `extracted.txt`, `manifest.json`, `.ots` proof
+  - `captures/<provider>__<model>/<kind>-<url-hash>/<utc-ts>/` — raw bytes, `extracted.txt`, `manifest.json`, `.ots` proof
   - `state.json` — version index; `events.jsonl` — append-only check log
 - `site/` — static permalink site generator (`/ledger/<provider>/<model>/v/<capture>/`) + reader-lens lint
 - `tests/` — offline pytest suite (fixture corpora, mocked network; runs in CI before every sweep)

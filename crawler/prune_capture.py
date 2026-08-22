@@ -61,11 +61,14 @@ def main() -> int:
         return json.loads(m_p.read_text(encoding="utf-8")).get("text_sha256")
 
     victim_text = manifest.get("text_sha256")
-    neighbours = [versions[i] for i in (idx - 1, idx + 1)
-                  if 0 <= i < len(versions)]
-    if not victim_text or not any(text_sha_of(n) == victim_text for n in neighbours):
-        print("REFUSED: capture's canonical text does not match a neighbouring "
-              "version — this is a content-bearing capture, not noise")
+    # only the PREVIOUS version counts: a capture whose sole identical neighbour
+    # comes later is the earliest dated sighting of that content (its OTS proof
+    # and fetch time are evidence of when it was first observed), never noise
+    earlier = versions[idx - 1] if idx > 0 else None
+    if not victim_text or earlier is None or text_sha_of(earlier) != victim_text:
+        print("REFUSED: capture's canonical text does not match the previous "
+              "version — this is a content-bearing capture or the earliest "
+              "sighting of its content, not noise")
         return 1
 
     shutil.rmtree(cap_dir)

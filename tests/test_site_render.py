@@ -148,6 +148,39 @@ def test_prior_cell_none_is_first_capture():
     assert "first capture of this target" in build.prior_cell(None, {SHA})
 
 
+def test_prior_cell_scope_repack_is_captioned_as_repack_not_prune():
+    out = build.prior_cell(SHA, set(), repacked_shas={SHA})
+    assert "scope repack" in out.lower() and "pruned" not in out
+
+
+# --- C0. escaping of third-party strings ---
+
+def test_jsonld_cannot_break_out_of_its_script_element():
+    hostile = "</script><script>alert(1)</script>&"
+    head = build.head_meta(jsonld=[{"@type": "BreadcrumbList", "name": hostile}])
+    block = head.split('<script type="application/ld+json">')[1].split("</script>")[0]
+    assert "<" not in block and ">" not in block and "&" not in block
+    assert json.loads(block)["name"] == hostile
+
+
+def test_url_attr_neutralizes_protocol_relative_destinations():
+    assert build.url_attr("//evil.example/x") == "#"
+    assert build.url_attr("/local/path") == "/local/path"
+
+
+def test_extract_display_drops_nul_bytes_and_says_so():
+    out = build.extract_display(mk_manifest(), "abc\x00def")
+    assert "\x00" not in out and "abcdef" in out and "NUL" in out
+    assert "<pre class='extract'>" in out
+
+
+def test_version_page_restamped_proof_is_captioned_honestly():
+    m = mk_manifest(ots={"ok": True, "restamped_at": "2026-08-20T06:00:00Z"})
+    out = build.render_version_page(SRC, m, "20260815T060000Z", set(), "hello", True, True)
+    assert "stamp submitted 2026-08-20T06:00:00Z" in out and "no later than" in out
+    assert "proves the capture time" not in out
+
+
 # --- E. version_row_html notes ---
 
 def mk_row(**over):
@@ -324,6 +357,26 @@ def run_lint(monkeypatch, dist):
                         lambda *a, **k: lines.append(" ".join(map(str, a))))
     rc = lint.main()
     return rc, [ln[2:] for ln in lines if ln.startswith("  L")]
+
+
+def test_lint_l2_l6_ignore_third_party_extract_but_police_generator_text(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    page = dist / "methodology" / "index.html"
+    page.parent.mkdir()
+    page.write_text(_page("Methodology", "<pre class='extract'>provider text with "
+                          "â€ mojibake and {placeholder}</pre>"), encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert not [f for f in findings if f.startswith(("L2", "L6"))]
+    page.write_text(_page("Methodology", "<p>{placeholder}</p>"), encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L6") for f in findings)
+
+
+def test_lint_covers_the_404_page(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    (dist / "404.html").write_text(_page("Not found", "<p>{placeholder}</p>"), encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L6") and "404.html" in f for f in findings)
 
 
 def test_lint_l5_doc_blob_without_text_or_note(tmp_path, monkeypatch):

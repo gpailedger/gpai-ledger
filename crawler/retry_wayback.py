@@ -34,14 +34,22 @@ def _save(p: Path, m: dict) -> None:
     cap.atomic_write_text(p, json.dumps(m, indent=2, ensure_ascii=False))
 
 
+def _capture_ts(url: str):
+    m = re.search(r"/web/(\d{14})", url or "")
+    return m.group(1) if m else None
+
+
 def verify_snapshots() -> int:
     """Verify wayback.ok snapshot URLs still resolve; demote only on PROOF of
     death. archive.org throttles bursts by dropping connections, and a dropped
-    connection is not a dead snapshot: only a definitive HTTP 404/410 counts,
-    and only when observed on two separate dated runs (first sighting records
-    suspect_dead_since; a later run's second 404 demotes). GET, not HEAD —
-    Wayback answers HEAD unreliably. Anything else (timeouts, resets, 429,
-    5xx, other statuses) is skipped for a future run."""
+    connection is not a dead snapshot: only a definitive HTTP 404/410 — or a
+    200 that Wayback served from a DIFFERENT capture timestamp (it redirects a
+    missing timestamp to the nearest neighbour, which says nothing about the
+    recorded capture) — counts, and only when observed on two separate UTC
+    dates (first sighting records suspect_dead_since; a later day's second
+    strike demotes). GET, not HEAD — Wayback answers HEAD unreliably. Anything
+    else (timeouts, resets, 429, 5xx, other statuses) is skipped for a future
+    run."""
     checked = verified = suspected = demoted = 0
     for p in sorted(DATA.rglob("manifest.json")):
         m = json.loads(p.read_text(encoding="utf-8"))
@@ -58,25 +66,37 @@ def verify_snapshots() -> int:
             time.sleep(10)
             continue
         getattr(r, "close", lambda: None)()
+        final = getattr(r, "url", None) or snap
+        wanted, served = _capture_ts(snap), _capture_ts(final)
+        strike = None
         if status == 200:
-            wb["snapshot_verified"] = cap.utc_now()
-            wb.pop("suspect_dead_since", None)
-            m["wayback"] = wb
-            verified += 1
+            if served is None or wanted is None or served == wanted:
+                wb["snapshot_verified"] = cap.utc_now()
+                wb.pop("suspect_dead_since", None)
+                wb.pop("suspect_reason", None)
+                m["wayback"] = wb
+                verified += 1
+            else:
+                strike = f"replayed as a different capture ({served}, not {wanted})"
         elif status in (404, 410):
-            if wb.get("suspect_dead_since"):
+            strike = f"returned {status}"
+        if strike:
+            now = cap.utc_now()
+            since = wb.get("suspect_dead_since")
+            if since and since[:10] < now[:10]:
                 m.setdefault("wayback_attempts", []).append(dict(wb))
                 m["wayback"] = {"ok": False, "snapshot": snap,
-                                "error": f"snapshot returned {status} on two "
-                                         f"dated checks ({wb['suspect_dead_since']} "
-                                         f"and {cap.utc_now()})"}
+                                "error": f"snapshot {strike} on two dated checks "
+                                         f"({since} and {now})"}
                 demoted += 1
-                print(f"DEMOTED (404 twice): {m['source_id']} {snap[:90]}")
-            else:
-                wb["suspect_dead_since"] = cap.utc_now()
+                print(f"DEMOTED (two dated strikes): {m['source_id']} {snap[:90]}")
+            elif not since:
+                wb["suspect_dead_since"] = now
+                wb["suspect_reason"] = strike
                 m["wayback"] = wb
                 suspected += 1
-                print(f"suspect (first {status}): {m['source_id']} {snap[:90]}")
+                print(f"suspect (first strike, {strike}): {m['source_id']} {snap[:90]}")
+            # a second strike on the SAME UTC date is not a second dated check
         # other statuses: no verdict, leave untouched
         _save(p, m)
         time.sleep(6)

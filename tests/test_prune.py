@@ -88,6 +88,16 @@ def test_refuses_victim_with_null_text_sha256(corpus, monkeypatch):
     assert d2.exists()
 
 
+def test_refuses_first_version_even_when_the_next_one_is_identical(corpus, monkeypatch):
+    # v1 is the earliest dated sighting of its content: its OTS proof and fetch
+    # time are the evidence of when it was first observed — never noise
+    (d1, _), (_, _), (_, _) = three_versions(
+        corpus, "stable body text", "stable  body\ntext", "a new third body")
+    root = corpus.finish()
+    assert run_prune(monkeypatch, root, TS1) == 1
+    assert d1.exists()
+
+
 # --- successful prunes ---
 
 def test_prunes_middle_noise_version_and_repairs_state(corpus, monkeypatch):

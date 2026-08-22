@@ -43,6 +43,9 @@ if not PREFIX.endswith("/"):
 MOJIBAKE = re.compile(r"â€|Ã¢|Ã©|Ã¨|�")
 PLACEHOLDER = re.compile(r"\{[a-z_]+\}|<class '|Traceback \(most recent")
 LINK = re.compile(r"href='([^']+)'|href=\"([^\"]+)\"")
+# the verbatim third-party extract on version pages: the provider's typography,
+# not this site's rendering — L2/L6 police the generator's own output only
+EXTRACT_BLOCK = re.compile(r"<pre class='extract'>.*?</pre>", re.S)
 
 
 def main() -> int:
@@ -52,7 +55,7 @@ def main() -> int:
     # generated pages only: copied capture artifacts (raw.html) are archived
     # third-party documents, not subject to site checks
     pages = sorted(p for p in DIST.rglob("*.html")
-                   if p.name in ("index.html", "about.html"))
+                   if p.name in ("index.html", "about.html", "404.html"))
     if not pages:
         print("site/lint: no pages found — run site/build.py first")
         return 1
@@ -85,7 +88,8 @@ def main() -> int:
 
         # L2 mojibake. U+FFFD is exempt when the page carries the extraction note
         # explaining a source-font limitation; double-encoding markers never are.
-        mm = MOJIBAKE.search(html)
+        scan = EXTRACT_BLOCK.sub("", html)
+        mm = MOJIBAKE.search(scan)
         if mm and not (mm.group(0) == "�" and "are shown as �" in html):
             findings.append(f"L2 mojibake marker {mm.group(0)!r} on {rel}")
 
@@ -94,7 +98,7 @@ def main() -> int:
             findings.append(f"L8 no About link on {rel}")
 
         # L6 template/repr leakage
-        pm = PLACEHOLDER.search(html)
+        pm = PLACEHOLDER.search(scan)
         if pm:
             findings.append(f"L6 template/repr artifact {pm.group(0)!r} on {rel}")
 

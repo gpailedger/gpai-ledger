@@ -238,6 +238,8 @@ def url_attr(s):
     """Escape a URL for an href/src, neutralizing dangerous schemes (javascript:,
     data:) that html.escape leaves clickable. Provider-controlled URLs land here."""
     u = str(s or "").strip()
+    if u.startswith("//"):
+        return "#"  # protocol-relative: an off-site destination in disguise
     if u.startswith(("https://", "http://", "/", "#", "mailto:")):
         return html.escape(u)
     return "#"
@@ -300,8 +302,11 @@ def head_meta(desc: str = "", canonical_path: str = None, robots: str = None,
         out.append(f'<link rel="alternate" type="application/atom+xml" '
                    f'title="GPAI Ledger — changes" href="{SITE_URL}{PREFIX}changes/atom.xml">')
     for block in (jsonld or []):
-        out.append('<script type="application/ld+json">'
-                   + json.dumps(block, ensure_ascii=False) + '</script>')
+        # JSON inside <script> must never be able to close the element: '<', '>'
+        # and '&' become JSON \u escapes (still valid JSON, identical once parsed)
+        payload = (json.dumps(block, ensure_ascii=False)
+                   .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
+        out.append('<script type="application/ld+json">' + payload + '</script>')
     return "\n".join(out) + "\n"
 
 
@@ -345,8 +350,14 @@ def write(path: Path, title: str, body: str, desc: str = "",
         stamp=esc(BUILD_STAMP), crumbs=crumbs), encoding="utf-8")
 
 
+# hashes of full bundles replaced by an Art. 53 scope repack (scope-repack
+# events); filled by main() before any version page renders
+REPACKED_SHAS = set()
+
+
 def last_checked_map():
-    """source id -> latest event timestamp (proof-of-life for every page)."""
+    """source id -> latest event timestamp (proof-of-life for every page). Also
+    collects REPACKED_SHAS from scope-repack events in the same pass."""
     out = {}
     p = DATA / "events.jsonl"
     if not p.exists():
@@ -359,6 +370,8 @@ def last_checked_map():
         src, ts = e.get("source"), e.get("ts", "")
         if src and ts:
             out[src] = max(out.get(src, ""), ts)
+        if e.get("outcome") == "scope-repack" and e.get("prior_sha256"):
+            REPACKED_SHAS.add(e["prior_sha256"])
     return out
 
 
@@ -372,9 +385,13 @@ def zip_inner_files(manifest) -> list:
             if isinstance(n, dict) and "inner_file" in n]
 
 
-def prior_cell(prior_sha, corpus_shas, prior_ref=None) -> str:
-    """Prior-capture row: a prior sha whose capture was pruned as byte-churn noise
-    must say so, not silently reference a version that is nowhere on the site.
+def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()) -> str:
+    """Prior-capture row: a prior sha whose capture is no longer in the corpus
+    must say WHY, not silently reference a version that is nowhere on the site.
+    Only two sanctioned paths remove a capture, each leaving an event: a scope
+    repack that replaced a full bundle by its Art. 53 subset (repacked_shas =
+    the replaced bundles' hashes from scope-repack events, as verify_corpus C4
+    reads them) and a prune of content-identical byte churn.
     prior_ref: (cap_slug, iso_ts) of the prior version's page when it is
     published as a sibling permalink — the hash then links to it."""
     if not prior_sha:
@@ -385,6 +402,11 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None) -> str:
             return (f"<a href='../{esc(slug)}/'><code>{esc(prior_sha)}</code></a> "
                     f"<span class='muted'>(captured {esc(iso)})</span>")
         return f"<code>{esc(prior_sha)}</code>"
+    if prior_sha in repacked_shas:
+        return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(the full bundle as "
+                f"fetched, replaced by this Art. 53 scope repack: members outside "
+                f"scope are recorded by name and hash but never served — the "
+                f"replacement is a scope-repack event in the log)</span>")
     return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture was "
             f"pruned as content-identical noise — by the prune rule its content is "
             f"identical to a retained version of this target; its hash is in the "
@@ -497,7 +519,14 @@ def extract_display(manifest, text) -> str:
         marker = (f"<p class='muted'>[Extract truncated at {EXTRACT_DISPLAY_LIMIT:,} "
                   f"characters for page size — the stored file above is complete; the "
                   f"SHA-256 covers the full file.]</p>")
-    return f"<h2>Extracted text</h2>{label}<pre>{esc(shown)}</pre>{marker}"
+    if "\x00" in shown:
+        # NUL is not a legal HTML character; the stored extracted.txt keeps the
+        # extractor's output verbatim, the page simply cannot carry it
+        shown = shown.replace("\x00", "")
+        marker = ("<p class='muted'>[Control characters (NUL) produced by text "
+                  "extraction are omitted from this display; the stored file and "
+                  "its SHA-256 are unaffected.]</p>") + marker
+    return f"<h2>Extracted text</h2>{label}<pre class='extract'>{esc(shown)}</pre>{marker}"
 
 
 def blob_names(m):
@@ -551,9 +580,13 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
         stored_cell = (f"<a href='{esc(serve_name)}' download>{esc(blob_name)}</a> "
                        f"({m['size_bytes']:,} bytes){serve_note}"
                        if raw_exists else f"{esc(m['stored_as'])} ({m['size_bytes']:,} bytes)")
+    restamped = (m.get("ots") or {}).get("restamped_at")
+    ots_caption = (f"stamp submitted {esc(restamped)}, after the fetch — the original "
+                   f"submission failed; the proof shows the bytes existed no later "
+                   f"than that date (anchored in bitcoin over time)"
+                   if restamped else "calendar-attested; anchored in bitcoin over time")
     ots_cell = (f"<a href='{esc(serve_ots)}' download>{esc(ots_blob)}</a> "
-                f"<span class='muted'>(calendar-attested; anchored in bitcoin "
-                f"over time)</span>" if ots_exists else "not stamped")
+                f"<span class='muted'>({ots_caption})</span>" if ots_exists else "not stamped")
     if restricted:
         verify_line = ("<p class='muted'>Verify: obtain the document from "
                        "the provider or the Wayback snapshot, then "
@@ -564,7 +597,9 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                        f"must equal the hash above (the filename IS the expected "
                        f"hash); <code>ots verify {esc(ots_blob)} -f {esc(blob_name)}</code> "
                        f"(<a href='https://opentimestamps.org'>opentimestamps.org</a>) "
-                       f"proves the capture time (fresh proofs report "
+                       + ("proves the bytes existed no later than the stamp date"
+                          if restamped else "proves the capture time")
+                       + f" (fresh proofs report "
                        f"'pending' until bitcoin-anchored, typically within a "
                        f"day).</p>")
     notes = reader_notes(m)
@@ -596,7 +631,7 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
             f"<tr><th>SHA-256</th><td><code>{esc(m['sha256'])}</code></td></tr>"
             f"<tr><th>OpenTimestamps proof</th><td>{ots_cell}</td></tr>"
             f"<tr><th>Wayback</th><td>{wayback_cell(m)}</td></tr>"
-            f"<tr><th>Prior capture of this target</th><td>{prior_cell(m.get('prior_sha256'), corpus_shas, prior_ref)}</td></tr>"
+            f"<tr><th>Prior capture of this target</th><td>{prior_cell(m.get('prior_sha256'), corpus_shas, prior_ref, REPACKED_SHAS)}</td></tr>"
             f"{repack_row}"
             f"{notes_row}"
             f"</table></div>{verify_line}"

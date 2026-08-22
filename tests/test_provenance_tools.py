@@ -137,12 +137,48 @@ def test_verify_dead_snapshot_needs_two_dated_404s(corpus, monkeypatch):
     m = manifest_of(d)
     assert m["wayback"]["ok"] is True
     assert m["wayback"]["suspect_dead_since"]
+    run_retry(monkeypatch, root, "--verify")                   # same UTC date: no 2nd strike
+    assert manifest_of(d)["wayback"]["ok"] is True
+    monkeypatch.setattr(RW.cap, "utc_now", lambda: "2099-01-01T00:00:00Z")
     run_retry(monkeypatch, root, "--verify")
     m = manifest_of(d)
     assert m["wayback"]["ok"] is False
     assert "on two dated checks" in m["wayback"]["error"]
     assert m["wayback"]["snapshot"] == SNAP
     assert m["wayback_attempts"][0]["snapshot"] == SNAP
+
+
+class _RedirectingRequests(FakeRequests):
+    """A 200 served after Wayback redirected to ANOTHER capture timestamp."""
+
+    def __init__(self, final_url):
+        super().__init__(status=200)
+        self.final_url = final_url
+
+    def get(self, url, **kw):
+        self.calls.append(url)
+        return types.SimpleNamespace(status_code=200, content=b"", url=self.final_url)
+
+
+def test_verify_200_from_a_different_capture_timestamp_is_a_strike(corpus, monkeypatch):
+    # Wayback redirects a missing timestamp to the NEAREST capture: a 200 there
+    # says nothing about the recorded snapshot
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": SNAP})
+    root = corpus.finish()
+    monkeypatch.setattr(RW, "requests", _RedirectingRequests(
+        "https://web.archive.org/web/20240101000000/https://example.org/doc.pdf"))
+    run_retry(monkeypatch, root, "--verify")
+    m = manifest_of(d)
+    assert "snapshot_verified" not in m["wayback"]
+    assert m["wayback"]["suspect_dead_since"] and "different capture" in m["wayback"]["suspect_reason"]
+
+
+def test_verify_200_at_the_same_timestamp_via_url_canonicalisation_verifies(corpus, monkeypatch):
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": SNAP})
+    root = corpus.finish()
+    monkeypatch.setattr(RW, "requests", _RedirectingRequests(SNAP + "/"))
+    run_retry(monkeypatch, root, "--verify")
+    assert manifest_of(d)["wayback"]["snapshot_verified"]
 
 
 def test_verify_exceptions_and_throttling_give_no_verdict(corpus, monkeypatch):
