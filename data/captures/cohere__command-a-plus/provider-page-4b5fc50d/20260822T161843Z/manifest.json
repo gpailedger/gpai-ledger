@@ -1,0 +1,51 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
+  "size_bytes": 871745,
+  "stored_as": "raw.html",
+  "text_sha256": "dd2d961a598bd3a1040ce1f42a891e921dde3e5edb441667df58a80462a9f82d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "871745",
+    "fetched_at": "2026-08-22T16:18:43Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 1,
+    "frames_captured": []
+  },
+  "prior_sha256": "dd46d17e59dc9ac46c5cfd0bdc46783b935faee337bfbcad09c258f29de0eca2",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "at": "2026-08-22T16:29:47Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-22T16:20:48Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "at": "2026-08-22T16:20:44Z"
+    }
+  ]
+}
