@@ -71,7 +71,7 @@ KIND_LABELS = {
     "provider-live": "provider site",
     "provider-page": "provider page",
     "aial-archive": "AIAL archived copy",
-    "cop-doc": "Code of Practice doc (Art. 53(1)(b)–(c))",
+    "cop-doc": "Code of Practice doc (Art. 53(1)(a)–(c))",
     "regulatory": "official document",
     "watch-page": "watched page",
 }
@@ -215,7 +215,7 @@ PAGE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <ul>
 <li><a href="{p}what-is-a-training-data-summary/">What is a training-data summary?</a></li>
 <li><a href="{p}deadlines/">Deadlines</a></li>
-<li><a href="{p}dataset/">Dataset &amp; API</a></li>
+<li><a href="{p}dataset/">Dataset (JSON)</a></li>
 <li><a href="{p}corrections/">Corrections</a></li>
 <li><a href="{p}privacy/">Privacy</a></li>
 {repo_li}</ul>
@@ -870,8 +870,9 @@ def render_index(model_rows, other_rows, stats: dict) -> str:
              + "</dl>")
     return (f"<h1>The public record of EU AI Act training-data summaries</h1>"
             f"<p>Article 53(1)(d) of the EU AI Act requires every provider of a "
-            f"general-purpose AI model to publish a <em>public summary of training "
-            f"content</em>. Providers publish these documents on their own sites and "
+            f"general-purpose AI model placed on the EU market — open-source models "
+            f"included — to publish a <em>public summary of training content</em>. "
+            f"Providers publish these documents on their own sites and "
             f"can change, move, or remove them at any time — no official registry "
             f"exists. The GPAI Ledger checks every known summary on a daily schedule and archives "
             f"every version with a SHA-256 hash, an OpenTimestamps proof, and — where "
@@ -895,8 +896,9 @@ def render_index(model_rows, other_rows, stats: dict) -> str:
 def render_about() -> str:
     return f"""<h1>About the GPAI Ledger</h1>
 <p>The GPAI Ledger is a public-interest archive of the training-data disclosures the
-EU AI Act requires: Article 53(1)(d) obliges providers of general-purpose AI models on
-the EU market to publish a summary of the content used to train each model. Providers
+EU AI Act requires: Article 53(1)(d) obliges providers of general-purpose AI models placed
+on the EU market to publish a summary of the content used to train each model,
+according to the Commission's template. Providers
 publish these documents on their own websites and may change, move, or remove them at
 any time; no official registry exists. This ledger checks every known summary on a
 daily schedule, keeps every content version, and records the evidence needed to
@@ -934,7 +936,7 @@ public-interest transparency, research, and verification, with attribution.</p>"
 
 def render_methodology() -> str:
     repo_link_m = (f'<a href="{esc(REPO_URL)}">the project repository</a>'
-                   if REPO_URL else "the project repository (public from launch)")
+                   if REPO_URL else "the project repository")
     return f"""<h1>Capture, hash, timestamp: how the evidence is made</h1>
 <p>Every location where a <em>public summary of training content</em>
 (Article 53(1)(d), Regulation (EU) 2024/1689) is published gets checked on a daily
@@ -952,7 +954,7 @@ pages, an inner-file hash set for provider bundles.</li>
 <li><strong>Prove.</strong> Each stored version keeps the exact fetched bytes, the
 extracted text, HTTP metadata, a SHA-256, an
 <a href="https://opentimestamps.org">OpenTimestamps</a> proof (anchored in the
-bitcoin blockchain within hours), and — where the URL permits — a triggered
+bitcoin blockchain, typically within a day), and — where the URL permits — a triggered
 Internet Archive (Wayback) snapshot as an independent witness.</li>
 <li><strong>Publish.</strong> Every version gets a permanent page; stored bytes are
 served under their own hash from the content-addressed <code>/blob/</code> store.</li>
@@ -963,7 +965,7 @@ the filename is the expected checksum:</p>
 <pre>sha256sum &lt;sha256&gt;.pdf          # must equal the filename / the version page's SHA-256
 ots verify &lt;sha256&gt;.pdf.ots -f &lt;sha256&gt;.pdf   # proves capture time (opentimestamps.org)</pre>
 <p>OpenTimestamps proofs are attested by public calendar servers within seconds and
-anchored in the bitcoin blockchain within hours; anchored proofs verify against the
+anchored in the bitcoin blockchain, typically within a day; anchored proofs verify against the
 blockchain with no trust in this site required. The crawler, verifier, and full
 corpus (raw bytes, manifests, event log) are public in {repo_link_m}, so
 the whole archive can be re-verified from source.</p>
@@ -971,10 +973,10 @@ the whole archive can be re-verified from source.</p>
 <p>Version URLs (<code>/ledger/&lt;provider&gt;/&lt;model&gt;/v/&lt;capture&gt;/</code>)
 are stable and safe to cite; content-bearing versions are never removed. Model
 slugs are never renamed. The one exception is narrow: a re-capture whose bytes
-changed but whose content is identical to a neighbouring version (banner churn,
+changed but whose content is identical to a neighboring version (banner churn,
 re-rendering) may be pruned as noise — every prune is logged in the append-only
 event log with the pruned file's hash — and the prune rule itself guarantees
-the pruned capture's content survives in a neighbouring retained version.
+the pruned capture's content survives in a neighboring retained version.
 Capture ids are minting timestamps and can trail the fetch
 time by seconds; the manifest's <code>fetched_at</code> is authoritative.</p>
 <h2>Provider objections</h2>
@@ -988,14 +990,15 @@ page that links it. <em>AIAL archived copy</em>: the write-once snapshot archive
 the AI Accountability Lab. <em>watched page</em>: a portal, hub, or listing monitored
 because documents appear or change there. <em>official document</em>: European
 Commission material (the template summaries must follow). <em>Code of Practice
-doc</em>: a document under Art. 53(1)(b)–(c) — related to, but not, the 53(1)(d)
+doc</em>: a document published under the Art. 56 Code of Practice, whose chapters cover
+Art. 53(1)(a)–(c) and Art. 55 — related to, but distinct from, the Art. 53(1)(d)
 summary.</p>
 <h2>Complementary resources</h2>
 <p><a href="https://aial.ie/research/gpai-training-transparency/">AIAL's
 transparency tracker</a> grades the quality of published summaries.
 <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689
 on EUR-Lex</a> is the law itself. The
-<a href="https://digital-strategy.ec.europa.eu/en/policies/ai-act-gpai">European
+<a href="https://digital-strategy.ec.europa.eu/en/factpages/general-purpose-ai-obligations-under-ai-act">European
 Commission's GPAI pages</a> carry the official template and guidance.</p>"""
 
 
@@ -1006,44 +1009,61 @@ Regulation (EU) 2024/1689</p>
 <p>The EU AI Act requires every provider of a general-purpose AI (GPAI) model placed
 on the EU market to <em>"draw up and make publicly available a sufficiently detailed
 summary about the content used for training"</em> — Article 53(1)(d) of Regulation
-(EU) 2024/1689. It is the first legal instrument anywhere that forces AI companies
-to disclose, publicly, what their models were trained on.</p>
+(EU) 2024/1689. It is among the first legal instruments anywhere that force AI companies
+to disclose, publicly, what their models were trained on — applicable since 2 August 2025,
+ahead of California's AB 2013 (operative from 1 January 2026).</p>
 <h2>What the summary must contain</h2>
-<p>The European Commission published a mandatory template in July 2025 (originally
-C(2025) 5235, reissued in formal adoption as C(2025) 8311 final —
+<p>The European Commission issued the mandatory template on 24 July 2025 (C(2025)
+5235 final) and formally adopted it as a Commission Communication on
+5 December 2025 (C(2025) 8311 final —
 <a href="{PREFIX}ledger/eu-commission/explanatory-notice-and-template/">every
 version archived here</a>). A compliant summary identifies the model and provider,
-then discloses — per modality — the main data sources. The accompanying Explanatory
-Notice sets the level of detail; it also directs providers to update the summary
-when further training materially changes the picture — at least every six months
-where such updates are required — while the model is on the market.</p>
+states the modalities and overall size of the training data, then lists the main data
+sources by category. The accompanying Explanatory Notice sets the level of detail; it
+also directs a provider who further trains a model already on the market on additional
+data requiring a change to the summary to update it — at six-month intervals, or sooner
+if that data requires a materially significant change to the summary's content — and to
+record the date of each update.</p>
 <h2>The template's three sections</h2>
 <ol>
-<li><strong>General information</strong> — provider and model identification,
-modalities, overall size of the training data, and the market-placement date.</li>
-<li><strong>List of data sources</strong> — per category: public and licensed
-datasets, data scraped by the provider (with crawler names, collection periods,
-and respect for robots.txt and TDM rights reservations), user data, and synthetic
+<li><strong>General information</strong> — provider identification (including the
+authorised representative for providers established outside the EU, Article 54),
+model identification and dependencies, the date the model was placed on the EU
+market, and the modalities, overall size and general characteristics of the
+training data.</li>
+<li><strong>List of data sources</strong> — per category: publicly available
+datasets, private third-party datasets (licensed or otherwise), data crawled or
+scraped by or on behalf of the provider (with crawler names, crawler behavior such
+as respect for robots.txt, collection periods, and a summary of the top domain
+names scraped), user data, synthetic data, and other sources.</li>
+<li><strong>Relevant data processing aspects</strong> — the measures taken to
+respect reservations of rights under the text-and-data-mining exception (Article
+4(3) of Directive (EU) 2019/790) and to remove illegal content from the training
 data.</li>
-<li><strong>Data-processing aspects</strong> — how illegal content was removed
-and how opt-outs and rights reservations were honored.</li>
 </ol>
 <h2>Where to read the published summaries</h2>
 <p>The <a href="{PREFIX}status/">publication-status table</a> lists every tracked
 model; each links its archive of captured versions — for example
 <a href="{PREFIX}ledger/meta/muse-spark/">Meta Muse Spark</a> (a summary that has
 already changed between versions) or
-<a href="{PREFIX}ledger/fastweb/fastwebmiia/">Fastweb MIIA</a>.</p>
+<a href="{PREFIX}ledger/fastweb/fastwebmiia/">FastwebMIIA</a>.</p>
 <h2>Who must publish, and when</h2>
-<p>Every GPAI provider, EU-based or not, whose model is placed on the EU market.
-The obligation applies since <strong>2 August 2025</strong> for models placed on the
-market from that date; models already on the market before then have until
+<p>Every GPAI provider, EU-based or not, whose model is placed on the EU market —
+including providers of free and open-source models, because the open-source
+exemption in Article 53(2) covers only points (a) and (b) of Article 53(1), not the
+summary. A downstream entity that modifies a model so substantially that it becomes
+the provider must publish its own summary, limited to the data used for the
+modification. The obligation has applied since <strong>2 August 2025</strong> to models
+placed on the market from that date, with the summary due at the latest when the
+model is placed on the market; models already on the market before then have until
 <strong>2 August 2027</strong>. See the <a href="{PREFIX}deadlines/">deadlines
 page</a> for the full timeline.</p>
 <h2>What happens if a provider doesn't comply</h2>
-<p>The AI Office can demand information and compel compliance; fines for GPAI
-obligations can reach <strong>€15&nbsp;million or 3% of worldwide annual
-turnover</strong>, whichever is higher (Article 101). Enforcement powers apply from
+<p>The Commission, acting through the AI Office, can request information (Article
+91), request measures up to restricting or withdrawing the model (Article 93) and
+impose fines on GPAI providers of up to <strong>€15&nbsp;million or 3% of total
+worldwide annual turnover in the preceding financial year</strong>, whichever is
+higher (Article 101). These supervision and enforcement powers apply from
 2 August 2026.</p>
 <h2>Why an archive is needed</h2>
 <p>Providers publish these summaries on their own websites — behind changing URLs,
@@ -1056,11 +1076,11 @@ rather than a link that may die.</p>
 <h2>Read the sources</h2>
 <p><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU)
 2024/1689 (EUR-Lex)</a> · <a
-href="https://digital-strategy.ec.europa.eu/en/policies/ai-act-gpai">Commission GPAI
-policy page (template &amp; guidance)</a> · <a
+href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models">Commission
+Explanatory Notice &amp; template (public summary of training content)</a> · <a
 href="https://aial.ie/research/gpai-training-transparency/">AIAL's quality
 grades</a></p>
-<p class='muted'>Last reviewed: {esc((GENERATED or '')[:11])}. This page summarizes
+<p class='muted'>Last reviewed: {esc((GENERATED or '')[:10])}. This page summarizes
 the law for orientation; it is not legal advice.</p>"""
 
 
@@ -1069,25 +1089,38 @@ def render_deadlines() -> str:
 <p class='subtitle'>Article 53(1)(d), Regulation (EU) 2024/1689 — the timeline</p>
 <h2>2 August 2025 — the obligation starts</h2>
 <p>Providers placing a general-purpose AI model on the EU market from this date must
-publish the training-content summary. The Commission's mandatory template was
-published in July 2025 (C(2025) 5235, later reissued in formal adoption as
-C(2025) 8311 final).</p>
+publish the training-content summary, at the latest when the model is placed on the
+market; the open-source exemption in Article 53(2) does not cover this summary. The
+Commission's mandatory template was issued on 24 July 2025 (C(2025) 5235 final) and
+formally adopted as a Commission Communication on 5 December 2025 (C(2025)
+8311 final).</p>
 <h2>2 August 2026 — enforcement powers apply</h2>
-<p>The AI Office's enforcement powers for GPAI obligations apply. Fines for
-non-compliance with GPAI obligations can reach €15 million or 3% of worldwide annual
-turnover, whichever is higher (Article 101).</p>
-<h2>2 August 2027 — legacy models deadline</h2>
+<p>The Commission's supervision and enforcement powers over GPAI providers, exercised
+through the AI Office, apply (Articles 88–94). Fines for non-compliance with GPAI
+obligations, imposed by the Commission, can reach €15 million or 3% of total
+worldwide annual turnover in the preceding financial year, whichever is higher
+(Article 101).</p>
+<h2>2 August 2027 — legacy-model deadline</h2>
 <p>Providers of models placed on the market <em>before</em> 2 August 2025 must have
 brought them into compliance — including the public training-content summary — by
-this date.</p>
-<h2>Every 6 months — updates</h2>
-<p>Summaries must be kept up to date while the model is on the market; the
-Commission's Explanatory Notice directs updates when further training materially
-changes the disclosure, at a cadence of at least every six months where such
-updates are required. The GPAI Ledger's daily capture makes those updates — and
-any silent edits — visible as a version chain.</p>
+this date (Article 111(3)). The Explanatory Notice allows such a provider that cannot,
+despite best efforts, provide parts of the required information to state and justify
+the gaps in its summary.</p>
+<h2>Six-month intervals — updates after further training</h2>
+<p>The Regulation sets no fixed update cadence. The Commission's Explanatory Notice
+directs a provider that further trains a model already on the market on additional
+data requiring a change to the summary to update it at six-month intervals, or sooner
+if that data requires a materially significant change to the summary's content —
+whichever comes first — recording the date of each update. The GPAI Ledger's daily
+capture makes those updates — and any silent edits — visible as a version chain.</p>
+<h2>Unchanged by the Digital Omnibus</h2>
+<p>The Digital Omnibus on AI (Regulation (EU) 2026/1744, in force since 27 July 2026)
+postponed several high-risk and transparency deadlines but left the obligations of
+general-purpose AI model providers in Articles 51–55 — and every date on this page —
+unchanged.</p>
 <p><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Read the Regulation on
-EUR-Lex</a>.</p>"""
+EUR-Lex</a> · <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj">Regulation (EU)
+2026/1744 (Digital Omnibus on AI)</a>.</p>"""
 
 
 def render_corrections(entries: list) -> str:
@@ -1127,7 +1160,8 @@ def render_status_page(status_rows) -> str:
     return (f"<h1>Who has published a training-data summary — and who hasn't</h1>"
             f"<p class='subtitle'>Public summaries of training content · "
             f"Article 53(1)(d), Regulation (EU) 2024/1689</p>"
-            f"<p>Live status of every general-purpose AI model this ledger tracks. "
+            f"<p>Status of every general-purpose AI model this ledger tracks, as of "
+            f"the last sweep. "
             f"<em>Published</em> means a summary document is located and archived; "
             f"<em>missing</em> reflects the AI Accountability Lab's research "
             f"assessment (or this project's monitoring) that none has been found — "
@@ -1179,7 +1213,7 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             f"build. Metadata is CC0; the full corpus (raw bytes, manifests, "
             f"OpenTimestamps proofs, event log) lives in "
             + (f"<a href='{esc(REPO_URL)}'>the public repository</a>. " if REPO_URL
-               else "the public repository (linked from launch). ")
+               else "the public repository. ")
             + f"</p>"
             f"<h2>Fields</h2>"
             f"<p class='muted'>Top-level keys: <code>generated_utc</code>, "
@@ -1565,7 +1599,7 @@ def main(generated: str = None) -> int:
           "GPAI publication status: who has published an AI Act training-data "
           "summary — and who hasn't",
           status_body,
-          desc=f"Live publication status of Article 53(1)(d) summaries across "
+          desc=f"Publication status of Article 53(1)(d) summaries across "
                f"{n_published + n_missing} tracked GPAI models: published and "
                f"missing summaries, version counts, and last content changes — "
                f"each linked to archived evidence.",
@@ -1635,9 +1669,9 @@ def main(generated: str = None) -> int:
     write(DIST / "about" / "index.html",
           "About the GPAI Ledger — who runs it and why",
           render_about(),
-          desc="The GPAI Ledger is an independent public-interest archive of EU AI "
-               "Act training-data summaries, independently operated. Who "
-               "runs it, what is automated, and how to get in touch.",
+          desc="The GPAI Ledger is an independent, self-funded public-interest "
+               "archive of EU AI Act training-data summaries. Who runs it, what is "
+               "automated, and how to get in touch.",
           canonical_path=f"{PREFIX}about/")
     sitemap.append((f"{PREFIX}about/", None))
 

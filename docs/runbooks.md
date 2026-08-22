@@ -3,13 +3,13 @@
 Procedures for the corpus operations that are not part of the automated sweep.
 Everything here preserves the ledger's core invariant: **nothing is ever silently
 removed or altered** — every operation leaves an event in `data/events.jsonl` and
-the prune rule (content-identity with a retained neighbour) means no content
+the prune rule (content-identity with a retained neighbor) means no content
 is ever lost.
 
 ## Pruning a noise capture
 
 A capture qualifies as noise only if its canonical text is identical to a
-neighbouring version of the same target (byte churn without content change:
+neighboring version of the same target (byte churn without content change:
 banners, re-serialization). Never prune a content-bearing version.
 
 ```
@@ -37,7 +37,7 @@ page), or any party disputes a capture:
    no longer served. Captures continue (the hash chain must not break).
 3. For a factual dispute (e.g. "this was never published"): the manifest, OTS
    proof, and Wayback snapshot are the record; reply with the verification steps
-   from the About page. If our record is actually wrong, publish a dated
+   from the Methodology page. If our record is actually wrong, publish a dated
    correction note on the affected report/page — never edit history.
 4. Log the outcome as an event (`outcome: "dispute"`, with a note) so the
    append-only log carries the dispute's existence.

@@ -6,7 +6,7 @@ with full version
 history and per-capture provenance (SHA-256, OpenTimestamps proofs, triggered Wayback
 saves).
 
-**Current coverage:** every Art. 53(1)(d) summary this project has located, tracked at document level, plus models tracked with no summary located — most per AIAL's scoping assessment (“required but not found”, their four-step test; not a legal determination), some from this project's own monitoring with obligation status not assessed — plus the Commission's template documents and discovery watch pages. Live counts are on the site index, generated from the corpus at every build.
+**Current coverage:** every Art. 53(1)(d) summary this project has located, tracked at document level; models tracked with no summary located — most per AIAL's scoping assessment ("required but not found", their four-step test; not a legal determination), some from this project's own monitoring with obligation status not assessed; and the Commission's template documents and discovery watch pages. Live counts are on the site index, generated from the corpus at every build.
 
 See `reports/` for findings.
 
@@ -51,26 +51,28 @@ python site/build.py                     # regenerate site into site/dist/
 
 Captures identify themselves as `GPAI-Ledger/0.1` with a contact address. The crawler
 archives public regulatory disclosures; quoted material is attributed. A provider who
-objects to full-text archiving gets structured-facts + diff + Wayback-link treatment
-instead.
+objects to full-text archiving gets structured-facts treatment instead: hashes, sizes,
+text length and provenance metadata (including the Wayback link), without the document
+bytes or extracted text.
 
 ## Publishing and bootstrap
 
-The corpus was bootstrapped 11–19 August 2026 under manually triggered local runs;
-the automated daily schedule (`.github/workflows/ledger.yml`, 05:47 UTC) has run
-in GitHub Actions since 21 August 2026. Re-captures whose bytes changed but whose content
+The corpus was bootstrapped 11–21 August 2026 under manually triggered runs; the
+automated daily schedule (`.github/workflows/ledger.yml`, 05:47 UTC) runs in GitHub
+Actions from 22 August 2026, the day the repository and site went public. Re-captures
+whose bytes changed but whose content
 is identical (banner churn, re-serialization) may be pruned via
 `crawler/prune_capture.py`; every prune is logged in `data/events.jsonl` with the
 pruned file's hash; the prune rule only ever removes captures whose content
-is identical to a retained neighbouring version, so no content is ever lost.
+is identical to a retained neighboring version, so no content is ever lost.
 `crawler/verify_corpus.py` re-verifies the full corpus (hashes, proofs, state/disk
 consistency) in CI on every run.
 
 ## Provenance semantics
 
 - **Documents** (PDF/ZIP/DOCX/markdown) are stored as fetched, byte-exact; the
-  manifest records the SHA-256, HTTP metadata, a triggered Wayback save outcome, and
-  an OpenTimestamps proof sits beside the bytes. `upgrade_ots.py` upgrades pending
+  manifest records the SHA-256, HTTP metadata and the triggered Wayback save outcome,
+  and an OpenTimestamps proof sits beside the bytes. `upgrade_ots.py` upgrades pending
   calendar attestations to bitcoin anchors on later runs.
 - **Rendered captures**: targets flagged `"render": true` (JS-only pages) store a
   serialized post-JavaScript DOM — including substantive cross-origin iframes — and

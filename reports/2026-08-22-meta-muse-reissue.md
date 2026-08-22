@@ -1,7 +1,7 @@
 # Meta re-issued all three Muse training-data summaries on 21 August 2026
 
 **Detected:** 22 Aug 2026, 07:30 UTC, by the first scheduled autonomous sweep (the
-day after the archive went public). **Status:** observables only; no conclusion drawn
+day the archive went public). **Status:** observables only; no conclusion drawn
 about Meta's reasons.
 
 ## What changed
@@ -19,7 +19,7 @@ a new "Last Update" date:
 Word-level diffs (sha-pinned, full opcode enumeration — no length filter) show the same
 edits in every document:
 
-- **An authorized-representative postal address was added** to section 1.1:
+- **An authorized-representative (Article 54 AI Act) postal address was added** to section 1.1:
   "Merrion Road Dublin 4 D04 X2K5 Ireland".
 - **The support-contact URL (`https://ai.meta.com/help`) was replaced with "N/A".**
 - The market-placement date was reformatted (e.g. "7/7/26" → "July 7 2026").

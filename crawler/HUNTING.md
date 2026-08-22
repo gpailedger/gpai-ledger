@@ -1,4 +1,7 @@
-# Discovery & relocation: the three tiers
+# Discovery & relocation: the four tiers
+
+How the Ledger ensures a document that moves — or newly appears — still gets captured,
+without ever claiming more than the evidence supports.
 
 ## Tier 0 — model-universe discovery (added 19 Aug 2026)
 
@@ -22,10 +25,6 @@ are — the registry never grows on a feed's word alone. Scope honesty: "all pos
 models" is unbounded; Tier 0 covers (a) every new model from tracked providers,
 (b) every self-declared GPAI provider, (c) notable new entrants. Site language never
 claims exhaustiveness.
-
-
-How the Ledger ensures a document that moves — or newly appears — still gets captured,
-without ever claiming more than the evidence supports.
 
 ## Status vocabulary (binding for all reports)
 
@@ -68,8 +67,8 @@ entry only after fingerprint confirmation against stored text, or, for
 never-before-seen documents, after template-structure verification.
 
 Operation: run as an agent workflow in the operator's session, weekly cadence,
-targeting only the delta (currently ~21 missing models). Post-publication option:
-a scheduled cloud agent that files candidates for the next session to verify.
+targeting only the delta (currently ~21 missing models). A further option: a
+scheduled cloud agent that files candidates for the next session to verify.
 Findings feed `EXTRA_TARGETS` / `relocations.json` after verification.
 
 ## What remains manual by design

@@ -58,6 +58,6 @@ methodology changes upstream, update this file first, then the copy that depends
 - Discovery method: search engines + GenAI search + manual triad (model repo/README,
   provider legal/compliance pages, technical reports). Our Tier-2/Tier-3 hunts encode
   the same triad; `site_hunt.py` seeds include the legal/compliance paths.
-- Funding (per the paper): this work funded by Mozilla.org; AIAL funded under the AI
-  Collaborative (Omidyar Group), Bestseller Foundation, AI Security Institute, and
+- Funding (per the paper): AIAL's study was funded by Mozilla.org; AIAL is funded under
+  the AI Collaborative (Omidyar Group), Bestseller Foundation, AI Security Institute, and
   MacArthur Foundation; ADAPT under Research Ireland grant 13/RC/2106_P2.
