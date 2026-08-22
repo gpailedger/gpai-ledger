@@ -26,9 +26,10 @@
   },
   "prior_sha256": "fa3321b0f687d4c98b825ef4beba96be53043c1843f51805f42a2ac6af72bb3c",
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://transparency.meta.com/reports/regulatory-transparency-reports/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f267c05da60>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "at": "2026-08-22T07:35:29Z"
+    "ok": true,
+    "status_code": 200,
+    "snapshot": "https://web.archive.org/web/20260822075950/https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "at": "2026-08-22T08:00:05Z"
   },
   "ots": {
     "ok": true,
@@ -51,6 +52,11 @@
       "ok": false,
       "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://transparency.meta.com/reports/regulatory-transparency-reports/ (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
       "at": "2026-08-21T11:13:15Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://transparency.meta.com/reports/regulatory-transparency-reports/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f267c05da60>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "at": "2026-08-22T07:35:29Z"
     }
   ]
 }
