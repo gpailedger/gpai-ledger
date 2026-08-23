@@ -6,7 +6,7 @@ with full version
 history and per-capture provenance (SHA-256, OpenTimestamps proofs, triggered Wayback
 saves).
 
-**Current coverage:** every Art. 53(1)(d) summary this project has located, tracked at document level; models tracked with no summary located — most per AIAL's scoping assessment ("required but not found", their four-step test; not a legal determination), some from this project's own monitoring with obligation status not assessed; and the Commission's template documents and discovery watch pages. Live counts are on the site index, generated from the corpus at every build.
+**Current coverage:** every Art. 53(1)(d) summary this project has located, tracked at document level; models tracked with no summary located — most per AIAL's scoping assessment (models AIAL assesses, under its four-step scoping test, as requiring a public summary that it could not discover; not a legal determination), some from this project's own monitoring with obligation status not assessed; and the Commission's template documents and discovery watch pages. Live counts are on the site index, generated from the corpus at every build.
 
 See `reports/` for findings.
 
@@ -43,6 +43,8 @@ python crawler/build_registry.py /tmp/aial-repo
 
 python -m pytest tests/                  # offline test suite
 python crawler/run_capture.py            # full sweep
+python crawler/run_capture.py --only <source-id> --no-wayback --no-ots   # one source, locally
+python crawler/attest.py --source <source-id>   # record what YOUR network sees for a 404 the runner reports
 python crawler/meta_hub.py               # Meta hub editions
 python crawler/derived_targets.py        # re-mined-URL documents
 python crawler/analyze_drift.py
@@ -62,9 +64,12 @@ automated daily schedule (`.github/workflows/ledger.yml`, 05:47 UTC) runs in Git
 Actions from 22 August 2026, the day the repository and site went public. Re-captures
 whose bytes changed but whose content
 is identical (banner churn, re-serialization) may be pruned via
-`crawler/prune_capture.py`; every prune is logged in `data/events.jsonl` with the
-pruned file's hash; the prune rule only ever removes captures whose content
-is identical to a retained neighboring version, so no content is ever lost.
+`crawler/prune_capture.py`; every prune is logged in `data/events.jsonl` — prunes
+made by the tool carry the pruned file's hash and reason; the curation-time prunes
+of 11–19 August 2026 carry the capture directory, whose hash is in the matching
+`new` event — and the tool's rule only ever removes captures whose content is
+identical to a retained neighboring version. Pruned captures are not in this
+repository's history, which begins on 21 August 2026.
 `crawler/verify_corpus.py` re-verifies the full corpus (hashes, proofs, state/disk
 consistency) in CI on every run.
 

@@ -62,18 +62,24 @@ jobs:
             git checkout -- crawler/sources.json
           fi
 
+      - name: Allow the Chromium sandbox (Ubuntu 24.04 restricts unprivileged user namespaces)
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
       - name: Capture sweep (Wayback + OpenTimestamps per new version)
         id: capture
+        timeout-minutes: 115
         continue-on-error: true
         run: python crawler/run_capture.py
 
       - name: Meta hub extractor (EU AI Act series via rotating CDN URLs)
         id: metahub
+        timeout-minutes: 20
         continue-on-error: true
         run: python crawler/meta_hub.py
 
       - name: Derived targets (URLs re-mined from watched pages each run)
         id: derived
+        timeout-minutes: 20
         continue-on-error: true
         run: python crawler/derived_targets.py
 
@@ -114,7 +120,7 @@ jobs:
           else
             git commit -m "sweep: $(date -u +%Y-%m-%dT%H:%MZ)"
             pushed=0
-            for i in 1 2 3; do
+            for _ in 1 2 3; do
               if git push origin HEAD:main; then pushed=1; break; fi
               git pull --rebase origin main || { git remote set-url origin "https://github.com/${{ github.repository }}.git"; exit 1; }
             done

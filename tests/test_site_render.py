@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 import pytest
+import capture as cap
 
 from conftest import load_module
 
@@ -141,7 +142,11 @@ def test_prior_cell_sha_in_corpus_is_plain():
 
 
 def test_prior_cell_pruned_sha_is_annotated():
-    assert "pruned as content-identical noise" in build.prior_cell(SHA, set())
+    # the identity claim is made only for a prune the tool recorded; an
+    # unknown removal gets no claim at all
+    tool = {"via": "prune_capture", "reason": "r", "ts": "2026-08-21T00:00:00Z"}
+    assert "pruned as content-identical noise" in build.prior_cell(SHA, set(), pruned={SHA: tool})
+    assert "no prune event names it" in build.prior_cell(SHA, set(), pruned={})
 
 
 def test_prior_cell_none_is_first_capture():
@@ -407,6 +412,10 @@ def run_lint(monkeypatch, dist):
 FULL_SRC = {"id": "prov/model", "provider": "Prov", "model": "Model", "status": "published",
             "targets": [{"kind": "provider-live", "url": "https://example.org/doc.pdf"}]}
 V1, V2 = "20260801T060000Z", "20260815T060000Z"
+# the fixture target must carry the slug the build derives from the registry URL,
+# or every fixture row renders as a superseded target and the document table is
+# never exercised
+SLUG = cap.target_slug("provider-live", FULL_SRC["targets"][0]["url"])
 
 
 def _build_site(tmp_path, monkeypatch, data_root, vdiffs=None, drift=None):
@@ -428,20 +437,20 @@ def _build_site(tmp_path, monkeypatch, data_root, vdiffs=None, drift=None):
 
 def _two_versions(corpus):
     # stored extracts differ (as two extractor eras would leave them)
-    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 v1", text="stable body text")
-    corpus.add_capture(ts=V2, raw=b"%PDF-1.4 v2", text="stable body text updated")
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 v1", text="stable body text", tslug=SLUG)
+    corpus.add_capture(ts=V2, raw=b"%PDF-1.4 v2", text="stable body text updated", tslug=SLUG)
     root = corpus.finish()
-    key = "prov/model::provider-live-aaaa1111"
+    key = f"prov/model::{SLUG}"
     st = json.loads((root / "state.json").read_text(encoding="utf-8"))[key]
     return root, st["versions"][0]["dir"], st["versions"][1]["dir"]
 
 
 def _ledger(verdict, from_dir, to_dir, **extra):
-    rec = {"verdict": verdict, "source": "prov/model", "target": "provider-live-aaaa1111",
+    rec = {"verdict": verdict, "source": "prov/model", "target": SLUG,
            "from_dir": from_dir, "to_dir": to_dir, "same_tool": True,
            "compared_via": "re-extracted from the stored bytes with test"}
     rec.update(extra)
-    return {f"prov/model::provider-live-aaaa1111::{from_dir}>{to_dir}": rec}
+    return {f"prov/model::{SLUG}::{from_dir}>{to_dir}": rec}
 
 
 def test_build_ledger_identical_text_suppresses_change_note_and_feed_entry(corpus, tmp_path, monkeypatch):
@@ -596,3 +605,41 @@ def test_lint_real_dist_is_clean(monkeypatch):
         pytest.skip("site/dist not built")
     rc, findings = run_lint(monkeypatch, real)
     assert rc == 0 and findings == []
+
+
+def test_fixture_rows_render_in_the_document_table_not_as_superseded(corpus, tmp_path, monkeypatch):
+    data_root, d1, d2 = _two_versions(corpus)
+    dist = _build_site(tmp_path, monkeypatch, data_root, vdiffs=_ledger("changed", d1, d2, word_delta=1))
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "<h2>Document versions</h2>" in page
+    assert "Captures of superseded target URLs" not in page
+
+
+def test_build_fails_closed_when_a_state_version_has_no_manifest(corpus, tmp_path, monkeypatch):
+    data_root, _d1, d2 = _two_versions(corpus)
+    (data_root / d2 / "manifest.json").unlink()
+    root = tmp_path / "root"
+    (root / "crawler").mkdir(parents=True)
+    (root / "reports").mkdir()
+    (root / "crawler" / "sources.json").write_text(
+        json.dumps({"sources": [FULL_SRC]}), encoding="utf-8")
+    for name, val in (("ROOT", root), ("DATA", data_root),
+                      ("DIST", root / "site" / "dist"), ("STATIC", root / "site" / "static")):
+        monkeypatch.setattr(build, name, val)
+    assert build.main(generated="2026-08-22 00:00 UTC") == 1
+
+
+def test_lint_reports_the_built_size_and_guards_the_pages_limit(tmp_path, monkeypatch):
+    dist = tmp_path / "dist"
+    dist.mkdir()
+    (dist / "index.html").write_text("<title>x</title><h1>x</h1>", encoding="utf-8")
+    (dist / "big.bin").write_bytes(b"0" * 2_000_000)
+    monkeypatch.setattr(lint, "DIST", dist)
+    monkeypatch.setattr(lint, "DIST_SIZE_LIMIT_MB", 1)
+    monkeypatch.delenv("GPAI_SITE_URL", raising=False)
+    printed = []
+    monkeypatch.setattr(lint, "print", lambda *a, **k: printed.append(" ".join(map(str, a))),
+                        raising=False)
+    assert lint.main() == 1
+    out = "\n".join(printed)
+    assert "built site 2.0 MB" in out and "L16 built site is 2 MB" in out

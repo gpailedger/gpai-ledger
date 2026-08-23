@@ -353,6 +353,13 @@ def write(path: Path, title: str, body: str, desc: str = "",
 # hashes of full bundles replaced by an Art. 53 scope repack (scope-repack
 # events); filled by main() before any version page renders
 REPACKED_SHAS = set()
+# sha256 of a pruned capture -> its pruned-noise event (tool-made events carry
+# the hash; curation-time events carry only the dir, whose hash is in the
+# matching 'new' event)
+PRUNED_EVENTS = {}
+# sha256 -> (earliest capture slug, source id) across the whole corpus: a later
+# capture of identical bytes points at the earliest attestation
+SHA_FIRST = {}
 # (source, target, from_dir, to_dir) -> analyze_drift's version-diffs ledger
 # record: the common-extractor verdict on whether consecutive versions differ in
 # text. Filled by main(); every "content changed" note and /changes/ entry for a
@@ -378,6 +385,7 @@ def last_checked_map():
     p = DATA / "events.jsonl"
     if not p.exists():
         return out
+    new_sha = {}
     for line in p.read_text(encoding="utf-8").splitlines():
         try:
             e = json.loads(line)
@@ -388,6 +396,13 @@ def last_checked_map():
             out[src] = max(out.get(src, ""), ts)
         if e.get("outcome") == "scope-repack" and e.get("prior_sha256"):
             REPACKED_SHAS.add(e["prior_sha256"])
+        d = str(e.get("dir") or "").replace("\\", "/")
+        if e.get("outcome") == "new" and d and e.get("sha256"):
+            new_sha[d] = e["sha256"]
+        if e.get("outcome") == "pruned-noise":
+            sha = e.get("sha256") or new_sha.get(d)
+            if sha:
+                PRUNED_EVENTS[sha] = e
     return out
 
 
@@ -401,7 +416,8 @@ def zip_inner_files(manifest) -> list:
             if isinstance(n, dict) and "inner_file" in n]
 
 
-def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()) -> str:
+def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset(),
+               pruned=None) -> str:
     """Prior-capture row: a prior sha whose capture is no longer in the corpus
     must say WHY, not silently reference a version that is nowhere on the site.
     Only two sanctioned paths remove a capture, each leaving an event: a scope
@@ -414,7 +430,7 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()
         return "<code>— first capture of this target</code>"
     if prior_sha in corpus_shas:
         if prior_ref:
-            slug, iso = prior_ref
+            slug, iso = prior_ref[0], prior_ref[1]
             return (f"<a href='../{esc(slug)}/'><code>{esc(prior_sha)}</code></a> "
                     f"<span class='muted'>(captured {esc(iso)})</span>")
         return f"<code>{esc(prior_sha)}</code>"
@@ -423,10 +439,22 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()
                 f"fetched, replaced by this Art. 53 scope repack: members outside "
                 f"scope are recorded by name and hash but never served — the "
                 f"replacement is a scope-repack event in the log)</span>")
-    return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture was "
-            f"pruned as content-identical noise — by the prune rule its content is "
-            f"identical to a retained version of this target; its hash is in the "
-            f"event log)</span>")
+    ev = (pruned if pruned is not None else PRUNED_EVENTS).get(prior_sha)
+    if ev and ev.get("via") == "prune_capture":
+        return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture was "
+                f"pruned as content-identical noise — by the prune rule its content is "
+                f"identical to a retained version of this target; its hash is in the "
+                f"event log)</span>")
+    if ev:
+        when = (ev.get("ts") or "")[:10]
+        return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture was "
+                f"removed during pre-launch curation"
+                + (f" on {esc(when)}" if when else "")
+                + f"; the event log records the reason: “{esc(ev.get('reason') or 'none recorded')}”"
+                f" — content identity with a retained version was not checked by the "
+                f"prune tool, and the capture is not in this repository's history)</span>")
+    return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture is no "
+            f"longer in the corpus and no prune event names it — see the event log)</span>")
 
 
 def wayback_cell(m):
@@ -554,6 +582,14 @@ def blob_names(m):
     return ext_part, m["sha256"] + blob_ext, m["sha256"] + ext_part + ".ots"
 
 
+def own_ots_name(m, cap_slug: str) -> str:
+    """Serving name of a capture's own OpenTimestamps proof: the content
+    address plus the capture id, so two captures of identical bytes never
+    share one proof file."""
+    ext_part = m["stored_as"].split("raw")[-1]
+    return f"{m['sha256']}{ext_part}.{cap_slug}.ots"
+
+
 def human_date(ts_slug: str) -> str:
     """20260811T102809Z -> 11 Aug 2026"""
     m = re.match(r"(\d{4})(\d{2})(\d{2})T", ts_slug)
@@ -578,10 +614,16 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
     """One version page's body. Pure: all facts come from the manifest, the
     registry source entry, and the (already-read) extracted text."""
     restricted = source.get("restricted")
-    ext_part, blob_name, ots_blob = blob_names(m)
+    ext_part, blob_name, _shared_ots = blob_names(m)
+    # every capture serves ITS OWN proof (identical bytes are captured under
+    # several targets and dates; the shared <sha>.<ext>.ots name keeps serving
+    # the earliest one for existing links)
+    ots_blob = own_ots_name(m, cap_slug)
     blob_ext = ext_part + (".txt" if ext_part == ".html" else "")
     serve_name = "../../../../../blob/" + blob_name
     serve_ots = "../../../../../blob/" + ots_blob
+    first = SHA_FIRST.get(m["sha256"])
+    earlier = first if first and first[0][:16] < cap_slug[:16] else None
 
     serve_note = (" <span class='muted'>(served with a .txt suffix so the "
                   "captured page cannot run scripts on this site; bytes are "
@@ -597,10 +639,27 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                        f"({m['size_bytes']:,} bytes){serve_note}"
                        if raw_exists else f"{esc(m['stored_as'])} ({m['size_bytes']:,} bytes)")
     restamped = (m.get("ots") or {}).get("restamped_at")
-    ots_caption = (f"stamp submitted {esc(restamped)}, after the fetch — the original "
-                   f"submission failed; the proof shows the bytes existed no later "
-                   f"than that date (anchored in bitcoin over time)"
-                   if restamped else "calendar-attested; anchored in bitcoin over time")
+    # a scope-repacked bundle was assembled after the fetch: its proof dates the
+    # stored file, not the fetch (the replaced full bundle's hash is in the
+    # scope-repack event; older manifests may carry it as full_bundle_sha256)
+    repacked = bool(m.get("full_bundle_sha256")) or (m.get("prior_sha256") in REPACKED_SHAS)
+    later_stamp = restamped or ((m.get("ots") or {}).get("at") if repacked else None)
+    if restamped:
+        ots_caption = (f"stamp submitted {esc(restamped)}, after the fetch — the original "
+                       f"submission failed; the proof shows the bytes existed no later "
+                       f"than that date (anchored in bitcoin over time)")
+    elif repacked:
+        ots_caption = (f"stamp submitted {esc(later_stamp or '')}, after the fetch — the "
+                       f"stored file was assembled from the fetched bundle on that date; "
+                       f"the proof shows these bytes existed no later than then (anchored "
+                       f"in bitcoin over time)")
+    else:
+        ots_caption = "calendar-attested; anchored in bitcoin over time"
+    if earlier:
+        ots_caption += (f"; identical bytes were first archived on "
+                        f"{esc(human_date(earlier[0]))} — <a href='{PREFIX}ledger/"
+                        f"{esc(earlier[1])}/v/{esc(earlier[0])}/'>that version</a> "
+                        f"carries the earliest attestation")
     ots_cell = (f"<a href='{esc(serve_ots)}' download>{esc(ots_blob)}</a> "
                 f"<span class='muted'>({ots_caption})</span>" if ots_exists else "not stamped")
     if restricted:
@@ -614,7 +673,10 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                        f"hash); <code>ots verify {esc(ots_blob)} -f {esc(blob_name)}</code> "
                        f"(<a href='https://opentimestamps.org'>opentimestamps.org</a>) "
                        + ("proves the bytes existed no later than the stamp date"
-                          if restamped else "proves the capture time")
+                          if later_stamp else
+                          "proves the bytes existed no later than the attestation "
+                          "time — an upper bound on the capture time; the fetch time "
+                          "above is the archive's own record")
                        + " (fresh proofs report 'pending' until bitcoin-anchored, "
                        "typically within a day).</p>")
     notes = reader_notes(m)
@@ -624,9 +686,9 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
     # OTS proof dates the REPACKED file, not the fetch — say so, and point at the
     # original bundle's hash
     repack_row = ""
-    if m.get("full_bundle_sha256"):
+    if repacked:
         repack_row = (f"<tr><th>Original bundle</th><td><code>"
-                      f"{esc(m['full_bundle_sha256'])}</code> "
+                      f"{esc(m.get('full_bundle_sha256') or m.get('prior_sha256') or '')}</code> "
                       f"<span class='muted'>(hash of the full bundle as fetched; "
                       f"this stored file is the Art. 53 subset, assembled at the "
                       f"date the OTS proof attests)</span></td></tr>")
@@ -646,7 +708,7 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
             f"<tr><th>SHA-256</th><td><code>{esc(m['sha256'])}</code></td></tr>"
             f"<tr><th>OpenTimestamps proof</th><td>{ots_cell}</td></tr>"
             f"<tr><th>Wayback</th><td>{wayback_cell(m)}</td></tr>"
-            f"<tr><th>Prior capture of this target</th><td>{prior_cell(m.get('prior_sha256'), corpus_shas, prior_ref, REPACKED_SHAS)}</td></tr>"
+            f"<tr><th>Prior capture of this target</th><td>{prior_cell(m.get('prior_sha256') or (prior_ref[2] if prior_ref else None), corpus_shas, prior_ref, REPACKED_SHAS, PRUNED_EVENTS)}</td></tr>"
             f"{repack_row}"
             f"{notes_row}"
             f"</table></div>{verify_line}"
@@ -657,6 +719,26 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
 def is_document(r, inpage_urls) -> bool:
     return (r["stored_as"].endswith(DOC_SUFFIXES) or r["url"] in inpage_urls
             or bool(r["managed"]))
+
+
+def distinct_documents(rows_data, inpage_urls) -> int:
+    """Number of distinct document versions: byte-identical copies (the
+    provider's file and AIAL's archived copy) and text-identical re-captures
+    of one document count once."""
+    return len({r.get("text_sha") or r["sha"] for r in rows_data
+                if is_document(r, inpage_urls) and not r["retired"]})
+
+
+def status_checked(source, checked) -> str:
+    """Status-table 'Last checked': the source's own latest event date; for a
+    source whose targets are fetched but that has no event yet, the sweep
+    date; for a model with no known location nothing is checked."""
+    own = checked.get(source["id"])
+    if own:
+        return own[:10]
+    if source.get("targets"):
+        return max(checked.values(), default="")[:10] or "—"
+    return "—"
 
 
 def version_row_html(r, inpage_urls, sha_first) -> str:
@@ -682,11 +764,15 @@ def version_row_html(r, inpage_urls, sha_first) -> str:
         # page that is not the document (hub, catalog, viewer) changed its text,
         # not "content" in the sense of the summary
         what = "content" if is_document(r, inpage_urls) else "page text"
+        against = ("the previous capture of this target" if not r.get("diff_compared_with")
+                   else f"the newest earlier capture of this target made with the same "
+                        f"capture method ({r['diff_compared_with'].rsplit('/', 1)[-1]}; the "
+                        f"immediately previous capture used a different method)")
         if not (r.get("diff_words") or 0) and (r.get("diff_moved") or 0):
-            notes.append(f"text re-ordered vs the previous capture of this target "
+            notes.append(f"text re-ordered vs {against} "
                          f"({r.get('diff_moved')} word(s) moved, none changed)")
         else:
-            notes.append(f"{what} changed vs the previous capture of this target "
+            notes.append(f"{what} changed vs {against} "
                          f"({r.get('diff_words')} word(s) differ in the extracted text)")
     elif r.get("diff_verdict") == "changed-unverified":
         notes.append(f"extracted text differs from the previous capture "
@@ -776,6 +862,9 @@ def render_model_page(source, vsections, checked):
     status = source["status"]
     aial = source.get("aial", {})
     retired = bool(source.get("retired"))
+    # a missing-summary model with no candidate location: nothing is fetched for
+    # it, so the page must not say it is checked
+    no_location = status == "missing" and not source.get("targets") and sid not in checked
     if status == "missing" and retired:
         if aial:
             missing_note = ("While this model was listed in the AI Accountability Lab "
@@ -824,6 +913,13 @@ def render_model_page(source, vsections, checked):
                         f"<a href='{PREFIX}methodology/'>Methodology</a>). "
                         f"Seen a summary we missed? See the "
                         f"<a href='{PREFIX}corrections/'>Corrections</a> page.</p>")
+    elif no_location:
+        checked_line = (f"<p class='muted'>No candidate location for a summary is "
+                        f"known for this model yet, so there is no URL to check; the "
+                        f"registry it is listed in is re-read on the daily schedule "
+                        f"(see <a href='{PREFIX}methodology/'>Methodology</a>). "
+                        f"Seen a summary we missed? See the "
+                        f"<a href='{PREFIX}about/'>contact details</a>.</p>")
     elif last_ts:
         label = "Last checked" if sid in checked else "Last sweep"
         checked_line = (f"<p class='muted'>{label}: {esc(last_ts[:10])} "
@@ -854,9 +950,11 @@ def render_model_page(source, vsections, checked):
                      f"with its hash and timestamp proof.</p>")
         else:
             intro = (f"<p>No {expl} has been located "
-                     f"for {esc(source['model'])}. This page tracks the locations "
-                     f"where one would appear and will archive every version once "
-                     f"published.</p>")
+                     f"for {esc(source['model'])}. "
+                     + ("No location for one is known yet; this page will archive "
+                        "every version once one is found.</p>" if no_location else
+                        "This page tracks the locations where one would appear and "
+                        "will archive every version once published.</p>"))
 
     badge = (f"<strong class='tag tag-{esc(status)}'>"
              f"{esc(STATUS_LABELS.get(status, status))}</strong>")
@@ -932,6 +1030,10 @@ def model_page_desc(source, rows_data, inpage_urls) -> str:
                 f"{source['model']} ({source['provider']}) while it was tracked; "
                 f"the model has left the registry this project follows and is no "
                 f"longer checked.")
+    if source["status"] == "missing" and not source.get("targets"):
+        return (f"No Article 53(1)(d) training-data summary located for "
+                f"{source['model']} ({source['provider']}); no location is known "
+                f"yet — registry metadata re-read daily; archived with proof once found.")
     if source["status"] == "missing":
         return (f"No Article 53(1)(d) training-data summary located for "
                 f"{source['model']} ({source['provider']}). Tracked daily; "
@@ -942,8 +1044,7 @@ def model_page_desc(source, rows_data, inpage_urls) -> str:
 
 def render_index_row(source, rows_data, inpage_urls) -> str:
     sid = source["id"]
-    n_docs = sum(1 for r in rows_data
-                 if is_document(r, inpage_urls) and not r["retired"])
+    n_docs = distinct_documents(rows_data, inpage_urls)
     n_caps = len(rows_data)
     status = source["status"]
     badge = (f"<strong class='tag tag-{esc(status)}'>"
@@ -964,7 +1065,7 @@ def render_index(model_rows, other_rows, stats: dict) -> str:
               "<em class='regulatory'>regulatory</em>: official Commission documents, "
               "archived for reference. <em class='watch'>watch</em>: pages we monitor "
               "because summaries or template changes may appear there first. "
-              "<em>Documents</em> counts captured document versions; <em>Captures</em> "
+              "<em>Documents</em> counts distinct document versions (byte- or text-identical copies, such as the provider's file and AIAL's archived copy, count once); <em>Captures</em> "
               "counts all stored snapshots including monitoring pages.</p>")
     THEAD = ("<tr><th>Tracked source</th><th>Provider</th><th>Status</th>"
              "<th>Documents</th><th>Captures</th></tr>")
@@ -1051,7 +1152,7 @@ anyone can verify a capture without trusting this site.</p>
 <li><strong>Fetch.</strong> Each tracked URL is fetched on a daily schedule
 (conditional GETs
 spare origins a re-download when nothing changed). JavaScript-only pages are
-rendered in a real browser and stored as the rendered page, marked as such. A fetch failure seen from the automated runner is not treated as an absence on its own: the target is re-checked after a pause and then cross-checked against an independent witness (a fresh Wayback Machine capture, accepted only if it is genuinely fresh); every check is logged with the vantage point it was made from, and an absence counts only once it is corroborated — by the witness, or by being observed again on a later day.</li>
+rendered in a real browser and stored as the rendered page, marked as such. A 404 seen from the automated runner for a document already archived is not treated as an absence on its own: the target is re-checked after a pause and then cross-checked against an independent witness (a fresh Wayback Machine capture, accepted only if it is genuinely fresh); every check is logged with the vantage point it was made from. An absence is called confirmed only when a second vantage point saw it too — the witness, or the operator checking from another network; a 404 the runner alone keeps seeing on several dates is recorded as persistent, never as confirmed, because one datacenter address cannot tell a removed document from a refused connection.</li>
 <li><strong>Dedupe.</strong> A new version is stored only when content actually
 changes: byte hash for documents, a whitespace-insensitive text hash for rendered
 pages, an inner-file hash set for provider bundles.</li>
@@ -1067,7 +1168,7 @@ served under their own hash from the content-addressed <code>/blob/</code> store
 <p>Files are served under their own hash (e.g. <code>&lt;sha256&gt;.pdf</code>), so
 the filename is the expected checksum:</p>
 <pre>sha256sum &lt;sha256&gt;.pdf          # must equal the filename / the version page's SHA-256
-ots verify &lt;sha256&gt;.pdf.ots -f &lt;sha256&gt;.pdf   # proves capture time (opentimestamps.org)</pre>
+ots verify &lt;sha256&gt;.pdf.ots -f &lt;sha256&gt;.pdf   # proves the bytes existed no later than the attestation time (opentimestamps.org)</pre>
 <p>OpenTimestamps proofs are attested by public calendar servers within seconds and
 anchored in the bitcoin blockchain, typically within a day; anchored proofs verify against the
 blockchain with no trust in this site required. The crawler, verifier, and full
@@ -1079,8 +1180,10 @@ are stable and safe to cite; content-bearing versions are never removed. Model
 slugs are never renamed. The one exception is narrow: a re-capture whose bytes
 changed but whose content is identical to a neighboring version (banner churn,
 re-rendering) may be pruned as noise — every prune is logged in the append-only
-event log with the pruned file's hash — and the prune rule itself guarantees
-the pruned capture's content survives in a neighboring retained version.
+event log (tool-made prunes carry the pruned file's hash and reason; the
+curation-time prunes of August 2026 carry the capture directory, whose hash is in
+the matching capture event) — and the prune tool's rule guarantees the pruned
+capture's content survives in a neighboring retained version.
 Capture ids are minting timestamps and can trail the fetch
 time by seconds; the manifest's <code>fetched_at</code> is authoritative.</p>
 <h2>Provider objections</h2>
@@ -1277,7 +1380,9 @@ def render_status_page(status_rows) -> str:
             + "<p class='muted'>A model's obligation status can depend on facts "
               "outside public view (market placement date, exemptions); this table "
               "records what is observable — what is published where, and when it "
-              "changed.</p>")
+              "changed. A dash under <em>Last checked</em> means no candidate "
+              "location is known for that model, so nothing is fetched for it; its "
+              "registry entry is re-read daily.</p>")
 
 
 def render_changes_page(changes) -> str:
@@ -1420,6 +1525,13 @@ def main(generated: str = None) -> int:
     # every sha still held in the corpus — used to annotate prior-capture
     # references whose capture was pruned (content survives in a neighbour)
     corpus_shas = {v["sha256"] for e in state.values() for v in e.get("versions", [])}
+    SHA_FIRST.clear()
+    for key, e in state.items():
+        for v in e.get("versions", []):
+            slug = v["dir"].replace("\\", "/").rsplit("/", 1)[-1]
+            cur = SHA_FIRST.get(v["sha256"])
+            if cur is None or slug < cur[0]:
+                SHA_FIRST[v["sha256"]] = (slug, key.split("::", 1)[0])
     checked = last_checked_map()
     registry_ids = {s["id"] for s in registry["sources"]}
 
@@ -1497,6 +1609,8 @@ def main(generated: str = None) -> int:
                 # serve the EARLIEST capture's proof so no page implies a later
                 # attestation than its own
                 if ots_src.exists():
+                    # the capture's own proof, under a name no other capture uses
+                    shutil.copy2(ots_src, blob_dir / own_ots_name(m, cap_slug))
                     prev = ots_blob_written.get(ots_blob)
                     if prev is None or cap_slug < prev:
                         shutil.copy2(ots_src, blob_dir / ots_blob)
@@ -1513,7 +1627,7 @@ def main(generated: str = None) -> int:
 
                 entries.append((m, cap_slug, vdir, extracted_text,
                                 raw_src.exists(), ots_src.exists(),
-                                (prior_slug, iso_date(prior_slug))
+                                (prior_slug, iso_date(prior_slug), prior_sha)
                                 if prior_slug else None))
                 pair = (VDIFFS.get((sid, tslug, prior_dir, ver["dir"]))
                         if prior_dir else None)
@@ -1533,6 +1647,10 @@ def main(generated: str = None) -> int:
                     "diff_verdict": pair["verdict"] if pair else None,
                     "diff_words": pair.get("word_delta") if pair else None,
                     "diff_moved": pair.get("moved_words") if pair else None,
+                    # set when the ledger compared like for like with an earlier
+                    # same-method capture because the immediate predecessor's
+                    # capture method differed
+                    "diff_compared_with": pair.get("compared_with") if pair else None,
                 }
                 rows_data.append(row)
                 n_versions_total += 1
@@ -1565,6 +1683,8 @@ def main(generated: str = None) -> int:
                         "date": human_date(cap_slug),
                         "model": source["model"], "provider": source["provider"],
                         "what": ("summary content changed vs the previous capture"
+                                 + (" made with the same capture method"
+                                    if pair and pair.get("compared_with") else "")
                                  + (f" ({pair['word_delta']} word(s) differ in the "
                                     f"extracted text)" if pair else "")),
                         "word_delta": pair.get("word_delta") if pair else None,
@@ -1693,12 +1813,12 @@ def main(generated: str = None) -> int:
         row = render_index_row(source, rows_data, inpage_urls)
         if source["status"] in ("published", "missing"):
             model_rows.append(((source["provider"].lower(), source["model"].lower()), row))
-            n_docs = sum(1 for r in rows_data
-                         if is_document(r, inpage_urls) and not r["retired"])
+            n_docs = distinct_documents(rows_data, inpage_urls)
             content_changes = [c for c in change_entries
                                if c["model"] == source["model"]
                                and c["provider"] == source["provider"]]
-            last_change = max((c["date"] for c in content_changes), default="—")
+            last = max(content_changes, key=lambda c: c["ts"], default=None)
+            last_change = last["date"] if last else "—"
             badge = (f"<strong class='tag tag-{esc(source['status'])}'>"
                      f"{esc(STATUS_LABELS.get(source['status'], source['status']))}</strong>"
                      + (" <span class='muted'>(no longer tracked)</span>"
@@ -1709,7 +1829,7 @@ def main(generated: str = None) -> int:
                 f"<td><a href='{esc(model_path)}'>{esc(source['model'])}</a></td>"
                 f"<td>{badge}</td><td class='num'>{n_docs}</td>"
                 f"<td>{esc(last_change)}</td>"
-                f"<td>{esc((checked.get(sid) or max(checked.values(), default=''))[:10] or '—')}</td></tr>"))
+                f"<td>{esc(status_checked(source, checked))}</td></tr>"))
         else:
             other_rows.append(((source["provider"].lower(), source["model"].lower()), row))
 

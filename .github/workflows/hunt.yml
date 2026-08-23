@@ -47,7 +47,7 @@ jobs:
           else
             git commit -m "hunt: $(date -u +%Y-%m-%dT%H:%MZ)"
             pushed=0
-            for i in 1 2 3; do
+            for _ in 1 2 3; do
               if git push origin HEAD:main; then pushed=1; break; fi
               git pull --rebase origin main || exit 1
             done

@@ -139,16 +139,25 @@ with a prior stored capture, `run_capture.py` therefore:
    `witness` (or `witness_skipped`), `absent_on` (the distinct UTC dates of the
    current unbroken absence streak, including today; the event's `ts` and these
    dates come from one clock reading), and
-   `absence`: **`confirmed`** when the witness replayed a fresh 404/410
-   (`confirmed_by: ["witness"]`) OR when the absence has been observed on
-   `CONFIRM_AFTER_DAYS` distinct UTC dates with the most recent prior one within
-   `ABSENCE_WINDOW_DAYS` (`confirmed_by: ["consecutive-days"]` — same vantage
-   point, weaker than the witness; same-day re-runs count once; any successful
-   fetch resets the streak; plain errors neither reset nor count; calendar
-   adjacency is not required so a single missed sweep does not break it; a day
-   on which a fresh witness saw the document live restarts the streak and vetoes
-   this route until that sighting is older than `ABSENCE_WINDOW_DAYS` — the
-   witness outranks the runner's own vantage, and the veto is recorded as
+   `absence`: **`confirmed`** only when an independent vantage saw the absence
+   too — the witness replayed a fresh 404/410 (`confirmed_by: ["witness"]`), or
+   the operator fetched a 404/410 from a second network with
+   `crawler/attest.py` (`confirmed_by: ["operator"]`);
+   **`persistent`** when the absence has been observed from the runner alone on
+   `PERSISTENT_AFTER_DAYS` distinct UTC dates with the most recent prior one
+   within `ABSENCE_WINDOW_DAYS` (`confirmed_by: []`; same-day re-runs count
+   once; any successful fetch resets the streak; plain errors neither reset nor
+   count; calendar adjacency is not required so a single missed sweep does not
+   break it). A persistent absence reddens the run and feeds the relocation
+   hunt exactly like a confirmed one, but it is never called confirmed: one
+   datacenter vantage cannot tell a removed document from an address being
+   refused — on 23 Aug 2026 two documents that were live from every other
+   network were 404 from the runner on two consecutive dates while the Archive
+   was unreachable from it (events before that date labelled `confirmed` with
+   `confirmed_by: ["consecutive-days"]` are what is now called persistent). A
+   day on which a fresh witness saw the document live, or on which the operator
+   attested it live, restarts the streak and vetoes this route until that
+   sighting is older than `ABSENCE_WINDOW_DAYS` (recorded as
    `last_live_witness`);
    **`contradicted`** when a fresh witness saw the document live — the runner
    cannot see what other networks can (these events carry `contradicted_on` and
@@ -161,8 +170,19 @@ with a prior stored capture, `run_capture.py` therefore:
    health gate is corrected — the run itself holds the proof the 404 was
    transient.
 
-Only **confirmed** absences count toward the health gate and toward
-relocation-hunt streaks. Unconfirmed and contradicted absences are fully logged
+**Red run with a persistent absence — what to do.** From a network that is
+not a datacenter (your own), run `python crawler/attest.py --source <id>`: it
+fetches the archived URL through the sweep's guarded fetch and appends one
+event — `live-attested` (status, size, SHA-256, whether the bytes equal the
+archived version) or, on a 404/410, a second-vantage `confirmed` absence.
+Nothing is minted; a changed document is captured by the sweep. Commit
+`data/events.jsonl` as the project identity. A runner that stays blind to a
+live document needs a route change (rendered fetch, alternative URL,
+relocation), not repeated attestations: the single-vantage route reddens
+again once the attestation is older than `ABSENCE_WINDOW_DAYS`.
+
+Only **confirmed** and **persistent** absences count toward the health gate
+and toward relocation-hunt streaks. Unconfirmed and contradicted absences are fully logged
 and do not redden the run — except that contradictions on
 `CONTRADICTED_ALERT_DAYS` distinct dates of the current streak (the most recent
 prior one within `ABSENCE_WINDOW_DAYS`; an inconclusive day in between does not
@@ -222,11 +242,57 @@ advisory names a pinned package:
    `pip check`.
 2. Run the full test suite there, then re-extract every archived PDF with the
    new extractor and compare canonical text against the stored extracts (the
-   22 Aug 2026 pypdf 5→6 trial: 35/85 differed slightly, none under the 0.995
-   drift threshold; the AES-encrypted Adobe PDFs need `cryptography`).
+   22 Aug 2026 pypdf 5→6 trial: 35/85 differed slightly, none under the old 0.995
+   drift threshold — since 23 Aug the ledger's identity rule is the comparison to
+   run; the AES-encrypted Adobe PDFs need `cryptography`).
 3. Write the resolved set into `constraints.txt` (`pip freeze` minus the direct
    dependencies), commit both files, and watch the next sweep.
 4. Do not bump Playwright, beautifulsoup4 or pyyaml casually: a rendering or
    HTML-extraction change mints noise versions across every rendered target.
 5. No Dependabot: its merged PRs would add `dependabot[bot]` to the public
    contributor list, which must stay exactly `gpailedger` + `github-actions[bot]`.
+
+## Restore unpushed evidence (the parachute artifact)
+
+When the sweep's commit step cannot push (a rebase conflict on `state.json`
+because something else was pushed during the run, a rejected push, a cancelled
+or timed-out job), the workflow uploads the day's unpushed commit as a git
+bundle artifact named `unpushed-evidence` (retention 30 days) and the run goes
+red. The captures, proofs and events of that day exist only there until
+restored:
+
+```bash
+gh run download <run-id> -n unpushed-evidence          # writes unpushed-evidence.bundle
+git bundle verify unpushed-evidence.bundle
+git fetch unpushed-evidence.bundle HEAD:refs/heads/parachute
+git rebase main parachute      # data/events.jsonl union-merges; resolve state.json by hand
+git checkout main && git merge --ff-only parachute && git push origin main
+```
+
+The bundle's commit already carries the sweep identity; do not re-author it.
+Run `python crawler/verify_corpus.py` before pushing.
+
+## Sweep budget and parse deadline
+
+`run_capture.py` reads `GPAI_SWEEP_BUDGET` (seconds of wall clock for one sweep;
+default 6000, clamped to 60–14400; checked between targets). Past the budget the
+remaining targets are skipped, a run-level `sweep-budget-exhausted` event lists
+the skipped keys, and the run goes red — everything captured before the budget
+is still committed. `capture.py` reads `GPAI_EXTRACT_TIMEOUT` (seconds a PDF may
+take to parse in its worker process; default 120, at most 900): a stalled parser
+stores the bytes with the text omitted and a note. Both can be set as repository
+Variables through the `env:` of `ledger.yml`. `GPAI_CHROMIUM_SANDBOX=0` disables
+the renderer sandbox on a host that cannot provide one (never in CI).
+
+## Relocation hunt bounds
+
+`site_hunt.py` scores at most 40 candidates per source (PDF links first), compares
+the first 20 000 identity characters of each text, stops scoring after 600 s per
+source and says in `reports/hunt-latest.md` what it dropped. A relocation is
+written to `relocations.json` only when the best candidate is byte-identical to an
+archived version of the target, or is the only candidate at or above 0.98
+similarity AND beats every sibling model's summary by 0.002 (summaries of one
+provider follow one template and sit at 0.993–0.998 to each other). Anything else
+is reported for human review. The hunt never crawls `aial.ie` or `archive.org`,
+never follows a redirect off the provider's site, and reports
+`recovered-at-recorded-location` when the dead URL answers 200 again.

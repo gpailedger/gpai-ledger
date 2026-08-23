@@ -48,6 +48,8 @@ LINK = re.compile(r"href='([^']+)'|href=\"([^\"]+)\"")
 EXTRACT_BLOCK = re.compile(r"<pre class='extract'>.*?</pre>", re.S)
 
 
+DIST_SIZE_LIMIT_MB = 800
+
 def main() -> int:
     import json
     findings = []
@@ -227,6 +229,12 @@ def main() -> int:
         if idx.exists() and 'rel="canonical"' not in idx.read_text(encoding="utf-8"):
             findings.append("L15 domain-mode index has no canonical")
 
+    # L16: GitHub Pages refuses sites over 1 GB; the built size must stay well under
+    total_mb = sum(f.stat().st_size for f in DIST.rglob("*") if f.is_file()) / 1e6
+    if total_mb > DIST_SIZE_LIMIT_MB:
+        findings.append(f"L16 built site is {total_mb:.0f} MB — above the "
+                        f"{DIST_SIZE_LIMIT_MB} MB guard (GitHub Pages limit 1 GB)")
+    print(f"site/lint: built site {total_mb:.1f} MB")
     print(f"site/lint: {len(pages)} pages checked, {len(findings)} findings")
     for f in findings:
         print("  " + f)
