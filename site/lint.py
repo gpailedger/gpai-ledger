@@ -49,6 +49,9 @@ EXTRACT_BLOCK = re.compile(r"<pre class='extract'>.*?</pre>", re.S)
 
 
 DIST_SIZE_LIMIT_MB = 800
+# the corpus the built site must account for (L19); only consulted for a real
+# build, i.e. one that wrote ledger.json
+DATA = Path(__file__).resolve().parent.parent / "data"
 
 def main() -> int:
     import json
@@ -63,6 +66,7 @@ def main() -> int:
         return 1
 
     titles = {}
+    n_version_pages = 0
     for p in pages:
         html = p.read_text(encoding="utf-8")
         rel = p.relative_to(DIST).as_posix()
@@ -168,6 +172,21 @@ def main() -> int:
                     findings.append(f"L9 blob exists but Stored-file cell does not "
                                     f"link it: {rel}")
 
+            # L17: a capture with a proof in the blob store must link ITS OWN proof
+            # (the content-addressed name is shared by identical captures)
+            if sha_m:
+                own = list((DIST / "blob").glob(f"{sha_m.group(1)}.*.{parts[4]}.ots"))
+                if own and not any(f"blob/{p.name}" in html for p in own):
+                    findings.append(f"L17 version page does not link its own proof "
+                                    f"{own[0].name}: {rel}")
+            # L18: the displayed hash must be the linked blob's content address
+            if sha_m and stored_m:
+                for linked in re.findall(r"blob/([0-9a-f]{64})", stored_m.group(1)):
+                    if linked != sha_m.group(1):
+                        findings.append(f"L18 SHA-256 cell {sha_m.group(1)[:12]}… links a "
+                                        f"different blob {linked[:12]}…: {rel}")
+            n_version_pages += 1
+
             # L5: a document-format capture must show extracted text, a no-text
             # note, or the structured-facts treatment
             is_doc_fmt = bool(stored_m and not restricted and re.search(
@@ -216,6 +235,16 @@ def main() -> int:
                 findings.append(f"L14 sitemap URL has no built page: {loc}")
             if "/" + relpath.rstrip("/") + "/" in noindexed if relpath else False:
                 findings.append(f"L14 noindexed page listed in sitemap: {loc}")
+
+    # L19: a real build (one that wrote ledger.json) must have one version page
+    # per version in the corpus — a silently omitted version is a silent
+    # omission from the evidence record
+    if (DIST / "ledger.json").exists() and (DATA / "state.json").exists():
+        state = json.loads((DATA / "state.json").read_text(encoding="utf-8"))
+        expected = sum(len(e.get("versions", [])) for e in state.values())
+        if n_version_pages != expected:
+            findings.append(f"L19 {n_version_pages} version pages built for {expected} "
+                            f"versions in data/state.json")
 
     # L15: a domain-mode deploy must carry its full SEO surface
     site_url = os.environ.get("GPAI_SITE_URL", "")

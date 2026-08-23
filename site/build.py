@@ -678,7 +678,10 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                           "time — an upper bound on the capture time; the fetch time "
                           "above is the archive's own record")
                        + " (fresh proofs report 'pending' until bitcoin-anchored, "
-                       "typically within a day).</p>")
+                       "typically within a day). <code>ots verify</code> needs a local "
+                       "Bitcoin Core node (a pruned one is fine); without one, "
+                       "<code>ots info</code> on the proof prints the attesting block "
+                       "height and merkle path to check on any block explorer.</p>")
     notes = reader_notes(m)
     notes_row = (f"<tr><th>Notes</th><td>{esc('; '.join(notes))}</td></tr>"
                  if notes else "")
@@ -1171,7 +1174,10 @@ the filename is the expected checksum:</p>
 ots verify &lt;sha256&gt;.pdf.ots -f &lt;sha256&gt;.pdf   # proves the bytes existed no later than the attestation time (opentimestamps.org)</pre>
 <p>OpenTimestamps proofs are attested by public calendar servers within seconds and
 anchored in the bitcoin blockchain, typically within a day; anchored proofs verify against the
-blockchain with no trust in this site required. The crawler, verifier, and full
+blockchain with no trust in this site required. <code>ots verify</code> checks the attestation
+against a local Bitcoin Core node (a pruned node is enough); without one, <code>ots info
+&lt;proof&gt;</code> prints the attesting block height and merkle path, which any block explorer
+lets you check by hand. The crawler, verifier, and full
 corpus (raw bytes, manifests, event log) are public in {repo_link_m}, so
 the whole archive can be re-verified from source.</p>
 <h2>Permalink stability</h2>
@@ -1454,6 +1460,10 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             f"<li><code>ots</code>, <code>wayback</code> — provenance status</li>"
             f"<li><code>permalink</code> — the version page serving the stored "
             f"bytes and proof (site-relative; prepend <code>source</code>)</li>"
+            f"<li><code>blob_url</code>, <code>ots_url</code> — the stored bytes and "
+            f"this capture's own OpenTimestamps proof (site-relative; "
+            f"<code>null</code> when not served); <code>wayback_snapshot</code> — the "
+            f"Wayback Machine capture recorded for it, or <code>null</code></li>"
             f"</ul>"
             f"<h2>Scope of the changes feed</h2>"
             f"<p>The <a href='{PREFIX}changes/'>changes feed</a> covers content "
@@ -1665,6 +1675,13 @@ def main(generated: str = None) -> int:
                     "ots": bool((m.get("ots") or {}).get("ok")),
                     "wayback": bool((m.get("wayback") or {}).get("ok")),
                     "permalink": f"{PREFIX}ledger/{sid}/v/{cap_slug}/",
+                    # where a consumer fetches the bytes and the proof without the page
+                    "blob_url": (f"{PREFIX}blob/{blob_name}"
+                                 if raw_src.exists() and not restricted else None),
+                    "ots_url": (f"{PREFIX}blob/{own_ots_name(m, cap_slug)}"
+                                if ots_src.exists() else None),
+                    "wayback_snapshot": ((m.get("wayback") or {}).get("snapshot")
+                                         if (m.get("wayback") or {}).get("ok") else None),
                 })
                 # a genuine content change feeds the /changes/ log and the Atom
                 # feed. The ledger's common-extractor verdict decides whether one

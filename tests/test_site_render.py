@@ -643,3 +643,69 @@ def test_lint_reports_the_built_size_and_guards_the_pages_limit(tmp_path, monkey
     assert lint.main() == 1
     out = "\n".join(printed)
     assert "built site 2.0 MB" in out and "L16 built site is 2 MB" in out
+
+
+def _version_page(sha, linked_sha, ots_name=None):
+    link = f"<a href='../../../../../blob/{linked_sha}.pdf' download>{linked_sha}.pdf</a>"
+    ots = (f"<a href='../../../../../blob/{ots_name}' download>{ots_name}</a>"
+           if ots_name else "not stamped")
+    return _page("Model version", f"<table><tr><th>SHA-256</th><td><code>{sha}</code></td></tr>"
+                                  f"<tr><th>Stored file</th><td>{link}</td></tr>"
+                                  f"<tr><th>OpenTimestamps proof</th><td>{ots}</td></tr></table>"
+                                  f"<h2>Extracted text</h2><pre class='extract'>t</pre>")
+
+
+def _with_version(dist, slug, sha, linked_sha, ots_name=None):
+    d = dist / "ledger" / "prov" / "model" / "v" / slug
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(_version_page(sha, linked_sha, ots_name), encoding="utf-8")
+    (dist / "blob").mkdir(exist_ok=True)
+    (dist / "blob" / f"{linked_sha}.pdf").write_bytes(b"%PDF")
+    return d
+
+
+def test_lint_l17_version_page_must_link_its_own_proof(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    sha, slug = "a" * 64, "20260811T100000Z"
+    _with_version(dist, slug, sha, sha)
+    (dist / "blob" / f"{sha}.pdf.{slug}.ots").write_bytes(b"\x00ots")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L17") for f in findings)
+    _with_version(dist, slug, sha, sha, ots_name=f"{sha}.pdf.{slug}.ots")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert not [f for f in findings if f.startswith("L17")]
+
+
+def test_lint_l18_hash_cell_must_match_the_linked_blob(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    _with_version(dist, "20260811T100000Z", "a" * 64, "b" * 64)
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L18") for f in findings)
+
+
+def test_lint_l19_real_build_must_have_a_page_per_version(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    _with_version(dist, "20260811T100000Z", "a" * 64, "a" * 64)
+    (dist / "ledger.json").write_text("[]", encoding="utf-8")
+    data = tmp_path / "data"
+    data.mkdir()
+    (data / "state.json").write_text(json.dumps({"prov/model::provider-live-x": {
+        "versions": [{"sha256": "a" * 64, "dir": "d1"}, {"sha256": "b" * 64, "dir": "d2"}]}}),
+        encoding="utf-8")
+    monkeypatch.setattr(lint, "DATA", data)
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L19") and "1 version pages built for 2 versions" in f for f in findings)
+    (dist / "ledger.json").unlink()            # not a real build: L19 does not apply
+    rc, findings = run_lint(monkeypatch, dist)
+    assert not [f for f in findings if f.startswith("L19")]
+
+
+def test_dataset_export_carries_blob_proof_and_snapshot_urls(corpus, tmp_path, monkeypatch):
+    data, d1, d2 = _two_versions(corpus)
+    dist = _build_site(tmp_path, monkeypatch, data)
+    rows = json.loads((dist / "ledger.json").read_text(encoding="utf-8"))["records"]
+    assert len(rows) == 2
+    for r in rows:
+        assert r["blob_url"].endswith(f"blob/{r['sha256']}.pdf")
+        assert r["ots_url"].endswith(".ots") and r["sha256"] in r["ots_url"]
+        assert "wayback_snapshot" in r
