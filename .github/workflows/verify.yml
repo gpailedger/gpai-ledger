@@ -66,7 +66,8 @@ jobs:
 
       - name: Action pins are commit SHAs
         run: |
-          bad=$(grep -RhoE "uses: [^@]+@[^ ]+" .github/workflows/ | grep -vE "@[0-9a-f]{40}( |$)" || true)
+          # anchored to real `uses:` lines, so this script's own pattern is never matched
+          bad=$(grep -RhoE "^\s*-?\s*uses: [^@]+@[^ ]+" .github/workflows/ | grep -vE "@[0-9a-f]{40}( |$)" || true)
           if [ -n "$bad" ]; then
             echo "tag-pinned actions found (must be 40-hex commit SHAs):"
             echo "$bad"
