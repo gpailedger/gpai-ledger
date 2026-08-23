@@ -27,10 +27,8 @@
   "prior_sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
   "wayback": {
     "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "snapshot": null,
-    "at": "2026-08-22T23:55:37Z"
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://docs.cohere.com/docs/command-a-plus (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "at": "2026-08-23T07:37:07Z"
   },
   "ots": {
     "ok": true,
@@ -50,6 +48,13 @@
       "spn_status": 429,
       "snapshot": null,
       "at": "2026-08-22T23:46:30Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "snapshot": null,
+      "at": "2026-08-22T23:55:37Z"
     }
   ]
 }
