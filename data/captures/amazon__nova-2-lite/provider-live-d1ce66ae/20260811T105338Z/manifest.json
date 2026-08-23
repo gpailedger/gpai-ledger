@@ -10,7 +10,8 @@
     {
       "inner_file": "nova-2-lite-training-data-summary.pdf",
       "inner_sha256": "b073bdc1de04f384330754dbb3a8a5871aa3c524f63ff5cf46f29063ed6f9884"
-    }
+    },
+    "2026-08-23: text_sha256 (zip content key over the recorded inner-member hashes) and extracted_text_sha256 backfilled; the inner-member notes were normalised from their string form. Bytes, sha256 and the proof are untouched."
   ],
   "http": {
     "url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/samples/nova-2-lite-training-data-summary.zip",
@@ -39,5 +40,7 @@
     ],
     "errors": [],
     "at": "2026-08-11T10:53:59Z"
-  }
+  },
+  "text_sha256": "98e5b2332d6bd0862188746371f6a893a61bdfa3a79f4c24e052cca92730e891",
+  "extracted_text_sha256": "cf2121093b34d41f806d1388944186cf7de40ab4c63dcf030fc752208b8c7e95"
 }
