@@ -380,8 +380,6 @@ def main(aial_repo: str, out_path=None) -> None:
             "provider": org,
             "model": model,
             "status": "published" if (archive_file or extra_doc) else "missing",
-            **({"restricted": RESTRICTED_SOURCES[sid]}
-               if sid in RESTRICTED_SOURCES else {}),
             "targets": targets,
             "aial": {
                 "eval_yaml": f"evals/{path.name}",
@@ -480,6 +478,18 @@ def main(aial_repo: str, out_path=None) -> None:
             carried = dict(prev_sources[rid])
             carried["retired"] = reason
             sources.append(carried)
+
+    # provider objections apply to every source however it entered the list
+    # (AIAL-derived, catalog, standalone, watch, carried forward); an id that
+    # matches nothing would silently not restrict anything, so it fails closed
+    known = {s["id"] for s in sources}
+    unknown = sorted(set(RESTRICTED_SOURCES) - known)
+    if unknown:
+        sys.exit(f"RESTRICTED_SOURCES names {len(unknown)} unknown source id(s): "
+                 f"{', '.join(unknown)} — the restriction would not apply")
+    for s in sources:
+        if s["id"] in RESTRICTED_SOURCES:
+            s["restricted"] = RESTRICTED_SOURCES[s["id"]]
 
     status_counts = {}
     for s in sources:

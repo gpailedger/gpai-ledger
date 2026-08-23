@@ -12,7 +12,8 @@ stored extracts decide and the verdict is `changed-unverified`: a candidate, nev
 published as a content change.
 
 Identity rule (RULE_VERSION): two texts are identical when their identity streams
-are equal — the Unicode word characters of the text, case-sensitive, with tick and
+are equal — the Unicode word characters of the text, case-sensitive, after NFC
+composition and with typographic ligatures (ﬁ, ﬂ, …) spelled out, with tick and
 cross glyphs kept as tokens (the Commission template is built from tick boxes) and a
 separator between two digits kept (1.5 and 1,5 are not 15). Spacing, hyphenation and
 other punctuation are ignored: "Summary:1.0" vs "Summary: 1.0" and "re- flect" vs
@@ -22,10 +23,14 @@ place and inserted elsewhere unchanged — at least LONG_MOVE_WORDS words anywhe
 a shorter block of at least MIN_MOVE_WORDS words that is the entire deleted or
 inserted run (a running header that changed page) — is counted under moved_words,
 not word_delta; a transposition inside a word is an edit, and a phrase two rewritten
-paragraphs happen to share is counted as changed. The remaining differences are measured on the identity character
-streams with every character mapped back to its word, so the count does not depend
-on how a token aligner happened to anchor; each listed change shows the words around
-the difference on both sides.
+paragraphs happen to share is counted as changed. The remaining differences are
+measured on the identity character streams of each region the word-level alignment
+marks as different (plus one word of context), with every character mapped back to
+its word, so the count does not depend on how a token aligner happened to anchor
+and the cost is bounded by the size of the changed regions, not of the document; a
+region too large to align character by character (CHAR_ALIGN_CAP) is counted word
+by word and the record says so (`alignment`). Each listed change shows the words
+around the difference on both sides.
 
 Live-vs-archive verdicts:
   identical-bytes         same hash live vs archive
@@ -47,7 +52,10 @@ consecutive version pair of every target, and one per live-vs-archive pair:
   changed-unverified (stored extracts differ, a side could not be re-extracted) |
   method-changed (the text differs but the two captures were made with different
   capture methods — rendering, frames or consent handling — so the difference is
-  not evidence of a content change) | no-text
+  not evidence of a content change; when an earlier capture made with the SAME
+  method as the newest one exists, the newest is also compared with it like for
+  like, and a real edit found that way makes the record `changed` with
+  `compared_with` naming that capture) | no-text
 A record is computed once under the rule version it names; if the rule changes, the
 record is recomputed and the earlier verdict kept under prior_verdicts. The site
 takes its "content changed" notes and /changes/ entries from that ledger.
@@ -57,6 +65,7 @@ reports/version-diffs.json (the ledger).
 import difflib
 import json
 import re
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -66,12 +75,16 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 DOC_EXTS = (".pdf", ".zip", ".md", ".txt", ".docx")
 SIMILAR = 0.995
-RULE_VERSION = "identity-v3"
+RULE_VERSION = "identity-v4"
 MIN_MOVE_WORDS = 2      # shortest block that can be a move (when it is a whole run)
 LONG_MOVE_WORDS = 4     # a block this long is a move wherever it sits
+CHAR_ALIGN_CAP = 25_000_000   # len(old chars) * len(new chars) aligned per region
 # tick / cross glyphs carry meaning in the Commission template: kept as tokens
 GLYPHS = {"☒": "⊠", "☑": "⊠", "✓": "⊠", "✔": "⊠", "■": "⊠",
           "☐": "⊡", "□": "⊡", "▢": "⊡", "✗": "⊗", "✘": "⊗"}
+# typographic ligatures are a font's choice, not the author's
+LIGATURES = str.maketrans({"ﬀ": "ff", "ﬁ": "fi", "ﬂ": "fl", "ﬃ": "ffi", "ﬄ": "ffl",
+                           "ﬅ": "ft", "ﬆ": "st"})
 WORD = re.compile(r"[☒☑✓✔■☐□▢✗✘]|[\w€%\.\-/:@,]+")
 IDENT = re.compile(r"[\w⊠⊡⊗·]+")
 
@@ -89,6 +102,9 @@ def words_of(text: str):
     # drop every "===== inner-file =====" banner the zip extractor inserts (a
     # multi-PDF bundle has one per member, not just the first)
     text = re.sub(r"^=====.*=====$", "", text, flags=re.M)
+    # compose accents and spell out ligatures BEFORE tokenising: a combining
+    # mark is not a word character and would split "café" into two tokens
+    text = unicodedata.normalize("NFC", text).translate(LIGATURES)
     return WORD.findall(text)
 
 
@@ -134,7 +150,7 @@ def reextract(cap_dir: str):
 
 
 def _identity(words) -> str:
-    s = " ".join(words)
+    s = unicodedata.normalize("NFC", " ".join(words)).translate(LIGATURES)
     s = "".join(GLYPHS.get(ch, ch) for ch in s)
     s = re.sub(r"(?<=\d)[.,](?=\d)", "·", s)   # a separator between digits is meaning
     return "".join(IDENT.findall(s))
@@ -194,15 +210,54 @@ def _moves(ia, ib):
     return ma, mb, blocks
 
 
+def _region_groups(ra, rb, i1, i2, j1, j2):
+    """Character-level difference groups for one word region [i1,i2) x [j1,j2)
+    of the residual sequences, aligned with one word of context on each side.
+    Returns (groups, coarse, unmatched_old_chars, unmatched_new_chars): groups
+    are [old_idx set, new_idx set, old_span, new_span] with indices into ra/rb;
+    coarse is True when the region was too large to align character by
+    character and was counted word by word (all its characters unmatched)."""
+    a1, a2 = max(0, i1 - 1), min(len(ra), i2 + 1)
+    b1, b2 = max(0, j1 - 1), min(len(rb), j2 + 1)
+    sa, oa = _stream(ra[a1:a2])
+    sb, ob = _stream(rb[b1:b2])
+    oa = [a1 + k for k in oa]
+    ob = [b1 + k for k in ob]
+    if sa == sb:
+        return [], False, 0, 0    # a word-split artifact: the same identity characters
+    if len(sa) * len(sb) > CHAR_ALIGN_CAP:
+        old_idx, new_idx = set(range(i1, i2)), set(range(j1, j2))
+        ua = sum(len(_identity([ra[k]])) for k in old_idx)
+        ub = sum(len(_identity([rb[k]])) for k in new_idx)
+        return [[old_idx, new_idx, (i1 - 1, i2), (j1 - 1, j2)]], True, ua, ub
+    groups, ua, ub = [], 0, 0
+    for t, c1, c2, d1, d2 in difflib.SequenceMatcher(None, sa, sb, autojunk=False).get_opcodes():
+        if t == "equal":
+            continue
+        ua += c2 - c1
+        ub += d2 - d1
+        old_idx, new_idx = set(oa[c1:c2]), set(ob[d1:d2])
+        # context: the words around an insertion/deletion point on the side
+        # that has no differing characters of its own
+        old_near = old_idx or {oa[p] for p in (c1 - 1, c1) if 0 <= p < len(sa)}
+        new_near = new_idx or {ob[p] for p in (d1 - 1, d1) if 0 <= p < len(sb)}
+        old_span = (min(old_near) - 1, max(old_near) + 1) if old_near else None
+        new_span = (min(new_near) - 1, max(new_near) + 1) if new_near else None
+        groups.append([old_idx, new_idx, old_span, new_span])
+    return groups, False, ua, ub
+
+
 def compare_words(a, b) -> dict:
-    """{similarity, identical, word_delta, moved_words, changes} for two word
-    sequences. identical = identity streams equal. Moves are whole-word runs
-    (see _moves); the remaining differences are measured on the identity
-    character streams with each character mapped back to its word, so the count
-    never depends on how a token aligner anchored: word_delta = the number of
-    words whose characters differ, per merged region. Each listed change shows
-    the words around the difference on both sides. similarity = the better of
-    the word-level and character-level ratios."""
+    """{similarity, identical, word_delta, moved_words, changes[, alignment]} for
+    two word sequences. identical = identity streams equal. Moves are whole-word
+    runs (see _moves); the remaining differences are measured region by region
+    on the identity character streams with each character mapped back to its
+    word, so the count never depends on how a token aligner anchored and the
+    cost is bounded by the changed regions: word_delta = the number of words
+    whose characters differ, per merged region. Each listed change shows the
+    words around the difference on both sides. similarity = the better of the
+    word-level ratio and the identity-character ratio of the regional
+    alignments (no document-wide alignment)."""
     word_ratio = difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
     ia, ib = [_identity([w]) for w in a], [_identity([w]) for w in b]
     if "".join(ia) == "".join(ib):
@@ -215,21 +270,17 @@ def compare_words(a, b) -> dict:
     # residual sequences: moved words removed on both sides
     ra = [w for i, w in enumerate(a) if i not in ma]
     rb = [w for j, w in enumerate(b) if j not in mb]
-    sa, oa = _stream(ra)
-    sb, ob = _stream(rb)
-    sm = difflib.SequenceMatcher(None, sa, sb, autojunk=False)
-    groups = []   # [old_idx set, new_idx set, old_span (lo, hi), new_span (lo, hi)]
-    for t, i1, i2, j1, j2 in sm.get_opcodes():
+    ira = [_identity([w]) for w in ra]
+    irb = [_identity([w]) for w in rb]
+    groups, coarse, unmatched_a, unmatched_b = [], False, 0, 0
+    for t, i1, i2, j1, j2 in difflib.SequenceMatcher(None, ira, irb, autojunk=False).get_opcodes():
         if t == "equal":
             continue
-        old_idx, new_idx = set(oa[i1:i2]), set(ob[j1:j2])
-        # context: the words around an insertion/deletion point on the side
-        # that has no differing characters of its own
-        old_near = old_idx or {oa[p] for p in (i1 - 1, i1) if 0 <= p < len(sa)}
-        new_near = new_idx or {ob[p] for p in (j1 - 1, j1) if 0 <= p < len(sb)}
-        old_span = (min(old_near) - 1, max(old_near) + 1) if old_near else None
-        new_span = (min(new_near) - 1, max(new_near) + 1) if new_near else None
-        groups.append([old_idx, new_idx, old_span, new_span])
+        g, c, ua, ub = _region_groups(ra, rb, i1, i2, j1, j2)
+        groups += g
+        coarse = coarse or c
+        unmatched_a += ua
+        unmatched_b += ub
 
     def _overlap(p, q):
         return p is not None and q is not None and p[0] <= q[1] and q[0] <= p[1]
@@ -260,9 +311,19 @@ def compare_words(a, b) -> dict:
         old_txt = " ".join(ra[max(0, old_span[0]):old_span[1] + 1]) if old_span else ""
         new_txt = " ".join(rb[max(0, new_span[0]):new_span[1] + 1]) if new_span else ""
         changes.append({"op": tag, "old": old_txt[:300], "new": new_txt[:300]})
-    ratio = word_ratio if word_ratio >= SIMILAR else max(word_ratio, sm.ratio())
-    return {"similarity": round(ratio, 4), "identical": False, "word_delta": delta,
-            "moved_words": moved_words, "changes": changes[:40]}
+    if word_ratio >= SIMILAR:
+        ratio = word_ratio
+    else:
+        # identity-character ratio from the regional alignments: every character
+        # outside a non-equal opcode is matched (moved words included), the same
+        # 2M/(|a|+|b|) SequenceMatcher reports, without a document-wide alignment
+        total = sum(len(x) for x in ia) + sum(len(x) for x in ib)
+        ratio = max(word_ratio, (total - unmatched_a - unmatched_b) / total) if total else 1.0
+    out = {"similarity": round(ratio, 4), "identical": False, "word_delta": delta,
+           "moved_words": moved_words, "changes": changes[:40]}
+    if coarse:
+        out["alignment"] = "word-level (a changed region was too large for character alignment)"
+    return out
 
 
 def compare_captures(a_dir: str, b_dir: str, roles=("previous", "newest")) -> dict:
@@ -300,6 +361,8 @@ def compare_captures(a_dir: str, b_dir: str, roles=("previous", "newest")) -> di
            "same_tool": same_tool, "compared_via": via, "rule": RULE_VERSION}
     if not res["identical"]:
         rec["changes"] = res["changes"]
+    if res.get("alignment"):
+        rec["alignment"] = res["alignment"]
     return rec
 
 
@@ -357,6 +420,15 @@ def _current(vdiffs: dict, key: str):
     return rec if rec and rec.get("rule") == RULE_VERSION else None
 
 
+def _like_for_like(vs, i, cur: dict):
+    """The newest version before vs[i] whose capture method equals cur's, or None."""
+    want = capture_method(load_manifest(cur["dir"]) or {})
+    for v in reversed(vs[:i]):
+        if capture_method(load_manifest(v["dir"]) or {}) == want:
+            return v
+    return None
+
+
 def update_version_diffs(state: dict, vdiffs: dict) -> int:
     """Give every consecutive version pair of every target a ledger record under
     the current rule. Returns the number of records computed."""
@@ -364,15 +436,39 @@ def update_version_diffs(state: dict, vdiffs: dict) -> int:
     for key, entry in state.items():
         sid, tslug = key.split("::", 1)
         vs = entry.get("versions", [])
-        for prev, cur in zip(vs, vs[1:]):
+        for i, (prev, cur) in enumerate(zip(vs, vs[1:])):
             k = pair_key(sid, tslug, prev["dir"], cur["dir"])
             if _current(vdiffs, k):
                 continue
             rec = compare_captures(prev["dir"], cur["dir"])
             if rec["verdict"] in ("changed", "changed-unverified") and method_changed(prev["dir"], cur["dir"]):
                 # a text difference between captures made with different methods
-                # is not evidence of a content change; the measurements stay
+                # is not evidence of a content change; the measurements stay —
+                # but a page whose method flaps on every capture must not be able
+                # to hide an edit: compare like for like with the newest earlier
+                # capture made with the same method, when there is one
                 rec["verdict"] = "method-changed"
+                alt = _like_for_like(vs, i, cur)
+                if alt:
+                    rec2 = compare_captures(alt["dir"], cur["dir"],
+                                            roles=("same-method earlier", "newest"))
+                    rec["same_method_pair"] = {
+                        "from_dir": alt["dir"], "verdict": rec2["verdict"],
+                        "similarity": rec2.get("similarity"), "word_delta": rec2.get("word_delta"),
+                        "moved_words": rec2.get("moved_words"),
+                        "compared_via": rec2.get("compared_via")}
+                    if rec2["verdict"] == "changed" and rec2.get("word_delta"):
+                        rec.update({"verdict": "changed", "similarity": rec2["similarity"],
+                                    "word_delta": rec2["word_delta"],
+                                    "moved_words": rec2.get("moved_words", 0),
+                                    "changes": rec2.get("changes", []),
+                                    "same_tool": rec2.get("same_tool", False),
+                                    "compared_via": rec2["compared_via"] + " — like for like: "
+                                    "compared with the newest earlier capture made with the "
+                                    "same method, not the immediately previous one",
+                                    "compared_with": alt["dir"]})
+                        if rec2.get("alignment"):
+                            rec["alignment"] = rec2["alignment"]
             _store(vdiffs, k, rec, source=sid, target=tslug,
                    from_dir=prev["dir"], to_dir=cur["dir"],
                    from_sha256=prev["sha256"], to_sha256=cur["sha256"])
@@ -390,7 +486,7 @@ def newest_pair_record(vdiffs: dict, source_id: str, tslug: str, entry: dict) ->
         return {"verdict": "no-record"}
     return {f: rec[f] for f in ("verdict", "similarity", "word_delta", "moved_words",
                                 "changes", "compared_via", "same_tool", "from_dir",
-                                "to_dir") if f in rec}
+                                "to_dir", "compared_with", "alignment") if f in rec}
 
 
 def live_captures(state: dict, source_id: str):
@@ -425,7 +521,8 @@ def _history_cell(sh) -> str:
     if v == "changed":
         moved = sh.get("moved_words") or 0
         return (f"changed ({sh.get('word_delta')} word(s)"
-                + (f", {moved} moved" if moved else "") + ")")
+                + (f", {moved} moved" if moved else "")
+                + (", like for like" if sh.get("compared_with") else "") + ")")
     if v == "changed-unverified":
         return f"differs by the stored extracts ({sh.get('word_delta')} word(s); not re-extracted)"
     return {"identical-text": "identical text", "single-version": "single version",
@@ -518,6 +615,13 @@ def main() -> None:
                     rec["moved_words"] = history.get("moved_words", 0)
                     rec["changes"] = history.get("changes", [])
                 results.append(rec)
+                continue
+            if len(vs) >= 2:
+                results.append({"id": source["id"], "model": source["model"],
+                                "verdict": "inpage-baseline",
+                                "note": "in-page document: its newest pair has no "
+                                        "comparable text (see self_history)",
+                                "self_history": history})
                 continue
             results.append({"id": source["id"], "model": source["model"],
                             "verdict": "inpage-baseline",

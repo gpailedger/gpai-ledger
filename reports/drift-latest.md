@@ -2,7 +2,7 @@
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
-| FastwebMIIA | DRIFT-CANDIDATE | 0.6255 | single version |
+| FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
 | Muse Image | DRIFT-CANDIDATE | 0.9936 | changed (17 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9871 | changed (15 word(s), 5 moved) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |

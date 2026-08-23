@@ -21,6 +21,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from urllib.parse import urljoin, urlparse
 
 USER_AGENT = ("GPAI-Ledger/0.1 (public-interest archive of EU AI Act Article 53(1)(d) "
               "training-data summaries; contact: contact@gpailedger.com)")
@@ -28,6 +29,11 @@ HEADERS = {"User-Agent": USER_AGENT}
 # Where an observation was made from. Absence claims are only as strong as their
 # vantage point: a datacenter runner can see a 404 an origin never shows to others.
 VANTAGE = "github-runner" if os.environ.get("GITHUB_ACTIONS") else "operator"
+# Provider pages run untrusted scripts inside the renderer: keep Chromium's OS
+# sandbox on (Playwright's default is off). Ubuntu 24.04 runners must allow
+# unprivileged user namespaces first (ledger.yml does); set
+# GPAI_CHROMIUM_SANDBOX=0 only on a host that cannot provide a sandbox.
+CHROMIUM_SANDBOX = os.environ.get("GPAI_CHROMIUM_SANDBOX", "1") != "0"
 OTS_CALENDARS = [
     "https://a.pool.opentimestamps.org",
     "https://b.pool.opentimestamps.org",
@@ -89,6 +95,8 @@ def target_slug(kind: str, url: str) -> str:
 # can't OOM an unattended runner. 60 MB clears the largest real document (the ~9.5 MB
 # Anthropic bundle) with wide margin.
 MAX_FETCH_BYTES = 60 * 1024 * 1024
+MAX_REDIRECTS = 10
+REDIRECT_STATUSES = (301, 302, 303, 307, 308)
 # 4xx (except 429) are permanent — retrying wastes the sweep and hammers origins.
 NO_RETRY_STATUS = {400, 401, 403, 404, 405, 410, 451}
 # Zip decompression-bomb caps.
@@ -120,7 +128,7 @@ CONSENT_STRIP_JS = """() => {
     '[class*="consent" i]', '[id*="gdpr" i]', '[class*="gdpr" i]',
     '[aria-label*="cookie" i]', '[data-testid*="cookie" i]', '[class*="cmp-" i]'
   ];
-  const phrases = ['we use cookies', 'uses cookies', 'value your privacy',
+  const phrases = ['use cookies', 'uses cookies', 'value your privacy',
                    'consent preferences', 'customize consent', 'cookie settings',
                    'manage cookies', 'necessary cookies', 'essential cookies',
                    'third-party cookies', 'consent to the use'];
@@ -165,6 +173,10 @@ class PermanentFetchError(RuntimeError):
         super().__init__(message)
         self.status_code = status_code
         self.headers = headers or {}
+
+    def __reduce__(self):
+        # crosses the worker-process boundary of fetch_rendered intact
+        return (PermanentFetchError, (str(self), self.status_code, self.headers))
 
 
 DIAG_HEADERS = ("Server", "Via", "X-Cache", "X-Azure-Ref", "X-Served-By", "CF-Ray",
@@ -249,6 +261,32 @@ def _is_public_url(url: str) -> bool:
         return False
 
 
+def _get_following_public_redirects(url: str, headers: dict, timeout: int):
+    """GET with redirects followed ONE HOP AT A TIME: the next location is checked
+    against the public-address guard BEFORE it is requested (requests' own
+    follower would already have sent the request and read the intermediate body),
+    an intermediate answer's body is never read, and the conditional headers are
+    dropped when a hop leaves the original host."""
+    cur, hdrs = url, dict(headers)
+    for _ in range(MAX_REDIRECTS + 1):
+        r = requests.get(cur, headers=dict(hdrs), timeout=timeout, allow_redirects=False,
+                         stream=True)
+        loc = r.headers.get("Location") if r.status_code in REDIRECT_STATUSES else None
+        if not loc:
+            return r
+        nxt = urljoin(cur, loc)
+        r.close()
+        try:
+            _assert_public_http(nxt)
+        except RuntimeError as exc:
+            raise PermanentFetchError(f"redirect into a non-public address: {exc}")
+        if urlparse(nxt).netloc != urlparse(cur).netloc:
+            hdrs.pop("If-None-Match", None)
+            hdrs.pop("If-Modified-Since", None)
+        cur = nxt
+    raise PermanentFetchError(f"more than {MAX_REDIRECTS} redirects for {url}")
+
+
 def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None):
     """Fetch a URL; returns (bytes, meta dict). Raises the last error on failure.
 
@@ -269,13 +307,10 @@ def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None
     last = None
     for attempt in range(retries + 1):
         try:
-            r = requests.get(url, headers=headers, timeout=timeout,
-                             allow_redirects=True, stream=True)
-            # a public origin may redirect into a private address: every hop and
-            # the final URL must pass the guard before a single body byte is kept
+            # a public origin may redirect into a private address: every hop is
+            # guarded before it is requested, and the final URL once more
+            r = _get_following_public_redirects(url, headers, timeout)
             try:
-                for hop in getattr(r, "history", []) or []:
-                    _assert_public_http(getattr(hop, "url", None) or url)
                 _assert_public_http(getattr(r, "url", None) or url)
             except RuntimeError as exc:
                 r.close()
@@ -470,7 +505,33 @@ def extract_text(data: bytes, ext: str):
         return None, notes
 
 
-def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 30):
+# A page can keep the renderer's main thread busy forever after the load event
+# (Playwright's content()/count()/evaluate() have no timeout), so the whole
+# browser session runs in a disposable worker process with a hard deadline —
+# the browser is launched inside it and dies with it. 15 rendered targets at
+# the default deadline still fit inside the sweep budget.
+RENDER_TIMEOUT_S = _timeout_from_env("GPAI_RENDER_TIMEOUT", 300.0, 1800.0)
+
+
+def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 30,
+                   deadline: float = None, fn=None):
+    """fetch_rendered's body (_fetch_rendered_impl) in a worker process that is
+    killed at the deadline; a stall raises RuntimeError so the caller records a
+    plain fetch error and the sweep moves on. Returns (dom_bytes, meta)."""
+    import multiprocessing as mp
+    deadline = RENDER_TIMEOUT_S if deadline is None else deadline
+    ctx = mp.get_context("spawn")
+    with ctx.Pool(1) as pool:
+        res = pool.apply_async(fn or _fetch_rendered_impl, (url, timeout_ms, max_expand_clicks))
+        try:
+            return res.get(timeout=deadline)
+        except mp.TimeoutError:
+            pool.terminate()
+            raise RuntimeError(f"rendered fetch exceeded {deadline:.0f}s (the page kept the "
+                               f"renderer busy; nothing stored for {url})")
+
+
+def _fetch_rendered_impl(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 30):
     """Fetch a JS-heavy page with headless Chromium and return the rendered DOM.
 
     Returns (dom_bytes, meta). The stored artifact is the serialized DOM after JS
@@ -483,9 +544,14 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
 
     _assert_public_http(url)
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
+        browser = pw.chromium.launch(headless=True, chromium_sandbox=CHROMIUM_SANDBOX)
         try:
             page = browser.new_page(user_agent=USER_AGENT)
+            # every request the page makes — navigations, sub-resources, frames —
+            # must pass the public-address guard: a provider page must not be
+            # able to make the runner fetch a private address on its behalf
+            page.route("**/*", lambda route, request: (
+                route.continue_() if _is_public_url(request.url) else route.abort()))
             resp = page.goto(url, wait_until="load", timeout=timeout_ms)
             try:
                 _assert_public_http(page.url)
@@ -503,7 +569,7 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
             # often only hides it via CSS, leaving the text in the serialization).
             consent_dismissed = None
             for label in ("Decline optional cookies", "Only allow essential cookies",
-                          "Reject all", "Only essential", "Decline"):
+                          "Reject optional", "Reject all", "Only essential", "Decline"):
                 try:
                     btn = page.get_by_role("button", name=label, exact=False)
                     if btn.count():
@@ -550,6 +616,8 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
                     continue
 
             for fr in child_frames:
+                if not _is_public_url(fr.url or ""):
+                    continue
                 try:
                     fhtml = fr.content()
                     ftext, _ = extract_text(fhtml.encode("utf-8"), ".html")
@@ -560,7 +628,15 @@ def fetch_rendered(url: str, timeout_ms: int = 60000, max_expand_clicks: int = 3
                 except Exception:
                     continue
 
+            # the page may have navigated after goto (a JS/meta redirect, a click):
+            # re-validate where it ended before anything is serialized
+            try:
+                _assert_public_http(page.url)
+            except RuntimeError as exc:
+                raise PermanentFetchError(f"page navigated to a non-public address: {exc}")
             dom = (page.content() + "".join(frame_sections)).encode("utf-8")
+            if len(dom) > MAX_FETCH_BYTES:
+                raise PermanentFetchError(f"rendered DOM {len(dom)} bytes exceeds cap for {url}")
             meta = {
                 "url": url,
                 "final_url": page.url,
@@ -800,6 +876,22 @@ class Store:
 
     def last_text_sha(self, source_id: str, tslug: str):
         return self.state.get(self.key(source_id, tslug), {}).get("last_text_sha256")
+
+    def known_text_shas(self, source_id: str, tslug: str) -> dict:
+        """text_sha256 -> capture dir for every retained version of a target,
+        read from the manifests: a rendered page that flips between two chrome
+        states (a consent banner stripped on one run and not the next) must
+        not mint a version on every flip."""
+        out = {}
+        for v in self.state.get(self.key(source_id, tslug), {}).get("versions", []):
+            mp = self.root / v["dir"] / "manifest.json"
+            try:
+                t = json.loads(mp.read_text(encoding="utf-8")).get("text_sha256")
+            except (OSError, ValueError):
+                continue
+            if t:
+                out[t] = v["dir"]
+        return out
 
     def record_version(self, source_id: str, tslug: str, sha: str, cap_dir: str,
                        text_sha: str = None, managed: str = None) -> None:

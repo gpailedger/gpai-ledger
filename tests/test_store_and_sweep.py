@@ -341,7 +341,7 @@ def _run_wb(monkeypatch, registry, data_root):
                         lambda url, **k: {"ok": True, "snapshot": "s", "at": "t"})
     monkeypatch.setattr(sys, "argv", [
         "run_capture.py", "--registry", str(registry), "--data-root",
-        str(data_root), "--no-ots", "--throttle", "0"])
+        str(data_root), "--no-ots", "--throttle", "0", "--wayback-throttle", "0"])
     return rc_mod.main()
 
 
@@ -468,15 +468,32 @@ def test_inconclusive_witness_first_day_is_unconfirmed(tmp_path, monkeypatch):
     assert e["absence"] == "unconfirmed" and e["absent_on"] == [_today()]
 
 
-def test_second_day_within_window_confirms(tmp_path, monkeypatch):
+def test_second_day_within_window_is_persistent_not_confirmed(tmp_path, monkeypatch):
+    # one vantage on two dates reddens the run but is never "confirmed": the
+    # runner cannot tell a removed document from an address being refused
     reg, data_root = _day1(tmp_path, monkeypatch)
     _seed(data_root, _days_ago(1))
     monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
     monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
     assert _run_wb(monkeypatch, reg, data_root) == 1
     e = _events(data_root)[-1]
-    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["consecutive-days"]
+    assert e["absence"] == "persistent" and e["confirmed_by"] == []
     assert e["absent_on"] == [_days_ago(1), _today()]
+
+
+def test_operator_attestation_vetoes_the_single_vantage_route(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2))
+    with open(data_root / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": f"{_days_ago(1)}T12:00:00Z", "source": "prov/model",
+                             "target": TARGET, "outcome": "live-attested",
+                             "vantage": "operator"}) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "unconfirmed" and e["last_live_witness"] == _days_ago(1)
+    assert e["absent_on"] == [_today()]
 
 
 def test_missed_sweep_does_not_break_the_day_route(tmp_path, monkeypatch):
@@ -694,7 +711,7 @@ def test_day_route_resumes_once_the_live_sighting_ages_out(tmp_path, monkeypatch
     monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
     assert _run_wb(monkeypatch, reg, data_root) == 1
     e = _events(data_root)[-1]
-    assert e["confirmed_by"] == ["consecutive-days"]
+    assert e["absence"] == "persistent" and e["confirmed_by"] == []
     assert e["absent_on"] == [_days_ago(2), _today()] and "last_live_witness" not in e
 
 
@@ -742,9 +759,9 @@ def test_sibling_live_fetch_supersedes_an_earlier_absence_claim_in_the_run(tmp_p
     monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
     assert _run_wb(monkeypatch, reg, data_root) == 0
     claim, recovery, sibling = _events(data_root)[-3:]
-    assert claim["source"] == "prov/a" and claim["absence"] == "confirmed"
+    assert claim["source"] == "prov/a" and claim["absence"] == "persistent"
     assert recovery["source"] == "prov/a" and recovery["outcome"] == "recheck-recovered"
-    assert recovery["recovered_by"] == "prov/b" and recovery["prior_absence"] == "confirmed"
+    assert recovery["recovered_by"] == "prov/b" and recovery["prior_absence"] == "persistent"
     assert [o["status_code"] for o in recovery["observations"]] == [404, 404]
     assert sibling["source"] == "prov/b" and sibling["outcome"] == "unchanged"
     assert ("prov/a", tslug) not in rc_mod.absence_streaks(data_root / "events.jsonl")

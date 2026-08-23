@@ -113,14 +113,14 @@
   {
     "id": "fastweb/fastwebmiia",
     "model": "FastwebMIIA",
-    "similarity": 0.6255,
+    "similarity": 0.6103,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
     "same_tool": true,
     "self_history": {
       "verdict": "single-version"
     },
     "verdict": "DRIFT-CANDIDATE",
-    "word_delta": 1644,
+    "word_delta": 1664,
     "moved_words": 34,
     "changes": [
       {
@@ -154,14 +154,9 @@
         "new": "il crawling di pagine esplicitamente vietate"
       },
       {
-        "op": "insert",
-        "old": "LETT D EU AI",
-        "new": "D DEL REGOLAMENTO UE 2024/1689 -"
-      },
-      {
         "op": "replace",
-        "old": "ACT 23.03.2026 Il presente",
-        "new": "AI ACT 30.07.2026 v3 Il"
+        "old": "LETT D EU AI ACT 23.03.2026 Il presente",
+        "new": "LETT D DEL REGOLAMENTO UE 2024/1689 - EU AI ACT 30.07.2026 v3 Il"
       },
       {
         "op": "replace",
@@ -215,8 +210,13 @@
       },
       {
         "op": "replace",
-        "old": "addestramento, modalità e caratteristiche Tipologia dati di training: a testuali b immagini c video d audio e altro Il modello non è multimodale, è stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a test",
-        "new": "addestramento e altre caratteristiche Modalità ☒ Testo ☐ Immagine ☐ Audio ☐ Video ☐ Altro Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di token circa 1,5 2 10¹² token . Il modello è esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramen"
+        "old": "addestramento, modalità e caratteristiche Tipologia dati di training: a testuali b immagini c video d audio e altro Il",
+        "new": "di addestramento e altre caratteristiche Modalità ☒ Testo ☐ Immagine ☐ Audio ☐ Video ☐ Altro Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di token circa 1,5 2 10¹² token ."
+      },
+      {
+        "op": "replace",
+        "old": "modello non è multimodale, è stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a testi di",
+        "new": "Il modello è esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramente esemplificativo e non esaustivo: testi"
       },
       {
         "op": "delete",
@@ -285,18 +285,18 @@
       },
       {
         "op": "replace",
-        "old": "2019/790. U. Identificazione dei crawler, loro scopo e comportamento Tutte le fonti utilizzate sono state raccolte esclusivamente in modalità testuale. I principali Crawler utilizzati sono: 1 Common Crawl 2 Red Pajama 3 FineWeb Edu V. Spiegazione del contenuto che è stato mirato Sono state predilett",
+        "old": "2019/790. U. Identificazione dei crawler, loro scopo e comportamento Tutte le fonti utilizzate sono state raccolte esclusivamente in modalità testuale. I principali Crawler utilizzati sono: 1 Common Crawl 2 Red Pajama 3 FineWeb",
         "new": "2019/790 RedPajama RedPajama-Data-v2 è un dataset aperto per il pre -training di LLM, costruito a partire da 84 snapshot di Common Crawl. Contiene oltre 30 trilioni di token filtrati e deduplicati più di 100 trilioni di token grezzi in cinque lingue: inglese, francese, spagnolo, tedesco e italiano. "
       },
       {
         "op": "replace",
-        "old": "dati degli utenti Y. Elenco dei servizi/prodotti del fornitore da cui i dati sono raccolti N/A, non vengono utilizzati dati degli utenti Z. Dati",
-        "new": "dati dei clienti di Fastweb per l addestramento del modello. informazioni , vedasi la sezione Data Journey in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 2.5 Dati"
+        "old": "Edu V. Spiegazione del contenuto che è stato mirato Sono state predilette fonti contenenti testo di alta qualità in inglese ed italiano. Per la descrizione della tipologia del contenuto si rimanda alla sezione L. W. Elenco del 10% dei principali nomi di dominio internet per tipo di modalità dei dati",
+        "new": "Edu FineWeb Edu è un dataset aperto per il pre -training di LLM, derivato da FineWeb a sua volta costruito a partire da Common Crawl. Contiene oltre 18,5 trilioni di token di testi in inglese, filtrati, deduplicati e selezionati per il loro contenuto di natura educativa. Periodo di raccolta: marzo 2"
       },
       {
         "op": "replace",
-        "old": "sintetici auto-generati dataset Dimensione complessiva per modalità I dati sintetici costituiscono complessivamente meno del 1% dell intero corpus. AA. Nome del modello di AI Generati tramite Phi 3.5, rilasciati sotto",
-        "new": "sintetici Sono stati creati dati sintetici generati da AI dal fornitore o per suo conto per addestrare il modello ☒ Sì Modalità dei dati sintetici: ☒ Testo Modello/i di AI per finalità generali utilizzato/i per generare i dati sintetici: Phi 3.5 Microsoft , rilasciato sotto"
+        "old": "dati degli utenti Y. Elenco dei servizi/prodotti del fornitore da cui i dati sono raccolti N/A, non vengono utilizzati dati degli utenti Z. Dati sintetici auto-generati dataset Dimensione complessiva per modalità I dati sintetici costituiscono complessivamente meno del 1% dell intero corpus. AA. Nom",
+        "new": "dati dei clienti di Fastweb per l addestramento del modello. informazioni , vedasi la sezione Data Journey in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 2.5 Dati sintetici Sono stati creati dati sintetici generati da AI dal fornitore o per suo conto per addestrare il model"
       },
       {
         "op": "replace",
@@ -818,8 +818,8 @@
     "changes": [
       {
         "op": "delete",
-        "old": "applicable 1 1.3.1.G",
-        "new": "Not applicable 1.3.1.G Video"
+        "old": "1 1.3.1.G Video",
+        "new": "applicable 1.3.1.G Video"
       },
       {
         "op": "delete",

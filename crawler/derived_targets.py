@@ -87,7 +87,7 @@ def store_document(store: cap.Store, source_id: str, provider: str, model: str,
         # a mined URL can start answering with an HTML page (landing/error page
         # swap); HTML bytes churn per fetch, so dedupe those on text
         if (ext == ".html" and text_sha
-                and text_sha == store.last_text_sha(source_id, tslug)):
+                and text_sha in store.known_text_shas(source_id, tslug)):
             store.event(source=source_id, target=tslug, url=stable_key,
                         kind="provider-live", outcome="unchanged-content",
                         sha256=sha, text_sha256=text_sha, via="derived-targets")
@@ -106,14 +106,21 @@ def store_document(store: cap.Store, source_id: str, provider: str, model: str,
     return "new"
 
 
+# host anchored to the bucket's amazonaws.com origin; the label class carries no
+# '-' (the separator class does), so a hyphen-rich host tail cannot make the
+# matcher backtrack exponentially
+COHERE_SUMMARY_RE = re.compile(
+    r'https://fdr-prod-docs-files-public\.s3(?:[.-][a-z0-9]+)*\.amazonaws\.com/'
+    r'[^"\s?]*eu-ai-public-summary[^"\s]*')
+
+
 def cohere(store: cap.Store) -> bool:
     html = render_watch_page("https://docs.cohere.com/docs/command-a-plus")
     if not html:
         return False
     # host anchored to the bucket's amazonaws.com origin: a link injected into the
     # docs page must not redirect the miner to a look-alike host
-    m = re.search(r'https://fdr-prod-docs-files-public\.s3(?:[.-][a-z0-9-]+)*\.amazonaws\.com/'
-                  r'[^"\s?]*eu-ai-public-summary[^"\s]*', html)
+    m = COHERE_SUMMARY_RE.search(html)
     if not m:
         print("  cohere: no signed summary URL on docs page — layout changed?")
         return False

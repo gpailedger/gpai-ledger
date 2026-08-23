@@ -69,15 +69,19 @@ def _budget_from_env() -> float:
 # the skip is recorded in the event log, and the run is marked red — while every
 # capture already on disk still reaches the commit step.
 SWEEP_BUDGET_S = _budget_from_env()
-# Second route to confirmation: the witness is often inconclusive (Save Page Now
-# cannot always capture an error page), so an absence observed on this many
-# distinct UTC dates in the current unbroken streak — the most recent prior one
-# within ABSENCE_WINDOW_DAYS, so a single missed sweep does not break it — is
-# also treated as corroborated. Same-day re-runs count once; any success resets.
-# A fresh witness that saw the document LIVE outranks this route: the streak
-# restarts at that day and the route stays vetoed until the sighting is older
-# than ABSENCE_WINDOW_DAYS (the witness-confirmed route is unaffected).
-CONFIRM_AFTER_DAYS = 2
+# Single-vantage route: the witness is often inconclusive (Save Page Now cannot
+# always capture an error page, and the runner may not reach the Archive at
+# all), so an absence observed on this many distinct UTC dates in the current
+# unbroken streak — the most recent prior one within ABSENCE_WINDOW_DAYS, so a
+# single missed sweep does not break it — is recorded as PERSISTENT: it reddens
+# the run and feeds the relocation hunt, but it is never `confirmed` — this
+# vantage alone cannot tell a removed document from a datacenter address being
+# refused (providers have answered 404 to the runner while serving everyone
+# else). Same-day re-runs count once; any success resets. A fresh sighting of
+# the document LIVE by the witness or by the operator's attestation
+# (crawler/attest.py) outranks this route: the streak restarts at that day and
+# the route stays vetoed until the sighting is older than ABSENCE_WINDOW_DAYS.
+PERSISTENT_AFTER_DAYS = 2
 ABSENCE_WINDOW_DAYS = 3
 # A fresh witness seeing the document LIVE contradicts the claim outright; if that
 # keeps happening the runner itself is blind to this document — surface it (red,
@@ -91,8 +95,10 @@ def absence_streaks(events_path: Path) -> dict:
     """(source, target) -> {"absent_on": {dates}, "contradicted_on": {dates}} for
     the target's current unbroken streak of absence events, reset by any success
     outcome (a recheck-recovered included). A contradicted day — a fresh witness
-    saw the document live — restarts absent_on (the document demonstrably existed
-    that day) while contradicted_on keeps accumulating for the vantage alert.
+    saw the document live — or a `live-attested` day (the operator fetched it
+    from a second network, crawler/attest.py) restarts absent_on (the document
+    demonstrably existed that day) while contradicted_on keeps accumulating for
+    the vantage alert.
     Plain errors (an 'error' event with no 'absence' field) neither reset nor
     count. A malformed timestamp is skipped, never fatal. Read once per run from
     the append-only event log."""
@@ -108,13 +114,15 @@ def absence_streaks(events_path: Path) -> dict:
         out, absence = e.get("outcome"), e.get("absence")
         ts = e.get("ts")
         day = ts[:10] if isinstance(ts, str) else ""
-        if out == "error" and absence and day:
+        if (out == "error" and absence and day) or (out == "live-attested" and day):
             try:
                 date.fromisoformat(day)
             except ValueError:
                 continue  # a damaged line must not abort the sweep that reads it
             entry = tail.setdefault(key, {"absent_on": set(), "contradicted_on": set()})
-            if absence == "contradicted":
+            if absence == "contradicted" or out == "live-attested":
+                # a fresh witness, or the operator from a second network, saw
+                # the document live: it demonstrably existed that day
                 entry["contradicted_on"].add(day)
                 entry["absent_on"].clear()
             else:
@@ -187,7 +195,7 @@ def main() -> int:
     store = cap.Store(data_root)
 
     stats = {"checked": 0, "new": 0, "unchanged": 0, "errors": 0,
-             "unconfirmed_absence": 0, "vantage_blocked": 0,
+             "unconfirmed_absence": 0, "persistent_absence": 0, "vantage_blocked": 0,
              "wayback_ok": 0, "wayback_fail": 0, "ots_ok": 0, "ots_fail": 0}
     failures = []
     fetch_cache = {}  # url -> (raw, meta); several sources share one portal URL
@@ -353,13 +361,26 @@ def main() -> int:
                         confirmed_by = []
                         if witness_saw == "absent":
                             confirmed_by.append("witness")
-                        if len(dates) >= CONFIRM_AFTER_DAYS and within and not live_recent:
-                            confirmed_by.append("consecutive-days")
+                        persistent = (len(dates) >= PERSISTENT_AFTER_DAYS and within
+                                      and not live_recent)
                         if confirmed_by:
                             absence = "confirmed"
                             stats["errors"] += 1
                             stat_keys.append("errors")
                             failure = (source["id"], url, second["error"])
+                            failures.append(failure)
+                        elif persistent:
+                            # this vantage alone, on several dates: red so the
+                            # operator looks (crawler/attest.py) — never confirmed
+                            absence = "persistent"
+                            stats["errors"] += 1
+                            stats["persistent_absence"] += 1
+                            stat_keys += ["errors", "persistent_absence"]
+                            failure = (source["id"], url,
+                                       f"{second['error']} — persistent from this vantage "
+                                       f"only ({len(dates)} dates, no independent "
+                                       f"corroboration): verify from another network "
+                                       f"with crawler/attest.py")
                             failures.append(failure)
                         else:
                             absence = "unconfirmed"
@@ -436,12 +457,17 @@ def main() -> int:
                 text_sha = cap.canonical_text_sha(text) if text else None
 
             # Dynamic HTML (nonces, csrf tokens) mints new byte-hashes on every fetch;
-            # for HTML targets a version exists only when the *text* changed.
-            if ext == ".html" and text_sha and \
-                    text_sha == store.last_text_sha(source["id"], tslug):
+            # for HTML targets a version exists only when the *text* changed — and
+            # the text is compared with EVERY retained version of the target, so a
+            # page that flips between two chrome states (a consent banner stripped
+            # on one run and not the next) cannot mint a version on every flip
+            known = (store.known_text_shas(source["id"], tslug)
+                     if ext == ".html" and text_sha else {})
+            if text_sha in known:
                 stats["unchanged"] += 1
                 store.event(source=source["id"], target=tslug, url=url, kind=kind,
-                            outcome="unchanged-content", sha256=sha, text_sha256=text_sha)
+                            outcome="unchanged-content", sha256=sha, text_sha256=text_sha,
+                            matches=known[text_sha])
                 time.sleep(args.throttle)
                 continue
 
@@ -481,12 +507,13 @@ def main() -> int:
         print("\n=== failures ===")
         for sid, url, err in failures:
             print(f"  {sid}: {url}\n    {err}")
-    # non-zero on CONFIRMED errors so CI shows red — the workflow runs this step
-    # with continue-on-error, so captured data is still committed, but a partial
-    # sweep is never silently reported as a success. Unconfirmed and contradicted
-    # absences (a 404 from this vantage point that an independent witness did not
-    # corroborate, or that it refuted) are fully logged but do not redden the run,
-    # except a persistent contradiction, which reddens as a vantage problem.
+    # non-zero on CONFIRMED and PERSISTENT absences (and plain errors) so CI
+    # shows red — the workflow runs this step with continue-on-error, so captured
+    # data is still committed, but a partial sweep is never silently reported as
+    # a success. Unconfirmed and contradicted absences (a 404 from this vantage
+    # point on one day, or one an independent witness refuted) are fully logged
+    # but do not redden the run, except a repeated contradiction, which reddens
+    # as a vantage problem.
     return 1 if stats.get("errors") else 0
 
 

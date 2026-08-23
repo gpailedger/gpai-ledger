@@ -77,7 +77,11 @@ def upgrade_timestamp(ts: Timestamp) -> bool:
                         upgraded = Timestamp.deserialize(
                             BytesDeserializationContext(r.content), t.msg)
                         t.merge(upgraded)
-                        t.attestations.discard(att)
+                        # the pending marker is redundant only once the merged
+                        # path reaches a bitcoin attestation; a partial answer
+                        # keeps it so a later run can complete the proof
+                        if is_anchored(t):
+                            t.attestations.discard(att)
                         ch = True
                 except Exception:  # noqa: BLE001 — calendar not ready / unreachable
                     continue

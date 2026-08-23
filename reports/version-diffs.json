@@ -1,12 +1,12 @@
 {
   "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260811T110511Z>captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z": {
     "verdict": "changed",
-    "similarity": 0.9653,
+    "similarity": 0.9669,
     "word_delta": 74,
     "moved_words": 50,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -80,8 +80,8 @@
       },
       {
         "op": "insert",
-        "old": "C Mistral Large 3",
-        "new": "Mistral C C Mistral Large"
+        "old": "C Mistral Large",
+        "new": "C Mistral C C Mistral"
       },
       {
         "op": "replace",
@@ -130,16 +130,26 @@
     "to_dir": "captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z",
     "from_sha256": "d72adc011d8127782edefb3f6d01d7be1e3ca766217d78a8d31d4398f27a7306",
     "to_sha256": "dd7c0257a731de5c56a6237243f64dd04c0f9ab811b0813f919a38e91f36589d",
-    "computed_at": "2026-08-22T23:24:25Z"
+    "computed_at": "2026-08-23T09:13:37Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9653,
+        "word_delta": 74,
+        "moved_words": 50,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:25Z"
+      }
+    ]
   },
   "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260811T110417Z>captures/aial__tracker/watch-page-c82134bd/20260818T164825Z": {
     "verdict": "changed",
     "similarity": 0.9473,
-    "word_delta": 121,
+    "word_delta": 119,
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "replace",
@@ -149,17 +159,17 @@
       {
         "op": "insert",
         "old": ". GPT-5.5 by",
-        "new": ". GPT-5.2 by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here . GPT-5.4 Nano by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here . GPT-5.5 by"
+        "new": ". GPT-5.2 by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here . GPT-5.4 Nano by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here ."
       },
       {
         "op": "insert",
         "old": ". Grok 4.5 by xAI",
-        "new": ". GPT Image 2 by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here . Grok 4.5 by xAI We found this document linked on this page . An archived version can be found here . See our evaluation here . Grok Voice Think Fast 2.0 by"
+        "new": ". GPT Image 2 by OpenAI We found this document linked on this page . An archived version can be found here . See our evaluation here . Grok 4.5 by xAI We found this document linked on this page . An archived version can be found here . See our evaluation here . Grok Voice Think Fast 2.0 by xAI"
       },
       {
         "op": "insert",
-        "old": ". Muse Image by",
-        "new": "Muse Glimmer by Meta We found this document linked on this page . An archived version can be found here . See our evaluation here . Muse Image"
+        "old": ". Muse Image",
+        "new": ". Muse Glimmer by Meta We found this document linked on this page . An archived version can be found here . See our evaluation here ."
       }
     ],
     "source": "aial/tracker",
@@ -168,7 +178,17 @@
     "to_dir": "captures/aial__tracker/watch-page-c82134bd/20260818T164825Z",
     "from_sha256": "0ab9691371e039527e1f58eedecd291f7800cf0d0ddc0bc51f4b8a4a7781c55a",
     "to_sha256": "390d340f655dce776046460ca457236d7378e6ff8b3b2311fc6239078618263c",
-    "computed_at": "2026-08-22T23:24:24Z"
+    "computed_at": "2026-08-23T09:13:36Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9473,
+        "word_delta": 121,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:24Z"
+      }
+    ]
   },
   "amazon/nova-2-lite::live-vs-archive::captures/amazon__nova-2-lite/aial-archive-08c22740/20260811T105414Z>captures/amazon__nova-2-lite/provider-live-d1ce66ae/20260811T105338Z": {
     "verdict": "identical-text",
@@ -177,14 +197,24 @@
     "moved_words": 0,
     "same_tool": false,
     "compared_via": "stored extracts",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "source": "amazon/nova-2-lite",
     "target": "live-vs-archive",
     "from_dir": "captures/amazon__nova-2-lite/aial-archive-08c22740/20260811T105414Z",
     "to_dir": "captures/amazon__nova-2-lite/provider-live-d1ce66ae/20260811T105338Z",
     "from_sha256": "b073bdc1de04f384330754dbb3a8a5871aa3c524f63ff5cf46f29063ed6f9884",
     "to_sha256": "c26e002296828ca2a285d1ceb241e7aba1aa515aa0331289c9e51ec4a6847a80",
-    "computed_at": "2026-08-22T23:26:13Z"
+    "computed_at": "2026-08-23T09:14:04Z",
+    "prior_verdicts": [
+      {
+        "verdict": "identical-text",
+        "similarity": 1.0,
+        "word_delta": 0,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:13Z"
+      }
+    ]
   },
   "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260811T102430Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260817T082322Z": {
     "verdict": "method-changed",
@@ -193,7 +223,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -207,7 +237,17 @@
     "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260817T082322Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:00Z"
+    "computed_at": "2026-08-23T09:13:31Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:00Z"
+      }
+    ]
   },
   "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260811T102534Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z": {
     "verdict": "method-changed",
@@ -216,7 +256,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -230,7 +270,17 @@
     "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:00Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:00Z"
+      }
+    ]
   },
   "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260811T102614Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z": {
     "verdict": "method-changed",
@@ -239,7 +289,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -253,7 +303,17 @@
     "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:00Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:00Z"
+      }
+    ]
   },
   "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260811T102657Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z": {
     "verdict": "method-changed",
@@ -262,7 +322,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -276,7 +336,17 @@
     "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:00Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:00Z"
+      }
+    ]
   },
   "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260811T102736Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z": {
     "verdict": "method-changed",
@@ -285,7 +355,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -299,7 +369,17 @@
     "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:00Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:00Z"
+      }
+    ]
   },
   "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260811T102817Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z": {
     "verdict": "method-changed",
@@ -308,7 +388,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -322,7 +402,17 @@
     "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z",
     "from_sha256": "4c3d597e28e68975f49e0d533b65e8638ec8185df3365be7ab1abb27b3835d87",
     "to_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
-    "computed_at": "2026-08-22T23:24:01Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0046,
+        "word_delta": 1504,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:01Z"
+      }
+    ]
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -331,7 +421,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -345,7 +435,17 @@
     "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z",
     "from_sha256": "28730261e2279ae5ee0a15867c9b9fada49bc8549208f335e932edeb795f4894",
     "to_sha256": "aed90a9e92a262d91709a19a97c818090a14c01a7f38f262ca4ac124d41f59c3",
-    "computed_at": "2026-08-22T23:25:15Z"
+    "computed_at": "2026-08-23T09:13:44Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9823,
+        "word_delta": 50,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:15Z"
+      }
+    ]
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z": {
     "verdict": "changed",
@@ -354,7 +454,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -363,7 +463,7 @@
       },
       {
         "op": "replace",
-        "old": "is not generally available: it is offered in limited availability to",
+        "old": "5 is not generally available: it is offered in limited availability to",
         "new": "5 is offered only to"
       }
     ],
@@ -373,7 +473,17 @@
     "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z",
     "from_sha256": "aed90a9e92a262d91709a19a97c818090a14c01a7f38f262ca4ac124d41f59c3",
     "to_sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
-    "computed_at": "2026-08-22T23:25:16Z"
+    "computed_at": "2026-08-23T09:13:45Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9962,
+        "word_delta": 9,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:16Z"
+      }
+    ]
   },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260811T103345Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z": {
     "verdict": "method-changed",
@@ -382,7 +492,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -406,7 +516,17 @@
     "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z",
     "from_sha256": "9409befb1e47800bf9b10ab90e5ba8a96bc4185002e93fed8a2d6716b5bd7422",
     "to_sha256": "f140b2c58cf496e11381e93830055d0029b7754f9a6df2785fb5a3d82f57776e",
-    "computed_at": "2026-08-22T23:24:11Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.4645,
+        "word_delta": 464,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:11Z"
+      }
+    ]
   },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260818T170339Z": {
     "verdict": "method-changed",
@@ -415,7 +535,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -429,7 +549,17 @@
     "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20260818T170339Z",
     "from_sha256": "f140b2c58cf496e11381e93830055d0029b7754f9a6df2785fb5a3d82f57776e",
     "to_sha256": "0073a17c80487665009993dc9e0cccbb75807eda355ca833bd42e2efbf8c94f3",
-    "computed_at": "2026-08-22T23:24:11Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.621,
+        "word_delta": 361,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:11Z"
+      }
+    ]
   },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260818T170339Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260821T095912Z": {
     "verdict": "method-changed",
@@ -438,7 +568,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "replace",
@@ -452,7 +582,17 @@
     "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20260821T095912Z",
     "from_sha256": "0073a17c80487665009993dc9e0cccbb75807eda355ca833bd42e2efbf8c94f3",
     "to_sha256": "f2b22ca065a915e19eb81fe7bf6e4234deed1d1b1302ea091c835632650fbd47",
-    "computed_at": "2026-08-22T23:24:11Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9967,
+        "word_delta": 1,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:11Z"
+      }
+    ]
   },
   "bria-ai/fibo::provider-live-037b2259::captures/bria-ai__fibo/provider-live-037b2259/20260811T103249Z>captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z": {
     "verdict": "changed",
@@ -461,7 +601,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "replace",
@@ -475,7 +615,17 @@
     "to_dir": "captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z",
     "from_sha256": "0f824c4720915305f668611aca2af536fafa38eca1008f252c4b9150693f693f",
     "to_sha256": "ca2ecd78dfd4f744631788754a825cf1c5882ef0683d7ed6557e3919ba232757",
-    "computed_at": "2026-08-22T23:24:10Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.8387,
+        "word_delta": 3,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:10Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T080547Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T082521Z": {
     "verdict": "method-changed",
@@ -484,7 +634,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -513,7 +663,17 @@
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T082521Z",
     "from_sha256": "83e7404c5f92a89bb44cc41bf58eb9eceecce25ebaae0accff2a9660d3094fa9",
     "to_sha256": "3ab458e0f3cf869c1e9cb81f2bf5f51f42c622d1114de9f335abb17cb4f36a02",
-    "computed_at": "2026-08-22T23:24:29Z"
+    "computed_at": "2026-08-23T09:13:37Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.8644,
+        "word_delta": 480,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:29Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T082521Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260818T172226Z": {
     "verdict": "method-changed",
@@ -522,12 +682,12 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
-        "old": "optional Accept all Customize Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as Necessary are stored on your browser as they ar",
-        "new": "Reject optional Accept all"
+        "old": "Accept all Customize Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as Necessary are stored on your browser as they are essenti",
+        "new": "optional Accept all"
       }
     ],
     "source": "cohere/command-a-plus",
@@ -536,7 +696,17 @@
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260818T172226Z",
     "from_sha256": "3ab458e0f3cf869c1e9cb81f2bf5f51f42c622d1114de9f335abb17cb4f36a02",
     "to_sha256": "7bd82474a1960c021898081883badb2936bfcf764deb26d6e53833a876982e71",
-    "computed_at": "2026-08-22T23:24:33Z"
+    "computed_at": "2026-08-23T09:13:38Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9214,
+        "word_delta": 280,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:33Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260818T172226Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z": {
     "verdict": "method-changed",
@@ -545,7 +715,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -559,7 +729,17 @@
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z",
     "from_sha256": "7bd82474a1960c021898081883badb2936bfcf764deb26d6e53833a876982e71",
     "to_sha256": "570412c89b4c5bd21246ed298e5a722d6e59239230f7f6c01a20336e2be25a44",
-    "computed_at": "2026-08-22T23:24:35Z"
+    "computed_at": "2026-08-23T09:13:39Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:35Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z": {
     "verdict": "method-changed",
@@ -568,7 +748,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -576,13 +756,31 @@
         "new": "Cohere We and our partners use cookies, scripts and certain similar technologies Cookies to collect data from visitors to this site, including IP address, clicks, and other details about them and their use of the site and other sites. This helps us operate site features, identify visitors, understan"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260818T172226Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z",
     "from_sha256": "570412c89b4c5bd21246ed298e5a722d6e59239230f7f6c01a20336e2be25a44",
     "to_sha256": "1b4581bfbee6e7dc233084f8bf8e2429ec3df47b076e79c87d0b06ddbe9b9411",
-    "computed_at": "2026-08-22T23:24:38Z"
+    "computed_at": "2026-08-23T09:13:39Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:38Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T075427Z": {
     "verdict": "method-changed",
@@ -591,7 +789,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -599,13 +797,31 @@
         "new": "Model Cohere For AI"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260821T110451Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T075427Z",
     "from_sha256": "1b4581bfbee6e7dc233084f8bf8e2429ec3df47b076e79c87d0b06ddbe9b9411",
     "to_sha256": "3e9bd60a56bc6bd14ea4a3ac228d6131f6dcea61b089ed427021dd855801327d",
-    "computed_at": "2026-08-22T23:24:41Z"
+    "computed_at": "2026-08-23T09:13:40Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:41Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T075427Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T085004Z": {
     "verdict": "method-changed",
@@ -614,7 +830,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -622,13 +838,31 @@
         "new": "Cohere We and our partners use cookies, scripts and certain similar technologies Cookies to collect data from visitors to this site, including IP address, clicks, and other details about them and their use of the site and other sites. This helps us operate site features, identify visitors, understan"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T072222Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T075427Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T085004Z",
     "from_sha256": "3e9bd60a56bc6bd14ea4a3ac228d6131f6dcea61b089ed427021dd855801327d",
     "to_sha256": "513baec5a6de83a19c35e2cf950242746b239c6adc0a7a147a7d970d9171f134",
-    "computed_at": "2026-08-22T23:24:44Z"
+    "computed_at": "2026-08-23T09:13:40Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:44Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T085004Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T105206Z": {
     "verdict": "method-changed",
@@ -637,7 +871,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -645,13 +879,31 @@
         "new": "Model Cohere For AI"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T075427Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T085004Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T105206Z",
     "from_sha256": "513baec5a6de83a19c35e2cf950242746b239c6adc0a7a147a7d970d9171f134",
     "to_sha256": "dd46d17e59dc9ac46c5cfd0bdc46783b935faee337bfbcad09c258f29de0eca2",
-    "computed_at": "2026-08-22T23:24:46Z"
+    "computed_at": "2026-08-23T09:13:41Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:46Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T105206Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z": {
     "verdict": "method-changed",
@@ -660,7 +912,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -668,13 +920,31 @@
         "new": "Cohere We and our partners use cookies, scripts and certain similar technologies Cookies to collect data from visitors to this site, including IP address, clicks, and other details about them and their use of the site and other sites. This helps us operate site features, identify visitors, understan"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T085004Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T105206Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z",
     "from_sha256": "dd46d17e59dc9ac46c5cfd0bdc46783b935faee337bfbcad09c258f29de0eca2",
     "to_sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
-    "computed_at": "2026-08-22T23:24:49Z"
+    "computed_at": "2026-08-23T09:13:41Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:49Z"
+      }
+    ]
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z": {
     "verdict": "method-changed",
@@ -683,7 +953,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -691,13 +961,31 @@
         "new": "Model Cohere For AI"
       }
     ],
+    "same_method_pair": {
+      "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T105206Z",
+      "verdict": "identical-text",
+      "similarity": 1.0,
+      "word_delta": 0,
+      "moved_words": 0,
+      "compared_via": "stored extracts"
+    },
     "source": "cohere/command-a-plus",
     "target": "provider-page-4b5fc50d",
     "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T161843Z",
     "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z",
     "from_sha256": "6691c203187950b8f0d52b3d68c86e300c116840d3aea2378fd270092b39d650",
     "to_sha256": "e99c75b05229ec52e9cb9c5c38709ad028838258183f974da13f5e900343829c",
-    "computed_at": "2026-08-22T23:55:51Z"
+    "computed_at": "2026-08-23T09:13:42Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9732,
+        "word_delta": 92,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:55:51Z"
+      }
+    ]
   },
   "domyn/domyn::provider-live-81f159b9::captures/domyn__domyn/provider-live-81f159b9/20260811T102935Z>captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z": {
     "verdict": "method-changed",
@@ -706,7 +994,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -725,7 +1013,17 @@
     "to_dir": "captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z",
     "from_sha256": "7f964677a1bea51857644cd370badeaa5b61eccd75852d6d392a3e982064af88",
     "to_sha256": "e671750cf304a13c3097c4e1e52ac98f8622fc99270136c487e110a7c323607e",
-    "computed_at": "2026-08-22T23:24:06Z"
+    "computed_at": "2026-08-23T09:13:32Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9852,
+        "word_delta": 58,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:06Z"
+      }
+    ]
   },
   "domyn/domyn::provider-live-81f159b9::captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z>captures/domyn__domyn/provider-live-81f159b9/20260818T170156Z": {
     "verdict": "method-changed",
@@ -734,7 +1032,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
@@ -748,16 +1046,26 @@
     "to_dir": "captures/domyn__domyn/provider-live-81f159b9/20260818T170156Z",
     "from_sha256": "e671750cf304a13c3097c4e1e52ac98f8622fc99270136c487e110a7c323607e",
     "to_sha256": "2a9c8cbb812369ee0ba8f46d17114404b1bc43f2f4a0b2b7acd0639f4b6e045c",
-    "computed_at": "2026-08-22T23:24:10Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9885,
+        "word_delta": 44,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:10Z"
+      }
+    ]
   },
   "fastweb/fastwebmiia::live-vs-archive::captures/fastweb__fastwebmiia/aial-archive-4187b3ff/20260811T103240Z>captures/fastweb__fastwebmiia/provider-live-dfd0e4f0/20260811T103202Z": {
     "verdict": "changed",
-    "similarity": 0.6255,
-    "word_delta": 1644,
+    "similarity": 0.6103,
+    "word_delta": 1664,
     "moved_words": 34,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -790,14 +1098,9 @@
         "new": "il crawling di pagine esplicitamente vietate"
       },
       {
-        "op": "insert",
-        "old": "LETT D EU AI",
-        "new": "D DEL REGOLAMENTO UE 2024/1689 -"
-      },
-      {
         "op": "replace",
-        "old": "ACT 23.03.2026 Il presente",
-        "new": "AI ACT 30.07.2026 v3 Il"
+        "old": "LETT D EU AI ACT 23.03.2026 Il presente",
+        "new": "LETT D DEL REGOLAMENTO UE 2024/1689 - EU AI ACT 30.07.2026 v3 Il"
       },
       {
         "op": "replace",
@@ -851,8 +1154,13 @@
       },
       {
         "op": "replace",
-        "old": "addestramento, modalità e caratteristiche Tipologia dati di training: a testuali b immagini c video d audio e altro Il modello non è multimodale, è stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a test",
-        "new": "addestramento e altre caratteristiche Modalità ☒ Testo ☐ Immagine ☐ Audio ☐ Video ☐ Altro Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di token circa 1,5 2 10¹² token . Il modello è esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramen"
+        "old": "addestramento, modalità e caratteristiche Tipologia dati di training: a testuali b immagini c video d audio e altro Il",
+        "new": "di addestramento e altre caratteristiche Modalità ☒ Testo ☐ Immagine ☐ Audio ☐ Video ☐ Altro Dimensione dati di addestramento ☒ Testo - da 1 miliardo a 10.000 miliardi di token circa 1,5 2 10¹² token ."
+      },
+      {
+        "op": "replace",
+        "old": "modello non è multimodale, è stato addestrato utilizzando esclusivamente dati a testuali per una dimensione complessiva pari a 1.5 2 10 12 tokens. H. Tipologia dati testuali: a testi di",
+        "new": "Il modello è esclusivamente un modello testuale. Tipi di contenuto per dati testuali A titolo meramente esemplificativo e non esaustivo: testi"
       },
       {
         "op": "delete",
@@ -921,18 +1229,18 @@
       },
       {
         "op": "replace",
-        "old": "2019/790. U. Identificazione dei crawler, loro scopo e comportamento Tutte le fonti utilizzate sono state raccolte esclusivamente in modalità testuale. I principali Crawler utilizzati sono: 1 Common Crawl 2 Red Pajama 3 FineWeb Edu V. Spiegazione del contenuto che è stato mirato Sono state predilett",
+        "old": "2019/790. U. Identificazione dei crawler, loro scopo e comportamento Tutte le fonti utilizzate sono state raccolte esclusivamente in modalità testuale. I principali Crawler utilizzati sono: 1 Common Crawl 2 Red Pajama 3 FineWeb",
         "new": "2019/790 RedPajama RedPajama-Data-v2 è un dataset aperto per il pre -training di LLM, costruito a partire da 84 snapshot di Common Crawl. Contiene oltre 30 trilioni di token filtrati e deduplicati più di 100 trilioni di token grezzi in cinque lingue: inglese, francese, spagnolo, tedesco e italiano. "
       },
       {
         "op": "replace",
-        "old": "dati degli utenti Y. Elenco dei servizi/prodotti del fornitore da cui i dati sono raccolti N/A, non vengono utilizzati dati degli utenti Z. Dati",
-        "new": "dati dei clienti di Fastweb per l addestramento del modello. informazioni , vedasi la sezione Data Journey in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 2.5 Dati"
+        "old": "Edu V. Spiegazione del contenuto che è stato mirato Sono state predilette fonti contenenti testo di alta qualità in inglese ed italiano. Per la descrizione della tipologia del contenuto si rimanda alla sezione L. W. Elenco del 10% dei principali nomi di dominio internet per tipo di modalità dei dati",
+        "new": "Edu FineWeb Edu è un dataset aperto per il pre -training di LLM, derivato da FineWeb a sua volta costruito a partire da Common Crawl. Contiene oltre 18,5 trilioni di token di testi in inglese, filtrati, deduplicati e selezionati per il loro contenuto di natura educativa. Periodo di raccolta: marzo 2"
       },
       {
         "op": "replace",
-        "old": "sintetici auto-generati dataset Dimensione complessiva per modalità I dati sintetici costituiscono complessivamente meno del 1% dell intero corpus. AA. Nome del modello di AI Generati tramite Phi 3.5, rilasciati sotto",
-        "new": "sintetici Sono stati creati dati sintetici generati da AI dal fornitore o per suo conto per addestrare il modello ☒ Sì Modalità dei dati sintetici: ☒ Testo Modello/i di AI per finalità generali utilizzato/i per generare i dati sintetici: Phi 3.5 Microsoft , rilasciato sotto"
+        "old": "dati degli utenti Y. Elenco dei servizi/prodotti del fornitore da cui i dati sono raccolti N/A, non vengono utilizzati dati degli utenti Z. Dati sintetici auto-generati dataset Dimensione complessiva per modalità I dati sintetici costituiscono complessivamente meno del 1% dell intero corpus. AA. Nom",
+        "new": "dati dei clienti di Fastweb per l addestramento del modello. informazioni , vedasi la sezione Data Journey in FastwebMIIA - Prodotti Artificial Intelligence Grandi Aziende Fastweb 2.5 Dati sintetici Sono stati creati dati sintetici generati da AI dal fornitore o per suo conto per addestrare il model"
       },
       {
         "op": "replace",
@@ -966,7 +1274,17 @@
     "to_dir": "captures/fastweb__fastwebmiia/provider-live-dfd0e4f0/20260811T103202Z",
     "from_sha256": "86ea0b5c0fccbeeff157f731fba535b55dae073e4f84156413e87f5d8c29110d",
     "to_sha256": "1f0b95d1b02074113265118c16d137dc910805426e61a26d9973e4bb0655fa72",
-    "computed_at": "2026-08-22T23:26:00Z"
+    "computed_at": "2026-08-23T09:13:59Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.6255,
+        "word_delta": 1644,
+        "moved_words": 34,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:00Z"
+      }
+    ]
   },
   "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20260811T105844Z>captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z": {
     "verdict": "method-changed",
@@ -975,7 +1293,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -989,7 +1307,17 @@
     "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
     "from_sha256": "2c511d1f7ff71a48239cdbff827ed170e033afb9f49092320c37c740c5b5be13",
     "to_sha256": "d5faa968264dc23767c56e3f02683f1ed242132a23ec0989f77d0d2213593efc",
-    "computed_at": "2026-08-22T23:24:23Z"
+    "computed_at": "2026-08-23T09:13:36Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0522,
+        "word_delta": 1114,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:23Z"
+      }
+    ]
   },
   "meta/muse-glimmer::live-vs-archive::captures/meta__muse-glimmer/aial-archive-ee7d6084/20260818T164645Z>captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z": {
     "verdict": "changed",
@@ -998,7 +1326,7 @@
     "moved_words": 2,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1032,7 +1360,17 @@
     "to_dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z",
     "from_sha256": "5f29be94fba3e80df8125748f3748a2dc4083aa04ca12c718fe5366fc34486b4",
     "to_sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
-    "computed_at": "2026-08-22T23:26:04Z"
+    "computed_at": "2026-08-23T09:14:01Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9968,
+        "word_delta": 12,
+        "moved_words": 2,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:04Z"
+      }
+    ]
   },
   "meta/muse-glimmer::provider-live-595d1bcb::captures/meta__muse-glimmer/provider-live-595d1bcb/20260818T172149Z>captures/meta__muse-glimmer/provider-live-595d1bcb/20260821T110825Z": {
     "verdict": "changed",
@@ -1041,12 +1379,12 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
-        "old": "Research tools Reports English",
-        "new": "tools Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports"
+        "old": "tools Reports English",
+        "new": "Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports English"
       },
       {
         "op": "delete",
@@ -1060,7 +1398,17 @@
     "to_dir": "captures/meta__muse-glimmer/provider-live-595d1bcb/20260821T110825Z",
     "from_sha256": "fa3321b0f687d4c98b825ef4beba96be53043c1843f51805f42a2ac6af72bb3c",
     "to_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
-    "computed_at": "2026-08-22T23:24:55Z"
+    "computed_at": "2026-08-23T09:13:42Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9821,
+        "word_delta": 82,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:55Z"
+      }
+    ]
   },
   "meta/muse-glimmer::provider-live-7d5a5ed8::captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z>captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z": {
     "verdict": "changed",
@@ -1069,7 +1417,7 @@
     "moved_words": 2,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1103,7 +1451,17 @@
     "to_dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z",
     "from_sha256": "5f29be94fba3e80df8125748f3748a2dc4083aa04ca12c718fe5366fc34486b4",
     "to_sha256": "0247cea31889c01e3e991948949dae3fe1107215989de775624d1eb7190fafa5",
-    "computed_at": "2026-08-22T23:25:22Z"
+    "computed_at": "2026-08-23T09:13:47Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9968,
+        "word_delta": 12,
+        "moved_words": 2,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:22Z"
+      }
+    ]
   },
   "meta/muse-image::live-vs-archive::captures/meta__muse-image/aial-archive-e329e789/20260811T105141Z>captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z": {
     "verdict": "changed",
@@ -1112,7 +1470,7 @@
     "moved_words": 5,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1156,7 +1514,17 @@
     "to_dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z",
     "from_sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
     "to_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
-    "computed_at": "2026-08-22T23:26:08Z"
+    "computed_at": "2026-08-23T09:14:02Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9936,
+        "word_delta": 17,
+        "moved_words": 5,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:08Z"
+      }
+    ]
   },
   "meta/muse-image::provider-live-595d1bcb::captures/meta__muse-image/provider-live-595d1bcb/20260811T105059Z>captures/meta__muse-image/provider-live-595d1bcb/20260817T082916Z": {
     "verdict": "method-changed",
@@ -1165,7 +1533,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1179,7 +1547,17 @@
     "to_dir": "captures/meta__muse-image/provider-live-595d1bcb/20260817T082916Z",
     "from_sha256": "158d29e108cf43f259c7bee3a4eff9316b33572fbc59e47ae55ffe45a55599a7",
     "to_sha256": "12509e1d776336e20700f7920c2dcc49194f4f81a490b6f864048d2dd12c0f28",
-    "computed_at": "2026-08-22T23:24:11Z"
+    "computed_at": "2026-08-23T09:13:33Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0058,
+        "word_delta": 2143,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:11Z"
+      }
+    ]
   },
   "meta/muse-image::provider-live-595d1bcb::captures/meta__muse-image/provider-live-595d1bcb/20260817T082916Z>captures/meta__muse-image/provider-live-595d1bcb/20260821T110856Z": {
     "verdict": "method-changed",
@@ -1188,12 +1566,12 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
-        "old": "Research tools Reports English",
-        "new": "tools Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports"
+        "old": "tools Reports English",
+        "new": "Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports English"
       },
       {
         "op": "delete",
@@ -1207,7 +1585,17 @@
     "to_dir": "captures/meta__muse-image/provider-live-595d1bcb/20260821T110856Z",
     "from_sha256": "12509e1d776336e20700f7920c2dcc49194f4f81a490b6f864048d2dd12c0f28",
     "to_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
-    "computed_at": "2026-08-22T23:24:17Z"
+    "computed_at": "2026-08-23T09:13:34Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9821,
+        "word_delta": 82,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:17Z"
+      }
+    ]
   },
   "meta/muse-image::provider-live-e520ba83::captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z>captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z": {
     "verdict": "changed",
@@ -1216,7 +1604,7 @@
     "moved_words": 5,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1260,7 +1648,17 @@
     "to_dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z",
     "from_sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
     "to_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
-    "computed_at": "2026-08-22T23:25:26Z"
+    "computed_at": "2026-08-23T09:13:49Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9936,
+        "word_delta": 17,
+        "moved_words": 5,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:26Z"
+      }
+    ]
   },
   "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-9e5b0e16/20260811T111428Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
@@ -1269,7 +1667,7 @@
     "moved_words": 5,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1333,7 +1731,17 @@
     "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
     "from_sha256": "6d0dce769e8b2edd5ef6f6963fb31facca5211c9344970016434cf300d2a3729",
     "to_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
-    "computed_at": "2026-08-22T23:26:13Z"
+    "computed_at": "2026-08-23T09:14:04Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9871,
+        "word_delta": 35,
+        "moved_words": 5,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:13Z"
+      }
+    ]
   },
   "meta/muse-spark::provider-live-595d1bcb::captures/meta__muse-spark/provider-live-595d1bcb/20260811T105149Z>captures/meta__muse-spark/provider-live-595d1bcb/20260817T082935Z": {
     "verdict": "method-changed",
@@ -1342,7 +1750,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1356,7 +1764,17 @@
     "to_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20260817T082935Z",
     "from_sha256": "ccf86bc0fa73ebc5aa1d30479e2af7c2da9b39bc78b024c39b01ce05dd3c134f",
     "to_sha256": "12509e1d776336e20700f7920c2dcc49194f4f81a490b6f864048d2dd12c0f28",
-    "computed_at": "2026-08-22T23:24:17Z"
+    "computed_at": "2026-08-23T09:13:34Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.0058,
+        "word_delta": 2143,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:17Z"
+      }
+    ]
   },
   "meta/muse-spark::provider-live-595d1bcb::captures/meta__muse-spark/provider-live-595d1bcb/20260817T082935Z>captures/meta__muse-spark/provider-live-595d1bcb/20260821T110926Z": {
     "verdict": "method-changed",
@@ -1365,12 +1783,12 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
-        "old": "Research tools Reports English",
-        "new": "tools Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports"
+        "old": "tools Reports English",
+        "new": "Reports Community Standards Enforcement Report Intellectual Property Government Requests for User Data Content Restrictions Based on Local Law Internet Disruptions Widely Viewed Content Report Regulatory and Other Transparency Reports English"
       },
       {
         "op": "delete",
@@ -1384,7 +1802,17 @@
     "to_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20260821T110926Z",
     "from_sha256": "12509e1d776336e20700f7920c2dcc49194f4f81a490b6f864048d2dd12c0f28",
     "to_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
-    "computed_at": "2026-08-22T23:24:23Z"
+    "computed_at": "2026-08-23T09:13:36Z",
+    "prior_verdicts": [
+      {
+        "verdict": "method-changed",
+        "similarity": 0.9821,
+        "word_delta": 82,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:24:23Z"
+      }
+    ]
   },
   "meta/muse-spark::provider-live-df0a7357::captures/meta__muse-spark/provider-live-41432250/20260817T085600Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
@@ -1393,7 +1821,7 @@
     "moved_words": 5,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "moved",
@@ -1437,7 +1865,17 @@
     "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
     "from_sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
     "to_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
-    "computed_at": "2026-08-22T23:25:30Z"
+    "computed_at": "2026-08-23T09:13:51Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9944,
+        "word_delta": 15,
+        "moved_words": 5,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:30Z"
+      }
+    ]
   },
   "microsoft/phi-4::live-vs-archive::captures/microsoft__phi-4/aial-archive-bca0f8df/20260811T105752Z>captures/microsoft__phi-4/provider-live-7a0cd959/20260812T211708Z": {
     "verdict": "changed",
@@ -1446,12 +1884,12 @@
     "moved_words": 0,
     "same_tool": false,
     "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "delete",
-        "old": "applicable 1 1.3.1.G",
-        "new": "Not applicable 1.3.1.G Video"
+        "old": "1 1.3.1.G Video",
+        "new": "applicable 1.3.1.G Video"
       },
       {
         "op": "delete",
@@ -1470,7 +1908,17 @@
     "to_dir": "captures/microsoft__phi-4/provider-live-7a0cd959/20260812T211708Z",
     "from_sha256": "24c96bd185377648dae68c35041a4adc43245b9a0413714758007365e01f01cd",
     "to_sha256": "3571ffd8d9f63dbd09c882880219cc6b254a85cc25a7d5308f6566d12c43f3f7",
-    "computed_at": "2026-08-22T23:26:14Z"
+    "computed_at": "2026-08-23T09:14:06Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9996,
+        "word_delta": 3,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:14Z"
+      }
+    ]
   },
   "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260819T150118Z>captures/openai__model-catalog/watch-page-0e5ba652/20260820T110441Z": {
     "verdict": "changed",
@@ -1479,7 +1927,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1498,7 +1946,17 @@
     "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260820T110441Z",
     "from_sha256": "271f6c126a3b43db821c13ed31d28f646fd4ecb89040f823d44cdefcbbb1b091",
     "to_sha256": "62e6b3cfd7a43ec36b44bbde1807f5774cc18cecb3879890ab13e96667b2f2ff",
-    "computed_at": "2026-08-22T23:25:00Z"
+    "computed_at": "2026-08-23T09:13:43Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9959,
+        "word_delta": 16,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:00Z"
+      }
+    ]
   },
   "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260820T110441Z>captures/openai__model-catalog/watch-page-0e5ba652/20260821T100311Z": {
     "verdict": "changed",
@@ -1507,7 +1965,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1531,7 +1989,17 @@
     "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260821T100311Z",
     "from_sha256": "62e6b3cfd7a43ec36b44bbde1807f5774cc18cecb3879890ab13e96667b2f2ff",
     "to_sha256": "3a08fcdfb2e11956c07fd16eb3aaa4b563073cadc81204b620d637c4351c647d",
-    "computed_at": "2026-08-22T23:25:06Z"
+    "computed_at": "2026-08-23T09:13:43Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9973,
+        "word_delta": 10,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:06Z"
+      }
+    ]
   },
   "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260821T100311Z>captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z": {
     "verdict": "changed",
@@ -1540,7 +2008,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1574,7 +2042,17 @@
     "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z",
     "from_sha256": "3a08fcdfb2e11956c07fd16eb3aaa4b563073cadc81204b620d637c4351c647d",
     "to_sha256": "460f2eb9bc4fe7e06b9c0c782291ac3a0310a9b6dd20228641cc081115aa39b9",
-    "computed_at": "2026-08-22T23:25:13Z"
+    "computed_at": "2026-08-23T09:13:44Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9951,
+        "word_delta": 20,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:13Z"
+      }
+    ]
   },
   "thinking-machines/inkling::live-vs-archive::captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z>captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z": {
     "verdict": "identical-text",
@@ -1583,14 +2061,24 @@
     "moved_words": 0,
     "same_tool": false,
     "compared_via": "stored extracts",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "source": "thinking-machines/inkling",
     "target": "live-vs-archive",
     "from_dir": "captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z",
     "to_dir": "captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z",
     "from_sha256": "d66ee3d0dfca1872b653b3356ce6204149da812b6cf8993c7f9a6e08edb77c61",
     "to_sha256": "7587032e78a6141b8534724799c168f5de9b495fe1794fb68882670932de0f44",
-    "computed_at": "2026-08-22T23:26:00Z"
+    "computed_at": "2026-08-23T09:13:59Z",
+    "prior_verdicts": [
+      {
+        "verdict": "identical-text",
+        "similarity": 1.0,
+        "word_delta": 0,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:26:00Z"
+      }
+    ]
   },
   "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260819T150531Z>captures/xai__model-catalog/watch-page-905d5d7a/20260820T110521Z": {
     "verdict": "changed",
@@ -1599,7 +2087,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1618,7 +2106,17 @@
     "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260820T110521Z",
     "from_sha256": "c937225e53f0d53878fac8626e6139b322a3e24a677ce5a7b5e72381a792dcb4",
     "to_sha256": "3b5e0e18fea9642173a27c2864d45b77623707485d9567f3f77f6e4bd121c4b8",
-    "computed_at": "2026-08-22T23:25:17Z"
+    "computed_at": "2026-08-23T09:13:45Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9975,
+        "word_delta": 3,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:17Z"
+      }
+    ]
   },
   "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260820T110521Z>captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z": {
     "verdict": "changed",
@@ -1627,7 +2125,7 @@
     "moved_words": 0,
     "same_tool": true,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "rule": "identity-v3",
+    "rule": "identity-v4",
     "changes": [
       {
         "op": "insert",
@@ -1646,6 +2144,16 @@
     "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z",
     "from_sha256": "3b5e0e18fea9642173a27c2864d45b77623707485d9567f3f77f6e4bd121c4b8",
     "to_sha256": "40c2ba912e30c54e2f5e6436453b078ec2b208336cfc9546f99a25fb69db0ed6",
-    "computed_at": "2026-08-22T23:25:18Z"
+    "computed_at": "2026-08-23T09:13:45Z",
+    "prior_verdicts": [
+      {
+        "verdict": "changed",
+        "similarity": 0.9919,
+        "word_delta": 16,
+        "moved_words": 0,
+        "rule": "identity-v3",
+        "computed_at": "2026-08-22T23:25:18Z"
+      }
+    ]
   }
 }

@@ -16,6 +16,7 @@ Checks:
   C6  last_sha256 == versions[-1].sha256; last_capture == versions[-1].dir;
       last_text_sha256 == the last version manifest's text_sha256
   C7  retired entries carry a string reason and no live versions
+  C9  (warn) a proof still pending a bitcoin attestation after PENDING_WARN_DAYS
 
 Usage: python crawler/verify_corpus.py [--data-root data]
 """
@@ -88,6 +89,11 @@ def verify(data_root: Path) -> int:
                 n_ots += 1
                 if not _ots_matches(ots_p, raw):
                     fail("C2", ots_p, "ots digest does not match raw file SHA-256")
+                else:
+                    pending_days = _ots_pending_days(ots_p, m)
+                    if pending_days > PENDING_WARN_DAYS:
+                        warn("C9", ots_p, f"proof still pending after {pending_days} days "
+                                          f"(the site says anchoring typically takes a day)")
             elif (m.get("ots") or {}).get("ok"):
                 fail("C2", ots_p, "manifest records a successful stamp but the proof "
                                   "file is absent")
@@ -114,7 +120,7 @@ def verify(data_root: Path) -> int:
                     recomputed = canonical_text_sha(txt_p.read_text(encoding="utf-8"))
                     if recomputed != m["text_sha256"]:
                         fail("C5", txt_p, f"canonical text sha mismatch: disk {recomputed[:16]} vs manifest {m['text_sha256'][:16]}")
-            elif txt_p.exists() and m["stored_as"] != "raw.zip":
+            elif txt_p.exists():
                 fail("C5", txt_p, "extracted.txt present but manifest text_sha256 is "
                                   "null — extracted text is unverifiable")
         if versions:
@@ -221,6 +227,33 @@ def verify(data_root: Path) -> int:
     STATS.update({"state_entries": len(state), "versions": n_versions,
                   "ots_proofs": n_ots, "referenced_dirs": len(referenced_dirs)})
     return 1 if FAILS else 0
+
+
+PENDING_WARN_DAYS = 7
+
+
+def _ots_pending_days(ots_p: Path, m: dict) -> int:
+    """Days a proof has been waiting for a bitcoin attestation (0 once anchored
+    or when the age cannot be determined). A proof that stays pending for
+    weeks means the upgrade path is broken while the site says 'typically
+    within a day'."""
+    try:
+        from datetime import datetime, timezone
+        from opentimestamps.core.notary import BitcoinBlockHeaderAttestation
+        from opentimestamps.core.serialize import BytesDeserializationContext
+        from opentimestamps.core.timestamp import DetachedTimestampFile
+        dtf = DetachedTimestampFile.deserialize(
+            BytesDeserializationContext(ots_p.read_bytes()))
+        if any(isinstance(att, BitcoinBlockHeaderAttestation)
+               for _, att in dtf.timestamp.all_attestations()):
+            return 0
+        at = (m.get("ots") or {}).get("restamped_at") or (m.get("ots") or {}).get("at")
+        if not at:
+            return 0
+        stamped = datetime.strptime(at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        return max(0, (datetime.now(timezone.utc) - stamped).days)
+    except Exception:  # noqa: BLE001 — never turn a reporting aid into a failure
+        return 0
 
 
 def _ots_matches(ots_p: Path, raw: bytes) -> bool:

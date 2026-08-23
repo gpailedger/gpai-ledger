@@ -351,3 +351,32 @@ def test_anthropic_ok_reflects_store_status(monkeypatch, status, expected):
     monkeypatch.setattr(dt, "render_watch_page", lambda url: ANTHROPIC_HTML)
     monkeypatch.setattr(dt, "store_document", _recorder([], status))
     assert dt.anthropic_bundle(object()) is expected
+
+
+def _render_stall(url, timeout_ms, max_expand_clicks):
+    _time.sleep(30)
+    return b"never", {}
+
+
+def test_fetch_rendered_is_killed_at_its_deadline():
+    t0 = _time.time()
+    with pytest.raises(RuntimeError, match="exceeded"):
+        cap.fetch_rendered("https://example.org/", deadline=2, fn=_render_stall)
+    assert _time.time() - t0 < 20
+
+
+def test_permanent_fetch_error_survives_the_worker_boundary():
+    import pickle
+    exc = cap.PermanentFetchError("HTTP 404 for u", status_code=404, headers={"Server": "x"})
+    back = pickle.loads(pickle.dumps(exc))
+    assert (str(back), back.status_code, back.headers) == ("HTTP 404 for u", 404, {"Server": "x"})
+
+
+def test_cohere_miner_regex_is_linear_on_hyphen_rich_hosts():
+    import derived_targets as dt
+    t0 = _time.time()
+    assert dt.COHERE_SUMMARY_RE.search("https://fdr-prod-docs-files-public.s3" + "-a" * 60 + "x") is None
+    assert _time.time() - t0 < 1
+    real = ("https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs/"
+            "assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf?X-Amz-Signature=1")
+    assert dt.COHERE_SUMMARY_RE.search(real).group(0).startswith("https://fdr-prod-docs-files-public.s3.us-east-1")

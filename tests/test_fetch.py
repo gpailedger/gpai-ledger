@@ -241,24 +241,52 @@ def test_assert_public_http_unresolvable_host_is_left_to_the_fetch(monkeypatch):
     assert cap._assert_public_http("https://nonexistent.example/") is None
 
 
-def test_fetch_refuses_redirect_into_private_address_without_reading_body(monkeypatch, sleeps):
-    hop = FakeResp(302, url="https://example.org/doc")
-    final = FakeResp(200, url="http://127.0.0.1:8080/secret", chunks=(b"INTERNAL",))
-    final.history = [hop]
-    fake = _wire(monkeypatch, final)
+def test_fetch_refuses_redirect_into_private_address_without_requesting_it(monkeypatch, sleeps):
+    # the private Location is checked BEFORE any request goes to it: one call,
+    # the redirect answer closed unread
+    hop = FakeResp(302, url="https://example.org/doc",
+                   headers={"Location": "http://127.0.0.1:8080/secret"})
+    fake = _wire(monkeypatch, hop)
     with pytest.raises(cap.PermanentFetchError, match="non-public"):
         cap.fetch("https://example.org/doc")
-    assert final.iter_calls == 0 and final.closed and len(fake.calls) == 1
+    assert hop.iter_calls == 0 and hop.closed and len(fake.calls) == 1
+    assert fake.calls[0][1]["allow_redirects"] is False
 
 
-def test_fetch_refuses_private_hop_even_when_final_url_is_public(monkeypatch, sleeps):
-    hop = FakeResp(302, url="http://10.1.2.3/internal-bounce")
-    final = FakeResp(200, url="https://example.org/final")
-    final.history = [hop]
-    _wire(monkeypatch, final)
+def test_fetch_refuses_private_hop_even_when_it_would_bounce_back_to_public(monkeypatch, sleeps):
+    hop = FakeResp(302, url="https://example.org/doc",
+                   headers={"Location": "http://10.1.2.3/internal-bounce"})
+    fake = _wire(monkeypatch, hop, FakeResp(200, url="https://example.org/final"))
     with pytest.raises(cap.PermanentFetchError):
         cap.fetch("https://example.org/doc")
-    assert final.iter_calls == 0
+    assert len(fake.calls) == 1
+
+
+def test_fetch_follows_public_redirects_one_guarded_hop_at_a_time(monkeypatch, sleeps):
+    hop = FakeResp(301, url="https://example.org/doc", headers={"Location": "/moved"})
+    hop2 = FakeResp(302, url="https://example.org/moved",
+                    headers={"Location": "https://cdn.example.net/final.pdf"})
+    final = FakeResp(200, url="https://cdn.example.net/final.pdf", chunks=(b"%PDF",))
+    fake = _wire(monkeypatch, hop, hop2, final)
+    body, meta = cap.fetch("https://example.org/doc",
+                           validators={"etag": '"e1"', "last_modified": "Mon"})
+    assert body == b"%PDF" and meta["final_url"] == "https://cdn.example.net/final.pdf"
+    assert [c[0] for c in fake.calls] == ["https://example.org/doc", "https://example.org/moved",
+                                          "https://cdn.example.net/final.pdf"]
+    assert hop.closed and hop2.closed and hop.iter_calls == 0
+    # conditional headers travel on the same host and are dropped when the hop leaves it
+    assert fake.calls[1][1]["headers"]["If-None-Match"] == '"e1"'
+    assert "If-None-Match" not in fake.calls[2][1]["headers"]
+    assert "If-Modified-Since" not in fake.calls[2][1]["headers"]
+
+
+def test_fetch_gives_up_on_a_redirect_loop(monkeypatch, sleeps):
+    loop = [FakeResp(302, url="https://example.org/a", headers={"Location": "/a"})
+            for _ in range(cap.MAX_REDIRECTS + 2)]
+    fake = _wire(monkeypatch, *loop)
+    with pytest.raises(cap.PermanentFetchError, match="redirects"):
+        cap.fetch("https://example.org/a")
+    assert len(fake.calls) == cap.MAX_REDIRECTS + 1
 
 
 # --- guess_ext: branch order is content-type -> URL suffix -> magic bytes ---

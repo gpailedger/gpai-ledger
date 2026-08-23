@@ -78,12 +78,13 @@ def test_signed_url_marked_gave_up_without_retry(corpus, monkeypatch):
 def test_exhausted_attempts_marked_gave_up(corpus, monkeypatch):
     d, _ = corpus.add_capture(
         wayback={"ok": False, "status_code": 503},
-        extra_manifest={"wayback_attempts": [{"ok": False}] * RW.MAX_ATTEMPTS})
+        extra_manifest={"wayback_attempts": [{"ok": False, "status_code": 523}] * RW.MAX_ATTEMPTS})
     root = corpus.finish()
     calls = wayback_save_recorder(monkeypatch, {"ok": True})
     run_retry(monkeypatch, root)
     m = manifest_of(d)
-    assert m["wayback"]["gave_up"] == f"exhausted {RW.MAX_ATTEMPTS} attempts"
+    assert m["wayback"]["gave_up"] == (f"exhausted {RW.MAX_ATTEMPTS} answered attempts "
+                                       f"({RW.MAX_ATTEMPTS + 1} in total)")
     assert calls == []
 
 
@@ -341,3 +342,35 @@ def test_anchored_proof_skipped_without_calendar_contact(corpus, monkeypatch,
     assert ("ots proofs: 1 already anchored, 0 upgraded now, "
             "0 still pending, 0 unreadable") in capsys.readouterr().out
     assert (d / "raw.pdf.ots").read_bytes() == anchored
+
+
+def test_transport_failures_do_not_count_toward_the_wayback_retry_budget():
+    import retry_wayback as rw
+    attempts = [{"ok": False, "status_code": None, "error": "ConnectionError", "at": "2026-08-2%dT07:00:00Z" % i}
+                for i in range(1, 6)] + [{"ok": False, "status_code": 429, "at": "2026-08-27T07:00:00Z"}]
+    assert rw.answered_attempts(attempts) == []
+    assert len(rw.attempt_dates(attempts)) == 6
+    answered = [{"ok": False, "status_code": 523, "at": "2026-08-2%dT07:00:00Z" % i} for i in range(1, 6)]
+    assert len(rw.answered_attempts(answered)) == 5
+
+
+def test_retry_gives_up_only_after_answered_attempts_or_many_dates(corpus, monkeypatch):
+    import retry_wayback as rw
+    corpus.add_capture(ts="20260811T060000Z", raw=b"%PDF-1.4 a", text="t",
+                       wayback={"ok": False, "status_code": None, "error": "ReadTimeout",
+                                "at": "2026-08-11T06:00:10Z"})
+    root = corpus.finish()
+    mp = next(root.rglob("manifest.json"))
+    m = json.loads(mp.read_text(encoding="utf-8"))
+    m["wayback_attempts"] = [{"ok": False, "status_code": None, "error": "ConnectionError",
+                              "at": "2026-08-1%dT06:00:10Z" % i} for i in range(2, 7)]
+    mp.write_text(json.dumps(m), encoding="utf-8")
+    monkeypatch.setattr(rw, "DATA", root)
+    saves = []
+    monkeypatch.setattr(rw.cap, "wayback_save", lambda url, **k: saves.append(url) or {"ok": True, "status_code": 200, "snapshot": "s", "at": "2026-08-23T07:00:00Z"})
+    monkeypatch.setattr(rw.time, "sleep", lambda s: None)
+    monkeypatch.setattr("sys.argv", ["retry_wayback.py"])
+    assert rw.main() == 0
+    assert saves == ["https://example.org/doc.pdf"]      # six transport failures: still retried
+    m = json.loads(mp.read_text(encoding="utf-8"))
+    assert m["wayback"]["ok"] is True and "gave_up" not in m["wayback"]

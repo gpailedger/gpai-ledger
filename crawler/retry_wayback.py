@@ -13,6 +13,10 @@ dated note, so the next default run re-attempts it.
 Skipped permanently: URLs with expiring signatures (retrying a dead signed URL can
 never succeed — the extractor that owns the source re-mines a fresh URL instead),
 and targets that have exhausted MAX_ATTEMPTS (marked gave_up in the manifest).
+Only attempts Save Page Now actually answered count toward MAX_ATTEMPTS: a
+connection error, a timeout, a 429 or a 5xx says nothing about the URL — an
+Archive outage must not strip the witness from every version captured during
+it. MAX_ATTEMPT_DAYS distinct dates tried, any outcome, is the hard stop.
 """
 import json
 import re
@@ -25,9 +29,21 @@ import requests
 import capture as cap
 
 DATA = Path(__file__).resolve().parent.parent / "data"
-MAX_ATTEMPTS = 5
+MAX_ATTEMPTS = 5          # answered attempts (an SPN verdict other than 429/5xx)
+MAX_ATTEMPT_DAYS = 30     # distinct UTC dates tried, any outcome: the hard stop
+TRANSPORT_STATUSES = (429, 500, 502, 503, 504)
 SIGNED_URL_MARKERS = re.compile(
     r"X-Amz-Signature=|[?&]oh=|Key-Pair-Id=|[?&]Policy=|trust-zip\?r=")
+
+
+def answered_attempts(attempts) -> list:
+    """The attempts that carry a verdict from Save Page Now itself."""
+    return [a for a in attempts if isinstance(a.get("status_code"), int)
+            and a["status_code"] not in TRANSPORT_STATUSES]
+
+
+def attempt_dates(attempts) -> set:
+    return {str(a.get("at"))[:10] for a in attempts if a.get("at")}
 
 
 def _save(p: Path, m: dict) -> None:
@@ -120,9 +136,16 @@ def main() -> int:
             _save(p, m)
             skipped += 1
             continue
-        attempts = m.get("wayback_attempts", [])
-        if len(attempts) >= MAX_ATTEMPTS:
-            m["wayback"]["gave_up"] = f"exhausted {MAX_ATTEMPTS} attempts"
+        attempts = m.get("wayback_attempts", []) + [wb]
+        answered, dates = answered_attempts(attempts), attempt_dates(attempts)
+        if len(answered) >= MAX_ATTEMPTS:
+            m["wayback"]["gave_up"] = (f"exhausted {MAX_ATTEMPTS} answered attempts "
+                                       f"({len(attempts)} in total)")
+            _save(p, m)
+            skipped += 1
+            continue
+        if len(dates) >= MAX_ATTEMPT_DAYS:
+            m["wayback"]["gave_up"] = f"tried on {len(dates)} distinct dates without a save"
             _save(p, m)
             skipped += 1
             continue

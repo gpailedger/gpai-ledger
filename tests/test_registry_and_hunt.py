@@ -189,3 +189,26 @@ def test_contradicted_absence_does_not_feed_streak(tmp_path):
          "ts": "2", "absence": "contradicted"},
     ])
     assert ("s", "t") not in site_hunt.error_streaks(p)
+
+
+def test_restricted_flag_applies_to_every_source_and_unknown_ids_fail_closed(tmp_path, monkeypatch):
+    repo = _fake_aial(tmp_path, ["alpha-model"])
+    out = tmp_path / "sources.json"
+    monkeypatch.setattr(br, "RESTRICTED_SOURCES", {"anthropic/trust-center-bundle": "provider objection (test)"})
+    br.main(str(repo), out_path=str(out))
+    sources = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert sources["anthropic/trust-center-bundle"]["restricted"] == "provider objection (test)"
+    monkeypatch.setattr(br, "RESTRICTED_SOURCES", {"nobody/nothing": "typo"})
+    with pytest.raises(SystemExit):
+        br.main(str(repo), out_path=str(out))
+
+
+def test_persistent_absence_feeds_the_hunt_streak(tmp_path):
+    p = tmp_path / "events.jsonl"
+    p.write_text("\n".join(json.dumps(e) for e in [
+        {"source": "s", "target": "t", "outcome": "error", "absence": "persistent",
+         "url": "u", "kind": "provider-live", "ts": "1"},
+        {"source": "s", "target": "t", "outcome": "error", "absence": "persistent",
+         "url": "u", "kind": "provider-live", "ts": "2"},
+    ]) + "\n", encoding="utf-8")
+    assert ("s", "t") in site_hunt.error_streaks(p)
