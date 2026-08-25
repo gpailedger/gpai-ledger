@@ -249,6 +249,49 @@
       }
     ]
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260817T082322Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260825T080625Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260817T082322Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260825T080625Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:06Z"
+  },
   "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260811T102534Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -281,6 +324,49 @@
         "computed_at": "2026-08-22T23:24:00Z"
       }
     ]
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260825T080700Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260825T080700Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:06Z"
   },
   "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260811T102614Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z": {
     "verdict": "method-changed",
@@ -315,6 +401,49 @@
       }
     ]
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260825T080719Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260825T080719Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:06Z"
+  },
   "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260811T102657Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -347,6 +476,49 @@
         "computed_at": "2026-08-22T23:24:00Z"
       }
     ]
+  },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260825T080738Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260825T080738Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:07Z"
   },
   "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260811T102736Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z": {
     "verdict": "method-changed",
@@ -381,6 +553,49 @@
       }
     ]
   },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260825T080757Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260825T080757Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:07Z"
+  },
   "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260811T102817Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -413,6 +628,49 @@
         "computed_at": "2026-08-22T23:24:01Z"
       }
     ]
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260825T080819Z": {
+    "verdict": "method-changed",
+    "similarity": 0.8275,
+    "word_delta": 480,
+    "moved_words": 6,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Other Documents",
+        "new": "Other Documents"
+      },
+      {
+        "op": "moved",
+        "old": "Copy link for Anthropic",
+        "new": "Copy link for Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "3 Report.pdf ISO Anthropic",
+        "new": "Report.pdf Anthropic 2026 SOC 2 Bridge Letter.pdf 2026 SOC 2 Bridge Letter.pdf Request access Anthropic 2026 SOC 2 Bridge Letter.pdf ISO"
+      },
+      {
+        "op": "delete",
+        "old": "installer Other Documents Anthropic Data Processing Addendum Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports Jan 2026 Status Update ",
+        "new": "Windows installer Model Documentation"
+      },
+      {
+        "op": "insert",
+        "old": "Summary Opens in",
+        "new": "Summary Other Documents Anthropic Data Processing Addendum Copy link for Anthropic Data Processing Addendum Anthropic s Data Processing Addendum View Anthropic Data Processing Addendum Anthropic 2025 Annual Penetration Testing Reports Copy link for Anthropic 2025 Annual Penetration Testing Reports J"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260825T080819Z",
+    "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+    "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "computed_at": "2026-08-25T08:16:07Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -484,6 +742,224 @@
         "computed_at": "2026-08-22T23:25:16Z"
       }
     ]
+  },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260825T081358Z": {
+    "verdict": "changed",
+    "similarity": 0.6405,
+    "word_delta": 718,
+    "moved_words": 63,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Model IDs and versioning",
+        "new": "Model IDs and versioning"
+      },
+      {
+        "op": "moved",
+        "old": "Claude Sonnet 5",
+        "new": "Claude Sonnet 5"
+      },
+      {
+        "op": "moved",
+        "old": "Claude Opus 5",
+        "new": "Claude Opus 5"
+      },
+      {
+        "op": "moved",
+        "old": "Copy page",
+        "new": "Copy page"
+      },
+      {
+        "op": "moved",
+        "old": "Once you ve picked",
+        "new": "Once you ve picked"
+      },
+      {
+        "op": "moved",
+        "old": "learn how to make your first API call",
+        "new": "learn how to make your first API call"
+      },
+      {
+        "op": "moved",
+        "old": "Claude Opus 5 Claude Sonnet 5 Claude Haiku 4.5",
+        "new": "Claude Opus 5 Claude Sonnet 5 Claude Haiku 4.5"
+      },
+      {
+        "op": "moved",
+        "old": "Claude API ID claude-fable-5 claude-opus-5 claude-sonnet-5 claude-haiku-4-5-20251001",
+        "new": "Claude API ID claude-fable-5 claude-opus-5 claude-sonnet-5 claude-haiku-4-5-20251001"
+      },
+      {
+        "op": "moved",
+        "old": "Comparative latency Slower Moderate Fast Fastest",
+        "new": "Comparative latency Slower Moderate Fast Fastest"
+      },
+      {
+        "op": "moved",
+        "old": "discounts and prompt caching rates.",
+        "new": "discounts and prompt caching rates."
+      },
+      {
+        "op": "moved",
+        "old": "see Model IDs and versioning",
+        "new": "see Model IDs and versioning"
+      },
+      {
+        "op": "moved",
+        "old": "Looking to chat with Claude Visit claude.ai",
+        "new": "Looking to chat with Claude Visit claude.ai"
+      },
+      {
+        "op": "insert",
+        "old": "overview Choosing a",
+        "new": "overview Claude Fable 5 Specialized models Legacy models Guides Choosing a"
+      },
+      {
+        "op": "delete",
+        "old": "intelligence Introducing Claude Fable 5 and Claude Mythos 5 What s new in What s new in Upgrade",
+        "new": "and intelligence Upgrade between"
+      },
+      {
+        "op": "insert",
+        "old": "model versions Model deprecations",
+        "new": "versions Lifecycle and reference Model"
+      },
+      {
+        "op": "replace",
+        "old": "Model cards System prompts Pricing Console Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Claude",
+        "new": "cards Pricing System prompts Console Claude Platform"
+      },
+      {
+        "op": "replace",
+        "old": "Anthropic. This guide introduces the available models and compares their performance. Copy page",
+        "new": "Anthropic. Compare the current lineup, find the model ID for every platform, and open each model s page for its full specs and resources. Copy"
+      },
+      {
+        "op": "insert",
+        "old": "a model If you",
+        "new": "model Pricing Migration guide Compare models If"
+      },
+      {
+        "op": "replace",
+        "old": "work. For workloads that need the",
+        "new": "work for the highest"
+      },
+      {
+        "op": "delete",
+        "old": "current Claude models",
+        "new": "All current models support"
+      },
+      {
+        "op": "replace",
+        "old": "multilingual capabilities, and vision. Models are available through the Claude API, Amazon Bedrock , Claude Platform on AWS , Google Cloud , and Microsoft Foundry . a model, . Claude Fable 5 and Claude Mythos 5 Claude Fable 5 claude-fable-5 is Anthropic s most capable widely released model. Claude M",
+        "new": "capabilities, vision, and tool use each model s page lists the platforms it is available on. Feature"
+      },
+      {
+        "op": "delete",
+        "old": "5 Description Next-generation",
+        "new": "Fable 5 Next-generation intelligence"
+      },
+      {
+        "op": "insert",
+        "old": "and intelligence The fastest",
+        "new": "intelligence Claude Haiku 4.5 The"
+      },
+      {
+        "op": "delete",
+        "old": "intelligence Claude API alias claude-fable-5 claude-opus-5 claude-sonnet-5 claude-haiku-4-5 AWS Bedrock ID anthropic.claude-fable-5 3 anthropic.claude-opus-5 3 anthropic.claude-sonnet-5 3 anthropic.claude-haiku-4-5-20251001-v1:0 Google Cloud ID claude-fable-5 claude-opus-5 claude-sonnet-5 claude-hai",
+        "new": "near-frontier intelligence Pricing 10 /"
+      },
+      {
+        "op": "replace",
+        "old": "MTok Extended thinking thinking.type: enabled No No No Yes Adaptive thinking Yes always on Yes Yes No Context window",
+        "new": "MTok Capabilities Thinking Adaptive always on Adaptive Adaptive Extended Default effort high high high Not supported Context"
+      },
+      {
+        "op": "replace",
+        "old": "tokens 200k tokens",
+        "new": "tokens 200K tokens"
+      },
+      {
+        "op": "replace",
+        "old": "output 128k tokens 128k tokens 128k tokens 64k tokens",
+        "new": "output 128K tokens 128K tokens 128K tokens 64K tokens"
+      },
+      {
+        "op": "delete",
+        "old": "cutoff Jan 2026 2 May 2026 2 Jan 2026 2 Feb 2025 Training data cutoff Jan",
+        "new": "knowledge cutoff Jan"
+      },
+      {
+        "op": "replace",
+        "old": "2026 Jul 2025 1 See Pricing for complete pricing information including Batch API 2 Reliable knowledge cutoff indicates the date through which a",
+        "new": "2026 Feb 2025 Show all details Show fewer details a"
+      },
+      {
+        "op": "replace",
+        "old": "model s knowledge is most extensive and reliable. Training data cutoff is the broader date range of training data used. For more information, see",
+        "new": ". For how model IDs, aliases, and snapshots work, for the reliable-knowledge and training-data cutoffs behind each model, see"
+      },
+      {
+        "op": "replace",
+        "old": ". 3 Claude Fable 5, Claude Opus 5, and Claude Sonnet 5 are available on Bedrock through Claude in Amazon Bedrock the Messages-API Bedrock endpoint . Claude Mythos 5 and Claude Mythos Preview are offered separately for defensive cybersecurity workflows as part of Project Glasswing . Access is invitat",
+        "new": ". Using the Models API You can"
+      },
+      {
+        "op": "delete",
+        "old": "model. On Claude Opus 4.8, the effort parameter defaults to high on all surfaces, including the Claude API, Claude Code, and claude.ai. On Claude Opus 5 and Claude Sonnet 5, it defaults to high on the Claude API and Claude Code. Set effort explicitly to use a different level. See Effort for guidance",
+        "new": "available model. Prompt and"
+      },
+      {
+        "op": "delete",
+        "old": "responses, you can adjust",
+        "new": "concise responses, adjust your"
+      },
+      {
+        "op": "delete",
+        "old": "details. For prompting best practices, see Prompting best practices .",
+        "new": "for details. Output quality:"
+      },
+      {
+        "op": "delete",
+        "old": "performance. Migrating to Claude Opus 5 If",
+        "new": "overall performance. If you"
+      },
+      {
+        "op": "replace",
+        "old": "re currently using Claude",
+        "new": "re on Claude Opus"
+      },
+      {
+        "op": "delete",
+        "old": "earlier Claude models, see",
+        "new": "or earlier, see Migrating"
+      },
+      {
+        "op": "insert",
+        "old": "minutes. Claude Console",
+        "new": "minutes. Choosing a model Establish criteria and pick the right model for your use case. Pricing Complete pricing, including batch Model deprecations Lifecycle status and retirement commitments for every model. Claude Console"
+      },
+      {
+        "op": "delete",
+        "old": "test powerful prompts",
+        "new": "and test prompts directly"
+      },
+      {
+        "op": "delete",
+        "old": "have any questions or need assistance, don t hesitate to reach",
+        "new": "you have questions, reach out"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260822T072717Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260825T081358Z",
+    "from_sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
+    "to_sha256": "3570755b7ea6bceb82ae22800afd1e2fe41fbce676e93368ed672e7d8bce6dc0",
+    "computed_at": "2026-08-25T08:16:08Z"
   },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260811T103345Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z": {
     "verdict": "method-changed",
@@ -593,6 +1069,34 @@
         "computed_at": "2026-08-22T23:24:11Z"
       }
     ]
+  },
+  "bria-ai/bria::provider-live-5253ab97::captures/bria-ai__bria/provider-live-5253ab97/20260817T080452Z>captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z": {
+    "verdict": "method-changed",
+    "similarity": 0.9989,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "demo Get started Open",
+        "new": "demo Learn more Open navigation"
+      },
+      {
+        "op": "replace",
+        "old": "demo Get started EU",
+        "new": "demo Learn more EU AI"
+      }
+    ],
+    "source": "bria-ai/bria",
+    "target": "provider-live-5253ab97",
+    "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260817T080452Z",
+    "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z",
+    "from_sha256": "f7cb2e6b384483ee5830a261eea82f51f34287cf61f0f0bcfa97b382adc71798",
+    "to_sha256": "9b9909976679de930563eac550c23b17a1e8edc4df0fd8ddd7420271ccf7c26b",
+    "computed_at": "2026-08-25T08:16:07Z"
   },
   "bria-ai/fibo::provider-live-037b2259::captures/bria-ai__fibo/provider-live-037b2259/20260811T103249Z>captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z": {
     "verdict": "changed",
@@ -2053,6 +2557,69 @@
         "computed_at": "2026-08-22T23:25:13Z"
       }
     ]
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z>captures/openai__model-catalog/watch-page-0e5ba652/20260825T081326Z": {
+    "verdict": "changed",
+    "similarity": 0.9979,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "IP allowlist Workload identity",
+        "new": "allowlist Mutual TLS Workload"
+      },
+      {
+        "op": "delete",
+        "old": "certificates beta Kubernetes",
+        "new": "X.509 certificates Kubernetes AWS"
+      },
+      {
+        "op": "insert",
+        "old": "Overview ChatGPT Work",
+        "new": "ChatGPT Work cloud security ChatGPT Work"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-Realtime-2.1 mini Reasoning",
+        "new": "GPT-Realtime-2.1 Mini Reasoning"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-Realtime mini Deprecated",
+        "new": "GPT-Realtime Mini Deprecated"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-4o mini TTS",
+        "new": "GPT-4o Mini TTS"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-4o mini Transcription",
+        "new": "GPT-4o Mini Transcription"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-4o mini Transcribe",
+        "new": "GPT-4o Mini Transcribe"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-4o mini Browse",
+        "new": "GPT-4o Mini Browse"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260822T072649Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260825T081326Z",
+    "from_sha256": "460f2eb9bc4fe7e06b9c0c782291ac3a0310a9b6dd20228641cc081115aa39b9",
+    "to_sha256": "d260270fa92208abbf9804f35ca82d634178ef4d2f52af4a9fd777a350760ddf",
+    "computed_at": "2026-08-25T08:16:07Z"
   },
   "thinking-machines/inkling::live-vs-archive::captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z>captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z": {
     "verdict": "identical-text",

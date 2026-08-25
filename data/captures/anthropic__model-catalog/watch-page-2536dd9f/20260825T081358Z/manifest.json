@@ -1,0 +1,47 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "3570755b7ea6bceb82ae22800afd1e2fe41fbce676e93368ed672e7d8bce6dc0",
+  "size_bytes": 902891,
+  "stored_as": "raw.html",
+  "text_sha256": "06fa2627cb9db192e540c1e71b0ebf80548e76471ee825d9722a1491ffbc1991",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-25T08:13:58Z"
+  },
+  "prior_sha256": "2cc4addf1e66aeec5b4729de93902a23e25252a659caacfed651d593e558c993",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260825081538/https://platform.claude.com/docs/en/models/overview",
+    "at": "2026-08-25T08:15:53Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-25T08:14:18Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://platform.claude.com/docs/en/about-claude/models/overview (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "at": "2026-08-25T08:14:14Z"
+    }
+  ]
+}

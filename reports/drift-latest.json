@@ -34,10 +34,32 @@
   {
     "id": "bria-ai/bria",
     "model": "Bria 3.2",
-    "verdict": "inpage-baseline",
-    "note": "in-page document with a single capture — drift detection starts from its next content change",
+    "verdict": "capture-method-change",
+    "similarity": 0.9989,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "same_tool": true,
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
     "self_history": {
-      "verdict": "single-version"
+      "verdict": "method-changed",
+      "similarity": 0.9989,
+      "word_delta": 4,
+      "moved_words": 0,
+      "changes": [
+        {
+          "op": "replace",
+          "old": "demo Get started Open",
+          "new": "demo Learn more Open navigation"
+        },
+        {
+          "op": "replace",
+          "old": "demo Get started EU",
+          "new": "demo Learn more EU AI"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+      "same_tool": true,
+      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260817T080452Z",
+      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z"
     }
   },
   {

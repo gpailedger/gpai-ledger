@@ -1,0 +1,46 @@
+{
+  "source_id": "anthropic/claude-opus-5",
+  "provider": "Anthropic",
+  "model": "Claude Opus 5",
+  "target_kind": "provider-live",
+  "sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+  "size_bytes": 218623,
+  "stored_as": "raw.html",
+  "text_sha256": "b9bc209d8ee894a52033f5b8a2d99261560251f47a4876f59b4da4cbee804610",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Mon, 24 Aug 2026 16:49:20 GMT",
+    "content_length": "218623",
+    "fetched_at": "2026-08-25T08:06:25Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260825080628/https://trust.anthropic.com/resources",
+    "at": "2026-08-25T08:08:04Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-25T08:08:08Z"
+  }
+}

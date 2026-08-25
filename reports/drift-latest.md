@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-08-24
+# Live-vs-archive drift — 2026-08-25
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -12,6 +12,7 @@
 | MAI-Thinking-1 | incomplete | live=1 archive=n | — |
 | Nova 2 Lite | same-content | 1.0 | single version |
 | Inkling | same-content | 1.0 | single version |
+| Bria 3.2 | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | Domyn Large | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | SmolLM3-3B | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | Claude Mythos 5 / Claude Fable 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
@@ -20,7 +21,6 @@
 | Claude Opus 4.8 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Opus 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Sonnet 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
-| Bria 3.2 | inpage-baseline | in-page document with a single capture — drift detection starts from its next content change | single version |
 | Adobe Firefly | identical-bytes |  | single version |
 | FLUX.3 | identical-bytes |  | single version |
 | FIBO | identical-bytes |  | single version |
