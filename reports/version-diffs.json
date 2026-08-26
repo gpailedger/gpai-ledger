@@ -292,6 +292,34 @@
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:06Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260825T080625Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260826T081032Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260825T080625Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260826T081032Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:42Z"
+  },
   "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260811T102534Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260817T082339Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -367,6 +395,34 @@
     "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:06Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260825T080700Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260826T081049Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260825T080700Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260826T081049Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:42Z"
   },
   "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260811T102614Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260817T082357Z": {
     "verdict": "method-changed",
@@ -444,6 +500,34 @@
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:06Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260825T080719Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260826T081303Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260825T080719Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260826T081303Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:42Z"
+  },
   "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260811T102657Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260817T082414Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -519,6 +603,34 @@
     "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:07Z"
+  },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260825T080738Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260826T081323Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260825T080738Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260826T081323Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:43Z"
   },
   "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260811T102736Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260817T082433Z": {
     "verdict": "method-changed",
@@ -596,6 +708,34 @@
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:07Z"
   },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260825T080757Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260826T081537Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260825T080757Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260826T081537Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:43Z"
+  },
   "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260811T102817Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260817T082450Z": {
     "verdict": "method-changed",
     "similarity": 0.0046,
@@ -671,6 +811,34 @@
     "from_sha256": "76c2f3bf16214ed85991930f4a13075abbc2a55ae151576c0bd578e2203393c2",
     "to_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "computed_at": "2026-08-25T08:16:07Z"
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260825T080819Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260826T081751Z": {
+    "verdict": "changed",
+    "similarity": 0.982,
+    "word_delta": 57,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FedRAMP Claude for",
+        "new": "Claude Certification Package Overview Copy link for Claude Certification Package Overview Download Claude Certification Package Overview Opens in new tab Claude for"
+      },
+      {
+        "op": "delete",
+        "old": "Posture Anthropic Security and Privacy Design of Anthropic Data Retention and Review Copy link for Anthropic Security and Privacy Design of Anthropic Data Retention and Review View Anthropic Security and Privacy Design of Anthropic Data Retention and Review Security Advisories",
+        "new": "Security Posture Security Advisories"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260825T080819Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260826T081751Z",
+    "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+    "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "computed_at": "2026-08-26T08:46:43Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -961,6 +1129,22 @@
     "to_sha256": "3570755b7ea6bceb82ae22800afd1e2fe41fbce676e93368ed672e7d8bce6dc0",
     "computed_at": "2026-08-25T08:16:08Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260825T081358Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260826T083026Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260825T081358Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260826T083026Z",
+    "from_sha256": "3570755b7ea6bceb82ae22800afd1e2fe41fbce676e93368ed672e7d8bce6dc0",
+    "to_sha256": "63b407c14130d54b176bac2ddada9f819885d242498cbc9d741137ba1448fdd8",
+    "computed_at": "2026-08-26T08:46:43Z"
+  },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260811T103345Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z": {
     "verdict": "method-changed",
     "similarity": 0.4645,
@@ -1098,6 +1282,34 @@
     "to_sha256": "9b9909976679de930563eac550c23b17a1e8edc4df0fd8ddd7420271ccf7c26b",
     "computed_at": "2026-08-25T08:16:07Z"
   },
+  "bria-ai/bria::provider-live-5253ab97::captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z>captures/bria-ai__bria/provider-live-5253ab97/20260826T080810Z": {
+    "verdict": "changed",
+    "similarity": 0.9971,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Best Practices Book a demo Learn more Open",
+        "new": "Practices Start Building Explore Bria Create Open"
+      },
+      {
+        "op": "replace",
+        "old": "Resources Book a demo Learn more EU AI",
+        "new": "Resources Start Building Explore Bria Create EU"
+      }
+    ],
+    "source": "bria-ai/bria",
+    "target": "provider-live-5253ab97",
+    "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z",
+    "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260826T080810Z",
+    "from_sha256": "9b9909976679de930563eac550c23b17a1e8edc4df0fd8ddd7420271ccf7c26b",
+    "to_sha256": "0fefc72bf89128a5f0cab8e84dcaa6c55db2c254ca31c9e835f5901c121c2425",
+    "computed_at": "2026-08-26T08:46:43Z"
+  },
   "bria-ai/fibo::provider-live-037b2259::captures/bria-ai__fibo/provider-live-037b2259/20260811T103249Z>captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z": {
     "verdict": "changed",
     "similarity": 0.8387,
@@ -1130,6 +1342,29 @@
         "computed_at": "2026-08-22T23:24:10Z"
       }
     ]
+  },
+  "bria-ai/fibo::provider-live-037b2259::captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z>captures/bria-ai__fibo/provider-live-037b2259/20260826T082331Z": {
+    "verdict": "changed",
+    "similarity": 0.8276,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Drive Loading Sign in",
+        "new": "Drive Cargando Acceder"
+      }
+    ],
+    "source": "bria-ai/fibo",
+    "target": "provider-live-037b2259",
+    "from_dir": "captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z",
+    "to_dir": "captures/bria-ai__fibo/provider-live-037b2259/20260826T082331Z",
+    "from_sha256": "ca2ecd78dfd4f744631788754a825cf1c5882ef0683d7ed6557e3919ba232757",
+    "to_sha256": "63a4af55788db5f64197d05b7e5d0cfab18f2d1a8740863d00223fb7402495a5",
+    "computed_at": "2026-08-26T08:46:43Z"
   },
   "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T080547Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260817T082521Z": {
     "verdict": "method-changed",
@@ -2620,6 +2855,44 @@
     "from_sha256": "460f2eb9bc4fe7e06b9c0c782291ac3a0310a9b6dd20228641cc081115aa39b9",
     "to_sha256": "d260270fa92208abbf9804f35ca82d634178ef4d2f52af4a9fd777a350760ddf",
     "computed_at": "2026-08-25T08:16:07Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260825T081326Z>captures/openai__model-catalog/watch-page-0e5ba652/20260826T083012Z": {
+    "verdict": "changed",
+    "similarity": 0.9916,
+    "word_delta": 34,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Appshots Chrome extension Work",
+        "new": "Appshots Browser extension"
+      },
+      {
+        "op": "insert",
+        "old": "Build plugins Hooks Environments",
+        "new": "plugins Site tools WebMCP Hooks"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Scaling cyber",
+        "new": "Recent Automating repetitive work at OpenAI with Codex Meet the winners of OpenAI Build Week Scaling"
+      },
+      {
+        "op": "delete",
+        "old": "Codex Mastering remote engineering work from your phone Making private MCP servers reachable without making them public Topics",
+        "new": "for Codex Topics General"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260825T081326Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260826T083012Z",
+    "from_sha256": "d260270fa92208abbf9804f35ca82d634178ef4d2f52af4a9fd777a350760ddf",
+    "to_sha256": "346bed6fa8a8727d0d35a624efd4976aad4c6cdba14d83c433ca6161ad4bd0d2",
+    "computed_at": "2026-08-26T08:46:43Z"
   },
   "thinking-machines/inkling::live-vs-archive::captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z>captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z": {
     "verdict": "identical-text",

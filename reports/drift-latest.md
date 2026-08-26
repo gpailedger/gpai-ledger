@@ -1,10 +1,11 @@
-# Live-vs-archive drift — 2026-08-25
+# Live-vs-archive drift — 2026-08-26
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
 | Muse Image | DRIFT-CANDIDATE | 0.9936 | changed (17 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9871 | changed (15 word(s), 5 moved) |
+| Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Phi-4 | near-identical | 0.9996 — 3 word(s) differ | single version |
 | MAI-Code-1.1-Flash | incomplete | live=1 archive=n | — |
@@ -12,7 +13,6 @@
 | MAI-Thinking-1 | incomplete | live=1 archive=n | — |
 | Nova 2 Lite | same-content | 1.0 | single version |
 | Inkling | same-content | 1.0 | single version |
-| Bria 3.2 | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | Domyn Large | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | SmolLM3-3B | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | Claude Mythos 5 / Claude Fable 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |

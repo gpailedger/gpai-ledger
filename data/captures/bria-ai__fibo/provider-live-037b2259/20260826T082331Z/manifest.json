@@ -1,0 +1,45 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "provider-live",
+  "sha256": "63a4af55788db5f64197d05b7e5d0cfab18f2d1a8740863d00223fb7402495a5",
+  "size_bytes": 82066,
+  "stored_as": "raw.html",
+  "text_sha256": "31caf5e46a8e85d681df264fae307e2072ef7147b5f79746762a82eca7f8b524",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "final_url": "https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-26T08:23:31Z"
+  },
+  "prior_sha256": "ca2ecd78dfd4f744631788754a825cf1c5882ef0683d7ed6557e3919ba232757",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://drive.google.com/file/d/1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi/view (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "at": "2026-08-26T08:45:58Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-26T08:25:39Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "at": "2026-08-26T08:25:32Z"
+    }
+  ]
+}

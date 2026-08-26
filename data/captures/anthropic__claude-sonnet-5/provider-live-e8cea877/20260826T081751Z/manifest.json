@@ -1,0 +1,51 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "provider-live",
+  "sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+  "size_bytes": 220078,
+  "stored_as": "raw.html",
+  "text_sha256": "5ed12d02413be5b2e7c11a7e239584688bf0bf258bc43636455f8f2c4233fa42",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Wed, 26 Aug 2026 00:08:35 GMT",
+    "content_length": "220078",
+    "fetched_at": "2026-08-26T08:10:32Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f0934485850>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "at": "2026-08-26T08:43:03Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-26T08:17:58Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "at": "2026-08-26T08:17:53Z"
+    }
+  ]
+}

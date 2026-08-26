@@ -34,33 +34,47 @@
   {
     "id": "bria-ai/bria",
     "model": "Bria 3.2",
-    "verdict": "capture-method-change",
-    "similarity": 0.9989,
+    "verdict": "near-identical",
+    "similarity": 0.9971,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
-    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
+    "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
-      "verdict": "method-changed",
-      "similarity": 0.9989,
-      "word_delta": 4,
+      "verdict": "changed",
+      "similarity": 0.9971,
+      "word_delta": 10,
       "moved_words": 0,
       "changes": [
         {
           "op": "replace",
-          "old": "demo Get started Open",
-          "new": "demo Learn more Open navigation"
+          "old": "Best Practices Book a demo Learn more Open",
+          "new": "Practices Start Building Explore Bria Create Open"
         },
         {
           "op": "replace",
-          "old": "demo Get started EU",
-          "new": "demo Learn more EU AI"
+          "old": "Resources Book a demo Learn more EU AI",
+          "new": "Resources Start Building Explore Bria Create EU"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260817T080452Z",
-      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z"
-    }
+      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z",
+      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260826T080810Z"
+    },
+    "word_delta": 10,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Best Practices Book a demo Learn more Open",
+        "new": "Practices Start Building Explore Bria Create Open"
+      },
+      {
+        "op": "replace",
+        "old": "Resources Book a demo Learn more EU AI",
+        "new": "Resources Start Building Explore Bria Create EU"
+      }
+    ]
   },
   {
     "id": "anthropic/claude-mythos-5-fable-5",
