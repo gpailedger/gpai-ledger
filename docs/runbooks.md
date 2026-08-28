@@ -293,6 +293,45 @@ Both run inside the daily sweep and need no operator action:
   The version page names what it has: a snapshot older than the capture is
   captioned as pre-existing, and one that followed a redirect says so.
 
+## Tier-1 probe (a missing model's summary appears at the provider's own pattern)
+
+`crawler/probe_missing.py` runs weekly in `hunt.yml`. Providers are consistent
+with themselves: if OpenAI serves one model's summary at
+`cdn.openai.com/pdf/<slug>-eu-ai-act-public-summary-of-training-content.pdf`,
+the same shape is worth trying for the next one. The script learns each
+provider's patterns from the targets already in `sources.json` (published,
+non-retired, the provider's own host — never AIAL's or the Wayback Machine's
+copy), substitutes a missing model's slug, and fetches the result through
+`capture.fetch`. A hit is a document in hand, never an inference.
+
+A hit is promoted into `crawler/discovered.json` — merged by
+`build_registry.py` exactly like `site_hunt.py`'s `relocations.json`, which adds
+the target and flips the source to `published` — ONLY if it clears every one of:
+
+1. HTTP 200 from the provider's own host, through the public-address guard.
+2. A format we can read, with text we could actually extract.
+3. At least `MIN_MARKERS` Article 53(1)(d) template phrases — a summary, not a
+   system card or a policy page.
+4. **The text names the model.** Sibling summaries run 95–99 % identical, so
+   "it looks like a summary" cannot attribute it. When the name ends in a
+   number, a following number rejects the match: a document headed
+   "MAI-Image-2.5" is never accepted for "MAI-Image-2". That rule can also
+   reject a genuine match followed by an unrelated figure — a false negative
+   costs one line in the report, a false positive would put a false publication
+   claim on a public ledger.
+5. Its canonical text is not already held for a **different** model. Serving one
+   model's summary at another's URL is real provider behaviour.
+
+Anything that fetches but fails 3–5 is listed in
+`reports/probe-missing-latest.md` for a human and is **not** promoted. Nothing
+is ever removed or rewritten; promotion only ever ADDS a target, and the next
+sweep captures it with a hash, a timestamp proof and a Wayback witness before
+the site asserts anything. Bounds: `--max-per-model` (6), `GPAI_PROBE_BUDGET`
+(900 s), a 2 s throttle. A URL already in the registry is never re-probed.
+
+To undo a promotion: delete the entry from `crawler/discovered.json` and rebuild
+the registry. To probe one source: `--only <source id>`.
+
 ## Registry refresh red (a tracked source id would disappear)
 
 `build_registry.py` rebuilds `crawler/sources.json` from AIAL's eval metadata

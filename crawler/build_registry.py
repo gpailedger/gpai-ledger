@@ -457,6 +457,27 @@ def main(aial_repo: str, out_path=None) -> None:
                     if s["status"] == "missing":
                         s["status"] = "published"
 
+    # merge documents found by probe_missing.py — the same contract as relocations:
+    # it only ever ADDS a provider-live target it fetched, whose text carries the
+    # Art. 53(1)(d) template and names the model, and which is not already held for
+    # another model. The sweep then captures it with a hash and a timestamp proof
+    # before the site asserts anything about it.
+    disc_path = Path(__file__).parent / "discovered.json"
+    if disc_path.exists():
+        discovered = json.loads(disc_path.read_text(encoding="utf-8"))
+        by_id = {s["id"]: s for s in sources}
+        for sid, found in discovered.items():
+            s = by_id.get(sid)
+            if not s:
+                print(f"  WARNING: discovered document for unknown source id {sid}")
+                continue
+            for d in found:
+                if d["url"] not in {t["url"] for t in s["targets"]}:
+                    s["targets"].append({"kind": d.get("kind", "provider-live"),
+                                         "url": d["url"], "note": d["note"]})
+                    if s["status"] == "missing":
+                        s["status"] = "published"
+
     # annotate flags LAST so relocation-merged and standalone targets get them too
     for s in sources:
         for t in s.get("targets", []):

@@ -5,6 +5,7 @@ import pytest
 
 import build_registry as br
 import site_hunt
+from pathlib import Path
 
 
 # --- build_registry.normalize_url ---
@@ -103,6 +104,49 @@ def test_build_registry_carries_a_retired_source_forward_flagged(tmp_path, monke
     assert by_id["testorg/beta"]["retired"] == "retired 2026-08-22: upstream eval removed"
     assert by_id["testorg/beta"]["targets"]                     # last committed targets kept
     assert "retired" not in by_id["testorg/alpha"]
+
+
+def test_build_registry_merges_a_probed_document_and_publishes_the_source(tmp_path):
+    # probe_missing.py fetched a document for a model the registry had as missing;
+    # merging it adds a target and flips the status, so the next sweep captures it
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    (repo / "evals" / "beta.yaml").write_text(
+        "model_name: beta\norganization: Testorg\n", encoding="utf-8")   # no summary => missing
+    br.main(str(repo), out_path=out)
+    by_id = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert by_id["testorg/beta"]["status"] == "missing"
+
+    disc = Path(br.__file__).parent / "discovered.json"
+    disc.write_text(json.dumps({"testorg/beta": [
+        {"kind": "provider-live", "url": "https://example.org/beta-found.pdf",
+         "note": "found by probe_missing"}]}), encoding="utf-8")
+    try:
+        br.main(str(repo), out_path=out)
+    finally:
+        disc.unlink()
+    by_id = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    beta = by_id["testorg/beta"]
+    assert beta["status"] == "published"
+    assert "https://example.org/beta-found.pdf" in {t["url"] for t in beta["targets"]}
+    assert "probe_missing" in [t.get("note", "") for t in beta["targets"]
+                               if t["url"].endswith("beta-found.pdf")][0]
+
+
+def test_build_registry_ignores_a_probed_document_for_an_unknown_source(tmp_path, capsys):
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    disc = Path(br.__file__).parent / "discovered.json"
+    disc.write_text(json.dumps({"testorg/nope": [
+        {"kind": "provider-live", "url": "https://example.org/x.pdf", "note": "n"}]}),
+        encoding="utf-8")
+    try:
+        br.main(str(repo), out_path=out)
+    finally:
+        disc.unlink()
+    assert "unknown source id" in capsys.readouterr().out
+    assert all(s["id"] != "testorg/nope"
+               for s in json.loads(out.read_text(encoding="utf-8"))["sources"])
 
 
 # --- site_hunt.error_streaks logic ---

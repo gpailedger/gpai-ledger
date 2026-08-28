@@ -31,6 +31,9 @@ jobs:
       - name: Tier-0 discovery (HF org releases feed)
         run: python crawler/org_watch.py
 
+      - name: Tier-1 probe (missing models against their provider's own URL patterns)
+        run: python crawler/probe_missing.py
+
       - name: Tier-2 relocation hunt (bounded site crawl, fingerprint-confirmed)
         run: python crawler/site_hunt.py
 
@@ -41,7 +44,7 @@ jobs:
           git config user.name "gpai-ledger-hunt"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${{ github.repository }}.git"
-          git add crawler/relocations.json reports/hunt-latest.md reports/org-watch-latest.md
+          git add crawler/relocations.json crawler/discovered.json reports/hunt-latest.md reports/org-watch-latest.md reports/probe-missing-latest.md
           if git diff --cached --quiet; then
             echo "no hunt changes"
           else
