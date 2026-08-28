@@ -105,7 +105,8 @@ def absence_streaks(events_path: Path) -> dict:
     count. A malformed timestamp is skipped, never fatal. Read once per run from
     the append-only event log."""
     tail = {}
-    empty = {"absent_on": set(), "contradicted_on": set(), "confirmed_on": set()}
+    empty = {"absent_on": set(), "contradicted_on": set(), "confirmed_on": set(),
+             "confirmed_by": set()}
     if not events_path.exists():
         return {}
     for line in events_path.read_text(encoding="utf-8").splitlines():
@@ -133,6 +134,8 @@ def absence_streaks(events_path: Path) -> dict:
                 entry["absent_on"].add(day)
                 if absence == "confirmed":
                     entry["confirmed_on"].add(day)
+                    entry["confirmed_by"].update(
+                        v for v in (e.get("confirmed_by") or []) if isinstance(v, str))
         elif out in ("new", "unchanged", "unchanged-content", "recheck-recovered"):
             tail.pop(key, None)
     return tail
@@ -336,7 +339,7 @@ def main() -> int:
                     today = ts[:10]
                     streak = streaks.get((source["id"], tslug),
                                          {"absent_on": set(), "contradicted_on": set(),
-                                          "confirmed_on": set()})
+                                          "confirmed_on": set(), "confirmed_by": set()})
                     witness_saw = (witness or {}).get("saw")
                     stat_keys, failure = [], None
                     if witness_saw == "live":
@@ -371,14 +374,23 @@ def main() -> int:
                             confirmed_by.append("witness")
                         persistent = (len(dates) >= PERSISTENT_AFTER_DAYS and within
                                       and not live_recent)
-                        if confirmed_by:
+                        # An independent vantage may have confirmed this absence
+                        # on an earlier date of the same streak (the Archive witness,
+                        # or the operator via crawler/attest.py). That confirmation
+                        # stands until the document is seen again, so today's 404 is
+                        # another observation of a settled fact, not a fresh claim.
+                        confirmed_earlier = bool(streak["confirmed_on"] - {today})
+                        if confirmed_by or confirmed_earlier:
                             absence = "confirmed"
-                            # A confirmed absence is news exactly once. After the
-                            # first confirmation the model page says the provider's
-                            # copy is gone, so repeating it daily would redden the
-                            # run forever and teach the operator to ignore red.
-                            # Red means new or unresolved, never already-published.
-                            if streak["confirmed_on"] - {today}:
+                            if confirmed_earlier:
+                                confirmed_by = sorted(set(confirmed_by)
+                                                      | streak["confirmed_by"])
+                            # News exactly once. From the first confirmation the model
+                            # page says the provider's copy is gone, so repeating it
+                            # daily would redden the run forever and teach the operator
+                            # to ignore red. Red means new or unresolved, never
+                            # already-published.
+                            if confirmed_earlier:
                                 stats["known_absence"] += 1
                                 stat_keys.append("known_absence")
                             else:

@@ -117,9 +117,9 @@ def test_attestation_restarts_the_sweep_streak_like_a_live_witness(tmp_path):
     ]) + "\n", encoding="utf-8")
     s = rc_mod.absence_streaks(p)
     assert s[("s", "t")] == {"absent_on": set(), "contradicted_on": {"2026-08-23"},
-                             "confirmed_on": set()}
+                             "confirmed_on": set(), "confirmed_by": set()}
     assert s[("s", "u")] == {"absent_on": {"2026-08-23"}, "contradicted_on": set(),
-                             "confirmed_on": set()}
+                             "confirmed_on": set(), "confirmed_by": set()}
 
 
 def test_hunt_streak_feeds_on_persistent_and_breaks_on_attestation(tmp_path):

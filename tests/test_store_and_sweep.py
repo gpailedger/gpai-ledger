@@ -835,7 +835,8 @@ def test_absence_streaks_reader(tmp_path):
     s = rc_mod.absence_streaks(p)
     # a live-witness day restarts the absence streak; damaged timestamps are skipped
     assert s[("s", "t")] == {"absent_on": {"2026-08-23"},
-                             "contradicted_on": {"2026-08-22"}, "confirmed_on": set()}
+                             "contradicted_on": {"2026-08-22"}, "confirmed_on": set(),
+                             "confirmed_by": set()}
     assert ("s", "u") not in s and ("s", "v") not in s
 
 
@@ -891,6 +892,38 @@ def test_a_document_that_comes_back_starts_the_confirmation_over(tmp_path, monke
     assert _events(data_root)[-1]["absence"] == "confirmed"
 
 
+def test_an_operator_confirmation_stops_the_runner_reddening_it_daily(tmp_path, monkeypatch):
+    # crawler/attest.py confirmed it from a second network yesterday; the runner
+    # alone would only ever reach "persistent", so without carrying the earlier
+    # confirmation forward a gone document reddens every morning forever
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2), absence="persistent")
+    with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": f"{_days_ago(1)}T09:00:00Z", "source": "prov/model",
+                             "target": TARGET, "url": "https://ex.org/doc.txt",
+                             "kind": "provider-live", "outcome": "error",
+                             "error": "HTTP 404", "vantage": "operator",
+                             "absence": "confirmed", "confirmed_by": ["operator"]}) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0        # settled: green
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["operator"]
+
+
+def test_a_witness_confirmation_joins_the_operators_in_confirmed_by(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": f"{_days_ago(1)}T09:00:00Z", "source": "prov/model",
+                             "target": TARGET, "kind": "provider-live", "outcome": "error",
+                             "error": "HTTP 404", "vantage": "operator",
+                             "absence": "confirmed", "confirmed_by": ["operator"]}) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    assert _events(data_root)[-1]["confirmed_by"] == ["operator", "witness"]
+
+
 def test_absence_streaks_track_the_dates_an_absence_was_confirmed(tmp_path):
     p = tmp_path / "events.jsonl"
     p.write_text("\n".join(json.dumps(e) for e in [
@@ -904,6 +937,7 @@ def test_absence_streaks_track_the_dates_an_absence_was_confirmed(tmp_path):
     ]) + "\n", encoding="utf-8")
     st = rc_mod.absence_streaks(p)
     assert st[("s", "t")]["confirmed_on"] == {"2026-08-26"}
+    assert st[("s", "t")]["confirmed_by"] == set()
     assert st[("s", "t")]["absent_on"] == {"2026-08-25", "2026-08-26"}
     # attested live from another network: the whole streak, confirmation included, is over
     assert st[("s", "u")]["confirmed_on"] == set()
