@@ -69,6 +69,11 @@ jobs:
         id: capture
         timeout-minutes: 115
         continue-on-error: true
+        env:
+          # Save Page Now requires an account; without these the anonymous path
+          # is used and a datacenter address is throttled into failure
+          GPAI_IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          GPAI_IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
         run: python crawler/run_capture.py
 
       - name: Meta hub extractor (EU AI Act series via rotating CDN URLs)
@@ -86,6 +91,9 @@ jobs:
       - name: Retry failed Wayback saves
         id: waybackretry
         continue-on-error: true
+        env:
+          GPAI_IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          GPAI_IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
         run: python crawler/retry_wayback.py
 
       - name: Upgrade OpenTimestamps proofs to bitcoin anchors

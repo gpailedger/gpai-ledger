@@ -248,15 +248,29 @@ Both run inside the daily sweep and need no operator action:
   attempts, `MAX_ATTEMPT_DAYS` distinct dates, signed URLs never), which then
   mark `gave_up`.
 
-  **Known limitation, not a bug**: the Internet Archive frequently refuses or
-  throttles GitHub-hosted runners. On 28 Aug 2026 every one of 25 save attempts
-  timed out from CI while the same URLs saved fine from a residential network,
-  and the same pattern appeared on 23 and 26 Aug. The backlog therefore drains
-  only when the Archive is willing. OpenTimestamps is the primary provenance
-  and is complete; Wayback is a best-effort second witness. If the backlog
-  matters, the options are to run `python crawler/retry_wayback.py` from a
-  non-datacenter network, or to obtain an archive.org account and use
-  authenticated Save Page Now (higher limits, needs a secret in the repo). A retry never costs us evidence: if the new save fails, the
+  **Save Page Now needs an account.** Its API answers an unauthenticated caller
+  with "You need to be logged in to use Save Page Now", and the anonymous
+  `/save/<url>` path is rate-limited per IP — a GitHub runner's datacenter
+  address is throttled into dropped connections, which is why CI archived
+  nothing on 23, 26 and 28 Aug while the same URLs saved fine from a
+  residential network. With `GPAI_IA_ACCESS_KEY` / `GPAI_IA_SECRET_KEY` in the
+  environment, `wayback_save` uses the authenticated SPN2 API instead: it POSTs
+  a capture job and polls `/save/status/<job_id>` until the Archive names the
+  capture, so the recorded snapshot is the one it actually made. Without the
+  keys nothing changes and the anonymous path is used.
+
+  To set them up: sign in at archive.org, take the pair from
+  <https://archive.org/account/s3.php>, and add them as repository secrets
+  named `IA_ACCESS_KEY` and `IA_SECRET_KEY` (Settings → Secrets and variables →
+  Actions). The daily sweep passes them to the capture and retry steps only.
+  They are never printed; treat them as credentials — rotate on that page if
+  they ever leak. Prefer an account registered to the project address rather
+  than a personal one, for the same reason every other public surface uses it.
+
+  Until the keys exist, drain the backlog by running
+  `GPAI_WAYBACK_BUDGET=540 python crawler/retry_wayback.py` from a
+  non-datacenter network and committing `data/`. OpenTimestamps is the primary
+  provenance and is complete; Wayback is a best-effort second witness. A retry never costs us evidence: if the new save fails, the
   older snapshot stays as the record and only `last_refresh_attempt` is added.
   `retry_wayback.py --verify` re-checks recorded snapshots and demotes dead
   ones so they re-enter the queue. Run `--verify` manually about once a

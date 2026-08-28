@@ -537,3 +537,119 @@ def test_percent_encoding_alone_is_not_a_different_address(monkeypatch):
 def test_snapshot_is_fresh_is_undecidable_without_timestamps():
     assert cap.snapshot_is_fresh("not a snapshot url", "2026-08-15T06:00:00Z") is None
     assert cap.snapshot_is_fresh(_snap("20260815060000"), "") is None
+
+
+# --- authenticated Save Page Now (SPN2) ---
+
+class FakeSpn2:
+    """POST /save then GET /save/status/<job>: queued status payloads."""
+
+    def __init__(self, post_json=None, statuses=(), post_status=200):
+        self.post_json = post_json if post_json is not None else {"job_id": "j1"}
+        self.statuses = list(statuses)
+        self.post_status = post_status
+        self.posts, self.gets, self.auth_seen = [], [], []
+
+    def post(self, url, headers=None, timeout=None, data=None):
+        self.posts.append((url, data))
+        self.auth_seen.append((headers or {}).get("Authorization"))
+        return _JsonResp(self.post_status, self.post_json)
+
+    def get(self, url, headers=None, timeout=None, **kw):
+        self.gets.append(url)
+        self.auth_seen.append((headers or {}).get("Authorization"))
+        return _JsonResp(200, self.statuses.pop(0) if self.statuses else {"status": "pending"})
+
+
+class _JsonResp:
+    def __init__(self, status, payload):
+        self.status_code = status
+        self._payload = payload
+        self.headers = {}
+        self.history = []
+        self.url = ""
+
+    def json(self):
+        if self._payload is None:
+            raise ValueError("not json")
+        return self._payload
+
+
+def _with_keys(monkeypatch):
+    monkeypatch.setenv("GPAI_IA_ACCESS_KEY", "ACCESS")
+    monkeypatch.setenv("GPAI_IA_SECRET_KEY", "SECRET")
+
+
+def _no_sleep(monkeypatch):
+    monkeypatch.setattr(cap.time, "sleep", lambda s: None)
+
+
+def test_credentials_switch_wayback_to_the_authenticated_api(monkeypatch):
+    _with_keys(monkeypatch)
+    _no_sleep(monkeypatch)
+    ts = __import__("datetime").datetime.now(
+        __import__("datetime").timezone.utc).strftime("%Y%m%d%H%M%S")
+    fake = FakeSpn2(statuses=[{"status": "success", "timestamp": ts,
+                              "original_url": "https://x/d.pdf"}])
+    monkeypatch.setattr(cap, "requests", fake)
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] and out["via"] == "spn2" and out["fresh"] is True
+    assert out["snapshot"] == f"https://web.archive.org/web/{ts}/https://x/d.pdf"
+    assert out["same_url"] is True and out["job_id"] == "j1"
+    assert fake.auth_seen[0] == "LOW ACCESS:SECRET"
+    assert fake.posts[0][1]["url"] == "https://x/d.pdf"
+
+
+def test_without_credentials_the_anonymous_path_is_unchanged(monkeypatch):
+    monkeypatch.delenv("GPAI_IA_ACCESS_KEY", raising=False)
+    monkeypatch.delenv("GPAI_IA_SECRET_KEY", raising=False)
+    resp = FakeResp(200, url=SNAP, headers={"Content-Location": SNAP.replace(
+        "https://web.archive.org", "")})
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] and "via" not in out
+
+
+def test_a_save_job_that_errors_is_a_verdict_not_the_archive_refusing_us(monkeypatch):
+    _with_keys(monkeypatch)
+    _no_sleep(monkeypatch)
+    fake = FakeSpn2(statuses=[{"status": "error", "status_ext": "error:not-found"}])
+    monkeypatch.setattr(cap, "requests", fake)
+    out = cap.wayback_save("https://x/gone.pdf")
+    assert out["ok"] is False and out["answered"] is True
+    assert out["error"] == "error:not-found"
+
+
+def test_being_refused_is_not_recorded_as_a_verdict(monkeypatch):
+    _with_keys(monkeypatch)
+    _no_sleep(monkeypatch)
+    fake = FakeSpn2(post_json={}, post_status=429)
+    monkeypatch.setattr(cap, "requests", fake)
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] is False and out.get("answered") is not True
+    assert out["status_code"] == 429
+
+
+def test_a_job_that_never_finishes_gives_up_without_claiming_a_snapshot(monkeypatch):
+    _with_keys(monkeypatch)
+    _no_sleep(monkeypatch)
+    clock = iter([0] + [i * 10 for i in range(1, 200)])
+    monkeypatch.setattr(cap.time, "monotonic", lambda: next(clock))
+    fake = FakeSpn2(statuses=[])                      # always "pending"
+    monkeypatch.setattr(cap, "requests", fake)
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] is False and "unfinished" in out["error"]
+    assert "snapshot" not in out
+
+
+def test_a_reused_recent_capture_still_witnesses_the_fetch(monkeypatch):
+    # SPN may answer with a capture younger than SPN2_REUSE_WITHIN instead of
+    # crawling again; that is inside the freshness slack, so it still counts
+    _with_keys(monkeypatch)
+    _no_sleep(monkeypatch)
+    dt = __import__("datetime")
+    ts = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=20)).strftime("%Y%m%d%H%M%S")
+    fake = FakeSpn2(statuses=[{"status": "success", "timestamp": ts,
+                               "original_url": "https://x/d.pdf"}])
+    monkeypatch.setattr(cap, "requests", fake)
+    assert cap.wayback_save("https://x/d.pdf")["fresh"] is True

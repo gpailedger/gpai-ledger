@@ -748,6 +748,94 @@ def snapshot_is_fresh(snapshot: str, requested_at: str):
     return (asked_dt - snap_dt).total_seconds() <= WAYBACK_FRESH_SLACK_S
 
 
+# Save Page Now requires an account for its API ("You need to be logged in to
+# use Save Page Now"), and the anonymous /save/<url> path is rate-limited per
+# IP — a GitHub runner's datacenter address is throttled to the point of dropped
+# connections, which is why CI archived nothing while the same URLs saved fine
+# from a residential network. With credentials the SPN2 API is used instead:
+# POST a job, poll until it names a capture. Without them nothing changes.
+SPN2_ENDPOINT = "https://web.archive.org/save"
+SPN2_POLL_S = 5
+SPN2_POLL_DEADLINE_S = 180
+# If the Archive already holds a capture younger than this it may return that
+# one instead of crawling again. Kept well inside WAYBACK_FRESH_SLACK_S so a
+# reused capture still witnesses what we just fetched.
+SPN2_REUSE_WITHIN = "30m"
+
+
+def ia_auth():
+    """The Authorization header value for Save Page Now, or None when no
+    archive.org credentials are configured. The keys are read from the
+    environment and never logged."""
+    access = os.environ.get("GPAI_IA_ACCESS_KEY", "").strip()
+    secret = os.environ.get("GPAI_IA_SECRET_KEY", "").strip()
+    return f"LOW {access}:{secret}" if access and secret else None
+
+
+def _spn2_json(resp):
+    try:
+        return resp.json()
+    except Exception:  # noqa: BLE001 — an HTML error page, not JSON
+        return {}
+
+
+def _wayback_save_spn2(url: str, auth: str, timeout: int) -> dict:
+    """Authenticated Save Page Now: submit a capture job and poll for the
+    capture it assigns. `answered` marks a verdict about the URL itself (as
+    opposed to the Archive dropping us), so callers can tell the two apart."""
+    requested_at = utc_now()
+    headers = dict(HEADERS)
+    headers.update({"Accept": "application/json", "Authorization": auth})
+    try:
+        r = requests.post(SPN2_ENDPOINT, headers=headers, timeout=timeout,
+                          data={"url": url, "skip_first_archive": "1",
+                                "if_not_archived_within": SPN2_REUSE_WITHIN})
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "error": repr(exc), "via": "spn2",
+                "requested_at": requested_at, "at": utc_now()}
+    body = _spn2_json(r)
+    job_id = body.get("job_id")
+    if not job_id:
+        # no job: either a verdict about the URL, or the Archive refusing us
+        answered = r.status_code == 200 and bool(body.get("message"))
+        return {"ok": False, "status_code": r.status_code, "spn_status": r.status_code,
+                "error": str(body.get("message") or f"HTTP {r.status_code}")[:300],
+                "answered": answered, "via": "spn2",
+                "requested_at": requested_at, "at": utc_now()}
+
+    deadline = time.monotonic() + SPN2_POLL_DEADLINE_S
+    status = {}
+    while time.monotonic() < deadline:
+        time.sleep(SPN2_POLL_S)
+        try:
+            s = requests.get(f"{SPN2_ENDPOINT}/status/{job_id}", headers=headers,
+                             timeout=timeout)
+        except Exception as exc:  # noqa: BLE001
+            return {"ok": False, "error": repr(exc), "job_id": job_id, "via": "spn2",
+                    "requested_at": requested_at, "at": utc_now()}
+        status = _spn2_json(s)
+        if status.get("status") in ("success", "error"):
+            break
+    if status.get("status") == "success" and status.get("timestamp"):
+        original = status.get("original_url") or url
+        snapshot = f"https://web.archive.org/web/{status['timestamp']}/{original}"
+        return {"ok": True, "status_code": 200, "spn_status": 200,
+                "snapshot": snapshot, "snapshot_ts": status["timestamp"],
+                "fresh": snapshot_is_fresh(snapshot, requested_at),
+                "same_url": _same_url(original, url),
+                "job_id": job_id, "via": "spn2",
+                "requested_at": requested_at, "at": utc_now()}
+    if status.get("status") == "error":
+        return {"ok": False, "status_code": 200, "spn_status": 200,
+                "error": str(status.get("status_ext") or status.get("message")
+                             or "spn2 error")[:300],
+                "answered": True, "job_id": job_id, "via": "spn2",
+                "requested_at": requested_at, "at": utc_now()}
+    return {"ok": False, "error": f"spn2 job {job_id} unfinished after "
+                                  f"{SPN2_POLL_DEADLINE_S}s", "job_id": job_id,
+            "via": "spn2", "requested_at": requested_at, "at": utc_now()}
+
+
 def wayback_save(url: str, timeout: int = 120):
     """Best-effort triggered Wayback save. Returns outcome dict, never raises.
 
@@ -756,7 +844,14 @@ def wayback_save(url: str, timeout: int = 120):
     `fresh` says whether the capture SPN named is new enough to witness the
     document we just fetched (see WAYBACK_FRESH_SLACK_S); `same_url` says
     whether it archives the address we asked for or a redirect target.
+
+    With archive.org credentials in the environment the authenticated SPN2 API
+    is used instead (see _wayback_save_spn2), which is the only path that works
+    from a datacenter address.
     """
+    auth = ia_auth()
+    if auth:
+        return _wayback_save_spn2(url, auth, timeout)
     requested_at = utc_now()
     try:
         r = requests.get("https://web.archive.org/save/" + url,

@@ -494,3 +494,25 @@ def test_budget_env_override_is_clamped(monkeypatch):
     assert RW.budget_s() == 3600.0
     monkeypatch.setenv("GPAI_WAYBACK_BUDGET", "not a number")
     assert RW.budget_s() == float(RW.BUDGET_S)
+
+
+def test_an_spn_verdict_counts_as_an_answered_attempt(corpus, monkeypatch):
+    verdicts = [{"answered": True, "error": "error:not-found"}] * RW.MAX_ATTEMPTS
+    d, _ = corpus.add_capture(wayback={"ok": False, "answered": True,
+                                       "error": "error:not-found"},
+                              extra_manifest={"wayback_attempts": verdicts})
+    root = corpus.finish()
+    calls = wayback_save_recorder(monkeypatch, {"ok": True})
+    run_retry(monkeypatch, root)
+    assert manifest_of(d)["wayback"]["gave_up"].startswith("exhausted")
+    assert calls == []
+
+
+def test_repeated_spn_verdicts_do_not_trip_the_refusal_breaker(corpus, monkeypatch):
+    for i in range(5):
+        corpus.add_capture(tslug=f"provider-live-v{i}", url=f"https://example.org/v{i}.pdf")
+    root = corpus.finish()
+    calls = wayback_save_recorder(
+        monkeypatch, {"ok": False, "answered": True, "error": "error:not-found"})
+    run_retry(monkeypatch, root)
+    assert len(calls) == 5

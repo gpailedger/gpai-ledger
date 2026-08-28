@@ -66,8 +66,8 @@ def budget_s() -> float:
 def is_transport_failure(result: dict) -> bool:
     """The attempt never reached a verdict: a dropped connection, a timeout, or
     a throttling status. It says nothing about the URL."""
-    if result.get("ok"):
-        return False
+    if result.get("ok") or result.get("answered"):
+        return False          # a verdict about the URL, not the Archive refusing us
     if result.get("error"):
         return True
     return result.get("status_code") in TRANSPORT_STATUSES
@@ -78,8 +78,9 @@ SIGNED_URL_MARKERS = re.compile(
 
 def answered_attempts(attempts) -> list:
     """The attempts that carry a verdict from Save Page Now itself."""
-    return [a for a in attempts if isinstance(a.get("status_code"), int)
-            and a["status_code"] not in TRANSPORT_STATUSES]
+    return [a for a in attempts
+            if a.get("answered") or (isinstance(a.get("status_code"), int)
+                                     and a["status_code"] not in TRANSPORT_STATUSES)]
 
 
 def attempt_dates(attempts) -> set:
