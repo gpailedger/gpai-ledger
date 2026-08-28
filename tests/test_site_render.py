@@ -709,3 +709,57 @@ def test_dataset_export_carries_blob_proof_and_snapshot_urls(corpus, tmp_path, m
         assert r["blob_url"].endswith(f"blob/{r['sha256']}.pdf")
         assert r["ots_url"].endswith(".ots") and r["sha256"] in r["ots_url"]
         assert "wayback_snapshot" in r
+
+
+def _absence_event(data_root, ts, absence="confirmed", outcome="error", by=("operator",)):
+    ev = {"ts": ts, "source": "prov/model", "target": SLUG, "outcome": outcome,
+          "url": "https://ex.org/doc.pdf", "kind": "provider-live"}
+    if outcome == "error":
+        ev["error"] = "HTTP 404 for https://ex.org/doc.pdf"
+        ev["absence"] = absence
+        ev["confirmed_by"] = list(by)
+    with (Path(data_root) / "events.jsonl").open("a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps(ev) + "\n")
+
+
+def test_site_says_when_a_provider_copy_is_confirmed_gone(corpus, tmp_path, monkeypatch):
+    data, _d1, _d2 = _two_versions(corpus)
+    _absence_event(data, "2026-08-28T08:52:51Z")
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "The provider's copy of this document no longer resolves." in model
+    assert "28 Aug 2026" in model
+    assert "second, unrelated network" in model
+    assert "https://ex.org/doc.pdf" in model
+    # the archived evidence is still presented, and no version was withdrawn
+    assert "Document versions" in model
+    status = (dist / "status" / "index.html").read_text(encoding="utf-8")
+    assert "(provider copy no longer resolves)" in status
+
+
+def test_no_gone_banner_when_the_absence_was_never_confirmed(corpus, tmp_path, monkeypatch):
+    data, _d1, _d2 = _two_versions(corpus)
+    _absence_event(data, "2026-08-28T08:52:51Z", absence="persistent", by=())
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "no longer resolves" not in model
+
+
+def test_gone_banner_disappears_once_the_document_is_seen_again(corpus, tmp_path, monkeypatch):
+    data, _d1, _d2 = _two_versions(corpus)
+    _absence_event(data, "2026-08-26T08:00:00Z")
+    _absence_event(data, "2026-08-28T09:00:00Z", outcome="live-attested")
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "no longer resolves" not in model
+    assert "(provider copy no longer resolves)" not in (
+        dist / "status" / "index.html").read_text(encoding="utf-8")
+
+
+def test_gone_banner_names_the_witness_when_the_archive_confirmed_it(corpus, tmp_path, monkeypatch):
+    data, _d1, _d2 = _two_versions(corpus)
+    _absence_event(data, "2026-08-28T08:52:51Z", by=("witness",))
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "independent Internet Archive capture" in model
+    assert "second, unrelated network" not in model

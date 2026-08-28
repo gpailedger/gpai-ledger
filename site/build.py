@@ -357,6 +357,10 @@ REPACKED_SHAS = set()
 # the hash; curation-time events carry only the dir, whose hash is in the
 # matching 'new' event)
 PRUNED_EVENTS = {}
+# (source id, target) -> the current confirmed absence of a provider copy:
+# {"first": ts of the first confirmation in this streak, "last": ts, "by": [vantages],
+# "url": the address that stopped answering}. Filled by last_checked_map().
+GONE_TARGETS = {}
 # sha256 -> (earliest capture slug, source id) across the whole corpus: a later
 # capture of identical bytes points at the earliest attestation
 SHA_FIRST = {}
@@ -403,6 +407,52 @@ def last_checked_map():
             sha = e.get("sha256") or new_sha.get(d)
             if sha:
                 PRUNED_EVENTS[sha] = e
+        _track_absence(e, src)
+    return out
+
+
+def _track_absence(e, src) -> None:
+    """Maintain GONE_TARGETS over the event stream: a confirmed absence stands
+    until the document is fetched again, seen live by a witness, or attested live
+    from another network."""
+    key = (src, e.get("target"))
+    if not all(key):
+        return
+    outcome, absence = e.get("outcome"), e.get("absence")
+    if (outcome in ("new", "unchanged", "unchanged-content", "recheck-recovered",
+                    "live-attested") or absence == "contradicted"):
+        GONE_TARGETS.pop(key, None)
+    elif outcome == "error" and absence == "confirmed" and e.get("ts"):
+        rec = GONE_TARGETS.setdefault(key, {"first": e["ts"], "by": [],
+                                            "url": e.get("url")})
+        rec["last"] = e["ts"]
+        rec["url"] = rec["url"] or e.get("url")
+        for v in e.get("confirmed_by") or []:
+            if isinstance(v, str) and v not in rec["by"]:
+                rec["by"].append(v)
+
+
+def gone_notes(sid: str) -> list:
+    """Banner(s) for a source whose provider copy is confirmed no longer
+    resolving — the ledger's own reason to exist, so it is stated on the page."""
+    out = []
+    for (s, _t), r in sorted(GONE_TARGETS.items()):
+        if s != sid:
+            continue
+        by = tuple(sorted(r.get("by") or ()))
+        how = ("checked from a second, unrelated network as well as this project's "
+               "daily runner" if by == ("operator",) else
+               "corroborated by an independent Internet Archive capture" if by == ("witness",)
+               else "corroborated by an independent Internet Archive capture and from "
+                    "a second, unrelated network")
+        day = str(r.get("first", ""))[:10].replace("-", "") + "T"
+        out.append(
+            f"<p><strong>The provider's copy of this document no longer resolves.</strong> "
+            f"Confirmed on {esc(human_date(day))} — {how}. The archived version(s) below, "
+            f"with their SHA-256 hashes and OpenTimestamps proofs, are unaffected"
+            + (f"; the address that stopped answering is "
+               f"<code>{esc(str(r.get('url')))}</code>" if r.get("url") else "")
+            + ".</p>")
     return out
 
 
@@ -1388,7 +1438,11 @@ def render_status_page(status_rows) -> str:
               "records what is observable — what is published where, and when it "
               "changed. A dash under <em>Last checked</em> means no candidate "
               "location is known for that model, so nothing is fetched for it; its "
-              "registry entry is re-read daily.</p>")
+              "registry entry is re-read daily. <em>Provider copy no longer "
+              "resolves</em> means the address that served the summary stopped "
+              "answering, confirmed from more than one network — the model page "
+              "carries the date, and every version already archived stays "
+              "available with its proof.</p>")
 
 
 def render_changes_page(changes) -> str:
@@ -1816,6 +1870,8 @@ def main(generated: str = None) -> int:
                 f"<p><strong>No longer tracked:</strong> {esc(str(source['retired']))}. "
                 f"The versions archived below remain, and their permalinks stay "
                 f"valid.</p>"))
+        for note in reversed(gone_notes(source["id"])):
+            vsections.insert(0, note)
         model_body, page_title = render_model_page(source, vsections, checked)
         crumb_items = [("GPAI Ledger", PREFIX),
                        (f"{source['model']} ({source['provider']})", None)]
@@ -1839,7 +1895,9 @@ def main(generated: str = None) -> int:
             badge = (f"<strong class='tag tag-{esc(source['status'])}'>"
                      f"{esc(STATUS_LABELS.get(source['status'], source['status']))}</strong>"
                      + (" <span class='muted'>(no longer tracked)</span>"
-                        if source.get("retired") else ""))
+                        if source.get("retired") else "")
+                     + (" <span class='muted'>(provider copy no longer resolves)</span>"
+                        if any(s == source["id"] for s, _t in GONE_TARGETS) else ""))
             status_rows.append((
                 (source["provider"].lower(), source["model"].lower()),
                 f"<tr><td>{esc(source['provider'])}</td>"

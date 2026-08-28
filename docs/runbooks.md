@@ -170,6 +170,15 @@ with a prior stored capture, `run_capture.py` therefore:
    health gate is corrected — the run itself holds the proof the 404 was
    transient.
 
+**What the site says.** From the first confirmation, the model page carries
+"The provider's copy of this document no longer resolves", the date, and how it
+was corroborated (an Internet Archive capture, a second network, or both); the
+status table marks the row "(provider copy no longer resolves)". The status
+badge stays *published* — the summary was published, and every archived version
+with its hash and proof remains exactly where it was. The banner disappears by
+itself as soon as the document is fetched again, a witness sees it live, or the
+operator attests it live.
+
 **Red run with a persistent absence — what to do.** From a network that is
 not a datacenter (your own), run `python crawler/attest.py --source <id>`: it
 fetches the archived URL through the sweep's guarded fetch and appends one
@@ -181,8 +190,22 @@ live document needs a route change (rendered fetch, alternative URL,
 relocation), not repeated attestations: the single-vantage route reddens
 again once the attestation is older than `ABSENCE_WINDOW_DAYS`.
 
-Only **confirmed** and **persistent** absences count toward the health gate
-and toward relocation-hunt streaks. Unconfirmed and contradicted absences are fully logged
+Only **confirmed** and **persistent** absences count toward relocation-hunt
+streaks. What reddens the run is narrower, so that red keeps meaning "new or
+unresolved":
+
+- the **first** confirmation of an absence in a streak — news, and worth a look;
+- every **persistent** one — a single vantage, still unresolved, waiting for the
+  operator to attest it from another network;
+- a confirmed absence that has already been confirmed on an earlier date of the
+  same streak does **not** redden the run again (`known_absence` in the sweep
+  summary). By then the model page states that the provider's copy no longer
+  resolves, with the date and the corroborating vantages, so repeating it daily
+  would only teach the operator to ignore red. Any successful fetch, a live
+  witness or an operator attestation clears the streak, and the next
+  disappearance is news all over again.
+
+Unconfirmed and contradicted absences are fully logged
 and do not redden the run — except that contradictions on
 `CONTRADICTED_ALERT_DAYS` distinct dates of the current streak (the most recent
 prior one within `ABSENCE_WINDOW_DAYS`; an inconclusive day in between does not

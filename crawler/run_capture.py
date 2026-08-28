@@ -98,11 +98,14 @@ def absence_streaks(events_path: Path) -> dict:
     saw the document live — or a `live-attested` day (the operator fetched it
     from a second network, crawler/attest.py) restarts absent_on (the document
     demonstrably existed that day) while contradicted_on keeps accumulating for
-    the vantage alert.
+    the vantage alert. confirmed_on holds the dates on which the absence was
+    CONFIRMED by an independent vantage: the first such date is news (red run),
+    later ones are a fact the site already publishes.
     Plain errors (an 'error' event with no 'absence' field) neither reset nor
     count. A malformed timestamp is skipped, never fatal. Read once per run from
     the append-only event log."""
     tail = {}
+    empty = {"absent_on": set(), "contradicted_on": set(), "confirmed_on": set()}
     if not events_path.exists():
         return {}
     for line in events_path.read_text(encoding="utf-8").splitlines():
@@ -119,14 +122,17 @@ def absence_streaks(events_path: Path) -> dict:
                 date.fromisoformat(day)
             except ValueError:
                 continue  # a damaged line must not abort the sweep that reads it
-            entry = tail.setdefault(key, {"absent_on": set(), "contradicted_on": set()})
+            entry = tail.setdefault(key, {k: set() for k in empty})
             if absence == "contradicted" or out == "live-attested":
                 # a fresh witness, or the operator from a second network, saw
                 # the document live: it demonstrably existed that day
                 entry["contradicted_on"].add(day)
                 entry["absent_on"].clear()
+                entry["confirmed_on"].clear()
             else:
                 entry["absent_on"].add(day)
+                if absence == "confirmed":
+                    entry["confirmed_on"].add(day)
         elif out in ("new", "unchanged", "unchanged-content", "recheck-recovered"):
             tail.pop(key, None)
     return tail
@@ -195,7 +201,8 @@ def main() -> int:
     store = cap.Store(data_root)
 
     stats = {"checked": 0, "new": 0, "unchanged": 0, "errors": 0,
-             "unconfirmed_absence": 0, "persistent_absence": 0, "vantage_blocked": 0,
+             "unconfirmed_absence": 0, "persistent_absence": 0, "known_absence": 0,
+             "vantage_blocked": 0,
              "wayback_ok": 0, "wayback_fail": 0, "ots_ok": 0, "ots_fail": 0}
     failures = []
     fetch_cache = {}  # url -> (raw, meta); several sources share one portal URL
@@ -328,7 +335,8 @@ def main() -> int:
                     ts = cap.utc_now()
                     today = ts[:10]
                     streak = streaks.get((source["id"], tslug),
-                                         {"absent_on": set(), "contradicted_on": set()})
+                                         {"absent_on": set(), "contradicted_on": set(),
+                                          "confirmed_on": set()})
                     witness_saw = (witness or {}).get("saw")
                     stat_keys, failure = [], None
                     if witness_saw == "live":
@@ -365,10 +373,19 @@ def main() -> int:
                                       and not live_recent)
                         if confirmed_by:
                             absence = "confirmed"
-                            stats["errors"] += 1
-                            stat_keys.append("errors")
-                            failure = (source["id"], url, second["error"])
-                            failures.append(failure)
+                            # A confirmed absence is news exactly once. After the
+                            # first confirmation the model page says the provider's
+                            # copy is gone, so repeating it daily would redden the
+                            # run forever and teach the operator to ignore red.
+                            # Red means new or unresolved, never already-published.
+                            if streak["confirmed_on"] - {today}:
+                                stats["known_absence"] += 1
+                                stat_keys.append("known_absence")
+                            else:
+                                stats["errors"] += 1
+                                stat_keys.append("errors")
+                                failure = (source["id"], url, second["error"])
+                                failures.append(failure)
                         elif persistent:
                             # this vantage alone, on several dates: red so the
                             # operator looks (crawler/attest.py) — never confirmed
@@ -507,13 +524,14 @@ def main() -> int:
         print("\n=== failures ===")
         for sid, url, err in failures:
             print(f"  {sid}: {url}\n    {err}")
-    # non-zero on CONFIRMED and PERSISTENT absences (and plain errors) so CI
-    # shows red — the workflow runs this step with continue-on-error, so captured
-    # data is still committed, but a partial sweep is never silently reported as
-    # a success. Unconfirmed and contradicted absences (a 404 from this vantage
-    # point on one day, or one an independent witness refuted) are fully logged
-    # but do not redden the run, except a repeated contradiction, which reddens
-    # as a vantage problem.
+    # non-zero on the FIRST confirmation of an absence, on every PERSISTENT one
+    # (single vantage, still unresolved) and on plain errors, so CI shows red —
+    # the workflow runs this step with continue-on-error, so captured data is
+    # still committed, but a partial sweep is never silently reported as a
+    # success. A confirmed absence the site already publishes (known_absence),
+    # an unconfirmed one, and a contradicted one are fully logged but do not
+    # redden the run, except a repeated contradiction, which reddens as a vantage
+    # problem.
     return 1 if stats.get("errors") else 0
 
 

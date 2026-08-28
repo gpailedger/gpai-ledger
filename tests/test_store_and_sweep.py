@@ -834,7 +834,8 @@ def test_absence_streaks_reader(tmp_path):
     p.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
     s = rc_mod.absence_streaks(p)
     # a live-witness day restarts the absence streak; damaged timestamps are skipped
-    assert s[("s", "t")] == {"absent_on": {"2026-08-23"}, "contradicted_on": {"2026-08-22"}}
+    assert s[("s", "t")] == {"absent_on": {"2026-08-23"},
+                             "contradicted_on": {"2026-08-22"}, "confirmed_on": set()}
     assert ("s", "u") not in s and ("s", "v") not in s
 
 
@@ -845,3 +846,65 @@ def test_recheck_delay_env_parse_is_guarded(monkeypatch):
     assert rc_mod._delay_from_env() == 300.0
     monkeypatch.setenv("GPAI_RECHECK_DELAY", "0")
     assert rc_mod._delay_from_env() == 0.0
+
+
+def test_first_confirmation_of_an_absence_reddens_the_run(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 1        # news: red
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["witness"]
+
+
+def test_an_already_confirmed_absence_no_longer_reddens_the_run(tmp_path, monkeypatch):
+    # the site publishes "the provider's copy no longer resolves" from the first
+    # confirmation on; repeating it daily would make red meaningless
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1), absence="confirmed")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 0        # known: green
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed"                       # still fully recorded
+    assert e["absent_on"] == [_days_ago(1), _today()]
+
+
+def test_a_persistent_single_vantage_absence_keeps_reddening(tmp_path, monkeypatch):
+    # unresolved, and only the operator can resolve it: stays red
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(2), absence="persistent")
+    _seed(data_root, _days_ago(1), absence="persistent")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+    assert _events(data_root)[-1]["absence"] == "persistent"
+
+
+def test_a_document_that_comes_back_starts_the_confirmation_over(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(3), absence="confirmed")
+    _seed(data_root, _days_ago(2), outcome="unchanged", absence=None)   # it returned
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    assert _run_wb(monkeypatch, reg, data_root) == 1        # news again: red
+    assert _events(data_root)[-1]["absence"] == "confirmed"
+
+
+def test_absence_streaks_track_the_dates_an_absence_was_confirmed(tmp_path):
+    p = tmp_path / "events.jsonl"
+    p.write_text("\n".join(json.dumps(e) for e in [
+        {"source": "s", "target": "t", "outcome": "error", "absence": "persistent",
+         "ts": "2026-08-25T06:00:00Z"},
+        {"source": "s", "target": "t", "outcome": "error", "absence": "confirmed",
+         "ts": "2026-08-26T06:00:00Z"},
+        {"source": "s", "target": "u", "outcome": "error", "absence": "confirmed",
+         "ts": "2026-08-26T06:00:00Z"},
+        {"source": "s", "target": "u", "outcome": "live-attested", "ts": "2026-08-27T06:00:00Z"},
+    ]) + "\n", encoding="utf-8")
+    st = rc_mod.absence_streaks(p)
+    assert st[("s", "t")]["confirmed_on"] == {"2026-08-26"}
+    assert st[("s", "t")]["absent_on"] == {"2026-08-25", "2026-08-26"}
+    # attested live from another network: the whole streak, confirmation included, is over
+    assert st[("s", "u")]["confirmed_on"] == set()
+    assert st[("s", "u")]["absent_on"] == set()
