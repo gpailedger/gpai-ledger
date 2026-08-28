@@ -32,5 +32,11 @@
     "errors": [],
     "at": "2026-08-11T11:00:57Z"
   },
-  "text_sha256": "03390233e718e5b88a2f9cb204972c17870f1211c6c7cb08db344aac012b424e"
+  "text_sha256": "03390233e718e5b88a2f9cb204972c17870f1211c6c7cb08db344aac012b424e",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "requested_at": "2026-08-28T10:35:45Z",
+    "at": "2026-08-28T10:37:45Z"
+  }
 }

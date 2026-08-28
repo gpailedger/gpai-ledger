@@ -31,5 +31,11 @@
     "errors": [],
     "at": "2026-08-11T10:43:22Z"
   },
-  "text_sha256": "75845e0db85e6970dcf2c2b3dc17cb18f9905a0a0f74807c8df680f489142890"
+  "text_sha256": "75845e0db85e6970dcf2c2b3dc17cb18f9905a0a0f74807c8df680f489142890",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_5_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "requested_at": "2026-08-28T10:42:54Z",
+    "at": "2026-08-28T10:42:56Z"
+  }
 }

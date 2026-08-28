@@ -31,5 +31,11 @@
     "errors": [],
     "at": "2026-08-11T10:28:15Z"
   },
-  "text_sha256": "47ecd6712f71c2988c3765a78bb8859c44ca6402d04f742725d5bbda7ca056a4"
+  "text_sha256": "47ecd6712f71c2988c3765a78bb8859c44ca6402d04f742725d5bbda7ca056a4",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_5_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "requested_at": "2026-08-28T10:23:19Z",
+    "at": "2026-08-28T10:23:22Z"
+  }
 }

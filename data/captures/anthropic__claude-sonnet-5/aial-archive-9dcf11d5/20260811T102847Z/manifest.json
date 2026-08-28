@@ -31,5 +31,11 @@
     "errors": [],
     "at": "2026-08-11T10:28:54Z"
   },
-  "text_sha256": "a80608166ceac40e289b9d1fcf6859bb655843badce8c79a7ed3d88df630fba9"
+  "text_sha256": "a80608166ceac40e289b9d1fcf6859bb655843badce8c79a7ed3d88df630fba9",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Sonnet_5_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0fedd370>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "requested_at": "2026-08-28T10:23:34Z",
+    "at": "2026-08-28T10:25:34Z"
+  }
 }

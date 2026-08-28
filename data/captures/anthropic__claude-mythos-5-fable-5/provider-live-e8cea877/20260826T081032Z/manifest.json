@@ -27,8 +27,9 @@
   "prior_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
   "wayback": {
     "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "at": "2026-08-28T09:33:08Z"
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "requested_at": "2026-08-28T10:16:29Z",
+    "at": "2026-08-28T10:18:29Z"
   },
   "ots": {
     "ok": true,
@@ -56,6 +57,11 @@
       "ok": false,
       "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2ea2c71610>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
       "at": "2026-08-28T08:41:29Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "at": "2026-08-28T09:33:08Z"
     }
   ]
 }
