@@ -414,7 +414,20 @@ def test_a_failed_refresh_never_costs_us_the_snapshot_we_hold(corpus, monkeypatc
     run_retry(monkeypatch, root)
     m = manifest_of(d)
     assert m["wayback"]["snapshot"] == STALE and m["wayback"]["ok"] is True
-    assert m["wayback"]["last_refresh_attempt"] is None or "last_refresh_attempt" in m["wayback"]
+    assert "last_refresh_attempt" in m["wayback"]
+
+
+def test_a_failed_refresh_records_what_the_archive_answered(corpus, monkeypatch):
+    # without this a target that can never be refreshed looks unexplained
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": STALE})
+    root = corpus.finish()
+    wayback_save_recorder(monkeypatch, {"ok": False, "status_code": 200, "answered": True,
+                                        "error": "error:not-found", "via": "spn2"})
+    run_retry(monkeypatch, root)
+    m = manifest_of(d)
+    assert m["wayback"]["last_refresh_error"] == "error:not-found"
+    assert m["wayback"]["last_refresh_via"] == "spn2"
+    assert m["wayback_attempts"][-1]["error"] == "error:not-found"
 
 
 def test_a_fresh_snapshot_is_left_alone(corpus, monkeypatch):

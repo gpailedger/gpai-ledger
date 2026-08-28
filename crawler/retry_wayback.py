@@ -240,7 +240,13 @@ def main() -> int:
         if result.get("ok") or not wb.get("snapshot"):
             m["wayback"] = result
         else:
-            m["wayback"] = dict(wb, last_refresh_attempt=result.get("at"))
+            # keep the snapshot, but say what the refresh attempt answered —
+            # otherwise a target that can never be refreshed looks unexplained
+            m["wayback"] = dict(wb, last_refresh_attempt=result.get("at"),
+                                last_refresh_error=str(result.get("error")
+                                                       or result.get("status_code"))[:300],
+                                last_refresh_via=result.get("via", "anonymous"))
+            m.setdefault("wayback_attempts", []).append(result)
         _save(p, m)
         retried += 1
         ok += 1 if result.get("ok") and result.get("fresh") is not False else 0
