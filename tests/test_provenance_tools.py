@@ -509,6 +509,22 @@ def test_budget_env_override_is_clamped(monkeypatch):
     assert RW.budget_s() == float(RW.BUDGET_S)
 
 
+def test_superseded_attempts_do_not_hold_a_capture_at_its_cap(corpus, monkeypatch):
+    # the cap was reached through the anonymous endpoint, which answered by
+    # returning a pre-existing capture; that says nothing about what the
+    # authenticated API can archive, so it must not keep the capture capped
+    old = [{"ok": True, "status_code": 200, "snapshot": STALE, "superseded": True}] * 5
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": STALE},
+                              extra_manifest={"wayback_attempts": old})
+    root = corpus.finish()
+    calls = wayback_save_recorder(monkeypatch, {"ok": True, "snapshot": SNAP, "fresh": True})
+    run_retry(monkeypatch, root)
+    assert calls == ["https://example.org/doc.pdf"]
+    assert manifest_of(d)["wayback"]["snapshot"] == SNAP
+    # the superseded history is kept, not deleted
+    assert sum(1 for a in manifest_of(d)["wayback_attempts"] if a.get("superseded")) == 5
+
+
 def test_an_spn_verdict_counts_as_an_answered_attempt(corpus, monkeypatch):
     verdicts = [{"answered": True, "error": "error:not-found"}] * RW.MAX_ATTEMPTS
     d, _ = corpus.add_capture(wayback={"ok": False, "answered": True,

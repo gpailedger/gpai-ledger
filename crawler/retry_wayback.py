@@ -77,10 +77,17 @@ SIGNED_URL_MARKERS = re.compile(
 
 
 def answered_attempts(attempts) -> list:
-    """The attempts that carry a verdict from Save Page Now itself."""
+    """The attempts that carry a verdict from Save Page Now itself.
+
+    An attempt explicitly marked `superseded` does not count: it was made
+    through a mechanism that no longer applies (the anonymous endpoint, which
+    answered by handing back a pre-existing capture rather than crawling), so
+    it says nothing about what the current one can archive. Such attempts stay
+    in the manifest as history."""
     return [a for a in attempts
-            if a.get("answered") or (isinstance(a.get("status_code"), int)
-                                     and a["status_code"] not in TRANSPORT_STATUSES)]
+            if not a.get("superseded")
+            and (a.get("answered") or (isinstance(a.get("status_code"), int)
+                                       and a["status_code"] not in TRANSPORT_STATUSES))]
 
 
 def attempt_dates(attempts) -> set:
