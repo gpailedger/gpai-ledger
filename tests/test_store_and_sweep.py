@@ -911,6 +911,25 @@ def test_an_operator_confirmation_stops_the_runner_reddening_it_daily(tmp_path, 
     assert e["absence"] == "confirmed" and e["confirmed_by"] == ["operator"]
 
 
+def test_a_confirmation_recorded_earlier_the_same_day_already_settles_it(tmp_path, monkeypatch):
+    # the morning sweep logged a persistent absence, the operator attested the
+    # 404 from a second network an hour later; a sweep re-run the same day is
+    # observing a settled fact, not raising a new claim
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    _seed(data_root, _days_ago(1), absence="persistent")
+    _seed(data_root, _today(), absence="persistent")
+    with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": f"{_today()}T08:52:00Z", "source": "prov/model",
+                             "target": TARGET, "kind": "provider-live", "outcome": "error",
+                             "error": "HTTP 404", "vantage": "operator",
+                             "absence": "confirmed", "confirmed_by": ["operator"]}) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("inconclusive"))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed" and e["confirmed_by"] == ["operator"]
+
+
 def test_a_witness_confirmation_joins_the_operators_in_confirmed_by(tmp_path, monkeypatch):
     reg, data_root = _day1(tmp_path, monkeypatch)
     with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:

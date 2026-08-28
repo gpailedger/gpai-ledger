@@ -379,7 +379,10 @@ def main() -> int:
                         # or the operator via crawler/attest.py). That confirmation
                         # stands until the document is seen again, so today's 404 is
                         # another observation of a settled fact, not a fresh claim.
-                        confirmed_earlier = bool(streak["confirmed_on"] - {today})
+                        # the streak was read from the log before this run began, so
+                        # any confirmation in it predates this observation — including
+                        # one the operator recorded earlier the same day
+                        confirmed_earlier = bool(streak["confirmed_on"])
                         if confirmed_by or confirmed_earlier:
                             absence = "confirmed"
                             if confirmed_earlier:
