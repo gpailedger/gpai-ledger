@@ -27,7 +27,7 @@
     "at": "2026-08-11T10:42:08Z",
     "snapshot_verified": "2026-08-20T14:30:00Z",
     "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit",
-    "last_refresh_attempt": "2026-08-28T11:33:15Z"
+    "last_refresh_attempt": "2026-08-28T11:44:11Z"
   },
   "ots": {
     "ok": true,
@@ -58,6 +58,15 @@
       "snapshot_verified": "2026-08-20T14:30:00Z",
       "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit",
       "last_refresh_attempt": "2026-08-28T11:31:08Z"
+    },
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260807211706/https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf",
+      "at": "2026-08-11T10:42:08Z",
+      "snapshot_verified": "2026-08-20T14:30:00Z",
+      "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit",
+      "last_refresh_attempt": "2026-08-28T11:33:15Z"
     }
   ]
 }
