@@ -1,3 +1,8 @@
-# Relocation hunt — 2026-08-24 09:11 UTC
+# Relocation hunt — 2026-08-28 13:57 UTC
 
-No targets with an active error streak — nothing to hunt.
+## microsoft/mai-image-2 — unreachable-at-recorded-location (11 sweeps)
+
+Dead URL: `https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf`
+
+**not-found-at-any-known-location** (crawled ≤120 pages on microsoft.ai, sitemap probed, redirect probed; best similarity 0.85)
+
