@@ -26,10 +26,15 @@
   },
   "prior_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:16:29Z",
-    "at": "2026-08-28T10:18:29Z"
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828111921/https://trust.anthropic.com/resources",
+    "requested_at": "2026-08-28T11:18:22Z",
+    "at": "2026-08-28T11:19:35Z",
+    "fresh": true,
+    "snapshot_ts": "20260828111921",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -62,6 +67,30 @@
       "ok": false,
       "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/resources (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
       "at": "2026-08-28T09:33:08Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:16:29Z",
+      "at": "2026-08-28T10:18:29Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:51:52Z",
+      "at": "2026-08-28T10:53:53Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:59:41Z",
+      "at": "2026-08-28T11:01:41Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T11:09:08Z",
+      "at": "2026-08-28T11:11:09Z"
     }
   ]
 }

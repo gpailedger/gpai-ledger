@@ -33,9 +33,22 @@
   },
   "text_sha256": "c6a519c025a08101b85e6d4491fde9b2bfc300e5266fb9ceb865d86554a9bcb5",
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/FIBO_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0feee840>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "requested_at": "2026-08-28T10:28:12Z",
-    "at": "2026-08-28T10:30:12Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828105737/https://aial.ie/research/gpai-training-transparency/archive/FIBO_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:57:35Z",
+    "at": "2026-08-28T10:57:48Z",
+    "fresh": true,
+    "snapshot_ts": "20260828105737",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/FIBO_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0feee840>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "requested_at": "2026-08-28T10:28:12Z",
+      "at": "2026-08-28T10:30:12Z"
+    }
+  ]
 }

@@ -33,9 +33,22 @@
   },
   "text_sha256": "44d023c501922f06b3b8f564e31766d2dd05dc1d27a7b52c3e35a946fcf5a9d2",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:11:51Z",
-    "at": "2026-08-28T10:13:51Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828101152/https://aial.ie/research/gpai-training-transparency/archive/Adobe_Firefly_2026_07_22.pdf",
+    "requested_at": "2026-08-28T10:50:20Z",
+    "at": "2026-08-28T10:50:28Z",
+    "fresh": true,
+    "snapshot_ts": "20260828101152",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:11:51Z",
+      "at": "2026-08-28T10:13:51Z"
+    }
+  ]
 }

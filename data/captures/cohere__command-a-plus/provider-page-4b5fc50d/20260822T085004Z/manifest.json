@@ -28,8 +28,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260822072227/https://docs.cohere.com/docs/command-a-plus",
-    "at": "2026-08-22T08:50:12Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112720/https://docs.cohere.com/docs/command-a-plus",
+    "requested_at": "2026-08-28T11:27:14Z",
+    "at": "2026-08-28T11:27:36Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112720",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -41,5 +46,13 @@
     ],
     "errors": [],
     "at": "2026-08-22T08:50:16Z"
-  }
+  },
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260822072227/https://docs.cohere.com/docs/command-a-plus",
+      "at": "2026-08-22T08:50:12Z"
+    }
+  ]
 }

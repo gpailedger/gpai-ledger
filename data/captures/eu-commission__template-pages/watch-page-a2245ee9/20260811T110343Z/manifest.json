@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260713230319/https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
-    "at": "2026-08-11T11:04:04Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112921/https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+    "requested_at": "2026-08-28T11:28:50Z",
+    "at": "2026-08-28T11:29:35Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112921",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T11:04:15Z"
   },
-  "text_sha256": "292ab98566db012d4b4fee23e7525a20823d5f7fa1a7f71f3710fe4361e486fa"
+  "text_sha256": "292ab98566db012d4b4fee23e7525a20823d5f7fa1a7f71f3710fe4361e486fa",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260713230319/https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
+      "at": "2026-08-11T11:04:04Z"
+    }
+  ]
 }

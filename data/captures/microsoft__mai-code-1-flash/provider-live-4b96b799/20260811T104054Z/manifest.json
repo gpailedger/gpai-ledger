@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260716121007/https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF",
-    "at": "2026-08-11T10:41:05Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112948/https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF",
+    "requested_at": "2026-08-28T11:29:47Z",
+    "at": "2026-08-28T11:29:57Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112948",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T10:41:17Z"
   },
-  "text_sha256": "0050e3f49a13309ca60d746e6c3cd9720f5ccfb12e630dc0aef5282f12573289"
+  "text_sha256": "0050e3f49a13309ca60d746e6c3cd9720f5ccfb12e630dc0aef5282f12573289",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260716121007/https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF",
+      "at": "2026-08-11T10:41:05Z"
+    }
+  ]
 }

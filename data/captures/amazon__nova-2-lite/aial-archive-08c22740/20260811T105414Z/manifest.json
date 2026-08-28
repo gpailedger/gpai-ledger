@@ -33,9 +33,22 @@
   },
   "text_sha256": "8ede149f6f004944e1ce275c05987e5ca7dff3e20ce0e9a10603108f18c5e343",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Nova_2_Lite_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "requested_at": "2026-08-28T10:14:03Z",
-    "at": "2026-08-28T10:14:05Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828105043/https://aial.ie/research/gpai-training-transparency/archive/Nova_2_Lite_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:50:40Z",
+    "at": "2026-08-28T10:50:49Z",
+    "fresh": true,
+    "snapshot_ts": "20260828105043",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Nova_2_Lite_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "requested_at": "2026-08-28T10:14:03Z",
+      "at": "2026-08-28T10:14:05Z"
+    }
+  ]
 }

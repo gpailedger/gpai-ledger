@@ -33,9 +33,22 @@
   },
   "text_sha256": "6c05144fd9a1f826778db79fd9aebe2cc1d2a999147bb473710279788ccab7d6",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_2026_07_21.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "requested_at": "2026-08-28T10:43:08Z",
-    "at": "2026-08-28T10:43:50Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828110703/https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_2026_07_21.pdf",
+    "requested_at": "2026-08-28T11:06:22Z",
+    "at": "2026-08-28T11:07:14Z",
+    "fresh": true,
+    "snapshot_ts": "20260828110703",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_2026_07_21.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "requested_at": "2026-08-28T10:43:08Z",
+      "at": "2026-08-28T10:43:50Z"
+    }
+  ]
 }

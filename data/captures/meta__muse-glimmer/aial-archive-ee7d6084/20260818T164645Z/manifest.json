@@ -31,9 +31,22 @@
     "at": "2026-08-18T16:46:51Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "requested_at": "2026-08-28T10:37:57Z",
-    "at": "2026-08-28T10:38:00Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828110339/https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
+    "requested_at": "2026-08-28T11:03:34Z",
+    "at": "2026-08-28T11:03:46Z",
+    "fresh": true,
+    "snapshot_ts": "20260828110339",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "requested_at": "2026-08-28T10:37:57Z",
+      "at": "2026-08-28T10:38:00Z"
+    }
+  ]
 }

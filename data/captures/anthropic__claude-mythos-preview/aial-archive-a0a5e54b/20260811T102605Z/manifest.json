@@ -33,9 +33,22 @@
   },
   "text_sha256": "6b58bf0bddcbf97005ad49e9b046e69568c8c401569349e97d937075a6a26658",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_Preview_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "requested_at": "2026-08-28T10:18:41Z",
-    "at": "2026-08-28T10:18:43Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828105407/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_Preview_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:54:05Z",
+    "at": "2026-08-28T10:54:18Z",
+    "fresh": true,
+    "snapshot_ts": "20260828105407",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_Preview_2026_08_03.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "requested_at": "2026-08-28T10:18:41Z",
+      "at": "2026-08-28T10:18:43Z"
+    }
+  ]
 }

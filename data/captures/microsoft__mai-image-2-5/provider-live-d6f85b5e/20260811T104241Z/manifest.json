@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260705031125/https://microsoft.ai/pdf/MAI-Image-2.5-Data-Card.PDF",
-    "at": "2026-08-11T10:42:50Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828113045/https://microsoft.ai/pdf/MAI-Image-2.5-Data-Card.PDF",
+    "requested_at": "2026-08-28T11:30:09Z",
+    "at": "2026-08-28T11:30:48Z",
+    "fresh": true,
+    "snapshot_ts": "20260828113045",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T10:43:05Z"
   },
-  "text_sha256": "75845e0db85e6970dcf2c2b3dc17cb18f9905a0a0f74807c8df680f489142890"
+  "text_sha256": "75845e0db85e6970dcf2c2b3dc17cb18f9905a0a0f74807c8df680f489142890",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260705031125/https://microsoft.ai/pdf/MAI-Image-2.5-Data-Card.PDF",
+      "at": "2026-08-11T10:42:50Z"
+    }
+  ]
 }

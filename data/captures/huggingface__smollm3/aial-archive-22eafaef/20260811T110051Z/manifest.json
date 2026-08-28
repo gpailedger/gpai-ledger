@@ -34,9 +34,22 @@
   },
   "text_sha256": "03390233e718e5b88a2f9cb204972c17870f1211c6c7cb08db344aac012b424e",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:35:45Z",
-    "at": "2026-08-28T10:37:45Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828103607/https://aial.ie/research/gpai-training-transparency/archive/SmolLM_33B_2025_11_12.pdf",
+    "requested_at": "2026-08-28T11:03:14Z",
+    "at": "2026-08-28T11:03:22Z",
+    "fresh": true,
+    "snapshot_ts": "20260828103607",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:35:45Z",
+      "at": "2026-08-28T10:37:45Z"
+    }
+  ]
 }

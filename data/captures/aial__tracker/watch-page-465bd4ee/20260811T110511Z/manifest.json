@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260530175720/https://aial.ie/research/gpai-training-transparency/",
-    "at": "2026-08-11T11:05:44Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112250/https://aial.ie/research/gpai-training-transparency/",
+    "requested_at": "2026-08-28T11:21:45Z",
+    "at": "2026-08-28T11:23:11Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112250",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T11:05:56Z"
   },
-  "text_sha256": "ce32477422a68190d0ec5c3393afc562f0cc482f1ab7365ed85b133f2ab1222f"
+  "text_sha256": "ce32477422a68190d0ec5c3393afc562f0cc482f1ab7365ed85b133f2ab1222f",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260530175720/https://aial.ie/research/gpai-training-transparency/",
+      "at": "2026-08-11T11:05:44Z"
+    }
+  ]
 }

@@ -33,9 +33,22 @@
   },
   "text_sha256": "01315b9d66c07d360e0739afa0060ed04da8dd464bc09dce2a9136f1d6ceb1c5",
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_5_Fable_5_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0fede1b0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "requested_at": "2026-08-28T10:14:17Z",
-    "at": "2026-08-28T10:16:17Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828105134/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_5_Fable_5_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:51:01Z",
+    "at": "2026-08-28T10:51:40Z",
+    "fresh": true,
+    "snapshot_ts": "20260828105134",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Mythos_5_Fable_5_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0fede1b0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "requested_at": "2026-08-28T10:14:17Z",
+      "at": "2026-08-28T10:16:17Z"
+    }
+  ]
 }

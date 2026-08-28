@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260726014736/https://thinkingmachines.ai/training-data-documentation/",
-    "at": "2026-08-11T10:39:42Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828113143/https://thinkingmachines.ai/training-data-documentation/",
+    "requested_at": "2026-08-28T11:31:40Z",
+    "at": "2026-08-28T11:31:59Z",
+    "fresh": true,
+    "snapshot_ts": "20260828113143",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T10:39:53Z"
   },
-  "text_sha256": "d49a2967723784aebd0cab3f6f3485eb1b5cf38c236a0e5ca969fdf57cb80b2d"
+  "text_sha256": "d49a2967723784aebd0cab3f6f3485eb1b5cf38c236a0e5ca969fdf57cb80b2d",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260726014736/https://thinkingmachines.ai/training-data-documentation/",
+      "at": "2026-08-11T10:39:42Z"
+    }
+  ]
 }

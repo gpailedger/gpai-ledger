@@ -24,8 +24,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260101102548/https://ec.europa.eu/newsroom/dae/redirection/document/118578",
-    "at": "2026-08-11T11:01:49Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112821/https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+    "requested_at": "2026-08-28T11:28:09Z",
+    "at": "2026-08-28T11:28:25Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112821",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -38,5 +43,13 @@
     "errors": [],
     "at": "2026-08-11T11:02:00Z"
   },
-  "text_sha256": null
+  "text_sha256": null,
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260101102548/https://ec.europa.eu/newsroom/dae/redirection/document/118578",
+      "at": "2026-08-11T11:01:49Z"
+    }
+  ]
 }

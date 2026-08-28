@@ -23,10 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260125055205/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
-    "at": "2026-08-11T11:02:13Z",
-    "snapshot_verified": "2026-08-20T14:30:00Z",
-    "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828113424/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+    "requested_at": "2026-08-28T11:33:49Z",
+    "at": "2026-08-28T11:34:30Z",
+    "fresh": true,
+    "snapshot_ts": "20260828113424",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -39,5 +42,33 @@
     "errors": [],
     "at": "2026-08-11T11:02:23Z"
   },
-  "text_sha256": "43a95a2cb0497637357ded9aa22f879be16ac91da8c61adadd5029ea29164727"
+  "text_sha256": "43a95a2cb0497637357ded9aa22f879be16ac91da8c61adadd5029ea29164727",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260125055205/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+      "at": "2026-08-11T11:02:13Z",
+      "snapshot_verified": "2026-08-20T14:30:00Z",
+      "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit"
+    },
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260125055205/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+      "at": "2026-08-11T11:02:13Z",
+      "snapshot_verified": "2026-08-20T14:30:00Z",
+      "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit",
+      "last_refresh_attempt": "2026-08-28T11:28:38Z"
+    },
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260125055205/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/_functions/EU-Template.pdf?__blob=publicationFile&v=2",
+      "at": "2026-08-11T11:02:13Z",
+      "snapshot_verified": "2026-08-20T14:30:00Z",
+      "snapshot_verified_via": "independent GET re-check during the 20 Aug 2026 data-integrity audit",
+      "last_refresh_attempt": "2026-08-28T11:32:55Z"
+    }
+  ]
 }

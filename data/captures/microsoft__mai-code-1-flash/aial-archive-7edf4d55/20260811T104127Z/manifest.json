@@ -33,9 +33,22 @@
   },
   "text_sha256": "0050e3f49a13309ca60d746e6c3cd9720f5ccfb12e630dc0aef5282f12573289",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:40:42Z",
-    "at": "2026-08-28T10:42:42Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828104043/https://aial.ie/research/gpai-training-transparency/archive/MAI_Code_1_Flash_2026_08_03.pdf",
+    "requested_at": "2026-08-28T11:05:06Z",
+    "at": "2026-08-28T11:05:18Z",
+    "fresh": true,
+    "snapshot_ts": "20260828104043",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:40:42Z",
+      "at": "2026-08-28T10:42:42Z"
+    }
+  ]
 }

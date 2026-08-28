@@ -22,8 +22,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260821031554/https://platform.claude.com/docs/en/about-claude/models/overview",
-    "at": "2026-08-21T11:11:05Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828112629/https://platform.claude.com/docs/en/models/overview",
+    "requested_at": "2026-08-28T11:26:16Z",
+    "at": "2026-08-28T11:26:42Z",
+    "fresh": true,
+    "snapshot_ts": "20260828112629",
+    "same_url": false
   },
   "ots": {
     "ok": true,
@@ -35,5 +40,13 @@
     ],
     "errors": [],
     "at": "2026-08-21T11:11:10Z"
-  }
+  },
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260821031554/https://platform.claude.com/docs/en/about-claude/models/overview",
+      "at": "2026-08-21T11:11:05Z"
+    }
+  ]
 }

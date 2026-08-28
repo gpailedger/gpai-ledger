@@ -23,8 +23,13 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260728072131/https://trust.anthropic.com/resources",
-    "at": "2026-08-11T10:25:04Z"
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828111921/https://trust.anthropic.com/resources",
+    "requested_at": "2026-08-28T11:24:19Z",
+    "at": "2026-08-28T11:24:26Z",
+    "fresh": true,
+    "snapshot_ts": "20260828111921",
+    "same_url": true
   },
   "ots": {
     "ok": true,
@@ -37,5 +42,13 @@
     "errors": [],
     "at": "2026-08-11T10:25:15Z"
   },
-  "text_sha256": "10b178eb84d5671e26292b652b1c533cbff9dc184884a5bd4abf57c055f372e1"
+  "text_sha256": "10b178eb84d5671e26292b652b1c533cbff9dc184884a5bd4abf57c055f372e1",
+  "wayback_attempts": [
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260728072131/https://trust.anthropic.com/resources",
+      "at": "2026-08-11T10:25:04Z"
+    }
+  ]
 }

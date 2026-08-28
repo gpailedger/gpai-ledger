@@ -33,9 +33,22 @@
   },
   "text_sha256": "89fb2864b226ad60d9bc7df1fa7894fa2597946d30e7f04190b9046392bde933",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:25:46Z",
-    "at": "2026-08-28T10:27:46Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828102548/https://aial.ie/research/gpai-training-transparency/archive/FLUX_3_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:56:54Z",
+    "at": "2026-08-28T10:57:02Z",
+    "fresh": true,
+    "snapshot_ts": "20260828102548",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:25:46Z",
+      "at": "2026-08-28T10:27:46Z"
+    }
+  ]
 }

@@ -33,9 +33,22 @@
   },
   "text_sha256": "887ffc19fc0e6cc1bf74980553dbadf23b72fe890d99d56a27c191738abc2f42",
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Muse_Image_2026_07_21.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0feece90>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "requested_at": "2026-08-28T10:38:12Z",
-    "at": "2026-08-28T10:40:12Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828110443/https://aial.ie/research/gpai-training-transparency/archive/Muse_Image_2026_07_21.pdf",
+    "requested_at": "2026-08-28T11:03:58Z",
+    "at": "2026-08-28T11:04:53Z",
+    "fresh": true,
+    "snapshot_ts": "20260828110443",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Muse_Image_2026_07_21.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0feece90>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "requested_at": "2026-08-28T10:38:12Z",
+      "at": "2026-08-28T10:40:12Z"
+    }
+  ]
 }

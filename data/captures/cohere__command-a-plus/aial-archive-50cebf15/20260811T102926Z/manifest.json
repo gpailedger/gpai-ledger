@@ -33,9 +33,22 @@
   },
   "text_sha256": "61c5e639da21cdc74c9de633dc46527ab1d19477cc9aac0f733fdc2e9fef3487",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:30:24Z",
-    "at": "2026-08-28T10:32:24Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828103049/https://aial.ie/research/gpai-training-transparency/archive/Command_A_Plus_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:58:01Z",
+    "at": "2026-08-28T10:58:13Z",
+    "fresh": true,
+    "snapshot_ts": "20260828103049",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:30:24Z",
+      "at": "2026-08-28T10:32:24Z"
+    }
+  ]
 }

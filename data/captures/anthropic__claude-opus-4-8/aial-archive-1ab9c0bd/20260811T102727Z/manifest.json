@@ -33,9 +33,22 @@
   },
   "text_sha256": "3560d51f53efcfcdb2db2a8bacabb5665d3690e9a80e97eb554619a4015a8b3b",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "requested_at": "2026-08-28T10:21:07Z",
-    "at": "2026-08-28T10:23:07Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828102108/https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_8_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:55:19Z",
+    "at": "2026-08-28T10:55:27Z",
+    "fresh": true,
+    "snapshot_ts": "20260828102108",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "requested_at": "2026-08-28T10:21:07Z",
+      "at": "2026-08-28T10:23:07Z"
+    }
+  ]
 }

@@ -31,5 +31,26 @@
     "errors": [],
     "at": "2026-08-11T10:36:41Z"
   },
-  "text_sha256": "dc5f6ff0a9e2ddd7fb545fb5aeb8f05c44b917113f6071b3d5c37751da867c80"
+  "text_sha256": "dc5f6ff0a9e2ddd7fb545fb5aeb8f05c44b917113f6071b3d5c37751da867c80",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828111949/https://aial.ie/research/gpai-training-transparency/archive/GPT_5_5_2026_07_14.pdf",
+    "requested_at": "2026-08-28T11:19:47Z",
+    "at": "2026-08-28T11:19:56Z",
+    "fresh": true,
+    "snapshot_ts": "20260828111949",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 523,
+      "spn_status": 523,
+      "snapshot": null,
+      "requested_at": "2026-08-28T11:14:19Z",
+      "at": "2026-08-28T11:14:50Z"
+    }
+  ]
 }

@@ -33,9 +33,22 @@
   },
   "text_sha256": "2a4b7abcd7bc7439a8aafcb6546bb41f1557f9549627302a00a2775aeb80364b",
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_7_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0fedfd40>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "requested_at": "2026-08-28T10:18:55Z",
-    "at": "2026-08-28T10:20:55Z"
-  }
+    "ok": true,
+    "status_code": 429,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828105459/https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_7_2026_08_03.pdf",
+    "requested_at": "2026-08-28T10:54:30Z",
+    "at": "2026-08-28T10:55:07Z",
+    "fresh": true,
+    "snapshot_ts": "20260828105459",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Claude_Opus_4_7_2026_08_03.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2a0fedfd40>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "requested_at": "2026-08-28T10:18:55Z",
+      "at": "2026-08-28T10:20:55Z"
+    }
+  ]
 }

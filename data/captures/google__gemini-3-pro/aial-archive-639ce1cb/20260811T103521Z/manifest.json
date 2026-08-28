@@ -33,9 +33,22 @@
   },
   "text_sha256": "87b80769a90f9c0c87cbcf0b95fb3483d9b9028ce49d28b2eee3c95bc038a498",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Gemini_2026_07_21.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "requested_at": "2026-08-28T10:33:19Z",
-    "at": "2026-08-28T10:33:21Z"
-  }
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828110213/https://aial.ie/research/gpai-training-transparency/archive/Gemini_2026_07_21.pdf",
+    "requested_at": "2026-08-28T11:01:53Z",
+    "at": "2026-08-28T11:02:23Z",
+    "fresh": true,
+    "snapshot_ts": "20260828110213",
+    "same_url": true
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://aial.ie/research/gpai-training-transparency/archive/Gemini_2026_07_21.pdf (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "requested_at": "2026-08-28T10:33:19Z",
+      "at": "2026-08-28T10:33:21Z"
+    }
+  ]
 }
