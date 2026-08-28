@@ -267,10 +267,25 @@ Both run inside the daily sweep and need no operator action:
   they ever leak. Prefer an account registered to the project address rather
   than a personal one, for the same reason every other public surface uses it.
 
-  Until the keys exist, drain the backlog by running
+  **Credentials are not a cure for the runner's network.** With the secrets in
+  place the sweep does take the authenticated path — a failed refresh records
+  `last_refresh_via: spn2` — but on 28 Aug the runner still could not open a
+  TCP connection to web.archive.org at all (`NewConnectionError` on
+  `POST /save`), so the request never reached the point where a credential
+  matters. Connectivity from GitHub's runners is intermittent rather than
+  absent: some saves succeeded earlier the same morning. The retry pass is
+  built for exactly this — transport failures cost a target nothing, the pass
+  stops after three in a row, and the snapshot already held is never traded
+  away — so CI will pick captures up opportunistically whenever the Archive is
+  reachable.
+
+  The reliable route stays a local run:
   `GPAI_WAYBACK_BUDGET=540 python crawler/retry_wayback.py` from a
-  non-datacenter network and committing `data/`. OpenTimestamps is the primary
-  provenance and is complete; Wayback is a best-effort second witness. A retry never costs us evidence: if the new save fails, the
+  non-datacenter network, then commit `data/`. Exporting
+  `GPAI_IA_ACCESS_KEY` / `GPAI_IA_SECRET_KEY` for that run also exercises the
+  credentials themselves, which CI has not yet been able to do.
+  OpenTimestamps is the primary provenance and is complete; Wayback is a
+  best-effort second witness. A retry never costs us evidence: if the new save fails, the
   older snapshot stays as the record and only `last_refresh_attempt` is added.
   `retry_wayback.py --verify` re-checks recorded snapshots and demotes dead
   ones so they re-enter the queue. Run `--verify` manually about once a
