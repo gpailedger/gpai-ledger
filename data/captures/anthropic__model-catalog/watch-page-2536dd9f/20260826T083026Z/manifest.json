@@ -20,9 +20,11 @@
   },
   "prior_sha256": "3570755b7ea6bceb82ae22800afd1e2fe41fbce676e93368ed672e7d8bce6dc0",
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
-    "at": "2026-08-26T08:45:15Z"
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828084405/https://platform.claude.com/docs/en/models/overview",
+    "at": "2026-08-28T08:44:20Z"
   },
   "ots": {
     "ok": true,
@@ -40,6 +42,11 @@
       "ok": false,
       "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://platform.claude.com/docs/en/about-claude/models/overview (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f7d35283230>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
       "at": "2026-08-26T08:32:26Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "at": "2026-08-26T08:45:15Z"
     }
   ]
 }

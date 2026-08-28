@@ -1,0 +1,46 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "provider-live",
+  "sha256": "b92bd1861b8ffc998a63c9610494231693676cffa57b5a2ff241fd89acad864d",
+  "size_bytes": 258495,
+  "stored_as": "raw.pdf",
+  "text_sha256": "d42c361a20ab7ff9f432cc31170bb17f5289f0ca1537911349d8cbba4b857048",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = hub edition label (CDN path rotates per re-issue)",
+    {
+      "stable_base": "/m1/v/t0.84174-6/An9ygWsblXbV4_6sEulgaVIzW87PcYw-JbbSB40TSTtCnC3LCk4ROXFcCdYkLTC3CeYwAp3sT1BWK49zGFG99prIuJi3mJHKstQAbOdhVa01dX8ju8hDsmsHiEteHDC9GiBFx58",
+      "hub_period": "2026 - Muse Image",
+      "edition_key": "meta-hub:2026 - Muse Image"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-iad3-2.xx.fbcdn.net/m1/v/t0.84174-6/An9ygWsblXbV4_6sEulgaVIzW87PcYw-JbbSB40TSTtCnC3LCk4ROXFcCdYkLTC3CeYwAp3sT1BWK49zGFG99prIuJi3mJHKstQAbOdhVa01dX8ju8hDsmsHiEteHDC9GiBFx58?_nc_gid=9Gw9mOi2f1Z5pXhILlqodw&_nc_oc=AdrXeuA7FiQST4j6fZsSIqvMliH_5WsZtie-4UU4ZgcZvNL01Swio0SJcc4Ds8a2lDg&ccb=10-5&oh=00_AQHqn-F__pq6NI6_sqm_5Fs0Er_9uiYFH-AFAMfDxKolAA&oe=6A9328B3&_nc_sid=68f2c3",
+    "final_url": "https://scontent-iad3-2.xx.fbcdn.net/m1/v/t0.84174-6/An9ygWsblXbV4_6sEulgaVIzW87PcYw-JbbSB40TSTtCnC3LCk4ROXFcCdYkLTC3CeYwAp3sT1BWK49zGFG99prIuJi3mJHKstQAbOdhVa01dX8ju8hDsmsHiEteHDC9GiBFx58?_nc_gid=9Gw9mOi2f1Z5pXhILlqodw&_nc_oc=AdrXeuA7FiQST4j6fZsSIqvMliH_5WsZtie-4UU4ZgcZvNL01Swio0SJcc4Ds8a2lDg&ccb=10-5&oh=00_AQHqn-F__pq6NI6_sqm_5Fs0Er_9uiYFH-AFAMfDxKolAA&oe=6A9328B3&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "-6929260741381991053",
+    "last_modified": null,
+    "content_length": "258495",
+    "fetched_at": "2026-08-28T08:37:00Z"
+  },
+  "prior_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://scontent-iad3-2.xx.fbcdn.net/m1/v/t0.84174-6/An9ygWsblXbV4_6sEulgaVIzW87PcYw-JbbSB40TSTtCnC3LCk4ROXFcCdYkLTC3CeYwAp3sT1BWK49zGFG99prIuJi3mJHKstQAbOdhVa01dX8ju8hDsmsHiEteHDC9GiBFx58?_nc_gid=9Gw9mOi2f1Z5pXhILlqodw&_nc_oc=AdrXeuA7FiQST4j6fZsSIqvMliH_5WsZtie-4UU4ZgcZvNL01Swio0SJcc4Ds8a2lDg&ccb=10-5&oh=00_AQHqn-F__pq6NI6_sqm_5Fs0Er_9uiYFH-AFAMfDxKolAA&oe=6A9328B3&_nc_sid=68f2c3 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f07aeeb0e30>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "at": "2026-08-28T08:39:00Z",
+    "gave_up": "signed URL; save must use a freshly mined URL"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-28T08:39:04Z"
+  }
+}

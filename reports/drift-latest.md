@@ -1,9 +1,10 @@
-# Live-vs-archive drift — 2026-08-26
+# Live-vs-archive drift — 2026-08-28
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
+| Adobe Firefly | DRIFT-CANDIDATE | 0.9604 | changed (67 word(s)) |
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
-| Muse Image | DRIFT-CANDIDATE | 0.9936 | changed (17 word(s), 5 moved) |
+| Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9871 | changed (15 word(s), 5 moved) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
@@ -21,7 +22,6 @@
 | Claude Opus 4.8 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Opus 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Sonnet 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
-| Adobe Firefly | identical-bytes |  | single version |
 | FLUX.3 | identical-bytes |  | single version |
 | FIBO | identical-bytes |  | single version |
 | C4AI Command A Plus | identical-bytes |  | single version |

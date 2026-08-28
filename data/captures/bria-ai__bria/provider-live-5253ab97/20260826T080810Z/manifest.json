@@ -26,9 +26,11 @@
   },
   "prior_sha256": "9b9909976679de930563eac550c23b17a1e8edc4df0fd8ddd7420271ccf7c26b",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://bria.ai/eu-policy (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "at": "2026-08-26T08:45:30Z"
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828084544/https://bria.ai/eu-policy",
+    "at": "2026-08-28T08:45:59Z"
   },
   "ots": {
     "ok": true,
@@ -46,6 +48,11 @@
       "ok": false,
       "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
       "at": "2026-08-26T08:10:11Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://bria.ai/eu-policy (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "at": "2026-08-26T08:45:30Z"
     }
   ]
 }

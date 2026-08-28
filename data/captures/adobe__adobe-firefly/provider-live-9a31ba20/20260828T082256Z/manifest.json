@@ -1,0 +1,40 @@
+{
+  "source_id": "adobe/adobe-firefly",
+  "provider": "Adobe",
+  "model": "Adobe Firefly",
+  "target_kind": "provider-live",
+  "sha256": "8ba24753c861b2dc4aea30e7138f5d99f77f3a3d8bda1705974120e54a48d942",
+  "size_bytes": 1142501,
+  "stored_as": "raw.pdf",
+  "text_sha256": "36ea743048169b042dd4c97668198c2a8bef5f293b70a0e24b466c0e5cd11d12",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "final_url": "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"204f2c4b2c572ab49e385f7da2078af3\"",
+    "last_modified": "Thu, 27 Aug 2026 18:22:17 GMT",
+    "content_length": "1137088",
+    "fetched_at": "2026-08-28T08:22:56Z"
+  },
+  "prior_sha256": "4bd528f863edf343f7780271463f34e72d9048ec5788a8645d2d044a58b29783",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828082257/https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf",
+    "at": "2026-08-28T08:23:04Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-28T08:23:07Z"
+  }
+}

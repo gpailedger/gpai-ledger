@@ -1,4 +1,80 @@
 {
+  "adobe/adobe-firefly::live-vs-archive::captures/adobe__adobe-firefly/aial-archive-c70dd1a0/20260811T102112Z>captures/adobe__adobe-firefly/provider-live-9a31ba20/20260828T082256Z": {
+    "verdict": "changed",
+    "similarity": 0.9604,
+    "word_delta": 67,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "N/A 3 Additional",
+        "new": "data N/A Additional comments"
+      },
+      {
+        "op": "insert",
+        "old": "optional N/A List of",
+        "new": "N/A 3 List"
+      },
+      {
+        "op": "replace",
+        "old": "above Other datasets subject to permissive licenses. Private",
+        "new": "above N/A Private"
+      },
+      {
+        "op": "insert",
+        "old": "their representatives Have you",
+        "new": "representatives General description of other non-publicly known private datasets obtained from third parties Adobe licenses privately sourced datasets from global creators and content providers to train generative AI models. 1 Modalities include images and videos/video frames. 2 Nature of Content: C"
+      }
+    ],
+    "source": "adobe/adobe-firefly",
+    "target": "live-vs-archive",
+    "from_dir": "captures/adobe__adobe-firefly/aial-archive-c70dd1a0/20260811T102112Z",
+    "to_dir": "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260828T082256Z",
+    "from_sha256": "4bd528f863edf343f7780271463f34e72d9048ec5788a8645d2d044a58b29783",
+    "to_sha256": "8ba24753c861b2dc4aea30e7138f5d99f77f3a3d8bda1705974120e54a48d942",
+    "computed_at": "2026-08-28T08:50:50Z"
+  },
+  "adobe/adobe-firefly::provider-live-9a31ba20::captures/adobe__adobe-firefly/provider-live-9a31ba20/20260820T105752Z>captures/adobe__adobe-firefly/provider-live-9a31ba20/20260828T082256Z": {
+    "verdict": "changed",
+    "similarity": 0.9604,
+    "word_delta": 67,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "N/A 3 Additional",
+        "new": "data N/A Additional comments"
+      },
+      {
+        "op": "insert",
+        "old": "optional N/A List of",
+        "new": "N/A 3 List"
+      },
+      {
+        "op": "replace",
+        "old": "above Other datasets subject to permissive licenses. Private",
+        "new": "above N/A Private"
+      },
+      {
+        "op": "insert",
+        "old": "their representatives Have you",
+        "new": "representatives General description of other non-publicly known private datasets obtained from third parties Adobe licenses privately sourced datasets from global creators and content providers to train generative AI models. 1 Modalities include images and videos/video frames. 2 Nature of Content: C"
+      }
+    ],
+    "source": "adobe/adobe-firefly",
+    "target": "provider-live-9a31ba20",
+    "from_dir": "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260820T105752Z",
+    "to_dir": "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260828T082256Z",
+    "from_sha256": "4bd528f863edf343f7780271463f34e72d9048ec5788a8645d2d044a58b29783",
+    "to_sha256": "8ba24753c861b2dc4aea30e7138f5d99f77f3a3d8bda1705974120e54a48d942",
+    "computed_at": "2026-08-28T08:50:49Z"
+  },
   "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260811T110511Z>captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z": {
     "verdict": "changed",
     "similarity": 0.9669,
@@ -141,6 +217,124 @@
         "computed_at": "2026-08-22T23:24:25Z"
       }
     ]
+  },
+  "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z>captures/aial__tracker/watch-page-465bd4ee/20260828T083604Z": {
+    "verdict": "changed",
+    "similarity": 0.9642,
+    "word_delta": 71,
+    "moved_words": 68,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Small 4",
+        "new": "Small 4"
+      },
+      {
+        "op": "moved",
+        "old": "Large 3",
+        "new": "Large 3"
+      },
+      {
+        "op": "moved",
+        "old": "Anthropic Anthropic C D Claude Opus 4.8",
+        "new": "Anthropic Anthropic C D Claude Opus 4.8"
+      },
+      {
+        "op": "moved",
+        "old": "PLLuM 2512 Base Ministry of Digital Affairs of Poland Ministry of Digital Affairs of Poland",
+        "new": "PLLuM 2512 Base Ministry of Digital Affairs of Poland Ministry of Digital Affairs of Poland"
+      },
+      {
+        "op": "moved",
+        "old": "Veo 3.1 Google Google",
+        "new": "Veo 3.1 Google Google"
+      },
+      {
+        "op": "moved",
+        "old": "Opus 4.6",
+        "new": "Opus 4.6"
+      },
+      {
+        "op": "moved",
+        "old": "Sonnet 4.6",
+        "new": "Sonnet 4.6"
+      },
+      {
+        "op": "moved",
+        "old": "FLUX.2 Black Forest Labs Black Forest Labs GPT-5.6",
+        "new": "FLUX.2 Black Forest Labs Black Forest Labs GPT-5.6"
+      },
+      {
+        "op": "moved",
+        "old": "Apriel 1.5 15B Thinker ServiceNow ServiceNow Claude",
+        "new": "Apriel 1.5 15B Thinker ServiceNow ServiceNow Claude"
+      },
+      {
+        "op": "moved",
+        "old": "Haiku 4.5",
+        "new": "Haiku 4.5"
+      },
+      {
+        "op": "moved",
+        "old": "FLUX.2 Klein Black Forest Labs Black Forest Labs",
+        "new": "FLUX.2 Klein Black Forest Labs Black Forest Labs"
+      },
+      {
+        "op": "moved",
+        "old": "Opus 4.5",
+        "new": "Opus 4.5"
+      },
+      {
+        "op": "moved",
+        "old": "OpenAI OpenAI Claude Opus 4.1 Anthropic Anthropic",
+        "new": "OpenAI OpenAI Claude Opus 4.1 Anthropic Anthropic"
+      },
+      {
+        "op": "replace",
+        "old": "Enforcement by the AI Office has begun as of 2nd",
+        "new": "Enforcement on this has started from 2nd"
+      },
+      {
+        "op": "insert",
+        "old": ". To support",
+        "new": ". The AI Office is currently investigating compliance regarding public summaries as reported by Euractiv with non-compliance risking fines. To"
+      },
+      {
+        "op": "replace",
+        "old": "Opus 5 Anthropic",
+        "new": "Opus 4.7 Anthropic"
+      },
+      {
+        "op": "replace",
+        "old": "Opus 4.7 Anthropic",
+        "new": "Opus 5 Anthropic"
+      },
+      {
+        "op": "insert",
+        "old": "Model Provider FLUX.2 max",
+        "new": "Provider Claude Anthropic Anthropic FLUX.2"
+      },
+      {
+        "op": "insert",
+        "old": "Forest Labs Granite 4.1 IBM IBM",
+        "new": "Labs Anthropic Anthropic GPT-5.6 Sol OpenAI OpenAI GPT-OSS OpenAI OpenAI Granite 4.1 IBM IBM Terra Sora 2 OpenAI OpenAI Granite 4.0 H IBM IBM"
+      },
+      {
+        "op": "delete",
+        "old": "Cohere Sol OpenAI OpenAI GPT-OSS OpenAI OpenAI GPT-5.6 Terra OpenAI OpenAI Anthropic Anthropic Granite 4.0 H IBM IBM Claude Anthropic Anthropic Sora 2 Claude Sonnet",
+        "new": "Cohere Cohere Claude Sonnet"
+      }
+    ],
+    "source": "aial/tracker",
+    "target": "watch-page-465bd4ee",
+    "from_dir": "captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z",
+    "to_dir": "captures/aial__tracker/watch-page-465bd4ee/20260828T083604Z",
+    "from_sha256": "dd7c0257a731de5c56a6237243f64dd04c0f9ab811b0813f919a38e91f36589d",
+    "to_sha256": "a59e465945c3176962ac6294090478eeca400fe54388d4f8e02c0bc73fe91c08",
+    "computed_at": "2026-08-28T08:50:47Z"
   },
   "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260811T110417Z>captures/aial__tracker/watch-page-c82134bd/20260818T164825Z": {
     "verdict": "changed",
@@ -1726,6 +1920,102 @@
       }
     ]
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z": {
+    "verdict": "changed",
+    "similarity": 0.9917,
+    "word_delta": 18,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "page. New Open Source Agentic Coding Model: Meet North Mini Code Learn more",
+        "new": "any page. Meet Parse: Cohere s latest model that transforms enterprise documents into AI-ready data. Learn"
+      },
+      {
+        "op": "insert",
+        "old": "North Rerank Text Generation",
+        "new": "Rerank Parse Text"
+      },
+      {
+        "op": "insert",
+        "old": "Transcribing Audio Playground FAQs",
+        "new": "Audio Document Parsing Best Practices Playground"
+      },
+      {
+        "op": "insert",
+        "old": "Code Rerank Introduction to",
+        "new": "Rerank Parse Introduction"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260822T234630Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z",
+    "from_sha256": "e99c75b05229ec52e9cb9c5c38709ad028838258183f974da13f5e900343829c",
+    "to_sha256": "96edf211681b96ea5db267cc0bb525153d2d278c1fc866a0348a75c3c3539352",
+    "computed_at": "2026-08-28T08:50:47Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
+    "verdict": "changed",
+    "similarity": 0.9791,
+    "word_delta": 121,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "North Rerank Text Generation",
+        "new": "Rerank Parse Text"
+      },
+      {
+        "op": "insert",
+        "old": "Transcribing Audio Playground FAQs",
+        "new": "Audio Document Parsing Best Practices Playground"
+      },
+      {
+        "op": "insert",
+        "old": "Code Rerank Introduction to",
+        "new": "Rerank Parse Introduction"
+      },
+      {
+        "op": "insert",
+        "old": "Different Platforms Audio",
+        "new": "Different Platforms Parse Using Parse Models on Different Platforms"
+      },
+      {
+        "op": "insert",
+        "old": "Embed endpoint. Cohere",
+        "new": "endpoint. Parse extracts structured, machine-readable data from unstructured enterprise documents, like forms and PDFs. It powers the Parse endpoint. Cohere"
+      },
+      {
+        "op": "insert",
+        "old": "Rerank endpoint. Audio Cohere",
+        "new": "endpoint. Parse Parse is our vision parsing model for extracting structured data from enterprise documents that can be used in AI search and agentic applications. Model Name Status Description Endpoints parse-v5.0 Live For document intelligence workloads that demand accurate, high-volume parsing Par"
+      },
+      {
+        "op": "replace",
+        "old": "source research release focused",
+        "new": "source model focused on"
+      },
+      {
+        "op": "insert",
+        "old": "transcription. 25MB Audio",
+        "new": "25MB Audio Transcriptions cohere-transcribe-arabic-07-2026 Live Finetune optimized for Arabic audio inputs 25MB Audio"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z",
+    "from_sha256": "b5c8ede22b7c63a54209f4cde30f7bef29ea58f88bb31617998c9353dfd8aeea",
+    "to_sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
+    "computed_at": "2026-08-28T08:50:48Z"
+  },
   "domyn/domyn::provider-live-81f159b9::captures/domyn__domyn/provider-live-81f159b9/20260811T102935Z>captures/domyn__domyn/provider-live-81f159b9/20260817T082545Z": {
     "verdict": "method-changed",
     "similarity": 0.9852,
@@ -2265,6 +2555,59 @@
       }
     ]
   },
+  "meta/muse-image::live-vs-archive::captures/meta__muse-image/aial-archive-e329e789/20260811T105141Z>captures/meta__muse-image/provider-live-e520ba83/20260828T083700Z": {
+    "verdict": "changed",
+    "similarity": 0.9934,
+    "word_delta": 18,
+    "moved_words": 5,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Public Summary of Training Content",
+        "new": "Public Summary of Training Content"
+      },
+      {
+        "op": "replace",
+        "old": "number: V1Last Update: 7/6/20261. General",
+        "new": "number: V2Last Update: August 26, 20261."
+      },
+      {
+        "op": "insert",
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+      },
+      {
+        "op": "replace",
+        "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+        "new": "details: N/A1.2. Model"
+      },
+      {
+        "op": "replace",
+        "old": "Union market:7/7/261.3. Modalities,",
+        "new": "Union market:July 7, 20261.3. Modalities,"
+      },
+      {
+        "op": "replace",
+        "old": "s :Purposes of",
+        "new": "s and purposes of"
+      },
+      {
+        "op": "replace",
+        "old": "training datasets.3.2 Other",
+        "new": "training datasets.3.3 Other"
+      }
+    ],
+    "source": "meta/muse-image",
+    "target": "live-vs-archive",
+    "from_dir": "captures/meta__muse-image/aial-archive-e329e789/20260811T105141Z",
+    "to_dir": "captures/meta__muse-image/provider-live-e520ba83/20260828T083700Z",
+    "from_sha256": "e0637269761b5f5ccac899a17b994bbc07eb60cda2bbc146d0c363bb55cfd332",
+    "to_sha256": "b92bd1861b8ffc998a63c9610494231693676cffa57b5a2ff241fd89acad864d",
+    "computed_at": "2026-08-28T08:50:50Z"
+  },
   "meta/muse-image::provider-live-595d1bcb::captures/meta__muse-image/provider-live-595d1bcb/20260811T105059Z>captures/meta__muse-image/provider-live-595d1bcb/20260817T082916Z": {
     "verdict": "method-changed",
     "similarity": 0.0058,
@@ -2398,6 +2741,34 @@
         "computed_at": "2026-08-22T23:25:26Z"
       }
     ]
+  },
+  "meta/muse-image::provider-live-e520ba83::captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z>captures/meta__muse-image/provider-live-e520ba83/20260828T083700Z": {
+    "verdict": "changed",
+    "similarity": 0.999,
+    "word_delta": 3,
+    "moved_words": 5,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Public Summary of Training Content",
+        "new": "Public Summary of Training Content"
+      },
+      {
+        "op": "replace",
+        "old": "number: V1.1 Last Update: 8/21/2026 1.",
+        "new": "number: V2Last Update: August 26, 20261."
+      }
+    ],
+    "source": "meta/muse-image",
+    "target": "provider-live-e520ba83",
+    "from_dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z",
+    "to_dir": "captures/meta__muse-image/provider-live-e520ba83/20260828T083700Z",
+    "from_sha256": "3cd5ac6b3e936e23d746421b8b38cb817d9019ff8873d914e07df41aedc22b76",
+    "to_sha256": "b92bd1861b8ffc998a63c9610494231693676cffa57b5a2ff241fd89acad864d",
+    "computed_at": "2026-08-28T08:50:49Z"
   },
   "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-9e5b0e16/20260811T111428Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
@@ -2893,6 +3264,64 @@
     "from_sha256": "d260270fa92208abbf9804f35ca82d634178ef4d2f52af4a9fd777a350760ddf",
     "to_sha256": "346bed6fa8a8727d0d35a624efd4976aad4c6cdba14d83c433ca6161ad4bd0d2",
     "computed_at": "2026-08-26T08:46:43Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260826T083012Z>captures/openai__model-catalog/watch-page-0e5ba652/20260828T083250Z": {
+    "verdict": "changed",
+    "similarity": 0.9948,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "guide Deep dive Tools Model",
+        "new": "Migration guide Model catalog"
+      },
+      {
+        "op": "insert",
+        "old": "vision Image generation",
+        "new": "Image input cost calculator Image generation"
+      },
+      {
+        "op": "insert",
+        "old": "in CI Reference FAQ",
+        "new": "CI GitLab CI/CD Reference"
+      },
+      {
+        "op": "insert",
+        "old": "vision Image generation",
+        "new": "vision Image input cost calculator Image"
+      },
+      {
+        "op": "replace",
+        "old": ". Frontier models",
+        "new": ". Flagship models"
+      },
+      {
+        "op": "replace",
+        "old": "Sol Frontier model",
+        "new": "Sol Flagship model"
+      },
+      {
+        "op": "replace",
+        "old": "Daybreak Frontier cyber",
+        "new": "Daybreak Advanced cyber"
+      },
+      {
+        "op": "replace",
+        "old": "for frontier general-purpose",
+        "new": "for flagship general-purpose"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260826T083012Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260828T083250Z",
+    "from_sha256": "346bed6fa8a8727d0d35a624efd4976aad4c6cdba14d83c433ca6161ad4bd0d2",
+    "to_sha256": "cf582459b6bf021a5866ac5703b5f1dcb3c185113e0074bbda8b276cb52d0ac1",
+    "computed_at": "2026-08-28T08:50:48Z"
   },
   "thinking-machines/inkling::live-vs-archive::captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z>captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z": {
     "verdict": "identical-text",

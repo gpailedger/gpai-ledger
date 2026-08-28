@@ -20,9 +20,11 @@
   },
   "prior_sha256": "d260270fa92208abbf9804f35ca82d634178ef4d2f52af4a9fd777a350760ddf",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://developers.openai.com/api/docs/models (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "at": "2026-08-26T08:46:13Z"
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828083254/https://developers.openai.com/api/docs/models",
+    "at": "2026-08-28T08:50:21Z"
   },
   "ots": {
     "ok": true,
@@ -40,6 +42,11 @@
       "ok": false,
       "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://developers.openai.com/api/docs/models (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
       "at": "2026-08-26T08:30:13Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://developers.openai.com/api/docs/models (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "at": "2026-08-26T08:46:13Z"
     }
   ]
 }

@@ -1,0 +1,47 @@
+{
+  "source_id": "cohere/model-catalog",
+  "provider": "Cohere",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
+  "size_bytes": 828001,
+  "stored_as": "raw.html",
+  "text_sha256": "2a3ee52705089e2ba3339f008f6188a674973606104669be493c2dc3ea6819ea",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/models",
+    "final_url": "https://docs.cohere.com/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"j55ew5mnrdhqtf\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-28T08:33:25Z"
+  },
+  "prior_sha256": "b5c8ede22b7c63a54209f4cde30f7bef29ea58f88bb31617998c9353dfd8aeea",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20260828084945/https://docs.cohere.com/docs/models",
+    "at": "2026-08-28T08:50:02Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-28T08:35:27Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/https://docs.cohere.com/docs/models (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fececf18b90>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "at": "2026-08-28T08:35:25Z"
+    }
+  ]
+}
