@@ -488,3 +488,52 @@ def test_wayback_save_not_ok_without_any_capture(monkeypatch):
     monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
     s = cap.wayback_save("https://x/d.pdf")
     assert not s["ok"] and s["snapshot"] is None and s["status_code"] == 523
+
+
+# --- wayback_save: does the snapshot witness THIS capture? ---
+
+def _snap(stamp, url="https://x/d.pdf"):
+    return f"https://web.archive.org/web/{stamp}/{url}"
+
+
+def _stamp(offset_s=0):
+    from datetime import datetime, timedelta, timezone
+    return (datetime.now(timezone.utc) + timedelta(seconds=offset_s)).strftime("%Y%m%d%H%M%S")
+
+
+def _save_returning(monkeypatch, snapshot):
+    resp = FakeResp(200, url=snapshot, headers={"Content-Location":
+                                                snapshot.replace("https://web.archive.org", "")})
+    monkeypatch.setattr(cap.requests, "get", FakeGet(resp))
+
+
+def test_wayback_save_marks_a_capture_made_now_as_a_witness(monkeypatch):
+    _save_returning(monkeypatch, _snap(_stamp()))
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] and out["fresh"] is True and out["same_url"] is True
+
+
+def test_wayback_save_marks_a_deduplicated_older_capture_as_no_witness(monkeypatch):
+    # Save Page Now answers with an existing capture instead of crawling anew;
+    # it witnesses the page's earlier state, not the document we just stored
+    _save_returning(monkeypatch, _snap("20260101000000"))
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["ok"] is True and out["fresh"] is False
+    assert out["snapshot_ts"] == "20260101000000"
+
+
+def test_wayback_save_flags_a_snapshot_of_a_redirect_target(monkeypatch):
+    _save_returning(monkeypatch, _snap(_stamp(), "https://cdn.example.net/signed/d.pdf"))
+    out = cap.wayback_save("https://x/d.pdf")
+    assert out["same_url"] is False
+
+
+def test_percent_encoding_alone_is_not_a_different_address(monkeypatch):
+    _save_returning(monkeypatch, _snap(_stamp(), "https://x/t?prefix=a%2Fb"))
+    out = cap.wayback_save("https://x/t?prefix=a/b")
+    assert out["same_url"] is True
+
+
+def test_snapshot_is_fresh_is_undecidable_without_timestamps():
+    assert cap.snapshot_is_fresh("not a snapshot url", "2026-08-15T06:00:00Z") is None
+    assert cap.snapshot_is_fresh(_snap("20260815060000"), "") is None

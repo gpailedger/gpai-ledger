@@ -374,3 +374,76 @@ def test_retry_gives_up_only_after_answered_attempts_or_many_dates(corpus, monke
     assert saves == ["https://example.org/doc.pdf"]      # six transport failures: still retried
     m = json.loads(mp.read_text(encoding="utf-8"))
     assert m["wayback"]["ok"] is True and "gave_up" not in m["wayback"]
+
+
+# --- retry_wayback: every capture needs a witness of ITS OWN ---
+
+STALE = "https://web.archive.org/web/20260701000000/https://example.org/doc.pdf"
+
+
+def test_capture_that_never_had_a_save_attempt_is_retried(corpus, monkeypatch):
+    # a manifest with no wayback block at all was skipped outright until
+    # 28 Aug 2026, so 43 early captures never got a snapshot
+    d, _ = corpus.add_capture()
+    root = corpus.finish()
+    assert "wayback" not in manifest_of(d)
+    calls = wayback_save_recorder(monkeypatch, {"ok": True, "snapshot": SNAP, "fresh": True})
+    assert run_retry(monkeypatch, root) == 0
+    assert calls == ["https://example.org/doc.pdf"]
+    assert manifest_of(d)["wayback"]["snapshot"] == SNAP
+
+
+def test_snapshot_older_than_the_capture_is_retried_for_a_real_witness(corpus, monkeypatch):
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": STALE})
+    root = corpus.finish()
+    fresh = {"ok": True, "snapshot": SNAP, "fresh": True}
+    calls = wayback_save_recorder(monkeypatch, fresh)
+    run_retry(monkeypatch, root)
+    m = manifest_of(d)
+    assert calls == ["https://example.org/doc.pdf"]
+    assert m["wayback"] == fresh
+    assert m["wayback_attempts"][0]["snapshot"] == STALE     # the older one is kept
+
+
+def test_a_failed_refresh_never_costs_us_the_snapshot_we_hold(corpus, monkeypatch):
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": STALE})
+    root = corpus.finish()
+    wayback_save_recorder(monkeypatch, {"ok": False, "status_code": 503})
+    run_retry(monkeypatch, root)
+    m = manifest_of(d)
+    assert m["wayback"]["snapshot"] == STALE and m["wayback"]["ok"] is True
+    assert m["wayback"]["last_refresh_attempt"] is None or "last_refresh_attempt" in m["wayback"]
+
+
+def test_a_fresh_snapshot_is_left_alone(corpus, monkeypatch):
+    # capture fetched_at and snapshot stamp agree: it already witnesses this capture
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": SNAP})
+    root = corpus.finish()
+    before = (d / "manifest.json").read_bytes()
+    calls = wayback_save_recorder(monkeypatch, {"ok": True})
+    run_retry(monkeypatch, root)
+    assert calls == [] and (d / "manifest.json").read_bytes() == before
+
+
+def test_the_run_is_bounded_and_serves_the_neediest_first(corpus, monkeypatch):
+    for i in range(3):                                  # nothing archived at all
+        corpus.add_capture(tslug=f"provider-live-none{i}", url=f"https://example.org/none{i}.pdf")
+    for i in range(3):                                  # only an older snapshot
+        corpus.add_capture(tslug=f"provider-live-old{i}", url=f"https://example.org/old{i}.pdf",
+                           wayback={"ok": True, "snapshot": STALE})
+    root = corpus.finish()
+    monkeypatch.setattr(RW, "MAX_PER_RUN", 3)
+    calls = wayback_save_recorder(monkeypatch, {"ok": True, "snapshot": SNAP, "fresh": True})
+    run_retry(monkeypatch, root)
+    assert len(calls) == 3
+    assert all("none" in u for u in calls)              # captures with no snapshot first
+
+
+def test_has_witness_judges_a_legacy_manifest_from_its_capture_time(corpus):
+    d_fresh, _ = corpus.add_capture(tslug="provider-live-f", wayback={"ok": True, "snapshot": SNAP})
+    d_stale, _ = corpus.add_capture(tslug="provider-live-s", wayback={"ok": True, "snapshot": STALE})
+    d_none, _ = corpus.add_capture(tslug="provider-live-n")
+    corpus.finish()
+    assert RW.has_witness(manifest_of(d_fresh)) is True
+    assert RW.has_witness(manifest_of(d_stale)) is False
+    assert RW.has_witness(manifest_of(d_none)) is False

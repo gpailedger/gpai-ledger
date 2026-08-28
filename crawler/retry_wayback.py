@@ -1,9 +1,14 @@
 """Retry failed Wayback saves recorded in capture manifests, and re-verify
 recorded snapshots.
 
-Default mode scans manifests for wayback.ok == false, re-attempts the save with
-generous throttling, and updates the manifest atomically (previous attempts kept
-under wayback_attempts). Safe to run repeatedly.
+Default mode scans manifests that have no capture-time witness — no wayback
+block at all (an early capture that predates the save step: 43 of them were
+invisible to this tool until 28 Aug 2026), a recorded failure, or a snapshot
+Save Page Now deduplicated to an EARLIER capture, which witnesses the page
+before our fetch rather than the document we stored. It re-attempts the save
+with generous throttling and updates the manifest atomically (previous attempts
+kept under wayback_attempts). An existing snapshot is never dropped for a failed
+retry. Safe to run repeatedly.
 
 --verify mode re-checks manifests whose wayback.ok is TRUE: Save Page Now
 acceptance does not guarantee durable indexing (we have seen an accepted save
@@ -31,6 +36,11 @@ import capture as cap
 DATA = Path(__file__).resolve().parent.parent / "data"
 MAX_ATTEMPTS = 5          # answered attempts (an SPN verdict other than 429/5xx)
 MAX_ATTEMPT_DAYS = 30     # distinct UTC dates tried, any outcome: the hard stop
+# Save Page Now is rate-limited and each attempt costs ~12 s, so the backlog is
+# worked in bounded slices rather than all at once: a sweep must stay
+# predictable. Captures with no witness at all are served before ones that only
+# need a fresher snapshot, and each run drains the queue further.
+MAX_PER_RUN = 25
 TRANSPORT_STATUSES = (429, 500, 502, 503, 504)
 SIGNED_URL_MARKERS = re.compile(
     r"X-Amz-Signature=|[?&]oh=|Key-Pair-Id=|[?&]Policy=|trust-zip\?r=")
@@ -53,6 +63,23 @@ def _save(p: Path, m: dict) -> None:
 def _capture_ts(url: str):
     m = re.search(r"/web/(\d{14})", url or "")
     return m.group(1) if m else None
+
+
+def has_witness(m: dict):
+    """Whether this capture already has a Wayback snapshot that witnesses IT.
+    A snapshot older than the capture (SPN answering with an existing one) is
+    not a witness of what we stored, so it stays on the retry list. Manifests
+    written before wayback_save recorded `fresh` are judged from the recorded
+    capture time."""
+    wb = m.get("wayback") or {}
+    snap = wb.get("snapshot")
+    if not wb.get("ok") or not snap:
+        return False
+    if "fresh" in wb:
+        return wb["fresh"] is not False
+    asked = wb.get("requested_at") or (m.get("http") or {}).get("fetched_at") or wb.get("at")
+    fresh = cap.snapshot_is_fresh(snap, asked)
+    return fresh is not False
 
 
 def verify_snapshots() -> int:
@@ -121,45 +148,76 @@ def verify_snapshots() -> int:
     return 0
 
 
+def _queue():
+    """(path, manifest, wayback block, url) for every capture without a witness,
+    neediest first: no snapshot at all before one that is merely older than the
+    capture. Ordering is deterministic so a slice is reproducible."""
+    out = []
+    for p in sorted(DATA.rglob("manifest.json")):
+        m = json.loads(p.read_text(encoding="utf-8"))
+        # a missing wayback block means the save was never attempted for this
+        # capture — it needs one just as much as a recorded failure does
+        wb = m.get("wayback") or {}
+        if wb.get("gave_up") or has_witness(m):
+            continue
+        url = (m.get("http") or {}).get("url")
+        if not url:
+            continue
+        rank = 1 if wb.get("snapshot") else 0      # 0 = nothing archived at all
+        out.append((rank, str(p), p, m, wb, url))
+    out.sort(key=lambda t: (t[0], t[1]))
+    return [(p, m, wb, url) for _rank, _s, p, m, wb, url in out]
+
+
 def main() -> int:
     if "--verify" in sys.argv:
         return verify_snapshots()
     retried = ok = skipped = 0
-    for p in sorted(DATA.rglob("manifest.json")):
-        m = json.loads(p.read_text(encoding="utf-8"))
-        wb = m.get("wayback")
-        if wb is None or wb.get("ok") or wb.get("gave_up"):
-            continue
-        url = m["http"]["url"]
+    for p, m, wb, url in _queue():
         if SIGNED_URL_MARKERS.search(url):
-            m["wayback"]["gave_up"] = "signed URL; save must use a freshly mined URL"
+            m["wayback"] = dict(wb, gave_up="signed URL; save must use a freshly mined URL")
             _save(p, m)
             skipped += 1
             continue
-        attempts = m.get("wayback_attempts", []) + [wb]
+        attempts = m.get("wayback_attempts", []) + ([wb] if wb else [])
         answered, dates = answered_attempts(attempts), attempt_dates(attempts)
         if len(answered) >= MAX_ATTEMPTS:
-            m["wayback"]["gave_up"] = (f"exhausted {MAX_ATTEMPTS} answered attempts "
-                                       f"({len(attempts)} in total)")
+            m["wayback"] = dict(wb, gave_up=f"exhausted {MAX_ATTEMPTS} answered attempts "
+                                            f"({len(attempts)} in total)")
             _save(p, m)
             skipped += 1
             continue
         if len(dates) >= MAX_ATTEMPT_DAYS:
-            m["wayback"]["gave_up"] = f"tried on {len(dates)} distinct dates without a save"
+            m["wayback"] = dict(wb, gave_up=f"tried on {len(dates)} distinct dates "
+                                            f"without a save")
             _save(p, m)
             skipped += 1
             continue
-        print(f"retrying: {m['source_id']} {url[:90]}", flush=True)
+        why = "never attempted" if not wb else (
+            "snapshot predates the capture" if wb.get("ok") else "previous attempt failed")
+        print(f"retrying ({why}): {m['source_id']} {url[:90]}", flush=True)
         result = cap.wayback_save(url)
-        m.setdefault("wayback_attempts", []).append(wb)
-        m["wayback"] = result
+        if wb:
+            m.setdefault("wayback_attempts", []).append(wb)
+        # never trade a snapshot we hold for a failed retry: an older snapshot is
+        # weaker evidence than a fresh one, but it is evidence
+        if result.get("ok") or not wb.get("snapshot"):
+            m["wayback"] = result
+        else:
+            m["wayback"] = dict(wb, last_refresh_attempt=result.get("at"))
         _save(p, m)
         retried += 1
-        ok += 1 if result.get("ok") else 0
-        print(f"  -> {'OK' if result.get('ok') else 'FAIL ' + str(result.get('status_code') or result.get('error', ''))[:80]}",
+        ok += 1 if result.get("ok") and result.get("fresh") is not False else 0
+        print(f"  -> {'OK' if result.get('ok') else 'FAIL ' + str(result.get('status_code') or result.get('error', ''))[:80]}"
+              + (" (still an older capture)" if result.get("fresh") is False else ""),
               flush=True)
         time.sleep(12)
-    print(f"\nretried {retried}, now ok: {ok}, marked gave-up/skipped: {skipped}")
+        if retried >= MAX_PER_RUN:
+            print(f"\nreached the per-run limit of {MAX_PER_RUN}; the rest are "
+                  f"retried on the next sweep", flush=True)
+            break
+    print(f"\nretried {retried}, now witnessed: {ok}, "
+          f"marked gave-up/skipped: {skipped}")
     return 0
 
 

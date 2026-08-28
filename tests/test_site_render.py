@@ -763,3 +763,44 @@ def test_gone_banner_names_the_witness_when_the_archive_confirmed_it(corpus, tmp
     model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
     assert "independent Internet Archive capture" in model
     assert "second, unrelated network" not in model
+
+
+# --- does the recorded snapshot witness THIS capture? ---
+
+def test_wayback_cell_flags_a_snapshot_of_a_redirect_target():
+    m = _wb(snap="https://web.archive.org/web/20260820120000/https://cdn.x/d.pdf")
+    m["wayback"]["same_url"] = False
+    out = build.wayback_cell(m)
+    assert "followed a redirect" in out and "not the tracked URL" in out
+
+
+def test_wayback_cell_says_nothing_about_redirects_when_the_url_matches():
+    m = _wb(snap="https://web.archive.org/web/20260820120000/https://x/d.pdf")
+    m["wayback"]["same_url"] = True
+    assert "followed a redirect" not in build.wayback_cell(m)
+
+
+def test_wayback_witnesses_prefers_the_recorded_flag():
+    m = _wb(snap="https://web.archive.org/web/20260810120000/https://x/d.pdf", ok=True)
+    m["wayback"]["fresh"] = True
+    assert build.wayback_witnesses(m) is True
+
+
+def test_wayback_witnesses_infers_a_legacy_manifest_from_its_capture_time():
+    older = _wb(snap="https://web.archive.org/web/20260810120000/https://x/d.pdf", ok=True)
+    newer = _wb(snap="https://web.archive.org/web/20260820120000/https://x/d.pdf", ok=True)
+    none = {"wayback": {"ok": False}, "http": {"fetched_at": "2026-08-15T06:00:00Z"}}
+    assert build.wayback_witnesses(older) is False      # predates the 15 Aug capture
+    assert build.wayback_witnesses(newer) is True
+    assert build.wayback_witnesses(none) is None
+
+
+def test_dataset_export_reports_snapshots_that_do_not_witness_the_capture(
+        corpus, tmp_path, monkeypatch):
+    corpus.add_capture(tslug=SLUG, ts=V1, raw=b"%PDF-1.4 a", text="a",
+                       wayback={"ok": True, "snapshot":
+                                "https://web.archive.org/web/20260101000000/https://example.org/doc.pdf"})
+    data = corpus.finish()
+    dist = _build_site(tmp_path, monkeypatch, data)
+    rows = json.loads((dist / "ledger.json").read_text(encoding="utf-8"))["records"]
+    assert [r["wayback_witnesses_capture"] for r in rows] == [False]

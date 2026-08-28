@@ -705,12 +705,59 @@ def zip_content_key(notes: list) -> str:
     return sha256_hex(json.dumps(pairs, ensure_ascii=False).encode("utf-8"))
 
 
+# Save Page Now does not always crawl anew: it can answer with an existing
+# capture. One made shortly before our fetch still witnesses the same content;
+# one made days or months earlier witnesses the page's earlier state and is no
+# corroboration of this capture at all (the corpus held snapshots up to 222
+# days older than the version they were attached to). Anything older than this
+# slack is recorded but marked `fresh: false`, and retry_wayback keeps trying
+# for a real one.
+WAYBACK_FRESH_SLACK_S = 3600
+
+
+def snapshot_parts(snapshot: str):
+    """(14-digit capture timestamp, archived URL) of a Wayback snapshot URL."""
+    m = re.match(r"https://web\.archive\.org/web/(\d{14})(?:id_|if_|im_)?/(.+)$",
+                 snapshot or "")
+    return (m.group(1), m.group(2)) if m else (None, None)
+
+
+def _same_url(a: str, b: str) -> bool:
+    """Whether two URLs address the same resource for our purposes: percent
+    encoding and a trailing slash must not read as a different address."""
+    from urllib.parse import unquote
+
+    def norm(u):
+        return unquote(str(u or "")).rstrip("/")
+    return norm(a) == norm(b)
+
+
+def snapshot_is_fresh(snapshot: str, requested_at: str):
+    """True when the snapshot was captured no earlier than WAYBACK_FRESH_SLACK_S
+    before the save was requested — i.e. it witnesses what we just fetched.
+    None when either timestamp is unreadable."""
+    ts, _ = snapshot_parts(snapshot)
+    if not ts or not requested_at:
+        return None
+    try:
+        snap_dt = datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+        asked_dt = datetime.strptime(requested_at, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=timezone.utc)
+    except ValueError:
+        return None
+    return (asked_dt - snap_dt).total_seconds() <= WAYBACK_FRESH_SLACK_S
+
+
 def wayback_save(url: str, timeout: int = 120):
     """Best-effort triggered Wayback save. Returns outcome dict, never raises.
 
     A recorded snapshot URL means Save Page Now accepted the request; durable
     presence in the public index is only established by a later CDX check.
+    `fresh` says whether the capture SPN named is new enough to witness the
+    document we just fetched (see WAYBACK_FRESH_SLACK_S); `same_url` says
+    whether it archives the address we asked for or a redirect target.
     """
+    requested_at = utc_now()
     try:
         r = requests.get("https://web.archive.org/save/" + url,
                          headers=HEADERS, timeout=timeout, allow_redirects=True)
@@ -738,10 +785,21 @@ def wayback_save(url: str, timeout: int = 120):
         # "accepted" = SPN assigned a capture timestamp (it does so even when the
         # origin answered 4xx: the error page is archived); durable presence in
         # the index is established later by retry_wayback.py --verify
-        return {"ok": snapshot is not None, "status_code": r.status_code,
-                "spn_status": spn_status, "snapshot": snapshot, "at": utc_now()}
+        snap_ts, snap_url = snapshot_parts(snapshot)
+        out = {"ok": snapshot is not None, "status_code": r.status_code,
+               "spn_status": spn_status, "snapshot": snapshot,
+               "requested_at": requested_at, "at": utc_now()}
+        if snapshot:
+            out["fresh"] = snapshot_is_fresh(snapshot, requested_at)
+            out["snapshot_ts"] = snap_ts
+            # SPN follows redirects: the capture may archive the redirect target
+            # (a CDN or signed URL), which is evidence about that address, not
+            # about the one we track
+            out["same_url"] = _same_url(snap_url, url) if snap_url else None
+        return out
     except Exception as exc:  # noqa: BLE001
-        return {"ok": False, "error": repr(exc), "at": utc_now()}
+        return {"ok": False, "error": repr(exc), "requested_at": requested_at,
+                "at": utc_now()}
 
 
 WITNESS_FRESH_SLACK_S = 120

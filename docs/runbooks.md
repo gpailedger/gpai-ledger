@@ -225,10 +225,28 @@ Both run inside the daily sweep and need no operator action:
 - `upgrade_ots.py` first stamps any capture whose original submission failed
   (`restamped_at` recorded — a late stamp still proves existence no later than
   its date), then upgrades pending attestations to bitcoin anchors.
-- `retry_wayback.py` retries failed saves (bounded, then marked `gave_up`);
+- `retry_wayback.py` works the queue of captures with no witness of their own:
+  a manifest with no `wayback` block at all (an early capture from before the
+  save step existed — 43 of these were invisible to the tool until 28 Aug
+  2026), a recorded failure, or a snapshot that is **older than the capture it
+  is attached to**. That last case matters: Save Page Now does not always crawl
+  anew, and a capture it hands back from months earlier witnesses the page's
+  earlier state, not the document we stored (the corpus held one 222 days
+  older). `wayback_save` therefore records `fresh` (the snapshot is no more
+  than `WAYBACK_FRESH_SLACK_S` — one hour — older than the request) and
+  `same_url` (the snapshot archives the address we asked for, not a redirect
+  target such as a CDN or signed URL). Only a fresh snapshot counts as a
+  witness; the rest stay in the queue. At most `MAX_PER_RUN` (25) are retried
+  per sweep, captures with nothing archived first, so the backlog drains over a
+  few days without stretching the run; the per-target caps (`MAX_ATTEMPTS`
+  answered attempts, `MAX_ATTEMPT_DAYS` distinct dates, signed URLs never) then
+  mark `gave_up`. A retry never costs us evidence: if the new save fails, the
+  older snapshot stays as the record and only `last_refresh_attempt` is added.
   `retry_wayback.py --verify` re-checks recorded snapshots and demotes dead
-  ones so they re-enter the retry queue. Run `--verify` manually about once a
+  ones so they re-enter the queue. Run `--verify` manually about once a
   month — Save Page Now acceptance does not guarantee durable indexing.
+  The version page names what it has: a snapshot older than the capture is
+  captioned as pre-existing, and one that followed a redirect says so.
 
 ## Registry refresh red (a tracked source id would disappear)
 

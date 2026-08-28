@@ -507,6 +507,24 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()
             f"longer in the corpus and no prune event names it — see the event log)</span>")
 
 
+def wayback_witnesses(m):
+    """Whether the recorded snapshot witnesses THIS capture: True when it was
+    made at or after our fetch, False when the Wayback Machine answered with an
+    older capture instead of crawling anew, None when it cannot be told.
+    Manifests written before wayback_save recorded `fresh` are judged from the
+    snapshot timestamp against the recorded fetch time."""
+    wb = m.get("wayback") or {}
+    if not wb.get("ok") or not wb.get("snapshot"):
+        return None
+    if "fresh" in wb:
+        return wb["fresh"]
+    ts = re.search(r"/web/(\d{8})", wb["snapshot"])
+    fetched = ((m.get("http") or {}).get("fetched_at") or "")[:10].replace("-", "")
+    if not ts or not fetched:
+        return None
+    return ts.group(1) >= fetched
+
+
 def wayback_cell(m):
     wb = m.get("wayback") or {}
     snap = wb.get("snapshot")
@@ -528,6 +546,12 @@ def wayback_cell(m):
                    "Wayback Machine — witnesses the page before this capture)</span>")
     elif snap_date and fetched and snap_date > fetched:
         caption = " <span class='muted'>(save triggered after capture; separate fetch)</span>"
+    if wb.get("same_url") is False:
+        # SPN followed a redirect: the snapshot archives the address it landed
+        # on (a CDN or signed URL), not the one this ledger tracks
+        caption += (" <span class='muted'>(the Wayback Machine followed a redirect: "
+                    "this snapshot archives the address it landed on, not the "
+                    "tracked URL)</span>")
     return f"<a href='{url_attr(snap)}'>{esc(label)}</a>{caption}"
 
 
@@ -1517,7 +1541,10 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             f"<li><code>blob_url</code>, <code>ots_url</code> — the stored bytes and "
             f"this capture's own OpenTimestamps proof (site-relative; "
             f"<code>null</code> when not served); <code>wayback_snapshot</code> — the "
-            f"Wayback Machine capture recorded for it, or <code>null</code></li>"
+            f"Wayback Machine capture recorded for it, or <code>null</code>; "
+            f"<code>wayback_witnesses_capture</code> — <code>false</code> when that "
+            f"snapshot is an older capture the Wayback Machine returned instead of "
+            f"crawling anew, so it witnesses the page before this capture</li>"
             f"</ul>"
             f"<h2>Scope of the changes feed</h2>"
             f"<p>The <a href='{PREFIX}changes/'>changes feed</a> covers content "
@@ -1736,6 +1763,9 @@ def main(generated: str = None) -> int:
                                 if ots_src.exists() else None),
                     "wayback_snapshot": ((m.get("wayback") or {}).get("snapshot")
                                          if (m.get("wayback") or {}).get("ok") else None),
+                    # false when the snapshot is an older capture the Wayback
+                    # Machine returned instead of crawling anew
+                    "wayback_witnesses_capture": wayback_witnesses(m),
                 })
                 # a genuine content change feeds the /changes/ log and the Atom
                 # feed. The ledger's common-extractor verdict decides whether one
