@@ -237,10 +237,26 @@ Both run inside the daily sweep and need no operator action:
   `same_url` (the snapshot archives the address we asked for, not a redirect
   target such as a CDN or signed URL). Only a fresh snapshot counts as a
   witness; the rest stay in the queue. At most `MAX_PER_RUN` (25) are retried
-  per sweep, captures with nothing archived first, so the backlog drains over a
-  few days without stretching the run; the per-target caps (`MAX_ATTEMPTS`
-  answered attempts, `MAX_ATTEMPT_DAYS` distinct dates, signed URLs never) then
-  mark `gave_up`. A retry never costs us evidence: if the new save fails, the
+  per sweep, captures with nothing archived first, and the pass also stops at a
+  wall-clock budget (`GPAI_WAYBACK_BUDGET`, default 600 s): a refused save
+  blocks until its own timeout, and 25 of those cost half an hour of sweep on
+  28 Aug 2026. It stops sooner still after
+  `TRANSPORT_FAILURES_BEFORE_STOP` (3) dropped connections or timeouts in a
+  row — that is the Internet Archive refusing this runner rather than answering
+  about the URLs, and hammering it is both futile and impolite. Such transport
+  failures never count toward the per-target caps (`MAX_ATTEMPTS` answered
+  attempts, `MAX_ATTEMPT_DAYS` distinct dates, signed URLs never), which then
+  mark `gave_up`.
+
+  **Known limitation, not a bug**: the Internet Archive frequently refuses or
+  throttles GitHub-hosted runners. On 28 Aug 2026 every one of 25 save attempts
+  timed out from CI while the same URLs saved fine from a residential network,
+  and the same pattern appeared on 23 and 26 Aug. The backlog therefore drains
+  only when the Archive is willing. OpenTimestamps is the primary provenance
+  and is complete; Wayback is a best-effort second witness. If the backlog
+  matters, the options are to run `python crawler/retry_wayback.py` from a
+  non-datacenter network, or to obtain an archive.org account and use
+  authenticated Save Page Now (higher limits, needs a secret in the repo). A retry never costs us evidence: if the new save fails, the
   older snapshot stays as the record and only `last_refresh_attempt` is added.
   `retry_wayback.py --verify` re-checks recorded snapshots and demotes dead
   ones so they re-enter the queue. Run `--verify` manually about once a

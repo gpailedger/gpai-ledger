@@ -52,7 +52,9 @@ def wayback_save_recorder(monkeypatch, result=None):
 
 def run_retry(monkeypatch, root, *extra_argv):
     monkeypatch.setattr(RW, "DATA", root)
-    monkeypatch.setattr(RW, "time", types.SimpleNamespace(sleep=lambda s: None))
+    # a clock that never advances: the wall-clock budget is exercised by its own test
+    monkeypatch.setattr(RW, "time", types.SimpleNamespace(sleep=lambda s: None,
+                                                          monotonic=lambda: 0.0))
     monkeypatch.setattr(sys, "argv", ["retry_wayback.py", *extra_argv])
     return RW.main()
 
@@ -447,3 +449,48 @@ def test_has_witness_judges_a_legacy_manifest_from_its_capture_time(corpus):
     assert RW.has_witness(manifest_of(d_fresh)) is True
     assert RW.has_witness(manifest_of(d_stale)) is False
     assert RW.has_witness(manifest_of(d_none)) is False
+
+
+def test_a_refusing_archive_stops_the_pass_instead_of_being_hammered(corpus, monkeypatch):
+    # 28 Aug 2026: every save timed out because the Internet Archive was dropping
+    # this runner's connections; 25 attempts cost half an hour and learned nothing
+    for i in range(8):
+        corpus.add_capture(tslug=f"provider-live-x{i}", url=f"https://example.org/{i}.pdf")
+    root = corpus.finish()
+    calls = wayback_save_recorder(
+        monkeypatch, {"ok": False, "error": "ReadTimeout(...)"})
+    run_retry(monkeypatch, root)
+    assert len(calls) == RW.TRANSPORT_FAILURES_BEFORE_STOP
+
+
+def test_a_real_verdict_does_not_trip_the_circuit_breaker(corpus, monkeypatch):
+    # 404 from Save Page Now is an answer about the URL, not the Archive refusing us
+    for i in range(5):
+        corpus.add_capture(tslug=f"provider-live-y{i}", url=f"https://example.org/y{i}.pdf")
+    root = corpus.finish()
+    calls = wayback_save_recorder(monkeypatch, {"ok": False, "status_code": 404})
+    run_retry(monkeypatch, root)
+    assert len(calls) == 5
+
+
+def test_the_pass_stops_when_its_wall_clock_budget_is_spent(corpus, monkeypatch):
+    for i in range(6):
+        corpus.add_capture(tslug=f"provider-live-z{i}", url=f"https://example.org/z{i}.pdf")
+    root = corpus.finish()
+    clock = iter([0, 0, 1, 2, 10_000, 10_001, 10_002, 10_003, 10_004])
+    monkeypatch.setattr(RW, "time", types.SimpleNamespace(
+        sleep=lambda s: None, monotonic=lambda: next(clock)))
+    calls = wayback_save_recorder(monkeypatch, {"ok": True, "snapshot": SNAP, "fresh": True})
+    monkeypatch.setattr(sys, "argv", ["retry_wayback.py"])
+    monkeypatch.setattr(RW, "DATA", root)
+    RW.main()
+    assert 0 < len(calls) < 6          # stopped early, did not work the whole queue
+
+
+def test_budget_env_override_is_clamped(monkeypatch):
+    monkeypatch.setenv("GPAI_WAYBACK_BUDGET", "5")
+    assert RW.budget_s() == 60.0
+    monkeypatch.setenv("GPAI_WAYBACK_BUDGET", "99999")
+    assert RW.budget_s() == 3600.0
+    monkeypatch.setenv("GPAI_WAYBACK_BUDGET", "not a number")
+    assert RW.budget_s() == float(RW.BUDGET_S)

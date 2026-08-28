@@ -24,6 +24,7 @@ Archive outage must not strip the witness from every version captured during
 it. MAX_ATTEMPT_DAYS distinct dates tried, any outcome, is the hard stop.
 """
 import json
+import os
 import re
 import sys
 import time
@@ -36,11 +37,40 @@ import capture as cap
 DATA = Path(__file__).resolve().parent.parent / "data"
 MAX_ATTEMPTS = 5          # answered attempts (an SPN verdict other than 429/5xx)
 MAX_ATTEMPT_DAYS = 30     # distinct UTC dates tried, any outcome: the hard stop
-# Save Page Now is rate-limited and each attempt costs ~12 s, so the backlog is
-# worked in bounded slices rather than all at once: a sweep must stay
-# predictable. Captures with no witness at all are served before ones that only
-# need a fresher snapshot, and each run drains the queue further.
+# Save Page Now is rate-limited, so the backlog is worked in bounded slices
+# rather than all at once: a sweep must stay predictable. Captures with no
+# witness at all are served before ones that only need a fresher snapshot, and
+# each run drains the queue further. A count alone does not bound the time — a
+# refused save blocks until its own timeout, and 25 of those cost half an hour
+# (observed 28 Aug 2026) — so the pass also has a wall-clock budget.
 MAX_PER_RUN = 25
+BUDGET_S = 600
+# The Internet Archive answers a burst it does not want by dropping connections
+# and timing out. Once that has happened this many times in a row the service is
+# telling us to stop: further attempts this run would be futile and impolite,
+# and they teach us nothing about the URLs.
+TRANSPORT_FAILURES_BEFORE_STOP = 3
+
+
+def budget_s() -> float:
+    raw = os.environ.get("GPAI_WAYBACK_BUDGET", "")
+    try:
+        v = float(raw) if raw else float(BUDGET_S)
+    except ValueError:
+        print(f"WARNING: GPAI_WAYBACK_BUDGET={raw!r} is not a number; "
+              f"using {BUDGET_S}", flush=True)
+        v = float(BUDGET_S)
+    return max(60.0, min(v, 3600.0))
+
+
+def is_transport_failure(result: dict) -> bool:
+    """The attempt never reached a verdict: a dropped connection, a timeout, or
+    a throttling status. It says nothing about the URL."""
+    if result.get("ok"):
+        return False
+    if result.get("error"):
+        return True
+    return result.get("status_code") in TRANSPORT_STATUSES
 TRANSPORT_STATUSES = (429, 500, 502, 503, 504)
 SIGNED_URL_MARKERS = re.compile(
     r"X-Amz-Signature=|[?&]oh=|Key-Pair-Id=|[?&]Policy=|trust-zip\?r=")
@@ -173,7 +203,12 @@ def main() -> int:
     if "--verify" in sys.argv:
         return verify_snapshots()
     retried = ok = skipped = 0
+    budget, started, transport_run = budget_s(), time.monotonic(), 0
     for p, m, wb, url in _queue():
+        if time.monotonic() - started > budget:
+            print(f"\nwayback budget of {budget:.0f}s spent; the rest are retried "
+                  f"on the next sweep", flush=True)
+            break
         if SIGNED_URL_MARKERS.search(url):
             m["wayback"] = dict(wb, gave_up="signed URL; save must use a freshly mined URL")
             _save(p, m)
@@ -211,6 +246,15 @@ def main() -> int:
         print(f"  -> {'OK' if result.get('ok') else 'FAIL ' + str(result.get('status_code') or result.get('error', ''))[:80]}"
               + (" (still an older capture)" if result.get("fresh") is False else ""),
               flush=True)
+        if is_transport_failure(result):
+            transport_run += 1
+            if transport_run >= TRANSPORT_FAILURES_BEFORE_STOP:
+                print(f"\nthe Wayback Machine dropped {transport_run} attempts in a "
+                      f"row (it is refusing this runner, not answering about these "
+                      f"URLs); stopping this pass", flush=True)
+                break
+        else:
+            transport_run = 0
         time.sleep(12)
         if retried >= MAX_PER_RUN:
             print(f"\nreached the per-run limit of {MAX_PER_RUN}; the rest are "
