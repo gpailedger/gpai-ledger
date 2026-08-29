@@ -13,6 +13,18 @@ from conftest import load_module
 
 ROOT = Path(__file__).resolve().parent.parent
 PM = load_module(str(ROOT / "crawler" / "probe_missing.py"), "probe_missing_mod")
+DEC = load_module(str(ROOT / "crawler" / "decisions.py"), "decisions_for_probe")
+
+
+@pytest.fixture(autouse=True)
+def _queue_in_tmp(tmp_path, monkeypatch):
+    """probe_missing hands candidates it will not promote to crawler/decisions.py,
+    which writes crawler/pending.json. Without this every test that produces a
+    candidate would write into the real repository — one did."""
+    monkeypatch.setattr(DEC, "PENDING", tmp_path / "queue" / "pending.json")
+    monkeypatch.setattr(DEC, "DECISIONS", tmp_path / "queue" / "decisions.json")
+    (tmp_path / "queue").mkdir(exist_ok=True)
+    monkeypatch.setitem(sys.modules, "decisions", DEC)
 
 SUMMARY = ("Public Summary of Training Content\n{model}\n"
            "Article 53(1)(d) of Regulation (EU) 2024/1689\n"
@@ -196,3 +208,22 @@ def test_a_url_already_tracked_is_never_re_probed(tmp_path, monkeypatch):
                             cap.PermanentFetchError("HTTP 404", status_code=404)))
     PM.main([])
     assert url not in calls
+
+
+def test_a_candidate_it_will_not_promote_reaches_the_decision_queue(tmp_path, monkeypatch):
+    # the whole point of the queue: a document we fetched but would not attribute
+    # must become a question for the operator, not a line in an unread report
+    missing = _src("prov/two", "Model Two", "Prov", "missing")
+    # fetches, looks like a summary, but names the sibling model
+    disc, _report = _run(monkeypatch, tmp_path, [PUBLISHED, missing],
+                         {"https://prov.example/pdf/model-two-summary.pdf":
+                          (b"%PDF x", SUMMARY.format(model="Model One"))})
+    assert disc == {}
+    queued = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    assert len(queued) == 1
+    entry = next(iter(queued.values()))
+    assert entry["source_id"] == "prov/two"
+    assert entry["url"] == "https://prov.example/pdf/model-two-summary.pdf"
+    assert "does not name this model" in entry["why"]
+    assert entry["issue"] is None            # an issue is opened by the hunt step
+

@@ -247,6 +247,21 @@ def main(argv=None) -> int:
         cap.atomic_write_text(DISCOVERED, json.dumps(existing, indent=2,
                                                      ensure_ascii=False))
 
+    if candidates:
+        # a document we fetched but would not attribute on our own goes to the
+        # operator's decision queue rather than dying in a report nobody opens
+        import decisions as dec
+        queued = dec.add_candidates([{
+            "source_id": c["id"], "model": c["model"], "url": c["url"],
+            "provider": next((s.get("provider") for s in sources
+                              if s["id"] == c["id"]), None),
+            "classification": "fetched by the Tier-1 probe",
+            "why": ("its text is already held for " + c["clash"]) if c["clash"]
+                   else ("it does not name this model" if not c["names_model"]
+                         else f"only {c['markers']} Art. 53(1)(d) template marker(s)"),
+        } for c in candidates])
+        dec.save(dec.PENDING, queued)
+
     lines = [f"# Probe of missing summaries — {cap.utc_now()[:10]}", "",
              f"Probed {len(missing)} model(s) marked missing against "
              f"{sum(len(v) for v in patterns.values())} provider URL pattern(s); "

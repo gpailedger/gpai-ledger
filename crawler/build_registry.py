@@ -478,6 +478,36 @@ def main(aial_repo: str, out_path=None) -> None:
                     if s["status"] == "missing":
                         s["status"] = "published"
 
+    # merge what the operator approved in the decision queue (crawler/decisions.py).
+    # An approval says "track this", nothing more: the sweep still fetches the
+    # document and stores it with a hash and a proof before the site asserts
+    # anything. A rejection is kept so the candidate is never proposed again.
+    dec_path = Path(__file__).parent / "decisions.json"
+    if dec_path.exists():
+        by_id = {s["id"]: s for s in sources}
+        for _k, d in sorted(json.loads(dec_path.read_text(encoding="utf-8")).items()):
+            if d.get("decision") != "approve" or not d.get("url"):
+                continue
+            sid = d.get("id")
+            if not sid:
+                print("  WARNING: approved candidate without a source id, skipped")
+                continue
+            note = (f"approved by the operator on {str(d.get('at'))[:10]}"
+                    + (f" ({d['note']})" if d.get("note") else ""))
+            s = by_id.get(sid)
+            if s is None:
+                s = {"id": sid, "provider": d.get("provider") or sid.split("/")[0],
+                     "model": d.get("model") or sid.split("/", 1)[-1],
+                     "status": "missing", "targets": []}
+                sources.append(s)
+                by_id[sid] = s
+            if d["url"] not in {t["url"] for t in s["targets"]}:
+                s["targets"].append({"kind": d.get("kind", "provider-live"),
+                                     "url": d["url"], "note": note})
+                if s["status"] == "missing" and d.get("kind", "provider-live") \
+                        in ("provider-live", "provider-page"):
+                    s["status"] = "published"
+
     # annotate flags LAST so relocation-merged and standalone targets get them too
     for s in sources:
         for t in s.get("targets", []):

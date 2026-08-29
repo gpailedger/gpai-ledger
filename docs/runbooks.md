@@ -109,6 +109,20 @@ or served. If scope rules change, a repack of an existing capture must append a
 `scope-repack` event carrying `prior_sha256` (verify_corpus C4 uses it to
 account for the replaced capture directory).
 
+## A host that is down (one origin must not consume the sweep)
+
+Every target on an unreachable host costs the full fetch timeout times its
+retries before failing. On 29 Aug 2026 twenty-one connection timeouts to one
+host spent the sweep's wall-clock budget and left sixty-eight other targets
+unchecked. After `HOST_FAILURES_BEFORE_SKIP` (3) consecutive failures **where
+the origin never answered at all** — connection refused, timed out; a 404 is an
+answer and never counts — the remaining targets on that host are recorded as
+`host-unreachable` events without a network attempt, a `host-unreachable-summary`
+event names the host and lists them, and the time goes to hosts that are up. Any
+answer from the host clears the count, and the next sweep starts fresh. The
+first failures are logged as ordinary errors and still redden the run, so a
+host being down is never silent.
+
 ## Absence claims (404/410 on a previously captured target)
 
 A 404 from a single vantage point is not evidence of absence — GitHub-hosted
@@ -292,6 +306,46 @@ Both run inside the daily sweep and need no operator action:
   month — Save Page Now acceptance does not guarantee durable indexing.
   The version page names what it has: a snapshot older than the capture is
   captioned as pre-existing, and one that followed a redirect says so.
+
+## The decision queue (answering by e-mail)
+
+Some candidates cannot be judged by a machine: a document that may or may not be
+an Article 53(1)(d) summary, or a company nobody has assessed, whose source id
+would become a permanent public URL this project promises never to rename. Those
+go to `crawler/pending.json` instead of into the ledger.
+
+The loop needs no new credentials and nothing new to remember:
+
+1. `probe_missing.py` (and, in future, the weekly hunt's own candidates) call
+   `decisions.add_candidates()`; the queue is committed with the hunt results.
+2. The hunt then runs `python crawler/decisions.py propose`, which opens one
+   GitHub issue per queued candidate, labelled `decision`. GitHub e-mails the
+   repository owner.
+3. **Reply to that e-mail.** GitHub turns the reply into an issue comment. The
+   line that counts is one of:
+   `/approve` · `/approve id=org/model` · `/reject <reason>`
+   The first command line wins, so a quoted thread cannot re-trigger an older
+   instruction.
+4. `.github/workflows/decisions.yml` fires on the comment, records the answer in
+   `crawler/decisions.json`, commits it, then answers and closes the issue.
+5. `build_registry.py` merges approvals on the next refresh: an approval adds a
+   target to an existing source, or creates the source if the id is new, and a
+   `provider-live`/`provider-page` target flips `missing` to `published`. A
+   rejection is kept so the candidate is never proposed again.
+
+**An approval is not evidence.** It says only "this is worth tracking". The
+sweep still fetches the document itself and stores it with a hash, an
+OpenTimestamps proof and a Wayback witness before the site asserts anything.
+
+**Only the repository owner is obeyed.** The workflow will not start unless
+`author_association == 'OWNER'` and the issue carries the `decision` label, and
+`decisions.py` checks the association again itself. Anyone may comment on a
+public repository; only the owner's words act. A malformed source id is refused
+without recording anything.
+
+To undo an approval: remove its entry from `crawler/decisions.json` and rebuild
+the registry (and remove the target from `sources.json` if it has already been
+merged). Nothing here ever deletes a capture.
 
 ## Tier-1 probe (a missing model's summary appears at the provider's own pattern)
 

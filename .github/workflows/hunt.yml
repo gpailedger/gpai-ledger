@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 45
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -34,6 +35,11 @@ jobs:
       - name: Tier-1 probe (missing models against their provider's own URL patterns)
         run: python crawler/probe_missing.py
 
+      - name: Open decision issues for candidates a machine cannot judge
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python crawler/decisions.py propose
+
       - name: Tier-2 relocation hunt (bounded site crawl, fingerprint-confirmed)
         run: python crawler/site_hunt.py
 
@@ -46,7 +52,10 @@ jobs:
           git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${{ github.repository }}.git"
           # discovered.json exists only once the probe has promoted something,
           # and `git add` is fatal on a missing pathspec
-          for f in crawler/relocations.json crawler/discovered.json                    reports/hunt-latest.md reports/org-watch-latest.md                    reports/probe-missing-latest.md; do
+          for f in crawler/relocations.json crawler/discovered.json \
+                   crawler/pending.json crawler/decisions.json \
+                   reports/hunt-latest.md reports/org-watch-latest.md \
+                   reports/probe-missing-latest.md; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then

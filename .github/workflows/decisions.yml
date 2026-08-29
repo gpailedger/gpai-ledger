@@ -1,0 +1,93 @@
+name: decision-queue
+
+# The operator answers a "decision" issue by replying to GitHub's notification
+# e-mail; GitHub turns that reply into a comment and this records the answer.
+# Only the repository owner is obeyed — the guard is in the job condition below
+# AND again inside crawler/decisions.py, because this writes to a public record.
+
+on:
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: decision-queue          # serialise: every run commits decisions.json
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: >-
+      github.event.issue.pull_request == null &&
+      github.event.comment.author_association == 'OWNER' &&
+      contains(github.event.issue.labels.*.name, 'decision')
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r crawler/requirements.txt -c crawler/constraints.txt
+
+      - name: Record the decision
+        id: record
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          COMMENT_AUTHOR: ${{ github.event.comment.user.login }}
+          COMMENT_ASSOC: ${{ github.event.comment.author_association }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python crawler/decisions.py apply \
+            --issue "$ISSUE_NUMBER" \
+            --comment "$COMMENT_BODY" \
+            --author "$COMMENT_AUTHOR" \
+            --author-association "$COMMENT_ASSOC" | tee /tmp/decision.out
+          echo "summary=$(tail -1 /tmp/decision.out)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the decision
+        env:
+          PUSH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "GPAI Ledger"
+          git config user.email "contact@gpailedger.com"
+          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${{ github.repository }}.git"
+          for f in crawler/pending.json crawler/decisions.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "no decision recorded"
+          else
+            git commit -m "decision on #${{ github.event.issue.number }}"
+            pushed=0
+            for _ in 1 2 3; do
+              if git push origin HEAD:main; then pushed=1; break; fi
+              git pull --rebase origin main || exit 1
+            done
+            [ "$pushed" = 1 ] || { echo "push failed after 3 attempts"; exit 1; }
+          fi
+          git remote set-url origin "https://github.com/${{ github.repository }}.git"
+
+      - name: Answer and close the issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git log -1 --format=%s | grep -q "decision on #${{ github.event.issue.number }}"; then
+            gh issue comment "${{ github.event.issue.number }}" --body \
+              "Recorded: ${{ steps.record.outputs.summary }}
+
+            An approval takes effect at the next registry refresh; the daily sweep
+            then captures the document with a hash, an OpenTimestamps proof and a
+            Wayback witness before the site says anything about it."
+            gh issue close "${{ github.event.issue.number }}" --reason completed
+          else
+            echo "nothing was recorded; leaving the issue open"
+          fi
