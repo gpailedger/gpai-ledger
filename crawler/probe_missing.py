@@ -119,7 +119,10 @@ def candidates_for(source, patterns) -> list:
 
 
 def looks_like_summary(text: str) -> int:
-    low = (text or "").lower()
+    """How many template phrases the document carries. Extraction leaves line
+    breaks inside phrases ("public summary of\ntraining content"), so the text is
+    whitespace-normalised first — without it most real provider PDFs score zero."""
+    low = " ".join((text or "").split()).lower()
     return sum(1 for m in TEMPLATE_MARKERS if m in low)
 
 

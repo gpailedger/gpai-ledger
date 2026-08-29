@@ -545,3 +545,19 @@ def test_repeated_spn_verdicts_do_not_trip_the_refusal_breaker(corpus, monkeypat
         monkeypatch, {"ok": False, "answered": True, "error": "error:not-found"})
     run_retry(monkeypatch, root)
     assert len(calls) == 5
+
+
+def test_repeated_failed_refreshes_do_not_retire_a_capture_that_has_a_snapshot(corpus, monkeypatch):
+    # the kept block used to be re-filed as an "answered attempt" every time, so
+    # a few dropped connections exhausted the budget of a capture we had archived
+    d, _ = corpus.add_capture(wayback={"ok": True, "snapshot": STALE})
+    root = corpus.finish()
+    wayback_save_recorder(monkeypatch, {"ok": False, "error": "ReadTimeout(...)"})
+    for _ in range(RW.MAX_ATTEMPTS + 2):
+        run_retry(monkeypatch, root)
+    m = manifest_of(d)
+    assert "gave_up" not in m["wayback"]
+    assert m["wayback"]["snapshot"] == STALE
+    answered = RW.answered_attempts(m.get("wayback_attempts", []) + [m["wayback"]])
+    assert len(answered) <= 1, "the held snapshot was counted as an attempt again"
+

@@ -734,7 +734,7 @@ def test_site_says_when_a_provider_copy_is_confirmed_gone(corpus, tmp_path, monk
     # the archived evidence is still presented, and no version was withdrawn
     assert "Document versions" in model
     status = (dist / "status" / "index.html").read_text(encoding="utf-8")
-    assert "(provider copy no longer resolves)" in status
+    assert "(a tracked address no longer resolves)" in status
 
 
 def test_no_gone_banner_when_the_absence_was_never_confirmed(corpus, tmp_path, monkeypatch):
@@ -752,7 +752,7 @@ def test_gone_banner_disappears_once_the_document_is_seen_again(corpus, tmp_path
     dist = _build_site(tmp_path, monkeypatch, data)
     model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
     assert "no longer resolves" not in model
-    assert "(provider copy no longer resolves)" not in (
+    assert "(a tracked address no longer resolves)" not in (
         dist / "status" / "index.html").read_text(encoding="utf-8")
 
 
@@ -780,19 +780,29 @@ def test_wayback_cell_says_nothing_about_redirects_when_the_url_matches():
     assert "followed a redirect" not in build.wayback_cell(m)
 
 
-def test_wayback_witnesses_prefers_the_recorded_flag():
-    m = _wb(snap="https://web.archive.org/web/20260810120000/https://x/d.pdf", ok=True)
-    m["wayback"]["fresh"] = True
-    assert build.wayback_witnesses(m) is True
+def test_only_a_snapshot_taken_around_the_capture_witnesses_it():
+    # a save is triggered right after the fetch, so a real witness is minutes old
+    concurrent = _wb(snap="https://web.archive.org/web/20260815060312/https://x/d.pdf", ok=True)
+    assert build.wayback_witnesses(concurrent) is True
 
 
-def test_wayback_witnesses_infers_a_legacy_manifest_from_its_capture_time():
+def test_a_snapshot_from_either_side_of_the_capture_does_not_witness_it():
+    # earlier: the Archive returned a pre-existing capture instead of crawling.
+    # later: a backlog drain archived the URL as it is now, not what we stored.
     older = _wb(snap="https://web.archive.org/web/20260810120000/https://x/d.pdf", ok=True)
     newer = _wb(snap="https://web.archive.org/web/20260820120000/https://x/d.pdf", ok=True)
     none = {"wayback": {"ok": False}, "http": {"fetched_at": "2026-08-15T06:00:00Z"}}
-    assert build.wayback_witnesses(older) is False      # predates the 15 Aug capture
-    assert build.wayback_witnesses(newer) is True
+    assert build.wayback_witnesses(older) is False
+    assert build.wayback_witnesses(newer) is False
     assert build.wayback_witnesses(none) is None
+
+
+def test_a_recorded_fresh_flag_does_not_override_the_timestamps():
+    # `fresh` answers "did SPN crawl anew?"; witnessing answers "was it taken
+    # when we fetched?" — the published claim is the second one
+    m = _wb(snap="https://web.archive.org/web/20260810120000/https://x/d.pdf", ok=True)
+    m["wayback"]["fresh"] = True
+    assert build.wayback_witnesses(m) is False
 
 
 def test_dataset_export_reports_snapshots_that_do_not_witness_the_capture(
@@ -804,3 +814,42 @@ def test_dataset_export_reports_snapshots_that_do_not_witness_the_capture(
     dist = _build_site(tmp_path, monkeypatch, data)
     rows = json.loads((dist / "ledger.json").read_text(encoding="utf-8"))["records"]
     assert [r["wayback_witnesses_capture"] for r in rows] == [False]
+
+
+def test_a_mirror_going_dark_is_not_reported_as_the_providers_copy(corpus, tmp_path, monkeypatch):
+    # a confirmed absence on AIAL's mirror says nothing about the provider
+    data, _d1, _d2 = _two_versions(corpus)
+    ev = {"ts": "2026-08-28T08:52:51Z", "source": "prov/model", "target": SLUG,
+          "outcome": "error", "url": "https://aial.ie/archive/x.pdf",
+          "kind": "aial-archive", "error": "HTTP 404", "absence": "confirmed",
+          "confirmed_by": ["witness"]}
+    with (Path(data) / "events.jsonl").open("a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps(ev) + "\n")
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "third-party archived copy" in model
+    # the wording may mention the provider's copy only to say this is NOT it
+    assert "The provider's copy of this document no longer resolves." not in model
+
+
+def test_the_corroboration_sentence_names_only_the_vantages_that_gave_it():
+    assert build.gone_corroboration(["witness"]) == (
+        "corroborated by an independent Internet Archive capture")
+    assert "second, unrelated network" in build.gone_corroboration(["operator"])
+    both = build.gone_corroboration(["witness", "operator"])
+    assert "Internet Archive" in both and "second, unrelated network" in both
+    # an empty or unrecognised value must not claim both
+    for odd in ([], ["martian"], None):
+        assert build.gone_corroboration(odd) == "corroborated by a second, independent check"
+
+
+def test_a_host_being_down_does_not_advance_last_checked(corpus, tmp_path, monkeypatch):
+    data, _d1, _d2 = _two_versions(corpus)
+    with (Path(data) / "events.jsonl").open("a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"ts": "2026-09-30T06:00:00Z", "source": "prov/model",
+                             "target": SLUG, "outcome": "host-unreachable",
+                             "host": "dead.example", "after_failures": 3}) + "\n")
+    dist = _build_site(tmp_path, monkeypatch, data)
+    model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "2026-09-30" not in model, "a skipped target was published as checked"
+

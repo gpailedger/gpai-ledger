@@ -1045,3 +1045,35 @@ def test_a_host_that_answers_again_clears_its_failure_count(tmp_path, monkeypatc
     # with it, three more failures are needed
     assert len(seq) == 6
 
+
+def test_a_vantage_that_saw_the_document_alive_is_not_re_published_as_corroboration(tmp_path):
+    # the operator confirms a 404, then fetches the document alive from the same
+    # network; a later streak must not cite the operator as having corroborated it
+    p = tmp_path / "events.jsonl"
+    p.write_text("\n".join(json.dumps(e) for e in [
+        {"source": "s", "target": "t", "outcome": "error", "absence": "confirmed",
+         "confirmed_by": ["operator"], "ts": "2026-08-25T06:00:00Z"},
+        {"source": "s", "target": "t", "outcome": "live-attested",
+         "ts": "2026-08-26T09:00:00Z"},
+    ]) + "\n", encoding="utf-8")
+    st = rc_mod.absence_streaks(p)[("s", "t")]
+    assert st["confirmed_on"] == set()
+    assert st["confirmed_by"] == set(), "the withdrawn vantage survived the reset"
+
+
+def test_after_a_live_sighting_only_the_new_vantage_is_named(tmp_path, monkeypatch):
+    reg, data_root = _day1(tmp_path, monkeypatch)
+    with open(Path(data_root) / "events.jsonl", "a", encoding="utf-8", newline="\n") as fh:
+        for e in ({"ts": f"{_days_ago(3)}T09:00:00Z", "source": "prov/model",
+                   "target": TARGET, "outcome": "error", "error": "HTTP 404",
+                   "absence": "confirmed", "confirmed_by": ["operator"]},
+                  {"ts": f"{_days_ago(2)}T09:00:00Z", "source": "prov/model",
+                   "target": TARGET, "outcome": "live-attested", "vantage": "operator"}):
+            fh.write(json.dumps(e) + "\n")
+    monkeypatch.setattr(cap, "fetch", _seq([_err(), _err()]))
+    monkeypatch.setattr(cap, "wayback_witness", _w("absent", 404))
+    _run_wb(monkeypatch, reg, data_root)
+    e = _events(data_root)[-1]
+    assert e["absence"] == "confirmed"
+    assert e["confirmed_by"] == ["witness"], "a stale vantage was re-published"
+

@@ -396,7 +396,10 @@ def last_checked_map():
         except json.JSONDecodeError:
             continue
         src, ts = e.get("source"), e.get("ts", "")
-        if src and ts:
+        # a target the sweep deliberately skipped was not checked: a host being
+        # down must never advance "Last checked" on a model page
+        if src and ts and e.get("outcome") not in ("host-unreachable",
+                                                   "host-unreachable-summary"):
             out[src] = max(out.get(src, ""), ts)
         if e.get("outcome") == "scope-repack" and e.get("prior_sha256"):
             REPACKED_SHAS.add(e["prior_sha256"])
@@ -424,31 +427,61 @@ def _track_absence(e, src) -> None:
         GONE_TARGETS.pop(key, None)
     elif outcome == "error" and absence == "confirmed" and e.get("ts"):
         rec = GONE_TARGETS.setdefault(key, {"first": e["ts"], "by": [],
-                                            "url": e.get("url")})
+                                            "url": e.get("url"),
+                                            "kind": e.get("kind")})
         rec["last"] = e["ts"]
         rec["url"] = rec["url"] or e.get("url")
+        rec["kind"] = rec.get("kind") or e.get("kind")
         for v in e.get("confirmed_by") or []:
             if isinstance(v, str) and v not in rec["by"]:
                 rec["by"].append(v)
 
 
+# what a confirmed absence means depends on WHOSE copy stopped answering: the
+# provider's own document, a third party's mirror of it, or a page we merely
+# watch. Saying "the provider's copy" for all three would be a false statement
+# about the provider.
+GONE_WORDING = {
+    "provider-live": "The provider's copy of this document no longer resolves.",
+    "provider-page": "The provider page carrying this document no longer resolves.",
+    "aial-archive": "The third-party archived copy of this document no longer "
+                    "resolves (this is AIAL's mirror, not the provider's copy).",
+    "cop-doc": "The archived Code of Practice document no longer resolves.",
+    "regulatory": "The official document at this address no longer resolves.",
+}
+GONE_WORDING_DEFAULT = "A page this project monitors no longer resolves."
+
+
+def gone_corroboration(by) -> str:
+    """How a confirmed absence was corroborated — naming only the vantages that
+    actually did so. An unrecognised or empty set claims nothing."""
+    s = {v for v in (by or []) if isinstance(v, str)}
+    archive = "an independent Internet Archive capture" if "witness" in s else ""
+    network = "a second, unrelated network" if "operator" in s else ""
+    if archive and network:
+        return f"corroborated by {archive} and from {network}"
+    if archive:
+        return f"corroborated by {archive}"
+    if network:
+        return f"checked from {network} as well as this project's daily runner"
+    return "corroborated by a second, independent check"
+
+
 def gone_notes(sid: str) -> list:
-    """Banner(s) for a source whose provider copy is confirmed no longer
+    """Banner(s) for a source whose tracked copy is confirmed no longer
     resolving — the ledger's own reason to exist, so it is stated on the page."""
     out = []
     for (s, _t), r in sorted(GONE_TARGETS.items()):
         if s != sid:
             continue
-        by = tuple(sorted(r.get("by") or ()))
-        how = ("checked from a second, unrelated network as well as this project's "
-               "daily runner" if by == ("operator",) else
-               "corroborated by an independent Internet Archive capture" if by == ("witness",)
-               else "corroborated by an independent Internet Archive capture and from "
-                    "a second, unrelated network")
+        headline = GONE_WORDING.get(r.get("kind") or "", GONE_WORDING_DEFAULT)
         day = str(r.get("first", ""))[:10].replace("-", "") + "T"
         out.append(
-            f"<p><strong>The provider's copy of this document no longer resolves.</strong> "
-            f"Confirmed on {esc(human_date(day))} — {how}. The archived version(s) below, "
+            # headline and corroboration are this file's own constants, not
+            # third-party text: escaping them only mangles their apostrophes
+            f"<p><strong>{headline}</strong> "
+            f"Confirmed on {esc(human_date(day))} — {gone_corroboration(r.get('by'))}. "
+            f"The archived version(s) below, "
             f"with their SHA-256 hashes and OpenTimestamps proofs, are unaffected"
             + (f"; the address that stopped answering is "
                f"<code>{esc(str(r.get('url')))}</code>" if r.get("url") else "")
@@ -507,22 +540,33 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()
             f"longer in the corpus and no prune event names it — see the event log)</span>")
 
 
+# A snapshot witnesses a capture only if it was taken at about the same time.
+# One from months earlier shows the page before we stored it; one from days
+# later shows the page after, and neither can vouch for the bytes we hold. The
+# window is generous because a save is triggered right after a fetch.
+WAYBACK_CONCURRENT_S = 3600
+
+
 def wayback_witnesses(m):
-    """Whether the recorded snapshot witnesses THIS capture: True when it was
-    made at or after our fetch, False when the Wayback Machine answered with an
-    older capture instead of crawling anew, None when it cannot be told.
-    Manifests written before wayback_save recorded `fresh` are judged from the
-    snapshot timestamp against the recorded fetch time."""
+    """Whether the recorded snapshot witnesses THIS capture — that is, whether
+    it was taken within WAYBACK_CONCURRENT_S of our fetch, either side. False
+    for a pre-existing capture the Wayback Machine returned instead of crawling,
+    and equally for one obtained long afterwards (a backlog drain archives the
+    URL as it is today, not the document we stored). None when it cannot be
+    told."""
     wb = m.get("wayback") or {}
     if not wb.get("ok") or not wb.get("snapshot"):
         return None
-    if "fresh" in wb:
-        return wb["fresh"]
-    ts = re.search(r"/web/(\d{8})", wb["snapshot"])
-    fetched = ((m.get("http") or {}).get("fetched_at") or "")[:10].replace("-", "")
+    ts = re.search(r"/web/(\d{14})", wb["snapshot"])
+    fetched = (m.get("http") or {}).get("fetched_at") or ""
     if not ts or not fetched:
         return None
-    return ts.group(1) >= fetched
+    try:
+        snap = datetime.strptime(ts.group(1), "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+        got = datetime.strptime(fetched, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+    return abs((snap - got).total_seconds()) <= WAYBACK_CONCURRENT_S
 
 
 def wayback_cell(m):
@@ -1542,9 +1586,13 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             f"this capture's own OpenTimestamps proof (site-relative; "
             f"<code>null</code> when not served); <code>wayback_snapshot</code> — the "
             f"Wayback Machine capture recorded for it, or <code>null</code>; "
-            f"<code>wayback_witnesses_capture</code> — <code>false</code> when that "
-            f"snapshot is an older capture the Wayback Machine returned instead of "
-            f"crawling anew, so it witnesses the page before this capture</li>"
+            f"<code>wayback_witnesses_capture</code> — <code>true</code> only when "
+            f"the snapshot was taken within an hour of this capture; "
+            f"<code>false</code> when it is an older capture the Wayback Machine "
+            f"returned instead of crawling, or one saved long afterwards, neither "
+            f"of which vouches for these bytes; "
+            f"<code>wayback_snapshot_same_url</code> — <code>false</code> when the "
+            f"snapshot archives a redirect target rather than the tracked address</li>"
             f"</ul>"
             f"<h2>Scope of the changes feed</h2>"
             f"<p>The <a href='{PREFIX}changes/'>changes feed</a> covers content "
@@ -1763,9 +1811,12 @@ def main(generated: str = None) -> int:
                                 if ots_src.exists() else None),
                     "wayback_snapshot": ((m.get("wayback") or {}).get("snapshot")
                                          if (m.get("wayback") or {}).get("ok") else None),
-                    # false when the snapshot is an older capture the Wayback
-                    # Machine returned instead of crawling anew
+                    # true only when the snapshot was taken at about the same
+                    # time as this capture; false when it is an older capture the
+                    # Wayback Machine returned instead of crawling, or one saved
+                    # long afterwards, neither of which vouches for these bytes
                     "wayback_witnesses_capture": wayback_witnesses(m),
+                    "wayback_snapshot_same_url": (m.get("wayback") or {}).get("same_url"),
                 })
                 # a genuine content change feeds the /changes/ log and the Atom
                 # feed. The ledger's common-extractor verdict decides whether one
@@ -1926,7 +1977,8 @@ def main(generated: str = None) -> int:
                      f"{esc(STATUS_LABELS.get(source['status'], source['status']))}</strong>"
                      + (" <span class='muted'>(no longer tracked)</span>"
                         if source.get("retired") else "")
-                     + (" <span class='muted'>(provider copy no longer resolves)</span>"
+                     + (" <span class='muted'>(a tracked address no longer "
+                        "resolves)</span>"
                         if any(s == source["id"] for s, _t in GONE_TARGETS) else ""))
             status_rows.append((
                 (source["provider"].lower(), source["model"].lower()),

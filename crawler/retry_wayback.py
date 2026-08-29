@@ -240,11 +240,12 @@ def main() -> int:
             "snapshot predates the capture" if wb.get("ok") else "previous attempt failed")
         print(f"retrying ({why}): {m['source_id']} {url[:90]}", flush=True)
         result = cap.wayback_save(url)
-        if wb:
-            m.setdefault("wayback_attempts", []).append(wb)
         # never trade a snapshot we hold for a failed retry: an older snapshot is
         # weaker evidence than a fresh one, but it is evidence
         if result.get("ok") or not wb.get("snapshot"):
+            if wb:
+                # the block being replaced becomes history exactly once
+                m.setdefault("wayback_attempts", []).append(wb)
             m["wayback"] = result
         else:
             # keep the snapshot, but say what the refresh attempt answered —

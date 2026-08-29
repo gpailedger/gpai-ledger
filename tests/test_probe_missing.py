@@ -227,3 +227,11 @@ def test_a_candidate_it_will_not_promote_reaches_the_decision_queue(tmp_path, mo
     assert "does not name this model" in entry["why"]
     assert entry["issue"] is None            # an issue is opened by the hunt step
 
+
+def test_template_markers_survive_the_line_breaks_pdf_extraction_leaves():
+    # extraction breaks phrases across lines; scoring raw text made most real
+    # provider PDFs score zero and silently stopped them being promoted
+    broken = ("Public Summary of\ntraining content\n\nArticle\n53(1)(d) of "
+              "Regulation (EU) 2024/1689\n1.3 Modalities,   overall\ntraining data size")
+    assert PM.looks_like_summary(broken) >= PM.MIN_MARKERS
+

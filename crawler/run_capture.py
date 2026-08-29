@@ -108,6 +108,28 @@ def host_of(url: str) -> str:
         return ""
 
 
+# Only these mean the origin never answered. A 429, a 5xx, an oversize body or a
+# refused redirect are all answers — the host is up and talking, and skipping the
+# rest of its targets on that basis would hide real state behind a false verdict.
+TRANSPORT_EXC = ("ConnectionError", "ConnectTimeout", "ReadTimeout", "Timeout",
+                 "SSLError", "ProxyError", "NewConnectionError", "MaxRetryError",
+                 "socket.timeout", "TimeoutError")
+
+
+def is_transport_failure(exc) -> bool:
+    if getattr(exc, "status_code", None) is not None:
+        return False
+    names = {type(exc).__name__}
+    cause = exc
+    for _ in range(4):          # requests wraps urllib3 which wraps socket
+        cause = getattr(cause, "__cause__", None) or getattr(cause, "__context__", None)
+        if cause is None:
+            break
+        names.add(type(cause).__name__)
+    blob = repr(exc)
+    return bool(names & set(TRANSPORT_EXC)) or any(t in blob for t in TRANSPORT_EXC)
+
+
 def absence_streaks(events_path: Path) -> dict:
     """(source, target) -> {"absent_on": {dates}, "contradicted_on": {dates}} for
     the target's current unbroken streak of absence events, reset by any success
@@ -146,7 +168,12 @@ def absence_streaks(events_path: Path) -> dict:
                 # the document live: it demonstrably existed that day
                 entry["contradicted_on"].add(day)
                 entry["absent_on"].clear()
+                # the confirmation is void in its entirety once the document is
+                # seen alive: keeping the vantages would let a later streak
+                # re-publish, as corroboration, a vantage whose last observation
+                # here was that the document EXISTED
                 entry["confirmed_on"].clear()
+                entry["confirmed_by"].clear()
             else:
                 entry["absent_on"].add(day)
                 if absence == "confirmed":
@@ -291,8 +318,8 @@ def main() -> int:
                 host_failures.pop(host, None)      # the host answered
             except Exception as exc:  # noqa: BLE001
                 status = getattr(exc, "status_code", None)
-                if status is None:
-                    # no HTTP answer at all: the host, not the document
+                if is_transport_failure(exc):
+                    # the origin never answered: the host, not the document
                     host_failures[host] = host_failures.get(host, 0) + 1
                 else:
                     host_failures.pop(host, None)
