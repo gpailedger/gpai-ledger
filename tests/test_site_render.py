@@ -69,7 +69,8 @@ def test_version_page_restricted_source():
     assert "not served (provider objection honored)" in out
     assert f"{SHA}.pdf</a>" not in out
     assert "<h2>Structured facts</h2>" in out
-    assert "obtain the document from the provider or the Wayback snapshot" in out
+    # source-neutral: a withheld capture is not always the provider's own file
+    assert "obtain the file from the target address above" in out
 
 
 def test_version_page_cop_doc_warning():
@@ -418,12 +419,13 @@ V1, V2 = "20260801T060000Z", "20260815T060000Z"
 SLUG = cap.target_slug("provider-live", FULL_SRC["targets"][0]["url"])
 
 
-def _build_site(tmp_path, monkeypatch, data_root, vdiffs=None, drift=None):
+def _build_site(tmp_path, monkeypatch, data_root, vdiffs=None, drift=None,
+                src=None):
     root = tmp_path / "root"
     (root / "crawler").mkdir(parents=True)
     (root / "reports").mkdir()
     (root / "crawler" / "sources.json").write_text(
-        json.dumps({"sources": [FULL_SRC]}), encoding="utf-8")
+        json.dumps({"sources": [src or FULL_SRC]}), encoding="utf-8")
     if vdiffs is not None:
         (root / "reports" / "version-diffs.json").write_text(json.dumps(vdiffs), encoding="utf-8")
     if drift is not None:
@@ -874,4 +876,105 @@ def test_an_evaluation_is_shown_as_the_assessment_it_is():
     assert "not the provider's document" in html
     assert "Document versions" not in html
     assert "Watch-surface captures" not in html
+
+
+# --- F5. a third party's own research is archived, not republished -----------
+
+EVAL_URL = ("https://raw.githubusercontent.com/AIAccountabilityLab/"
+            "gpai-training-transparency/main/evals/model.yaml")
+EVAL_SLUG = cap.target_slug("aial-eval", EVAL_URL)
+# a line that exists ONLY in AIAL's file: if it reaches the built site anywhere,
+# the ledger has republished their work
+EVAL_TEXT = ("model_name: Model" + chr(10) + "scores:" + chr(10) +
+             "  clarity: 9" + chr(10) +
+             "  note: AIALS-OWN-ASSESSMENT-PROSE" + chr(10))
+SRC_WITH_EVAL = dict(FULL_SRC, targets=[
+    {"kind": "provider-live", "url": "https://example.org/doc.pdf"},
+    {"kind": "aial-eval", "url": EVAL_URL},
+])
+
+
+def _corpus_with_eval(corpus):
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 the provider summary",
+                       text="PROVIDERS-OWN-SUMMARY-PROSE", tslug=SLUG)
+    corpus.add_capture(ts=V1, raw=EVAL_TEXT.encode("utf-8"), ext=".yaml",
+                       text=EVAL_TEXT, kind="aial-eval", url=EVAL_URL,
+                       tslug=EVAL_SLUG)
+    corpus.finish()
+
+
+def test_an_evaluations_bytes_and_words_never_reach_the_built_site(corpus, tmp_path,
+                                                                   monkeypatch):
+    # AIAL's scored rubric is their research output, published with no licence
+    # granting redistribution: the ledger proves what it holds without serving it
+    _corpus_with_eval(corpus)
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=SRC_WITH_EVAL)
+
+    served = sorted(p.name for p in (dist / "blob").glob("*"))
+    assert not [n for n in served if n.endswith((".yaml", ".yml"))],         f"AIAL's file was copied into the site: {served}"
+    for page in dist.rglob("*.html"):
+        assert "AIALS-OWN-ASSESSMENT-PROSE" not in page.read_text(encoding="utf-8"),             f"AIAL's assessment was republished on {page.name}"
+    assert "AIALS-OWN-ASSESSMENT-PROSE" not in (dist / "ledger.json").read_text(
+        encoding="utf-8")
+
+
+def test_withholding_one_capture_does_not_withhold_the_providers_document(
+        corpus, tmp_path, monkeypatch):
+    # the restriction is per capture: the same source serves the provider's own
+    # document in full while withholding a third party's assessment of it
+    _corpus_with_eval(corpus)
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=SRC_WITH_EVAL)
+    served = sorted(p.name for p in (dist / "blob").glob("*"))
+    assert [n for n in served if n.endswith(".pdf")],         f"the provider's document stopped being served: {served}"
+    pages = {p: p.read_text(encoding="utf-8") for p in dist.rglob("index.html")}
+    assert any("PROVIDERS-OWN-SUMMARY-PROSE" in h for h in pages.values()),         "the provider's own document stopped being shown in full"
+
+
+def test_a_withheld_capture_still_proves_what_the_ledger_holds(corpus, tmp_path,
+                                                               monkeypatch):
+    _corpus_with_eval(corpus)
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=SRC_WITH_EVAL)
+    ev = [h for h in (p.read_text(encoding="utf-8") for p in dist.rglob("index.html"))
+          if "not served (third-party research" in h]
+    assert len(ev) == 1, "expected exactly one withheld version page"
+    html = ev[0]
+    assert "<h2>Structured facts</h2>" in html
+    assert "Canonical text SHA-256" in html
+    # the verify instruction must not tell a reader to get AIAL's file "from the
+    # provider" — it never came from the provider
+    assert "obtain the document from the provider" not in html
+    assert "obtain the file from the target address above" in html
+
+
+def test_the_dataset_never_offers_a_download_for_a_withheld_capture(corpus, tmp_path,
+                                                                    monkeypatch):
+    _corpus_with_eval(corpus)
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=SRC_WITH_EVAL)
+    recs = json.loads((dist / "ledger.json").read_text(encoding="utf-8"))["records"]
+    by_kind = {r["kind"]: r for r in recs}
+    assert by_kind["aial-eval"]["blob_url"] is None
+    # the facts that make the record verifiable are still there
+    assert by_kind["aial-eval"]["sha256"] and by_kind["aial-eval"]["text_sha256"]
+    assert by_kind["provider-live"]["blob_url"], "the provider's blob went missing"
+
+
+def test_restriction_is_per_capture_not_per_source():
+    src, ev = {}, {"target_kind": "aial-eval"}
+    doc = {"target_kind": "provider-live"}
+    assert build.restriction_of(src, ev)
+    assert build.restriction_of(src, doc) is None
+    # an objecting provider still restricts everything under that source
+    objecting = {"restricted": "provider objection"}
+    assert build.restriction_of(objecting, doc) == "provider objection"
+
+
+def test_a_kind_is_only_unrestricted_deliberately():
+    # dropping aial-eval from this map republishes AIAL's research: it may only
+    # happen once they have granted permission
+    assert "aial-eval" in build.RESTRICTED_KINDS
+
+
+def test_a_removed_evaluation_does_not_read_as_the_providers_document_vanishing():
+    note = build.GONE_WORDING["aial-eval"]
+    assert "not the" in note and "provider's document" in note
 

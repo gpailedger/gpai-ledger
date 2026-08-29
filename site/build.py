@@ -450,6 +450,9 @@ GONE_WORDING = {
                     "resolves (this is AIAL's mirror, not the provider's copy).",
     "cop-doc": "The archived Code of Practice document no longer resolves.",
     "regulatory": "The official document at this address no longer resolves.",
+    "aial-eval": "The third-party evaluation of this summary is no longer "
+                 "published at this address (this is AIAL's assessment, not the "
+                 "provider's document).",
 }
 GONE_WORDING_DEFAULT = "A page this project monitors no longer resolves."
 
@@ -601,6 +604,24 @@ def wayback_cell(m):
     return f"<a href='{url_attr(snap)}'>{esc(label)}</a>{caption}"
 
 
+# Capture kinds whose CONTENT belongs to someone other than the provider this
+# ledger holds to account. AIAL's scored evaluations are their own research
+# output, published with no licence granting redistribution: the ledger archives
+# them so a revised grade stays recoverable, and publishes what it holds (size,
+# canonical text hash, timestamp proof) without republishing their words.
+# Remove a kind from here only once the rights holder has said yes.
+RESTRICTED_KINDS = {
+    "aial-eval": "third-party research, archived but not republished here",
+}
+
+
+def restriction_of(source, m):
+    """Why this capture's bytes and text are withheld, or None to serve them.
+    Per capture, not per source: a source can carry both the provider's document
+    and another party's assessment of it, and only the latter is withheld."""
+    return source.get("restricted") or RESTRICTED_KINDS.get(m.get("target_kind"))
+
+
 def structured_facts(manifest, text) -> str:
     """Restricted-source treatment: publish verifiable facts about the document
     (hashes, size, length, inner files) without republishing its content.
@@ -733,7 +754,7 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                         prior_ref=None) -> str:
     """One version page's body. Pure: all facts come from the manifest, the
     registry source entry, and the (already-read) extracted text."""
-    restricted = source.get("restricted")
+    restricted = restriction_of(source, m)
     ext_part, blob_name, _shared_ots = blob_names(m)
     # every capture serves ITS OWN proof (identical bytes are captured under
     # several targets and dates; the shared <sha>.<ext>.ots name keeps serving
@@ -783,10 +804,11 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
     ots_cell = (f"<a href='{esc(serve_ots)}' download>{esc(ots_blob)}</a> "
                 f"<span class='muted'>({ots_caption})</span>" if ots_exists else "not stamped")
     if restricted:
-        verify_line = ("<p class='muted'>Verify: obtain the document from "
-                       "the provider or the Wayback snapshot, then "
-                       "<code>sha256sum</code> it — it must equal the hash "
-                       "above; the <code>.ots</code> proof dates that hash.</p>")
+        verify_line = ("<p class='muted'>Verify: obtain the file from the "
+                       "target address above, or from the Wayback snapshot, "
+                       "then <code>sha256sum</code> it — it must equal the "
+                       "hash above; the <code>.ots</code> proof dates that "
+                       "hash.</p>")
     else:
         verify_line = (f"<p class='muted'>Verify: <code>sha256sum {esc(blob_name)}</code> "
                        f"must equal the hash above (the filename IS the expected "
@@ -988,7 +1010,10 @@ def render_version_sections(rows_data, inpage_urls) -> list:
             "captures of <strong>their assessment</strong>, archived here because "
             "they are revised over time and a score is otherwise unrecoverable once "
             "changed. It is AIAL's research judgement, not a legal determination, "
-            "and not the provider's document. Attribution: "
+            "and not the provider's document. Their assessment is archived "
+            "here but <strong>not republished</strong>: each capture below "
+            "proves what was published and when, and points to AIAL for the "
+            "content. Attribution: "
             "<a href='https://aial.ie/research/gpai-training-transparency/'>aial.ie"
             "</a>.</p>"
             + wrap_table("Third-party evaluation", VHEAD + "".join(eval_rows)))
@@ -1730,7 +1755,6 @@ def main(generated: str = None) -> int:
         active_slugs = {cap.target_slug(t["kind"], t["url"])
                         for t in source.get("targets", [])}
         inpage_urls = {t["url"] for t in source.get("targets", []) if t.get("inpage")}
-        restricted = source.get("restricted")
 
         # pass 1: read every version's manifest, mint page dirs, copy blobs
         entries = []          # (m, cap_slug, vdir, tslug, raw_exists, ots_exists, text, raw_txt_len)
@@ -1749,6 +1773,7 @@ def main(generated: str = None) -> int:
                     skipped.append((sid, ver["dir"]))
                     continue
                 m = json.loads(manifest_path.read_text(encoding="utf-8"))
+                restricted = restriction_of(source, m)
                 cap_slug = cap_dir.name
                 vdir = model_dir / "v" / cap_slug
                 if vdir.exists():
@@ -1763,9 +1788,10 @@ def main(generated: str = None) -> int:
                 _, blob_name, ots_blob = blob_names(m)
                 blob_dir = DIST / "blob"
                 blob_dir.mkdir(parents=True, exist_ok=True)
-                # restricted sources (provider objection honored): structured facts,
-                # hashes, and the OTS proof are published; the document bytes and
-                # extracted text are NOT copied into the site
+                # restricted captures (a provider objection, or a third party's
+                # own work): structured facts, hashes, and the OTS proof are
+                # published; the bytes and extracted text are NOT copied into the
+                # site, so nothing this project may not redistribute is served
                 if raw_src.exists() and not restricted \
                         and not (blob_dir / blob_name).exists():
                     shutil.copy2(raw_src, blob_dir / blob_name)
