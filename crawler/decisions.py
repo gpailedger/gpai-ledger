@@ -97,7 +97,7 @@ def add_candidates(cands, pending=None) -> dict:
     return pending
 
 
-def issue_body(k: str, c: dict) -> str:
+def issue_body(k: str, c: dict, notify: str = "") -> str:
     known = ("It names a source this ledger already tracks: "
              f"`{c['source_id']}`." if c.get("source_id") else
              "**No source id yet** — approving creates one, and a source id "
@@ -124,7 +124,11 @@ def issue_body(k: str, c: dict) -> str:
         f"Approving only means *track this*. The crawler still fetches the "
         f"document itself and stores it with a hash and a timestamp proof before "
         f"the site asserts anything about it.\n\n"
-        f"<!-- candidate:{k} -->\n")
+        # GitHub never notifies you about your OWN actions, so this issue has to
+        # be opened by the workflow's bot identity; the mention then reaches the
+        # owner whatever the repository's watch setting is
+        + (f"/cc @{notify}\n\n" if notify else "")
+        + f"<!-- candidate:{k} -->\n")
 
 
 def gh(method: str, path: str, token: str, **kw):
@@ -147,7 +151,8 @@ def propose(repo: str, token: str, limit: int = 10) -> int:
                  f"({c.get('provider') or 'unknown provider'})")
         try:
             issue = gh("POST", f"/repos/{repo}/issues", token,
-                       json={"title": title[:200], "body": issue_body(k, c),
+                       json={"title": title[:200],
+                             "body": issue_body(k, c, notify=repo.split("/")[0]),
                              "labels": [LABEL]})
         except Exception as exc:  # noqa: BLE001 — one refusal must not lose the rest
             failed += 1

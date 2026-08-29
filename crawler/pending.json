@@ -1,4 +1,15 @@
 {
+  "59bbd7c324ceb90a": {
+    "provider": "IBM",
+    "model": "Granite 4.0 H",
+    "source_id": "ibm/granite-4-0-h",
+    "url": "https://github.com/ibm-granite/granite-4.0-language-models/tree/main/disclosures",
+    "kind": "provider-page",
+    "why": "per-dataset JSON disclosures, the same question as Granite 4.1 — whether a structured disclosure is an Article 53(1)(d) public summary",
+    "classification": "lead-only (folder listed on GitHub; 9 files, per-model JSON)",
+    "first_seen": "2026-08-29T12:49:31Z",
+    "issue": null
+  },
   "5ef7a26094293a77": {
     "provider": "IBM",
     "model": "Granite 4.1",

@@ -54,6 +54,13 @@ def test_the_issue_body_carries_the_key_and_the_reply_syntax():
     assert "https://prov.example/doc.pdf" in body
 
 
+def test_the_issue_mentions_the_owner_so_the_e_mail_does_not_depend_on_watching():
+    k = _queue()
+    c = json.loads(DEC.PENDING.read_text(encoding="utf-8"))[k]
+    assert "/cc @gpailedger" in DEC.issue_body(k, c, notify="gpailedger")
+    assert "/cc @" not in DEC.issue_body(k, c)          # no mention, no stray text
+
+
 # --- the trust boundary ---
 
 @pytest.mark.parametrize("assoc", ["", "NONE", "CONTRIBUTOR", "COLLABORATOR",
