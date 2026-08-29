@@ -1,4 +1,4 @@
-# Relocation hunt — 2026-08-28 13:57 UTC
+# Relocation hunt — 2026-08-29 09:55 UTC
 
 ## microsoft/mai-image-2 — unreachable-at-recorded-location (11 sweeps)
 
