@@ -23,13 +23,15 @@
   "wayback": {
     "ok": true,
     "status_code": 200,
-    "snapshot": "https://web.archive.org/web/20260717210556/https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/overview.html",
-    "at": "2026-08-11T10:53:24Z",
-    "last_refresh_attempt": "2026-08-28T13:03:03Z",
-    "prior_gave_up": "exhausted 5 answered attempts (5 in total)",
-    "gave_up_cleared": "cleared 2026-08-28: the attempt cap was reached under anonymous Save Page Now, whose every answered attempt returned the same pre-existing capture instead of crawling; the authenticated SPN2 API submits a real capture job, so the cap no longer reflects what can be archived",
-    "last_refresh_error": "error:not-found",
-    "last_refresh_via": "spn2"
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829073829/https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/overview.html",
+    "snapshot_ts": "20260829073829",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a8dfd84dfc3f063665b92d35c0b9748a3c6b87f6",
+    "via": "spn2",
+    "requested_at": "2026-08-29T07:37:30Z",
+    "at": "2026-08-29T07:38:50Z"
   },
   "ots": {
     "ok": true,
@@ -112,6 +114,17 @@
       "via": "spn2",
       "requested_at": "2026-08-28T13:02:54Z",
       "at": "2026-08-28T13:03:03Z"
+    },
+    {
+      "ok": true,
+      "status_code": 200,
+      "snapshot": "https://web.archive.org/web/20260717210556/https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/overview.html",
+      "at": "2026-08-11T10:53:24Z",
+      "last_refresh_attempt": "2026-08-28T13:03:03Z",
+      "prior_gave_up": "exhausted 5 answered attempts (5 in total)",
+      "gave_up_cleared": "cleared 2026-08-28: the attempt cap was reached under anonymous Save Page Now, whose every answered attempt returned the same pre-existing capture instead of crawling; the authenticated SPN2 API submits a real capture job, so the cap no longer reflects what can be archived",
+      "last_refresh_error": "error:not-found",
+      "last_refresh_via": "spn2"
     }
   ]
 }
