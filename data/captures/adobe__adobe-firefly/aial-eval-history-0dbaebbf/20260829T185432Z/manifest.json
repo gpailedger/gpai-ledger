@@ -36,10 +36,25 @@
     "at": "2026-08-29T18:54:38Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829224504/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/evals/adobe-firefly.yaml",
+    "snapshot_ts": "20260829224504",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-f18e41b2f672ea8352979989436ec4329236f3fa",
     "via": "spn2",
-    "requested_at": "2026-08-29T19:48:19Z",
-    "at": "2026-08-29T19:50:20Z"
-  }
+    "requested_at": "2026-08-29T22:45:03Z",
+    "at": "2026-08-29T22:45:09Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T19:48:19Z",
+      "at": "2026-08-29T19:50:20Z"
+    }
+  ]
 }
