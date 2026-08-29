@@ -182,6 +182,13 @@ def registry_index() -> dict:
     idx = {}
     for s in srcs:
         idx[(_norm(s.get("provider")), _norm(s.get("model")))] = s["id"]
+        # a model renamed upstream is carried in the registry as "Old / New"
+        # (Anthropic's "Claude Mythos 5 / Claude Fable 5"); each side on its own
+        # is an exact name this project claims for that source, so matching one
+        # is a match, not a guess
+        for alias in str(s.get("model") or "").split("/"):
+            if alias.strip():
+                idx.setdefault((_norm(s.get("provider")), _norm(alias)), s["id"])
         for t in s.get("targets", []):
             if t.get("kind") == "aial-eval":
                 idx[("file", t["url"].rsplit("/", 1)[-1].lower())] = s["id"]
@@ -200,14 +207,38 @@ def resolve(text: str, filename: str, idx: dict) -> str:
     filename is the thing that changed under renames. Falls back to the filename,
     then to AIAL's own source — never guesses a neighbouring model."""
     def field(name):
-        for line in text.splitlines():
-            if line.startswith(name + ":"):
-                return line.split(":", 1)[1].strip().strip('"').strip()
-        return ""
+        return _field(text, name)
     hit = idx.get((_norm(field("organization")), _norm(field("model_name"))))
     # then the document it graded: survives a rename on either side
     hit = hit or idx.get(("url", _norm_url(field("public_summary_link"))))
     return hit or idx.get(("file", filename.lower())) or FALLBACK_SOURCE
+
+
+def _field(text: str, name: str) -> str:
+    for line in (text or "").splitlines():
+        if line.startswith(name + ":"):
+            return line.split(":", 1)[1].strip().strip('"').strip()
+    return ""
+
+
+def _identity(text: str, filename: str) -> tuple:
+    """What the evaluation says it is: the provider and model it assesses. Used
+    when the ledger cannot place it, so the capture still describes itself."""
+    return (_field(text, "organization") or "AI Accountability Lab (AIAL)",
+            _field(text, "model_name") or filename.rsplit(".", 1)[0])
+
+
+def newest_upstream_date(store, sid: str, tslug: str) -> str:
+    """The upstream date of the newest state already stored for this target."""
+    entry = store.state.get(store.key(sid, tslug)) or {}
+    d = entry.get("last_capture")
+    if not d:
+        return ""
+    try:
+        m = json.loads((DATA / d / "manifest.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return ""
+    return str(m.get("git_commit_date") or "")
 
 
 def pinned_url(commit: str, filename: str) -> str:
@@ -224,6 +255,8 @@ def identity_url(filename: str) -> str:
 VERSION_KIND = "aial-eval-page"
 VERSION_RE = None            # compiled on first use; see version_links()
 MAX_VERSION_PAGES = int(os.environ.get("GPAI_EVAL_VERSION_MAX", "60") or "60")
+# the sweep has a per-host circuit breaker for exactly this; so does this loop
+HOST_FAILURES_BEFORE_STOP = 3
 
 
 def version_links(html: str, page_url: str) -> list:
@@ -262,7 +295,7 @@ def _latest_pages(kind: str) -> dict:
     return best
 
 
-def harvest_version_pages(store) -> tuple:
+def harvest_version_pages(store, started=None) -> tuple:
     """Capture the earlier-version pages AIAL publishes for each evaluation.
 
     Discovery costs nothing: the links are read out of evaluation pages the sweep
@@ -282,12 +315,29 @@ def harvest_version_pages(store) -> tuple:
                 queued.add(url)
                 wanted.append((sid, url))
     stored = errors = 0
-    for sid, url in wanted[:MAX_VERSION_PAGES]:
+    started = time.monotonic() if started is None else started
+    consecutive = 0
+    for i, (sid, url) in enumerate(wanted[:MAX_VERSION_PAGES]):
+        # this is the module's only traffic to a third party's own server, and
+        # the loop most likely to meet an outage: pace it, stop on the clock, and
+        # give up on the host rather than hammering it while it is down
+        if time.monotonic() - started > BUDGET_S:
+            print(f"  budget reached — {len(wanted) - i} version page(s) left "
+                  f"for the next run", flush=True)
+            break
+        if consecutive >= HOST_FAILURES_BEFORE_STOP:
+            print(f"  aial.ie unreachable ({consecutive} consecutive failures) — "
+                  f"stopping; the rest are fetched on the next run", flush=True)
+            break
+        if i:
+            time.sleep(PAUSE_S)
         try:
             raw, meta = cap.fetch(url)
+            consecutive = 0
         except Exception as exc:                                  # noqa: BLE001
             print(f"  ERROR version page {url}: {exc!r}", flush=True)
             errors += 1
+            consecutive += 1
             continue
         ext = cap.guess_ext(meta.get("content_type", ""), url, raw)
         text, notes = cap.extract_text(raw, ext)
@@ -348,14 +398,36 @@ def main() -> int:
         ext = cap.guess_ext(meta.get("content_type", ""), url, raw)
         text, notes = cap.extract_text(raw, ext)
         sid = resolve(text or "", state["file"], idx)
+        # An evaluation the ledger cannot place is FILED under AIAL's source, but
+        # it is not a capture OF that source: inheriting its provider and model
+        # would publish "GPAI Training Transparency tracker" as the model of an
+        # evaluation of Claude Fable 5. Placement is a filing decision; the
+        # provider and model are a claim, and must come from the file.
+        own_provider, own_model = _identity(text or "", state["file"])
         tslug = cap.target_slug(KIND, identity_url(state["file"]))
         if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
             continue          # unchanged from the state already stored for it
+        # States are harvested oldest-first, so a state OLDER than the newest one
+        # already stored means an earlier run skipped it (a transient failure).
+        # Appending it now would record it as following a state it preceded, and
+        # prior_sha256 would assert a succession that never happened. Refuse, and
+        # say so: a gap that is reported can be repaired, a false chain cannot.
+        newest = newest_upstream_date(store, sid, tslug)
+        if newest and state["date"] < newest:
+            print(f"  SKIP   {state['file']} @{state['commit'][:8]} "
+                  f"({state['date'][:10]}) predates the newest state held for "
+                  f"this evaluation ({newest[:10]}) — storing it would imply a "
+                  f"succession that did not happen; re-harvest this target from "
+                  f"scratch to repair the gap", flush=True)
+            errors += 1
+            continue
         src = by_id.get(sid)
         cap.store_new_version(
             store, source_id=sid,
-            provider=(src or {}).get("provider", "AI Accountability Lab"),
-            model=(src or {}).get("model", state["file"].rsplit(".", 1)[0]),
+            provider=((src or {}).get("provider") if sid != FALLBACK_SOURCE
+                      else own_provider) or own_provider,
+            model=((src or {}).get("model") if sid != FALLBACK_SOURCE
+                   else own_model) or own_model,
             kind=KIND, tslug=tslug, event_url=url, raw=raw, meta=meta, ext=ext,
             text=text, notes=notes,
             text_sha=cap.canonical_text_sha(text) if text else None,
@@ -377,7 +449,7 @@ def main() -> int:
     left = max(0, len(todo) - attempted)
     print(f"harvest_eval_history: stored {stored}, errors {errors}, "
           f"{left} left for the next run")
-    _vstored, verrors = harvest_version_pages(store)
+    _vstored, verrors = harvest_version_pages(store, started=started)
     return 1 if (errors or verrors) else 0
 
 

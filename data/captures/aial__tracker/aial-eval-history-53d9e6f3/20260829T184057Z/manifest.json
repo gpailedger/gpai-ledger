@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3 675B Base 2512",
   "target_kind": "aial-eval-history",
   "sha256": "d53784ca2d04e9979391c3b58090c2d7252e32269d9149d09db7e37674ecbcfe",
   "size_bytes": 3832,
   "stored_as": "raw.yaml",
   "text_sha256": "68ab5956819ad32edc15a777ff370e999211ef89629c70c003c4dcf3b4d390a6",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/mistral-3-5.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/mistral-3-5.yaml",

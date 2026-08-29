@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Google",
+  "model": "Gemini 2.5 Flash Image",
   "target_kind": "aial-eval-history",
   "sha256": "f0557a6fac78e840c4e9e72d948f7c0a954d5c64797a9c17cdd15bda285f9998",
   "size_bytes": 3818,
   "stored_as": "raw.yaml",
   "text_sha256": "ceadf90acc812886d072e2a70691f52b21d91cafc0cfe8b8bb3286ddbfde929c",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/f0e434e12a91c0781460a6322c1b0be1236c8728/evals/gemini-2.5-flash-image.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/f0e434e12a91c0781460a6322c1b0be1236c8728/evals/gemini-2.5-flash-image.yaml",

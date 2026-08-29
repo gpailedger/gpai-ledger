@@ -340,3 +340,73 @@ def test_a_run_stops_on_the_clock_and_leaves_the_rest_for_the_next_run(_data_in_
     assert H.main() == 0
     assert calls == [], "the budget did not stop the run before any fetch"
 
+
+def test_an_evaluation_the_ledger_cannot_place_still_describes_itself(_data_in_tmp,
+                                                                      monkeypatch):
+    # filed under AIAL's source because the model is untracked, it must NOT
+    # inherit that source's provider and model: an evaluation of Claude Fable 5
+    # published as the model "GPAI Training Transparency tracker" is a false
+    # statement about both organisations
+    _registry(_data_in_tmp, [{"id": "aial/tracker",
+                              "provider": "AI Accountability Lab (AIAL)",
+                              "model": "GPAI Training Transparency tracker",
+                              "targets": []}])
+    monkeypatch.setattr(H, "commits", lambda tok: [
+        {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"claude-fable-5.yaml": "b1"})
+    monkeypatch.setattr(H, "token", lambda: "")
+    monkeypatch.setattr(H, "PAUSE_S", 0)
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    body = (NL.join(['model_name: "Claude Fable 5"', 'organization: "Anthropic"',
+                     "S1:", "  D1:", "    score: 9"]) + NL).encode()
+    monkeypatch.setattr(cap, "fetch", lambda url, **k: (body, {
+        "url": url, "final_url": url, "status_code": 200, "content_type": "text/plain",
+        "etag": None, "last_modified": None, "content_length": "1",
+        "fetched_at": "2026-08-29T14:00:00Z"}))
+    H.main()
+    m = json.loads(next((_data_in_tmp / "data" / "captures").glob("*/*/*/manifest.json"))
+                   .read_text(encoding="utf-8"))
+    assert m["source_id"] == "aial/tracker", "filing is unchanged"
+    assert m["provider"] == "Anthropic" and m["model"] == "Claude Fable 5"
+
+
+def test_a_renamed_model_resolves_through_a_registry_alias(_data_in_tmp):
+    # the ledger carries a renamed model as "Old / New"; each side alone is a
+    # name it claims, so matching one is a match and not a guess
+    _registry(_data_in_tmp, [{"id": "anthropic/claude-mythos-5-fable-5",
+                              "provider": "Anthropic",
+                              "model": "Claude Mythos 5 / Claude Fable 5",
+                              "targets": []}])
+    idx = H.registry_index()
+    text = NL.join(['model_name: "Claude Fable 5"', 'organization: "Anthropic"'])
+    assert H.resolve(text, "claude-fable-5.yaml", idx) == "anthropic/claude-mythos-5-fable-5"
+
+
+def test_a_state_older_than_one_already_held_is_refused_not_appended(_data_in_tmp,
+                                                                     monkeypatch):
+    # harvesting is oldest-first, so an older state means an earlier run skipped
+    # it; appending would make prior_sha256 assert a succession that never was
+    _registry(_data_in_tmp, [])
+    monkeypatch.setattr(H, "token", lambda: "")
+    monkeypatch.setattr(H, "PAUSE_S", 0)
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    seq = {"n": 0}
+    bodies = [b"newer state" + NL.encode(), b"older state" + NL.encode()]
+    monkeypatch.setattr(cap, "fetch", lambda url, **k: (
+        bodies[min(seq["n"], 1)], {"url": url, "final_url": url, "status_code": 200,
+                                   "content_type": "text/plain", "etag": None,
+                                   "last_modified": None, "content_length": "1",
+                                   "fetched_at": "2026-08-29T14:00:00Z"}))
+    monkeypatch.setattr(H, "commits", lambda tok: [
+        {"sha": "c2", "commit": {"author": {"date": "2026-05-01T00:00:00Z"}}}])
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"x.yaml": "newblob"})
+    assert H.main() == 0
+    seq["n"] = 1
+    monkeypatch.setattr(H, "commits", lambda tok: [
+        {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"x.yaml": "oldblob"})
+    assert H.main() == 1, "an out-of-order state was accepted silently"
+    mans = [json.loads(m.read_text(encoding="utf-8"))
+            for m in (_data_in_tmp / "data" / "captures").glob("*/*/*/manifest.json")]
+    assert len(mans) == 1 and mans[0]["git_blob_sha"] == "newblob"
+

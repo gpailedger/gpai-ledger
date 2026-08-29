@@ -891,10 +891,23 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                 "copyright policy), <em>not</em> the Art. 53(1)(d) public "
                 "training-data summary.</p>"
                 if m["target_kind"] == "cop-doc" else "")
-    return (f"<h1>{esc(source['model'])} — capture {esc(cap_slug)}</h1>"
-            + cop_warn +
+    # A capture describes itself. Almost always that agrees with the source it is
+    # filed under, but a third party's evaluation of a model this ledger does not
+    # track is FILED under their source while being ABOUT another model: taking
+    # the heading from the source published "GPAI Training Transparency tracker"
+    # as the model of an evaluation of Claude Fable 5.
+    shown_model = m.get("model") or source["model"]
+    shown_provider = m.get("provider") or source["provider"]
+    filed_note = ("" if shown_model == source.get("model") else
+                  f"<p class='muted'>Filed under "
+                  f"{esc(source.get('provider') or '')} — "
+                  f"{esc(source.get('model') or '')}, the source this project "
+                  f"captured it from; the assessment itself is of the model "
+                  f"named above.</p>")
+    return (f"<h1>{esc(shown_model)} — capture {esc(cap_slug)}</h1>"
+            + filed_note + cop_warn +
             f"<div class='tablewrap' role='region' aria-label='Capture provenance' tabindex='0'><table>"
-            f"<tr><th>Provider</th><td>{esc(source['provider'])}</td></tr>"
+            f"<tr><th>Provider</th><td>{esc(shown_provider)}</td></tr>"
             f"<tr><th>Target</th><td>{target_cell(kind_label, m['http']['url'])}</td></tr>"
             f"<tr><th>Fetched (UTC)</th><td>{esc(m['http']['fetched_at'])}</td></tr>"
             f"{upstream_row}"
@@ -1691,12 +1704,14 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             f"<ul>"
             f"<li><code>source_id</code>, <code>provider</code>, <code>model</code>"
             f" — what the capture belongs to</li>"
-            f"<li><code>kind</code> — one of <code>provider-live</code>, "
-            f"<code>provider-page</code>, <code>aial-archive</code>, "
-            f"<code>watch-page</code>, <code>regulatory</code>, "
-            f"<code>cop-doc</code> (labels as on the site: provider site / "
-            f"provider page / AIAL archived copy / watched page / official "
-            f"document / Code of Practice doc)</li>"
+            f"<li><code>kind</code> — one of "
+            + ", ".join(f"<code>{esc(k)}</code>" for k in sorted(KIND_LABELS))
+            + " (labels as on the site: "
+            + "; ".join(f"{esc(KIND_LABELS[k])}" for k in sorted(KIND_LABELS))
+            + "). The <code>aial-*</code> kinds are the AI Accountability Lab's "
+            "own research about a summary, archived here and deliberately not "
+            "served: those records carry hashes and provenance, and their "
+            "<code>blob_url</code> is null</li>"
             f"<li><code>captured_utc</code> — record-write timestamp (UTC, ISO "
             f"8601); it can trail the HTTP fetch by seconds (for fanned-out "
             f"captures, up to ~90s) — the version page's <em>Fetched</em> field "

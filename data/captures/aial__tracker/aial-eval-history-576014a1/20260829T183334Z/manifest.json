@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "OpenAI",
+  "model": "GPT-5",
   "target_kind": "aial-eval-history",
   "sha256": "81f331456f8d51a3c056355f34104a1c808b3aca0b63d26360cf868d5708bf2f",
   "size_bytes": 3759,
   "stored_as": "raw.yaml",
   "text_sha256": "683e562ed465baf3220d172c23ea3e5aadabc3fe79734de10024b08822f01325",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/f0e434e12a91c0781460a6322c1b0be1236c8728/evals/gpt-5.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/f0e434e12a91c0781460a6322c1b0be1236c8728/evals/gpt-5.yaml",

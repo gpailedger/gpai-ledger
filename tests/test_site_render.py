@@ -1144,3 +1144,35 @@ def test_a_harvested_capture_is_never_presented_as_a_superseded_target(corpus,
     assert "Third-party evaluation" in html
     assert "stood upstream from 20 Mar 2026" in html
 
+
+def test_a_capture_names_the_model_it_is_about_not_the_source_it_is_filed_under():
+    # an evaluation of a model the ledger does not track is FILED under AIAL's
+    # source; taking the heading from the source published "GPAI Training
+    # Transparency tracker" as the model of an evaluation of Claude Fable 5
+    src = {"provider": "AI Accountability Lab (AIAL)",
+           "model": "GPAI Training Transparency tracker"}
+    m = dict(mk_manifest(), target_kind="aial-eval-history",
+             provider="Anthropic", model="Claude Fable 5")
+    out = build.render_version_page(src, m, "20260829T183605Z", set(), "t", True, False)
+    assert "<h1>Claude Fable 5" in out
+    assert "<td>Anthropic</td>" in out
+    assert "Filed under" in out and "GPAI Training Transparency tracker" in out
+    # an ordinary capture agrees with its source and gains no filing note
+    same = dict(mk_manifest(), provider=SRC["provider"], model=SRC["model"])
+    assert "Filed under" not in build.render_version_page(
+        SRC, same, "20260815T060000Z", set(), "t", True, False)
+
+
+def test_the_dataset_page_never_names_a_kind_list_the_data_contradicts():
+    # the page used to enumerate six kinds while ledger.json already carried
+    # eight: a reader parsing the dataset would have been told the wrong schema
+    page = ROOT / "site" / "dist" / "dataset" / "index.html"
+    data = ROOT / "site" / "dist" / "ledger.json"
+    if not (page.exists() and data.exists()):
+        pytest.skip("site/dist not built")
+    html = page.read_text(encoding="utf-8")
+    for kind in build.KIND_LABELS:
+        assert kind in html, f"{kind} is missing from the dataset field description"
+    for rec in json.loads(data.read_text(encoding="utf-8"))["records"]:
+        assert rec["kind"] in html, f"{rec['kind']} is in the data but not described"
+

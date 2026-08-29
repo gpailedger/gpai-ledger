@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Mistral AI",
+  "model": "Devstral 2 123B Instruct 2502",
   "target_kind": "aial-eval-history",
   "sha256": "c0a4430b157f1ac20156031fd976312f9bd657699837cd16ffab945e925bb18a",
   "size_bytes": 3830,
   "stored_as": "raw.yaml",
   "text_sha256": "a1403416dc73b5193c23370b18ff481a967a78ecbc1b374da462de6b15bbb650",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/devstral-2.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/devstral-2.yaml",

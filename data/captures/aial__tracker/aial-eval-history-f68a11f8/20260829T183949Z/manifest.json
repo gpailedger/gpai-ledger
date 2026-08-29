@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Cohere",
+  "model": "Aya Vision 32B",
   "target_kind": "aial-eval-history",
   "sha256": "1a8d88e348ac3f8e1dffc9953f4566d80243db82fdaa3a2c6b261f1c84efae73",
   "size_bytes": 3797,
   "stored_as": "raw.yaml",
   "text_sha256": "25f95b7418787b042e103a05c50760433f7797bfe0d5282ff288f71ca3de0a17",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/aya-vision.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/aya-vision.yaml",

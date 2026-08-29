@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Anthropic",
+  "model": "Claude Fable 5",
   "target_kind": "aial-eval-history",
   "sha256": "3544c1d5a50c802ee66bfde4fdd79387cf9185ef5d5df3f534121ad54d808a34",
   "size_bytes": 3797,
   "stored_as": "raw.yaml",
   "text_sha256": "1664c58ad9a6a153c274d79b7d1a1f1662575b9e42573afb32af5f32d6054dfd",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1b4fec3d0373839e54bacc30c9923e927708a580/evals/claude-fable-5.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1b4fec3d0373839e54bacc30c9923e927708a580/evals/claude-fable-5.yaml",

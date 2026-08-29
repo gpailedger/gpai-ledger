@@ -22,9 +22,7 @@ NAMES = sorted(p.name for p in WF_DIR.glob("*.yml"))
 # adding a workflow must be a decision, not an accident
 EXPECTED = {"ledger.yml", "hunt.yml", "verify.yml", "decisions.yml"}
 
-# the eight continue-on-error sweep steps the red-flag gate must re-surface
-SWEEP_STEP_IDS = ["registry", "capture", "metahub", "derived", "waybackretry",
-                  "otsupgrade", "drift", "verify"]
+# SWEEP_STEP_IDS is derived from the workflow after doc() is defined, below.
 PUBLISH_GATE_IDS = ["sitebuild", "sitelint", "commit", "verify"]
 
 
@@ -35,6 +33,19 @@ def raw(name: str) -> str:
 @lru_cache(maxsize=None)
 def doc(name: str) -> dict:
     return yaml.safe_load(raw(name))
+
+
+def _sweep_step_ids():
+    """Every continue-on-error sweep step the red-flag gate must re-surface.
+
+    Derived from the workflow itself: a hand-written list silently stops covering
+    the next step someone adds, which is exactly how the evaluation-history step
+    landed with neither of its guarantees under test."""
+    return [s["id"] for s in doc("ledger.yml")["jobs"]["sweep"]["steps"]
+            if s.get("id") and s.get("continue-on-error") is True]
+
+
+SWEEP_STEP_IDS = _sweep_step_ids()
 
 
 def all_steps(wf: dict):

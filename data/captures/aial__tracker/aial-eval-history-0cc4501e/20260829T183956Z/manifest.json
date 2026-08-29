@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus 05 2026",
   "target_kind": "aial-eval-history",
   "sha256": "8cdbc88cdd74777f713e8935ac0333a3c5bd30e596d2160d302ec61cb301d69d",
   "size_bytes": 3823,
   "stored_as": "raw.yaml",
   "text_sha256": "c27209b2dda7aeb6442ec4e703e3610d001521b8b67b74a352b42f7852e962d3",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/command-a.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/command-a.yaml",

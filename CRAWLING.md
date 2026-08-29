@@ -40,12 +40,21 @@ Accountability Lab grades these summaries and revises the grades in place, so a
 once-a-day look at their files loses every intermediate state, and a renamed or
 deleted evaluation disappears entirely. Their repository history is public, so the
 full record is read from the **GitHub API** rather than from their website: a
-routine run costs a few dozen API calls to github.com and, once a state is held, it
-is never fetched again. Their published earlier-version pages are discovered by
-reading pages the sweep has already captured, so discovery costs aial.ie nothing
-and only a page we do not yet hold is ever requested. Their own site carries 66
-conditional-GET targets in the daily sweep (63 evaluation pages, 3 framework
-pages), which cost a 304 unless something changed.
+routine run costs a few dozen API calls to github.com, and a state already held is
+never fetched again. Their published earlier-version pages are discovered by
+reading pages the sweep has already captured, so discovery costs aial.ie nothing,
+and only a page we do not already hold is requested — paced, capped per run, and
+abandoned for the day after three consecutive failures.
+
+Stated plainly, because this is the paragraph a reader would use to decide whether
+to object: **aial.ie carries 111 of this project's daily targets** — 63 evaluation
+pages, 43 archived copies of providers' own documents, 3 framework pages and 2
+listing pages. Nearly all cost a 304, but each URL gets one unconditional
+hash-verified fetch a week (tier 1 above), so a given day also carries roughly a
+dozen full downloads, spread across the sweep at the same ≥1.5 s spacing. Storing a
+new version additionally submits its hash to the OpenTimestamps calendars, which
+are not the origin's servers. If that is more than the Lab wants from us, the
+contact address in the User-Agent reaches a human who will reduce it.
 
 Everything captured from AIAL is a third party's own research: it is archived,
 hashed and timestamped, and it is **not republished** — see the *Rights* section of

@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "FastWeb",
+  "model": "Sintesi",
   "target_kind": "aial-eval-history",
   "sha256": "2948443673c887d2b010aae79ca3b3397fd3b312e16f4d35aae8d0e223612c17",
   "size_bytes": 4135,
   "stored_as": "raw.yaml",
   "text_sha256": "f779c5371dcd0f63b5c81e7c6ac8836d55815d7fcc61568885893d399807e6e2",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ab7a221039af19c9b922f4cb7918a83dffe548fa/evals/sintesi.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ab7a221039af19c9b922f4cb7918a83dffe548fa/evals/sintesi.yaml",

@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPAI Training Transparency tracker",
+  "provider": "Amazon",
+  "model": "Amazon Nova 2",
   "target_kind": "aial-eval-history",
   "sha256": "64332e5909021df1199225c9ad394c1c45f69e5bdd8b01cc6ea66fe77ad75a0d",
   "size_bytes": 3839,
   "stored_as": "raw.yaml",
   "text_sha256": "54479abe952cab65bf37dd6db992b0e944fb357ab511a81cda2a01466813f245",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-08-29: filed under AIAL's own source because the model could not be placed; the provider and model now name what the evaluation assesses, not the source it is filed under"
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/nova-2.yaml",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/nova-2.yaml",
