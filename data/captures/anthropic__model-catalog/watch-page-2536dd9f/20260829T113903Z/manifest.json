@@ -20,11 +20,17 @@
   },
   "prior_sha256": "63b407c14130d54b176bac2ddada9f819885d242498cbc9d741137ba1448fdd8",
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829133508/https://platform.claude.com/docs/en/models/overview",
+    "snapshot_ts": "20260829133508",
+    "fresh": true,
+    "same_url": false,
+    "job_id": "spn2-1779fb13f4a2c9ab84229e7a3aa9cba1b1b11340",
     "via": "spn2",
-    "requested_at": "2026-08-29T11:42:01Z",
-    "at": "2026-08-29T11:42:03Z"
+    "requested_at": "2026-08-29T13:34:59Z",
+    "at": "2026-08-29T13:35:26Z"
   },
   "ots": {
     "ok": true,
@@ -44,6 +50,13 @@
       "via": "spn2",
       "requested_at": "2026-08-29T11:39:03Z",
       "at": "2026-08-29T11:39:44Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T11:42:01Z",
+      "at": "2026-08-29T11:42:03Z"
     }
   ]
 }

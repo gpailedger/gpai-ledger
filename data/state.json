@@ -1000,10 +1000,14 @@
       {
         "sha256": "390d340f655dce776046460ca457236d7378e6ff8b3b2311fc6239078618263c",
         "dir": "captures/aial__tracker/watch-page-c82134bd/20260818T164825Z"
+      },
+      {
+        "sha256": "9635e3f3130b2217aa9d612bb0ae14a959aee07b7bc7e71f8a5223a1afa34dea",
+        "dir": "captures/aial__tracker/watch-page-c82134bd/20260829T133227Z"
       }
     ],
-    "last_sha256": "390d340f655dce776046460ca457236d7378e6ff8b3b2311fc6239078618263c",
-    "last_capture": "captures/aial__tracker/watch-page-c82134bd/20260818T164825Z",
+    "last_sha256": "9635e3f3130b2217aa9d612bb0ae14a959aee07b7bc7e71f8a5223a1afa34dea",
+    "last_capture": "captures/aial__tracker/watch-page-c82134bd/20260829T133227Z",
     "last_text_sha256": "558eb85f9b4633c58398cd890ebe48df91fb27740b70abfacc552af038e1d3cd"
   },
   "aial/tracker::watch-page-465bd4ee": {
@@ -1177,11 +1181,15 @@
       {
         "sha256": "96edf211681b96ea5db267cc0bb525153d2d278c1fc866a0348a75c3c3539352",
         "dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z"
+      },
+      {
+        "sha256": "2e536d34dc01f4b3c3ffa1a14b4185c1997cc0f53fb5fb6cdd0490c4f50e837c",
+        "dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260829T132450Z"
       }
     ],
-    "last_sha256": "96edf211681b96ea5db267cc0bb525153d2d278c1fc866a0348a75c3c3539352",
+    "last_sha256": "2e536d34dc01f4b3c3ffa1a14b4185c1997cc0f53fb5fb6cdd0490c4f50e837c",
     "last_text_sha256": "722b58b67a1c8aeedfbe571f02e22675b2d58e54118d1270b5079b99006ff37f",
-    "last_capture": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z"
+    "last_capture": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260829T132450Z"
   },
   "cohere/command-a-plus::provider-live-9d5f4d88": {
     "versions": [
@@ -1640,5 +1648,16 @@
     "last_text_sha256": "18d4606aa93affa23918fddef57f4867ce7dbcc73ee5065322370ab28af4e883",
     "last_capture": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
     "managed": "meta_hub"
+  },
+  "meta/muse-spark::aial-archive-2693391f": {
+    "versions": [
+      {
+        "sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+        "dir": "captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z"
+      }
+    ],
+    "last_sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+    "last_text_sha256": "062b4de103f62795093b0607e15a8aff800421d4b21ab51c86911ad77f4ae2ea",
+    "last_capture": "captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z"
   }
 }

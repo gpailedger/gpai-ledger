@@ -1,0 +1,40 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "aial-archive",
+  "sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+  "size_bytes": 257787,
+  "stored_as": "raw.pdf",
+  "text_sha256": "062b4de103f62795093b0607e15a8aff800421d4b21ab51c86911ad77f4ae2ea",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Spark_2026_08_18.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Spark_2026_08_18.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tk9ys25iwr\"",
+    "last_modified": "Mon, 24 Aug 2026 13:00:02 GMT",
+    "content_length": "257787",
+    "fetched_at": "2026-08-29T13:30:54Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T13:31:01Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6a5e4ac980>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-08-29T13:36:00Z",
+    "at": "2026-08-29T13:38:00Z"
+  }
+}

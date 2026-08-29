@@ -384,6 +384,22 @@
       }
     ]
   },
+  "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260818T164825Z>captures/aial__tracker/watch-page-c82134bd/20260829T133227Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "aial/tracker",
+    "target": "watch-page-c82134bd",
+    "from_dir": "captures/aial__tracker/watch-page-c82134bd/20260818T164825Z",
+    "to_dir": "captures/aial__tracker/watch-page-c82134bd/20260829T133227Z",
+    "from_sha256": "390d340f655dce776046460ca457236d7378e6ff8b3b2311fc6239078618263c",
+    "to_sha256": "9635e3f3130b2217aa9d612bb0ae14a959aee07b7bc7e71f8a5223a1afa34dea",
+    "computed_at": "2026-08-29T13:39:52Z"
+  },
   "amazon/nova-2-lite::live-vs-archive::captures/amazon__nova-2-lite/aial-archive-08c22740/20260811T105414Z>captures/amazon__nova-2-lite/provider-live-d1ce66ae/20260811T105338Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -1980,6 +1996,22 @@
     "from_sha256": "e99c75b05229ec52e9cb9c5c38709ad028838258183f974da13f5e900343829c",
     "to_sha256": "96edf211681b96ea5db267cc0bb525153d2d278c1fc866a0348a75c3c3539352",
     "computed_at": "2026-08-28T08:50:47Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260829T132450Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260828T082511Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260829T132450Z",
+    "from_sha256": "96edf211681b96ea5db267cc0bb525153d2d278c1fc866a0348a75c3c3539352",
+    "to_sha256": "2e536d34dc01f4b3c3ffa1a14b4185c1997cc0f53fb5fb6cdd0490c4f50e837c",
+    "computed_at": "2026-08-29T13:39:52Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
