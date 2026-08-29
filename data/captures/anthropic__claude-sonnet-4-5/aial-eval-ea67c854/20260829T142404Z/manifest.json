@@ -31,10 +31,25 @@
     "at": "2026-08-29T14:24:08Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829150428/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-4-5.yaml",
+    "snapshot_ts": "20260829150428",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-23cec60f9f6cdc6fed7da9014869e49fe31e080e",
     "via": "spn2",
-    "requested_at": "2026-08-29T14:44:36Z",
-    "at": "2026-08-29T14:46:36Z"
-  }
+    "requested_at": "2026-08-29T15:04:15Z",
+    "at": "2026-08-29T15:04:31Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T14:44:36Z",
+      "at": "2026-08-29T14:46:36Z"
+    }
+  ]
 }

@@ -29,5 +29,12 @@
     ],
     "errors": [],
     "at": "2026-08-29T14:25:42Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-08-29T15:06:50Z",
+    "at": "2026-08-29T15:07:14Z"
   }
 }

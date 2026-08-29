@@ -31,10 +31,25 @@
     "at": "2026-08-29T14:24:03Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f346c665dc0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829150400/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-5.yaml",
+    "snapshot_ts": "20260829150400",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a1d773deb5275a895a4a66050aad01d49da1912d",
     "via": "spn2",
-    "requested_at": "2026-08-29T14:42:24Z",
-    "at": "2026-08-29T14:44:24Z"
-  }
+    "requested_at": "2026-08-29T15:03:53Z",
+    "at": "2026-08-29T15:04:03Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f346c665dc0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T14:42:24Z",
+      "at": "2026-08-29T14:44:24Z"
+    }
+  ]
 }
