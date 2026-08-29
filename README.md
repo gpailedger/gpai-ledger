@@ -52,10 +52,11 @@ python site/build.py                     # regenerate site into site/dist/
 ```
 
 Captures identify themselves as `GPAI-Ledger/0.1` with a contact address. The crawler
-archives public regulatory disclosures; quoted material is attributed. A provider who
-objects to full-text archiving gets structured-facts treatment instead: hashes, sizes,
-text length and provenance metadata (including the Wayback link), without the document
-bytes or extracted text.
+archives public regulatory disclosures; quoted material is attributed. Some captures
+are held but not served on the site — they get structured-facts treatment instead:
+hashes, sizes, text length and provenance metadata (including the Wayback link),
+without the document bytes or extracted text. That applies to a provider who objects
+to full-text archiving, and to a third party's own research (see *Rights* below).
 
 ## Publishing and bootstrap
 
@@ -92,3 +93,29 @@ consistency) in CI on every run.
   used, signatures included — these are time-limited, publicly-served access tokens
   for public documents, kept because the exact fetch URL is part of the evidence.
   They are not repository secrets; secret scanners can allowlist `data/captures/`.
+
+## Rights in what this repository holds
+
+Three different things live here, under three different rights.
+
+- **This project's code** (`crawler/`, `site/`, `tests/`) is MIT-licensed — see
+  `LICENSE`. **The provenance metadata** the ledger produces — hashes, capture
+  timestamps, proof references, the records in `ledger.json` — is released CC0.
+- **Archived documents** under `data/captures/` are *not* covered by either. They
+  remain the copyright of whoever published them, and are retained byte-exact because
+  an evidence archive of what a provider disclosed is worthless if the bytes can be
+  edited after the fact. Most are Article 53(1)(d) training-data summaries: documents
+  the EU AI Act requires their providers to make public.
+- **A third party's own research** is archived but deliberately not republished. The
+  AI Accountability Lab's scored evaluations (`aial-eval` captures) are their work,
+  and their repository carries no licence granting redistribution. The ledger keeps
+  them because a grade becomes unrecoverable once revised, and publishes only what it
+  holds — size, canonical text hash, timestamp proof — with a link to
+  [AIAL](https://aial.ie/research/gpai-training-transparency/) for the assessment
+  itself. Their content is not served on the site and not carried in the diff ledger.
+  This is the project's own choice, not a response to an objection.
+
+If you published something archived here and want it handled differently, write to
+contact@gpailedger.com. Removal of a capture goes through `crawler/prune_capture.py`
+so that the removal is itself recorded rather than silently rewriting the record.
+

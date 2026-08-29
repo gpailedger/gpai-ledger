@@ -40,6 +40,11 @@ address in the User-Agent is monitored for exactly this.
 
 ## What we never do
 
+We also do not redistribute another organisation's research because we happened to
+crawl it. Third-party evaluations are archived so a revised score stays recoverable,
+and published only as facts about the file — size, hash, timestamp proof — unless
+the rights holder agrees otherwise.
+
 No authentication bypass, no paywalled or login-gated content (a gated summary is
 recorded as gated — itself a compliance-relevant fact — not circumvented), no
 high-frequency polling, no distributed crawling. The entire sweep is a few hundred
