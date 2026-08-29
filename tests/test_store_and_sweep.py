@@ -961,3 +961,87 @@ def test_absence_streaks_track_the_dates_an_absence_was_confirmed(tmp_path):
     # attested live from another network: the whole streak, confirmation included, is over
     assert st[("s", "u")]["confirmed_on"] == set()
     assert st[("s", "u")]["absent_on"] == set()
+
+
+# --- a host that is down must not consume the sweep ---
+
+def _many_sources(host, n, other_host=None):
+    srcs = [_src(f"prov/{i}", f"https://{host}/doc{i}.pdf") for i in range(n)]
+    if other_host:
+        srcs.append(_src("prov/live", f"https://{other_host}/doc.pdf"))
+    return srcs
+
+
+def test_a_dead_host_is_abandoned_after_a_few_connection_failures(tmp_path, monkeypatch):
+    # 29 Aug 2026: 21 connection timeouts to one host burned the wall-clock budget
+    # and left 68 other targets unchecked
+    reg = _write_registry(tmp_path, _many_sources("dead.example", 8))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    attempts = []
+
+    def refuse(url, **kw):
+        attempts.append(url)
+        raise ConnectionError("connection timed out")
+    monkeypatch.setattr(cap, "fetch", refuse)
+    _run_wb(monkeypatch, reg, data_root)
+    assert len(attempts) == rc_mod.HOST_FAILURES_BEFORE_SKIP
+    events = _events(data_root)
+    skipped = [e for e in events if e.get("outcome") == "host-unreachable"]
+    assert len(skipped) == 8 - rc_mod.HOST_FAILURES_BEFORE_SKIP
+    assert all(e["host"] == "dead.example" for e in skipped)
+    assert any(e.get("outcome") == "host-unreachable-summary" for e in events)
+
+
+def test_a_dead_host_does_not_stop_the_hosts_that_answer(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path, _many_sources("dead.example", 6, "live.example"))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    body = (b"summary body", _meta("https://live.example/doc.pdf", "application/pdf"))
+
+    def selective(url, **kw):
+        if "live.example" in url:
+            return body
+        raise ConnectionError("connection timed out")
+    monkeypatch.setattr(cap, "fetch", selective)
+    _run_wb(monkeypatch, reg, data_root)
+    assert any(e.get("outcome") == "new" and "live.example" in str(e.get("url"))
+               for e in _events(data_root))
+
+
+def test_an_http_answer_is_never_treated_as_the_host_being_down(tmp_path, monkeypatch):
+    # a 404 is the document's answer, not the host's silence: every target is tried
+    reg = _write_registry(tmp_path, _many_sources("answers.example", 6))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    attempts = []
+
+    def gone(url, **kw):
+        attempts.append(url)
+        raise cap.PermanentFetchError("HTTP 404 for u", status_code=404, headers={})
+    monkeypatch.setattr(cap, "fetch", gone)
+    _run_wb(monkeypatch, reg, data_root)
+    assert len({u for u in attempts}) == 6
+    assert not [e for e in _events(data_root) if e.get("outcome") == "host-unreachable"]
+
+
+def test_a_host_that_answers_again_clears_its_failure_count(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path, _many_sources("flaky.example", 6))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    seq = []
+
+    def flaky(url, **kw):
+        seq.append(url)
+        # fail twice, answer, then fail again: the count must have been reset
+        if len(seq) in (1, 2):
+            raise ConnectionError("timed out")
+        if len(seq) == 3:
+            return (b"body", _meta(url, "application/pdf"))
+        raise ConnectionError("timed out")
+    monkeypatch.setattr(cap, "fetch", flaky)
+    _run_wb(monkeypatch, reg, data_root)
+    # without the reset the 4th failure would have tripped the breaker immediately;
+    # with it, three more failures are needed
+    assert len(seq) == 6
+

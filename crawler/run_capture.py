@@ -26,6 +26,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 import capture as cap
 
@@ -89,6 +90,22 @@ ABSENCE_WINDOW_DAYS = 3
 # this many distinct dates of the current streak (most recent prior one within
 # ABSENCE_WINDOW_DAYS; an inconclusive day in between does not reset the count).
 CONTRADICTED_ALERT_DAYS = 3
+# A host that is simply down costs the sweep its whole budget: every target on it
+# burns the full fetch timeout times its retries before failing, and on 29 Aug
+# 2026 twenty-one timeouts to one host left sixty-eight other targets unchecked.
+# After this many consecutive connection failures to a host — failures where the
+# origin never answered at all, not 404s, which are answers — the rest of that
+# host's targets are recorded as unreachable without a network attempt, and the
+# time goes to hosts that are up. Any answer from the host clears the count, and
+# the next sweep starts fresh.
+HOST_FAILURES_BEFORE_SKIP = 3
+
+
+def host_of(url: str) -> str:
+    try:
+        return (urlparse(url).hostname or "").lower()
+    except ValueError:
+        return ""
 
 
 def absence_streaks(events_path: Path) -> dict:
@@ -219,6 +236,8 @@ def main() -> int:
     streaks = absence_streaks(store.events_path)
     t_start = time.monotonic()
     budget_skipped = []  # "source::target" keys not checked: the time budget ran out
+    host_failures = {}   # host -> consecutive failures where the origin never answered
+    host_skipped = {}    # host -> keys skipped because the host is down
 
     for source in registry["sources"]:
         if args.only:
@@ -237,6 +256,18 @@ def main() -> int:
             tslug = cap.target_slug(kind, url)
             if time.monotonic() - t_start > SWEEP_BUDGET_S:
                 budget_skipped.append(f"{source['id']}::{tslug}")
+                continue
+            host = host_of(url)
+            if host_failures.get(host, 0) >= HOST_FAILURES_BEFORE_SKIP:
+                # the host is down, not this document: record it and spend the
+                # remaining time on hosts that answer
+                host_skipped.setdefault(host, []).append(f"{source['id']}::{tslug}")
+                store.event(source=source["id"], target=tslug, url=url, kind=kind,
+                            outcome="host-unreachable", host=host,
+                            after_failures=host_failures[host])
+                print(f"  SKIP   {source['id']} [{kind}] — {host} unreachable "
+                      f"({host_failures[host]} consecutive connection failures)",
+                      flush=True)
                 continue
             rendered = bool(target.get("render"))
             stats["checked"] += 1
@@ -257,8 +288,14 @@ def main() -> int:
                     if raw is not None:
                         fetch_cache[cache_key] = (raw, meta)
                     stale = absence_memo.pop(cache_key, None)
+                host_failures.pop(host, None)      # the host answered
             except Exception as exc:  # noqa: BLE001
                 status = getattr(exc, "status_code", None)
+                if status is None:
+                    # no HTTP answer at all: the host, not the document
+                    host_failures[host] = host_failures.get(host, 0) + 1
+                else:
+                    host_failures.pop(host, None)
                 first = _obs(exc)
                 had_capture = bool(store.last_sha(source["id"], tslug))
                 if not (status in ABSENCE_STATUSES and had_capture):
@@ -521,6 +558,15 @@ def main() -> int:
             print(f"  NEW    {source['id']} [{kind}] sha={sha[:12]} "
                   f"{len(raw):,}B text={'y' if text else 'n'}", flush=True)
             time.sleep(args.throttle)
+
+    if host_skipped:
+        stats["host_skipped"] = sum(len(v) for v in host_skipped.values())
+        for h, keys in sorted(host_skipped.items()):
+            store.event(outcome="host-unreachable-summary", host=h,
+                        skipped=keys, after_failures=host_failures.get(h))
+            print(f"  HOST    {h} unreachable — {len(keys)} target(s) skipped "
+                  f"(its first {HOST_FAILURES_BEFORE_SKIP} failures are logged "
+                  f"above and redden this run)", flush=True)
 
     if budget_skipped:
         stats["skipped"] = len(budget_skipped)
