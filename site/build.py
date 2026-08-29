@@ -638,8 +638,15 @@ def structured_facts(manifest, text) -> str:
                         f"<code>{esc(f['inner_sha256'][:16])}…</code></li>"
                         for f in sorted(inner, key=lambda f: f["inner_file"]))
         rows.append(f"<tr><th>Contained files</th><td><ul>{files}</ul></td></tr>")
-    return ("<h2>Structured facts</h2><p class='muted'>At the provider's request the "
-            "document itself is not served here; these facts still pin its identity "
+    # WHY the content is withheld differs, and saying the wrong one is a false
+    # statement about a real organisation: a provider asked, whereas a third
+    # party's research is withheld by this project's own choice, unasked.
+    why = ("This is another organisation's own research, and this project does not "
+           "redistribute it: the file itself is not served here"
+           if manifest.get("target_kind") in RESTRICTED_KINDS else
+           "At the provider's request the document itself is not served here")
+    return (f"<h2>Structured facts</h2><p class='muted'>{why}; these facts still "
+            "pin its identity "
             "and let any copy be authenticated against this record.</p>"
             f"<div class='tablewrap' role='region' aria-label='Structured facts' "
             f"tabindex='0'><table>{''.join(rows)}</table></div>")

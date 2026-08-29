@@ -978,3 +978,15 @@ def test_a_removed_evaluation_does_not_read_as_the_providers_document_vanishing(
     note = build.GONE_WORDING["aial-eval"]
     assert "not the" in note and "provider's document" in note
 
+
+def test_a_withheld_page_says_the_true_reason_for_withholding():
+    # AIAL never asked us to withhold anything: claiming they did would be a false
+    # statement about a real organisation on a page that exists to be accurate
+    ev = build.structured_facts({"size_bytes": 10, "text_sha256": "a" * 64,
+                                 "target_kind": "aial-eval"}, "one two")
+    assert "At the provider's request" not in ev
+    assert "does not redistribute it" in ev
+    doc = build.structured_facts({"size_bytes": 10, "text_sha256": "a" * 64,
+                                  "target_kind": "provider-live"}, "one two")
+    assert "At the provider's request" in doc
+
