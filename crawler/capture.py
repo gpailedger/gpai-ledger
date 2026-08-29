@@ -395,6 +395,27 @@ def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None
 # Remove a kind only once the rights holder has said yes.
 RESTRICTED_KINDS = {
     "aial-eval": "third-party research, archived but not republished here",
+    # every historical state of an evaluation, harvested from AIAL's own git
+    # history; the same research, so the same treatment
+    "aial-eval-history": "third-party research, archived but not republished here",
+    # AIAL's rendered evaluation page: their scores, notes and letter grade
+    "aial-eval-page": "third-party research, archived but not republished here",
+    # their scoring framework, weightings and grade boundaries
+    "aial-method": "third-party research, archived but not republished here",
+}
+
+
+# Individual pages that are a third party's own work, captured under a kind that
+# is not otherwise restricted. AIAL's tracker root publishes the full grade table
+# for every model, so serving this project's copy would republish precisely what
+# the evaluation pages withhold; list_summaries is their editorial index of the
+# same research. Both are held, hashed and proved here — not served. Their
+# archived PROVIDER documents (kind aial-archive) are deliberately NOT in this
+# set: those are the providers' own mandated disclosures, and AIAL's mirror is
+# sometimes the only surviving copy.
+RESTRICTED_URLS = {
+    "https://aial.ie/research/gpai-training-transparency/",
+    "https://aial.ie/research/gpai-training-transparency/list_summaries",
 }
 
 
@@ -1156,7 +1177,7 @@ def store_new_version(store: Store, *, source_id: str, provider: str, model: str
                       ext: str, text, notes: list, text_sha,
                       wayback_url: str = None, do_ots: bool = True,
                       extra_notes=(), managed: str = None,
-                      event_extra: dict = None):
+                      event_extra: dict = None, manifest_extra: dict = None):
     """The single sanctioned write path for a NEW capture version.
 
     Callers own fetching, extension choice, text extraction, and dedupe (those
@@ -1179,6 +1200,15 @@ def store_new_version(store: Store, *, source_id: str, provider: str, model: str
         "extraction_notes": list(notes) + list(extra_notes),
         "http": meta,
         "prior_sha256": store.last_sha(source_id, tslug),
+        # provenance a caller knows and the HTTP exchange cannot show — e.g. which
+        # upstream commit a history capture pins. Never overrides a computed field.
+        # target_kind decides whether a capture is withheld, and source_id and
+        # prior_sha256 place it in the record: caller-supplied provenance may add
+        # to the manifest, never rewrite what the evidence rests on
+        **{k: v for k, v in (manifest_extra or {}).items()
+           if k not in ("sha256", "size_bytes", "stored_as", "text_sha256", "http",
+                        "target_kind", "source_id", "provider", "model",
+                        "prior_sha256", "ots", "wayback")},
     }
     if ext == ".zip" and text:
         # for bundles text_sha256 is the inner-member hash key, so the served

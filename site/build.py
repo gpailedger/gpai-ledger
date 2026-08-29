@@ -75,7 +75,17 @@ KIND_LABELS = {
     "regulatory": "official document",
     "watch-page": "watched page",
     "aial-eval": "AIAL evaluation",
+    "aial-eval-history": "AIAL evaluation (earlier state)",
+    "aial-eval-page": "AIAL evaluation page",
+    "aial-method": "AIAL scoring framework",
 }
+
+# A third party's assessment of a summary, in any of the forms they publish it:
+# the scored file, its earlier states, and the page that renders them. Evidence
+# ABOUT a document, never the document — so never a document version anywhere.
+THIRD_PARTY_EVAL_KINDS = ("aial-eval", "aial-eval-history", "aial-eval-page")
+# the framework those assessments are made with; belongs to AIAL's own source
+THIRD_PARTY_METHOD_KINDS = ("aial-method",)
 
 STATUS_LABELS = {"published": "Published", "missing": "Missing",
                  "regulatory": "Regulatory", "watch": "Watch"}
@@ -454,6 +464,12 @@ GONE_WORDING = {
     "aial-eval": "The third-party evaluation of this summary is no longer "
                  "published at this address (this is AIAL's assessment, not the "
                  "provider's document).",
+    "aial-eval-page": "AIAL's published evaluation page for this model no longer "
+                      "resolves (this is their assessment, not the provider's "
+                      "document).",
+    "aial-eval-history": "This earlier state of the third-party evaluation is no "
+                         "longer retrievable at its pinned address.",
+    "aial-method": "This page of AIAL's scoring framework no longer resolves.",
 }
 GONE_WORDING_DEFAULT = "A page this project monitors no longer resolves."
 
@@ -618,7 +634,16 @@ def restriction_of(source, m):
     """Why this capture's bytes and text are withheld, or None to serve them.
     Per capture, not per source: a source can carry both the provider's document
     and another party's assessment of it, and only the latter is withheld."""
-    return source.get("restricted") or RESTRICTED_KINDS.get(m.get("target_kind"))
+    if source.get("restricted"):
+        return source["restricted"]
+    by_kind = RESTRICTED_KINDS.get(m.get("target_kind"))
+    if by_kind:
+        return by_kind
+    http = m.get("http") or {}
+    for u in (http.get("url"), http.get("final_url")):
+        if u in cap.RESTRICTED_URLS:
+            return "third-party research, archived but not republished here"
+    return None
 
 
 def structured_facts(manifest, text) -> str:
@@ -641,9 +666,13 @@ def structured_facts(manifest, text) -> str:
     # WHY the content is withheld differs, and saying the wrong one is a false
     # statement about a real organisation: a provider asked, whereas a third
     # party's research is withheld by this project's own choice, unasked.
+    http = manifest.get("http") or {}
+    third_party = (manifest.get("target_kind") in RESTRICTED_KINDS
+                   or http.get("url") in cap.RESTRICTED_URLS
+                   or http.get("final_url") in cap.RESTRICTED_URLS)
     why = ("This is another organisation's own research, and this project does not "
            "redistribute it: the file itself is not served here"
-           if manifest.get("target_kind") in RESTRICTED_KINDS else
+           if third_party else
            "At the provider's request the document itself is not served here")
     return (f"<h2>Structured facts</h2><p class='muted'>{why}; these facts still "
             "pin its identity "
@@ -844,6 +873,19 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                       f"this stored file is the Art. 53 subset, assembled at the "
                       f"date the OTS proof attests)</span></td></tr>")
     kind_label = KIND_LABELS.get(m["target_kind"], m["target_kind"])
+    # A state harvested from a third party's git history was fetched TODAY, from a
+    # commit-pinned address. Without the upstream date a reader sees only today's
+    # fetch and cannot tell when the grade actually stood; without the sentence
+    # after it, they could read the upstream date as the date this archive saw it.
+    upstream_row = ""
+    if m.get("git_commit"):
+        when = str(m.get("git_commit_date") or "")
+        upstream_row = (
+            f"<tr><th>Upstream commit</th><td>{esc(human_date(when[:10].replace('-', '') + 'T') if when else when)}"
+            f" — <code>{esc(str(m['git_commit'])[:12])}</code>"
+            f"<span class='muted'> (when this state began to stand in the upstream "
+            f"repository; this archive fetched it at the time above, not then)"
+            f"</span></td></tr>")
     cop_warn = ("<p class='muted'><strong>Note:</strong> this is a GPAI Code of "
                 "Practice document (Art. 53(1)(a)–(c) — model documentation and "
                 "copyright policy), <em>not</em> the Art. 53(1)(d) public "
@@ -855,6 +897,7 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
             f"<tr><th>Provider</th><td>{esc(source['provider'])}</td></tr>"
             f"<tr><th>Target</th><td>{target_cell(kind_label, m['http']['url'])}</td></tr>"
             f"<tr><th>Fetched (UTC)</th><td>{esc(m['http']['fetched_at'])}</td></tr>"
+            f"{upstream_row}"
             f"<tr><th>Stored file</th><td>{stored_cell}</td></tr>"
             f"<tr><th>SHA-256</th><td><code>{esc(m['sha256'])}</code></td></tr>"
             f"<tr><th>OpenTimestamps proof</th><td>{ots_cell}</td></tr>"
@@ -871,7 +914,7 @@ def is_document(r, inpage_urls) -> bool:
     # a third party's scored evaluation is evidence ABOUT the summary, never the
     # summary: it must not reach the document count, the changes feed, or the
     # drift comparison that decides whether a provider edited its document
-    if r.get("kind") == "aial-eval":
+    if r.get("kind") in THIRD_PARTY_EVAL_KINDS + THIRD_PARTY_METHOD_KINDS:
         return False
     return (r["stored_as"].endswith(DOC_SUFFIXES) or r["url"] in inpage_urls
             or bool(r["managed"]))
@@ -913,6 +956,11 @@ def version_row_html(r, inpage_urls, sha_first) -> str:
         notes.append("Google Drive viewer page around the file, not the file itself")
     if "fbcdn.net" in r["url"]:
         notes.append("Meta CDN-hosted PDF (signed URL)")
+    if r.get("upstream_date"):
+        when = str(r["upstream_date"])[:10].replace("-", "")
+        notes.append(f"the state that stood upstream from "
+                     f"{human_date(when + 'T')} (fetched here on "
+                     f"{human_date(r['ts'])})")
     if sha_first[r["sha"]] != r["ts"]:
         notes.append(f"bytes identical to {sha_first[r['sha']]}")
     elif r.get("diff_verdict") == "changed":
@@ -978,14 +1026,17 @@ def render_version_sections(rows_data, inpage_urls) -> list:
     current = [r for r in rows_data if r["active"] and not r["retired"]]
     # a third party's scored assessment is neither the document nor a page we
     # watch for the document to appear on: it is evidence about the document
+    third_party = THIRD_PARTY_EVAL_KINDS + THIRD_PARTY_METHOD_KINDS
     eval_rows = [version_row_html(r, inpage_urls, sha_first)
-                 for r in current if r["kind"] == "aial-eval"]
+                 for r in current if r["kind"] in THIRD_PARTY_EVAL_KINDS]
+    method_rows = [version_row_html(r, inpage_urls, sha_first)
+                   for r in current if r["kind"] in THIRD_PARTY_METHOD_KINDS]
     doc_rows = [version_row_html(r, inpage_urls, sha_first)
                 for r in current
-                if is_document(r, inpage_urls) and r["kind"] != "aial-eval"]
+                if is_document(r, inpage_urls) and r["kind"] not in third_party]
     surf_rows = [version_row_html(r, inpage_urls, sha_first)
                  for r in current
-                 if not is_document(r, inpage_urls) and r["kind"] != "aial-eval"]
+                 if not is_document(r, inpage_urls) and r["kind"] not in third_party]
     old_rows = [version_row_html(r, inpage_urls, sha_first)
                 for r in rows_data if not r["active"] or r["retired"]]
 
@@ -1010,7 +1061,7 @@ def render_version_sections(rows_data, inpage_urls) -> list:
                          + wrap_table("Watch-surface captures", VHEAD + "".join(surf_rows)))
     if eval_rows:
         vsections.append(
-            "<h2>Third-party evaluation of this summary</h2>"
+            "<h2>Third-party evaluation</h2>"
             "<p class='muted'>The AI Accountability Lab scores published summaries "
             "against the Commission's template and publishes the result. These are "
             "captures of <strong>their assessment</strong>, archived here because "
@@ -1023,6 +1074,16 @@ def render_version_sections(rows_data, inpage_urls) -> list:
             "<a href='https://aial.ie/research/gpai-training-transparency/'>aial.ie"
             "</a>.</p>"
             + wrap_table("Third-party evaluation", VHEAD + "".join(eval_rows)))
+    if method_rows:
+        vsections.append(
+            "<h2>The framework these evaluations use</h2>"
+            "<p class='muted'>AIAL's scoring framework, weightings and grade "
+            "boundaries — the pages that make a published score readable as a "
+            "grade. Archived for the same reason as the evaluations, and on the "
+            "same terms: held and hashed here, <strong>not republished</strong>. "
+            "Attribution: <a href='https://aial.ie/research/gpai-training-"
+            "transparency/methodology'>aial.ie</a>.</p>"
+            + wrap_table("Scoring framework", VHEAD + "".join(method_rows)))
     if old_rows:
         vsections.append("<h2>Captures of superseded target URLs</h2>"
                          "<p class='muted'>Locations this ledger previously tracked "
@@ -1840,12 +1901,22 @@ def main(generated: str = None) -> int:
                         if prior_dir else None)
                 row = {
                     "ts": cap_slug, "kind": m["target_kind"],
+                    # a state harvested from upstream history was all fetched on one
+                    # day, so the capture timestamp cannot order it for a reader
+                    "upstream_date": m.get("git_commit_date"),
                     "url": m["http"]["url"], "stored_as": m["stored_as"],
                     "rendered": bool(m.get("http", {}).get("rendered")),
                     "sha": m["sha256"], "size": m["size_bytes"],
                     "retired": tstate.get("retired"),
                     "managed": tstate.get("managed"),
-                    "active": tslug in active_slugs or bool(tstate.get("managed")),
+                    # A harvested capture has no registry target by design: its
+                    # address is a pinned commit or a page discovered from one we
+                    # already hold. Without this it falls into "Captures of
+                    # superseded target URLs", which tells a reader the ledger
+                    # once tracked that address and stopped — untrue of every one.
+                    "active": (tslug in active_slugs
+                               or bool(tstate.get("managed"))
+                               or bool(m.get("harvested_from"))),
                     "txt_size": len(raw_txt) if raw_txt is not None else 0,
                     "prior_sha": prior_sha,
                     "text_sha": m.get("text_sha256"),

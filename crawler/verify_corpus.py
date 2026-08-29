@@ -136,6 +136,21 @@ def verify(data_root: Path) -> int:
                     fail("C6", key, "state last_text_sha256 disagrees with the last "
                                     "version's manifest text_sha256")
 
+    def _is_harvested(root, entry) -> bool:
+        """Some captures are harvested, not swept: every historical state of a
+        third party's evaluation is fetched from its own commit-pinned address,
+        and their published earlier-version pages are discovered from a page we
+        already hold. Neither is a registry target, so absence from the registry
+        is the design here and not drift."""
+        d = entry.get("last_capture")
+        if not d:
+            return False
+        try:
+            m = json.loads((root / d / "manifest.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return False
+        return bool(m.get("harvested_from"))
+
     # C8 (warn): a non-retired, non-managed entry whose target URL is no longer
     # in the registry renders under "superseded" with no stated reason — stale
     # identities should carry an explicit retired reason
@@ -150,7 +165,8 @@ def verify(data_root: Path) -> int:
             sid, tslug = key.split("::", 1)
             if (not entry.get("retired") and not entry.get("managed")
                     and entry.get("versions")
-                    and (sid, tslug) not in active):
+                    and (sid, tslug) not in active
+                    and not _is_harvested(data_root, entry)):
                 warn("C8", key, "non-retired entry's target is no longer in the "
                                 "registry — add a retired reason")
 

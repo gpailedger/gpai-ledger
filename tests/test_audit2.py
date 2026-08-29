@@ -427,3 +427,45 @@ def test_the_committed_diff_ledger_keeps_the_metrics_and_drops_the_words(tmp_pat
     assert saved["doc-pair"]["changes"][0]["new"] == "now PROVIDERS-OWN-PROSE"
     assert "changes_withheld" not in saved["doc-pair"]
 
+
+TRACKER_DIR = "captures/aial__tracker/watch-page-465bd4ee/20260829T000000Z"
+
+
+def test_the_diff_ledger_withholds_a_page_restricted_by_its_url_not_its_kind(
+        tmp_path, monkeypatch):
+    # AIAL's tracker root publishes the full grade table under the ordinary
+    # watch-page kind: a gate that saw only the kind would republish, in a
+    # committed report file, exactly what the site withholds
+    import analyze_drift as ad
+    (tmp_path / TRACKER_DIR).mkdir(parents=True)
+    url = "https://aial.ie/research/gpai-training-transparency/"
+    (tmp_path / TRACKER_DIR / "manifest.json").write_text(json.dumps({
+        "target_kind": "watch-page", "http": {"url": url, "final_url": url}}),
+        encoding="utf-8")
+    monkeypatch.setattr(ad, "DATA", tmp_path)
+    monkeypatch.setattr(ad, "_RESTRICTED_DIR_CACHE", {})
+    rec = _rec(TRACKER_DIR, TRACKER_DIR, "AIALS-GRADE-TABLE")
+    assert ad.excerpts_allowed(rec) is False
+    out = tmp_path / "vd.json"
+    monkeypatch.setattr(ad, "vdiffs_path", lambda: out)
+    ad.save_vdiffs({"k": rec})
+    assert "AIALS-GRADE-TABLE" not in out.read_text(encoding="utf-8")
+    saved = json.loads(out.read_text(encoding="utf-8"))["k"]
+    assert saved["changes_withheld"] is True and saved["word_delta"] == 4
+
+
+def test_an_ordinary_page_on_the_same_host_still_carries_its_excerpts(tmp_path,
+                                                                      monkeypatch):
+    # the rule is the URL, not the host: AIAL's mirrors of PROVIDER documents are
+    # the providers' own mandated disclosures and must stay fully in the record
+    import analyze_drift as ad
+    d = "captures/adobe__adobe-firefly/aial-archive-c70dd1a0/20260811T000000Z"
+    (tmp_path / d).mkdir(parents=True)
+    url = "https://aial.ie/research/gpai-training-transparency/archive/Adobe.pdf"
+    (tmp_path / d / "manifest.json").write_text(json.dumps({
+        "target_kind": "aial-archive", "http": {"url": url, "final_url": url}}),
+        encoding="utf-8")
+    monkeypatch.setattr(ad, "DATA", tmp_path)
+    monkeypatch.setattr(ad, "_RESTRICTED_DIR_CACHE", {})
+    assert ad.excerpts_allowed(_rec(d, d, "PROVIDER-PROSE")) is True
+

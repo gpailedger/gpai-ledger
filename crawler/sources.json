@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-29T13:55:40Z",
+  "generated_utc": "2026-08-29T18:32:02Z",
   "seed": {
     "aial_repo": "https://github.com/AIAccountabilityLab/gpai-training-transparency",
     "aial_head": "847aac9139e08b27f4b4a4a9bd405f757c5c3d4f"
@@ -32,6 +32,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/adobe-firefly.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/adobe-firefly/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -69,6 +74,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/apertus-1-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/apertus-1-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -101,6 +111,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/apertus.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/apertus/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -123,6 +138,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/apriel-1-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/apriel-1-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -155,6 +175,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bielik.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bielik/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -189,6 +214,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bria.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bria/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -211,6 +241,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-haiku-4-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-haiku-4-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -244,6 +279,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-mythos-5-fable-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-mythos-5-fable-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -277,6 +317,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-mythos-preview.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-mythos-preview/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -299,6 +344,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-1.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -321,6 +371,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -343,6 +398,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-6.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -376,6 +436,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-7.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-7/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -409,6 +474,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-8.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-8/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -442,6 +512,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -464,6 +539,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-4-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-4-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -486,6 +566,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-4-6.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-4-6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -519,6 +604,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -552,6 +642,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/command-a-plus.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/command-a-plus/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -586,6 +681,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/domyn.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/domyn/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -618,6 +718,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fastwebmiia.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/fastwebmiia/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -655,6 +760,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fibo.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/fibo/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -677,6 +787,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-klein.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-klein/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -699,6 +814,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-max.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-max/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -721,6 +841,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -759,6 +884,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-3.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -791,6 +921,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3-pro.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3-pro/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -823,6 +958,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemma-4.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemma-4/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -855,6 +995,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -887,6 +1032,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-4-nano.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-4-nano/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -919,6 +1069,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -951,6 +1106,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-luna.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-luna/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -973,6 +1133,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-sol.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-sol/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -995,6 +1160,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-terra.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-terra/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1027,6 +1197,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-image-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-image-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1049,6 +1224,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-oss.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-oss/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1071,6 +1251,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/granite-4-0-h.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-0-h/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1093,6 +1278,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/granite-4-1.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1125,6 +1315,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/grok-4.5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/grok-4.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1157,6 +1352,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/grok-voice-think-fast-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/grok-voice-think-fast-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1195,6 +1395,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/inkling-small.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/inkling-small/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1227,6 +1432,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/inkling.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/inkling/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1259,6 +1469,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-code-1-flash.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-code-1-flash/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1286,6 +1501,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-cyber-1-flash.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-cyber-1-flash/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1318,6 +1538,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-image-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1350,6 +1575,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-image-2_5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2_5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1382,6 +1612,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/minimax-m3.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/minimax-m3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1414,6 +1649,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/ministral-3-14B.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-14B/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1446,6 +1686,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/ministral-3-3B.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-3B/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1478,6 +1723,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/ministral-3-8B.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-8B/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1510,6 +1760,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-large-3.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-large-3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1542,6 +1797,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-small-4.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-small-4/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1575,6 +1835,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-glimmer.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/muse-glimmer/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1608,6 +1873,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-image.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/muse-image/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1641,6 +1911,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-spark.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/muse-spark/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1663,6 +1938,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/north-mini-code.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/north-mini-code/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1700,6 +1980,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/nova-2-lite.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-lite/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1722,6 +2007,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/palmyra-x5.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/palmyra-x5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1759,6 +2049,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1791,6 +2086,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pllum.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/pllum/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1825,6 +2125,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/smollm3.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/smollm3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1847,6 +2152,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/sora-2.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/sora-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -1869,6 +2179,11 @@
           "kind": "aial-eval",
           "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/veo-3-1.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/veo-3-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
@@ -2116,6 +2431,21 @@
           "kind": "watch-page",
           "url": "https://aial.ie/research/gpai-training-transparency/",
           "note": "Tracker main page (graded/missing counts)"
+        },
+        {
+          "kind": "aial-method",
+          "url": "https://aial.ie/research/gpai-training-transparency/methodology",
+          "note": "Scoring framework, weightings and the grade boundary table"
+        },
+        {
+          "kind": "aial-method",
+          "url": "https://aial.ie/research/gpai-training-transparency/detailed-overview",
+          "note": "AIAL's cross-model analysis of the summaries they grade"
+        },
+        {
+          "kind": "aial-method",
+          "url": "https://aial.ie/research/gpai-training-transparency/recommendations",
+          "note": "AIAL's recommendations to providers and regulators"
         }
       ]
     }

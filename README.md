@@ -19,6 +19,9 @@ See `reports/` for findings.
   - `derived_targets.py` — documents whose URLs are re-mined from a watched page each run
   - `retry_wayback.py` / `upgrade_ots.py` — provenance self-healing (failed saves; bitcoin anchoring)
   - `analyze_drift.py` — live-vs-archive comparison (word/char-level, extraction-noise-proof)
+  - `harvest_eval_history.py` — every historical state of AIAL's evaluations, read from
+    their public git history (a sweep sees only today's state; grades are revised in
+    place), plus the earlier-version pages they publish
   - `verify_corpus.py` — full corpus integrity verifier (hashes, proofs, state/disk/event consistency; runs in CI)
   - `prune_capture.py` — the only sanctioned capture-removal tool (refuses content-bearing versions; logs provenance)
   - `capture.py` — core library (fetching incl. conditional GETs, rendering, extraction, `store_new_version` write path)
@@ -48,6 +51,7 @@ python crawler/attest.py --source <source-id>   # record what YOUR network sees 
 python crawler/meta_hub.py               # Meta hub editions
 python crawler/derived_targets.py        # re-mined-URL documents
 python crawler/analyze_drift.py
+python crawler/harvest_eval_history.py   # AIAL evaluation history (idempotent; needs a GitHub token)
 python site/build.py                     # regenerate site into site/dist/
 ```
 

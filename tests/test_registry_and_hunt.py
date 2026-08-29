@@ -289,3 +289,33 @@ def test_an_evaluation_target_does_not_make_a_missing_model_published(tmp_path):
     assert by["testorg/beta"]["status"] == "missing"
     assert any(t["kind"] == "aial-eval" for t in by["testorg/beta"]["targets"])
 
+
+def test_every_evaluated_model_also_tracks_the_page_that_shows_its_grade(tmp_path):
+    # the YAML carries the scores; only the rendered page carries the letter grade
+    out = tmp_path / "sources.json"
+    br.main(str(_fake_aial(tmp_path, ["alpha", "beta"])), out_path=out)
+    srcs = json.loads(out.read_text(encoding="utf-8"))["sources"]
+    for s in srcs:
+        ev = [t for t in s["targets"] if t["kind"] == "aial-eval"]
+        pg = [t for t in s["targets"] if t["kind"] == "aial-eval-page"]
+        assert len(pg) == len(ev), f"{s['id']}: {len(ev)} evals but {len(pg)} pages"
+        for t in pg:
+            assert t["url"].startswith(br.AIAL_SITE + "evals/")
+            assert t["url"].endswith("/"), "AIAL serves the page as a directory URL"
+    # the page slug is the eval file's own stem, which is how AIAL builds it
+    by = {s["id"]: s for s in srcs}
+    a = next(s for s in srcs if s["targets"] and any(
+        t["kind"] == "aial-eval" and t["url"].endswith("alpha.yaml") for t in s["targets"]))
+    assert any(t["url"].endswith("/evals/alpha/") for t in a["targets"])
+
+
+def test_the_scoring_framework_is_tracked_so_a_score_can_be_read_as_a_grade(tmp_path):
+    out = tmp_path / "sources.json"
+    br.main(str(_fake_aial(tmp_path, ["alpha"])), out_path=out)
+    srcs = json.loads(out.read_text(encoding="utf-8"))["sources"]
+    tracker = next(s for s in srcs if s["id"] == "aial/tracker")
+    method = [t for t in tracker["targets"] if t["kind"] == "aial-method"]
+    assert len(method) == len(br.AIAL_METHOD_PAGES) >= 3
+    assert any(t["url"].endswith("/methodology") for t in method), (
+        "without the methodology page a percentage cannot be read as a letter grade")
+

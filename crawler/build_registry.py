@@ -26,6 +26,15 @@ MODEL_NAME_OVERRIDES = {
     "MAI Image 2.5": "MAI-Image-2.5",
 }
 
+AIAL_SITE = "https://aial.ie/research/gpai-training-transparency/"
+# AIAL's framework pages: the rubric, the weightings and the grade boundaries that
+# turn a percentage into a letter. Without them a score cannot be read as a grade,
+# so they are part of the evidence, not background reading.
+AIAL_METHOD_PAGES = [
+    ("methodology", "Scoring framework, weightings and the grade boundary table"),
+    ("detailed-overview", "AIAL's cross-model analysis of the summaries they grade"),
+    ("recommendations", "AIAL's recommendations to providers and regulators"),
+]
 AIAL_EVAL_RAW = ("https://raw.githubusercontent.com/AIAccountabilityLab/"
                  "gpai-training-transparency/main/evals/")
 AIAL_ARCHIVE_BASE = "https://aial.ie/research/gpai-training-transparency/archive/"
@@ -307,6 +316,9 @@ STANDALONE_SOURCES = [
              "note": "Discovery feed: new summaries and archive links appear here"},
             {"kind": "watch-page", "url": "https://aial.ie/research/gpai-training-transparency/",
              "note": "Tracker main page (graded/missing counts)"},
+        ] + [
+            {"kind": "aial-method", "url": AIAL_SITE + p, "note": note}
+            for p, note in AIAL_METHOD_PAGES
         ],
     },
 ]
@@ -386,6 +398,12 @@ def main(aial_repo: str, out_path=None) -> None:
         add("aial-eval", AIAL_EVAL_RAW + path.name,
             "AIAL evaluation rubric, scored (attribution: aial.ie; assessment "
             "is AIAL's research, not a legal determination)")
+        # The rendered evaluation page. It carries what the YAML alone does not:
+        # the letter grade AIAL publishes for this model. The page slug is the
+        # eval file's own stem, which is how AIAL builds it.
+        add("aial-eval-page", AIAL_SITE + "evals/" + path.stem + "/",
+            "AIAL's published evaluation page for this model, carrying the letter "
+            "grade (attribution: aial.ie; AIAL's research, not a legal determination)")
 
         sid = f"{org_slug(org)}/{slug}"
         sources.append({

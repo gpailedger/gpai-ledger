@@ -53,7 +53,8 @@ EXTRACT_BLOCK = re.compile(r"<pre class='extract'>.*?</pre>", re.S)
 # adding a section to the builder means adding it here (a test enforces the pair).
 SEMANTIC_SECTIONS = ("Document versions", "Watch-surface captures",
                      "Captures of superseded target URLs",
-                     "Third-party evaluation of this summary")
+                     "Third-party evaluation",
+                     "The framework these evaluations use")
 
 DIST_SIZE_LIMIT_MB = 800
 # the corpus the built site must account for (L19); only consulted for a real

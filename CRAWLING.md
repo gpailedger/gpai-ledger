@@ -35,6 +35,22 @@ domain* looks for it at a new location. This is broader, so it is more conservat
 - fetches a candidate only to fingerprint it against the document we already hold; a
   match is registered, everything else is discarded.
 
+**3. The evaluation record (`harvest_eval_history.py`, daily).** The AI
+Accountability Lab grades these summaries and revises the grades in place, so a
+once-a-day look at their files loses every intermediate state, and a renamed or
+deleted evaluation disappears entirely. Their repository history is public, so the
+full record is read from the **GitHub API** rather than from their website: a
+routine run costs a few dozen API calls to github.com and, once a state is held, it
+is never fetched again. Their published earlier-version pages are discovered by
+reading pages the sweep has already captured, so discovery costs aial.ie nothing
+and only a page we do not yet hold is ever requested. Their own site carries 66
+conditional-GET targets in the daily sweep (63 evaluation pages, 3 framework
+pages), which cost a 304 unless something changed.
+
+Everything captured from AIAL is a third party's own research: it is archived,
+hashed and timestamped, and it is **not republished** — see the *Rights* section of
+the README. Their permission, not a code change, is what would alter that.
+
 If a provider asks us to reduce or stop either activity, we comply. The contact
 address in the User-Agent is monitored for exactly this.
 

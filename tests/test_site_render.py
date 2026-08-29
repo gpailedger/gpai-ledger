@@ -8,6 +8,8 @@ import capture as cap
 
 from conftest import load_module
 
+NL = chr(10)
+
 ROOT = Path(__file__).resolve().parent.parent
 build = load_module(str(ROOT / "site" / "build.py"), "site_build")
 
@@ -871,7 +873,7 @@ def test_an_evaluation_is_shown_as_the_assessment_it_is():
     ev = mk_row(kind="aial-eval", stored_as="raw.yaml",
                 url="https://raw.githubusercontent.com/o/r/main/evals/x.yaml")
     html = "".join(build.render_version_sections([ev], set()))
-    assert "Third-party evaluation of this summary" in html
+    assert "Third-party evaluation" in html
     assert "not a legal determination" in html
     assert "not the provider's document" in html
     assert "Document versions" not in html
@@ -1023,4 +1025,122 @@ def test_a_header_parameter_does_not_decide_what_a_capture_is_stored_as():
                          b"%PDF-1.4") == ".pdf"
     # and the stored extension decides document-hood, so it must stay out of it
     assert ".yaml" not in build.DOC_SUFFIXES and ".txt" in build.DOC_SUFFIXES
+
+
+def test_no_form_of_a_third_partys_assessment_is_ever_a_document_version():
+    for kind in ("aial-eval", "aial-eval-history", "aial-eval-page", "aial-method"):
+        row = mk_row(kind=kind, stored_as="raw.yaml", url="https://x/e")
+        assert build.is_document(row, set()) is False, kind
+        assert build.distinct_documents([row], set()) == 0, kind
+
+
+def test_the_history_of_a_grade_renders_with_the_evaluation_not_as_a_document():
+    rows = [mk_row(kind="aial-eval", stored_as="raw.yaml", url="https://x/e.yaml"),
+            mk_row(ts="20260701T000000Z", kind="aial-eval-history",
+                   stored_as="raw.yaml", url="https://x/c1/e.yaml"),
+            mk_row(ts="20260702T000000Z", kind="aial-eval-page",
+                   stored_as="raw.html", url="https://aial.ie/evals/x/")]
+    html = "".join(build.render_version_sections(rows, set()))
+    assert "Third-party evaluation" in html
+    assert "Document versions" not in html and "Watch-surface captures" not in html
+
+
+def test_the_scoring_framework_gets_its_own_section():
+    rows = [mk_row(kind="aial-method", stored_as="raw.html",
+                   url="https://aial.ie/research/gpai-training-transparency/methodology")]
+    html = "".join(build.render_version_sections(rows, set()))
+    assert "The framework these evaluations use" in html
+    assert "not republished" in html
+    assert "Watch-surface captures" not in html
+
+
+def test_every_restricted_kind_is_a_kind_the_site_can_name_and_place():
+    # a kind withheld but unlabelled renders its raw key to a reader, and a kind
+    # the section logic does not know renders under no heading at all
+    known = set(build.THIRD_PARTY_EVAL_KINDS) | set(build.THIRD_PARTY_METHOD_KINDS)
+    for kind in cap.RESTRICTED_KINDS:
+        assert kind in build.KIND_LABELS, f"{kind} has no reader-facing label"
+        assert kind in known, f"{kind} would render under no section"
+        assert kind in build.GONE_WORDING, f"{kind} has no wording for going missing"
+
+
+def test_a_harvested_state_shows_when_it_stood_without_claiming_we_saw_it_then():
+    src = dict(SRC, restricted=None)
+    m = dict(mk_manifest(), target_kind="aial-eval-history",
+             git_commit="f0e434e12a91c0781460a6322c1b0be1236c8728",
+             git_commit_date="2026-03-20T18:07:05Z")
+    out = build.render_version_page(src, m, "20260829T142050Z", set(), "text",
+                                    True, False)
+    assert "Upstream commit" in out
+    assert "20 Mar 2026" in out, "the date the grade actually stood is not shown"
+    assert "f0e434e12a91" in out
+    assert "this archive fetched it at the time above, not then" in out
+    # and a capture with no upstream provenance must not grow an empty row
+    plain = build.render_version_page(src, mk_manifest(), "20260829T142050Z", set(),
+                                      "text", True, False)
+    assert "Upstream commit" not in plain
+
+
+def test_the_tracker_page_that_publishes_every_grade_is_not_served_either():
+    # AIAL's tracker root carries a full Model/Provider/Transparency/Usefulness
+    # table: serving this project's copy would republish exactly what the
+    # evaluation pages withhold
+    url = "https://aial.ie/research/gpai-training-transparency/"
+    m = dict(mk_manifest(), target_kind="watch-page",
+             http=dict(mk_manifest()["http"], url=url, final_url=url))
+    assert build.restriction_of({}, m)
+    out = build.render_version_page({"provider": "AIAL", "model": "tracker"}, m,
+                                    "20260829T000000Z", set(), "grades table",
+                                    True, False)
+    assert "<h2>Structured facts</h2>" in out
+    assert "grades table" not in out, "their grade table was republished"
+    # ...and the stated reason must be the true one
+    assert "At the provider's request" not in out
+    assert "does not redistribute it" in out
+
+
+def test_aials_mirror_of_a_providers_own_document_is_still_served():
+    # aial-archive is the PROVIDER's mandated disclosure, mirrored by AIAL, and is
+    # sometimes the only surviving copy: it must not be swept up by the policy
+    m = dict(mk_manifest(), target_kind="aial-archive")
+    assert build.restriction_of({}, m) is None
+    assert "https://aial.ie/research/gpai-training-transparency/archive/x.pdf"         not in cap.RESTRICTED_URLS
+
+
+def test_a_row_of_harvested_states_reads_as_history_not_as_one_days_captures():
+    # all 318 states were fetched on one day; without the upstream date a reader
+    # sees five identical-looking captures and cannot order the grades
+    r = mk_row(kind="aial-eval-history", stored_as="raw.yaml",
+               ts="20260829T142050Z", upstream_date="2026-03-20T18:07:05Z")
+    html = build.version_row_html(r, set(), _first(r))
+    assert "the state that stood upstream from 20 Mar 2026" in html
+    assert "fetched here on 29 Aug 2026" in html
+    # an ordinary capture gains no such note
+    assert "stood upstream" not in build.version_row_html(mk_row(), set(),
+                                                          _first(mk_row()))
+
+
+def test_a_harvested_capture_is_never_presented_as_a_superseded_target(corpus,
+                                                                       tmp_path,
+                                                                       monkeypatch):
+    # a harvested state has no registry target by design (its address is a pinned
+    # commit). Falling into "Captures of superseded target URLs" would tell a
+    # reader the ledger once tracked that address and stopped — untrue of all 318
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 doc", text="doc text", tslug=SLUG)
+    corpus.add_capture(ts="20260829T142050Z",
+                       raw=("model_name: x" + NL + "score: 9" + NL).encode(),
+                       ext=".yaml", text="model_name: x", kind="aial-eval-history",
+                       url="https://raw.githubusercontent.com/o/r/abc123/evals/x.yaml",
+                       tslug="aial-eval-history-deadbeef",
+                       extra_manifest={"harvested_from": "upstream git history",
+                                       "git_commit": "abc123",
+                                       "git_commit_date": "2026-03-20T18:07:05Z"})
+    corpus.finish()
+    dist = _build_site(tmp_path, monkeypatch, corpus.root)
+    html = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    i = html.find("Captures of superseded target URLs")
+    seg = html[i:] if i >= 0 else ""
+    assert "AIAL evaluation" not in seg, "a harvested state was called superseded"
+    assert "Third-party evaluation" in html
+    assert "stood upstream from 20 Mar 2026" in html
 

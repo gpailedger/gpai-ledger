@@ -391,13 +391,39 @@ def load_vdiffs() -> dict:
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
+_RESTRICTED_DIR_CACHE = {}
+
+
+def _dir_is_restricted(d) -> bool:
+    """Whether one capture directory holds content this project withholds.
+
+    Two rules, and BOTH must be honoured here or the redaction has a hole: the
+    capture's kind (an evaluation, in any of its forms) and its URL (AIAL's
+    tracker root publishes the full grade table under the ordinary watch-page
+    kind). The site checks both; a check here that saw only the kind would
+    republish, in a committed report file, exactly what the site withholds."""
+    if not d:
+        return False
+    if d in _RESTRICTED_DIR_CACHE:
+        return _RESTRICTED_DIR_CACHE[d]
+    verdict = cap.kind_of_capture_dir(d) in cap.RESTRICTED_KINDS
+    if not verdict:
+        m = load_manifest(d) or {}
+        http = m.get("http") or {}
+        verdict = (m.get("target_kind") in cap.RESTRICTED_KINDS
+                   or http.get("url") in cap.RESTRICTED_URLS
+                   or http.get("final_url") in cap.RESTRICTED_URLS)
+    _RESTRICTED_DIR_CACHE[d] = verdict
+    return verdict
+
+
 def excerpts_allowed(rec) -> bool:
     """Whether a diff record may carry verbatim excerpts of what it compared.
     reports/version-diffs.json and reports/drift-latest.json are committed to a
     public repository: a record touching content this project archives but does
     not republish keeps its METRICS (a word count is a fact about a change) and
     loses the words themselves."""
-    return not any(cap.kind_of_capture_dir(d) in cap.RESTRICTED_KINDS
+    return not any(_dir_is_restricted(d)
                    for d in (rec.get("from_dir"), rec.get("to_dir")))
 
 

@@ -88,6 +88,18 @@ jobs:
         continue-on-error: true
         run: python crawler/derived_targets.py
 
+      # A sweep sees an evaluation only as it stands at 05:47; AIAL commits
+      # several times a day and revises grades in place. Their git history is the
+      # only complete record, so every state is harvested from its own
+      # commit-pinned URL. Idempotent: routine runs cost a few API calls.
+      - name: Harvest AIAL evaluation history (every graded state, from their git)
+        id: evalhistory
+        timeout-minutes: 30
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python crawler/harvest_eval_history.py
+
       - name: Retry failed Wayback saves
         id: waybackretry
         continue-on-error: true
@@ -205,6 +217,7 @@ jobs:
              [ "${{ steps.capture.outcome }}" != "success" ] || \
              [ "${{ steps.metahub.outcome }}" != "success" ] || \
              [ "${{ steps.derived.outcome }}" != "success" ] || \
+             [ "${{ steps.evalhistory.outcome }}" != "success" ] || \
              [ "${{ steps.waybackretry.outcome }}" != "success" ] || \
              [ "${{ steps.otsupgrade.outcome }}" != "success" ] || \
              [ "${{ steps.drift.outcome }}" != "success" ] || \
