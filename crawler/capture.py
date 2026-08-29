@@ -41,6 +41,12 @@ OTS_CALENDARS = [
     "https://ots.btc.catallaxy.com",
 ]
 
+# Types that say only "text" or "bytes". They carry less information than the
+# URL's own suffix, so a specific suffix wins over them — otherwise a YAML file
+# served as text/plain is stored as .txt, which the site counts as a document
+# format. Specific types (application/pdf) still win over the URL.
+GENERIC_TYPES = {"text/plain", "application/octet-stream"}
+
 EXT_BY_TYPE = {
     "application/pdf": ".pdf",
     "application/zip": ".zip",
@@ -400,13 +406,21 @@ def kind_of_capture_dir(d) -> str:
 
 
 def guess_ext(content_type: str, url: str, raw: bytes = None) -> str:
-    if (content_type or "").lower() in EXT_BY_TYPE:
-        return EXT_BY_TYPE[content_type.lower()]
+    # the media type only: "text/plain" and "text/plain; charset=utf-8" describe
+    # the same file and must store it identically (they did not, so the same
+    # document could land as .txt or .yaml depending on a header parameter)
+    media = (content_type or "").split(";")[0].strip().lower()
     tail = url.split("?")[0].lower()
+    url_ext = ""
     for ext in (".pdf", ".zip", ".html", ".md", ".txt", ".docx", ".doc", ".json",
                 ".yaml", ".yml"):
         if tail.endswith(ext):
-            return ext
+            url_ext = ext
+            break
+    if media in EXT_BY_TYPE and not (media in GENERIC_TYPES and url_ext):
+        return EXT_BY_TYPE[media]
+    if url_ext:
+        return url_ext
     # magic-byte sniffing: extensionless download URLs served as octet-stream
     if raw:
         if raw[:5] == b"%PDF-":

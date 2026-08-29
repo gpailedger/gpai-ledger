@@ -48,6 +48,13 @@ LINK = re.compile(r"href='([^']+)'|href=\"([^\"]+)\"")
 EXTRACT_BLOCK = re.compile(r"<pre class='extract'>.*?</pre>", re.S)
 
 
+# every <h2> render_version_sections() can emit. A model page whose captures
+# render under a heading missing from this list is reported as unpresented, so
+# adding a section to the builder means adding it here (a test enforces the pair).
+SEMANTIC_SECTIONS = ("Document versions", "Watch-surface captures",
+                     "Captures of superseded target URLs",
+                     "Third-party evaluation of this summary")
+
 DIST_SIZE_LIMIT_MB = 800
 # the corpus the built site must account for (L19); only consulted for a real
 # build, i.e. one that wrote ledger.json
@@ -119,9 +126,7 @@ def main() -> int:
         # model pages: L3/L4
         if len(parts) == 4 and parts[0] == "ledger" and parts[3] == "index.html":
             has_captures = "v/" in html
-            has_section = any(s in html for s in
-                              ("Document versions", "Watch-surface captures",
-                               "Captures of superseded target URLs"))
+            has_section = any(s in html for s in SEMANTIC_SECTIONS)
             if has_captures and not has_section:
                 findings.append(f"L3 model page with captures but no semantic section: {rel}")
             if "class='tag tag-published'" in html and has_captures \

@@ -990,3 +990,37 @@ def test_a_withheld_page_says_the_true_reason_for_withholding():
                                   "target_kind": "provider-live"}, "one two")
     assert "At the provider's request" in doc
 
+
+def test_lint_knows_every_section_the_builder_can_emit():
+    # a model page whose captures render under a heading lint does not know is
+    # reported as having no semantic section — which blocked a real deploy
+    import re
+    rows = [mk_row(),                                             # document
+            mk_row(kind="watch-page", stored_as="raw.html",
+                   url="https://example.org/hub"),                # watch surface
+            mk_row(kind="aial-eval", stored_as="raw.yaml",
+                   url="https://raw.githubusercontent.com/o/r/main/evals/x.yaml"),
+            mk_row(ts="20260101T000000Z", active=False)]          # superseded
+    html = "".join(build.render_version_sections(rows, set()))
+    headings = set(re.findall(r"<h2>([^<]+)</h2>", html))
+    assert headings, "no sections rendered — the fixture stopped exercising this"
+    unknown = headings - set(lint.SEMANTIC_SECTIONS)
+    assert not unknown, f"lint would report these as no-section: {sorted(unknown)}"
+
+
+def test_a_header_parameter_does_not_decide_what_a_capture_is_stored_as():
+    # "text/plain" and "text/plain; charset=utf-8" describe the same file; the
+    # ledger stored them differently, so an AIAL evaluation landed as .txt —
+    # which site/build.py counts as a document format
+    y = "https://raw.githubusercontent.com/o/r/main/evals/a.yaml"
+    assert cap.guess_ext("text/plain", y, b"model_name: x") == ".yaml"
+    assert cap.guess_ext("text/plain; charset=utf-8", y, b"model_name: x") == ".yaml"
+    # a generic type defers to a specific suffix, a specific type does not
+    assert cap.guess_ext("text/plain", "https://x/notes.txt", b"hi") == ".txt"
+    assert cap.guess_ext("text/plain", "https://x/readme", b"hi") == ".txt"
+    assert cap.guess_ext("application/pdf", "https://x/doc.html", b"%PDF-1.4") == ".pdf"
+    assert cap.guess_ext("application/pdf; charset=binary", "https://x/d.pdf",
+                         b"%PDF-1.4") == ".pdf"
+    # and the stored extension decides document-hood, so it must stay out of it
+    assert ".yaml" not in build.DOC_SUFFIXES and ".txt" in build.DOC_SUFFIXES
+
