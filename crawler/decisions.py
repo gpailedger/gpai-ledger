@@ -158,6 +158,48 @@ def propose(repo: str, token: str, limit: int = 10) -> int:
     return 0
 
 
+# The weekly Tier-3 routine ends its report with a fenced json block of
+# candidates. Reading it here is what lets a judgement call the routine surfaced
+# become a question the operator can answer, instead of prose nobody opens.
+CANDIDATE_BLOCK = re.compile(
+    r"CANDIDATES FOR THE LEDGER.*?```(?:json)?\s*(\[.*?\])\s*```", re.S | re.I)
+
+
+def ingest_report(path: Path) -> int:
+    """Queue the candidates named in a routine report. Unreadable or absent
+    reports are not an error: the routine may simply have found nothing."""
+    if not path.exists():
+        print(f"no report at {path}", flush=True)
+        return 0
+    m = CANDIDATE_BLOCK.search(path.read_text(encoding="utf-8", errors="replace"))
+    if not m:
+        print(f"{path.name} carries no candidate block", flush=True)
+        return 0
+    try:
+        raw = json.loads(m.group(1))
+    except json.JSONDecodeError as exc:
+        print(f"{path.name}'s candidate block is not valid JSON ({exc}); ignored",
+              flush=True)
+        return 0
+    cands = []
+    for c in raw if isinstance(raw, list) else []:
+        if not isinstance(c, dict) or not c.get("url"):
+            continue
+        # a routine writes prose; take only the fields we understand, and never
+        # let it choose a source id — that is the operator's to confirm
+        cands.append({"provider": str(c.get("provider") or "")[:120] or None,
+                      "model": str(c.get("model") or "")[:200] or None,
+                      "url": str(c["url"])[:500],
+                      "classification": str(c.get("classification") or "")[:120],
+                      "why": str(c.get("note") or "")[:500]})
+    before = load(PENDING)
+    after = add_candidates(cands, pending=dict(before))
+    save(PENDING, after)
+    print(f"{len(after) - len(before)} candidate(s) queued from {path.name} "
+          f"({len(cands)} named in the report)", flush=True)
+    return 0
+
+
 COMMAND = re.compile(r"^\s*/(approve|reject)\b[ \t]*(.*)$", re.I | re.M)
 
 
@@ -216,6 +258,8 @@ def main(argv=None) -> int:
     p = sub.add_parser("propose", help="open an issue per queued candidate")
     p.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""))
     p.add_argument("--limit", type=int, default=10)
+    i = sub.add_parser("ingest", help="queue candidates from a routine report")
+    i.add_argument("--report", default=str(HERE.parent / "reports" / "tier3-hunt-latest.md"))
     a = sub.add_parser("apply", help="record the owner's answer")
     a.add_argument("--issue", type=int, required=True)
     a.add_argument("--comment", default="")
@@ -223,6 +267,8 @@ def main(argv=None) -> int:
     a.add_argument("--author", default="")
     args = ap.parse_args(argv)
 
+    if args.cmd == "ingest":
+        return ingest_report(Path(args.report))
     if args.cmd == "propose":
         token = os.environ.get("GITHUB_TOKEN", "")
         if not (args.repo and token):

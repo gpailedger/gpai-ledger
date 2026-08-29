@@ -35,6 +35,9 @@ jobs:
       - name: Tier-1 probe (missing models against their provider's own URL patterns)
         run: python crawler/probe_missing.py
 
+      - name: Queue candidates from the weekly Tier-3 report, if one has landed
+        run: python crawler/decisions.py ingest
+
       - name: Open decision issues for candidates a machine cannot judge
         env:
           GITHUB_TOKEN: ${{ github.token }}

@@ -187,3 +187,87 @@ def test_a_rejection_never_reaches_the_registry(tmp_path):
         dec_file.unlink()
     s = {x["id"]: x for x in json.loads(out.read_text(encoding="utf-8"))["sources"]}
     assert all(not t["url"].endswith("no.pdf") for t in s["testorg/alpha"]["targets"])
+
+
+# --- taking candidates out of the weekly routine's report ---
+
+REPORT = """# Tier-3 hunt — 2026-08-31
+
+## 6. CANDIDATES FOR THE LEDGER
+
+```json
+[
+  {"provider": "Acme AI", "model": "Acme 2", "url": "https://acme.example/s.pdf",
+   "classification": "verified-live", "note": "fetched from the provider"},
+  {"provider": "NoUrl", "model": "Nope"},
+  {"provider": "X", "model": "Y 1", "url": "https://x.example/y.pdf",
+   "classification": "lead-only"}
+]
+```
+
+## 7. CAVEATS
+"""
+
+
+def _report(tmp_path, text):
+    f = tmp_path / "tier3-hunt-latest.md"
+    f.write_text(text, encoding="utf-8")
+    return f
+
+
+def test_a_routine_report_feeds_the_same_queue(tmp_path):
+    DEC.ingest_report(_report(tmp_path, REPORT))
+    q = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    assert len(q) == 2                                   # the one with no url is dropped
+    assert {v["provider"] for v in q.values()} == {"Acme AI", "X"}
+
+
+def test_the_routine_never_chooses_a_source_id():
+    # an id becomes a permanent public URL; only the operator confirms one
+    DEC.ingest_report(_report(DEC.PENDING.parent, REPORT))
+    q = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    assert all(v["source_id"] is None for v in q.values())
+
+
+def test_ingesting_the_same_report_twice_asks_nothing_twice(tmp_path):
+    f = _report(tmp_path, REPORT)
+    DEC.ingest_report(f)
+    first = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    DEC.ingest_report(f)
+    assert json.loads(DEC.PENDING.read_text(encoding="utf-8")) == first
+
+
+def test_an_already_decided_candidate_is_not_re_queued_from_a_report(tmp_path):
+    f = _report(tmp_path, REPORT)
+    DEC.ingest_report(f)
+    q = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    k = next(k for k, v in q.items() if v["provider"] == "Acme AI")
+    DEC.save(DEC.DECISIONS, {k: {"decision": "reject"}})
+    DEC.save(DEC.PENDING, {})
+    DEC.ingest_report(f)
+    left = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    assert k not in left and len(left) == 1
+
+
+@pytest.mark.parametrize("text", [
+    "# report with no candidate section",
+    "CANDIDATES FOR THE LEDGER\n\n```json\nnot json at all\n```",
+    "CANDIDATES FOR THE LEDGER\n\n```json\n{\"not\": \"a list\"}\n```",
+])
+def test_a_malformed_report_is_ignored_rather_than_fatal(tmp_path, text):
+    assert DEC.ingest_report(_report(tmp_path, text)) == 0
+    assert not DEC.PENDING.exists() or json.loads(
+        DEC.PENDING.read_text(encoding="utf-8")) == {}
+
+
+def test_a_missing_report_is_not_an_error(tmp_path):
+    assert DEC.ingest_report(tmp_path / "nothing-here.md") == 0
+
+
+def test_report_fields_are_bounded_so_a_report_cannot_bloat_the_queue(tmp_path):
+    huge = ('CANDIDATES FOR THE LEDGER\n\n```json\n[{"provider":"' + "P" * 5000
+            + '","model":"M","url":"https://x.example/' + "u" * 5000 + '.pdf"}]\n```')
+    DEC.ingest_report(_report(tmp_path, huge))
+    v = next(iter(json.loads(DEC.PENDING.read_text(encoding="utf-8")).values()))
+    assert len(v["provider"]) <= 120 and len(v["url"]) <= 500
+
