@@ -74,6 +74,7 @@ KIND_LABELS = {
     "cop-doc": "Code of Practice doc (Art. 53(1)(a)–(c))",
     "regulatory": "official document",
     "watch-page": "watched page",
+    "aial-eval": "AIAL evaluation",
 }
 
 STATUS_LABELS = {"published": "Published", "missing": "Missing",
@@ -1360,6 +1361,15 @@ the matching capture event) — and the prune tool's rule guarantees the pruned
 capture's content survives in a neighboring retained version.
 Capture ids are minting timestamps and can trail the fetch
 time by seconds; the manifest's <code>fetched_at</code> is authoritative.</p>
+<h2>Work this project does not republish</h2>
+<p>Two kinds of capture are held but not served. A provider who objects to
+full-text archiving is switched to the treatment described next. Separately, a
+third party's own research — the AI Accountability Lab's scored evaluations of
+published summaries — is archived so that a grade stays recoverable after they
+revise it, but their words are not republished here: those pages carry the
+hashes, size, and timestamp proof, and link to AIAL for the assessment itself.
+No objection has been made; the ledger simply does not redistribute another
+organisation's work without their permission.</p>
 <h2>Provider objections</h2>
 <p>A provider who objects to full-text archiving of a document is switched to a
 structured-facts treatment: the page keeps the document's hashes, size, text length,
@@ -1369,7 +1379,9 @@ Write to <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.</p>
 <p><em>provider site / provider page</em>: the provider's own published copy or the
 page that links it. <em>AIAL archived copy</em>: the write-once snapshot archived by
 the AI Accountability Lab. <em>watched page</em>: a portal, hub, or listing monitored
-because documents appear or change there. <em>official document</em>: European
+because documents appear or change there. <em>AIAL evaluation</em>: the AI
+Accountability Lab's scored assessment of a published summary — their research
+judgement, not a legal determination, and not the provider's document. <em>official document</em>: European
 Commission material (the template summaries must follow). <em>Code of Practice
 doc</em>: a document published under the Art. 56 Code of Practice, whose chapters cover
 Art. 53(1)(a)–(c) and Art. 55 — related to, but distinct from, the Art. 53(1)(d)
