@@ -380,3 +380,21 @@ def test_cohere_miner_regex_is_linear_on_hyphen_rich_hosts():
     real = ("https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs/"
             "assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf?X-Amz-Signature=1")
     assert dt.COHERE_SUMMARY_RE.search(real).group(0).startswith("https://fdr-prod-docs-files-public.s3.us-east-1")
+
+
+def test_yaml_is_read_as_text_but_is_not_a_document_format():
+    # AIAL's scored evaluations are YAML; we need their text (a grade change must
+    # be visible) but they must never be classed as the provider's document
+    assert cap.guess_ext("text/plain; charset=utf-8",
+                         "https://raw.githubusercontent.com/o/r/main/evals/a.yaml",
+                         b"model_name: x") == ".yaml"
+    text, _notes = cap.extract_text(b'model_name: "X"\nS1:\n  D1:\n    score: 9\n', ".yaml")
+    assert "score: 9" in text
+    import sys
+    from pathlib import Path as _P
+    sys.path.insert(0, str(_P(__file__).resolve().parent.parent / "site"))
+    from conftest import load_module
+    build = load_module(str(_P(__file__).resolve().parent.parent / "site" / "build.py"),
+                        "build_for_yaml_check")
+    assert ".yaml" not in build.DOC_SUFFIXES
+

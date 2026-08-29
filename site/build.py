@@ -840,6 +840,11 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
 
 
 def is_document(r, inpage_urls) -> bool:
+    # a third party's scored evaluation is evidence ABOUT the summary, never the
+    # summary: it must not reach the document count, the changes feed, or the
+    # drift comparison that decides whether a provider edited its document
+    if r.get("kind") == "aial-eval":
+        return False
     return (r["stored_as"].endswith(DOC_SUFFIXES) or r["url"] in inpage_urls
             or bool(r["managed"]))
 
@@ -943,10 +948,16 @@ def render_version_sections(rows_data, inpage_urls) -> list:
     for r in sorted(rows_data, key=lambda r: r["ts"]):
         sha_first.setdefault(r["sha"], r["ts"])
     current = [r for r in rows_data if r["active"] and not r["retired"]]
+    # a third party's scored assessment is neither the document nor a page we
+    # watch for the document to appear on: it is evidence about the document
+    eval_rows = [version_row_html(r, inpage_urls, sha_first)
+                 for r in current if r["kind"] == "aial-eval"]
     doc_rows = [version_row_html(r, inpage_urls, sha_first)
-                for r in current if is_document(r, inpage_urls)]
+                for r in current
+                if is_document(r, inpage_urls) and r["kind"] != "aial-eval"]
     surf_rows = [version_row_html(r, inpage_urls, sha_first)
-                 for r in current if not is_document(r, inpage_urls)]
+                 for r in current
+                 if not is_document(r, inpage_urls) and r["kind"] != "aial-eval"]
     old_rows = [version_row_html(r, inpage_urls, sha_first)
                 for r in rows_data if not r["active"] or r["retired"]]
 
@@ -969,6 +980,18 @@ def render_version_sections(rows_data, inpage_urls) -> list:
                    "detection; not the document itself.</p>")
         vsections.append("<h2>Watch-surface captures</h2>" + caption
                          + wrap_table("Watch-surface captures", VHEAD + "".join(surf_rows)))
+    if eval_rows:
+        vsections.append(
+            "<h2>Third-party evaluation of this summary</h2>"
+            "<p class='muted'>The AI Accountability Lab scores published summaries "
+            "against the Commission's template and publishes the result. These are "
+            "captures of <strong>their assessment</strong>, archived here because "
+            "they are revised over time and a score is otherwise unrecoverable once "
+            "changed. It is AIAL's research judgement, not a legal determination, "
+            "and not the provider's document. Attribution: "
+            "<a href='https://aial.ie/research/gpai-training-transparency/'>aial.ie"
+            "</a>.</p>"
+            + wrap_table("Third-party evaluation", VHEAD + "".join(eval_rows)))
     if old_rows:
         vsections.append("<h2>Captures of superseded target URLs</h2>"
                          "<p class='muted'>Locations this ledger previously tracked "

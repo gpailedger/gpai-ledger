@@ -26,6 +26,8 @@ MODEL_NAME_OVERRIDES = {
     "MAI Image 2.5": "MAI-Image-2.5",
 }
 
+AIAL_EVAL_RAW = ("https://raw.githubusercontent.com/AIAccountabilityLab/"
+                 "gpai-training-transparency/main/evals/")
 AIAL_ARCHIVE_BASE = "https://aial.ie/research/gpai-training-transparency/archive/"
 AIAL_EVAL_BASE = "https://aial.ie/research/gpai-training-transparency/evals/"
 
@@ -377,6 +379,13 @@ def main(aial_repo: str, out_path=None) -> None:
         if archive_file:
             add("aial-archive", AIAL_ARCHIVE_BASE + archive_file,
                 "AIAL write-once snapshot (attribution: aial.ie)")
+        # AIAL's own scored evaluation of this summary. Captured as evidence of
+        # what they assessed and when: they re-evaluate, and a grade is only
+        # recoverable later if it was captured while it stood. This is NOT the
+        # provider's document and never counts as one.
+        add("aial-eval", AIAL_EVAL_RAW + path.name,
+            "AIAL evaluation rubric, scored (attribution: aial.ie; assessment "
+            "is AIAL's research, not a legal determination)")
 
         sid = f"{org_slug(org)}/{slug}"
         sources.append({

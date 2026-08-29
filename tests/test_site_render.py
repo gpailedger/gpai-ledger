@@ -853,3 +853,25 @@ def test_a_host_being_down_does_not_advance_last_checked(corpus, tmp_path, monke
     model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
     assert "2026-09-30" not in model, "a skipped target was published as checked"
 
+
+def test_a_third_party_evaluation_is_never_counted_as_the_providers_document():
+    ev = mk_row(kind="aial-eval", stored_as="raw.yaml",
+                url="https://raw.githubusercontent.com/o/r/main/evals/x.yaml")
+    doc = mk_row(kind="provider-live", stored_as="raw.pdf")
+    assert build.is_document(ev, set()) is False
+    assert build.is_document(doc, set()) is True
+    # and it must not inflate the document count shown next to the model
+    assert build.distinct_documents([ev], set()) == 0
+    assert build.distinct_documents([ev, doc], set()) == 1
+
+
+def test_an_evaluation_is_shown_as_the_assessment_it_is():
+    ev = mk_row(kind="aial-eval", stored_as="raw.yaml",
+                url="https://raw.githubusercontent.com/o/r/main/evals/x.yaml")
+    html = "".join(build.render_version_sections([ev], set()))
+    assert "Third-party evaluation of this summary" in html
+    assert "not a legal determination" in html
+    assert "not the provider's document" in html
+    assert "Document versions" not in html
+    assert "Watch-surface captures" not in html
+

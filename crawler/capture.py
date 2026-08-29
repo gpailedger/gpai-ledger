@@ -384,7 +384,8 @@ def guess_ext(content_type: str, url: str, raw: bytes = None) -> str:
     if (content_type or "").lower() in EXT_BY_TYPE:
         return EXT_BY_TYPE[content_type.lower()]
     tail = url.split("?")[0].lower()
-    for ext in (".pdf", ".zip", ".html", ".md", ".txt", ".docx", ".doc", ".json"):
+    for ext in (".pdf", ".zip", ".html", ".md", ".txt", ".docx", ".doc", ".json",
+                ".yaml", ".yml"):
         if tail.endswith(ext):
             return ext
     # magic-byte sniffing: extensionless download URLs served as octet-stream
@@ -502,7 +503,10 @@ def extract_text(data: bytes, ext: str):
             return _finish(normalize(_pdf_text_bounded(data)))
         if ext == ".html":
             return normalize(extract_html_text(data)), notes
-        if ext in (".md", ".txt", ".json"):
+        # .yaml/.yml are read as text but are deliberately NOT in the site's
+        # DOC_SUFFIXES: an AIAL evaluation is evidence about a summary, never the
+        # summary itself, and must never be counted as a document version
+        if ext in (".md", ".txt", ".json", ".yaml", ".yml"):
             return normalize(data.decode("utf-8", errors="replace")), notes
         if ext == ".zip":
             # Zip-bomb guards live in _bounded_zip_members (shared with the

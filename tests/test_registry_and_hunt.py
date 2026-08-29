@@ -264,3 +264,28 @@ def test_no_archive_override_is_left_pinning_us_to_a_stale_upstream_file():
     assert br.ARCHIVE_FILE_OVERRIDES == {}, (
         "an override is in force — confirm upstream is still wrong before keeping it")
 
+
+def test_every_aial_tracked_model_gets_an_evaluation_target(tmp_path):
+    out = tmp_path / "sources.json"
+    br.main(str(_fake_aial(tmp_path, ["alpha", "beta"])), out_path=out)
+    srcs = json.loads(out.read_text(encoding="utf-8"))["sources"]
+    aial = [s for s in srcs if s.get("aial", {}).get("eval_yaml")]
+    assert aial
+    for s in aial:
+        ev = [t for t in s["targets"] if t["kind"] == "aial-eval"]
+        assert len(ev) == 1, f"{s['id']} has {len(ev)} evaluation targets"
+        assert ev[0]["url"].startswith(br.AIAL_EVAL_RAW)
+        assert ev[0]["url"].endswith(".yaml")
+        assert "not a legal determination" in ev[0]["note"]
+
+
+def test_an_evaluation_target_does_not_make_a_missing_model_published(tmp_path):
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    (repo / "evals" / "beta.yaml").write_text(
+        "model_name: beta\norganization: Testorg\n", encoding="utf-8")
+    br.main(str(repo), out_path=out)
+    by = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert by["testorg/beta"]["status"] == "missing"
+    assert any(t["kind"] == "aial-eval" for t in by["testorg/beta"]["targets"])
+
