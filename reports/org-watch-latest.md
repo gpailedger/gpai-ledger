@@ -1,4 +1,4 @@
-# HF org watch — 2026-08-29 09:54 UTC
+# HF org watch — 2026-08-29 12:52 UTC
 
 New models created in the last 14 days by tracked orgs (candidates for the summary hunt; not yet tracked sources).
 

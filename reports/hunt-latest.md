@@ -1,6 +1,6 @@
-# Relocation hunt — 2026-08-29 09:55 UTC
+# Relocation hunt — 2026-08-29 12:53 UTC
 
-## microsoft/mai-image-2 — unreachable-at-recorded-location (11 sweeps)
+## microsoft/mai-image-2 — unreachable-at-recorded-location (12 sweeps)
 
 Dead URL: `https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf`
 
