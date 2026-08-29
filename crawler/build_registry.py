@@ -45,11 +45,15 @@ DROP_URL_PREFIXES = (
 )
 
 # Corrections to AIAL metadata bugs; drop each override once the upstream eval YAML
-# is fixed. muse-spark.yaml's archive_file_name points at Gemini_2026_07_21.pdf
-# (Google's document); the correct Muse Spark file exists in their archive folder.
-ARCHIVE_FILE_OVERRIDES = {
-    "muse-spark": "Muse_Spark_2026_07_21.pdf",
-}
+# is fixed. Empty is the healthy state.
+#
+# Retired 29 Aug 2026: muse-spark.yaml used to name Gemini_2026_07_21.pdf (Google's
+# document) as Muse Spark's archived copy, so we pinned the correct file by hand.
+# AIAL fixed it on 18 Aug and now names Muse_Spark_2026_08_18.pdf — verified before
+# dropping the pin: that file is titled "Public Summary of Training Content",
+# names Muse Spark, is version V3 (the pinned one was V2), and is byte-identical
+# to the V3 we captured from Meta directly.
+ARCHIVE_FILE_OVERRIDES: dict = {}
 
 # Providers that publish the summary as in-page web content rather than a document
 # file. Their rendered-page captures ARE the document versions (the site classifies

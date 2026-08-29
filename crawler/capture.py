@@ -81,6 +81,33 @@ def sha256_hex(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+# Which documents a page links to IS its content when the page is a tracker: the
+# AIAL summary list pointed Muse Spark at Google's Gemini PDF for weeks, and the
+# correction changed only an href — invisible to text extraction, so the daily
+# sweep recorded "unchanged-content" every day for eleven days. Hashing the
+# document links separately makes that a version without touching the extracted
+# text (which the drift ledger compares, and which must not churn).
+DOC_LINK_EXTS = (".pdf", ".docx", ".doc", ".zip", ".md", ".txt", ".json")
+
+
+def doc_links_sha(raw: bytes):
+    """sha256 over the sorted set of document links in an HTML page, or None."""
+    from bs4 import BeautifulSoup
+    try:
+        soup = BeautifulSoup(raw, "html.parser")
+    except Exception:  # noqa: BLE001
+        return None
+    links = set()
+    for a in soup.find_all("a", href=True):
+        href = str(a["href"]).strip()
+        path = href.split("?", 1)[0].split("#", 1)[0].lower()
+        if path.endswith(DOC_LINK_EXTS):
+            links.add(href)
+    if not links:
+        return None
+    return hashlib.sha256("\n".join(sorted(links)).encode("utf-8")).hexdigest()
+
+
 def canonical_text_sha(text: str) -> str:
     """Whitespace-collapsed text hash: the change-detection key for extracted text
     (invisible-character churn in dynamic pages must not mint versions)."""
@@ -1111,6 +1138,7 @@ def store_new_version(store: Store, *, source_id: str, provider: str, model: str
         "source_id": source_id, "provider": provider, "model": model,
         "target_kind": kind, "sha256": sha, "size_bytes": len(raw),
         "stored_as": f"raw{ext}", "text_sha256": text_sha,
+        **({"doc_links_sha256": doc_links_sha(raw)} if ext == ".html" else {}),
         "extraction_notes": list(notes) + list(extra_notes),
         "http": meta,
         "prior_sha256": store.last_sha(source_id, tslug),

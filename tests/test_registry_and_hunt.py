@@ -256,3 +256,11 @@ def test_persistent_absence_feeds_the_hunt_streak(tmp_path):
          "url": "u", "kind": "provider-live", "ts": "2"},
     ]) + "\n", encoding="utf-8")
     assert ("s", "t") in site_hunt.error_streaks(p)
+
+
+def test_no_archive_override_is_left_pinning_us_to_a_stale_upstream_file():
+    # each override corrects an upstream metadata bug and must be dropped once
+    # AIAL fixes it, or it silently pins the ledger to an older archived copy
+    assert br.ARCHIVE_FILE_OVERRIDES == {}, (
+        "an override is in force — confirm upstream is still wrong before keeping it")
+

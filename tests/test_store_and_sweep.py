@@ -1090,3 +1090,68 @@ def test_a_json_line_that_is_not_an_event_does_not_kill_the_sweep(tmp_path):
     st = rc_mod.absence_streaks(p)
     assert st[("s", "t")]["absent_on"] == {"2026-08-29"}
 
+
+# --- a page that re-points a link has changed, even if its words have not ---
+
+LINKS_A = (b"<html><body><p>Same words either way.</p>"
+           b"<a href='../../archive/Gemini_2026_07_21.pdf'>here</a></body></html>")
+LINKS_B = (b"<html><body><p>Same words either way.</p>"
+           b"<a href='../../archive/Muse_Spark_2026_08_18.pdf'>here</a></body></html>")
+
+
+def test_doc_links_fingerprint_ignores_wording_and_catches_the_document():
+    # AIAL pointed Muse Spark at Google's Gemini PDF for weeks; the correction
+    # changed only an href, which text extraction throws away
+    assert cap.doc_links_sha(LINKS_A) != cap.doc_links_sha(LINKS_B)
+    reworded = LINKS_A.replace(b"Same words either way.", b"Totally different prose.")
+    assert cap.doc_links_sha(LINKS_A) == cap.doc_links_sha(reworded)
+    assert cap.doc_links_sha(b"<html><body><a href='/about'>no documents</a></body></html>") is None
+
+
+def test_a_watch_page_that_re_points_a_document_link_mints_a_version(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path, [_src("aial/tracker", "https://ex.org/list",
+                                          kind="watch-page")])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **k: (LINKS_A, _meta(url, "text/html")))
+    _run_wb(monkeypatch, reg, data_root)
+    # same words, different linked document
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **k: (LINKS_B, _meta(url, "text/html")))
+    _run_wb(monkeypatch, reg, data_root)
+    outcomes = [e["outcome"] for e in _events(data_root) if e.get("kind") == "watch-page"]
+    assert outcomes.count("new") == 2, f"the re-pointed link was not recorded: {outcomes}"
+
+
+def test_the_same_page_fetched_twice_still_mints_nothing(tmp_path, monkeypatch):
+    # the guard must not undo the dedupe that stops chrome churn
+    reg = _write_registry(tmp_path, [_src("aial/tracker", "https://ex.org/list",
+                                          kind="watch-page")])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **k: (LINKS_A, _meta(url, "text/html")))
+    _run_wb(monkeypatch, reg, data_root)
+    # a byte-level change that touches neither the words nor the documents
+    churn = LINKS_A.replace(b"<html>", b"<html data-nonce='abc123'>")
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **k: (churn, _meta(url, "text/html")))
+    _run_wb(monkeypatch, reg, data_root)
+    outcomes = [e["outcome"] for e in _events(data_root) if e.get("kind") == "watch-page"]
+    assert outcomes.count("new") == 1 and "unchanged-content" in outcomes
+
+
+def test_a_capture_records_which_documents_it_linked(tmp_path, monkeypatch):
+    reg = _write_registry(tmp_path, [_src("aial/tracker", "https://ex.org/list",
+                                          kind="watch-page")])
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **k: (LINKS_A, _meta(url, "text/html")))
+    _run_wb(monkeypatch, reg, data_root)
+    state = json.loads((data_root / "state.json").read_text(encoding="utf-8"))
+    d = next(iter(state.values()))["last_capture"]
+    m = json.loads((data_root / d / "manifest.json").read_text(encoding="utf-8"))
+    assert m["doc_links_sha256"] == cap.doc_links_sha(LINKS_A)
+

@@ -101,6 +101,28 @@ CONTRADICTED_ALERT_DAYS = 3
 HOST_FAILURES_BEFORE_SKIP = 3
 
 
+def links_changed(data_root: Path, prior_dir: str, raw: bytes) -> bool:
+    """Whether this HTML points at different documents than the retained capture
+    it matches on text. The prior capture's fingerprint is computed from its
+    stored bytes when the manifest predates the field, so a change is caught on
+    the first sweep rather than only after a re-baseline."""
+    now = cap.doc_links_sha(raw)
+    prior = None
+    mp = Path(data_root) / prior_dir / "manifest.json"
+    try:
+        m = json.loads(mp.read_text(encoding="utf-8"))
+        prior = m.get("doc_links_sha256")
+        if prior is None:
+            stored = mp.parent / str(m.get("stored_as") or "raw.html")
+            if stored.exists():
+                prior = cap.doc_links_sha(stored.read_bytes())
+    except (OSError, ValueError):
+        return False          # unreadable neighbour: never mint on a guess
+    if now is None or prior is None:
+        return False          # nothing to compare
+    return now != prior
+
+
 def host_of(url: str) -> str:
     try:
         return (urlparse(url).hostname or "").lower()
@@ -561,7 +583,13 @@ def main() -> int:
             # on one run and not the next) cannot mint a version on every flip
             known = (store.known_text_shas(source["id"], tslug)
                      if ext == ".html" and text_sha else {})
-            if text_sha in known:
+            if text_sha in known and links_changed(data_root, known[text_sha], raw):
+                # same words, different documents linked: a tracker page that
+                # re-points a summary at another model's file reads as unchanged
+                # to text extraction, so this is the only thing that catches it
+                print(f"  LINKS  {source['id']} [{kind}] same text, different "
+                      f"document links — recording a version", flush=True)
+            elif text_sha in known:
                 stats["unchanged"] += 1
                 store.event(source=source["id"], target=tslug, url=url, kind=kind,
                             outcome="unchanged-content", sha256=sha, text_sha256=text_sha,
