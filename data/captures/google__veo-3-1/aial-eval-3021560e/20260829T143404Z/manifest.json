@@ -1,0 +1,33 @@
+{
+  "source_id": "google/veo-3-1",
+  "provider": "Google",
+  "model": "Veo 3.1",
+  "target_kind": "aial-eval",
+  "sha256": "59c0b37894d37437cd9ebb01c20d3523ed943d8ae09abe124d05e271fed7786e",
+  "size_bytes": 3784,
+  "stored_as": "raw.txt",
+  "text_sha256": "3acf04ada1bc078d8bf72d652987be46a2f38017e722088e9210675be66d1a21",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/veo-3-1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/veo-3-1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d76cf7376a449186b43b1f9bdc676359da192c4e13d9449348508b5bf794f89d\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-08-29T14:34:04Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:34:08Z"
+  }
+}

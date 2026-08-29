@@ -1,0 +1,33 @@
+{
+  "source_id": "fastweb/fastwebmiia",
+  "provider": "Fastweb",
+  "model": "FastwebMIIA",
+  "target_kind": "aial-eval",
+  "sha256": "fb9a2a712300b5a456b59ced28cfed0253d2a81c09973359a2991845c4802f4e",
+  "size_bytes": 5043,
+  "stored_as": "raw.txt",
+  "text_sha256": "5a868d934129a6267628aa9946fa77d536d77c1d2edb57fdae3af0ea618cedfb",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fastwebmiia.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fastwebmiia.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9bdaeb0fc2279f18e0b91338cb8017377e4a8a6325a8d38990c0b6f1afb81e80\"",
+    "last_modified": null,
+    "content_length": "1229",
+    "fetched_at": "2026-08-29T14:25:11Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:25:17Z"
+  }
+}

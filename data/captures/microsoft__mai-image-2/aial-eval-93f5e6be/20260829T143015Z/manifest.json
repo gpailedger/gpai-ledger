@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/mai-image-2",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2",
+  "target_kind": "aial-eval",
+  "sha256": "a3a47f74cab1d6e09c3d9d83fabfcde14e45394ef59170195fa85cfd598382b1",
+  "size_bytes": 4751,
+  "stored_as": "raw.txt",
+  "text_sha256": "73a993b66c4a5eabb290d17667ea8ffc7f1088369eb549fb7ae5b239b766af1f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-image-2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-image-2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c9ced8d6c3362a962933f35b10e62e5537d3507eb0e2a9d63c25aecc993e1c85\"",
+    "last_modified": null,
+    "content_length": "1162",
+    "fetched_at": "2026-08-29T14:30:15Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:30:20Z"
+  }
+}

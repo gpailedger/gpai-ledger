@@ -1,0 +1,33 @@
+{
+  "source_id": "xai/grok-4-5",
+  "provider": "xAI",
+  "model": "Grok 4.5",
+  "target_kind": "aial-eval",
+  "sha256": "4d757450f2f2c94e5f723a652adb2820221924880bf7f0ba3a16ac4af89c73f6",
+  "size_bytes": 4735,
+  "stored_as": "raw.txt",
+  "text_sha256": "e67e76caaedfa0026b0745014deb2599dbe541696c5d40c275221b0e81a43348",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/grok-4.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/grok-4.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"fc788deec8fe65ef8c078fed431718922ff89454c92578640f31794015d6d2ec\"",
+    "last_modified": null,
+    "content_length": "1140",
+    "fetched_at": "2026-08-29T14:28:20Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:28:25Z"
+  }
+}

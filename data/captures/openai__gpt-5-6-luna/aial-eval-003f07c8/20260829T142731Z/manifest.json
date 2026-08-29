@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-6-luna",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Luna",
+  "target_kind": "aial-eval",
+  "sha256": "d9db13eab13780581630fc273b50eaaaa1c562a21de7257b159ce1f9c56ed513",
+  "size_bytes": 4921,
+  "stored_as": "raw.txt",
+  "text_sha256": "8c98fe5eb447e53e5b73244142e8e9ad2bf8964b00fa2fd62cfad4c548e1bf74",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-luna.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-luna.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"2bc24b376e25c2a36ed088370b9d4dff516c275042501444c563bd056c742f2f\"",
+    "last_modified": null,
+    "content_length": "1258",
+    "fetched_at": "2026-08-29T14:27:31Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:27:36Z"
+  }
+}

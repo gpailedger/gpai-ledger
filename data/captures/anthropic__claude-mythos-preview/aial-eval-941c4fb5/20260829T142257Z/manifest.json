@@ -1,0 +1,46 @@
+{
+  "source_id": "anthropic/claude-mythos-preview",
+  "provider": "Anthropic",
+  "model": "Claude Mythos Preview",
+  "target_kind": "aial-eval",
+  "sha256": "695ae15fd187551eeae7519a102e37c55c6eff610efd893728ecb66eb3de18e4",
+  "size_bytes": 4976,
+  "stored_as": "raw.txt",
+  "text_sha256": "edcc04d5d6db22cf7ad0830a3880d1a8ec544a689c8a8d2b98c08f07144977c0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-mythos-preview.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-mythos-preview.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"271e930ae18bad3acaa73007c06f50b5c14bff9008f93eea8ab38cf0c58388ce\"",
+    "last_modified": null,
+    "content_length": "1268",
+    "fetched_at": "2026-08-29T14:22:57Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:23:03Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829143711/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-mythos-preview.yaml",
+    "snapshot_ts": "20260829143711",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-165abf6cc8214cd28d9ef1ba150ee011d1b5c799",
+    "via": "spn2",
+    "requested_at": "2026-08-29T14:36:52Z",
+    "at": "2026-08-29T14:37:15Z"
+  }
+}

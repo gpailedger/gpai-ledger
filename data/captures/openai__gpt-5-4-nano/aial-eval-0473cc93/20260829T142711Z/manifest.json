@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-4-nano",
+  "provider": "OpenAI",
+  "model": "GPT-5.4 Nano",
+  "target_kind": "aial-eval",
+  "sha256": "5715918bf3d6b73163a5f0baab1d3ab998ac10e08c3d32c593fdc9e5d7a301b7",
+  "size_bytes": 3984,
+  "stored_as": "raw.txt",
+  "text_sha256": "e69cac9e1f10f6f920e17b9f61bcf7141ec322b94687b4c72785e43fc413c637",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-4-nano.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-4-nano.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b127c33bd6d0e5ff689408ca8596b86037a9d2dba3ffbea42ed7740349511fea\"",
+    "last_modified": null,
+    "content_length": "653",
+    "fetched_at": "2026-08-29T14:27:11Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:27:14Z"
+  }
+}

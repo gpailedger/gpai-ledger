@@ -1,0 +1,46 @@
+{
+  "source_id": "anthropic/claude-opus-4-1",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.1",
+  "target_kind": "aial-eval",
+  "sha256": "8423812d268e84b085a7c9aae56b6c865f61625c27490e1ff508a770a1a3bc6a",
+  "size_bytes": 3797,
+  "stored_as": "raw.txt",
+  "text_sha256": "2ca41f9f6574364072902f4291a6c56eb7c461d961bc22817994960228de940b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"fb89f7e18d9d90bef09ee34b7264ee49a2c576c490a4eb9d99bf95c523b40de8\"",
+    "last_modified": null,
+    "content_length": "548",
+    "fetched_at": "2026-08-29T14:23:05Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:23:10Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829143731/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-4-1.yaml",
+    "snapshot_ts": "20260829143731",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-25cbe50eb3acf2be879a45ca51b31b18d4c5d723",
+    "via": "spn2",
+    "requested_at": "2026-08-29T14:37:27Z",
+    "at": "2026-08-29T14:37:36Z"
+  }
+}

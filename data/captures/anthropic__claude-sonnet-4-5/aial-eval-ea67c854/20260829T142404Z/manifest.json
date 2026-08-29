@@ -1,0 +1,40 @@
+{
+  "source_id": "anthropic/claude-sonnet-4-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 4.5",
+  "target_kind": "aial-eval",
+  "sha256": "d666d3cd0ce192f4c1c31f14bdf9e7ebd21b15916385cf4ec6d27dd7329f7d6c",
+  "size_bytes": 3801,
+  "stored_as": "raw.txt",
+  "text_sha256": "daffca79f05fa78ee58162672f1fe579a7b3730d49d2ba1fab051b81eb23eab1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-4-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-4-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"198d9293e49e3581693a379b12f7127177d36b11621492467e7c3f4fb98b1838\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-08-29T14:24:04Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:24:08Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-08-29T14:44:36Z",
+    "at": "2026-08-29T14:46:36Z"
+  }
+}

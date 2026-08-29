@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "aial-eval",
+  "sha256": "661bb163281183d87a9405fda147398c2dde0cb6935e1e377c07316ffeade357",
+  "size_bytes": 4964,
+  "stored_as": "raw.txt",
+  "text_sha256": "15e541d8b5bb2e18a2f35b8d7056d0a45396dd07e3272082b64e461de655c580",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-sonnet-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"22eedc19943beaecbd6a2e2625a60ce74f77f15fd30dd839b1f374b22d143b84\"",
+    "last_modified": null,
+    "content_length": "1262",
+    "fetched_at": "2026-08-29T14:24:20Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:24:24Z"
+  }
+}

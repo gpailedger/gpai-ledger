@@ -1,0 +1,33 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "aial-eval",
+  "sha256": "58b5b1c417c898739db85ec9b3560fccd2163ee93fd730ac80c32197086292ee",
+  "size_bytes": 3972,
+  "stored_as": "raw.txt",
+  "text_sha256": "b55f87d2558317fb5354a59da9aafa3af5e4e5c89e37c94aa002d7725591ae72",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-glimmer.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-glimmer.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e8f31354959e653848616e90ed2540fd7b26cb64c59572e1b7a7b7038b1b8d13\"",
+    "last_modified": null,
+    "content_length": "604",
+    "fetched_at": "2026-08-29T14:32:10Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:32:15Z"
+  }
+}

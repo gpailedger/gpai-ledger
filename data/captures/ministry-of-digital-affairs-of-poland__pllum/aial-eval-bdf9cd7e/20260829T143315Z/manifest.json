@@ -1,0 +1,33 @@
+{
+  "source_id": "ministry-of-digital-affairs-of-poland/pllum",
+  "provider": "Ministry of Digital Affairs of Poland",
+  "model": "PLLuM 2512 Base",
+  "target_kind": "aial-eval",
+  "sha256": "113986f5fde2ccabc0cc3493ad74fc46e8d5998e2b4451ef7dccd7f6d222dd8b",
+  "size_bytes": 4059,
+  "stored_as": "raw.txt",
+  "text_sha256": "c117234474560b9ec057e7110da6fb63379da9aa80d45f0d6a63c322c3fe0fa8",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pllum.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pllum.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"7a1d42600a7b3efe358692dc174c25efc6404f12526d523d7b24e20ded884388\"",
+    "last_modified": null,
+    "content_length": "662",
+    "fetched_at": "2026-08-29T14:33:15Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:33:19Z"
+  }
+}

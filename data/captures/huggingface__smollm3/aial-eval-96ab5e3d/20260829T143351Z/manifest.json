@@ -1,0 +1,33 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "aial-eval",
+  "sha256": "d162e036d720e1381f16e2b70165fc7342368a6ededac8f8dcbc344fac0a6300",
+  "size_bytes": 7420,
+  "stored_as": "raw.txt",
+  "text_sha256": "390bf6992ffb2844bf4b655ae4461fd59e83fd61a9b0e72e1d7d75ac4672539d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/smollm3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/smollm3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8f7b60dd1d51a3d9afb1fd01096f550818e214a07c301022ff72ae26b57b92b9\"",
+    "last_modified": null,
+    "content_length": "2055",
+    "fetched_at": "2026-08-29T14:33:51Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:33:56Z"
+  }
+}

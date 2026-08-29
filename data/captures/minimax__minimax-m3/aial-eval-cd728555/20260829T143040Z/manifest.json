@@ -1,0 +1,33 @@
+{
+  "source_id": "minimax/minimax-m3",
+  "provider": "Minimax",
+  "model": "Minimax M3",
+  "target_kind": "aial-eval",
+  "sha256": "3ba1c0f72565caa4367e96d815f13f9aba644a7cc1a9d1e213a65b77139bdc10",
+  "size_bytes": 4946,
+  "stored_as": "raw.txt",
+  "text_sha256": "6fd74d8b4caace272e777b8b80810816aa28946e5a40c5f3750af430ec641c44",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/minimax-m3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/minimax-m3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"407ab98be786c29afb990ea7f92bed94322b422e3b8c3b5eb30f33a4cf44dfd8\"",
+    "last_modified": null,
+    "content_length": "1218",
+    "fetched_at": "2026-08-29T14:30:40Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:30:46Z"
+  }
+}

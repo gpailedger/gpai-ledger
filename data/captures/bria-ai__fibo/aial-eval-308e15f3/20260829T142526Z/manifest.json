@@ -1,0 +1,33 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "aial-eval",
+  "sha256": "7af56f11fe00a6d8d92b76445d43b369511555b634b8e0d446c4a552fe19e605",
+  "size_bytes": 4688,
+  "stored_as": "raw.txt",
+  "text_sha256": "2ca2eb8bc5c93039376cc14dee763366bdf7b76e3e1c82595c3e3697da2dcffd",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fibo.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fibo.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c46a6170f795440f04ca014454217268a8934c8375ae8793584b2c62a8baf7d3\"",
+    "last_modified": null,
+    "content_length": "1120",
+    "fetched_at": "2026-08-29T14:25:26Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:25:30Z"
+  }
+}

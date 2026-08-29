@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-oss",
+  "provider": "OpenAI",
+  "model": "GPT-OSS",
+  "target_kind": "aial-eval",
+  "sha256": "dbbdd7d357b769d35c98e6e14305856ccfce4a20f367effdc91fad497d432471",
+  "size_bytes": 3783,
+  "stored_as": "raw.txt",
+  "text_sha256": "72d36664f24dd2eece1c65312cfb97ba1641f5f992fa6157219cf4e280087056",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-oss.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-oss.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b37512dd545f5f1168b98c9fbd1dde66d952a65b9cae5b577c59049aa850ccab\"",
+    "last_modified": null,
+    "content_length": "554",
+    "fetched_at": "2026-08-29T14:27:59Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:28:03Z"
+  }
+}

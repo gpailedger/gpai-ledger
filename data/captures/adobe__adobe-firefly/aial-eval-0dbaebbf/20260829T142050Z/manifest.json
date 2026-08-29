@@ -1,0 +1,46 @@
+{
+  "source_id": "adobe/adobe-firefly",
+  "provider": "Adobe",
+  "model": "Adobe Firefly",
+  "target_kind": "aial-eval",
+  "sha256": "3ba12eb6922531ee1f73c05fd8004f7295d4797f5f014a22d995ebf43ac383d6",
+  "size_bytes": 4714,
+  "stored_as": "raw.txt",
+  "text_sha256": "5537b3643ab598c0f6184e13d8cf0996473e518286f65351f42104f5ae862676",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/adobe-firefly.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/adobe-firefly.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"a7e8d0e036a9d3f8766332c73a98be3ed8542b1d444722acbcc37d50ef450f05\"",
+    "last_modified": null,
+    "content_length": "1173",
+    "fetched_at": "2026-08-29T14:20:50Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:20:55Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260829143535/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/adobe-firefly.yaml",
+    "snapshot_ts": "20260829143535",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-e6ff3079f5747e37564367e2c58ebff7fd95ced0",
+    "via": "spn2",
+    "requested_at": "2026-08-29T14:35:29Z",
+    "at": "2026-08-29T14:35:40Z"
+  }
+}

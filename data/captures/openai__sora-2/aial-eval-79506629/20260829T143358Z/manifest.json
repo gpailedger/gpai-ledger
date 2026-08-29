@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/sora-2",
+  "provider": "OpenAI",
+  "model": "Sora 2",
+  "target_kind": "aial-eval",
+  "sha256": "6f0b50c40ced6273be9ab8fec28756dc56833e95de9a5f3c8d648ca427d12341",
+  "size_bytes": 3756,
+  "stored_as": "raw.txt",
+  "text_sha256": "f1ab4a8f8a7604ee8798014c5e4ed76394a0807e163121c1c3075a944933692d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/sora-2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/sora-2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"617a5849510e8f49abebebb8bebdc265179414977a40cf17f3a95cb107485e62\"",
+    "last_modified": null,
+    "content_length": "538",
+    "fetched_at": "2026-08-29T14:33:58Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:34:02Z"
+  }
+}

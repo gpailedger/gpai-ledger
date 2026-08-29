@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-6-terra",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Terra",
+  "target_kind": "aial-eval",
+  "sha256": "6fd07e9a72fc12833cfec95bb1a2a62a0a11ae173f0b8d216828c45bd31677ea",
+  "size_bytes": 3767,
+  "stored_as": "raw.txt",
+  "text_sha256": "a61ad2d26108cbb44bf177e93074acbba1fdb765f49b9c1199b892d9b8c3d5a7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-terra.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-6-terra.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f7d9fab7d4da3e767658d91e9406fa17e96aeaf9ccd9206d0a144688c0ec7465\"",
+    "last_modified": null,
+    "content_length": "541",
+    "fetched_at": "2026-08-29T14:27:43Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:27:48Z"
+  }
+}

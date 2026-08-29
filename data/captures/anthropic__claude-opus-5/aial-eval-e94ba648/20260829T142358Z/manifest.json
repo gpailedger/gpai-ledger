@@ -1,0 +1,40 @@
+{
+  "source_id": "anthropic/claude-opus-5",
+  "provider": "Anthropic",
+  "model": "Claude Opus 5",
+  "target_kind": "aial-eval",
+  "sha256": "286ae8f472832d79ccb088a4e314edc832ec6bec7beda1bf4f1932991fe322e3",
+  "size_bytes": 4958,
+  "stored_as": "raw.txt",
+  "text_sha256": "a425b16e08bab507c9b6d7f4adb524b5aa9383c3bc90e547adf95a02ad892c24",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/claude-opus-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8b72f933d10b8e0657c4c09a08d4bbacc7f31eb053ff45b40a7aa6c81263b3dd\"",
+    "last_modified": null,
+    "content_length": "1260",
+    "fetched_at": "2026-08-29T14:23:58Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:24:03Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f346c665dc0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-08-29T14:42:24Z",
+    "at": "2026-08-29T14:44:24Z"
+  }
+}

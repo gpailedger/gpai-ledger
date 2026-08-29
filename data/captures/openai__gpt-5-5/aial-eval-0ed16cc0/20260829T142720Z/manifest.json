@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-5",
+  "provider": "OpenAI",
+  "model": "GPT-5.5",
+  "target_kind": "aial-eval",
+  "sha256": "2937d2f1d42fb021342502d28d909875fdcfe15dba05754e8fae62d6f450740c",
+  "size_bytes": 8174,
+  "stored_as": "raw.txt",
+  "text_sha256": "7094fcdf59be7f077fc7d48e0b54c7d3f03dfe7444cd372ab5c1fa9b3d462223",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f4984751b10e95c62ad4cb4b34553f3c5ef8aaeef311c3d27567e4994b875fbc\"",
+    "last_modified": null,
+    "content_length": "2353",
+    "fetched_at": "2026-08-29T14:27:20Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:27:25Z"
+  }
+}

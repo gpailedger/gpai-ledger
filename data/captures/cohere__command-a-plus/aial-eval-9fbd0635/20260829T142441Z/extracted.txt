@@ -1,0 +1,267 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "C4AI Command A Plus"
+model_link: "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16"
+organization: "Cohere"
+org_link: "https://cohere.com/"
+evaluation_date: "2026-08-04"
+public_summary_link: "https://fdr-prod-docs-files-public.s3.us-east-1.amazonaws.com/cohere.docs.buildwithfern.com/22457734c44f1c4e417d5ff1230a3abf76a892d36d3c2b93f06902199d977ed7/assets/documents/eu-ai-public-summary_command-a-plus_2607031.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA6KXJSKKNFOCF7G4B%2F20260801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260801T055012Z&X-Amz-Expires=604800&X-Amz-Signature=b50396f95290db78a1864dee119a641460a7ee752cc7beca91567c3d7f242620&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+public_summary_date: "2026-07-31"
+public_summary_location: "https://docs.cohere.com/docs/command-a-plus"
+model_publication_date: "2026-05-20"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Command_A_Plus_2026_08_03.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 10
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 17
+    max_score: 40
+    notes: ""
+
+  D2: # Completeness
+    score: 60
+    max_score: 72
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 21
+    max_score: 21
+    notes: ""
+
+  D5: # Accessibility
+    score: 5
+    max_score: 5
+    notes: ""
+
+  D6: # Comprehension
+    score: 7.5
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 16
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 54
+    max_score: 108
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 16
+    max_score: 32
+    notes: ""
+
+  D2: # Completeness
+    score: 55
+    max_score: 88
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 59
+    max_score: 129
+    notes: ""
+
+  D2: # Completeness
+    score: 29.5
+    max_score: 158
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 53
+    max_score: 93
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 20
+    max_score: 58
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 8.5
+    max_score: 16
+    notes: ""
+
+  D2: # Completeness
+    score: 12
+    max_score: 27
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 12
+    max_score: 12
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 15
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 29
+    max_score: 65
+    notes: ""
+
+  D2: # Completeness
+    score: 29
+    max_score: 47
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 47
+    max_score: 47
+    notes: ""
+
+  D5: # Accessibility
+    score: 17
+    max_score: 17
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 10.5
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 36
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 69
+    notes: ""
+
+general_notes: "The training data summary for Command A Plus generally describes the purposes for which data is included over the content of training data. Descriptions are generally high-level, and it is difficult for rightsholders to interpret provided information in an actionable manner. The summary scores <span class=\"openness partial\">55.66%</span> with Grade <strong>C</strong> for <strong><i>transparency</i></strong> and <span class=\"openness partial\">51.28%</span> with Grade <strong>C</strong> for <strong><i>usefulness</i></strong>."

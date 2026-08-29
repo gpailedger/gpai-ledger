@@ -1,0 +1,33 @@
+{
+  "source_id": "cohere/north-mini-code",
+  "provider": "Cohere",
+  "model": "North Mini Code 1.0",
+  "target_kind": "aial-eval",
+  "sha256": "c535bc328f515c4277a77b3b6726cd032e903a55d9145e517df52f5a3948b589",
+  "size_bytes": 3807,
+  "stored_as": "raw.txt",
+  "text_sha256": "4759f5dabb27bac7b214b5374b0c3e7e7364899ece52f8af355d1b261509aa04",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/north-mini-code.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/north-mini-code.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"38d8016aa79c97c10fd93f8472777fface0338db3df999ad57051e0ff8e5c482\"",
+    "last_modified": null,
+    "content_length": "560",
+    "fetched_at": "2026-08-29T14:32:36Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:32:39Z"
+  }
+}

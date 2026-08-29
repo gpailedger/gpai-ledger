@@ -1,0 +1,33 @@
+{
+  "source_id": "writer/palmyra-x5",
+  "provider": "WRITER",
+  "model": "Palmyra X5",
+  "target_kind": "aial-eval",
+  "sha256": "e19ab1289644be1c8bb253ca6c9c058bf0175147570bf2be55d19007af7a4a21",
+  "size_bytes": 3780,
+  "stored_as": "raw.txt",
+  "text_sha256": "ada61975065e82e29dc85c10437c569a882cbcdc785f80813c5e282e8dbdc209",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/palmyra-x5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/palmyra-x5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"088f9efb7165abaef18ed2844aa199485b4d66154a815bbcf53930e75463b419\"",
+    "last_modified": null,
+    "content_length": "547",
+    "fetched_at": "2026-08-29T14:32:52Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:32:57Z"
+  }
+}

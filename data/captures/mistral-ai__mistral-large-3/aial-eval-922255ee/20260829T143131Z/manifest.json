@@ -1,0 +1,33 @@
+{
+  "source_id": "mistral-ai/mistral-large-3",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3",
+  "target_kind": "aial-eval",
+  "sha256": "13a687bc7d3da93e711b0382ad1a27123395b7762936c866a1262ac6fff98fe2",
+  "size_bytes": 4961,
+  "stored_as": "raw.txt",
+  "text_sha256": "d2a01c7437fef63db587e0aaa5c275cd2cc23239e6aa0e2db585b9b55cedaaff",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-large-3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-large-3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6d2f48af98b0026630ff15fc3c1dcd88e325ed3a597feb787095aa27ae283f9b\"",
+    "last_modified": null,
+    "content_length": "1258",
+    "fetched_at": "2026-08-29T14:31:31Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T14:31:36Z"
+  }
+}
