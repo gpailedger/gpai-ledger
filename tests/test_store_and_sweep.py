@@ -1077,3 +1077,16 @@ def test_after_a_live_sighting_only_the_new_vantage_is_named(tmp_path, monkeypat
     assert e["absence"] == "confirmed"
     assert e["confirmed_by"] == ["witness"], "a stale vantage was re-published"
 
+
+def test_a_json_line_that_is_not_an_event_does_not_kill_the_sweep(tmp_path):
+    # a bad merge of two concurrent appends can leave a bare scalar in the log
+    p = tmp_path / "events.jsonl"
+    p.write_text("\n".join([
+        "42",
+        '"a bare string"',
+        json.dumps({"source": "s", "target": "t", "outcome": "error",
+                    "absence": "persistent", "ts": "2026-08-29T06:00:00Z"}),
+    ]) + "\n", encoding="utf-8")
+    st = rc_mod.absence_streaks(p)
+    assert st[("s", "t")]["absent_on"] == {"2026-08-29"}
+

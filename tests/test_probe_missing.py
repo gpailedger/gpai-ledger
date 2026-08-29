@@ -235,3 +235,78 @@ def test_template_markers_survive_the_line_breaks_pdf_extraction_leaves():
               "Regulation (EU) 2024/1689\n1.3 Modalities,   overall\ntraining data size")
     assert PM.looks_like_summary(broken) >= PM.MIN_MARKERS
 
+
+# --- the gates an adversarial review found unconstrained ---
+
+FLUX_SIBS = ["FLUX.2 Klein", "FLUX.2 [max]"]
+
+
+def test_a_document_for_a_longer_named_sibling_is_not_this_models():
+    # live in the registry today: FLUX.2, FLUX.2 Klein and FLUX.2 [max] are all
+    # missing, so the probe will request the FLUX.2 slug once any of them lands
+    klein = "Public Summary of Training Content for FLUX.2 Klein — Article 53(1)(d)"
+    assert PM.names_the_model(klein, "FLUX.2", FLUX_SIBS) is False
+    assert PM.names_the_model(klein, "FLUX.2 Klein", FLUX_SIBS) is True
+    plain = "Public Summary of Training Content for FLUX.2 — Article 53(1)(d)"
+    assert PM.names_the_model(plain, "FLUX.2", FLUX_SIBS) is True
+
+
+def test_a_mention_buried_in_the_body_does_not_name_the_document():
+    buried = "x" * (PM.NAME_REGION_CHARS + 50) + " FLUX.2 is compared here "
+    assert PM.names_the_model(buried, "FLUX.2", FLUX_SIBS) is False
+
+
+def test_an_ordinary_model_card_carries_no_distinctive_phrase():
+    card = ("GPT-5.6 Sol is a general-purpose AI model. Training data: publicly "
+            "available data and licensed corpora.")
+    assert PM.looks_like_summary(card) >= PM.MIN_MARKERS      # weak markers alone
+    assert PM.has_distinctive_marker(card) is False
+    assert PM.has_distinctive_marker(SUMMARY.format(model="X")) is True
+
+
+def test_a_slug_in_the_hostname_is_never_substituted():
+    # rewriting a host would send the probe to whatever third party registered it
+    src = {"provider": "P", "model": "Model Two", "id": "p/2"}
+    pat = {"P": [("https://model-one.example/model-one/summary.pdf", "model-one")]}
+    got = PM.candidates_for(src, pat)
+    assert got, "the path should still be substituted"
+    assert all(u.startswith("https://model-one.example/") for u in got)
+
+
+def test_the_budget_env_var_cannot_crash_the_weekly_pass(monkeypatch):
+    monkeypatch.setenv("GPAI_PROBE_BUDGET", "15m")
+    assert PM.budget_from_env() == float(PM.BUDGET_S)
+    monkeypatch.setenv("GPAI_PROBE_BUDGET", "5")
+    assert PM.budget_from_env() == 60.0
+    monkeypatch.setenv("GPAI_PROBE_BUDGET", "99999")
+    assert PM.budget_from_env() == 3600.0
+
+
+def test_a_document_without_a_distinctive_phrase_is_queued_not_promoted(tmp_path, monkeypatch):
+    # end to end: the marker gate was previously unconstrained by any test
+    missing = _src("prov/two", "Model Two", "Prov", "missing")
+    card = ("Model Two is a general-purpose AI model.\nTraining data: publicly "
+            "available sources.")
+    disc, report = _run(monkeypatch, tmp_path, [PUBLISHED, missing],
+                        {"https://prov.example/pdf/model-two-summary.pdf": (b"%PDF", card)})
+    assert disc == {}, "a model card was promoted as a summary"
+    assert "| prov/two |" in report                      # listed for a human
+    queued = json.loads(DEC.PENDING.read_text(encoding="utf-8"))
+    assert any("distinctive" in v["why"] for v in queued.values())
+
+
+def test_a_bundles_text_hash_still_counts_as_already_held(tmp_path):
+    # bundle captures record the served text under extracted_text_sha256
+    data = tmp_path / "data"
+    cap_dir = "captures/prov__one/provider-live-a/20260811T100000Z"
+    (data / cap_dir).mkdir(parents=True)
+    text = SUMMARY.format(model="Model One")
+    (data / cap_dir / "manifest.json").write_text(json.dumps(
+        {"extracted_text_sha256": cap.canonical_text_sha(text)}), encoding="utf-8")
+    (data / "state.json").write_text(json.dumps(
+        {"prov/one::provider-live-a": {"versions": [{"sha256": "a" * 64, "dir": cap_dir}]}}),
+        encoding="utf-8")
+    import unittest.mock as mock
+    with mock.patch.object(PM, "DATA", data):
+        assert cap.canonical_text_sha(text) in PM.text_shas_by_model([])
+

@@ -153,6 +153,8 @@ def absence_streaks(events_path: Path) -> dict:
             e = json.loads(line)
         except json.JSONDecodeError:
             continue
+        if not isinstance(e, dict):
+            continue      # valid JSON, but not an event: never fatal to a sweep
         key = (e.get("source"), e.get("target"))
         out, absence = e.get("outcome"), e.get("absence")
         ts = e.get("ts")

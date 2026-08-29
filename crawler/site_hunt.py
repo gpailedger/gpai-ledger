@@ -109,6 +109,8 @@ def error_streaks(events_path: Path):
             e = json.loads(line)
         except json.JSONDecodeError:
             continue
+        if not isinstance(e, dict):
+            continue
         key = (e.get("source"), e.get("target"))
         if e.get("outcome") == "error" and e.get("absence") not in (None, "confirmed",
                                                                       "persistent"):

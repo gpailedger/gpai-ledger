@@ -1,7 +1,10 @@
-"""Contract tests for the three GitHub workflows (.github/workflows/ledger.yml,
-hunt.yml, verify.yml): pure YAML/text assertions on supply-chain pinning, token
-confinement, publish/health gates, and cross-file entrypoint existence. Nothing
-is executed and no network is touched.
+"""Contract tests for every GitHub workflow: pure YAML/text assertions on
+supply-chain pinning, token confinement, publish/health gates, and cross-file
+entrypoint existence. Nothing is executed and no network is touched.
+
+NAMES is derived from the directory, so a new workflow is covered by the generic
+tests the moment it lands; the explicit set below then fails until someone has
+decided what the new one is, which is how decisions.yml came to be covered.
 
 YAML 1.1 quirk: `on:` parses to the boolean key True under yaml.safe_load —
 every access to the trigger block goes through that key.
@@ -15,7 +18,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 WF_DIR = ROOT / ".github" / "workflows"
-NAMES = ["ledger.yml", "hunt.yml", "verify.yml"]
+NAMES = sorted(p.name for p in WF_DIR.glob("*.yml"))
+# adding a workflow must be a decision, not an accident
+EXPECTED = {"ledger.yml", "hunt.yml", "verify.yml", "decisions.yml"}
 
 # the eight continue-on-error sweep steps the red-flag gate must re-surface
 SWEEP_STEP_IDS = ["registry", "capture", "metahub", "derived", "waybackretry",
@@ -56,7 +61,14 @@ def test_workflow_parses_with_jobs_and_triggers(name):
     wf = doc(name)
     assert isinstance(wf, dict) and isinstance(wf["jobs"], dict) and wf["jobs"]
     assert True in wf  # `on:` is the boolean True key in YAML 1.1
-    assert "workflow_dispatch" in wf[True]
+    triggers = wf[True]
+    # anything on a schedule must also be runnable by hand — that is how a missed
+    # cron is recovered. An event-driven workflow has nothing to dispatch WITH:
+    # it needs the event's context (decisions.yml needs the issue comment).
+    if "schedule" in triggers:
+        assert "workflow_dispatch" in triggers
+    else:
+        assert triggers, "a workflow with no trigger can never run"
 
 
 @pytest.mark.parametrize("name", NAMES)
@@ -266,3 +278,28 @@ def test_every_python_entrypoint_in_workflows_exists_on_disk():
             "crawler/verify_corpus.py", "site/build.py"} <= entrypoints
     for ep in sorted(entrypoints):
         assert (ROOT / ep).is_file(), f"workflow runs missing script: {ep}"
+
+
+def test_every_workflow_is_accounted_for():
+    assert set(NAMES) == EXPECTED, (
+        "a workflow was added or removed — decide what it is and update EXPECTED")
+
+
+def test_the_decision_queue_obeys_only_the_owner():
+    # anyone may comment on a public repository; the job must not even start
+    cond = str(doc("decisions.yml")["jobs"]["record"]["if"])
+    assert "author_association == 'OWNER'" in cond
+    assert "'decision'" in cond and "labels" in cond
+    assert "pull_request == null" in cond
+
+
+def test_the_decision_queue_checks_the_association_in_code_too():
+    dec = (ROOT / "crawler" / "decisions.py").read_text(encoding="utf-8")
+    assert 'TRUSTED_ASSOCIATIONS = ("OWNER",)' in dec
+    assert "association.upper() not in TRUSTED_ASSOCIATIONS" in dec
+
+
+def test_the_decision_queue_holds_no_broader_permission_than_it_needs():
+    perms = doc("decisions.yml")["jobs"]["record"]["permissions"]
+    assert perms == {"contents": "write", "issues": "write"}
+

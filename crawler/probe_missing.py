@@ -35,6 +35,8 @@ import sys
 import time
 from pathlib import Path
 
+from urllib.parse import urlsplit, urlunsplit
+
 import capture as cap
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,6 +63,26 @@ TEMPLATE_MARKERS = (
     "training data",
 )
 MIN_MARKERS = 2
+# Two weak markers are met by an ordinary model card ("general-purpose ai" +
+# "training data"), so a promotion also needs a phrase that belongs to the
+# Commission's template and to little else.
+DISTINCTIVE_MARKERS = (
+    "public summary of training content",
+    "summary of the content used for training",
+    "size of dataset per modality",
+    "article 53",
+)
+
+
+def budget_from_env() -> float:
+    raw = os.environ.get("GPAI_PROBE_BUDGET", "")
+    try:
+        v = float(raw) if raw.strip() else float(BUDGET_S)
+    except ValueError:
+        print(f"WARNING: GPAI_PROBE_BUDGET={raw!r} is not a number; using {BUDGET_S}",
+              flush=True)
+        v = float(BUDGET_S)
+    return max(60.0, min(v, 3600.0))
 
 
 def norm_tokens(s: str) -> list:
@@ -102,19 +124,28 @@ def learn_patterns(sources) -> dict:
 
 def candidates_for(source, patterns) -> list:
     """Candidate URLs for a missing model, by substituting its slug into the
-    patterns its own provider already uses. Deduplicated, capped by the caller."""
+    patterns its own provider already uses. The substitution is confined to the
+    path and query: a slug that also appears in the hostname must never be
+    rewritten, or the probe would fetch whatever third party happens to have
+    registered the resulting name. Deduplicated, capped by the caller."""
     urls = []
     for url, known_slug in patterns.get(source.get("provider"), []):
-        low = url.lower()
+        split = urlsplit(url)
+        tail = urlunsplit(("", "", split.path, split.query, split.fragment))
+        prefix = url[:len(url) - len(tail)] if tail and url.endswith(tail) else url
+        low = tail.lower()
         for v in slug_variants(source.get("model", "")):
             if not v or v == known_slug:
                 continue
             i = low.find(known_slug)
             if i < 0:
                 continue
-            cand = url[:i] + v + url[i + len(known_slug):]
-            if cand != url and cand not in urls:
-                urls.append(cand)
+            cand = prefix + tail[:i] + v + tail[i + len(known_slug):]
+            if cand == url or cand in urls:
+                continue
+            if urlsplit(cand).netloc.lower() != split.netloc.lower():
+                continue      # belt and braces: never leave the pattern's host
+            urls.append(cand)
     return urls
 
 
@@ -126,7 +157,18 @@ def looks_like_summary(text: str) -> int:
     return sum(1 for m in TEMPLATE_MARKERS if m in low)
 
 
-def names_the_model(text: str, model: str) -> bool:
+def has_distinctive_marker(text: str) -> bool:
+    low = " ".join((text or "").split()).lower()
+    return any(m in low for m in DISTINCTIVE_MARKERS)
+
+
+# A summary names its model near the top. Requiring the name in the identifying
+# region stops an incidental mention deep in a comparison table from attributing
+# a whole document to a model it merely cites.
+NAME_REGION_CHARS = 3000
+
+
+def names_the_model(text: str, model: str, siblings=()) -> bool:
     """Whether the document names THIS model, as opposed to a sibling whose
     summary is nearly identical.
 
@@ -140,13 +182,27 @@ def names_the_model(text: str, model: str) -> bool:
     toks = norm_tokens(model)
     if not toks:
         return False
-    low = " " + re.sub(r"[^0-9a-z]+", " ", (text or "").lower()) + " "
-    if not all(f" {t} " in low for t in toks):
+    head = " " + re.sub(r"[^0-9a-z]+", " ", (text or "")[:NAME_REGION_CHARS].lower()) + " "
+    if not all(f" {t} " in head for t in toks):
         return False
     loose = r"[^0-9a-z]{0,3}".join(re.escape(t) for t in toks)
     if toks[-1].isdigit():
         loose += r"(?![^0-9a-z]{0,3}\d)"
-    return re.search(loose, low) is not None
+    # Longest name wins. A sibling whose name extends this one ("FLUX.2 Klein"
+    # for "FLUX.2", "Apertus 1.5" for "Apertus") shares every token, so a match
+    # that continues into the sibling's extra words names the SIBLING, and
+    # promoting on it would file that document under this model.
+    extras = []
+    for sib in siblings:
+        st = norm_tokens(sib)
+        if len(st) > len(toks) and st[:len(toks)] == toks:
+            extras.append(r"[^0-9a-z]{0,3}".join(re.escape(t) for t in st[len(toks):]))
+    for m in re.finditer(loose, head):
+        rest = head[m.end():]
+        if any(re.match(r"[^0-9a-z]{0,3}" + e, rest) for e in extras):
+            continue          # this occurrence names a longer-named sibling
+        return True
+    return False
 
 
 def text_shas_by_model(sources) -> dict:
@@ -167,8 +223,10 @@ def text_shas_by_model(sources) -> dict:
                 m = json.loads(mp.read_text(encoding="utf-8"))
             except json.JSONDecodeError:
                 continue
-            if m.get("text_sha256"):
-                out.setdefault(m["text_sha256"], sid)
+            # a bundle capture records the served text under a different key
+            for k in ("text_sha256", "extracted_text_sha256"):
+                if m.get(k):
+                    out.setdefault(m[k], sid)
     return out
 
 
@@ -188,8 +246,7 @@ def probe(url: str):
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--max-per-model", type=int, default=MAX_PER_MODEL)
-    ap.add_argument("--budget", type=float,
-                    default=float(os.environ.get("GPAI_PROBE_BUDGET", BUDGET_S)))
+    ap.add_argument("--budget", type=float, default=budget_from_env())
     ap.add_argument("--only", default="", help="probe a single source id")
     args = ap.parse_args(argv)
 
@@ -221,13 +278,30 @@ def main(argv=None) -> int:
             if raw is None:
                 continue
             markers = looks_like_summary(text)
-            named = names_the_model(text, s.get("model", ""))
+            distinctive = has_distinctive_marker(text)
+            siblings = [o.get("model", "") for o in sources
+                        if o.get("provider") == s.get("provider")
+                        and o.get("id") != s["id"]]
+            named = names_the_model(text, s.get("model", ""), siblings)
+            final_host = urlsplit(str(meta.get("final_url") or url)).netloc.lower()
+            same_host = final_host == urlsplit(url).netloc.lower()
             tsha = cap.canonical_text_sha(text) if text else None
             clash = known_text.get(tsha) if tsha else None
             entry = {"id": s["id"], "model": s["model"], "url": url,
                      "markers": markers, "names_model": named,
                      "clash": clash if clash and clash != s["id"] else None}
-            if markers >= MIN_MARKERS and named and not entry["clash"]:
+            # one place decides why a document was not promoted; the report and
+            # the operator's queue must never give different reasons
+            entry["why"] = (
+                f"its text is already held for {entry['clash']}" if entry["clash"] else
+                "it does not name this model" if not named else
+                f"it redirected off {urlsplit(url).netloc} to {final_host}"
+                if not same_host else
+                "it carries no phrase distinctive to the Art. 53(1)(d) template"
+                if not distinctive else
+                f"only {markers} Art. 53(1)(d) template marker(s)")
+            if (markers >= MIN_MARKERS and distinctive and named and same_host
+                    and not entry["clash"]):
                 promoted.setdefault(s["id"], []).append(
                     {"kind": "provider-live", "url": url,
                      "note": f"found by probe_missing {cap.utc_now()[:10]}: the "
@@ -236,10 +310,7 @@ def main(argv=None) -> int:
                 print(f"  PROMOTED {s['id']} -> {url}", flush=True)
             else:
                 candidates.append(entry)
-                why = ("names another model's document" if entry["clash"] else
-                       "does not name this model" if not named else
-                       f"only {markers} template marker(s)")
-                print(f"  candidate {s['id']} -> {url} ({why})", flush=True)
+                print(f"  candidate {s['id']} -> {url} ({entry['why']})", flush=True)
 
     if promoted:
         existing = (json.loads(DISCOVERED.read_text(encoding="utf-8"))
@@ -259,9 +330,7 @@ def main(argv=None) -> int:
             "provider": next((s.get("provider") for s in sources
                               if s["id"] == c["id"]), None),
             "classification": "fetched by the Tier-1 probe",
-            "why": ("its text is already held for " + c["clash"]) if c["clash"]
-                   else ("it does not name this model" if not c["names_model"]
-                         else f"only {c['markers']} Art. 53(1)(d) template marker(s)"),
+            "why": c["why"],
         } for c in candidates])
         dec.save(dec.PENDING, queued)
 

@@ -395,6 +395,8 @@ def last_checked_map():
             e = json.loads(line)
         except json.JSONDecodeError:
             continue
+        if not isinstance(e, dict):
+            continue
         src, ts = e.get("source"), e.get("ts", "")
         # a target the sweep deliberately skipped was not checked: a host being
         # down must never advance "Last checked" on a model page
