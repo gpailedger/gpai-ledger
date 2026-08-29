@@ -1,0 +1,49 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "e2ec785e7535156631a04d167ebfc7b8012dd076d745bbb3545a51183b3836ef",
+  "size_bytes": 439719,
+  "stored_as": "raw.html",
+  "text_sha256": "493d6823ca333d748caa6e5e744892837236bdc8b8ac20badc5cc48c4fa3d2a7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-08-29T11:39:02Z"
+  },
+  "prior_sha256": "63b407c14130d54b176bac2ddada9f819885d242498cbc9d741137ba1448fdd8",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-08-29T11:42:01Z",
+    "at": "2026-08-29T11:42:03Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T11:39:48Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T11:39:03Z",
+      "at": "2026-08-29T11:39:44Z"
+    }
+  ]
+}

@@ -1339,6 +1339,29 @@
     "to_sha256": "63b407c14130d54b176bac2ddada9f819885d242498cbc9d741137ba1448fdd8",
     "computed_at": "2026-08-26T08:46:43Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260826T083026Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260829T113903Z": {
+    "verdict": "changed",
+    "similarity": 0.9987,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Usage policy Models pricing",
+        "new": "policy Ask Docs Models"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260826T083026Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260829T113903Z",
+    "from_sha256": "63b407c14130d54b176bac2ddada9f819885d242498cbc9d741137ba1448fdd8",
+    "to_sha256": "e2ec785e7535156631a04d167ebfc7b8012dd076d745bbb3545a51183b3836ef",
+    "computed_at": "2026-08-29T11:43:21Z"
+  },
   "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260811T103345Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20260817T082645Z": {
     "verdict": "method-changed",
     "similarity": 0.4645,
@@ -2314,6 +2337,19 @@
         "computed_at": "2026-08-22T23:26:00Z"
       }
     ]
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260817T144130Z>captures/google__transparency-bucket/watch-page-81cd3682/20260829T114024Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260817T144130Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260829T114024Z",
+    "from_sha256": "e6f78ffdd15ae2792c0097e10cca8646560077956960cc6c327fbd57842a38e9",
+    "to_sha256": "371a934e0400c6997f7b4ef7b321fdd9afe8982b0cf2d8024a19b972bbb98f4d",
+    "computed_at": "2026-08-29T11:43:21Z"
   },
   "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20260811T105844Z>captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z": {
     "verdict": "method-changed",
@@ -3322,6 +3358,64 @@
     "from_sha256": "346bed6fa8a8727d0d35a624efd4976aad4c6cdba14d83c433ca6161ad4bd0d2",
     "to_sha256": "cf582459b6bf021a5866ac5703b5f1dcb3c185113e0074bbda8b276cb52d0ac1",
     "computed_at": "2026-08-28T08:50:48Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260828T083250Z>captures/openai__model-catalog/watch-page-0e5ba652/20260829T113849Z": {
+    "verdict": "changed",
+    "similarity": 0.9913,
+    "word_delta": 35,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Use cases Resources ChatGPT",
+        "new": "cases Training Resources"
+      },
+      {
+        "op": "insert",
+        "old": "Use cases Resources Resources",
+        "new": "cases Training Resources"
+      },
+      {
+        "op": "insert",
+        "old": "ChatGPT Work admin FAQ Identity and",
+        "new": "ChatGPT Work local security ChatGPT Work admin FAQ ChatGPT Work: usage and cost Identity"
+      },
+      {
+        "op": "insert",
+        "old": "Plugin controls Skill controls",
+        "new": "controls Plugin management Skill"
+      },
+      {
+        "op": "insert",
+        "old": "compliance Governance Workspace analytics",
+        "new": "Governance Admin plugin Workspace"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Automating repetitive",
+        "new": "Recent Meet Rosalind Workbench: Empowering every scientist to be their own research team Automating"
+      },
+      {
+        "op": "delete",
+        "old": "harness Custom Code Review rules for Codex Topics",
+        "new": "agent harness Topics General"
+      },
+      {
+        "op": "insert",
+        "old": "Audio Codex Home Topics",
+        "new": "Codex Life sciences Home"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260828T083250Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260829T113849Z",
+    "from_sha256": "cf582459b6bf021a5866ac5703b5f1dcb3c185113e0074bbda8b276cb52d0ac1",
+    "to_sha256": "72c9a7c7fe595f2e6dce27744d8c89471b6bdc806994d04fb79304c0f9018072",
+    "computed_at": "2026-08-29T11:43:21Z"
   },
   "thinking-machines/inkling::live-vs-archive::captures/thinking-machines__inkling/aial-archive-c42e19b1/20260811T104045Z>captures/thinking-machines__inkling/provider-live-529d9027/20260811T104010Z": {
     "verdict": "identical-text",

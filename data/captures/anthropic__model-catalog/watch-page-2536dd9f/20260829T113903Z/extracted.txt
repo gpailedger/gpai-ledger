@@ -1,0 +1,275 @@
+Models overview - Claude Platform Docs
+Claude Platform Docs
+Messages
+Managed Agents
+Admin
+Resources
+
+Best practices
+Models & pricing
+
+CLI, SDKs, and libraries
+Claude API skill
+Release notes
+
+API reference
+
+English
+
+
+Console
+Log in
+
+
+Search
+Ctrl
+K
+Models
+Models overview
+Claude Fable 5
+Claude Opus 5
+Claude Sonnet 5
+Claude Haiku 4.5
+Specialized models
+
+Legacy models
+
+Guides
+Choosing a model
+Optimizing for cost and intelligence
+Upgrade between model versions
+Lifecycle and reference
+Model IDs and versioning
+Model deprecations
+Model cards
+Pricing
+System prompts
+
+Console
+Claude Platform Docs
+
+
+Solutions
+AI agents
+Code modernization
+Coding
+Customer support
+Financial services
+Government
+Higher education
+K-12 teachers
+Life sciences
+Partners
+Claude on AWS
+Claude on Google Cloud
+Learn
+Blog
+Courses
+Use cases
+Connectors
+Customer stories
+Engineering at Anthropic
+Events
+Powered by Claude
+Service partners
+Startups program
+Company
+Anthropic
+Careers
+Economic Futures
+Research
+News
+Responsible Scaling Policy
+Security and compliance
+Transparency
+Learn
+Blog
+Courses
+Use cases
+Connectors
+Customer stories
+Engineering at Anthropic
+Events
+Powered by Claude
+Service partners
+Startups program
+Help and security
+Availability
+Status
+Support
+Discord
+Terms and policies
+Privacy policy
+Responsible disclosure policy
+Terms of service: Commercial
+Terms of service: Consumer
+Usage policy
+Ask Docs
+
+
+Models & pricing
+
+Models
+Models overview
+Claude is a family of state-of-the-art large language models developed by Anthropic. Compare the current lineup, find the model ID for every platform, and open each model's page for its full specs and resources.
+
+Copy page
+
+
+Choosing a model
+
+Pricing
+
+Migration guide
+
+Copy page
+
+
+
+Compare models
+
+If you're unsure which model to use, start with
+Claude Opus 5
+ for complex agentic coding and enterprise work; for the highest available capability, use
+Claude Fable 5
+. All current models support text and image input, text output, multilingual capabilities, vision, and tool use; each model's page lists the platforms it is available on.
+
+Feature
+Claude Fable 5
+Next-generation intelligence for long-running agents
+Claude Opus 5
+For complex agentic coding and enterprise work
+Claude Sonnet 5
+The best combination of speed and intelligence
+Claude Haiku 4.5
+The fastest model with near-frontier intelligence
+Comparative latency
+
+Slower
+Moderate
+Fast
+Fastest
+Pricing
+
+$10 / input MTok
+$50 / output MTok
+$5 / input MTok
+$25 / output MTok
+$2 / input MTok
+$10 / output MTok
+$1 / input MTok
+$5 / output MTok
+Claude API ID
+
+claude-fable-5
+claude-opus-5
+claude-sonnet-5
+claude-haiku-4-5-20251001
+Capabilities
+Thinking
+
+Adaptive (always on)
+Adaptive
+Adaptive
+Extended
+Default effort
+
+high
+high
+high
+Not supported
+Context window
+
+1M tokens
+1M tokens
+1M tokens
+200K tokens
+Max output
+
+128K tokens
+128K tokens
+128K tokens
+64K tokens
+Reliable knowledge cutoff
+
+Jan 2026
+May 2026
+Jan 2026
+Feb 2025
+Show all details
+Show fewer details
+
+
+Once you've picked a model,
+learn how to make your first API call
+. For how model IDs, aliases, and snapshots work, see
+Model IDs and versioning
+; for the reliable-knowledge and training-data cutoffs behind each model, see
+Anthropic's Transparency Hub
+.
+
+
+Using the Models API
+
+You can query model capabilities and token limits programmatically with the
+Models API
+. The response includes
+max_input_tokens
+,
+max_tokens
+, and a
+capabilities
+ object for every available model.
+
+
+Prompt and output performance
+
+Current Claude models excel in:
+
+Performance:
+ Top-tier results in reasoning, coding, multilingual tasks, long-context handling, honesty, and image processing. See
+Prompting best practices
+ for general and model-specific prompting guidance.
+
+Engaging responses:
+ Claude models are ideal for applications that require rich, human-like interactions. If you prefer more concise responses, adjust your prompts to guide the model toward the desired output length. Refer to the
+prompt engineering guides
+ for details.
+
+Output quality:
+ When migrating from a previous model generation, you may notice larger improvements in overall performance. If you're on Claude Opus 4.8 or earlier, see
+Migrating to Claude Opus 5
+.
+
+
+Get started with Claude
+
+If you're ready to start exploring what Claude can do for you, dive in! Whether you're a developer looking to integrate Claude into your applications or a user wanting to experience the power of AI firsthand, the following resources can help.
+
+
+Intro to Claude
+Explore Claude's capabilities and development flow.
+
+Quickstart
+Learn how to make your first API call in minutes.
+Choosing a model
+Establish criteria and pick the right model for your use case.
+Pricing
+Complete pricing, including batch discounts and prompt caching rates.
+
+Model deprecations
+Lifecycle status and retirement commitments for every model.
+
+Claude Console
+Craft and test prompts directly in your browser.
+
+Looking to chat with Claude? Visit
+claude.ai
+. If you have questions, reach out to the
+support team
+ or the
+Discord community
+.
+Was this page helpful?
+
+
