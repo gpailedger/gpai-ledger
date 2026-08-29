@@ -611,9 +611,7 @@ def wayback_cell(m):
 # them so a revised grade stays recoverable, and publishes what it holds (size,
 # canonical text hash, timestamp proof) without republishing their words.
 # Remove a kind from here only once the rights holder has said yes.
-RESTRICTED_KINDS = {
-    "aial-eval": "third-party research, archived but not republished here",
-}
+RESTRICTED_KINDS = cap.RESTRICTED_KINDS
 
 
 def restriction_of(source, m):

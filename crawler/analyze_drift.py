@@ -391,11 +391,28 @@ def load_vdiffs() -> dict:
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
+def excerpts_allowed(rec) -> bool:
+    """Whether a diff record may carry verbatim excerpts of what it compared.
+    reports/version-diffs.json and reports/drift-latest.json are committed to a
+    public repository: a record touching content this project archives but does
+    not republish keeps its METRICS (a word count is a fact about a change) and
+    loses the words themselves."""
+    return not any(cap.kind_of_capture_dir(d) in cap.RESTRICTED_KINDS
+                   for d in (rec.get("from_dir"), rec.get("to_dir")))
+
+
+def redact_excerpts(rec: dict) -> dict:
+    if excerpts_allowed(rec):
+        return rec
+    return {**rec, "changes": [], "changes_withheld": True}
+
+
 def save_vdiffs(vdiffs: dict) -> None:
     p = vdiffs_path()
     p.parent.mkdir(parents=True, exist_ok=True)
-    cap.atomic_write_text(p, json.dumps(dict(sorted(vdiffs.items())), indent=2,
-                                        ensure_ascii=False))
+    cap.atomic_write_text(p, json.dumps(
+        {k: redact_excerpts(v) for k, v in sorted(vdiffs.items())},
+        indent=2, ensure_ascii=False))
 
 
 def pair_key(source_id: str, tslug: str, from_dir: str, to_dir: str) -> str:
@@ -658,9 +675,14 @@ def main() -> None:
             results.append({**base, "verdict": "same-content"})
         else:
             verdict = "near-identical" if rec["similarity"] >= SIMILAR else "DRIFT-CANDIDATE"
+            # this list only ever compares a provider's live document with its
+            # archived copy, so no restricted kind reaches it today; the guard
+            # keeps that true if the comparison is ever widened
+            allowed = excerpts_allowed(rec)
             results.append({**base, "verdict": verdict, "word_delta": rec["word_delta"],
                             "moved_words": rec.get("moved_words", 0),
-                            "changes": rec.get("changes", [])})
+                            "changes": rec.get("changes", []) if allowed else [],
+                            **({} if allowed else {"changes_withheld": True})})
 
     if added:
         save_vdiffs(vdiffs)

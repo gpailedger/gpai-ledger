@@ -380,6 +380,25 @@ def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None
     raise last
 
 
+# Capture kinds whose CONTENT belongs to someone other than the provider this
+# ledger holds to account. AIAL's scored evaluations are their own research
+# output, published with no licence granting redistribution: the ledger archives
+# them so a revised grade stays recoverable, and publishes what it holds (size,
+# canonical text hash, timestamp proof) without republishing their words.
+# Lives here because BOTH the site and the drift analyser must honour it.
+# Remove a kind only once the rights holder has said yes.
+RESTRICTED_KINDS = {
+    "aial-eval": "third-party research, archived but not republished here",
+}
+
+
+def kind_of_capture_dir(d) -> str:
+    """The target kind a capture directory belongs to, read from its path
+    (captures/<source>/<kind>-<hash8>/<timestamp>)."""
+    parts = [p for p in str(d or "").replace(chr(92), "/").split("/") if p]
+    return parts[-2].rsplit("-", 1)[0] if len(parts) >= 2 else ""
+
+
 def guess_ext(content_type: str, url: str, raw: bytes = None) -> str:
     if (content_type or "").lower() in EXT_BY_TYPE:
         return EXT_BY_TYPE[content_type.lower()]

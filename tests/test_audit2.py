@@ -377,3 +377,53 @@ def test_pdf_text_extraction_success_path():
     text, notes = cap.extract_text(_pdf_with_text("hello ledger"), ".pdf")
     assert text and "hello ledger" in text
     assert not any("failed" in str(n) for n in notes)
+
+
+# --- the public diff ledger must not leak words we may not republish ---------
+
+EVAL_DIR = "captures/adobe__adobe-firefly/aial-eval-c70dd1a0/20260829T140000Z"
+DOC_DIR = "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260829T140000Z"
+
+
+def _rec(from_dir, to_dir, marker="WORDS"):
+    return {"verdict": "changed", "similarity": 0.9, "word_delta": 4,
+            "moved_words": 0, "from_dir": from_dir, "to_dir": to_dir,
+            "changes": [{"op": "replace", "old": "was " + marker,
+                         "new": "now " + marker}]}
+
+
+def test_a_capture_dir_names_its_target_kind():
+    import capture as cap
+    assert cap.kind_of_capture_dir(EVAL_DIR) == "aial-eval"
+    assert cap.kind_of_capture_dir(DOC_DIR) == "provider-live"
+    assert cap.kind_of_capture_dir(EVAL_DIR.replace("/", chr(92))) == "aial-eval"
+    assert cap.kind_of_capture_dir("") == ""
+
+
+def test_a_restricted_pair_may_not_carry_excerpts():
+    import analyze_drift as ad
+    assert ad.excerpts_allowed(_rec(DOC_DIR, DOC_DIR)) is True
+    # either side is enough to withhold
+    assert ad.excerpts_allowed(_rec(EVAL_DIR, EVAL_DIR)) is False
+    assert ad.excerpts_allowed(_rec(DOC_DIR, EVAL_DIR)) is False
+
+
+def test_the_committed_diff_ledger_keeps_the_metrics_and_drops_the_words(tmp_path,
+                                                                        monkeypatch):
+    # AIAL revises a grade: the ledger may say THAT it changed and by how much,
+    # never quote what it said — reports/version-diffs.json is a public file
+    import analyze_drift as ad
+    out = tmp_path / "version-diffs.json"
+    monkeypatch.setattr(ad, "vdiffs_path", lambda: out)
+    ad.save_vdiffs({"eval-pair": _rec(EVAL_DIR, EVAL_DIR, "AIALS-GRADE-PROSE"),
+                    "doc-pair": _rec(DOC_DIR, DOC_DIR, "PROVIDERS-OWN-PROSE")})
+    written = out.read_text(encoding="utf-8")
+    assert "AIALS-GRADE-PROSE" not in written, "an evaluation's words were published"
+    saved = json.loads(written)
+    ev = saved["eval-pair"]
+    assert ev["changes"] == [] and ev["changes_withheld"] is True
+    assert ev["word_delta"] == 4 and ev["similarity"] == 0.9, "the metrics were lost"
+    # a provider's own document is unaffected: its edits are the whole point
+    assert saved["doc-pair"]["changes"][0]["new"] == "now PROVIDERS-OWN-PROSE"
+    assert "changes_withheld" not in saved["doc-pair"]
+
