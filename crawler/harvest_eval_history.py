@@ -258,6 +258,10 @@ MAX_VERSION_PAGES = int(os.environ.get("GPAI_EVAL_VERSION_MAX", "60") or "60")
 # the sweep has a per-host circuit breaker for exactly this; so does this loop
 HOST_FAILURES_BEFORE_STOP = 3
 
+ARCHIVE_BASE = "https://aial.ie/research/gpai-training-transparency/archive/"
+ARCHIVE_KIND = "aial-archive"
+MAX_ARCHIVES = int(os.environ.get("GPAI_EVAL_ARCHIVE_MAX", "40") or "40")
+
 
 def version_links(html: str, page_url: str) -> list:
     """Absolute URLs of the earlier-version pages an evaluation page links to.
@@ -362,6 +366,112 @@ def harvest_version_pages(store, started=None) -> tuple:
     return stored, errors
 
 
+def named_archives() -> dict:
+    """archive_file_name -> (source_id, provider, model) for every snapshot any
+    evaluation has EVER named, current or historical.
+
+    An evaluation names the write-once copy of the provider's document that was
+    graded. When AIAL re-grades against a newer document the old filename stops
+    being referenced by the current file, but the document it names is the one a
+    past grade was given to — and, for a document the provider has since
+    replaced, may be the only surviving copy. The registry only ever carries the
+    CURRENT filename, so these are reachable from the harvested history alone."""
+    out = {}
+    for mp in sorted((DATA / "captures").glob("*/*/*/manifest.json")):
+        try:
+            m = json.loads(mp.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if m.get("target_kind") not in ("aial-eval", KIND):
+            continue
+        tp = mp.parent / "extracted.txt"
+        if not tp.exists():
+            continue
+        name = _field(tp.read_text(encoding="utf-8"), "archive_file_name")
+        # AIAL's field is free text and has carried a bare slug ("gpt-5-5") and a
+        # provider CDN string ("...docx-fc25014a") as well as real filenames.
+        # Only something that ends in a document extension is an address in their
+        # archive; the rest would 404 every run forever.
+        if name and name.lower().endswith((".pdf", ".zip", ".docx", ".doc")):
+            out.setdefault(name, (m.get("source_id"), m.get("provider"),
+                                  m.get("model")))
+    return out
+
+
+def held_archive_names() -> set:
+    out = set()
+    for mp in (DATA / "captures").glob("*/*/*/manifest.json"):
+        try:
+            m = json.loads(mp.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if m.get("target_kind") == ARCHIVE_KIND:
+            out.add(urllib.parse.unquote(
+                (m.get("http") or {}).get("url", "")).rsplit("/", 1)[-1])
+    return out
+
+
+def harvest_named_archives(store, started=None) -> tuple:
+    """Fetch every graded snapshot an evaluation names that the ledger does not
+    already hold. These are the PROVIDERS' own documents that AIAL mirrors, so
+    they are archived on the same terms as the rest of the corpus and are not
+    withheld — unlike AIAL's assessment of them."""
+    wanted = [(n, meta) for n, meta in sorted(named_archives().items())
+              if n not in held_archive_names()]
+    if not wanted:
+        return 0, 0
+    started = time.monotonic() if started is None else started
+    stored = errors = consecutive = 0
+    for i, (name, (sid, provider, model)) in enumerate(wanted[:MAX_ARCHIVES]):
+        if time.monotonic() - started > BUDGET_S:
+            print(f"  budget reached — {len(wanted) - i} graded snapshot(s) left "
+                  f"for the next run", flush=True)
+            break
+        if consecutive >= HOST_FAILURES_BEFORE_STOP:
+            print(f"  aial.ie unreachable ({consecutive} consecutive failures) — "
+                  f"stopping; the rest are fetched on the next run", flush=True)
+            break
+        if i:
+            time.sleep(PAUSE_S)
+        url = ARCHIVE_BASE + urllib.parse.quote(name)
+        try:
+            raw, meta = cap.fetch(url)
+            consecutive = 0
+        except cap.PermanentFetchError as exc:
+            # AIAL never published a file under this name, or withdrew it. That
+            # is a fact about their archive, not a failure of this harvest: count
+            # it as an error and the daily run is red forever over a document
+            # nobody can fetch.
+            print(f"  GONE   graded snapshot {name} — {exc.status_code}: named by "
+                  f"an evaluation but not in AIAL's archive", flush=True)
+            consecutive = 0
+            continue
+        except Exception as exc:                                  # noqa: BLE001
+            print(f"  ERROR graded snapshot {name}: {exc!r}", flush=True)
+            errors += 1
+            consecutive += 1
+            continue
+        ext = cap.guess_ext(meta.get("content_type", ""), url, raw)
+        text, notes = cap.extract_text(raw, ext)
+        tslug = cap.target_slug(ARCHIVE_KIND, url)
+        if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
+            continue
+        cap.store_new_version(
+            store, source_id=sid, provider=provider, model=model,
+            kind=ARCHIVE_KIND, tslug=tslug, event_url=url, raw=raw, meta=meta,
+            ext=ext, text=text, notes=notes,
+            text_sha=cap.canonical_text_sha(text) if text else None,
+            wayback_url=url,
+            manifest_extra={"harvested_from": "a filename named by an evaluation",
+                            "aial_archive_file_name": name})
+        stored += 1
+        print(f"  NEW  {sid} graded snapshot {name}", flush=True)
+    left = max(0, len(wanted) - MAX_ARCHIVES)
+    print(f"harvest_eval_history: graded snapshots — stored {stored}, "
+          f"errors {errors}, {left} left for the next run")
+    return stored, errors
+
+
 def main() -> int:
     tok = token()
     if not tok:
@@ -450,7 +560,8 @@ def main() -> int:
     print(f"harvest_eval_history: stored {stored}, errors {errors}, "
           f"{left} left for the next run")
     _vstored, verrors = harvest_version_pages(store, started=started)
-    return 1 if (errors or verrors) else 0
+    _astored, aerrors = harvest_named_archives(store, started=started)
+    return 1 if (errors or verrors or aerrors) else 0
 
 
 if __name__ == "__main__":

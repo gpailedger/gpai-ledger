@@ -410,3 +410,87 @@ def test_a_state_older_than_one_already_held_is_refused_not_appended(_data_in_tm
             for m in (_data_in_tmp / "data" / "captures").glob("*/*/*/manifest.json")]
     assert len(mans) == 1 and mans[0]["git_blob_sha"] == "newblob"
 
+
+# --- the graded snapshots that only the history knows about ------------------
+
+def _eval_capture(store, sid, provider, model, archive_name, kind="aial-eval"):
+    body = (NL.join([f'model_name: "{model}"', f'organization: "{provider}"',
+                     f'archive_file_name: "{archive_name}"']) + NL)
+    cap.store_new_version(
+        store, source_id=sid, provider=provider, model=model, kind=kind,
+        tslug=cap.target_slug(kind, "https://x/" + archive_name),
+        event_url="https://x/e", raw=body.encode(),
+        meta={"url": "https://x/e", "final_url": "https://x/e", "status_code": 200,
+              "content_type": "text/plain", "etag": None, "last_modified": None,
+              "content_length": "1", "fetched_at": "2026-08-29T14:00:00Z"},
+        ext=".yaml", text=body, notes=[], text_sha=None, do_ots=False)
+
+
+def test_a_snapshot_named_only_by_an_old_grade_is_still_wanted(_data_in_tmp,
+                                                               monkeypatch):
+    # when AIAL re-grades against a newer document the old filename stops being
+    # referenced by the current file — but that document is the one the earlier
+    # grade was given to, and may be the only surviving copy
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    store = cap.Store(_data_in_tmp / "data")
+    _eval_capture(store, "microsoft/phi-4", "Microsoft", "Phi-4",
+                  "Phi_4_2026_08_01.pdf")
+    _eval_capture(store, "microsoft/phi-4", "Microsoft", "Phi-4",
+                  "Phi 4 -- 2026_02_05.pdf", kind="aial-eval-history")
+    names = H.named_archives()
+    assert set(names) == {"Phi_4_2026_08_01.pdf", "Phi 4 -- 2026_02_05.pdf"}
+    assert names["Phi 4 -- 2026_02_05.pdf"][0] == "microsoft/phi-4"
+
+
+def test_a_value_that_is_not_a_filename_is_never_requested(_data_in_tmp,
+                                                           monkeypatch):
+    # AIAL's field is free text and has carried a bare slug; requesting it would
+    # 404 on every run forever
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    store = cap.Store(_data_in_tmp / "data")
+    _eval_capture(store, "openai/gpt-5-5", "OpenAI", "GPT-5.5", "gpt-5-5")
+    assert H.named_archives() == {}
+
+
+def test_a_snapshot_aial_never_published_does_not_redden_the_run_forever(
+        _data_in_tmp, monkeypatch):
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    monkeypatch.setattr(H, "PAUSE_S", 0)
+    store = cap.Store(_data_in_tmp / "data")
+    _eval_capture(store, "microsoft/phi-4", "Microsoft", "Phi-4", "Gone.pdf")
+
+    def _gone(url, **k):
+        raise cap.PermanentFetchError("not found", status_code=404)
+
+    monkeypatch.setattr(cap, "fetch", _gone)
+    stored, errors = H.harvest_named_archives(store)
+    assert (stored, errors) == (0, 0), "a 404 was counted as a failure of ours"
+
+
+def test_a_snapshot_already_held_is_not_fetched_again(_data_in_tmp, monkeypatch):
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+    monkeypatch.setattr(H, "PAUSE_S", 0)
+    store = cap.Store(_data_in_tmp / "data")
+    _eval_capture(store, "microsoft/phi-4", "Microsoft", "Phi-4", "Held.pdf")
+    url = H.ARCHIVE_BASE + "Held.pdf"
+    cap.store_new_version(
+        store, source_id="microsoft/phi-4", provider="Microsoft", model="Phi-4",
+        kind="aial-archive", tslug=cap.target_slug("aial-archive", url),
+        event_url=url, raw=b"%PDF-1.4 held",
+        meta={"url": url, "final_url": url, "status_code": 200,
+              "content_type": "application/pdf", "etag": None,
+              "last_modified": None, "content_length": "13",
+              "fetched_at": "2026-08-29T14:00:00Z"},
+        ext=".pdf", text="held", notes=[], text_sha=None, do_ots=False)
+    calls = []
+    monkeypatch.setattr(cap, "fetch", lambda url, **k: calls.append(url))
+    assert H.harvest_named_archives(store) == (0, 0)
+    assert calls == []
+
+
+def test_a_graded_snapshot_is_a_providers_document_and_is_not_withheld():
+    # AIAL mirrors the PROVIDER's mandated disclosure; withholding it would hide
+    # the very thing this archive exists to hold
+    assert H.ARCHIVE_KIND == "aial-archive"
+    assert H.ARCHIVE_KIND not in cap.RESTRICTED_KINDS
+
