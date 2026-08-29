@@ -39,6 +39,8 @@ jobs:
         run: python crawler/decisions.py ingest
 
       - name: Open decision issues for candidates a machine cannot judge
+        id: propose
+        continue-on-error: true      # never lose the week's discovery work to a GitHub hiccup
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python crawler/decisions.py propose
@@ -73,3 +75,9 @@ jobs:
             [ "$pushed" = 1 ] || { echo "push failed after 3 attempts"; exit 1; }
           fi
           git remote set-url origin "https://github.com/${{ github.repository }}.git"
+
+      - name: Fail the run if a candidate could not be asked
+        if: always() && steps.propose.outcome != 'success'
+        run: |
+          echo "a decision issue could not be opened — the candidate stays queued"
+          exit 1

@@ -139,23 +139,31 @@ def gh(method: str, path: str, token: str, **kw):
 def propose(repo: str, token: str, limit: int = 10) -> int:
     """Open an issue for every queued candidate that has none yet."""
     pending = load(PENDING)
-    opened = 0
+    opened, failed = 0, 0
     for k, c in sorted(pending.items()):
         if c.get("issue") or opened >= limit:
             continue
         title = (f"Decide: {c.get('model') or c.get('source_id')} "
                  f"({c.get('provider') or 'unknown provider'})")
-        issue = gh("POST", f"/repos/{repo}/issues", token,
-                   json={"title": title[:200], "body": issue_body(k, c),
-                         "labels": [LABEL]})
+        try:
+            issue = gh("POST", f"/repos/{repo}/issues", token,
+                       json={"title": title[:200], "body": issue_body(k, c),
+                             "labels": [LABEL]})
+        except Exception as exc:  # noqa: BLE001 — one refusal must not lose the rest
+            failed += 1
+            print(f"  could not open an issue for {k}: {exc}", flush=True)
+            continue
         c["issue"] = issue["number"]
         opened += 1
         print(f"  opened #{issue['number']}: {title}", flush=True)
     if opened:
         save(PENDING, pending)
     print(f"{opened} issue(s) opened; {sum(1 for c in pending.values() if not c.get('issue'))}"
-          f" still queued", flush=True)
-    return 0
+          f" still queued" + (f"; {failed} could not be opened" if failed else ""),
+          flush=True)
+    # a candidate that could not be asked stays queued and is retried next week;
+    # the non-zero tells the workflow to redden the run so it is not silent
+    return 1 if failed else 0
 
 
 # The weekly Tier-3 routine ends its report with a fenced json block of
