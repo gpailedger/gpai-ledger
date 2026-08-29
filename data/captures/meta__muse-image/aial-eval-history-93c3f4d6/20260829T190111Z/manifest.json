@@ -1,0 +1,38 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "aial-eval-history",
+  "sha256": "c2bdf20d3073643890c63b8214ae113512af4da0cbc263cc6b6ffd8677ce711d",
+  "size_bytes": 5160,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a450a2eaee29efa4f5fda23858a2ecf69946b93627e2eb19baa645f1e8f73456",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/evals/muse-image.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/evals/muse-image.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f1773758b4ded6a8644fe35d0ac693877b072c28554c373d2750d41bd07f1f2e\"",
+    "last_modified": null,
+    "content_length": "1492",
+    "fetched_at": "2026-08-29T19:01:11Z"
+  },
+  "prior_sha256": "21636e3232e6df0464d31ad8e81ffa8cc694917d1b0d8ed3ba0ba21bd4f6a62b",
+  "git_commit": "e23043c1a1254414a190531d23dca9b8b3da3415",
+  "git_commit_date": "2026-08-05T21:04:00Z",
+  "git_blob_sha": "0092d39cf08038d2f0bf55ae1d69d418b293689b",
+  "git_path": "evals/muse-image.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T19:01:18Z"
+  }
+}

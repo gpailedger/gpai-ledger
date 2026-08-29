@@ -1,0 +1,38 @@
+{
+  "source_id": "black-forest-labs/flux-2-klein",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2 Klein",
+  "target_kind": "aial-eval-history",
+  "sha256": "af195a43c8038edca89e88bc0ac1a9782f491d6a0c31d4e1079cbc72d0c78212",
+  "size_bytes": 3788,
+  "stored_as": "raw.yaml",
+  "text_sha256": "4ca7a3a541e5791e06901cbcc8e1b9b6ac734d836822bf939813a215390261fb",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d85a6d5c3d5f20ac36d2f0e531944e7cdd68b918/evals/flux-2-klein.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d85a6d5c3d5f20ac36d2f0e531944e7cdd68b918/evals/flux-2-klein.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4648c168e9686ee3b84d9d63121b216417f094f6f6cede555ce6aef68b83479d\"",
+    "last_modified": null,
+    "content_length": "554",
+    "fetched_at": "2026-08-29T18:47:16Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "d85a6d5c3d5f20ac36d2f0e531944e7cdd68b918",
+  "git_commit_date": "2026-08-03T09:57:02Z",
+  "git_blob_sha": "ebe6754b568fd2bafcc3aaa6d0b6daa06c1b69e2",
+  "git_path": "evals/flux-2-klein.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:47:22Z"
+  }
+}

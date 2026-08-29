@@ -1,0 +1,38 @@
+{
+  "source_id": "black-forest-labs/flux-2",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2",
+  "target_kind": "aial-eval-history",
+  "sha256": "a6022671791d4cb82f51a82d5098fa2ed6c96893d4485312163d8a70e6e2b626",
+  "size_bytes": 3780,
+  "stored_as": "raw.yaml",
+  "text_sha256": "89123fc72776db8406070f97235febdad7941bb7020c470c5ae634accdc9f1ec",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/flux-2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/flux-2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d47289eba22c776c924cd4326c015a6f4d0cf37af1ccc9d1b18a2df36975ed8b\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-08-29T18:40:19Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "52fcf78158412a0467924b0d2e326b7fe3fc5739",
+  "git_commit_date": "2026-07-27T15:08:29Z",
+  "git_blob_sha": "cf50a7d6dbad13338edc84ff820e2fcd742cd73f",
+  "git_path": "evals/flux-2.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:40:28Z"
+  }
+}

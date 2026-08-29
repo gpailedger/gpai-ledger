@@ -1,0 +1,38 @@
+{
+  "source_id": "thinking-machines/inkling-small",
+  "provider": "Thinking Machines",
+  "model": "Inkling Small",
+  "target_kind": "aial-eval-history",
+  "sha256": "a555cf879d0ac9731379440c4b04b6b972193beaa44cc1f081e862584bed7c74",
+  "size_bytes": 4827,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d8b5b93095b7e66c27e628850f3b7efafc9a5eb2fa5d1f85328c0a8cf7c0e14d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c5b7a1be74de97a4ed830faeda598fb8c0895206/evals/inkling%20small.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c5b7a1be74de97a4ed830faeda598fb8c0895206/evals/inkling%20small.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f4b545fe3506e0d6d18ce0d74ce8c484e131a09f7a0079c841d4973fda99a8a1\"",
+    "last_modified": null,
+    "content_length": "1143",
+    "fetched_at": "2026-08-29T18:53:04Z"
+  },
+  "prior_sha256": "a1846bf64e095aa9a1316ca3af00e1e8e4946eb0ab0067ab2378254e9cfb96e0",
+  "git_commit": "c5b7a1be74de97a4ed830faeda598fb8c0895206",
+  "git_commit_date": "2026-08-04T17:21:36Z",
+  "git_blob_sha": "83aa58fa8d3d5ccf8e7d2498fb1e747b1da5a0f7",
+  "git_path": "evals/inkling small.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:53:10Z"
+  }
+}

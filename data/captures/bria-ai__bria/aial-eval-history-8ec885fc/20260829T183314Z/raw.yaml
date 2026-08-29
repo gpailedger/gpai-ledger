@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Bria 3.2"
+model_link: "https://huggingface.co/briaai/BRIA-3.2"
+organization: "Bria AI"
+org_link: "https://bria.ai/"
+evaluation_date: "2026-01-12"
+public_summary_link: "https://drive.google.com/file/d/13BhHQhd7vcDArPmpBrl_b2FpdBqkYU4n/view"
+public_summary_date: "2026-01-06"
+public_summary_location: "https://bria.ai/security-and-compliance"
+model_publication_date: "2025-06-10"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Bria -- EU AI Act - GPAI Code of Practice -- 2026_01_12.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 1
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 2
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 7
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 32.5
+    max_score: 40
+    notes: ""
+
+  D2: # Completeness
+    score: 47
+    max_score: 78
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 15
+    max_score: 21
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 13
+    max_score: 14
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 1
+    max_score: 1
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 1
+    max_score: 1
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 32
+    max_score: 32
+    notes: ""
+
+  D2: # Completeness
+    score: 53
+    max_score: 53
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 21
+    max_score: 21
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 36
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 69
+    max_score: 69
+    notes: ""
+
+
+general_notes: "The public summary for the Bria 3.2 model is published by Bria AI on its website under the 'Security & Compliance' section, as a link to a PDF <a href=\"https://drive.google.com/file/d/13BhHQhd7vcDArPmpBrl_b2FpdBqkYU4n/view\" target=\"_blank\">hosted on Google Drive</a>. The summary closely follows the structure of the template, but provided contact details for the authorised representative and not for the company itself. The document also lacked some metadata such as version information and links to documentation. The summary describes training only involving licensed data, which requires relatively little disclosure through the template. We assessed its score as <span class=\"openness open\">86.97%</span> with a grade of <strong>B+</strong> for <i>transparency</i>, and <span class=\"openness open\">94.74%</span> with a grade of <strong>A</strong> for <i>usefulness</i>."

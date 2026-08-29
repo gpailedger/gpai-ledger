@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Phi-4"
+model_link: "https://huggingface.co/microsoft/phi-4"
+organization: "Microsoft"
+org_link: "https://www.microsoft.com/en-us/research/"
+evaluation_date: "2026-01-12"
+public_summary_link: "https://huggingface.co/microsoft/phi-4/blob/main/data_summary_card.md"
+public_summary_date: "2025-11-24"
+public_summary_location: "https://huggingface.co/microsoft/phi-4"
+model_publication_date: "2024-12-12"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Phi 4 -- 2026_02_05.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3.5
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 9.5
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 12
+    max_score: 24
+    notes: ""
+
+  D2: # Completeness
+    score: 45
+    max_score: 57
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 7
+    max_score: 13
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 11
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 0
+    max_score: 52
+    notes: ""
+
+  D2: # Completeness
+    score: 1
+    max_score: 60
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 1
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 2
+    max_score: 5
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 2
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 0
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 0
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 0
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 0
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 0
+    max_score: 24
+    notes: ""
+
+  D2: # Completeness
+    score: 1
+    max_score: 30
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 1
+    max_score: 30
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 0
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 18
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 15
+    notes: ""
+
+
+general_notes: "We did not find an explicitly published summary for Microsoft's Phi-4 model, but found a file <a href=\"https://huggingface.co/microsoft/phi-4/blob/main/data_summary_card.md\" target=\"_blank\">in its repository on HuggingFace</a> called \"data_summary_card.md\", whose structure closely matched that of the template. The title used in the file was \"Data Summary\", which was also title used by HuggingFace in its SmolLM public summary. We are uncertain as to whether this represents an industry practice of co-opting of the formal title of \"public summary of training content\" present in the template with a broader and vague title that could be confused with other data-related documentation also provided with GPAI models. We opted to assess this model regardless based on the assumption of stakeholders viewing the document as fulfilling the template requirements, as explained earlier.<br><br>The assessment showed that fields provided in the document are filled in to some extent, but that the document itself is quite sparse and does not provide many details and also had sections missing. We further found that section numbers and questions had a significant mismatch from what was provided in the template. The document also suffered from subjective non-relevant statements, such as question 2.3.1 on whether public data was used to train the model being answered with \"<i>Microsoft follows all relevant laws and regulations pertaining to personal information</i>\" &mdash; which is neither relevant nor clear. We also found the document did not provide required information significantly, for example subsequent parts that enquire about the source and uses of personal data (2.4 User data in template) were found completely missing. Our assessment reflects these systematic major issues in the outcomes where the document scored <span class=\"openness closed\">33.30%</span> with a Grade <strong>D</strong> for <i>transparency</i>, and <span class=\"openness closed\">24.54%</span> with a Grade <strong>F</strong> for <i>usefulness</i>, which is the lowest score amongst all assessed summaries published before and during our initial research."

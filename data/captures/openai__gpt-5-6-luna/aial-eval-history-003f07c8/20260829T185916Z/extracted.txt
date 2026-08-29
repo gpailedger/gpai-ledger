@@ -1,0 +1,267 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "GPT-5.6 Luna"
+model_link: "https://chatgpt.com/"
+organization: "OpenAI"
+org_link: "https://openai.com/"
+evaluation_date: ""
+public_summary_link: "https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf"
+public_summary_date: "2026-07-23"
+public_summary_location: "https://help.openai.com/en/articles/12141645-eu-ai-act-openai-resources-and-customer-guidance"
+model_publication_date: "2026-07-09"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "GPT_5_6_Luna_2026_08_03.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3.5
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 6.5
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 19
+    max_score: 40
+    notes: ""
+
+  D2: # Completeness
+    score: 49
+    max_score: 72
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 17
+    max_score: 18
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 0
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 91
+    max_score: 111
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 3
+    max_score: 19
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 32
+    notes: ""
+
+  D2: # Completeness
+    score: 24
+    max_score: 88
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 122
+    max_score: 129
+    notes: ""
+
+  D2: # Completeness
+    score: 94
+    max_score: 158
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 61
+    max_score: 93
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 20
+    max_score: 58
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 8.5
+    max_score: 16
+    notes: ""
+
+  D2: # Completeness
+    score: 19.5
+    max_score: 27
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 12
+    max_score: 12
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 15
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 59
+    max_score: 65
+    notes: ""
+
+  D2: # Completeness
+    score: 41
+    max_score: 47
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 47
+    max_score: 47
+    notes: ""
+
+  D5: # Accessibility
+    score: 17
+    max_score: 17
+    notes: ""
+
+  D6: # Comprehension
+    score: 12
+    max_score: 24
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 10.5
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 36
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 69
+    notes: ""
+
+general_notes: "The public summary for GPT-5.6 Luna can be found <a href=\"https://cdn.openai.com/pdf/gpt-5-6-luna-eu-ai-act-public-summary-of-training-content.pdf\" target=\"_blank\"> on OpenAI's site</a>, linked on one of OpenAI's help pages. No equivalent summary seems to be available for GPT 5.6 Sol or GPT 5.6 Terra. The summary matches the structure of the template, with points being lost primarily due to providing high-level information where more detailed information is encouraged. We assessed the summary's score to be <span class=\"openness partial\">62.23%</span> with Grade <strong>C+</strong> for <strong><i>transparency</i></strong>, and <span class=\"openness closed\">47.52%</span> with Grade <strong>D+</strong> for <strong><i>usefulness</i></strong>."

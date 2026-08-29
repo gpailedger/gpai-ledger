@@ -1,0 +1,38 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "SpeakLeash",
+  "model": "Bielik v3 11B Instruct",
+  "target_kind": "aial-eval-history",
+  "sha256": "01b25527c51f27a8c98e26d8107bfb2186ef1866db308c58a5dbc55196c1b49e",
+  "size_bytes": 5267,
+  "stored_as": "raw.yaml",
+  "text_sha256": "0a995d8f78d7cc9866e0bdbcc67ecab89668fbe59ff8e41a1ab3333707bc7609",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/8dd15461fb29410fb5db384ad0358755a669516b/evals/bielik.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/8dd15461fb29410fb5db384ad0358755a669516b/evals/bielik.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f545f4e258617fe704a11e33fbd73d99c47789d80d74b928890e4f4bbb81ce9c\"",
+    "last_modified": null,
+    "content_length": "1408",
+    "fetched_at": "2026-08-29T18:34:16Z"
+  },
+  "prior_sha256": "cee9c1ecbd93e46bd0eb8434530f1cefaecaa524d63bb2e3a124c0069c3b931a",
+  "git_commit": "8dd15461fb29410fb5db384ad0358755a669516b",
+  "git_commit_date": "2026-03-22T21:45:42Z",
+  "git_blob_sha": "b2bcae32179ff65f1fc017a810736c86c61eb721",
+  "git_path": "evals/bielik.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:34:23Z"
+  }
+}

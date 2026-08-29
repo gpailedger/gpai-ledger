@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "SmolLM3-3B"
+model_link: "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+organization: "HuggingFace"
+org_link: "https://huggingface.co/HuggingFaceTB"
+evaluation_date: "2026-01-12"
+public_summary_link: "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency"
+public_summary_date: "2025-07-25"
+public_summary_location: "https://huggingface.co/hfmlsoc/spaces"
+model_publication_date: "2025-07-08"
+category: "Fine-tuned model" # New model, fine-tuned model
+archive_file_name: "SmolLM3-3B EU Data Transparency -- 2025_11_12.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 7.5
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 5.5
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 6
+    notes: ""
+
+  D5: # Accessibility
+    score: 8.5
+    max_score: 13
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 12
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 21
+    max_score: 40
+    notes: ""
+
+  D2: # Completeness
+    score: 54
+    max_score: 65
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 17
+    max_score: 23
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 44
+    max_score: 52
+    notes: ""
+
+  D2: # Completeness
+    score: 108
+    max_score: 108
+    notes: ""
+
+  D3: # Consistency
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 2
+    max_score: 2
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 2
+    max_score: 2
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 25
+    max_score: 37
+    notes: ""
+
+  D2: # Completeness
+    score: 19
+    max_score: 31
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 13
+    max_score: 31
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 15
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 33
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 69
+    max_score: 69
+    notes: ""
+
+
+general_notes: "The public summary for HuggingFace's SmolLM3-3B model is available on its platform as a <a href=\"https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency\" target=\"_blank\">webpage</a>. In general, the structure of the template was preserved with clear indication of section numbers, consistent field labels, and explicitly indicating yes/no where applicable. Other than issues with accessibility, we found no major issues with the public summary. It scored <span class=\"openness open\">82.50%</span> and received a grade of <strong>B+</strong> for <strong><i>Transparency</i></strong>, and <span class=\"openness open\">86.01%</span> with grade <strong>B+</strong> for <strong><i>Usefulness</i></strong>, which meant that the summary was of a moderate but good quality. SmolLM scored particularly well on its disclosure of public data sources, a key disclosure demanded by Article 53(1)(d), and a good indicator of transparency in the model development process."

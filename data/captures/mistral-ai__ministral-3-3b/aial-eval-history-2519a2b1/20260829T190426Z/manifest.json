@@ -1,0 +1,38 @@
+{
+  "source_id": "mistral-ai/ministral-3-3b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 3B",
+  "target_kind": "aial-eval-history",
+  "sha256": "ed8f5edb11e4ba051bc4bcc513e54e2c9edc8f8787567cef48f65da52ddfb774",
+  "size_bytes": 4959,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a9b690e7fc1273a4844a9d8790cbac20dd83df563342ebe3284a3603b514fb78",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/948877cb12c420f0cc45ba011ba255f0570f985e/evals/ministral-3-3B.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/948877cb12c420f0cc45ba011ba255f0570f985e/evals/ministral-3-3B.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8ae5d402d1d827989a3ee734dc28201756769098862ab803509c7f91f6798cc0\"",
+    "last_modified": null,
+    "content_length": "1230",
+    "fetched_at": "2026-08-29T19:04:26Z"
+  },
+  "prior_sha256": "621d505a0061d0f1aac247b5b845acb574e36a5724960d2d2d3a9386d433a321",
+  "git_commit": "948877cb12c420f0cc45ba011ba255f0570f985e",
+  "git_commit_date": "2026-08-06T07:04:56Z",
+  "git_blob_sha": "63fb9efc91dbc4f6024ab56b6620e48d89fde937",
+  "git_path": "evals/ministral-3-3B.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T19:04:31Z"
+  }
+}

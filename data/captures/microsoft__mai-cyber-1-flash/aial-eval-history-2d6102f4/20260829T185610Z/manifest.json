@@ -1,0 +1,38 @@
+{
+  "source_id": "microsoft/mai-cyber-1-flash",
+  "provider": "Microsoft",
+  "model": "MAI-Cyber-1-Flash",
+  "target_kind": "aial-eval-history",
+  "sha256": "0cb55aec2b56ece1696b70bfe9670c69ce643439279976eeeb833a914dd34100",
+  "size_bytes": 4797,
+  "stored_as": "raw.yaml",
+  "text_sha256": "3f60c60cfa5274df483ae270f25334cd0b2708f256ab2f4ec43487f6b540fbe8",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/evals/mai-cyber-1-flash.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/evals/mai-cyber-1-flash.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9e5ae235285c9795acf96061adcebe683186277c229383c72873adbb9706c9a6\"",
+    "last_modified": null,
+    "content_length": "1170",
+    "fetched_at": "2026-08-29T18:56:10Z"
+  },
+  "prior_sha256": "4f805e5915a8041aba2ef47c1a6aeb6f366ebb413f32249dc80281287b787f1e",
+  "git_commit": "06ddb124fa2483d962c846bc0ea88b030295607a",
+  "git_commit_date": "2026-08-05T18:57:50Z",
+  "git_blob_sha": "2421d643bf27b5a007d461f61783e37602eb0256",
+  "git_path": "evals/mai-cyber-1-flash.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:56:16Z"
+  }
+}

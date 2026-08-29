@@ -1,0 +1,38 @@
+{
+  "source_id": "openai/gpt-5-6-luna",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Luna",
+  "target_kind": "aial-eval-history",
+  "sha256": "65bf64335e5a731df7cd2a5319ab0d5070d0226847e47a6d7d6118caed1094c7",
+  "size_bytes": 4155,
+  "stored_as": "raw.yaml",
+  "text_sha256": "38a8f9170ac621823a676569cb9b07ece5bc6cb3e88804c2c396138274a3e524",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/289dbf2803e14e50c9c4b3d8107c02ed2f5c39d8/evals/gpt-5-6-luna.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/289dbf2803e14e50c9c4b3d8107c02ed2f5c39d8/evals/gpt-5-6-luna.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"3840606925dbb6b732ea42bbab82b68337ce0f3a34c129e94db4dfe607dfeb7f\"",
+    "last_modified": null,
+    "content_length": "924",
+    "fetched_at": "2026-08-29T18:50:26Z"
+  },
+  "prior_sha256": "b88b0006fef04350295db52c9c461b3bce03c5bb7726eb18ee31f8319d9dfd54",
+  "git_commit": "289dbf2803e14e50c9c4b3d8107c02ed2f5c39d8",
+  "git_commit_date": "2026-08-04T11:51:51Z",
+  "git_blob_sha": "cb23bfdca4f8e2b5998321bbe78eff3ce1ea23fb",
+  "git_path": "evals/gpt-5-6-luna.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:50:32Z"
+  }
+}

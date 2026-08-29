@@ -1,0 +1,38 @@
+{
+  "source_id": "fastweb/fastwebmiia",
+  "provider": "Fastweb",
+  "model": "FastwebMIIA",
+  "target_kind": "aial-eval-history",
+  "sha256": "be73f1da95c68656be1f4da6785ef3a2232877c4b37b1560ae1c15a9df899d34",
+  "size_bytes": 5041,
+  "stored_as": "raw.yaml",
+  "text_sha256": "bc1f90c7af99fe0f46be9a2e648029041b5ddafd99064d02cf60802907578728",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6bef10f0ec4084670e18c06e02d6a1cc926092aa/evals/fastwebmiia.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6bef10f0ec4084670e18c06e02d6a1cc926092aa/evals/fastwebmiia.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"3187c43ddc24b8c8b4e9c9def88c64287b8fe2c8192a89ad0caa5f25987c3adb\"",
+    "last_modified": null,
+    "content_length": "1232",
+    "fetched_at": "2026-08-29T18:41:49Z"
+  },
+  "prior_sha256": "e009b3439ea2ef9930f2c954f9003fe31f065896121a7edc98092ddaaf124bfe",
+  "git_commit": "6bef10f0ec4084670e18c06e02d6a1cc926092aa",
+  "git_commit_date": "2026-07-27T15:13:59Z",
+  "git_blob_sha": "6394ff7de9a60d3ae8e994eacf5e812f59c6ac5a",
+  "git_path": "evals/fastwebmiia.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:41:55Z"
+  }
+}

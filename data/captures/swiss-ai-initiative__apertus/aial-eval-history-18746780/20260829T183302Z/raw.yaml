@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Apertus"
+model_link: "https://huggingface.co/swiss-ai/Apertus-70B-2509"
+organization: "Swiss AI Initiative"
+org_link: "https://www.swiss-ai.org/"
+evaluation_date: "2026-01-12"
+public_summary_link: "https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf"
+public_summary_date: "2025-09-01"
+public_summary_location: "https://huggingface.co/swiss-ai/Apertus-70B-2509"
+model_publication_date: "2025-09-02"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Apertus_EU_Public_Summary -- 2025_11_12.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3.5
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 10
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 20
+    max_score: 42
+    notes: ""
+
+  D2: # Completeness
+    score: 51
+    max_score: 62
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D5: # Accessibility
+    score: 5
+    max_score: 5
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 92
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 95
+    max_score: 95
+    notes: ""
+
+  D3: # Consistency
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D4: # Correctness
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D5: # Accessibility
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 19
+    max_score: 19
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 2
+    max_score: 2
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 2
+    max_score: 2
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D2: # Completeness
+    score: 19
+    max_score: 19
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 37
+    max_score: 37
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 51
+    max_score: 51
+    notes: ""
+
+
+general_notes: "The public summary for the Apertus model family can be found as a PDF on HuggingFace in the same context as its models, for instance at <a href=\"https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf\" target=\"_blank\">the repository of Apertus-70B-2509</a>. Each field of the template was filled in, including explicitly marking sections as not applicable, though some fields included superfluous information not relevant to the topic or question which caused a few points deduction. We assessed its score to be <span class=\"openness open\">92.90%</span> with Grade <strong>A</strong> for <strong><i>transparency</i></strong>, and <span class=\"openness open\">97.14%</span> with Grade <strong>A+</strong> for <strong><i>usefulness</i></strong>, which were the highest of all assessed summaries published before and during our initial research."

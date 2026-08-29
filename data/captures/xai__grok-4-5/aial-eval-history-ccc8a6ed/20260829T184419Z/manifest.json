@@ -1,0 +1,38 @@
+{
+  "source_id": "xai/grok-4-5",
+  "provider": "xAI",
+  "model": "Grok 4.5",
+  "target_kind": "aial-eval-history",
+  "sha256": "039a313353bd95c43163e839feff634bd96ce9b3502a3022c112b95b110e465a",
+  "size_bytes": 4736,
+  "stored_as": "raw.yaml",
+  "text_sha256": "198d9edd40c7d1606cb7710a6a4bbd9c19a32b2770d196f1f89f2dd3829902d6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/grok-4.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/grok-4.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0adcc7124fdf919c427f6dbf3ea14dd0f80c021aa56e4caeda2a8a112e11d1e8\"",
+    "last_modified": null,
+    "content_length": "1139",
+    "fetched_at": "2026-08-29T18:44:19Z"
+  },
+  "prior_sha256": "12f4bd91a9673a20cf0a45d2a633bbdc8f11e9974dbe58d5b20dd6d2ef38b9a6",
+  "git_commit": "fb04f913855123fef5480e30e9d7ee55eb455a82",
+  "git_commit_date": "2026-08-03T09:44:40Z",
+  "git_blob_sha": "a29847c552bf129cf93c24ddeaff813949d2eb31",
+  "git_path": "evals/grok-4.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:44:25Z"
+  }
+}

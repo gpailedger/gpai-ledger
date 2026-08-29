@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Adobe Firefly"
+model_link: "https://www.adobe.com/products/firefly.html"
+organization: "Adobe"
+org_link: "https://www.adobe.com/"
+evaluation_date: "2026-07-22"
+public_summary_link: "https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf?msockid=0852fa814c266ee002e8ede54d7b6fd3"
+public_summary_date: "2025-11-01"
+public_summary_location: "https://www.adobe.com/"
+model_publication_date: "2025-11-28"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Adobe_Firefly_2026_07_22.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 1
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 7
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 20
+    max_score: 37
+    notes: ""
+
+  D2: # Completeness
+    score: 55
+    max_score: 78
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 13
+    max_score: 14
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 52
+    max_score: 52
+    notes: ""
+
+  D2: # Completeness
+    score: 76
+    max_score: 140
+    notes: ""
+
+  D3: # Consistency
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 16
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 88
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 14
+    max_score: 14
+    notes: ""
+
+  D2: # Completeness
+    score: 64
+    max_score: 103
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 58
+    max_score: 58
+    notes: ""
+
+  D5: # Accessibility
+    score: 25
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 38
+    max_score: 38
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 36
+    max_score: 48
+    notes: ""
+
+  D2: # Completeness
+    score: 30
+    max_score: 30
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 30
+    max_score: 30
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 51
+    notes: ""
+
+
+general_notes: ""

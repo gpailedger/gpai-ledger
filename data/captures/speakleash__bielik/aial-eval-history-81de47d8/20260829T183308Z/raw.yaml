@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Bielik v3 11B Instruct"
+model_link: "https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct"
+organization: "SpeakLeash"
+org_link: "https://speakleash.org/"
+evaluation_date: "2026-01-12"
+public_summary_link: "https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf"
+public_summary_date: "2026-01-01"
+public_summary_location: "https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct"
+model_publication_date: "2025-12-31"
+category: "Fine-tuned model" # New model, fine-tuned model
+archive_file_name: "Bielik 11B v3 EU Public Summary -- 2026_01_12.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 4
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 10
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 35.5
+    max_score: 45
+    notes: ""
+
+  D2: # Completeness
+    score: 71
+    max_score: 82
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D5: # Accessibility
+    score: 5
+    max_score: 5
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 92
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 104
+    max_score: 140
+    notes: ""
+
+  D3: # Consistency
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 5
+    max_score: 5
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 5
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 109
+    max_score: 119
+    notes: ""
+
+  D2: # Completeness
+    score: 110
+    max_score: 135
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 88
+    max_score: 113
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 53
+    max_score: 78
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 0
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D2: # Completeness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 12
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 19
+    notes: ""
+
+  D2: # Completeness
+    score: 19
+    max_score: 19
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 37
+    max_score: 37
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 60
+    max_score: 69
+    notes: ""
+
+
+general_notes: "The open collaboration project SpeakLeash publishes a public summary for its Bielik v3 11B Instruct model <a href=\"https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf\" target=\"_blank\">on its website</a> and also links it in its model card. The public summary follows the structure of the template, and describes Bielik as a fine-tuned version of Mistral. Of note, Bielik utilised the optional additional comments field in Section 1.3 to describe the purposes, regional, and linguistic characteristics of the dataset used as based on Polish and EU legal administrative domains and the inclusion of Silesian and Kashubian language Wikipedia pages. For their list of public data sources, however, the description referenced external documents ('preprints') which resulted in a deduction of points as relevant information was not provided in the document. We assessed its score to be <span class=\"openness open\">88.02%</span> with grade <strong>B+</strong> for <i>transparency</i>, and <span class=\"openness partial\">71.11%</span> with grade <strong>C+</strong> for <i>usefulness</i>."

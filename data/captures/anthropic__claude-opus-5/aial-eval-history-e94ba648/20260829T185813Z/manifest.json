@@ -1,0 +1,38 @@
+{
+  "source_id": "anthropic/claude-opus-5",
+  "provider": "Anthropic",
+  "model": "Claude Opus 5",
+  "target_kind": "aial-eval-history",
+  "sha256": "79a5b5d87f62cf0abd456aaf562cb724aa90588305509cfe50b7c1ec04acd286",
+  "size_bytes": 4948,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ca2b73b529555f347036060e3ed9f1b222d6b47954fd51f993229b603affc27f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/evals/claude-opus-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/evals/claude-opus-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"49e4b90e019a3ab0b5235a92bb6eefc3bbfd9ccb6b4dfd247ec8bf8a83309bf2\"",
+    "last_modified": null,
+    "content_length": "1255",
+    "fetched_at": "2026-08-29T18:58:13Z"
+  },
+  "prior_sha256": "63438146da997bbcc0922aaff26f99f3b64f109b3b043e8a5d4ffee92d448866",
+  "git_commit": "e23043c1a1254414a190531d23dca9b8b3da3415",
+  "git_commit_date": "2026-08-05T21:04:00Z",
+  "git_blob_sha": "020f5119e5c8ed737f6f927b4225d4eb21a3db1b",
+  "git_path": "evals/claude-opus-5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:58:19Z"
+  }
+}

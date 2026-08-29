@@ -1,0 +1,38 @@
+{
+  "source_id": "amazon/nova-2-lite",
+  "provider": "Amazon",
+  "model": "Nova 2 Lite",
+  "target_kind": "aial-eval-history",
+  "sha256": "382081fb75929d1169ffdde56072fc763640554e222d35e1d3a94033a1596148",
+  "size_bytes": 4017,
+  "stored_as": "raw.yaml",
+  "text_sha256": "cd801d29edc4f9aa540ccb515c11b1d0b6fa9377628250876625d36d42dbf778",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/nova-2-lite.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/nova-2-lite.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"314722202bdc75292fe7b0023d30fbc070cb6d2df1fe391fc0f8e9c5b3ac3ec0\"",
+    "last_modified": null,
+    "content_length": "633",
+    "fetched_at": "2026-08-29T18:45:29Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "fb04f913855123fef5480e30e9d7ee55eb455a82",
+  "git_commit_date": "2026-08-03T09:44:40Z",
+  "git_blob_sha": "58fb333731703599b41db16535b50724c8d89c2e",
+  "git_path": "evals/nova-2-lite.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:45:35Z"
+  }
+}

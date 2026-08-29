@@ -1,0 +1,267 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "MAI Code 1 Flash"
+model_link: "https://microsoft.ai/models/mai-code-1-flash/"
+organization: "Microsoft AI"
+org_link: "https://microsoft.ai/"
+evaluation_date: "2026-08-04"
+public_summary_link: "https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF"
+public_summary_date: "2026-06-02"
+public_summary_location: "https://microsoft.ai/pdf/MAI-Code-1-Flash-Model-Card.PDF"
+model_publication_date: "2026-06-02"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "MAI_Code_1_Flash_2026_08_03.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 8.5
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3.5
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 9.5
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 35
+    max_score: 50
+    notes: ""
+
+  D2: # Completeness
+    score: 65
+    max_score: 85
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 27
+    max_score: 27
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 11
+    max_score: 14
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 0
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 98
+    max_score: 108
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 32
+    notes: ""
+
+  D2: # Completeness
+    score: 8
+    max_score: 88
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 129
+    max_score: 129
+    notes: ""
+
+  D2: # Completeness
+    score: 106.5
+    max_score: 158
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 68
+    max_score: 93
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 58
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D2: # Completeness
+    score: 26
+    max_score: 26
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 11
+    max_score: 11
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 15
+    max_score: 15
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 37
+    max_score: 49
+    notes: ""
+
+  D2: # Completeness
+    score: 19
+    max_score: 31
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 31
+    max_score: 31
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 3
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 21
+    max_score: 21
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 18
+    max_score: 54
+    notes: ""
+
+general_notes: "The public summary for MAI Code 1 Flash can be found <a href=\"https://microsoft.ai/pdf/MAI-Code-1-Flash-Data-Card.PDF\" target=\"_blank\">, linked from the model's model card</a>. The summary mostly matches the structure of the template, however includes some additional fields which are generally helpful. Some key questions provide high-level information rather than the more detailed information which is encouraged. We assessed the summary's score to be <span class=\"openness partial\">68.82%</span> with Grade <strong>C+</strong> for <strong><i>transparency</i></strong>, and <span class=\"openness partial\">50.0%</span> with Grade <strong>C</strong> for <strong><i>usefulness</i></strong>."

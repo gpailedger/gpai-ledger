@@ -1,0 +1,268 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "GPT-5.5"
+model_link: "https://openai.com/index/introducing-gpt-5-5/"
+organization: "OpenAI"
+org_link: "https://openai.com/"
+evaluation_date: "2026-07-09"
+public_summary_link: "cdn.openai.com/pdf/eb1f5ac3-009e-4d51-b2da-f5f327913115/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf"
+public_summary_date: "2026-06-26"
+public_summary_location: "https://help-lb.openai.com/en/articles/12141645-eu-ai-act"
+model_publication_date: "2025-08-07"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "GPT-55_2026_07_14.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: "Document does not indicate whether it is the latest version or outdated. Document does not provide link to other versions of the document."
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3.5
+    max_score: 5
+    notes: "Document does not provide a link to the authoritative source of the document. Date format slightly incorrect."
+
+  D5: # Accessibility
+    score: 6.5
+    max_score: 10
+    notes: "Document is only linked in a single location; not very discoverable. Document is not provided in the same context as the model."
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: "Document does not clearly indicate changes from previous version. Document does not indicate where notice of updates or changes will be provided."
+
+S2: # General information
+  D1: # Clarity
+    score: 19
+    max_score: 40
+    notes: "Contact details refer to general business address, generic contact point. Description of types of content describes goals for which content is included. Languages are not described exactly (i.e. as a list), EU languages are not fully mentioned."
+
+  D2: # Completeness
+    score: 49
+    max_score: 72
+    notes: "No links to additional publicly available documentation are provided with versioned model name. National, regional, demographic specificities of training data not provided."
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 17
+    max_score: 18
+    notes: "Latest data of data acquisition/collection for model training is not provided exactly."
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: "It is not indicated whether the model is continuously trained on new or dynamic data after the latest data of data acquisition/collection."
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 0
+    max_score: 92
+    notes: "List of large publicly available datasets only describes CommonCrawl. General description of other publicly available information contains some unnecessary information."
+
+  D2: # Completeness
+    score: 49
+    max_score: 143
+    notes: "List of large publicly available datasets only describes CommonCrawl. Descriptions do not contain info relating to approximate start and end dates of data collection."
+
+  D3: # Consistency
+    score: 1
+    max_score: 3
+    notes: "List of large publicly available datasets only describes CommonCrawl."
+
+  D4: # Correctness
+    score: 23
+    max_score: 23
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: "List of large publicly available datasets only describes CommonCrawl."
+
+  D6: # Comprehension
+    score: 3
+    max_score: 19
+    notes: "Descriptions provided make use of language which is difficult to understand by someone without expertise."
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 0
+    max_score: 32
+    notes: "General description of non-publicly known private datasets obtained from third parties contains some superfluous information."
+
+  D2: # Completeness
+    score: 24
+    max_score: 88
+    notes: "General description of non-publicly known private datasets obtained from third parties lack recommended information."
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 122
+    max_score: 129
+    notes: "Exact dates of data collection are not given."
+
+  D2: # Completeness
+    score: 94
+    max_score: 158
+    notes: "Suggested information is not provided in the comprehensive description of the type of content and online sources crawled."
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 61
+    max_score: 93
+    notes: "Dates of data collection are not given in the appropriate format."
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: "Summary of the most relevant crawled domains not properly provided."
+
+  D6: # Comprehension
+    score: 20
+    max_score: 58
+    notes: "Comprehensive description of the type of content and online sources crawled contains some superfluous information."
+
+S6: # User data
+  D1: # Clarity
+    score: 8.5
+    max_score: 16
+    notes: "General description of provider's services or products that were used to collect user data contains some links to external pages."
+
+  D2: # Completeness
+    score: 19.5
+    max_score: 27
+    notes: "General description of provider's services or products that were used to collect user data are found in various locations."
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 12
+    max_score: 12
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 15
+    notes: "General description of provider's services or products that were used to collect user data are found in various locations."
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 59
+    max_score: 65
+    notes: "Listed model used to general synthetic data is not necessarily uniquely identifiable"
+
+  D2: # Completeness
+    score: 41
+    max_score: 47
+    notes: "Models used to general synthetic data is not necessarily exhaustive."
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 47
+    max_score: 47
+    notes: ""
+
+  D5: # Accessibility
+    score: 17
+    max_score: 17
+    notes: ""
+
+  D6: # Comprehension
+    score: 12
+    max_score: 24
+    notes: "Information about synthetic models does not include a general description of the training data of the models."
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 10.5
+    max_score: 18
+    notes: "General description of measures taken to remove illegal content describes measures as 'may includ[ing]' certain measures, not will including."
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 36
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 69
+    notes: "Provider does not describe how they use datasets with opt-out mechanisms, nor how they ensure that they are up to date with user rights requests."
+
+
+general_notes: ""

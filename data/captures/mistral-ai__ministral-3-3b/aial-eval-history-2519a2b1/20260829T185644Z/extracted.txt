@@ -1,0 +1,267 @@
+# Model Documentation Evaluation Template
+
+# Metadata
+model_name: "Ministral 3 3B"
+model_link: "https://legal.mistral.ai/ai-governance/models/ministral-3-3b"
+organization: "Mistral AI"
+org_link: "https://mistral.ai/"
+evaluation_date: ""
+public_summary_link: "https://legal.cms.mistral.ai/assets/a46dbe23-1c74-4dae-8a16-ace1f9bdb995"
+public_summary_date: "2026-07-31"
+public_summary_location: "https://legal.mistral.ai/ai-governance/models/ministral-3-3b"
+model_publication_date: "2025-12-02"
+category: "New model" # New model, fine-tuned model
+archive_file_name: "Ministral_3_3B_2026_08_03.pdf"
+
+# Requirement assessments
+# Each requirement should be assessed once with a score from 0-10
+# Leave blank for N/A, and assign a max score of 0
+S1: # Document-level requirements
+  D1: # Clarity
+    score: 9
+    max_score: 11
+    notes: ""
+
+  D2: # Completeness
+    score: 4
+    max_score: 4
+    notes: ""
+
+  D3: # Consistency
+    score: 7
+    max_score: 7
+    notes: ""
+
+  D4: # Correctness
+    score: 3
+    max_score: 5
+    notes: ""
+
+  D5: # Accessibility
+    score: 9.5
+    max_score: 10
+    notes: ""
+
+  D6: # Comprehension
+    score: 6
+    max_score: 9
+    notes: ""
+
+S2: # General information
+  D1: # Clarity
+    score: 28
+    max_score: 45
+    notes: ""
+
+  D2: # Completeness
+    score: 54
+    max_score: 77
+    notes: ""
+
+  D3: # Consistency
+    score: 8
+    max_score: 8
+    notes: ""
+
+  D4: # Correctness
+    score: 26
+    max_score: 27
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 10
+    max_score: 11
+    notes: ""
+
+S3: # Public datasets
+  D1: # Clarity
+    score: 32
+    max_score: 92
+    notes: ""
+
+  D2: # Completeness
+    score: 54
+    max_score: 140
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 20
+    max_score: 20
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 20
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S4: # Private datasets
+  D1: # Clarity
+    score: 32
+    max_score: 32
+    notes: ""
+
+  D2: # Completeness
+    score: 39
+    max_score: 88
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 24
+    max_score: 24
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 16
+    max_score: 16
+    notes: ""
+
+S5: # Scraped/crawled data
+  D1: # Clarity
+    score: 53.5
+    max_score: 114
+    notes: ""
+
+  D2: # Completeness
+    score: 39
+    max_score: 158
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 53
+    max_score: 93
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 25
+    notes: ""
+
+  D6: # Comprehension
+    score: 33
+    max_score: 58
+    notes: ""
+
+S6: # User data
+  D1: # Clarity
+    score: 0
+    max_score: 15
+    notes: ""
+
+  D2: # Completeness
+    score: 26
+    max_score: 26
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 11
+    max_score: 11
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 15
+    notes: ""
+
+S7: # Synthetic & other
+  D1: # Clarity
+    score: 24
+    max_score: 48
+    notes: ""
+
+  D2: # Completeness
+    score: 6
+    max_score: 30
+    notes: ""
+
+  D3: # Consistency
+    score: 6
+    max_score: 6
+    notes: ""
+
+  D4: # Correctness
+    score: 30
+    max_score: 30
+    notes: ""
+
+  D5: # Accessibility
+    score: 0
+    max_score: 0
+    notes: ""
+
+  D6: # Comprehension
+    score: 0
+    max_score: 12
+    notes: ""
+
+S8: # Data processing
+  D1: # Clarity
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D2: # Completeness
+    score: 18
+    max_score: 18
+    notes: ""
+
+  D3: # Consistency
+    score: 3
+    max_score: 3
+    notes: ""
+
+  D4: # Correctness
+    score: 36
+    max_score: 36
+    notes: ""
+
+  D5: # Accessibility
+    score: 15
+    max_score: 15
+    notes: ""
+
+  D6: # Comprehension
+    score: 51
+    max_score: 69
+    notes: ""
+
+general_notes: "The public summary for Ministral 3 3B can be found <a href=\"https://legal.mistral.ai/ai-governance/models/ministral-3-3b\" target=\"_blank\"> on the model's section in the AI governance hub on Mistral's site</a>. The summary is largely identical to the summaries for the other Ministral 3 models. It mostly adheres to the structure of the template, however provides descriptions which do not match the degrees of detail demanded by the template. Furthermore, no list of crawled domains or full list of large public datasets is given. We assessed the summary's score to be <span class=\"openness partial\">57.14%</span> with Grade <strong>C</strong> for <strong><i>transparency</i></strong>, and <span class=\"openness partial\">58.08%</span> with Grade <strong>C</strong> for <strong><i>usefulness</i></strong>."

@@ -1,0 +1,38 @@
+{
+  "source_id": "openai/gpt-5-5",
+  "provider": "OpenAI",
+  "model": "GPT-5.5",
+  "target_kind": "aial-eval-history",
+  "sha256": "ffd87f06565fcdd600e583ea4ea51990c5d08f53ecf69650c00da9f03fca673f",
+  "size_bytes": 8136,
+  "stored_as": "raw.yaml",
+  "text_sha256": "96b5c2e347c1a45f5c2c9a95c5ac277fc74db12fbbb233d504e71edd3a032c3f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/gpt-5-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fb04f913855123fef5480e30e9d7ee55eb455a82/evals/gpt-5-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"648fddcb9e0a0b38b3505dd371c66be342fc295159e55a58d0c91488d73a44b7\"",
+    "last_modified": null,
+    "content_length": "2334",
+    "fetched_at": "2026-08-29T18:44:06Z"
+  },
+  "prior_sha256": "42fe2f31aef4fb92c0ffedf0c20de261abf7eebb2340339b20504c2a01f53ff5",
+  "git_commit": "fb04f913855123fef5480e30e9d7ee55eb455a82",
+  "git_commit_date": "2026-08-03T09:44:40Z",
+  "git_blob_sha": "7390e66086576c0e70392e687e2bc6d2518d0c4d",
+  "git_path": "evals/gpt-5-5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-29T18:44:13Z"
+  }
+}
