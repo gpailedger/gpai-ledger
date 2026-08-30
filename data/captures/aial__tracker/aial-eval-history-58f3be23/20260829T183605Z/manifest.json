@@ -39,9 +39,18 @@
   },
   "wayback": {
     "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fbbbca91b20>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
     "via": "spn2",
-    "requested_at": "2026-08-29T22:47:41Z",
-    "at": "2026-08-29T22:47:57Z"
-  }
+    "requested_at": "2026-08-30T06:35:37Z",
+    "at": "2026-08-30T06:37:37Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-08-29T22:47:41Z",
+      "at": "2026-08-29T22:47:57Z"
+    }
+  ]
 }
