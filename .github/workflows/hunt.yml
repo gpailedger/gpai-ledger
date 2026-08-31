@@ -81,8 +81,9 @@ jobs:
           fi
           git remote set-url origin "https://github.com/${{ github.repository }}.git"
 
-      - name: Fail the run if a candidate could not be asked
+      - name: Fail the run if a lead could not be recorded
         if: always() && steps.ingest.outcome != 'success'
         run: |
-          echo "a decision issue could not be opened — the candidate stays queued"
+          echo "the weekly report could not be read into reports/unattributed-leads.json"
+          echo "— discovery ran, but what it declined to attribute was not written down"
           exit 1
