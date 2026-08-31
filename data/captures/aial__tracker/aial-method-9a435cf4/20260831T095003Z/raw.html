@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About us &amp; Contact</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="static/custom.css">
+    <!-- <link href="static/styles.css" rel="stylesheet"/> -->
+    <style>
+      
+body {
+    font-size: 0.75rem;
+}
+
+    </style>
+    <link href="static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="index">Home</a></li>
+      <li><a href="detailed-overview">Analysis</a></li>
+      <li><a href="methodology">Methodology</a></li>
+      <li><a href="recommendations">Recommendations</a></li>
+      <li><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+      
+    <header>
+        <h1>About Us &amp; Contact</h1>
+    </header>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>We welcome queries, feedback, and collaborations on this work. In particular, please do reach out to us if:</p>
+        <ul>
+            <li>You are a <mark>GPAI Provider</mark> who has published a public summary and wishes to assess its quality, or has revised their public summary and wants us to reassess it, or wants to know how to improve an already published summary.</li>
+            <li>You are a <mark>Rights-Exercise Stakeholder</mark> who wants to understand how to make use of the quality assessment to understand the public summary.</li>
+            <li>You are a <mark>Researcher</mark> who has done similar work or wants to do similar work.</li>
+        </ul>
+        <p>To get in touch, use:</p>
+        <ul>
+            <li><a href="github.com/AIAccountabilityLab/gpai-training-transparency">Github</a> to open issues and discussions</li>
+            <li>E-mail <a href="mailto:aial@tcd.ie">aial@tcd.ie</a> for formal enquiries and administrative matters</li>
+            <li>Contact Dr. Harshvardhan Pandit at <a href="mailto:harshvardhan.pandit@adaptcentre.ie,dick.blankvoort@ru.nl">harshvardhan.pandit@adaptcentre.ie</a></li>
+            <li>Contact Dick Blankvoort at <a href="mailto:dick.blankvoort@ru.nl,harshvardhan.pandit@adaptcentre.ie">dick.blankvoort@ru.nl</a></li>
+        </ul>
+    </section>
+
+    <section id="about" style="border-top: 2px solid black; padding-top: 20px">
+        <h2>About us</h2>
+        <p><strong>Harshvardhan Pandit</strong> is a research fellow at the AI Accountability Lab at Trinity Colelge Dublin, specializing in the implications of regulations on technology and how these solve or hinder real-world challenges associated with privacy, legal and regulatory compliance, and consent. His PhD (Computer Science, Trinity College Dublin) explored the application of linked data and semantic web technologies towards GDPR compliance, with a particular focus on consent and provenance.</p>
+        <p><strong>Dick Blankvoort</strong> is a researcher at the European Open Source AI Index and a former visiting researcher at the AI Accountability Lab. His work focuses on the open-source AI and the societal implications of AI sytems.</p>
+        <p>Maximilian Gahntz is the AI Policy lead at Mozilla Foundation</p>
+    </section>
+
+
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

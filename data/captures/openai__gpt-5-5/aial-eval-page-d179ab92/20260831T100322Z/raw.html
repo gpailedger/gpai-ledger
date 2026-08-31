@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assessment of GPT-5.5</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="../../static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="../../static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="../../static/custom.css">
+    <!-- <link href="../../static/styles.css" rel="stylesheet"/> -->
+    <style>
+article {
+    max-width: 90vw;
+    font-size: 0.8rem;
+}
+th {
+    text-align: center;
+}
+#evaluations .grade.na { background-color:darkgray; }
+
+span.openness { display:inline-block;
+padding:1px 5px; color:#ffffff }
+span.open { background-color:#3e9b74; }
+span.partial { background-color:#dd9f1c; }
+span.closed { background-color:#ca6014; }
+
+#evaluations {
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.5rem;
+    border: 1px solid #EEE;
+}
+
+colgroup col:first-child {
+    width: auto;
+}
+
+colgroup col:not(:first-child) {
+    width: calc((100% - auto) / 4);
+}
+th { 
+    border: none; 
+    white-space: nowrap;
+}
+td {
+    white-space: nowrap;
+}
+tr:not(:last-child) td:nth-child(1),th:nth-child(1) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(5),th:nth-child(5) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(7),th:nth-child(7) {
+     border-right: 1px solid #EEE;
+}
+
+    </style>
+    <link href="../../static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../detailed-overview">Analysis</a></li>
+      <li><a href="../../methodology">Methodology</a></li>
+      <li><a href="../../recommendations">Recommendations</a></li>
+      <li><a href="../../blog">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>GPT-5.5</h1>
+        <h2 style="font-size: 0.8rem;">GPAI Provider: <a href="https://openai.com/" target="_blank">OpenAI</a></h2>
+    </header>
+
+    <section>
+        <h2>Metadata</h2>
+        <p>
+            <strong>Model URL:</strong> <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">https://openai.com/index/introducing-gpt-5-5/</a><br/>
+            <strong>When was this model published?</strong> 2025-08-07<br/>
+            <strong>Is this a new or a fine-tuned model?</strong> New model<br/>
+            <strong>When was the Public Summary last updated?</strong> 2026-06-26<br/>
+            <strong>When did we evaluate the Public Summary?</strong> 2026-07-09<br/>
+            <strong>Where did we find the Public Summary?</strong> We found <a href="" target="_blank">this document</a> linked on <a href="" target="_blank">this page</a>. An archived version can be found <a href="../../archive/gpt-5-5">here</a>.
+        </p>
+    </section>
+    <section>        
+        <h2>Results of Evaluation</h2>
+        <table id="evaluations" class="table-mobile" style="table-layout: fixed;">
+            <colgroup>
+                <col />
+                <col span="4" />
+                <col span="2" />
+                <col span="2" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th colspan="4" style="border-right: 1px solid #EEE;">Transparency</th>
+                    <th colspan="2" style="border-right: 1px solid #EEE;">Usefulness</th>
+                    <th colspan="2">General</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Clarity</th>
+                    <th>Completeness</th>
+                    <th>Consistency</th>
+                    <th>Correctness</th>
+                    <th>Accessibility</th>
+                    <th>Comprehension</th>
+                    <th><strong><i>Transparency</i></strong></th>
+                    <th><strong><i>Usefulness</i></strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell">Document</td>
+                    <td class="open grade data-cell">81.82</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">70.0</td>
+                    <td class="partial grade data-cell">65.0</td>
+                    <td class="partial grade data-cell">66.67</td>
+                    <td class="open grade data-cell">87.04</td>
+                    <td class="partial grade data-cell">65.79</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">General information</td>
+                    <td class="closed grade data-cell">47.5</td>
+                    <td class="partial grade data-cell">68.06</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">94.44</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">90.91</td>
+                    <td class="partial grade data-cell">67.39</td>
+                    <td class="open grade data-cell">90.91</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Public Data Sources</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">34.27</td>
+                    <td class="closed grade data-cell">33.33</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">15.79</td>
+                    <td class="closed grade data-cell">27.97</td>
+                    <td class="closed grade data-cell">7.69</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Private Data Sources</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">27.27</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">34.69</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Scraped/Crawled Data</td>
+                    <td class="open grade data-cell">94.57</td>
+                    <td class="partial grade data-cell">59.49</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">65.59</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">34.48</td>
+                    <td class="partial grade data-cell">73.11</td>
+                    <td class="closed grade data-cell">24.1</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">User Data</td>
+                    <td class="partial grade data-cell">53.12</td>
+                    <td class="partial grade data-cell">72.22</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="partial grade data-cell">74.14</td>
+                    <td class="partial grade data-cell">50.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Synthetic/Other Data</td>
+                    <td class="open grade data-cell">90.77</td>
+                    <td class="open grade data-cell">87.23</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">50.0</td>
+                    <td class="open grade data-cell">92.73</td>
+                    <td class="partial grade data-cell">70.73</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Data Processing</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">58.33</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">47.83</td>
+                    <td class="open grade data-cell">90.0</td>
+                    <td class="partial grade data-cell">57.14</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Sum</td>
+                    <td class="partial grade data-cell">58.44</td>
+                    <td class="partial grade data-cell">52.24</td>
+                    <td class="open grade data-cell">94.44</td>
+                    <td class="open grade data-cell">86.63</td>
+                    <td class="partial grade data-cell">52.45</td>
+                    <td class="closed grade data-cell">45.25</td>
+                    <td class="partial grade data-cell">62.52</td>
+                    <td class="closed grade data-cell">47.52</td>
+                </tr>
+                <tr class="row-a row-last">
+                    <td>Grades</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="outline data-cell" style="text-align: center;"><strong>C+</strong></td><td class="outline data-cell" style="text-align: center;"><strong>D+</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<section id="notes">
+        <h2>Evaluation Notes</h2>
+        <blockquote>
+            <small>If you update your public summary, please <a href="../../about">let us know</a> so that we can update the evaluation and scores. We also welcome suggestions on improvements to this page, e.g. see <a href="../../methodology#FAQ">FAQ section</a>.</small>
+        </blockquote>
+        <p style="color: #993333;">Evaluation notes are currently unavailable, and will be provided shortly.</p>
+
+        <p>
+            <strong>Suggested Improvements</strong><br/>
+            The following are the suggested improvements based on using our <a href="../../methodology">our methodology</a> where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.</p>
+        </p>
+        <ul>            <li><strong>Document</strong>
+                <ul>                    <li>M1 Document does not indicate whether it is the latest version or outdated. Document does not provide link to other versions of the document. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 Document does not provide a link to the authoritative source of the document. Date format slightly incorrect. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M5 Document is only linked in a single location; not very discoverable. Document is not provided in the same context as the model. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 Document does not clearly indicate changes from previous version. Document does not indicate where notice of updates or changes will be provided. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>General information</strong>
+                <ul>                    <li>M1 Contact details refer to general business address, generic contact point. Description of types of content describes goals for which content is included. Languages are not described exactly (i.e. as a list), EU languages are not fully mentioned. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 No links to additional publicly available documentation are provided with versioned model name. National, regional, demographic specificities of training data not provided. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M4 Latest data of data acquisition/collection for model training is not provided exactly. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 It is not indicated whether the model is continuously trained on new or dynamic data after the latest data of data acquisition/collection. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+</ul>
+            </li>
+            <li><strong>Public Data Sources</strong>
+                <ul>                    <li>M1 List of large publicly available datasets only describes CommonCrawl. General description of other publicly available information contains some unnecessary information. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 List of large publicly available datasets only describes CommonCrawl. Descriptions do not contain info relating to approximate start and end dates of data collection. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M3 List of large publicly available datasets only describes CommonCrawl. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M5 List of large publicly available datasets only describes CommonCrawl. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 Descriptions provided make use of language which is difficult to understand by someone without expertise. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Private Data Sources</strong>
+                <ul>                    <li>M1 General description of non-publicly known private datasets obtained from third parties contains some superfluous information. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 General description of non-publicly known private datasets obtained from third parties lack recommended information. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Scraped/Crawled Data</strong>
+                <ul>                    <li>M1 Exact dates of data collection are not given. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 Suggested information is not provided in the comprehensive description of the type of content and online sources crawled. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M4 Dates of data collection are not given in the appropriate format. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M5 Summary of the most relevant crawled domains not properly provided. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 Comprehensive description of the type of content and online sources crawled contains some superfluous information. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>User Data</strong>
+                <ul>                    <li>M1 General description of provider's services or products that were used to collect user data contains some links to external pages. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M2 General description of provider's services or products that were used to collect user data are found in various locations. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 General description of provider's services or products that were used to collect user data are found in various locations. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Synthetic/Other Data</strong>
+                <ul>                    <li>M1 Listed model used to general synthetic data is not necessarily uniquely identifiable <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 Models used to general synthetic data is not necessarily exhaustive. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 Information about synthetic models does not include a general description of the training data of the models. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>Data Processing</strong>
+                <ul>                    <li>M2 General description of measures taken to remove illegal content describes measures as 'may includ[ing]' certain measures, not will including. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 Provider does not describe how they use datasets with opt-out mechanisms, nor how they ensure that they are up to date with user rights requests. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Sum</strong>
+                <ul>                    <li>M1 Document does not indicate whether it is the latest version or outdated. Document does not provide link to other versions of the document.Contact details refer to general business address, generic contact point. Description of types of content describes goals for which content is included. Languages are not described exactly (i.e. as a list), EU languages are not fully mentioned.List of large publicly available datasets only describes CommonCrawl. General description of other publicly available information contains some unnecessary information.General description of non-publicly known private datasets obtained from third parties contains some superfluous information.Exact dates of data collection are not given.General description of provider's services or products that were used to collect user data contains some links to external pages.Listed model used to general synthetic data is not necessarily uniquely identifiable <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M2 No links to additional publicly available documentation are provided with versioned model name. National, regional, demographic specificities of training data not provided.List of large publicly available datasets only describes CommonCrawl. Descriptions do not contain info relating to approximate start and end dates of data collection.General description of non-publicly known private datasets obtained from third parties lack recommended information.Suggested information is not provided in the comprehensive description of the type of content and online sources crawled.General description of provider's services or products that were used to collect user data are found in various locations.Models used to general synthetic data is not necessarily exhaustive.General description of measures taken to remove illegal content describes measures as 'may includ[ing]' certain measures, not will including. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M3 List of large publicly available datasets only describes CommonCrawl. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 Document does not provide a link to the authoritative source of the document. Date format slightly incorrect.Latest data of data acquisition/collection for model training is not provided exactly.Dates of data collection are not given in the appropriate format. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M5 Document is only linked in a single location; not very discoverable. Document is not provided in the same context as the model.List of large publicly available datasets only describes CommonCrawl.Summary of the most relevant crawled domains not properly provided. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 Document does not clearly indicate changes from previous version. Document does not indicate where notice of updates or changes will be provided.It is not indicated whether the model is continuously trained on new or dynamic data after the latest data of data acquisition/collection.Descriptions provided make use of language which is difficult to understand by someone without expertise.Comprehensive description of the type of content and online sources crawled contains some superfluous information.General description of provider's services or products that were used to collect user data are found in various locations.Information about synthetic models does not include a general description of the training data of the models.Provider does not describe how they use datasets with opt-out mechanisms, nor how they ensure that they are up to date with user rights requests. <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+</ul>
+
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

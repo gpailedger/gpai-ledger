@@ -1,0 +1,39 @@
+{
+  "source_id": "servicenow/apriel-1-5",
+  "provider": "ServiceNow",
+  "model": "Apriel 1.5 15B Thinker",
+  "target_kind": "aial-eval-page",
+  "sha256": "11dbe4bd7b05c7920f384e0c68de925b2899f766a133b3753812058c86a11cac",
+  "size_bytes": 11466,
+  "stored_as": "raw.html",
+  "text_sha256": "d59ac1f2b14420cb325e58d906538d26bf786f0b91a804e528df92352958c049",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/apriel-1-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/apriel-1-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1e1fe399025853ed6bf267a5530b530eb7fa0a72b5a47f41ef783a2f9ab9493e\"",
+    "last_modified": null,
+    "content_length": "2315",
+    "fetched_at": "2026-08-31T10:31:06Z"
+  },
+  "prior_sha256": "090c1b25573c32724e0f2c5cc8ff5dc4fdba75c6ec9c42c6c75f6c57e30fc102",
+  "git_commit": "e358c0273a50a424019d5b1f4d36878280e445c3",
+  "git_commit_date": "2026-08-03T16:58:50Z",
+  "git_blob_sha": "c21049cf1935da332f08d4a07d5fec7e47b17d06",
+  "git_path": "public/evals/apriel-1-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:31:11Z"
+  }
+}

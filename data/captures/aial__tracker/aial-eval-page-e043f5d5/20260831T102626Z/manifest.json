@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "aya-vision",
+  "target_kind": "aial-eval-page",
+  "sha256": "2924a3f4c0a5482711f16d8898ab7f8c4750e47300c9d42e02b5a008627ea2c4",
+  "size_bytes": 11416,
+  "stored_as": "raw.html",
+  "text_sha256": "fbd81af98ed4a7ca6e410fed5842287abb2abcb2c78d29fc3417c70a75341922",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/public/evals/aya-vision/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/public/evals/aya-vision/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"fd83484aa6f6b33ae1df4de9b3c898b099bfbfdde91d510e4b575c3c521c2e22\"",
+    "last_modified": null,
+    "content_length": "2299",
+    "fetched_at": "2026-08-31T10:26:26Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "52fcf78158412a0467924b0d2e326b7fe3fc5739",
+  "git_commit_date": "2026-07-27T15:08:29Z",
+  "git_blob_sha": "9e47e6f3080c1531c371ec74eb64d6d55c225d0e",
+  "git_path": "public/evals/aya-vision/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:26:31Z"
+  }
+}

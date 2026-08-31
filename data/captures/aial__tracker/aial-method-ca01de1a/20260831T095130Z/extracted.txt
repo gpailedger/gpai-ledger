@@ -1,0 +1,101 @@
+Recommendations
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Contact
+
+Recommendations
+
+Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+ (preprint). Zenodo.
+DOI:10.5281/zenodo.18803975
+
+Recommendations for GPAI Providers
+
+As the most prominent challenge we surfaced through this work is the
+        lack of available public summaries, We provide the following
+        recommendations for GPAI providers:
+
+Ensure the public summary document adheres closely, ideally
+            exactly, to the template provided by the AI office.
+
+Mention the public summary document in relevant webpages and
+            documents, for example the
+README
+ in a repository, and under
+            the correct title as utilised by the template.
+
+For sections in the template for which no information is
+            available or where the fields are not applicable, explicitly state this
+            to avoid ambiguity arising from open-world assumptions.
+
+Utilise correct and high-quality SEO metadata to help surface
+            published summaries in search engine results.
+
+Provide a common area or location for all relevant legal
+            documentation through which stakeholders can also access the published
+            summaries.
+
+Maintain versions of summaries and clearly indicate where to find
+            these in the document.
+
+Ensure the public summaries contain all pertinent information,
+            and refrain from directing stakeholders to other locations to access
+            this information. Links to external resources that expand upon the
+            details provided in the public summary are helpful but should not be
+            used to avoid providing the information in the public summary.
+
+To ensure the public summaries are filled in to a high degree,
+            having the correct and up to date information about datasets used in the
+            model development process is necessary, which in turn requires good data
+            governance.
+
+Recommendations for AI Office to improve the template
+
+Adding more structured questions, i.e. non-narrative, related to
+            provenance and metadata of the document will assist stakeholders in use
+            of summary (e.g. regarding version, published date, link to previous
+            versions).
+
+A broad document-level field that indicates what to expect, for
+            example, whether the published summary relates to a new model, or a
+            modified model; and if the base model’s published summary is available
+            (if yes, a link to it), and if not, then a justification. Ideally, this
+            could be implemented through different versions of the
+            template.
+
+A guide attached to the template that describes which information
+            should be expected for specific fields would be helpful. Though this
+            information is provided in part within the ’help text’ part of the field
+            itself, we found that this could be expanded to cover more use-cases and
+            offer greater guidance.
+
+Fields as currently should be tested for use by specific
+            stakeholders, for example through a workshop that identifies whether
+            information is clear, comprehensible, useful, etc.
+
+Specific sections could benefit obligations for other laws beyond
+            AI Act. For example, Section 2.4 User Data regarding GDPR Articles 13
+            and 14 where providers could provide information (e.g. purpose, legal
+            basis) or a link to external resource (e.g. privacy policy).
+
+The public summaries being difficult to discover is a barrier for
+            stakeholders. The AI Office could consider making a centralised portal
+            that hosts all public summaries, and which would includes an online form
+            for guiding providers in providing specific information. This would
+            strengthen and simplify transparency and accountability for public
+            summaries and would simplify the enforcement of this obligation at
+            scale.
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

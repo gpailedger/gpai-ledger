@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "S1": {
+      "name": "Document-level requirements",
+      "weight": 1.0
+    },
+    "S2": {
+      "name": "General information (section 1)",
+      "weight": 1.0
+    },
+    "S3": {
+      "name": "Public data sources (subsection 2.1)",
+      "weight": 1.0
+    },
+    "S4": {
+      "name": "Private Data Sources (subsection 2.2)",
+      "weight": 1.0
+    },
+    "S5": {
+      "name": "Scraped/Crawled Data (subsection 2.3)",
+      "weight": 1.0
+    },
+    "S6": {
+      "name": "User data (subsection 2.4)",
+      "weight": 1.0
+    },
+    "S7": {
+      "name": "Synthetic/other data (subsections 2.5 & 2.6)",
+      "weight": 1.0
+    },
+    "S8": {
+      "name": "Data processing aspects (section 3)",
+      "weight": 1.0
+    }
+  },
+  "group": {
+    "G1": {
+      "name": "Transparency",
+      "description": "The documentation should be clear, complete, and correct"
+    },
+    "G2": {
+      "name": "Usefulness",
+      "description": "The document should be accessible, useful, and actionable"
+    }
+  },
+  "metrics": {
+    "M1": {
+      "name": "Clarity",
+      "description": "The document and the information should be simple and clear",
+      "weight": 1.0,
+      "group_id": "G1"
+    },
+    "M2": {
+      "name": "Completeness",
+      "description": "The document and information must be filled in completely",
+      "weight": 1.0,
+      "group_id": "G1"
+    },
+    "M3": {
+      "name": "Consistency",
+      "description": "The information must be consistent with the model and other documentation",
+      "weight": 1.0,
+      "group_id": "G1"
+    },
+    "M4": {
+      "name": "Correctness",
+      "description": "The information must be correct and accurate",
+      "weight": 1.0,
+      "group_id": "G1"
+    },
+    "M5": {
+      "name": "Accessibility",
+      "description": "The document and information must be accessible for stakeholders",
+      "weight": 1.0,
+      "group_id": "G2"
+    },
+    "M6": {
+      "name": "Comprehension",
+      "description": "The document and information must be comprehensible for stakeholders",
+      "weight": 1.0,
+      "group_id": "G2"
+    }
+  },
+  "grades": {
+    "A+": {
+        "label": "Excellent",
+        "description": "Documentation is transparent and useful with very few, if any, limitations",
+        "min_score": 95
+    },
+    "A": {
+        "label": "Highly Satisfactory",
+        "description": "Documentation is transparent and useful with some limitations",
+        "min_score": 90
+    },
+    "B+": {
+        "label": "Satisfactory",
+        "description": "Documentation is transparent and useful but has numerous limitations",
+        "min_score": 80
+    },
+    "B": {
+        "label": "Acceptable",
+        "description": "Documentation is mostly transparent and useful with some major limitations",
+        "min_score": 75
+    },
+    "C+": {
+        "label": "Adequate",
+        "description": "Documentation is somewhat transparent and useful with major limitations",
+        "min_score": 60
+    },
+    "C": {
+        "label": "Marginal",
+        "description": "Documentation is not transparent and useful and has some major limitations",
+        "min_score": 50
+    },
+    "D+": {
+        "label": "Inadequate",
+        "description": "Documentation is not transparent and useful and has several major limitations",
+        "min_score": 40
+    },
+    "D": {
+        "label": "Unsatisfactory",
+        "description": "Documentation is not transparent and useful and has systemic limitations",
+        "min_score": 25
+    },
+    "F": {
+        "label": "Unacceptable",
+        "description": "Documentation is not provided or has systemic problems",
+        "min_score": 0
+    }
+  }
+}

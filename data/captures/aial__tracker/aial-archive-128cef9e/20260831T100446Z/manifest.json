@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "gpt-5-5-eu-ai-act-public-summary-of-training-content",
+  "target_kind": "aial-archive",
+  "sha256": "f67f1e9c64ee86060a9af7d1d1f52e502f45701e8fccae29db530504007dac25",
+  "size_bytes": 209991,
+  "stored_as": "raw.pdf",
+  "text_sha256": "dc5f6ff0a9e2ddd7fb545fb5aeb8f05c44b917113f6071b3d5c37751da867c80",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cca9304e89a804655bbba8fa5ff0273fd5f4e246/public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cca9304e89a804655bbba8fa5ff0273fd5f4e246/public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"dcf9c52c78a4c91032cebc1301717116eb2f0903a4d287817b06363e54a02bd7\"",
+    "last_modified": null,
+    "content_length": "209991",
+    "fetched_at": "2026-08-31T10:04:44Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "cca9304e89a804655bbba8fa5ff0273fd5f4e246",
+  "git_commit_date": "2026-07-17T08:12:14Z",
+  "git_blob_sha": "90f8cb3e38e2690ee4fb6997739e45e16d7eeeed",
+  "git_path": "public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:04:52Z"
+  }
+}

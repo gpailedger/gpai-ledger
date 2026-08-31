@@ -1,0 +1,39 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "aial-eval-page",
+  "sha256": "4ad8f55e2e75a920c6f319be05a673a570bb90fdd460cfc03437aa61e83fdeab",
+  "size_bytes": 18659,
+  "stored_as": "raw.html",
+  "text_sha256": "f891830063f44f383749a555e331006b16292e8288194d356afad1485f2bb50b",
+  "doc_links_sha256": "e51515d665d42db6ec792081e55645f729b18750692bdc7f93843813d50e28e4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/bria/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/bria/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f5eb5445337b9a6c564ecb7152bc6b5e2a2da4dfe1dd31291922897f85197d7d\"",
+    "last_modified": null,
+    "content_length": "4158",
+    "fetched_at": "2026-08-31T10:43:08Z"
+  },
+  "prior_sha256": "fef215660faefc42a52a401cacc7405b6f7d8d8b142bff2eb9e95e37c1771000",
+  "git_commit": "9b59d877246254be133ea75795e900ae5a01d4d7",
+  "git_commit_date": "2026-08-04T15:49:10Z",
+  "git_blob_sha": "69dcb29124160917804fcbfc1fed370e3b9d711b",
+  "git_path": "public/evals/bria/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:43:13Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt-oss",
+  "provider": "OpenAI",
+  "model": "GPT-OSS",
+  "target_kind": "aial-eval-page",
+  "sha256": "e8ae1a7fcedd9364b332e7328f1168a9f7bc12ff528ada1fef9bec14f5b8751d",
+  "size_bytes": 11444,
+  "stored_as": "raw.html",
+  "text_sha256": "395ac02afe3121f305f0d2dd02eacf4d1b60b761386e810ad1b6b772504dbe97",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-oss/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-oss/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"a160f1e026128b41062f4f1f0e6b1c44d217a96cc44da8f840503106f34a548b\"",
+    "last_modified": null,
+    "content_length": "2304",
+    "fetched_at": "2026-08-31T11:14:47Z"
+  },
+  "prior_sha256": "6d92fce1247e044ef0a7cb5fc02238480012c679242609ed3d960ed27465b3e6",
+  "git_commit": "6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451",
+  "git_commit_date": "2026-08-06T10:01:05Z",
+  "git_blob_sha": "6e8c4a54e2bcb0496ef06cd7503b057e6087ec71",
+  "git_path": "public/evals/gpt-oss/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:14:53Z"
+  }
+}

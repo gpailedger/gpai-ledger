@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assessment of Bria 3.2</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="../../static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="../../static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="../../static/custom.css">
+    <!-- <link href="../../static/styles.css" rel="stylesheet"/> -->
+    <style>
+article {
+    max-width: 90vw;
+    font-size: 0.8rem;
+}
+th {
+    text-align: center;
+}
+#evaluations .grade.na { background-color:darkgray; }
+
+span.openness { display:inline-block;
+padding:1px 5px; color:#ffffff }
+span.open { background-color:#3e9b74; }
+span.partial { background-color:#dd9f1c; }
+span.closed { background-color:#ca6014; }
+
+#evaluations {
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.5rem;
+    border: 1px solid #EEE;
+}
+
+colgroup col:first-child {
+    width: auto;
+}
+
+colgroup col:not(:first-child) {
+    width: calc((100% - auto) / 4);
+}
+th { 
+    border: none; 
+    white-space: nowrap;
+}
+td {
+    white-space: nowrap;
+}
+tr:not(:last-child) td:nth-child(1),th:nth-child(1) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(5),th:nth-child(5) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(7),th:nth-child(7) {
+     border-right: 1px solid #EEE;
+}
+
+    </style>
+    <link href="../../static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../detailed-overview">Analysis</a></li>
+      <li><a href="../../methodology">Methodology</a></li>
+      <li><a href="../../recommendations">Recommendations</a></li>
+      <li style="margin-right: 5px;"><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>Bria 3.2</h1>
+        <h2 style="font-size: 0.8rem;">GPAI Provider: <a href="https://bria.ai/" target="_blank">Bria AI</a></h2>
+    </header>
+
+    <section>
+        <h2>Metadata</h2>
+        <p>
+            <strong>Model URL:</strong> <a href="https://huggingface.co/briaai/BRIA-3.2" target="_blank">https://huggingface.co/briaai/BRIA-3.2</a><br/>
+            <strong>When was this model published?</strong> 2025-06-10<br/>
+            <strong>Is this a new or a fine-tuned model?</strong> New model<br/>
+            <strong>When was the Public Summary last updated?</strong> 2026-01-06<br/>
+            <strong>When did we evaluate the Public Summary?</strong> 2026-01-12<br/>
+            <strong>Where did we find the Public Summary?</strong> We found <a href="" target="_blank">this document</a> linked on <a href="" target="_blank">this page</a>. An archived version can be found <a href="./static/Bria -- EU AI Act - GPAI Code of Practice -- 2026_01_12.pdf">here</a>.
+        </p>
+    </section>
+    <section>        
+        <h2>Results of Evaluation</h2>
+        <table id="evaluations" class="table-mobile" style="table-layout: fixed;">
+            <colgroup>
+                <col />
+                <col span="4" />
+                <col span="2" />
+                <col span="2" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th colspan="4" style="border-right: 1px solid #EEE;">Transparency</th>
+                    <th colspan="2" style="border-right: 1px solid #EEE;">Usefulness</th>
+                    <th colspan="2">General</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Clarity</th>
+                    <th>Completeness</th>
+                    <th>Consistency</th>
+                    <th>Correctness</th>
+                    <th>Accessibility</th>
+                    <th>Comprehension</th>
+                    <th><strong><i>Transparency</i></strong></th>
+                    <th><strong><i>Usefulness</i></strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell">Document</td>
+                    <td class="open grade data-cell">81.82</td>
+                    <td class="closed grade data-cell">25.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">40.0</td>
+                    <td class="partial grade data-cell">70.0</td>
+                    <td class="partial grade data-cell">66.67</td>
+                    <td class="partial grade data-cell">70.37</td>
+                    <td class="partial grade data-cell">68.42</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">General information</td>
+                    <td class="open grade data-cell">81.25</td>
+                    <td class="partial grade data-cell">60.26</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">71.43</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">92.86</td>
+                    <td class="partial grade data-cell">69.73</td>
+                    <td class="open grade data-cell">92.86</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Public Data Sources</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Private Data Sources</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Scraped/Crawled Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">User Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Synthetic/Other Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Data Processing</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Sum</td>
+                    <td class="open grade data-cell">90.59</td>
+                    <td class="open grade data-cell">79.76</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">90.82</td>
+                    <td class="open grade data-cell">88.0</td>
+                    <td class="open grade data-cell">96.3</td>
+                    <td class="open grade data-cell">86.97</td>
+                    <td class="open grade data-cell">94.74</td>
+                </tr>
+                <tr class="row-a row-last">
+                    <td>Grades</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="outline data-cell" style="text-align: center;"><strong>B+</strong></td><td class="outline data-cell" style="text-align: center;"><strong>A</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<section id="notes">
+        <h2>Evaluation Notes</h2>
+        <blockquote>
+            <small>If you update your public summary, please <a href="../../about">let us know</a> so that we can update the evaluation and scores.</small>
+        </blockquote>
+        <p>The public summary for the Bria 3.2 model is published by Bria AI on its website under the 'Security & Compliance' section, as a link to a PDF <a href="https://drive.google.com/file/d/13BhHQhd7vcDArPmpBrl_b2FpdBqkYU4n/view" target="_blank">hosted on Google Drive</a>. The summary closely follows the structure of the template, but provided contact details for the authorised representative and not for the company itself. The document also lacked some metadata such as version information and links to documentation. The summary describes training only involving licensed data, which requires relatively little disclosure through the template. We assessed its score as <span class="openness open">86.97%</span> with a grade of <strong>B+</strong> for <i>transparency</i>, and <span class="openness open">94.74%</span> with a grade of <strong>A</strong> for <i>usefulness</i>.</p>
+
+        <p>
+            <strong>Suggested Improvements</strong><br/>
+            The following are the suggested improvements based on using our <a href="../../methodology">our methodology</a> where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.</p>
+        </p>
+        <ul>            <li><strong>Document</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>General information</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+</ul>
+            </li>
+            <li><strong>Sum</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+</ul>
+            </li>
+</ul>
+
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

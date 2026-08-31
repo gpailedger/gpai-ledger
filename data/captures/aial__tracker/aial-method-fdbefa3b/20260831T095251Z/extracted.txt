@@ -1,0 +1,194 @@
+GPAI Training Transparency
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Contact
+
+GPAI Training Transparency
+
+A Quality Assessment of Public Summaries published under AI Act Article 53(1)(d)
+
+The
+AI Act's Article 53(1)(d)
+ requires General-Purpose AI (GPAI) model providers to
+"make publicly available a sufficiently detailed summary about the content used for training ... according to a template provided by the AI Office"
+. We evaluate the
+quality
+ for this documentation across two aspects:
+Transparency
+ and
+Usefulness
+ and assign a score using
+our developed methodology
+. To assist GPAI Providers, the AI Office, and stakeholders, we also work on providing
+recommendations
+.
+
+Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+ (preprint). Zenodo.
+DOI:10.5281/zenodo.18803975
+
+Evaluated Public Summaries
+
+Below is an overview of the evaluation with each model assigned a grade.
+A+
+ is the highest grade and
+F
+ the lowest, with
+N/A
+ shown for missing summaries. Click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. You can also see a
+detailed overview
+ of scores for each section of the public summary.
+
+Model
+
+Provider
+
+Transparency
+
+Usefulness
+
+Apertus
+
+Swiss AI Initiative
+
+                Swiss AI Initiative
+
+                  A
+
+                  A+
+
+Bria 3.2
+
+Bria AI
+
+                Bria AI
+
+                  B+
+
+                  A
+
+SmolLM3-3B
+
+HuggingFace
+
+                HuggingFace
+
+                  B+
+
+                  B+
+
+Bielik v3 11B Instruct
+
+SpeakLeash
+
+                SpeakLeash
+
+                  B+
+
+                  C+
+
+Phi-4
+
+Microsoft
+
+                Microsoft
+
+                  D
+
+                  F
+
+Claude Sonnet 4.5
+
+Anthropic
+
+                Anthropic
+
+                  N/A
+
+                  N/A
+
+Gemini 2.5 Flash Image
+
+Google
+
+                Google
+
+                  N/A
+
+                  N/A
+
+GPT-5
+
+OpenAI
+
+                OpenAI
+
+                  N/A
+
+                  N/A
+
+GPT-OSS
+
+OpenAI
+
+                OpenAI
+
+                  N/A
+
+                  N/A
+
+Sora 2
+
+OpenAI
+
+                OpenAI
+
+                  N/A
+
+                  N/A
+
+TL;DR
+
+Our work makes the following
+contributions
+:
+
+We examine how many organizations provide summaries in line with Art. 53(1)(d) obligations.
+
+We review best practices for data transparency, and how they apply to the Article 53(1)(d) template.
+
+We evaluate existing public summaries in line with these practices, and rank their quality along two graded scales.
+
+We argue that compliance is never a
+fait accompli
+ unless we make it so, and that openness enables critical computational literacy and rights enforcement.
+
+We find the following
+recurrent patterns
+:
+
+Few organizations across the board provide a data summary in line with EU AI Act Art. 53(1)(d) obligations.
+
+Some organizations provide a minimal summary in the shape of the template, concealing data which should be disclosed.
+
+A limited number of organizations provide templates which are closely in line with existing obligations, demonstrating that achieving a suitable-quality summary is a reasonable bar.
+
+We
+conclude
+ as follows:
+
+The industry is yet to react significantly to Article 53(1)(d), with only a handful of GPAI model providers having yet published their training data summaries. To this end, it is imperative to contruct monitoring and assessment capabilities, to ensure that compliance takes place fully and faithfully.
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

@@ -1,0 +1,39 @@
+{
+  "source_id": "anthropic/claude-haiku-4-5",
+  "provider": "Anthropic",
+  "model": "Claude Haiku 4.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "18eab638ab9703184eb3793d756f5b0f27b82245d398c0855ca63447dd5b746e",
+  "size_bytes": 11410,
+  "stored_as": "raw.html",
+  "text_sha256": "82980cc48f2b7e2f5d279c45159148ba8b3f1b11d75160d709c7f9a0bcb5d977",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/claude-haiku-4-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/claude-haiku-4-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6fcaff7902f2775c941144441d4fcd30d28fbe5c8ff4c6d606d9ebe50760c1b1\"",
+    "last_modified": null,
+    "content_length": "2281",
+    "fetched_at": "2026-08-31T10:31:12Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "e358c0273a50a424019d5b1f4d36878280e445c3",
+  "git_commit_date": "2026-08-03T16:58:50Z",
+  "git_blob_sha": "cfd740196bc7bf4635dce04768000490ac009010",
+  "git_path": "public/evals/claude-haiku-4-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:31:17Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/sora-2",
+  "provider": "OpenAI",
+  "model": "Sora 2",
+  "target_kind": "aial-eval-page",
+  "sha256": "1252ff77e77419f2a8c5532a0d46c18ad5d23d33d9becd535427ea383dcef8ab",
+  "size_bytes": 11824,
+  "stored_as": "raw.html",
+  "text_sha256": "6f8ee314e270685a8ad961f7cca10c1612d3e14dc14be4b24e9b0ed6097dc284",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/sora-2/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/sora-2/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1355d2938cc8417749557d3c42933c752e3ccbc8a017619d8a00b1a0c515c835\"",
+    "last_modified": null,
+    "content_length": "2474",
+    "fetched_at": "2026-08-31T10:47:28Z"
+  },
+  "prior_sha256": "dbca966534491d8989bc76b1fd4132a43e5798717e997cb9a13fc1d7654a0baa",
+  "git_commit": "9b59d877246254be133ea75795e900ae5a01d4d7",
+  "git_commit_date": "2026-08-04T15:49:10Z",
+  "git_blob_sha": "e3ad8e8ff49eedd671494dbb6d5774c4bf384783",
+  "git_path": "public/evals/sora-2/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:47:34Z"
+  }
+}

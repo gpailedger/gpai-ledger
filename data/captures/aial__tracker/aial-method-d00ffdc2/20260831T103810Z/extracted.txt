@@ -1,0 +1,2561 @@
+Analysis of AI Act Art.53(1)(d) Public Summaries
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+Overview of Quality Assessment Findings
+
+Below is an overview of our quality assessment for each public summary. We scored each section of the summary based on
+our developed methodology
+, and then calculated the overall score and grade. Each summary is scored for two dimensions:
+Transparency (T)
+ on how the information is provided, and
+ Usefulness (U)
+ for whether it is sufficient for stakeholders' needs. For convenience, all scores are reflected as a percentage (out of hundred) and the grades are expressed on a scale from A+ (highest) to F (lowest). Sections in public summaries that were not filled in because they were not applicable are marked as "N/A". Public summaries not being provided are marked using "
+!
+". The development of the framework and the evaluation steps are described on our
+methodology page
+ along with a
+FAQ
+.
+
+Section→
+
+Grade
+
+Overall
+
+General Information
+
+Public Data Sources
+
+Private Data Sources
+
+Scraped/Crawled Data
+
+User Data
+
+Synthetic & Other Data
+
+Data Processing
+
+Document
+
+Model↓
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+T
+
+U
+
+Apertus
+
+A
+
+A+
+
+92
+
+97
+
+74
+
+93
+
+100
+
+100
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+100
+
+87
+
+84
+
+FIBO
+
+B+
+
+A+
+
+87
+
+97
+
+94
+
+100
+
+100
+
+N/A
+
+65
+
+100
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+100
+
+92
+
+78
+
+Bria 3.2
+
+B+
+
+A
+
+86
+
+94
+
+69
+
+92
+
+100
+
+N/A
+
+100
+
+100
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+100
+
+70
+
+68
+
+SmolLM3-3B
+
+B+
+
+B+
+
+82
+
+86
+
+73
+
+90
+
+96
+
+100
+
+100
+
+N/A
+
+100
+
+N/A
+
+100
+
+N/A
+
+60
+
+0
+
+92
+
+100
+
+68
+
+58
+
+Domyn Large
+
+B
+
+B+
+
+79
+
+81
+
+80
+
+90
+
+68
+
+100
+
+85
+
+N/A
+
+83
+
+N/A
+
+78
+
+N/A
+
+97
+
+N/A
+
+98
+
+77
+
+81
+
+57
+
+Bielik v3 11B Instruct
+
+B+
+
+C+
+
+88
+
+71
+
+87
+
+93
+
+86
+
+100
+
+100
+
+N/A
+
+83
+
+51
+
+100
+
+N/A
+
+100
+
+100
+
+98
+
+71
+
+88
+
+84
+
+Adobe Firefly
+
+C+
+
+B+
+
+70
+
+82
+
+71
+
+92
+
+72
+
+100
+
+16
+
+N/A
+
+78
+
+100
+
+100
+
+N/A
+
+89
+
+0
+
+100
+
+72
+
+74
+
+68
+
+Inkling
+
+C+
+
+C+
+
+66
+
+69
+
+72
+
+100
+
+51
+
+100
+
+89
+
+100
+
+56
+
+39
+
+100
+
+N/A
+
+63
+
+58
+
+100
+
+78
+
+87
+
+68
+
+Inkling
+
+C+
+
+C+
+
+66
+
+69
+
+72
+
+100
+
+51
+
+100
+
+89
+
+100
+
+56
+
+39
+
+100
+
+N/A
+
+63
+
+58
+
+100
+
+78
+
+87
+
+68
+
+FLUX.3
+
+C+
+
+C
+
+72
+
+51
+
+66
+
+100
+
+80
+
+100
+
+61
+
+100
+
+100
+
+N/A
+
+45
+
+75
+
+89
+
+50
+
+75
+
+0
+
+92
+
+78
+
+FastwebMIIA
+
+C
+
+C+
+
+50
+
+73
+
+74
+
+90
+
+26
+
+44
+
+45
+
+44
+
+33
+
+N/A
+
+100
+
+N/A
+
+40
+
+50
+
+92
+
+100
+
+74
+
+68
+
+MAI-Image-2.5
+
+C+
+
+D+
+
+66
+
+45
+
+71
+
+78
+
+26
+
+44
+
+89
+
+100
+
+80
+
+39
+
+100
+
+N/A
+
+65
+
+N/A
+
+75
+
+26
+
+85
+
+68
+
+MAI-Image-2
+
+C+
+
+D+
+
+66
+
+45
+
+71
+
+78
+
+26
+
+44
+
+89
+
+100
+
+80
+
+39
+
+100
+
+N/A
+
+65
+
+N/A
+
+75
+
+26
+
+85
+
+68
+
+GPT-5.5
+
+C+
+
+D+
+
+62
+
+47
+
+67
+
+90
+
+27
+
+7
+
+34
+
+100
+
+73
+
+24
+
+74
+
+50
+
+92
+
+70
+
+90
+
+57
+
+87
+
+65
+
+Gemma 4 31B
+
+C
+
+C
+
+56
+
+53
+
+72
+
+54
+
+4
+
+0
+
+67
+
+100
+
+59
+
+39
+
+45
+
+50
+
+78
+
+58
+
+90
+
+67
+
+88
+
+57
+
+Gemini 3 Pro
+
+C
+
+C
+
+56
+
+53
+
+72
+
+54
+
+4
+
+0
+
+67
+
+100
+
+59
+
+39
+
+45
+
+50
+
+78
+
+58
+
+90
+
+67
+
+87
+
+57
+
+Claude Opus 5
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Claude Mythos Preview
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Claude Opus 4.7
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Claude Opus 4.8
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Claude Sonnet 5
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Claude Fable 5
+
+C
+
+D+
+
+57
+
+49
+
+67
+
+93
+
+41
+
+44
+
+34
+
+100
+
+66
+
+24
+
+45
+
+50
+
+56
+
+41
+
+90
+
+57
+
+85
+
+76
+
+Grok 4.5
+
+C
+
+C
+
+54
+
+51
+
+77
+
+100
+
+5
+
+0
+
+34
+
+100
+
+63
+
+39
+
+100
+
+100
+
+62
+
+58
+
+76
+
+35
+
+87
+
+63
+
+C4AI Command A Plus 05 2026
+
+C
+
+C
+
+52
+
+50
+
+75
+
+78
+
+35
+
+44
+
+67
+
+100
+
+40
+
+24
+
+48
+
+50
+
+56
+
+58
+
+90
+
+57
+
+85
+
+72
+
+Muse Image
+
+C
+
+D+
+
+52
+
+49
+
+67
+
+90
+
+32
+
+44
+
+72
+
+100
+
+55
+
+24
+
+72
+
+100
+
+15
+
+0
+
+66
+
+48
+
+83
+
+63
+
+Muse Spark
+
+C
+
+D+
+
+52
+
+48
+
+67
+
+90
+
+32
+
+44
+
+72
+
+100
+
+55
+
+24
+
+86
+
+100
+
+15
+
+0
+
+66
+
+48
+
+72
+
+47
+
+Phi-4
+
+D
+
+F
+
+33
+
+24
+
+70
+
+100
+
+3
+
+0
+
+53
+
+N/A
+
+0
+
+N/A
+
+0
+
+N/A
+
+8
+
+0
+
+52
+
+0
+
+87
+
+81
+
+FLUX.2 [max]
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Granite 4.1 30B Base
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+MAI Code 1 Flash
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Ministral 3 14B
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Veo 3.1
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Mistral Small 4 119B 2603
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Palmyra X5
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Claude Opus 4.6
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Claude Sonnet 4.6
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+GPT Image 2
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+North Mini Code 1.0
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Gemini 3.6 Flash
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+FLUX.2
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Amazon Nova 2
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+GPT-5.6 Sol
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+GPT-5.6 Luna
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+GPT-OSS
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Ministral 3 3B
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Ministral 3 8B
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+GPT-5.6 Terra
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Apriel 1.5 15B Thinker
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+MAI Cyber 1 Flash
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Claude Haiku 4.5
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+FLUX.2 Klein
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Granite 4.0 H Small Base
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Claude Opus 4.5
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Mistral Large 3 675B Base 2512
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+Sora 2
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Claude Opus 4.1
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Claude Sonnet 4.5
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+Source and Analysis
+
+Adobe Firefly
+ by Adobe
+
+                    Based on
+public summary
+ dated 2025-11-01 and evaluated on 2026-07-22.
+                    See
+detailed analysis
+.
+
+Apertus
+ by Swiss AI Initiative
+
+                    Based on
+public summary
+ dated 2025-09-01 and evaluated on 2026-03-30.
+                    See
+detailed analysis
+.
+
+Apriel 1.5 15B Thinker
+ by ServiceNow
+
+no public summary found
+
+Bielik v3 11B Instruct
+ by SpeakLeash
+
+                    Based on
+public summary
+ dated 2026-01-01 and evaluated on 2026-03-30.
+                    See
+detailed analysis
+.
+
+Bria 3.2
+ by Bria AI
+
+                    Based on
+public summary
+ dated 2026-01-06 and evaluated on 2026-03-31.
+                    See
+detailed analysis
+.
+
+Claude Haiku 4.5
+ by Anthropic
+
+no public summary found
+
+Claude Fable 5
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+Claude Mythos Preview
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+Claude Opus 4.1
+ by Anthropic
+
+no public summary found
+
+Claude Opus 4.5
+ by Anthropic
+
+no public summary found
+
+Claude Opus 4.6
+ by Anthropic
+
+no public summary found
+
+Claude Opus 4.7
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+Claude Opus 4.8
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+Claude Opus 5
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+Claude Sonnet 4.5
+ by Anthropic
+
+no public summary found
+
+Claude Sonnet 4.6
+ by Anthropic
+
+no public summary found
+
+Claude Sonnet 5
+ by Anthropic
+
+                    Based on
+public summary
+ dated 2026-07-24 and evaluated on .
+                    See
+detailed analysis
+.
+
+C4AI Command A Plus 05 2026
+ by Cohere
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Domyn Large
+ by Domyn
+
+                    Based on
+public summary
+ dated 2026-03-19 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+FastwebMIIA
+ by Fastweb
+
+                    Based on
+public summary
+ dated 2026-03-23 and evaluated on 2026-07-22.
+                    See
+detailed analysis
+.
+
+FIBO
+ by Bria AI
+
+                    Based on
+public summary
+ dated 2026-08-02 and evaluated on .
+                    See
+detailed analysis
+.
+
+FLUX.2
+ by Black Forest Labs
+
+no public summary found
+
+FLUX.2 Klein
+ by Black Forest Labs
+
+no public summary found
+
+FLUX.2 [max]
+ by Black Forest Labs
+
+no public summary found
+
+FLUX.3
+ by Black Forest Labs
+
+                    Based on
+public summary
+ dated 2026-08-01 and evaluated on .
+                    See
+detailed analysis
+.
+
+Gemini 3.6 Flash
+ by Google
+
+no public summary found
+
+Gemini 3 Pro
+ by Google
+
+                    Based on
+public summary
+ dated 2026-07-02 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+Gemma 4 31B
+ by Google
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+GPT-5.5
+ by OpenAI
+
+                    Based on
+public summary
+ dated 2026-06-26 and evaluated on 2026-07-09.
+                    See
+detailed analysis
+.
+
+GPT-5.6 Luna
+ by OpenAI
+
+                    Based on
+public summary
+ dated 2026-07-23 and evaluated on .
+                    See
+detailed analysis
+.
+
+GPT-5.6 Sol
+ by OpenAI
+
+no public summary found
+
+GPT-5.6 Terra
+ by OpenAI
+
+no public summary found
+
+GPT Image 2
+ by OpenAI
+
+no public summary found
+
+GPT-OSS
+ by OpenAI
+
+no public summary found
+
+Granite 4.0 H Small Base
+ by IBM
+
+no public summary found
+
+Granite 4.1 30B Base
+ by IBM
+
+no public summary found
+
+Grok 4.5
+ by xAI
+
+                    Based on
+public summary
+ dated 2026-07-08 and evaluated on 2026-07-20.
+                    See
+detailed analysis
+.
+
+Inkling
+ by Thinking Machines
+
+                    Based on
+public summary
+ dated 2026-07-16 and evaluated on 2026-07-20.
+                    See
+detailed analysis
+.
+
+Inkling
+ by Thinking Machines
+
+                    Based on
+public summary
+ dated 2026-07-30 and evaluated on 2026-07-20.
+                    See
+detailed analysis
+.
+
+MAI Code 1 Flash
+ by Microsoft AI
+
+                    Based on
+public summary
+ dated 2026-06-02 and evaluated on .
+                    See
+detailed analysis
+.
+
+MAI Cyber 1 Flash
+ by Microsoft AI
+
+                    Based on
+public summary
+ dated 2026-07-27 and evaluated on .
+                    See
+detailed analysis
+.
+
+MAI-Image-2
+ by Microsoft
+
+                    Based on
+public summary
+ dated 2026-03-19 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+MAI-Image-2.5
+ by Microsoft
+
+                    Based on
+public summary
+ dated 2026-05-31 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+Ministral 3 14B
+ by Mistral AI
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Ministral 3 3B
+ by Mistral AI
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Ministral 3 8B
+ by Mistral AI
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Mistral Large 3 675B Base 2512
+ by Mistral AI
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Mistral Small 4 119B 2603
+ by Mistral AI
+
+                    Based on
+public summary
+ dated 2026-07-31 and evaluated on .
+                    See
+detailed analysis
+.
+
+Muse Image
+ by Meta
+
+                    Based on
+public summary
+ dated 2026-07-06 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+Muse Spark
+ by Meta
+
+                    Based on
+public summary
+ dated 2026-07-08 and evaluated on 2026-07-21.
+                    See
+detailed analysis
+.
+
+North Mini Code 1.0
+ by Cohere
+
+no public summary found
+
+Amazon Nova 2
+ by Amazon
+
+                    Based on
+public summary
+ dated 2026-07-27 and evaluated on .
+                    See
+detailed analysis
+.
+
+Palmyra X5
+ by WRITER
+
+no public summary found
+
+Phi-4
+ by Microsoft
+
+                    Based on
+public summary
+ dated 2025-11-24 and evaluated on 2026-03-31.
+                    See
+detailed analysis
+.
+
+SmolLM3-3B
+ by HuggingFace
+
+                    Based on
+public summary
+ dated 2025-07-25 and evaluated on 2026-03-31.
+                    See
+detailed analysis
+.
+
+Sora 2
+ by OpenAI
+
+no public summary found
+
+Veo 3.1
+ by Google
+
+no public summary found
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

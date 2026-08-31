@@ -1,0 +1,3652 @@
+Methodology
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+Methodology
+
+Development of a Quality Assessment Framework for the AI Act's Article 53(1)(d) Public Summaries
+
+See our peer-reviewed article: Dick A. H. Blankvoort, Harshvardhan J. Pandit, and Maximilian Gahntz (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+. 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo.
+DOI:10.1145/3805689.3806755
+
+            Using our quality assessment framework, a
+'high-quality'
+ public summary is  a document that
+            provides information in a clear, structured, accurate, and consistent
+            manner (which means it has high
+transparency
+) such that it allows relevant stakeholders
+            to understand the training process and to take relevant actions where
+            necessary (which means it has high
+usefulness
+). This makes our quality scores a relevant measure of the degree to which the public summary achieves the intended goals as stated in the AI Act and the template's explanatory note.
+
+Public summaries that are
+'low-quality'
+, i.e., they do not demonstrate sufficient transparency and usefulness, are also likely to not meet the Article 53(1)(d) obligations.
+
+Overview
+
+The broad objective of our work is to support the implementation and enforcement of
+AI Act Article 53(1)(d)
+ that requires GPAI Providers to publish a public summary of training content based on the
+template provided by the AI Office
+. We do this by assessing the
+quality
+ of the public summary across two key criteria:
+Transparency
+ and
+Usefulness
+. Transparency refers to the extent of information provided through the public summary, and Usefulness represents the utility of provided information as well as its potential to be actionable by specific stakeholders. Using our framework, a 'high-quality' public summary is described as a document that provides information in a clear, structured, accurate, and consistent manner (transparency) such that it allows relevant stakeholders to understand the training process and to take relevant actions where necessary (usefulness). Public summaries that do not meet these requirements are considered as `low-quality', and are potentially in breach of the template and the corresponding Article 53(1)(d) obligations.
+
+To assess
+Transparency
+, we identified 6 dimensions:
+Clarity
+,
+
+Completeness
+,
+Consistency
+, and
+Correctness
+, and for
+Usefulness
+ we identified
+Accessibility
+ and
+
+Comprehension
+. We then developed 242
+metrics
+ (or more generally,
+questions
+) as specific questions or criteria that evaluate each field in each section of the public summary template. Since the public summary is structured such that each section has different implications for stakeholders, e.g. some may be interested only in Section 2.2 or Section 3, we evaluate each section using these metrics and then aggregate their scores to get the overall quality. Applying this framework means taking each public summary and assessing it by scoring each of the 242 metrics/questions and then combining them to achieve the combined/aggregated scores. These terms and the methods used are well-established in the field of data governance as the process of 'data quality assessment', with our work based on the work that specialises these for 'documentation quality assesssment'.
+
+Below we provide a comprehensive description of
+the methodology used in our development process
+, the
+quality assessment framework
+, the
+process for calculation of scores
+, and
+guidance on interpretation of outcomes
+. Click
+here
+ to expand all sections.
+
+Development Process
+
+                Selection of Criteria/Dimensions
+
+Data Quality Assessment
+ is a broad field that describes both qualitative and quantitative methods to evaluate the 'fitness', 'usefulness', or 'utility' towards specific purpose(s). By extension,
+Documentation Quality Assessment
+ refers to evaluation of the documentation towards specific purposes, such as the role of technical documentation in equipping developers or engineers with a sufficient understanding of the system. Quality assessments consist of selecting 'dimensions', which are broad objectives that we want to assess, and then identifying specific 'metrics', which are granular evaluations, for example as tests or questions, whose answer produces a quantifiable number to represent degree to which the documentation satisfies the criteria. There are various ways in which the metrics can be combined to produce a single score or label for a dimension, and similarly there are various ways in which dimension scores can be consolidated to create an overall or global quality representation.
+
+For our work, the document in question is the template for the public summary, which is not a dataset or a technical documentation, but is in essence a legally relevant document. This means 'quality' not only refers to typical characteristics associated with use of a document, but must also include the specific objectives of why the AI Act requires the public summary to be published in a specific manner and to include specific content. For practicality, we chose two hypothetical use-cases to guide what the assessment is intended to highlight: '
+good faith
+' implementations where we can see that a conscentious effort has been made to provide the summary as intended, and '
+bad faith'
+ implementations where the summary has one or more major flaws -- intentional or otherwise. These corresponded to what we wanted to evaluate as
+good faith
+ and
+bad faith
+ respectively.
+
+To start with, we conducted a literature review of documentation quality assessment frameworks, where we identified the different methods used and studied the dimensions used as well as their role in the assessment of specific information and use by stakeholders. From this, we selected the
+Goal, Question, Metric (GQM)
+ as our overall approach to structure the process. The GQM method provides a three-step process:
+
+Define the conceptual goal
+
+For each goal, identify questions to describe the characteristics or model
+
+For each question, what must be evaluated as a metric i.e. an assessment that produces a measurable result
+
+Using GQM, and considering the broader objectives of the public summary as established in the AI Act as well as in the explanatory note accompanying the template, we chose the following two as our broad goals:
+
+Transparency:
+ The extent to which the public summary provides the required information.
+
+Usefulness:
+ The extent to which the provided information can be utilised for the intended purposes.
+
+To evaluate each of these, we utilised our literature survey to select 'dimensions' or 'categories of quality' that would provide the best model or description for the information in the public summary. For Transparency these were:
+
+Clarity:
+ Is the information unambiguous, easy to understand, and avoids misinterpretation?
+
+Completeness:
+ Is the information relevant to what is asked is the necessary information provided?
+
+Consistency:
+ Does the information use the appropriate terminology, format, and structure in a manner that is consistent within and across the document(s)?
+
+Correctness:
+ Is the information accurate, validated, and reliable?
+
+By using these, a public summary that has a high degree of transparency can be understood as the document and the information being clear, complete, consistent, and correct. We identified similar dimensions for assessing Usefulness:
+
+Accessibility:
+ Is the information easy to obtain, navigate, interact with, & includes or follows accessibility standards?
+
+Comprehension:
+ Is the information understandable and interpretable for the intended audience?
+
+The choice of dimensions was not merely from theoretical considerations. We also discussed common issues such as providing information but in an obfuscated or confusing manner (clarity), not providing information in a specific field (completeness), using different terms across sections (consistency), providing information that is inaccurate or is later shown to be invalid (correctness), publishing the summary but in a manner that is not easily found (accessibility), and using highly technical jargon that cannot be understood by specific stakeholders (comprehension). Thus, the dimensions not only help to assess the quality of provided information, but also help categorise and assess issues.
+
+Development of Metrics
+
+To evaluate the selected dimensions over the public summary, we chose to assess each section of the public summary independently as it pertains to a specific topic. For example, Section 2.1 concerns public data whereas Section 2.4 concerns user data. Each of these sections would be of interest to specific stakeholders, and therefore they may be interested in the quality only for that specific section. In addition to these 'stakeholder-oriented' sections, we also considered the document itself as a separate category to assess criteria such as the manner in which it was provided and the metadata fields that are not part of any section. In total, we identified 8 sections:
+
+Document: entire document
+
+General information: Section 1
+
+Public Data Sources: Section 2.1
+
+Private Data Sources: Section 2.2
+
+Scraped/Crawled Data: Section 2.3
+
+User Data: Section 2.4
+
+Synthetic & Other Data: Section 2.5 & 2.6
+
+Data Processing: Section 3
+
+Assessing the quality of each section meant assessing the
+transparency
+ and
+usefulness
+ of each section independently, which meant assessing the 6 dimensions (or questions under GQM) for each section. To do so, we created evaluation metrics using the following process:
+
+First, separate each independent information field in the template. This was necessary as the template uses numbers for a group of fields, and where one field can ask several pieces of information. To evaluate each asked information on its own merit, we split the field into separate parts as necessary. For example, there is a single field for the Provider name and contact. Here, 'name' and 'contact' are independent pieces of information, and thus we created two fields to represent these.
+
+We started from existential assessments i.e. is the field filled in or not (completeness).
+
+We then considered what would be required for this information to be clear. For example, if the field for contact provides a generic contact that is not distinguishable from other contacts (e.g. a generic postal address), then this would not be clear.
+
+We then considered whether the information across the fields is consistent e.g. the terms used in the model section are different from those in later sections (consistency).
+
+We assumed that the information in specific fields in the public summary is correct for the moment, unless there are discrepancies in the public summary itself which invalidate this assumption (correctness).  For these fields, if later it is found that the public summary has inaccurate or invalid information, this field would be used to identify and represent these issues.
+
+Once we had ensured that the information is provided in a transparent manner, we focused on how this information could be used. For example, the Provider name must indicate the specific legal entity (comprehension). We also considered identifiers used being comprehensible, and key information that affects what obligations apply -- such as whether the model is a new model or has been fine-tuned on existing models.
+
+For information where links would be needed, or where links are provided in a field, we considered how to evaluate the use of links and the information provided through the links, such as if these links lead to relevant locations (accessibility).
+
+By using this approach, we identified a total of 242 evaluation metrics. This means that to assess the quality of a public summary that has all sections filled in, we would have to assess 242 things to evaluate its overall quality. Or, if we wanted to evaluate the quality only of a specific section, then the number of evaluations would be a subset of 242 (likely including the document section as well since it contains evaluation of how the public summary itself is provided). We think these 242 metrics are currently sufficient, based on our understanding of the template as well as how it may be filled in. However, as with any quality assessment framework, once we perform a number of evaluations, we would likely update the metrics -- including adding new ones -- to reflect the evolving practices and the need to identify and highlight specific practices (as good or bad quality).
+
+Determination of Weights
+
+In quality assessment methods, different information is likely to have a differing interpretation of
+importance
+. For example, in the public summary, the format of the date is not as important as contact details or the identifiers for the model. To reflect this difference,
+weights
+ are assigned to specific evaluations, such as that the
+weighted score
+ reflects the impact of that field being correctly or incorrectly provided. To determine the weights, we discussed each metric and what would be the implication of that metric on the use of the public summary. We assigned weights for metrics from 1 to 25, with 1 representing the lowest impact and 25 the highest.
+Note:
+ The subjective choosing of weights is an accepted practice in developing quality assessment frameworks, as long as the method for assigning weights is justified. In our case, we determined the weights based on the perceived 'importance' of the information and the 'impact' of not having that information.
+
+Using the weights, the scoring process becomes as follows: First, we evaluate the metrics, and then we multiply each metric by its score. For example, if there are two metrics in a section: A and B, with weights 25 and 1 respectively, then the scoring is as follows: (A x 25) + (B x 1). This means that if A is not provided and B is provided, the score would be much lower than if A is provided and B is not.
+
+As the public summaries are assessed, certain fields and corresponding metrics may emerge to be more prominent -- either because they require additional considerations or because they are the areas where most summaries do not have an adequate quality. To address these, updating quality assessment frameworks also includes an assessment of whether the current set of weights is sufficient or should be changed.
+
+Quality Assessment Framework
+
+Grades
+
+            Grades represent a summarised overview of the quality of the public summary. We assign grades individually to transparency and usefulness scores to differentiate between the quality of the public summary in providing information and in it being useful.
+
+Grade
+
+Label
+
+Score
+
+Interpretation
+
+A+
+
+Excellent
+
+95+
+
+Documentation is transparent and useful with very few, if any, limitations
+
+A
+
+Highly Satisfactory
+
+90+
+
+Documentation is transparent and useful with some limitations
+
+B+
+
+Satisfactory
+
+80+
+
+Documentation is transparent and useful but has numerous limitations
+
+B
+
+Acceptable
+
+75+
+
+Documentation is mostly transparent and useful with some major limitations
+
+C+
+
+Adequate
+
+60+
+
+Documentation is somewhat transparent and useful with major limitations
+
+C
+
+Marginal
+
+50+
+
+Documentation is not transparent and useful and has some major limitations
+
+D+
+
+Inadequate
+
+40+
+
+Documentation is not transparent and useful and has several major limitations
+
+D
+
+Unsatisfactory
+
+25+
+
+Documentation is not transparent and useful and has systemic limitations
+
+F
+
+Unacceptable
+
+0+
+
+Documentation is not provided or has systemic problems
+
+Broader framework
+
+            The broader framework is essentially a matrix similar to the table shown below. To fill it, we calculate the quality scores for each section of the public summary (using the granular metrics in the next section), and then calculate a percentage score by dividing it with the maximum possible score for that section. The scores for transparency and usefulness are the sums of their respective quality dimensions, and their percentages are calculated using the same method (divide total score by the maximum possible score).
+
+Clarity
+
+Completeness
+
+Consistency
+
+Correctness
+
+Accessibility
+
+Comprehension
+
+Document
+
+General information
+
+Public Data Sources
+
+Private Data Sources
+
+Scraped/Crawled Data
+
+User Data
+
+Synthetic & Other Data
+
+Data Processing
+
+Sum
+
+Final scores
+
+Transparency = Sum (Clarity, Completeness, Consistency, Correctness)
+
+Usefulness = Sum (Accessibility, Comprehension)
+
+Percentage scores
+
+(Total score / Maximum possible score) x 100
+
+Granular metrics
+
+ID
+
+Metric
+
+Section
+
+Field
+
+Dimension
+
+Weight
+
+D1
+
+All information must be provided within a single document
+
+Document
+
+n/a
+
+Accessibility
+
+3
+
+D2
+
+Document must be easy to find
+
+Document
+
+n/a
+
+Accessibility
+
+1
+
+D3
+
+Document must be accessible
+
+Document
+
+n/a
+
+Accessibility
+
+1
+
+D4
+
+Document should be comprehensible
+
+Document
+
+n/a
+
+Comprehension
+
+3
+
+D5
+
+Document should have the correct structure
+
+Document
+
+n/a
+
+Clarity
+
+1
+
+D6
+
+Document must be readable
+
+Document
+
+n/a
+
+Comprehension
+
+3
+
+D7
+
+Document should have clear provenance
+
+Document
+
+n/a
+
+Clarity
+
+1
+
+D8
+
+Document should have assured integrity
+
+Document
+
+n/a
+
+Correctness
+
+2
+
+D9
+
+Document should be in a well-defined, structured, and interoperable format
+
+Document
+
+n/a
+
+Clarity
+
+1
+
+D10
+
+Document should support sharing and exporting
+
+Document
+
+n/a
+
+Accessibility
+
+1
+
+D11
+
+Document language should be consistent with the language used in other external documentation
+
+Document
+
+n/a
+
+Consistency
+
+1
+
+D12
+
+Document should be provided in the same context as the model
+
+Document
+
+n/a
+
+Accessibility
+
+3
+
+D13
+
+Document should be consistent with other documents provided elsewhere representing the same model version(s) and summary
+
+Document
+
+n/a
+
+Consistency
+
+3
+
+D14
+
+Document should be consistent across versions (across updates)
+
+Document
+
+n/a
+
+Consistency
+
+3
+
+D15
+
+Document should clearly indicate changes from previous version
+
+Document
+
+n/a
+
+Comprehension
+
+2
+
+D16
+
+Document should clearly indicate its current status, in particular whether it is the latest version or if it is outdated and a replacement is made available
+
+Document
+
+n/a
+
+Clarity
+
+1
+
+D17
+
+Document should indicate where notice of updates or changes will be provided
+
+Document
+
+n/a
+
+Comprehension
+
+1
+
+D18
+
+Document should provide link to authoritative source of the document
+
+Document
+
+n/a
+
+Correctness
+
+1
+
+D19
+
+Document should provide link to all versions of the document
+
+Document
+
+n/a
+
+Clarity
+
+1
+
+D20
+
+Document with updated information must be provided in the same context as the earlier document
+
+Document
+
+n/a
+
+Clarity
+
+3
+
+D21
+
+Document should be provided in a timely manner
+
+Document
+
+n/a
+
+Clarity
+
+3
+
+D22
+
+Document export preserves links to external resources
+
+Document
+
+n/a
+
+Accessibility
+
+1
+
+Version of the Summary
+
+D23
+
+Is a version for the document provided?
+
+0
+
+0.a
+
+Completeness
+
+3
+
+D24
+
+Are link(s) to previous versions of the document provided, where applicable?
+
+0
+
+0.a
+
+Accessibility
+
+3
+
+D25
+
+If link(s) to previous versions are provided, does each version have a unique version number?
+
+0
+
+0.a
+
+Consistency
+
+1
+
+D26
+
+If each version has a unique version number, do these version numbers adhere to a consistent format so that it is clear which version comes prior and which one comes next?
+
+0
+
+0.a
+
+Correctness
+
+1
+
+D27
+
+If link(s) to previous versions are provided, are the links accessible for intended stakeholders?
+
+0
+
+0.a
+
+Comprehension
+
+3
+
+Last update
+
+D28
+
+Does the document have a date of last update?
+
+0
+
+0.b
+
+Completeness
+
+1
+
+D29
+
+Is this date accurate?
+
+0
+
+0.b
+
+Correctness
+
+1
+
+D30
+
+Is the date format correct?
+
+0
+
+0.b
+
+Correctness
+
+1
+
+1
+
+General information
+
+F1.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+1
+
+1
+
+Consistency
+
+3
+
+1.1
+
+Provider identification
+
+1.1.a
+
+Provider name and contact details
+
+F1.1.a.1
+
+Is the provider name given?
+
+1
+
+1.1.a
+
+Completeness
+
+5
+
+F1.1.a.2
+
+Is this provider name sufficiently detailed? (I.e. can be traced back to individual organizations)
+
+1
+
+1.1.a
+
+Comprehension
+
+5
+
+F1.1.a.3
+
+Are contact details provided?
+
+1
+
+1.1.a
+
+Completeness
+
+5
+
+F1.1.a.4
+
+Do these contact details refer to a non-generic contact point? (E.g. not the address used for general correspondence with the company)
+
+1
+
+1.1.a
+
+Clarity
+
+5
+
+1.1.b
+
+Authorized representative name and contact details
+
+F1.1.b.1
+
+Is the name of the authorized representative given, if required?
+
+1
+
+1.1.b
+
+Completeness
+
+3
+
+F1.1.b.2
+
+If the name is required, is this name sufficiently detailed? (i.e. can be traced back to individual representatives)
+
+1
+
+1.1.b
+
+Comprehension
+
+3
+
+F1.1.b.3
+
+If required, are contact details for the authorized representative provided?
+
+1
+
+1.1.b
+
+Completeness
+
+3
+
+F1.1.b.4
+
+If required, do these contact details refer to a non-generic contact point? (E.g. not the address used for general correspondence with the company)
+
+1
+
+1.1.b
+
+Clarity
+
+3
+
+1.2
+
+Model identification
+
+1.2.a
+
+Versioned model name(s)
+
+F1.2.a.1
+
+Are the identifier(s) provided for each specific model(s)?
+
+1
+
+1.2.a
+
+Completeness
+
+5
+
+F1.2.a.2
+
+Are the provided identifiers traceable and point to a single specific model?
+
+1
+
+1.2.a
+
+Comprehension
+
+5
+
+F1.2.a.3
+
+Are links to additional publicly available documentation provided for the model(s)?
+
+1
+
+1.2.a
+
+Completeness
+
+5
+
+F1.2.a.4
+
+If links are provided, do these links lead to relevant locations?
+
+1
+
+1.2.a
+
+Accessibility
+
+5
+
+F1.2.a.5
+
+Is the content for all provided model version(s) identical?
+
+1
+
+1.2.a
+
+Consistency
+
+5
+
+1.2.b
+
+Model dependencies
+
+F1.2.b.1
+
+Are dependencies indicated in cases where the model is fine-tuned from another model?
+
+1
+
+1.2.b
+
+Completeness
+
+5
+
+F1.2.b.2
+
+If dependencies are indicated, is it clear for which models they apple?
+
+1
+
+1.2.b
+
+Clarity
+
+5
+
+F1.2.b.3
+
+If dependencies exist, are these dependencies accurate?
+
+1
+
+1.2.b
+
+Correctness
+
+5
+
+F1.2.b.4
+
+If dependencies exist and there exist Summary(ies) for them, are these linked?
+
+1
+
+1.2.b
+
+Completeness
+
+5
+
+F1.2.b.5
+
+If Summary(ies) are linked, do these links lead to relevant locations?
+
+1
+
+1.2.b
+
+Accessibility
+
+5
+
+1.2.c
+
+Date of placement of the model on the Union market
+
+F1.2.c.1
+
+Is/are the date(s) on which the model(s) was/were placed on the Union market given?
+
+1
+
+1.2.c
+
+Completeness
+
+1
+
+F1.2.c.2
+
+Are dates given accurate?
+
+1
+
+1.2.c
+
+Correctness
+
+1
+
+1.3
+
+Modalities, overall training data size and other characteristics
+
+1.3.a
+
+Modality
+
+F1.3.a.1
+
+Are any modalities checked?
+
+1
+
+1.3.a
+
+Completeness
+
+3
+
+F1.3.a.2
+
+Are the checked modalities accurate?
+
+1
+
+1.3.a
+
+Correctness
+
+3
+
+1.3.b
+
+Training Data Size
+
+F1.3.b.1
+
+For the regular modalities, is exactly only of the checkboxes ticked, or alternatively is the approximate size provided?
+
+1
+
+1.3.b
+
+Completeness
+
+3
+
+F1.3.b.2
+
+For the 'Text' modality, if an approximate size is provided, is the unit of measurement sensible?
+
+1
+
+1.3.b
+
+Clarity
+
+3
+
+F1.3.b.3
+
+For the regular modalities, if the unit of measurement is sensible or one of the checkboxes is ticked, is the number of tokens accurate?
+
+1
+
+1.3.b
+
+Correctness
+
+3
+
+F1.3.b.4
+
+For the 'Other' modality, are the other modalities listed sensibly?
+
+1
+
+1.3.b
+
+Clarity
+
+3
+
+F1.3.b.5
+
+For the 'Other' modality, are the units of measurement provided sensibly?
+
+1
+
+1.3.b
+
+Clarity
+
+3
+
+F1.3.b.6
+
+For the 'Other' modality, are the measurements provided accurate?
+
+1
+
+1.3.b
+
+Correctness
+
+3
+
+F1.3.b.7
+
+Does the 'Other' modality cover all modalities used in the training of the model outside of 'Text', 'Image', 'Audio', and 'Video'?
+
+1
+
+1.3.b
+
+Completeness
+
+3
+
+1.3.c
+
+Types of content
+
+F1.3.c.1
+
+Are any types of content provided?
+
+1
+
+1.3.c
+
+Completeness
+
+10
+
+F1.3.c.2
+
+If yes, does the description cover all types of content?
+
+1
+
+1.3.c
+
+Completeness
+
+10
+
+F1.3.c.3
+
+Does the description restrict itself to only describing the types of content? In particular, does it refrain from describing the goals for which the content is included?
+
+1
+
+1.3.c
+
+Clarity
+
+10
+
+1.3.d
+
+Latest date of data acquisition/collection for model training
+
+F1.3.d.1
+
+Is the latest date of data collection/attainment provided?
+
+1
+
+1.3.d
+
+Completeness
+
+1
+
+F1.3.d.2
+
+Is this date provided exactly (i.e. exact month of latest acquisition/collection) rather than as a loose description?
+
+1
+
+1.3.d
+
+Correctness
+
+1
+
+F1.3.d.3
+
+If yes, does this date have the proper format?
+
+1
+
+1.3.d
+
+Clarity
+
+1
+
+F1.3.d.4
+
+Is the date provided accurate?
+
+1
+
+1.3.d
+
+Correctness
+
+1
+
+F1.3.d.5
+
+Is it indicated whether the model is continuously trained on new or dynamic data after the date provided?
+
+1
+
+1.3.d
+
+Comprehension
+
+1
+
+F1.3.d.6
+
+If yes, is this information true?
+
+1
+
+1.3.d
+
+Correctness
+
+1
+
+1.3.e
+
+Description of the linguistic characteristics of the overall training data
+
+F1.3.e.1
+
+Are the languages covered by the training data described?
+
+1
+
+1.3.e
+
+Completeness
+
+6
+
+F1.3.e.2
+
+If yes, are these languages described exactly (i.e. as a list of languages rather than as the number covered)?
+
+1
+
+1.3.e
+
+Clarity
+
+6
+
+F1.3.e.3
+
+Are the EU languages which are covered mentioned?
+
+1
+
+1.3.e
+
+Completeness
+
+6
+
+F1.3.e.4
+
+Is provided information relating to the linguistic characteristics of the overall training data accurate?
+
+1
+
+1.3.e
+
+Correctness
+
+6
+
+F1.3.e.5
+
+Does the field not contain any superfluous information?
+
+1
+
+1.3.e
+
+Clarity
+
+6
+
+1.3.f
+
+Other relevant characteristics of the overall training data
+
+F1.3.f.1
+
+Are national/regional specificities of the training data provided?
+
+1
+
+1.3.f
+
+Completeness
+
+6
+
+F1.3.f.2
+
+Are demographic specificities of the training data provided?
+
+1
+
+1.3.f
+
+Completeness
+
+6
+
+F1.3.f.3
+
+Is any other relevant information relating to the characteristics of the overall training data provided?
+
+1
+
+1.3.f
+
+Clarity
+
+6
+
+F1.3.f.4
+
+Is the provided data accurate?
+
+1
+
+1.3.f
+
+Correctness
+
+6
+
+F1.3.f.5
+
+Is all provided information relevant? In particular, does the field not contain any information which should be provided elsewhere in the template?
+
+1
+
+1.3.f
+
+Clarity
+
+6
+
+1.3.g
+
+Additional comments (optional)
+
+F1.3.g.1
+
+Is information regarding the compression methodologies applied for the data size calculation supplied?
+
+1
+
+1.3.g
+
+Completeness
+
+2
+
+F1.3.g.2
+
+Is information regarding the tokenization methodologies applied for the data size calculation supplied?
+
+1
+
+1.3.g
+
+Completeness
+
+2
+
+F1.3.g.3
+
+If audio or video content is provided, is information provided regarding the sampling frequency or rate plays?
+
+1
+
+1.3.g
+
+Completeness
+
+2
+
+F1.3.g.4
+
+Is any other relevant information disclosed?
+
+1
+
+1.3.g
+
+Completeness
+
+2
+
+F1.3.g.5
+
+Is all information contained within this field relevant?
+
+1
+
+1.3.g
+
+Clarity
+
+2
+
+2
+
+SECTION 2
+
+2.1
+
+Publicly available datasets
+
+F2.1.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.1
+
+2.1
+
+Consistency
+
+3
+
+2.1.a
+
+Dick informed me you made time to talk to him. Thank you.
+
+F2.1.a.1
+
+Is this field filled in?
+
+2.1
+
+2.1.a
+
+Completeness
+
+1
+
+F2.1.a.2
+
+Is this field accurate?
+
+2.1
+
+2.1.a
+
+Correctness
+
+1
+
+2.1.b
+
+If yes, specify the modality(ies) of the content covered by the datasets concerned
+
+F2.1.b.1
+
+Are any modalities supplied?
+
+2.1
+
+2.1.b
+
+Completeness
+
+3
+
+F2.1.b.2
+
+Are all provided modalities accurate?
+
+2.1
+
+2.1.b
+
+Correctness
+
+3
+
+2.1.c
+
+List of large publicly available datasets
+
+F2.1.c.1
+
+Does this field only provide a list of large publicly available datasets, with explanations for selecting part of the datasets where necessary?
+
+2.1
+
+2.1.c
+
+Completeness
+
+20
+
+F2.1.c.2
+
+Are no large publicly available datasets which were used left out?
+
+2.1
+
+2.1.c
+
+Completeness
+
+20
+
+F2.1.c.3
+
+Is a link provided for each identifier/name listed?
+
+2.1
+
+2.1.c
+
+Accessibility
+
+20
+
+F2.1.c.4
+
+If yes, does each identifier/name match the identifier/name of the dataset linked?
+
+2.1
+
+2.1.c
+
+Consistency
+
+20
+
+F2.1.c.5
+
+Are specific versions of the datasets listed?
+
+2.1
+
+2.1.c
+
+Clarity
+
+20
+
+F2.1.c.6
+
+Is a general approach to selecting part of the datasets provided wherever part of a dataset was selected?
+
+2.1
+
+2.1.c
+
+Clarity
+
+20
+
+F2.1.c.7
+
+Are the descriptions clearly understandable for the approaches to selecting part of the datasets?
+
+2.1
+
+2.1.c
+
+Clarity
+
+20
+
+2.1.d
+
+General description of other publicly available datasets not listed above
+
+F2.1.d.1
+
+Are general descriptions provided for publicly available datasets which were used and not listed above?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.2
+
+Does the field only contain such descriptions?
+
+2.1
+
+2.1.d
+
+Clarity
+
+16
+
+F2.1.d.3
+
+Do the descriptions contain information relating to the types of modality contained in the datasets?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.4
+
+Do the descriptions contain information relating to the nature of the content contained in the datasets?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.5
+
+Do the descriptions contain information relating to the linguistic characteristics of the datasets, where applicable?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.6
+
+Do the descriptions contain information relating to the approximate start and end dates of the data collection, or otherwise contain that such information is "not known"?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.7
+
+Do the descriptions contain any other relevant information?
+
+2.1
+
+2.1.d
+
+Completeness
+
+16
+
+F2.1.d.8
+
+Are the descriptions provided clearly readable, such that someone without expertise could understand them?
+
+2.1
+
+2.1.d
+
+Comprehension
+
+16
+
+F2.1.d.9
+
+Do the descriptions limit themselves to relevant information?
+
+2.1
+
+2.1.d
+
+Clarity
+
+16
+
+F2.1.d.10
+
+Are all descriptions accurate?
+
+2.1
+
+2.1.d
+
+Correctness
+
+16
+
+2.1.e
+
+Additional comments (optional)
+
+F2.1.e.1
+
+Is information relating to the size of the datasets provided?
+
+2.1
+
+2.1.e
+
+Completeness
+
+3
+
+F2.1.e.2
+
+Are other relevant details provided in this field?
+
+2.1
+
+2.1.e
+
+Completeness
+
+3
+
+F2.1.e.3
+
+Is all information provided in this field relevant?
+
+2.1
+
+2.1.e
+
+Comprehension
+
+3
+
+F2.1.e.4
+
+Is all information provided in this field accurate?
+
+2.1
+
+2.1.e
+
+Correctness
+
+3
+
+2.2
+
+Private non-publicly available datasets obtained from third parties
+
+F2.2.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.2
+
+2.2
+
+Consistency
+
+3
+
+2.2.1
+
+Datasets commercially licensed by rightsholders or their representatives
+
+2.2.1.a
+
+Have you concluded transactional commercial licensing agreement(s) with rightholder(s) or with their representatives?
+
+F2.2.1.a.1
+
+Is this field filled in?
+
+2.2
+
+2.2.1.a
+
+Completeness
+
+1
+
+F2.2.1.a.2
+
+Is this field accurate?
+
+2.2
+
+2.2.1.a
+
+Correctness
+
+1
+
+2.2.1.b
+
+If yes, specify the modality(ies) of the content covered by the datasets concerned
+
+F2.2.1.b.1
+
+Are any modalities supplied?
+
+2.2
+
+2.2.1.b
+
+Completeness
+
+3
+
+F2.2.1.b.2
+
+Are all provided modalities accurate?
+
+2.2
+
+2.2.1.b
+
+Correctness
+
+3
+
+2.2.2
+
+Private datasets obtained from other third parties
+
+2.2.2.a
+
+Have you obtained private datasets from third parties that are not licensed as described in Section 2.2.1., such as data obtained from providers of private databases, or data intermediaries?
+
+F2.2.2.a.1
+
+Is this field filled in?
+
+2.2
+
+2.2.2.a
+
+Completeness
+
+1
+
+F2.2.2.a.2
+
+Is this field accurate?
+
+2.2
+
+2.2.2.a
+
+Correctness
+
+1
+
+2.2.2.b
+
+If yes, specify the modality(ies) of the content covered by the datasets concerned
+
+F2.2.2.b.1
+
+Are any modalities supplied?
+
+2.2
+
+2.2.2.b
+
+Completeness
+
+3
+
+F2.2.2.b.2
+
+Are all provided modalities accurate?
+
+2.2
+
+2.2.2.b
+
+Correctness
+
+3
+
+2.2.2.c
+
+If publicly known, list private datasets obtained from other third parties
+
+F2.2.2.c.1
+
+Does this field only provide a list of publicly known private datasets obtained from other third parties without license?
+
+2.2
+
+2.2.2.c
+
+Clarity
+
+20
+
+F2.2.2.c.2
+
+Are any publicly known private datasets obtained from third parties without license, which were used for this model, left out?
+
+2.2
+
+2.2.2.c
+
+Correctness
+
+20
+
+F2.2.2.c.3
+
+Are specific versions of the datasets listed?
+
+2.2
+
+2.2.2.c
+
+Clarity
+
+20
+
+F2.2.2.c.4
+
+Are links to relevant information provided?
+
+2.2
+
+2.2.2.c
+
+Accessibility
+
+20
+
+2.2.2.d
+
+General description of non-publicly known private datasets obtained from third parties
+
+F2.2.2.d.1
+
+Are general descriptions provided for all non-publicly known, non-licensed private datasets obtained from third parties which were used?
+
+2.2
+
+2.2.2.d
+
+Completeness
+
+16
+
+F2.2.2.d.2
+
+Does the field only contain such descriptions?
+
+2.2
+
+2.2.2.d
+
+Clarity
+
+16
+
+F2.2.2.d.3
+
+Do the descriptions contain information relating to the types of modality contained in the datasets?
+
+2.2
+
+2.2.2.d
+
+Completeness
+
+16
+
+F2.2.2.d.4
+
+Do the descriptions contain information relating to the nature of the content contained in the datasets?
+
+2.2
+
+2.2.2.d
+
+Completeness
+
+16
+
+F2.2.2.d.5
+
+Do the descriptions contain information relating to the linguistic characteristics of the datasets, where applicable?
+
+2.2
+
+2.2.2.d
+
+Completeness
+
+16
+
+F2.2.2.d.6
+
+Do the descriptions contain any other relevant information?
+
+2.2
+
+2.2.2.d
+
+Completeness
+
+16
+
+F2.2.2.d.7
+
+Are the descriptions provided clearly readable, such that someone without expertise could understand them?
+
+2.2
+
+2.2.2.d
+
+Comprehension
+
+16
+
+F2.2.2.d.8
+
+Do the descriptions limit themselves to relevant information?
+
+2.2
+
+2.2.2.d
+
+Clarity
+
+16
+
+F2.2.2.d.9
+
+Are all descriptions accurate?
+
+2.2
+
+2.2.2.d
+
+Correctness
+
+16
+
+2.2.2.e
+
+Additional comments (optional)
+
+F2.2.2.e.1
+
+Is information relating to the period of data collection provided?
+
+2.2
+
+2.2.2.e
+
+Completeness
+
+3
+
+F2.2.2.e.2
+
+Is information relating to the size of the datasets provided?
+
+2.2
+
+2.2.2.e
+
+Completeness
+
+3
+
+F2.2.2.e.3
+
+Are other relevant details provided in this field?
+
+2.2
+
+2.2.2.e
+
+Completeness
+
+3
+
+F2.2.2.e.4
+
+Is all information provided in this field relevant?
+
+2.2
+
+2.2.2.e
+
+Clarity
+
+3
+
+F2.2.2.e.5
+
+Is all information provided in this field accurate?
+
+2.2
+
+2.2.2.e
+
+Correctness
+
+3
+
+2.3
+
+Data crawled and scraped from online sources
+
+F2.3.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.3
+
+2.3
+
+Consistency
+
+3
+
+2.3.a
+
+Were crawlers used by the provider or on behalf of?
+
+F2.3.a.1
+
+Is this field filled in?
+
+2.3
+
+2.3.a
+
+Completeness
+
+3
+
+F2.3.a.2
+
+Is this field accurate?
+
+2.3
+
+2.3.a
+
+Correctness
+
+3
+
+2.3.b
+
+If yes, specify crawler name(s)/identifier(s)
+
+F2.3.b.1
+
+Does the field only contain crawler name(s)/identifier(s)?
+
+2.3
+
+2.3.b
+
+Clarity
+
+15
+
+F2.3.b.2
+
+Can these name(s)/identifier(s) each be used to identify specific crawlers?
+
+2.3
+
+2.3.b
+
+Clarity
+
+15
+
+F2.3.b.3
+
+Were all crawlers which are listed indeed used?
+
+2.3
+
+2.3.b
+
+Correctness
+
+15
+
+F2.3.b.4
+
+Are all crawlers which were used described?
+
+2.3
+
+2.3.b
+
+Completeness
+
+15
+
+F2.3.b.5
+
+Is the information provided in a clearly-structured form?
+
+2.3
+
+2.3.b
+
+Clarity
+
+15
+
+2.3.c
+
+Purposes of the crawler(s)
+
+F2.3.c.1
+
+Are descriptions relating to the purposes of the crawler(s) provided?
+
+2.3
+
+2.3.c
+
+Completeness
+
+10
+
+F2.3.c.2
+
+Are descriptions provided for each crawler?
+
+2.3
+
+2.3.c
+
+Completeness
+
+10
+
+F2.3.c.3
+
+Are these descriptions understandable, such that someone without specialized expertise can understand the purposes of the crawlers?
+
+2.3
+
+2.3.c
+
+Comprehension
+
+10
+
+F2.3.c.4
+
+Does the field only contain information relating to the purposes of the crawlers listed?
+
+2.3
+
+2.3.c
+
+Clarity
+
+10
+
+F2.3.c.5
+
+Are all of the descriptions accurate?
+
+2.3
+
+2.3.c
+
+Correctness
+
+10
+
+2.3.d
+
+General description of crawler behaviour
+
+F2.3.d.1
+
+Is a general description of crawler behavior provided?
+
+2.3
+
+2.3.d
+
+Completeness
+
+10
+
+F2.3.d.2
+
+If a description is provided, does it contain information relating to the respect of captchas by crawlers?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.3
+
+If a description is provided, does it contain information relating to the handling of password protected websites by crawlers?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.4
+
+If a description is provided, does it contain information relating to the handling of paywalls by crawlers?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.5
+
+If a description is provided, does it contain information relating to the respect of robots.txt by crawlers?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.6
+
+If a description is provided, does it contain information relating to the respect of protocols outside of robots.txt by crawlers?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.7
+
+Does the description contain other relevant information?
+
+2.3
+
+2.3.d
+
+Completeness
+
+10
+
+F2.3.d.8
+
+Is the description clearly understandable, such that someone without detailed technical knowledge can understand the crawler behavior?
+
+2.3
+
+2.3.d
+
+Comprehension
+
+10
+
+F2.3.d.9
+
+Does the description limit itself to relevant information?
+
+2.3
+
+2.3.d
+
+Clarity
+
+10
+
+F2.3.d.10
+
+Is the description accurate?
+
+2.3
+
+2.3.d
+
+Correctness
+
+10
+
+2.3.e
+
+Period of data collection
+
+F2.3.e.1
+
+Is a period of data collection provided?
+
+2.3
+
+2.3.e
+
+Completeness
+
+7
+
+F2.3.e.2
+
+If a period of data collection is provided, is it provided for each crawler?
+
+2.3
+
+2.3.e
+
+Clarity
+
+7
+
+F2.3.e.3
+
+If a period of data collection is provided, are exact dates given?
+
+2.3
+
+2.3.e
+
+Clarity
+
+7
+
+F2.3.e.4
+
+If exact dates are given, are these in the appropriate format (MM/YYYY)?
+
+2.3
+
+2.3.e
+
+Correctness
+
+7
+
+F2.3.e.5
+
+Is all information provided accurate?
+
+2.3
+
+2.3.e
+
+Correctness
+
+7
+
+2.3.f
+
+Comprehensive description of the type of content and online sources crawled
+
+F2.3.f.1
+
+Is information relating to the geographical characteristics of the crawled content provided?
+
+2.3
+
+2.3.f
+
+Completeness
+
+13
+
+F2.3.f.2
+
+Is information relating to the linguistic characteristics of the crawled content provided?
+
+2.3
+
+2.3.f
+
+Completeness
+
+13
+
+F2.3.f.3
+
+Is information relating to the demographic characteristics of the crawled content provided?
+
+2.3
+
+2.3.f
+
+Completeness
+
+13
+
+F2.3.f.4
+
+Is an indication given regarding which type(s) of websites are scraped?
+
+2.3
+
+2.3.f
+
+Completeness
+
+13
+
+F2.3.f.5
+
+Is any other pertinent information relating to the types of content crawled provided?
+
+2.3
+
+2.3.f
+
+Completeness
+
+13
+
+F2.3.f.6
+
+Is all provided information relevant?
+
+2.3
+
+2.3.f
+
+Comprehension
+
+13
+
+F2.3.f.7
+
+Is all provided information accurate?
+
+2.3
+
+2.3.f
+
+Correctness
+
+13
+
+2.3.g
+
+Type of modality covered
+
+F2.3.g.1
+
+Are any modalities supplied?
+
+2.3
+
+2.3.g
+
+Completeness
+
+3
+
+F2.3.g.2
+
+Are all provided modalities accurate?
+
+2.3
+
+2.3.g
+
+Correctness
+
+3
+
+2.3.h
+
+Summary of the most relevant domain names crawled
+
+F2.3.h.1
+
+Is a list of the most relevant internet domains provided as per the requirements?
+
+2.3
+
+2.3.h
+
+Completeness
+
+25
+
+F2.3.h.2
+
+Is the provided list accurate?
+
+2.3
+
+2.3.h
+
+Correctness
+
+25
+
+F2.3.h.3
+
+Is the provided list easily accessible?
+
+2.3
+
+2.3.h
+
+Accessibility
+
+25
+
+F2.3.h.4
+
+Is the provided list provided in a straightforwardly readable format?
+
+2.3
+
+2.3.h
+
+Comprehension
+
+25
+
+2.3.i
+
+Additional comments (optional)
+
+F2.3.i.1
+
+In this field, are more domains disclosed than those required in the list above?
+
+2.3
+
+2.3.i
+
+Clarity
+
+20
+
+F2.3.i.2
+
+Are the URLs and sources of individual works provided in this field?
+
+2.3
+
+2.3.i
+
+Clarity
+
+20
+
+F2.3.i.3
+
+Are other relevant details provided in this field?
+
+2.3
+
+2.3.i
+
+Clarity
+
+20
+
+F2.3.i.4
+
+Is all information provided in this field relevant?
+
+2.3
+
+2.3.i
+
+Comprehension
+
+20
+
+F2.3.i.5
+
+Is all information provided in this field accurate?
+
+2.3
+
+2.3.i
+
+Correctness
+
+20
+
+2.4
+
+User data
+
+F2.4.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.4
+
+2.4
+
+Consistency
+
+3
+
+2.4.a
+
+Was data from user interactions with the AI model (e.g. user input and prompts) used to train the model?
+
+F2.4.a.1
+
+Is this field filled in?
+
+2.4
+
+2.4.a
+
+Completeness
+
+3
+
+F2.4.a.2
+
+Is this field accurate?
+
+2.4
+
+2.4.a
+
+Correctness
+
+3
+
+2.4.b
+
+Was data collected from user interactions with the provider's other services or products used to train the model?
+
+F2.4.b.1
+
+Is this field filled in?
+
+2.4
+
+2.4.b
+
+Completeness
+
+5
+
+F2.4.b.2
+
+Is this field accurate?
+
+2.4
+
+2.4.b
+
+Correctness
+
+5
+
+2.4.c
+
+If yes, provide a general description of the provider's services or products that were used to collect the user data
+
+F2.4.c.1
+
+Does this field only contain the relevant services or products by the provider used to train the model?
+
+2.4
+
+2.4.c
+
+Clarity
+
+15
+
+F2.4.c.2
+
+Are the services or products each clearly identified?
+
+2.4
+
+2.4.c
+
+Comprehension
+
+15
+
+F2.4.c.3
+
+Are all involved services or products by the provider listed?
+
+2.4
+
+2.4.c
+
+Completeness
+
+15
+
+F2.4.c.4
+
+Is the description provided in a readable format?
+
+2.4
+
+2.4.c
+
+Accessibility
+
+15
+
+2.4.d
+
+Type of modality covered
+
+F2.4.d.1
+
+Are any modalities supplied?
+
+2.4
+
+2.4.d
+
+Completeness
+
+3
+
+F2.4.d.2
+
+Are all provided modalities accurate?
+
+2.4
+
+2.4.d
+
+Correctness
+
+3
+
+2.4.e
+
+Additional comments (optional)
+
+F2.4.e.1
+
+Are relevant details provided in this field?
+
+2.4
+
+2.4.e
+
+Completeness
+
+1
+
+F2.4.e.2
+
+Is all information provided in this field relevant?
+
+2.4
+
+2.4.e
+
+Clarity
+
+1
+
+F2.4.e.3
+
+Is all information provided in this field accurate?
+
+2.4
+
+2.4.e
+
+Correctness
+
+1
+
+2.5
+
+Synthetic data
+
+F2.5.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.5
+
+2.5
+
+Consistency
+
+3
+
+2.5.a
+
+Was synthetic AI-generated data created by the provider or on their behalf to train the model?
+
+F2.5.a.1
+
+Is this field filled in?
+
+2.5
+
+2.5.a
+
+Completeness
+
+1
+
+F2.5.a.2
+
+Is this field accurate?
+
+2.5
+
+2.5.a
+
+Correctness
+
+1
+
+2.5.b
+
+If yes, modality of the synthetic data
+
+F2.5.b.1
+
+Are any modalities supplied?
+
+2.5
+
+2.5.b
+
+Completeness
+
+3
+
+F2.5.b.2
+
+Are all provided modalities accurate?
+
+2.5
+
+2.5.b
+
+Correctness
+
+3
+
+2.5.c
+
+If yes, specify the general-purpose AI model(s) used to generate the synthetic data if available on the market
+
+F2.5.c.1
+
+If yes was ticked, are models provided?
+
+2.5
+
+2.5.c
+
+Completeness
+
+12
+
+F2.5.c.2
+
+If models are provided, are these uniquely identifiable?
+
+2.5
+
+2.5.c
+
+Clarity
+
+12
+
+F2.5.c.3
+
+Are the correct models provided?
+
+2.5
+
+2.5.c
+
+Correctness
+
+12
+
+F2.5.c.4
+
+Is a link to the Summary(ies) of the relevant models provided where such a summary is available?
+
+2.5
+
+2.5.c
+
+Comprehension
+
+12
+
+F2.5.c.5
+
+Does the field only contain the list of GPAI models used and a link to their Summary(ies) where available?
+
+2.5
+
+2.5.c
+
+Clarity
+
+12
+
+2.5.d
+
+Information about other AI models, includer provider's own AI model(s) not available on the market, used to generate synthetic data to train the model to which this Summary applies
+
+F2.5.d.1
+
+Is information provided for each AI model used to generate synthetic data which is not available on the market?
+
+2.5
+
+2.5.d
+
+Completeness
+
+12
+
+F2.5.d.2
+
+Does the field only contain information about the relevant group of AI models?
+
+2.5
+
+2.5.d
+
+Clarity
+
+12
+
+F2.5.d.3
+
+Does the information provided include a general description of each model's training data if known and necessary as described?
+
+2.5
+
+2.5.d
+
+Comprehension
+
+12
+
+F2.5.d.4
+
+Is any other relevant information about the relevant group of AI models provided?
+
+2.5
+
+2.5.d
+
+Clarity
+
+12
+
+F2.5.d.5
+
+Is all provided information accurate?
+
+2.5
+
+2.5.d
+
+Correctness
+
+12
+
+2.5.e
+
+Additional comments (optional)
+
+F2.5.e.1
+
+Is relevant information provided in this field?
+
+2.5
+
+2.5.e
+
+Completeness
+
+1
+
+F2.5.e.2
+
+Is all information provided in this field relevant?
+
+2.5
+
+2.5.e
+
+Clarity
+
+1
+
+F2.5.e.3
+
+Is all information provided in this field accurate?
+
+2.5
+
+2.5.e
+
+Correctness
+
+1
+
+2.6
+
+Other sources of data
+
+F2.6.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+2.5
+
+2.6
+
+Consistency
+
+3
+
+2.6.a
+
+Have data sources other than those described in Sections 2.1 to 2.5. been used to train the model?
+
+F2.6.a.1
+
+Is this field filled in?
+
+2.5
+
+2.6.a
+
+Completeness
+
+2
+
+F2.6.a.2
+
+Is this field accurate?
+
+2.5
+
+2.6.a
+
+Correctness
+
+2
+
+2.6.b
+
+If yes, provide a narrative description of these data sources and the data
+
+F2.6.b.1
+
+Does this field contain relevant information relating to the miscellaneous data sources and their data?
+
+2.5
+
+2.6.b
+
+Completeness
+
+17
+
+F2.6.b.2
+
+Does this field restrict itself to relevant information relating to the miscellaneous data sources and their data?
+
+2.5
+
+2.6.b
+
+Clarity
+
+17
+
+F2.6.b.3
+
+Is all information accurate?
+
+2.5
+
+2.6.b
+
+Correctness
+
+17
+
+F2.6.b.4
+
+Is the information provided in a clearly readable format?
+
+2.5
+
+2.6.b
+
+Accessibility
+
+17
+
+2.6.c
+
+Additional comments (optional), for other sources of data
+
+F2.6.c.1
+
+Is relevant information provided in this field?
+
+2.5
+
+2.6.c
+
+Completeness
+
+1
+
+F2.6.c.2
+
+Is all information provided in this field relevant?
+
+2.5
+
+2.6.c
+
+Correctness
+
+1
+
+F2.6.c.3
+
+Is all information provided in this field accurate?
+
+2.5
+
+2.6.c
+
+Accessibility
+
+1
+
+3
+
+SECTION 3
+
+F3.1
+
+Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?
+
+3
+
+3
+
+Consistency
+
+3
+
+3.1
+
+Respect of reservation of rights from text and data mining exception or limitation
+
+3.1.a
+
+Are you a Signatory to the Code of Practice for general-purpose AI models that includes commitments to respect reservations of rights from the TDM exception or limitation?
+
+F3.1.a.1
+
+Is this field filled in?
+
+3
+
+3.1.a
+
+Completeness
+
+3
+
+F3.1.a.2
+
+Is this field accurate?
+
+3
+
+3.1.a
+
+Correctness
+
+3
+
+3.1.b
+
+Describe the measures implemented before model training to respect reservations of rights from the TDM exception or limitation before and during data collection, including the opt-out proticols and solutions honoured by the provider or, as applicable, by third parties from which datasets have been obtained
+
+F3.1.b.1
+
+Does the provider describe how they respect robots.txt?
+
+3
+
+3.1.b
+
+Comprehension
+
+18
+
+F3.1.b.2
+
+Does the provider describe how they use datasets with opt-out mechanisms, if applicable?
+
+3
+
+3.1.b
+
+Comprehension
+
+18
+
+F3.1.b.3
+
+Does the provider describe how they ensure that they are up to date with user rights requests?
+
+3
+
+3.1.b
+
+Comprehension
+
+18
+
+F3.1.b.4
+
+Is all other information relevant?
+
+3
+
+3.1.b
+
+Clarity
+
+18
+
+F3.1.b.5
+
+Is all information provided accurate?
+
+3
+
+3.1.b
+
+Correctness
+
+18
+
+3.1.c
+
+Additional comments (optional)
+
+F3.1.c.1
+
+Is a summary of the providers copyright policy provided, if this policy is made publicly available?
+
+3
+
+3.1.c
+
+Completeness
+
+5
+
+F3.1.c.2
+
+Is all other information provided relevant?
+
+3
+
+3.1.c
+
+Clarity
+
+5
+
+3.2
+
+Removal of illegal content
+
+3.2.a
+
+General decription of measures taken
+
+F3.2.a.1
+
+Are any measures described to avoid or remove illegal content under Union law from the training data?
+
+3
+
+3.2.a
+
+Completeness
+
+15
+
+F3.2.a.2
+
+If measures are described, are these measures described in an easily understandable manner?
+
+3
+
+3.2.a
+
+Comprehension
+
+15
+
+F3.2.a.3
+
+If measures are described, is the information provided accurate?
+
+3
+
+3.2.a
+
+Correctness
+
+15
+
+F3.2.a.4
+
+Is all information provided pertinent? In particular, does the information not include an information relating to data selection practices, for example to increase the capability of the model?
+
+3
+
+3.2.a
+
+Accessibility
+
+15
+
+3.3
+
+Other information (optional)
+
+3.3.a
+
+Other relevant information about data processing (optional)
+
+F3.3.a.1
+
+Is any additional information provided?
+
+3
+
+3.3.a
+
+Completeness
+
+1
+
+F3.3.a.2
+
+If yes, is this relevant to data processing aspects and measures taken before or after training model that his relevant for the respect and exercise of rights protected under Union law?
+
+3
+
+3.3.a
+
+Clarity
+
+1
+
+F3.3.a.3
+
+If yes, is this information accurate?
+
+3
+
+3.3.a
+
+Correctness
+
+1
+
+Evaluation Strategy
+
+Model Scoping
+
+            For our selection of GPAI models, we undertake a filtering approach spanning each criterion provided in the AI Act. At a high level, our filtering approach can be seen as undertaking the following steps:
+
+Evaluating whether a given model meets the generality requirement.
+
+Evaluating whether a given model likely meets the FLOP requirement.
+
+Evaluating whether a given model is produced by a commercial entity or is
+provided in the course of a commercial activity
+.
+
+Evaluating whether a given model is
+placed on the EU market
+.
+
+Public Summary Discovery
+
+We expected the public summary to be explicitly indicated as such (i.e. titled 'public summary') or by referring to AI Act's Article 53(1)(d) obligations or broadly referring to AI Act compliance.
+
+We utilised a combination of search engines (using queries such as "public summary of training content" and "Article 53(1)(d) public summary") and utilising experimental web-search features of GenAI services such as Google Search and ChatGPT.
+
+We also undertook a manual discovery process where we looked at:
+
+The webpage or README in the repository where the model weights or model card are provided;
+
+The legal or compliance page on the model provider's webpage;
+
+The technical report or paper where the model's architecture and functioning are described.
+
+Evaluation Steps
+
+The evaluator scores each (granular) metric by assesses the corresponding information field and element, and records a value that reflects their findings as:
+
+sufficient
+ (scored as
+1
+) to indicate the provided information meets or satisfies the requirement e.g. by being clear, or being complete;
+
+insufficient
+ (scored as
+0
+) to indicate either an absence of information or where the information does not meet the
+                        criteria of the metric e.g. by being obfuscated or being
+                        incomprehensible; and
+
+partially sufficient
+ (scored as
+
+0.5
+) to indicate that information partially satisfies the
+                        requirement.
+
+The final score for each metric is then multiplied by the weight.
+
+Note:
+ If a specific metric or section is not applicable, then it is not given a '0' but is marked as 'N/A'. There is no penalty for the public summary providing no information in non-applicable sections, and the maximum possible score includes only those sections/metrics that are applicable.
+
+Each dimension within a section is scored by taking the sum of all metrics associated with that dimension and section.
+
+The transparency and usefulness scores are then calculated for each section by taking the sum of the scores of their respective dimensions.
+
+The scores are then converted to percentages for convenience and ease of comparison across documents by dividing them by the maximum possible score i.e. the sum of maximum scores for each selected/evaluated metric. (as noted above, if a metric/field is not applicable, it is not included in the scoring).
+
+A letter grade system from
+A
+ as the highest quality and
+F
+ as the lowest quality is assigned based on the scores to enable stakeholders to understand quality implications at a glance.
+
+Ongoing Works and Limitations
+
+We are currently working to provide greater clarity on which models should be required to publish the public summary based on the criteria established in the AI Act and the associated guidelines. We are also working on developing more concrete recommendations for providers to publish their public summaries in a consistent and useful manner. We welcome engagements and contributions towards this.
+
+Frequently Asked Questions (FAQ)
+
+This section is intended to provide help for Providers and other stakeholders looking to better understand the scores provided in the
+overview
+ and analysis pages. The scores represent the calculated final percentages for the specific sections based on an evaluation carried out using our granular metrics (see above section).
+
+Sections without information / Why did this this section get a '0' (zero)?
+ A score of 0 means the section was applicable, but no information was provided.
+
+Sections not applicable / What does 'N/A' mean?
+ It means 'not applicable' i.e. the section is not applicable and therefore does not need to be filled. There is no negative marking or penalty fo this as the total score and grade is only calculated based on applicable sections.
+
+No public summary exists / What does "!" (exclamation) mean?
+ For models where we could not find any public summary, we marked these using the ! mark.
+
+What are the exact issues in a given summary?
+ Each analysis page provides our notes which highlight the found issues and our suggestions on how to resolve them. As the framework is quite large (see granular metrics above), it is difficult to depict it in a convenient manner. However, we welcome engagements to further discuss the scores, found issues, and how the quality of the document can be improved -- please see the contact page.
+
+What should be done to improve the summary?
+ (see above for suggestions in analysis page) Our granular metrics suggest specific questions that can be used to do a self-assessment.
+
+Other issues / queries
+ Please
+get in touch
+ with us.
+
+Website Development
+
+            We were inspired by previous approaches which analysed GPAI models and developed a website to share their assessments, in particular the
+
+Open Source AI Index (OSAI)
+ and its predecessor
+Opening up ChatGPT
+ (see the
+
+🔗
+FAccT'24 paper
+).
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

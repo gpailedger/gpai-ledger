@@ -1,0 +1,688 @@
+GPAI Training Transparency
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+GPAI Training Transparency
+
+A Quality Assessment of Public Summaries published under AI Act Article 53(1)(d)
+
+The
+AI Act's Article 53(1)(d)
+ requires General-Purpose AI (GPAI) model providers to
+"make publicly available a sufficiently detailed summary about the content used for training ... according to a template provided by the AI Office"
+. We evaluate the
+quality
+ for this documentation across two aspects:
+Transparency
+ and
+Usefulness
+ and assign a score using
+our developed methodology
+. To assist GPAI Providers, the AI Office, and stakeholders, we also work on providing
+recommendations
+.
+
+Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+ (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo.
+DOI:10.5281/zenodo.18803975
+
+This work has been featured in Euractiv as "
+Researchers have trouble finding AI training data summaries
+; and in an article in Tech Policy Press as "
+How Big AI Developers are Skirting a Mandate for Training Data Transparency
+.
+
+        The industry is yet to react significantly to Article 53(1)(d), with only a handful of GPAI model providers having yet published their public summaries for training content. These include high-quality summaries which shows the obligation is not a burden, and our framework is helpful to not only assess the quality, but to also improve it further.
+
+Please let us know if you come across additional public summaries.
+
+Evaluated Public Summaries
+
+Below is an overview of the evaluation with each model assigned a grade.
+A+
+ is the highest grade and
+F
+ the lowest, with
+!
+ shown for missing summaries. Click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. You can also see a
+detailed overview
+ of scores for each section of the public summary.
+
+Model
+
+Provider
+
+Transparency
+
+Usefulness
+
+Apertus
+
+Swiss AI Initiative
+
+                Swiss AI Initiative
+
+A
+
+A+
+
+FIBO
+
+Bria AI
+
+                Bria AI
+
+B+
+
+A+
+
+Bria 3.2
+
+Bria AI
+
+                Bria AI
+
+B+
+
+A
+
+SmolLM3-3B
+
+HuggingFace
+
+                HuggingFace
+
+B+
+
+B+
+
+Domyn Large
+
+Domyn
+
+                Domyn
+
+B+
+
+B+
+
+Bielik v3 11B Instruct
+
+SpeakLeash
+
+                SpeakLeash
+
+B+
+
+C+
+
+Adobe Firefly
+
+Adobe
+
+                Adobe
+
+C+
+
+B+
+
+Inkling
+
+Thinking Machines
+
+                Thinking Machines
+
+C+
+
+C+
+
+Inkling Small
+
+Thinking Machines
+
+                Thinking Machines
+
+C+
+
+C+
+
+FLUX.3
+
+Black Forest Labs
+
+                Black Forest Labs
+
+B
+
+C
+
+Nova 2 Lite
+
+Amazon
+
+                Amazon
+
+C+
+
+C+
+
+FastwebMIIA
+
+Fastweb
+
+                Fastweb
+
+C
+
+C+
+
+MAI Cyber 1 Flash
+
+Microsoft AI
+
+                Microsoft AI
+
+C+
+
+C
+
+Minimax M3
+
+Minimax
+
+                Minimax
+
+C+
+
+D+
+
+MAI Code 1 Flash
+
+Microsoft AI
+
+                Microsoft AI
+
+C+
+
+C
+
+MAI-Image-2.5
+
+Microsoft
+
+                Microsoft
+
+C+
+
+D+
+
+Ministral 3 14B
+
+Mistral AI
+
+                Mistral AI
+
+C
+
+C
+
+Ministral 3 3B
+
+Mistral AI
+
+                Mistral AI
+
+C
+
+C
+
+Ministral 3 8B
+
+Mistral AI
+
+                Mistral AI
+
+C
+
+C
+
+MAI-Image-2
+
+Microsoft
+
+                Microsoft
+
+C+
+
+D+
+
+GPT-5.6 Luna
+
+OpenAI
+
+                OpenAI
+
+C+
+
+D+
+
+Apertus v1.5
+
+Swiss AI Initiative
+
+                Swiss AI Initiative
+
+C
+
+C+
+
+GPT-5.5
+
+OpenAI
+
+                OpenAI
+
+C+
+
+D+
+
+Gemma 4
+
+Google
+
+                Google
+
+C
+
+C
+
+Gemini 3 Pro
+
+Google
+
+                Google
+
+C
+
+C
+
+Mistral Small 4 119B 2603
+
+Mistral AI
+
+                Mistral AI
+
+C
+
+C
+
+Mistral Large 3 675B Base 2512
+
+Mistral AI
+
+                Mistral AI
+
+C
+
+C
+
+Grok 4.5
+
+xAI
+
+                xAI
+
+C
+
+C
+
+C4AI Command A Plus 05 2026
+
+Cohere
+
+                Cohere
+
+C
+
+C
+
+Claude Opus 5
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Claude Mythos Preview
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Claude Opus 4.7
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Claude Opus 4.8
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Claude Sonnet 5
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Claude Mythos 5 / Claude Fable 5
+
+Anthropic
+
+                Anthropic
+
+C
+
+D+
+
+Muse Image
+
+Meta
+
+                Meta
+
+C
+
+D+
+
+Muse Spark
+
+Meta
+
+                Meta
+
+C
+
+D+
+
+Phi-4
+
+Microsoft
+
+                Microsoft
+
+D
+
+F
+
+FLUX.2 [max]
+
+Black Forest Labs
+
+                Black Forest Labs
+
+!
+
+!
+
+Granite 4.1 30B Base
+
+IBM
+
+                IBM
+
+!
+
+!
+
+Veo 3.1
+
+Google
+
+                Google
+
+!
+
+!
+
+Palmyra X5
+
+WRITER
+
+                WRITER
+
+!
+
+!
+
+Claude Opus 4.6
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+Claude Sonnet 4.6
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+GPT Image 2
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+North Mini Code 1.0
+
+Cohere
+
+                Cohere
+
+!
+
+!
+
+FLUX.2
+
+Black Forest Labs
+
+                Black Forest Labs
+
+!
+
+!
+
+GPT-5.6 Sol
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+GPT-OSS
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+GPT-5.6 Terra
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+Apriel 1.5 15B Thinker
+
+ServiceNow
+
+                ServiceNow
+
+!
+
+!
+
+Claude Haiku 4.5
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+FLUX.2 Klein
+
+Black Forest Labs
+
+                Black Forest Labs
+
+!
+
+!
+
+Granite 4.0 H Small Base
+
+IBM
+
+                IBM
+
+!
+
+!
+
+Claude Opus 4.5
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+Sora 2
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+Claude Opus 4.1
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+Claude Sonnet 4.5
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+TL;DR
+
+Our work makes the following
+contributions
+:
+
+We provide a framework to assess the quality of public summaries of training content required under the AI Act's Article 53(1)(d).
+
+Our quality assessment metrics represent best practices for how the information in the public summary should be provided (
+transparency
+) in order for rightsholders to utilise it effectively (
+usefulness
+).
+
+We found only a handful published public summaries, and that they are mostly of a high-quality. Meanwhile other providers, noticeably larger ones, have not published anything yet. Our work sufficiently demonstrates that this is an intentional choice and that the legal obligation is not a burden as the current high-quality summaries are from small organisations and open source oriented efforts.
+
+Our work also contributes towards
+improving the ecosystem
+:
+
+We contend that compliance cannot be
+fait accompli
+, and that the public summaries are a key factor in creating transparency and enabling rights enforcement. Towards this, our work also acts as a guide for providers who are yet to publish their summaries to consider how to do so with the highest possible quality and utility.
+
+Compliance also invites practices that are intentionally or unintentionally deficient in achieving the goals. Our work serves as a useful tool for describing how and where and why certain practices are 'bad', e.g., where they use obfuscation, do not provide stated information. Using this, we can detect trends or patterns in whether the same issues occur in many summaries, and if so, how they can be collectively addressed through guidance, or enforced with priority.
+
+The largest challenge in undertaking this work has been finding public summaries as there is no consistent format or practice for how they should be provided. For this, we provide
+recommendations
+.
+
+The template for public summaries provided by the AI Office is intended to be revised with time to improve the state of documentation as well as to better guide the providers. We also provide
+recommendations
+ for these to improve the quality and accessibility of the public summaries.
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

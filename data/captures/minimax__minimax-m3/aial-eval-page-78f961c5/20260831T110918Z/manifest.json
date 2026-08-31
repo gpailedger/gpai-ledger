@@ -1,0 +1,39 @@
+{
+  "source_id": "minimax/minimax-m3",
+  "provider": "Minimax",
+  "model": "Minimax M3",
+  "target_kind": "aial-eval-page",
+  "sha256": "652fe4fddcb38ff1a526a068febb9b03f38e70be003a344ed01a5f9d271cfe2b",
+  "size_bytes": 19758,
+  "stored_as": "raw.html",
+  "text_sha256": "d22ca614dfdc3dd7c7facffe51a032bc944d669eb5031b359a17132d61335771",
+  "doc_links_sha256": "ee704176a52e80dab2d4e851a0d18a98046df95d43dc3fe9646ad3408cfd0e7b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/be1d29e427ac26cc4c958f1ad2d86a4767775159/public/evals/minimax-m3/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/be1d29e427ac26cc4c958f1ad2d86a4767775159/public/evals/minimax-m3/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"bd9540f72cb309fc0e205ae0612acd65773e2e189f0ee80231a5987abfd31951\"",
+    "last_modified": null,
+    "content_length": "3629",
+    "fetched_at": "2026-08-31T11:09:18Z"
+  },
+  "prior_sha256": "e94987b1f6c26ab8dc464449a3514ae7952806bc63a69e6bed69b18009291584",
+  "git_commit": "be1d29e427ac26cc4c958f1ad2d86a4767775159",
+  "git_commit_date": "2026-08-06T07:20:41Z",
+  "git_blob_sha": "445a390d918ffba08d9f82100c9e49bda1cec1bc",
+  "git_path": "public/evals/minimax-m3/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:09:24Z"
+  }
+}

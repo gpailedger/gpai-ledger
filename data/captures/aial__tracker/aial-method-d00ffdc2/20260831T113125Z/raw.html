@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analysis of AI Act Art.53(1)(d) Public Summaries</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <script src="./static/sorttable.js"></script>
+    <style>
+article {
+    max-width: 90vw;
+}
+#table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    display: table;
+}
+#evaluations {
+    font-size: 0.5rem;
+}
+#evaluations .grade.na { background-color:darkgray; }
+#evaluations th:nth-child(1),td:nth-child(1) { 
+    text-align: end;
+    padding-right: 5px;
+}
+th {
+    text-align: center;
+    padding: 0px;
+}
+td {
+    font-size: 0.5rem;
+    padding: 2px;
+    width: 25px;
+}
+.name-cell {
+    font-size: 0.8rem;
+    width: 150px;
+}
+li {
+    font-size: 0.8rem;
+}
+      .sticky-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        background: #F33;
+        color: #fff;
+        padding: 20px 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 999;
+      }
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li><a href="./blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="./about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+ 
+    <header>
+        <h1>Overview of Quality Assessment Findings</h1>
+        <p style="font-size: 0.8rem;">This page provides an overview of our assessment of <a href="list_summaries"><strong><em>38 public summaries</em></strong></a>. Each summary is scored for two dimensions: <strong>Transparency (T)</strong> on how the information is provided, and <strong> Usefulness (U)</strong> for whether it is sufficient for stakeholders' needs. For convenience, all scores are reflected as a percentage (out of hundred) and the grades are expressed on a scale from A+ (highest) to F (lowest). Sections in public summaries that were not filled in because they were not applicable are marked as "N/A".  You can click on the model name for a detailed description of the scores and our notes. The evaluation steps are described on our <a href="methodology">methodology page</a> along with a <a href="methodology#FAQ">FAQ</a>.</p>
+        <p style="font-size: 0.75rem;"><strong><em>Note that this page does not display models whose summaries we are <a href="./#WIP">currently evaluating</a> nor models for which a public summary is <a href="./#missing">currently missing</a>.</em></strong>
+    </div>
+    </header>
+
+    <section id="results">
+        <div id="table-wrapper">
+        <table id="evaluations" class="table-mobile sortable">
+            <thead>
+                <tr class="main-header">
+                    <th>Section&rarr;</th>
+                    <th colspan="2">Grade</th>
+                    <th colspan="2">Overall</th>
+                    <th colspan="2">General Information</th>
+                    <th colspan="2">Public Data Sources</th>
+                    <th colspan="2">Private Data Sources</th>
+                    <th colspan="2">Scraped/Crawled Data</th>
+                    <th colspan="2">User Data</th>
+                    <th colspan="2">Synthetic & Other Data</th>
+                    <th colspan="2">Data Processing</th>
+                    <th colspan="2">Document</th>
+                </tr>
+                <tr class="second-header">
+                    <th>Model&darr;</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/apertus/"><u>Apertus</u></a></td>
+<td class="outline open data-cell grade">A&nbsp;&nbsp;</td>
+<td class="outline open data-cell grade">A+</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">97</td>
+<td class="partial data-cell grade">74</td>
+<td class="open data-cell grade">93</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/fibo/"><u>FIBO</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">A+</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">97</td>
+<td class="open data-cell grade">94</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">65</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">78</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/bria/"><u>Bria 3.2</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">A&nbsp;&nbsp;</td>
+<td class="open data-cell grade">86</td>
+<td class="open data-cell grade">94</td>
+<td class="partial data-cell grade">69</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">70</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/smollm3/"><u>SmolLM3-3B</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="open data-cell grade">82</td>
+<td class="open data-cell grade">86</td>
+<td class="partial data-cell grade">73</td>
+<td class="open data-cell grade">90</td>
+<td class="open data-cell grade">96</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">60</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">68</td>
+<td class="partial data-cell grade">58</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/domyn/"><u>Domyn Large</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="open data-cell grade">83</td>
+<td class="open data-cell grade">81</td>
+<td class="open data-cell grade">80</td>
+<td class="open data-cell grade">90</td>
+<td class="open data-cell grade">76</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">85</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">83</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">78</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">97</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">98</td>
+<td class="open data-cell grade">77</td>
+<td class="open data-cell grade">81</td>
+<td class="partial data-cell grade">57</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/bielik/"><u>Bielik v3 11B Instruct</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="open data-cell grade">89</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">93</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">83</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">98</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">88</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/adobe-firefly/"><u>Adobe Firefly</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">82</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">81</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">16</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">89</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/inkling/"><u>Inkling</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">67</td>
+<td class="partial data-cell grade">70</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">54</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">63</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/inkling-small/"><u>Inkling Small</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">67</td>
+<td class="partial data-cell grade">69</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">54</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">67</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/flux-3/"><u>FLUX.3</u></a></td>
+<td class="outline open data-cell grade">B&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="open data-cell grade">76</td>
+<td class="partial data-cell grade">59</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">61</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">45</td>
+<td class="open data-cell grade">75</td>
+<td class="open data-cell grade">89</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">21</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">78</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/nova-2-lite/"><u>Nova 2 Lite</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">71</td>
+<td class="partial data-cell grade">62</td>
+<td class="open data-cell grade">82</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">44</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">76</td>
+<td class="closed data-cell grade">39</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">80</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">88</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/fastwebmiia/"><u>FastwebMIIA</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">53</td>
+<td class="partial data-cell grade">73</td>
+<td class="partial data-cell grade">74</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">32</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">45</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">33</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">40</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-cyber-1-flash/"><u>MAI Cyber 1 Flash</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">69</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">79</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">58</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">23</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">80</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">79</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">26</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/minimax-m3/"><u>Minimax M3</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">70</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">64</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">52</td>
+<td class="closed data-cell grade">41</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">74</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">74</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">98</td>
+<td class="closed data-cell grade">35</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-code-1-flash/"><u>MAI Code 1 Flash</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">68</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">79</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">54</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">23</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">80</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">79</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">26</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-image-2_5/"><u>MAI-Image-2.5</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">71</td>
+<td class="closed data-cell grade">46</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">35</td>
+<td class="closed data-cell grade">44</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">80</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">65</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">26</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/ministral-3-14B/"><u>Ministral 3 14B</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">57</td>
+<td class="partial data-cell grade">58</td>
+<td class="partial data-cell grade">73</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">48</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">40</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">57</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/ministral-3-3B/"><u>Ministral 3 3B</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">57</td>
+<td class="partial data-cell grade">58</td>
+<td class="partial data-cell grade">73</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">48</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">40</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">57</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/ministral-3-8B/"><u>Ministral 3 8B</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">57</td>
+<td class="partial data-cell grade">58</td>
+<td class="partial data-cell grade">73</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">48</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">40</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">57</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-image-2/"><u>MAI-Image-2</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">70</td>
+<td class="closed data-cell grade">46</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">29</td>
+<td class="closed data-cell grade">44</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">80</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">65</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">26</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-5-6-luna/"><u>GPT-5.6 Luna</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">67</td>
+<td class="closed data-cell grade">47</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">7</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">73</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">92</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">65</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/apertus-1-5/"><u>Apertus v1.5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">54</td>
+<td class="partial data-cell grade">60</td>
+<td class="open data-cell grade">75</td>
+<td class="open data-cell grade">93</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">2</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-5-5/"><u>GPT-5.5</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">67</td>
+<td class="closed data-cell grade">47</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">50</td>
+<td class="closed data-cell grade">7</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">73</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">92</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">65</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gemma-4/"><u>Gemma 4</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">59</td>
+<td class="partial data-cell grade">53</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">54</td>
+<td class="closed data-cell grade">6</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">59</td>
+<td class="closed data-cell grade">39</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">88</td>
+<td class="partial data-cell grade">65</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gemini-3-pro/"><u>Gemini 3 Pro</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">59</td>
+<td class="partial data-cell grade">53</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">54</td>
+<td class="closed data-cell grade">6</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">59</td>
+<td class="closed data-cell grade">39</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">65</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mistral-large-3/"><u>Mistral Large 3 675B Base 2512</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">54</td>
+<td class="partial data-cell grade">58</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">47</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">40</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">50</td>
+<td class="closed data-cell grade">26</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mistral-small-4/"><u>Mistral Small 4 119B 2603</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">54</td>
+<td class="partial data-cell grade">58</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">47</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">40</td>
+<td class="closed data-cell grade">39</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">50</td>
+<td class="closed data-cell grade">26</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/grok-4.5/"><u>Grok 4.5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">57</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">77</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">7</td>
+<td class="closed data-cell grade">0</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">62</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">62</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">76</td>
+<td class="closed data-cell grade">35</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">63</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/command-a-plus/"><u>C4AI Command A Plus 05 2026</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">55</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">75</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">41</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">66</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">37</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">61</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">67</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-opus-4-7/"><u>Claude Opus 4.7</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-mythos-preview/"><u>Claude Mythos Preview</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-opus-5/"><u>Claude Opus 5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-sonnet-5/"><u>Claude Sonnet 5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-mythos-5-fable-5/"><u>Claude Mythos 5 / Claude Fable 5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-opus-4-8/"><u>Claude Opus 4.8</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">36</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">65</td>
+<td class="closed data-cell grade">24</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">51</td>
+<td class="closed data-cell grade">41</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">85</td>
+<td class="open data-cell grade">76</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/muse-image/"><u>Muse Image</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">53</td>
+<td class="closed data-cell grade">49</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">32</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">55</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">15</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">66</td>
+<td class="closed data-cell grade">48</td>
+<td class="open data-cell grade">83</td>
+<td class="partial data-cell grade">63</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/muse-spark/"><u>Muse Spark</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">53</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">32</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">55</td>
+<td class="closed data-cell grade">24</td>
+<td class="open data-cell grade">86</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">15</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">66</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">72</td>
+<td class="closed data-cell grade">47</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/phi-4/"><u>Phi-4</u></a></td>
+<td class="outline closed data-cell grade">D&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">F&nbsp;&nbsp;</td>
+<td class="closed data-cell grade">33</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">3</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">53</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">0</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">0</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">8</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">52</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </section> 
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

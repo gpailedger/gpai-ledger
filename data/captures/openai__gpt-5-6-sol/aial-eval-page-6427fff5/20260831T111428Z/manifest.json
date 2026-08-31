@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt-5-6-sol",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Sol",
+  "target_kind": "aial-eval-page",
+  "sha256": "6e865f7ffd74aa970adf86ac862c4e5f4e61261acf8cdbb3d415fc3830d92e3d",
+  "size_bytes": 11408,
+  "stored_as": "raw.html",
+  "text_sha256": "3d6316d9b4961a1fc3df41ea4a298496836c07937f24ab85b237f67f15399040",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-5-6-sol/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-5-6-sol/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"82ea5f63bf91d5dcfb98733c54b993d1a0fda19db08fcafd5a6fd28f210e0fa9\"",
+    "last_modified": null,
+    "content_length": "2291",
+    "fetched_at": "2026-08-31T11:14:28Z"
+  },
+  "prior_sha256": "ad44b8773459c1eb0762fad2b4371e2fd41236d262fcdfd561bbb4f42705a3e9",
+  "git_commit": "6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451",
+  "git_commit_date": "2026-08-06T10:01:05Z",
+  "git_blob_sha": "88619f4ad64e9200f588b30777167375f8c41162",
+  "git_path": "public/evals/gpt-5-6-sol/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:14:33Z"
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Methodology</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <style>
+body {
+    font-size: 0.75rem;
+}
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li style="margin-right: 5px;"><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>Methodology</h1>
+        <h2 style="font-size: 0.8rem;">Development of a Quality Assessment Framework for the AI Act's Article 53(1)(d) Public Summaries</h2>
+        <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+  <p>Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong> (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo. <a href="https://doi.org/10.5281/zenodo.18803975">DOI:10.5281/zenodo.18803975</a></p>
+</div>
+
+
+        <blockquote>
+            Using our quality assessment framework, a <em>'high-quality'</em> public summary is  a document that
+            provides information in a clear, structured, accurate, and consistent
+            manner (which means it has high <em>transparency</em>) such that it allows relevant stakeholders
+            to understand the training process and to take relevant actions where
+            necessary (which means it has high <em>usefulness</em>). This makes our quality scores a relevant measure of the degree to which the public summary achieves the intended goals as stated in the AI Act and the template's explanatory note.
+            <strong>Public summaries that are <em>'low-quality'</em>, i.e., they do not demonstrate sufficient transparency and usefulness, are also likely to not meet the Article 53(1)(d) obligations.</em>
+        </blockquote>
+    </header>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>The broad objective of our work is to support the implementation and enforcement of <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53#053.001">AI Act Article 53(1)(d)</a> that requires GPAI Providers to publish a public summary of training content based on the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models">template provided by the AI Office</a>. We do this by assessing the <i>quality</i> of the public summary across two key criteria: <i>Transparency</i> and <i>Usefulness</i>. Transparency refers to the extent of information provided through the public summary, and Usefulness represents the utility of provided information as well as its potential to be actionable by specific stakeholders. Using our framework, a 'high-quality' public summary is described as a document that provides information in a clear, structured, accurate, and consistent manner (transparency) such that it allows relevant stakeholders to understand the training process and to take relevant actions where necessary (usefulness). Public summaries that do not meet these requirements are considered as `low-quality', and are potentially in breach of the template and the corresponding Article 53(1)(d) obligations.</p>
+
+        <p>To assess <em>Transparency</em>, we identified 6 dimensions: <em>Clarity</em>,
+        <em>Completeness</em>, <em>Consistency</em>, and <em>Correctness</em>, and for <em>Usefulness</em> we identified <em>Accessibility</em> and
+        <em>Comprehension</em>. We then developed 242 <em>metrics</em> (or more generally, <i>questions</i>) as specific questions or criteria that evaluate each field in each section of the public summary template. Since the public summary is structured such that each section has different implications for stakeholders, e.g. some may be interested only in Section 2.2 or Section 3, we evaluate each section using these metrics and then aggregate their scores to get the overall quality. Applying this framework means taking each public summary and assessing it by scoring each of the 242 metrics/questions and then combining them to achieve the combined/aggregated scores. These terms and the methods used are well-established in the field of data governance as the process of 'data quality assessment', with our work based on the work that specialises these for 'documentation quality assesssment'.</p>
+
+
+
+        <p>Below we provide a comprehensive description of <a href="#development">the methodology used in our development process</a>, the <a href="#framework">quality assessment framework</a>, the <a href="#calculation">process for calculation of scores</a>, and <a href="#interpretation">guidance on interpretation of outcomes</a>.</p>
+    </section>
+
+    <section id="">
+        <h2>Development Process</h2>
+
+        <section id="">
+            <h3>Selection of Criteria/Dimensions</h3>
+            <p><a href="https://en.wikipedia.org/wiki/Data_quality">Data Quality Assessment</a> is a broad field that describes both qualitative and quantitative methods to evaluate the 'fitness', 'usefulness', or 'utility' towards specific purpose(s). By extension, <i>Documentation Quality Assessment</i> refers to evaluation of the documentation towards specific purposes, such as the role of technical documentation in equipping developers or engineers with a sufficient understanding of the system. Quality assessments consist of selecting 'dimensions', which are broad objectives that we want to assess, and then identifying specific 'metrics', which are granular evaluations, for example as tests or questions, whose answer produces a quantifiable number to represent degree to which the documentation satisfies the criteria. There are various ways in which the metrics can be combined to produce a single score or label for a dimension, and similarly there are various ways in which dimension scores can be consolidated to create an overall or global quality representation.</p>
+            <p>For our work, the document in question is the template for the public summary, which is not a dataset or a technical documentation, but is in essence a legally relevant document. This means 'quality' not only refers to typical characteristics associated with use of a document, but must also include the specific objectives of why the AI Act requires the public summary to be published in a specific manner and to include specific content. For practicality, we chose two hypothetical use-cases to guide what the assessment is intended to highlight: '<i>good faith</i>' implementations where we can see that a conscentious effort has been made to provide the summary as intended, and '<i>bad faith'</i> implementations where the summary has one or more major flaws -- intentional or otherwise. These corresponded to what we wanted to evaluate as <i>good faith</i> and <i>bad faith</i> respectively.</p>
+            <p>To start with, we conducted a literature review of documentation quality assessment frameworks, where we identified the different methods used and studied the dimensions used as well as their role in the assessment of specific information and use by stakeholders. From this, we selected the <a href="https://en.wikipedia.org/wiki/GQM">Goal, Question, Metric (GQM)</a> as our overall approach to structure the process. The GQM method provides a three-step process:</p>
+            <ol>
+                <li>Define the conceptual goal</li>
+                <li>For each goal, identify questions to describe the characteristics or model</li>
+                <li>For each question, what must be evaluated as a metric i.e. an assessment that produces a measurable result</li>
+            </ol>
+            <p>Using GQM, and considering the broader objectives of the public summary as established in the AI Act as well as in the explanatory note accompanying the template, we chose the following two as our broad goals:</p>
+            <ol>
+                <li><strong>Transparency:</strong> The extent to which the public summary provides the required information.</li>
+                <li><strong>Usefulness:</strong> The extent to which the provided information can be utilised for the intended purposes.</li>
+            </ol>
+            <p>To evaluate each of these, we utilised our literature survey to select 'dimensions' or 'categories of quality' that would provide the best model or description for the information in the public summary. For Transparency these were:</p>
+            <ol>
+                <li><strong>Clarity:</strong> Is the information unambiguous, easy to understand, and avoids misinterpretation?</li>
+                <li><strong>Completeness:</strong> Is the information relevant to what is asked is the necessary information provided?</li>
+                <li><strong>Consistency:</strong> Does the information use the appropriate terminology, format, and structure in a manner that is consistent within and across the document(s)?</li>
+                <li><strong>Correctness:</strong> Is the information accurate, validated, and reliable?</li>
+            </ol>
+            <p>By using these, a public summary that has a high degree of transparency can be understood as the document and the information being clear, complete, consistent, and correct. We identified similar dimensions for assessing Usefulness:</p>
+            <ol>
+                <li><strong>Accessibility:</strong> Is the information easy to obtain, navigate, interact with, &amp; includes or follows accessibility standards?</li>
+                <li><strong>Comprehension:</strong> Is the information understandable and interpretable for the intended audience?</li>
+            </ol>
+            <p>The choice of dimensions was not merely from theoretical considerations. We also discussed common issues such as providing information but in an obfuscated or confusing manner (clarity), not providing information in a specific field (completeness), using different terms across sections (consistency), providing information that is inaccurate or is later shown to be invalid (correctness), publishing the summary but in a manner that is not easily found (accessibility), and using highly technical jargon that cannot be understood by specific stakeholders (comprehension). Thus, the dimensions not only help to assess the quality of provided information, but also help categorise and assess issues.</p>
+        </section>
+
+        <section id="">
+            <h3>Development of Metrics</h3>
+            <p>To evaluate the selected dimensions over the public summary, we chose to assess each section of the public summary independently as it pertains to a specific topic. For example, Section 2.1 concerns public data whereas Section 2.4 concerns user data. Each of these sections would be of interest to specific stakeholders, and therefore they may be interested in the quality only for that specific section. In addition to these 'stakeholder-oriented' sections, we also considered the document itself as a separate category to assess criteria such as the manner in which it was provided and the metadata fields that are not part of any section. In total, we identified 8 sections:</p>
+            <ol>
+                <li>Document: entire document</li>
+                <li>General information: Section 1</li>
+                <li>Public Data Sources: Section 2.1</li>
+                <li>Private Data Sources: Section 2.2</li>
+                <li>Scraped/Crawled Data: Section 2.3</li>
+                <li>User Data: Section 2.4</li>
+                <li>Synthetic &amp; Other Data: Section 2.5 &amp; 2.6</li>
+                <li>Data Processing: Section 3</li>
+            </ol>
+            <p>Assessing the quality of each section meant assessing the <i>transparency</i> and <i>usefulness</i> of each section independently, which meant assessing the 6 dimensions (or questions under GQM) for each section. To do so, we created evaluation metrics using the following process:</p>
+            <ol>
+                <li>First, separate each independent information field in the template. This was necessary as the template uses numbers for a group of fields, and where one field can ask several pieces of information. To evaluate each asked information on its own merit, we split the field into separate parts as necessary. For example, there is a single field for the Provider name and contact. Here, 'name' and 'contact' are independent pieces of information, and thus we created two fields to represent these.</li>
+                <li>We started from existential assessments i.e. is the field filled in or not (completeness).</li>
+                <li>We then considered what would be required for this information to be clear. For example, if the field for contact provides a generic contact that is not distinguishable from other contacts (e.g. a generic postal address), then this would not be clear.</li>
+                <li>We then considered whether the information across the fields is consistent e.g. the terms used in the model section are different from those in later sections (consistency).</li>
+                <li>We assumed that the information in specific fields in the public summary is correct for the moment, unless there are discrepancies in the public summary itself which invalidate this assumption (correctness).  For these fields, if later it is found that the public summary has inaccurate or invalid information, this field would be used to identify and represent these issues.</li>
+                <li>Once we had ensured that the information is provided in a transparent manner, we focused on how this information could be used. For example, the Provider name must indicate the specific legal entity (comprehension). We also considered identifiers used being comprehensible, and key information that affects what obligations apply -- such as whether the model is a new model or has been fine-tuned on existing models.</li>
+                <li>For information where links would be needed, or where links are provided in a field, we considered how to evaluate the use of links and the information provided through the links, such as if these links lead to relevant locations (accessibility).</li>
+            </ol>
+            <p>By using this approach, we identified a total of 242 evaluation metrics. This means that to assess the quality of a public summary that has all sections filled in, we would have to assess 242 things to evaluate its overall quality. Or, if we wanted to evaluate the quality only of a specific section, then the number of evaluations would be a subset of 242 (likely including the document section as well since it contains evaluation of how the public summary itself is provided). We think these 242 metrics are currently sufficient, based on our understanding of the template as well as how it may be filled in. However, as with any quality assessment framework, once we perform a number of evaluations, we would likely update the metrics -- including adding new ones -- to reflect the evolving practices and the need to identify and highlight specific practices (as good or bad quality).</p>
+        </section>
+
+        <section id="">
+            <h3>Determination of Weights</h3>
+            <p>In quality assessment methods, different information is likely to have a differing interpretation of <i>importance</i>. For example, in the public summary, the format of the date is not as important as contact details or the identifiers for the model. To reflect this difference, <i>weights</i> are assigned to specific evaluations, such as that the <i>weighted score</i> reflects the impact of that field being correctly or incorrectly provided. To determine the weights, we discussed each metric and what would be the implication of that metric on the use of the public summary. For metrics with the highest impact, we assigned a weight of 5, for metrics with the lowest impact we assigned a weight of 1, and for metrics that were in between these two we assigned a weight of 3.</p>
+            <p>Using the weights, the scoring process becomes as follows: First, we evaluate the metrics, and then we multiply each metric by its score. For example, if there are two metrics in a section: A and B, with weights 5 and 1 respectively, then the scoring is as follows: (A x 5) + (B x 1). This means that if A is not provided and B is provided, the score would be much lower than if A is provided and B is not.</p>
+            <p>As the public summaries are assessed, certain fields and corresponding metrics may emerge to be more prominent -- either because they require additional considerations or because they are the areas where most summaries do not have an adequate quality. To address these, updating quality assessment frameworks also includes an assessment of whether the current set of weights is sufficient or should be changed.</p>
+        </section>
+    </section>
+
+    <section id="">
+        <h2>Quality Assessment Framework</h2>
+
+    </section>
+
+    <section id="">
+        <h2>Scoring Process</h2>
+    </section>
+
+    <section id="">
+        <h2>Interpretation of Quality Assessment Outcomes</h2>
+    </section>        
+        
+    </section>
+
+    <section id="">
+        <h2>
+    </section>
+
+    <section>
+        <h2>Website Development</h2>
+        <p>
+            We were inspired by previous approaches which analysed GPAI models and developed a website to share their assessments, in particular the
+            <a href="https://osai-index.eu/">Open Source AI Index (OSAI)</a> and its predecessor <a href="https://opening-up-chatgpt.github.io/">Opening up ChatGPT</a> (see the 
+            <span class="link-icon">🔗</span><a href="https://dl.acm.org/doi/10.1145/3630106.3659005" target="_blank">FAccT'24 paper</a>).
+        </p>
+    </section>
+
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

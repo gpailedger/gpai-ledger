@@ -1,0 +1,39 @@
+{
+  "source_id": "adobe/adobe-firefly",
+  "provider": "Adobe",
+  "model": "Adobe Firefly",
+  "target_kind": "aial-eval-page",
+  "sha256": "e599b316522bca84f940391ba08bf9e445267d35a2d2185d8b7c05ae8220bf0e",
+  "size_bytes": 17453,
+  "stored_as": "raw.html",
+  "text_sha256": "edb6582c50e47813e2fd68e5d34f85473f623c8c05deaf915245edb0d7dd4d9a",
+  "doc_links_sha256": "57343d27667ae8b2603fffa9a6c6ff1627b792aaa8266e4b7b5ab37ffdeadc1d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/adobe-firefly/version-2026-07-22.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/adobe-firefly/version-2026-07-22.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"adbac69c3f2a153e736b7b3510a0709faba753efa08b0c613de47d9e8082a1c1\"",
+    "last_modified": null,
+    "content_length": "3309",
+    "fetched_at": "2026-08-31T10:09:42Z"
+  },
+  "prior_sha256": "98e55355d37bb5ddf8c6111336cf5dfc005560787e2bce73601d3ddf9da4ada6",
+  "git_commit": "9b4bce99bb5aa6ce9e46070044d32c6ddeea791e",
+  "git_commit_date": "2026-07-23T11:05:55Z",
+  "git_blob_sha": "65a19177dc84fb6f8f11b4bded8f93073cd260eb",
+  "git_path": "public/evals/adobe-firefly/version-2026-07-22.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:09:48Z"
+  }
+}

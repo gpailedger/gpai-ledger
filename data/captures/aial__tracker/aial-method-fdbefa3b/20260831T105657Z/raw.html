@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPAI Training Transparency</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <style>
+    #evaluations {
+      font-size: 0.7rem;
+    }
+    .alert {
+      color: red;
+    }
+    .grade {
+      width: 20%;
+    }
+    @media (max-width: 768px) {
+      width: 15%;
+    }
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li><a href="./blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="./about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+      <header>
+        <h1>GPAI Training Transparency</h1>
+        <h2>A Quality Assessment of Public Summaries published under AI Act Article 53(1)(d)</h2>
+        <p><small>The <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53">AI Act's Article 53(1)(d)</a> requires General-Purpose AI (GPAI) model providers to <i>"make publicly available a sufficiently detailed summary about the content used for training ... according to a template provided by the AI Office"</i>. We evaluate the <i>quality</i> for this documentation across two aspects: <mark>Transparency</mark> and <mark>Usefulness</mark> and assign a score using <a href="methodology">our developed methodology</a>. To assist GPAI Providers, the AI Office, and stakeholders, we also work on providing <a href="recommendations">recommendations</a>.</small></p>
+      <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+  <p>Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong> (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo. <a href="https://doi.org/10.5281/zenodo.18803975">DOI:10.5281/zenodo.18803975</a></p>
+</div>
+
+      <div style="font-size: 0.7rem; background: #FFFFDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+        <p>This work has been featured in Euractiv as "<a href="https://www.euractiv.com/news/researchers-have-trouble-finding-ai-training-data-summaries/"><i>Researchers have trouble finding AI training data summaries</i></a>; and in an article in Tech Policy Press as "<a href="https://www.techpolicy.press/how-big-ai-developers-are-skirting-a-mandate-for-training-data-transparency/"><i>How Big AI Developers are Skirting a Mandate for Training Data Transparency</i></a>.</p>
+      </div>
+      <blockquote id="conclusion" style="border-left: 5px solid #a5410f; font-size: 0.7rem;">
+        The industry is yet to react significantly to Article 53(1)(d), with only a handful of GPAI model providers having yet published their public summaries for training content. These include high-quality summaries which shows the obligation is not a burden, and our framework is helpful to not only assess the quality, but to also improve it further.
+        <strong><em>Please let us know if you come across additional public summaries.</em></strong>
+      </blockquote>
+      </header>
+
+      <section id="results">
+        <h2>Evaluated Public Summaries</h2>
+        <p><small style="font-size: 0.75rem; line-height: 0;">Below is an overview of the evaluation with each model assigned a grade. <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#3e9b74;color:#fff;border-radius:50%;">A+</span> is the highest grade and <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#a5410f;color:#fff;border-radius:50%;">F</span> the lowest, with <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#a5410f;color:#fff;border-radius:50%; font-weight: bold;">&#33;</span> shown for missing summaries. Click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. You can also see a <a href="detailed-overview">detailed overview</a> of scores for each section of the public summary.</small></p>
+        <table id="evaluations">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="only-desktop">Provider</th>
+              <th style="text-align: center;">Transparency</th>
+              <th style="text-align: center;">Usefulness</th>
+            </tr>
+          </thead>
+          <tbody>            <tr>
+              <td class="name-cell">
+                <a href="evals/apertus/" target="_blank" title="data: ">
+                  <u>Apertus</u>
+                </a>
+                <span class="only-mobile"><small>Swiss AI Initiative</small></span>
+              </td>
+              <td class="only-desktop">
+                Swiss AI Initiative
+              </td>
+              <td class="data-cell grade open">
+A&nbsp;&nbsp;              </td>
+              <td class="data-cell grade open">
+A+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/fibo/" target="_blank" title="data: ">
+                  <u>FIBO</u>
+                </a>
+                <span class="only-mobile"><small>Bria AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Bria AI
+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+              <td class="data-cell grade open">
+A+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/bria/" target="_blank" title="data: ">
+                  <u>Bria 3.2</u>
+                </a>
+                <span class="only-mobile"><small>Bria AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Bria AI
+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+              <td class="data-cell grade open">
+A&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/smollm3/" target="_blank" title="data: ">
+                  <u>SmolLM3-3B</u>
+                </a>
+                <span class="only-mobile"><small>HuggingFace</small></span>
+              </td>
+              <td class="only-desktop">
+                HuggingFace
+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/domyn/" target="_blank" title="data: ">
+                  <u>Domyn Large</u>
+                </a>
+                <span class="only-mobile"><small>Domyn</small></span>
+              </td>
+              <td class="only-desktop">
+                Domyn
+              </td>
+              <td class="data-cell grade open">
+B&nbsp;&nbsp;              </td>
+              <td class="data-cell grade open">
+B+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/bielik/" target="_blank" title="data: ">
+                  <u>Bielik v3 11B Instruct</u>
+                </a>
+                <span class="only-mobile"><small>SpeakLeash</small></span>
+              </td>
+              <td class="only-desktop">
+                SpeakLeash
+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/adobe-firefly/" target="_blank" title="data: ">
+                  <u>Adobe Firefly</u>
+                </a>
+                <span class="only-mobile"><small>Adobe</small></span>
+              </td>
+              <td class="only-desktop">
+                Adobe
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade open">
+B+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/inkling/" target="_blank" title="data: ">
+                  <u>Inkling</u>
+                </a>
+                <span class="only-mobile"><small>Thinking Machines</small></span>
+              </td>
+              <td class="only-desktop">
+                Thinking Machines
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/inkling small/" target="_blank" title="data: ">
+                  <u>Inkling Small</u>
+                </a>
+                <span class="only-mobile"><small>Thinking Machines</small></span>
+              </td>
+              <td class="only-desktop">
+                Thinking Machines
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/nova-2-lite/" target="_blank" title="data: ">
+                  <u>Nova 2 Lite</u>
+                </a>
+                <span class="only-mobile"><small>Amazon</small></span>
+              </td>
+              <td class="only-desktop">
+                Amazon
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/flux-3/" target="_blank" title="data: ">
+                  <u>FLUX.3</u>
+                </a>
+                <span class="only-mobile"><small>Black Forest Labs</small></span>
+              </td>
+              <td class="only-desktop">
+                Black Forest Labs
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/fastwebmiia/" target="_blank" title="data: ">
+                  <u>FastwebMIIA</u>
+                </a>
+                <span class="only-mobile"><small>Fastweb</small></span>
+              </td>
+              <td class="only-desktop">
+                Fastweb
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/minimax-m3/" target="_blank" title="data: ">
+                  <u>Minimax M3</u>
+                </a>
+                <span class="only-mobile"><small>Minimax</small></span>
+              </td>
+              <td class="only-desktop">
+                Minimax
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mai-cyber-1-flash/" target="_blank" title="data: ">
+                  <u>MAI Cyber 1 Flash</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft AI
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mai-code-1-flash/" target="_blank" title="data: ">
+                  <u>MAI Code 1 Flash</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft AI
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/ministral-3-14B/" target="_blank" title="data: ">
+                  <u>Ministral 3 14B</u>
+                </a>
+                <span class="only-mobile"><small>Mistral AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Mistral AI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/ministral-3-3B/" target="_blank" title="data: ">
+                  <u>Ministral 3 3B</u>
+                </a>
+                <span class="only-mobile"><small>Mistral AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Mistral AI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/ministral-3-8B/" target="_blank" title="data: ">
+                  <u>Ministral 3 8B</u>
+                </a>
+                <span class="only-mobile"><small>Mistral AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Mistral AI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-5-6-luna/" target="_blank" title="data: ">
+                  <u>GPT-5.6 Luna</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-5-5/" target="_blank" title="data: ">
+                  <u>GPT-5.5</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mai-image-2_5/" target="_blank" title="data: ">
+                  <u>MAI-Image-2.5</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mai-image-2/" target="_blank" title="data: ">
+                  <u>MAI-Image-2</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft
+              </td>
+              <td class="data-cell grade partial">
+C+              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mistral-small-4/" target="_blank" title="data: ">
+                  <u>Mistral Small 4 119B 2603</u>
+                </a>
+                <span class="only-mobile"><small>Mistral AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Mistral AI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/mistral-large-3/" target="_blank" title="data: ">
+                  <u>Mistral Large 3 675B Base 2512</u>
+                </a>
+                <span class="only-mobile"><small>Mistral AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Mistral AI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gemma-4/" target="_blank" title="data: ">
+                  <u>Gemma 4 31B</u>
+                </a>
+                <span class="only-mobile"><small>Google</small></span>
+              </td>
+              <td class="only-desktop">
+                Google
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gemini-3-pro/" target="_blank" title="data: ">
+                  <u>Gemini 3 Pro</u>
+                </a>
+                <span class="only-mobile"><small>Google</small></span>
+              </td>
+              <td class="only-desktop">
+                Google
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/grok-4.5/" target="_blank" title="data: ">
+                  <u>Grok 4.5</u>
+                </a>
+                <span class="only-mobile"><small>xAI</small></span>
+              </td>
+              <td class="only-desktop">
+                xAI
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/command-a-plus/" target="_blank" title="data: ">
+                  <u>C4AI Command A Plus 05 2026</u>
+                </a>
+                <span class="only-mobile"><small>Cohere</small></span>
+              </td>
+              <td class="only-desktop">
+                Cohere
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-5/" target="_blank" title="data: ">
+                  <u>Claude Opus 5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-mythos-preview/" target="_blank" title="data: ">
+                  <u>Claude Mythos Preview</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-4-7/" target="_blank" title="data: ">
+                  <u>Claude Opus 4.7</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-4-8/" target="_blank" title="data: ">
+                  <u>Claude Opus 4.8</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-sonnet-5/" target="_blank" title="data: ">
+                  <u>Claude Sonnet 5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-mythos-5-fable-5/" target="_blank" title="data: ">
+                  <u>Claude Mythos 5 / Claude Fable 5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/muse-image/" target="_blank" title="data: ">
+                  <u>Muse Image</u>
+                </a>
+                <span class="only-mobile"><small>Meta</small></span>
+              </td>
+              <td class="only-desktop">
+                Meta
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/muse-spark/" target="_blank" title="data: ">
+                  <u>Muse Spark</u>
+                </a>
+                <span class="only-mobile"><small>Meta</small></span>
+              </td>
+              <td class="only-desktop">
+                Meta
+              </td>
+              <td class="data-cell grade partial">
+C&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+D+              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/phi-4/" target="_blank" title="data: ">
+                  <u>Phi-4</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft
+              </td>
+              <td class="data-cell grade closed">
+D&nbsp;&nbsp;              </td>
+              <td class="data-cell grade closed">
+F&nbsp;&nbsp;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/flux-2-max/" target="_blank" title="data: ">
+                  <u>FLUX.2 [max]</u>
+                </a>
+                <span class="only-mobile"><small>Black Forest Labs</small></span>
+              </td>
+              <td class="only-desktop">
+                Black Forest Labs
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/granite-4-1/" target="_blank" title="data: ">
+                  <u>Granite 4.1 30B Base</u>
+                </a>
+                <span class="only-mobile"><small>IBM</small></span>
+              </td>
+              <td class="only-desktop">
+                IBM
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/veo-3-1/" target="_blank" title="data: ">
+                  <u>Veo 3.1</u>
+                </a>
+                <span class="only-mobile"><small>Google</small></span>
+              </td>
+              <td class="only-desktop">
+                Google
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/palmyra-x5/" target="_blank" title="data: ">
+                  <u>Palmyra X5</u>
+                </a>
+                <span class="only-mobile"><small>WRITER</small></span>
+              </td>
+              <td class="only-desktop">
+                WRITER
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-4-6/" target="_blank" title="data: ">
+                  <u>Claude Opus 4.6</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-sonnet-4-6/" target="_blank" title="data: ">
+                  <u>Claude Sonnet 4.6</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-image-2/" target="_blank" title="data: ">
+                  <u>GPT Image 2</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/north-mini-code/" target="_blank" title="data: ">
+                  <u>North Mini Code 1.0</u>
+                </a>
+                <span class="only-mobile"><small>Cohere</small></span>
+              </td>
+              <td class="only-desktop">
+                Cohere
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/flux-2/" target="_blank" title="data: ">
+                  <u>FLUX.2</u>
+                </a>
+                <span class="only-mobile"><small>Black Forest Labs</small></span>
+              </td>
+              <td class="only-desktop">
+                Black Forest Labs
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-5-6-sol/" target="_blank" title="data: ">
+                  <u>GPT-5.6 Sol</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-oss/" target="_blank" title="data: ">
+                  <u>GPT-OSS</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/gpt-5-6-terra/" target="_blank" title="data: ">
+                  <u>GPT-5.6 Terra</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/apriel-1-5/" target="_blank" title="data: ">
+                  <u>Apriel 1.5 15B Thinker</u>
+                </a>
+                <span class="only-mobile"><small>ServiceNow</small></span>
+              </td>
+              <td class="only-desktop">
+                ServiceNow
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-haiku-4-5/" target="_blank" title="data: ">
+                  <u>Claude Haiku 4.5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/flux-2-klein/" target="_blank" title="data: ">
+                  <u>FLUX.2 Klein</u>
+                </a>
+                <span class="only-mobile"><small>Black Forest Labs</small></span>
+              </td>
+              <td class="only-desktop">
+                Black Forest Labs
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/granite-4-0-h/" target="_blank" title="data: ">
+                  <u>Granite 4.0 H Small Base</u>
+                </a>
+                <span class="only-mobile"><small>IBM</small></span>
+              </td>
+              <td class="only-desktop">
+                IBM
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-4-5/" target="_blank" title="data: ">
+                  <u>Claude Opus 4.5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/sora-2/" target="_blank" title="data: ">
+                  <u>Sora 2</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-opus-4-1/" target="_blank" title="data: ">
+                  <u>Claude Opus 4.1</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>            <tr>
+              <td class="name-cell">
+                <a href="evals/claude-sonnet-4-5/" target="_blank" title="data: ">
+                  <u>Claude Sonnet 4.5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+              <td class="data-cell grade na">
+&#33;              </td>
+            </tr>          </tbody>
+        </table>
+      </section><br><br>
+
+      <section id="tldr">
+        <h2>TL;DR</h2>
+        <small style="font-size: 0.75rem;">
+          <p>Our work makes the following <strong>contributions</strong>:</p>
+          <ul>
+            <li>We provide a framework to assess the quality of public summaries of training content required under the AI Act's Article 53(1)(d).</li>
+            <li>Our quality assessment metrics represent best practices for how the information in the public summary should be provided (<i>transparency</i>) in order for rightsholders to utilise it effectively (<i>usefulness</i>).</li>
+            <li>We found only a handful published public summaries, and that they are mostly of a high-quality. Meanwhile other providers, noticeably larger ones, have not published anything yet. Our work sufficiently demonstrates that this is an intentional choice and that the legal obligation is not a burden as the current high-quality summaries are from small organisations and open source oriented efforts.</li>
+          </ul>
+          <p>Our work also contributes towards <strong>improving the ecosystem</strong>:</p>
+          <ul>
+            <li>We contend that compliance cannot be <em>fait accompli</em>, and that the public summaries are a key factor in creating transparency and enabling rights enforcement. Towards this, our work also acts as a guide for providers who are yet to publish their summaries to consider how to do so with the highest possible quality and utility.</li>
+            <li>Compliance also invites practices that are intentionally or unintentionally deficient in achieving the goals. Our work serves as a useful tool for describing how and where and why certain practices are 'bad', e.g., where they use obfuscation, do not provide stated information. Using this, we can detect trends or patterns in whether the same issues occur in many summaries, and if so, how they can be collectively addressed through guidance, or enforced with priority.</li>
+            <li>The largest challenge in undertaking this work has been finding public summaries as there is no consistent format or practice for how they should be provided. For this, we provide <a href="recommendations">recommendations</a>.</li>
+            <li>The template for public summaries provided by the AI Office is intended to be revised with time to improve the state of documentation as well as to better guide the providers. We also provide <a href="recommendations">recommendations</a> for these to improve the quality and accessibility of the public summaries.</li>
+          </ul> 
+        </small>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

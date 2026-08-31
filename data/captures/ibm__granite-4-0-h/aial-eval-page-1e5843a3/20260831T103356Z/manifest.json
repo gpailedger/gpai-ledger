@@ -1,0 +1,39 @@
+{
+  "source_id": "ibm/granite-4-0-h",
+  "provider": "IBM",
+  "model": "Granite 4.0 H",
+  "target_kind": "aial-eval-page",
+  "sha256": "74d45d05f43219d3d28bc82d6dacbe90da6cbc0956c1dcfd5000b5ca735adb23",
+  "size_bytes": 11461,
+  "stored_as": "raw.html",
+  "text_sha256": "21946ea651d5f040bba702eeb1a6c0d896672b1a0d141b2fef5049c19bcf5e3a",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/granite-4-0-h/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e358c0273a50a424019d5b1f4d36878280e445c3/public/evals/granite-4-0-h/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"a21c1624eaa7455f9b6e8fd9120ff0146b38f13495080fcb8a0601114b573e3d\"",
+    "last_modified": null,
+    "content_length": "2317",
+    "fetched_at": "2026-08-31T10:33:56Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "e358c0273a50a424019d5b1f4d36878280e445c3",
+  "git_commit_date": "2026-08-03T16:58:50Z",
+  "git_blob_sha": "97addd80261152b8ddde883f0a2e5b8137852172",
+  "git_path": "public/evals/granite-4-0-h/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:34:02Z"
+  }
+}

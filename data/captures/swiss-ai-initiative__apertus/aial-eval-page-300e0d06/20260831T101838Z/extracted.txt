@@ -1,0 +1,327 @@
+Assessment of Apertus
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+Apertus
+
+GPAI Provider:
+Swiss AI Initiative
+
+Metadata
+
+Model URL:
+
+https://huggingface.co/swiss-ai/Apertus-70B-2509
+
+When was this model published?
+ 2025-09-02
+
+Is this a new or a fine-tuned model?
+ New model
+
+When was the Public Summary last updated?
+ 2025-09-01
+
+When did we evaluate the Public Summary?
+ 2026-01-12
+
+Where did we find the Public Summary?
+ We found
+this document
+ linked on
+this page
+. An archived version can be found
+here
+.
+
+Results of Evaluation
+
+Section
+
+Transparency
+
+Usefulness
+
+General
+
+Clarity
+
+Completeness
+
+Consistency
+
+Correctness
+
+Accessibility
+
+Comprehension
+
+Transparency
+
+Usefulness
+
+Document
+
+81.82
+
+100.0
+
+100.0
+
+70.0
+
+100.0
+
+66.67
+
+87.04
+
+84.21
+
+General information
+
+47.62
+
+82.26
+
+100.0
+
+100.0
+
+100.0
+
+90.91
+
+74.62
+
+93.75
+
+Public Data Sources
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+Private Data Sources
+
+N/A
+
+100.0
+
+100.0
+
+100.0
+
+N/A
+
+N/A
+
+100.0
+
+N/A
+
+Scraped/Crawled Data
+
+N/A
+
+100.0
+
+N/A
+
+100.0
+
+N/A
+
+N/A
+
+100.0
+
+N/A
+
+User Data
+
+N/A
+
+100.0
+
+N/A
+
+100.0
+
+N/A
+
+N/A
+
+100.0
+
+N/A
+
+Synthetic/Other Data
+
+N/A
+
+100.0
+
+100.0
+
+100.0
+
+N/A
+
+N/A
+
+100.0
+
+N/A
+
+Data Processing
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+Sum
+
+85.8
+
+94.39
+
+100.0
+
+98.48
+
+100.0
+
+95.56
+
+92.9
+
+97.14
+
+Grades
+
+A
+A+
+
+Evaluation Notes
+
+If you update your public summary, please
+let us know
+ so that we can update the evaluation and scores. We also welcome suggestions on improvements to this page, e.g. see
+FAQ section
+.
+
+The public summary for the Apertus model family can be found as a PDF on HuggingFace in the same context as its models, for instance at
+the repository of Apertus-70B-2509
+. Each field of the template was filled in, including explicitly marking sections as not applicable, though some fields included superfluous information not relevant to the topic or question which caused a few points deduction. We assessed its score to be
+92.90%
+ with Grade
+A
+ for
+transparency
+, and
+97.14%
+ with Grade
+A+
+ for
+usefulness
+, which were the highest of all assessed summaries published before and during our initial research.
+
+Suggested Improvements
+
+            The following are the suggested improvements based on using our
+our methodology
+ where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.
+
+Document
+
+M1 Document should clearly whether it is the latest version or if it is outdated and a replacement is made available. Document should provide a link to all versions of the document.
+low
+
+M4 Document should provide link to authoritative source of the document. Date format for date of last update should be correct.
+medium
+
+M6 Document should clearly indicate changes from previous version, as well as where notice of updates or changes will be provided
+medium
+
+General information
+
+M1 Description of types of content can be made more precise, i.e. categories of content such as legal text, social media comments rather than a generic description of 'public text-only data derived mainly from web documents'.
+Our suggestion: specify categories in which the public datasets are actually provided, mentioning that training data primarily consists of educational webpages (from FineWeb-Edu and DCLM-Edu), crawled web-pages filtered for high-quality content (FineWeb-2, FineWeb-HQ, and FineWeb2-HQ), code data (The Stack dedup and StackV2_Edu_Filtered), and mathematical pretraining data (FineMath and MegaMath).
+Mention of training data being fully transparent and reproducible is not strictly necessary given the field. We think this would be better in Additional comments (optional) field.
+Other relevant characteristics of the overall training data: respecting of consent and the removal of toxic content, which should be provided in the assigned field in section 3.1 (consent), 3.2 (toxic content) or 3.3 (optional info).
+high
+
+M2 Description of the linguistic characteristics of the overall training data: Missing info on language and EU languages.
+Our suggestion: given the large number of languages used in pretraining (999+), mention the EU languages covered, e.g. 'text from all EU languages was used in the training of this model', with perhaps a link to the list of language-script pairs or where to find info on languages. This would already provide enough information to writers of a given language to be able to see whether training may have spanned their writing in that language.
+low
+
+M6 Latest date of data acquisition/collection for model training: indicate whether continuous training is employed (see template placeholder text).
+Our suggestion: Even though this is fairly evident given the type of model which Apertus is, it is still handy to include, and is expected by the template. The phrasing 'later date' is also ambiguous with fine-tuning.
+low
+
+Sum
+
+M1 Document should clearly whether it is the latest version or if it is outdated and a replacement is made available. Document should provide a link to all versions of the document.Description of types of content can be made more precise, i.e. categories of content such as legal text, social media comments rather than a generic description of 'public text-only data derived mainly from web documents'.
+Our suggestion: specify categories in which the public datasets are actually provided, mentioning that training data primarily consists of educational webpages (from FineWeb-Edu and DCLM-Edu), crawled web-pages filtered for high-quality content (FineWeb-2, FineWeb-HQ, and FineWeb2-HQ), code data (The Stack dedup and StackV2_Edu_Filtered), and mathematical pretraining data (FineMath and MegaMath).
+Mention of training data being fully transparent and reproducible is not strictly necessary given the field. We think this would be better in Additional comments (optional) field.
+Other relevant characteristics of the overall training data: respecting of consent and the removal of toxic content, which should be provided in the assigned field in section 3.1 (consent), 3.2 (toxic content) or 3.3 (optional info).
+low
+
+M2 Description of the linguistic characteristics of the overall training data: Missing info on language and EU languages.
+Our suggestion: given the large number of languages used in pretraining (999+), mention the EU languages covered, e.g. 'text from all EU languages was used in the training of this model', with perhaps a link to the list of language-script pairs or where to find info on languages. This would already provide enough information to writers of a given language to be able to see whether training may have spanned their writing in that language.
+low
+
+M4 Document should provide link to authoritative source of the document. Date format for date of last update should be correct.
+low
+
+M6 Document should clearly indicate changes from previous version, as well as where notice of updates or changes will be providedLatest date of data acquisition/collection for model training: indicate whether continuous training is employed (see template placeholder text).
+Our suggestion: Even though this is fairly evident given the type of model which Apertus is, it is still handy to include, and is expected by the template. The phrasing 'later date' is also ambiguous with fine-tuning.
+low
+
+Previous Versions
+
+2026-03-30
+ (current version)
+
+2026-01-12
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

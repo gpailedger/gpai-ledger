@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommendations</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="static/custom.css">
+    <!-- <link href="static/styles.css" rel="stylesheet"/> -->
+    <style>
+      
+body {
+    font-size: 0.75rem;
+}
+
+    </style>
+    <link href="static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="index">Home</a></li>
+      <li><a href="detailed-overview">Analysis</a></li>
+      <li><a href="methodology">Methodology</a></li>
+      <li><a href="recommendations">Recommendations</a></li>
+      <li><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+      
+    <header>
+        <h1>Recommendations</h1>
+        <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+            <p>Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong> (preprint). Zenodo. <a href="https://doi.org/10.5281/zenodo.18803975">DOI:10.5281/zenodo.18803975</a></p>
+      </div>
+    </header>
+
+    <section id="recommendations-for-gpai-providers">
+        <h2>Recommendations for GPAI Providers</h2>
+        <p>As the most prominent challenge we surfaced through this work is the
+        lack of available public summaries, We provide the following
+        recommendations for GPAI providers:</p>
+        <ol>
+            <li><p>Ensure the public summary document adheres closely, ideally
+            exactly, to the template provided by the AI office.</p></li>
+            <li><p>Mention the public summary document in relevant webpages and
+            documents, for example the <em>README</em> in a repository, and under
+            the correct title as utilised by the template.</p></li>
+            <li><p>For sections in the template for which no information is
+            available or where the fields are not applicable, explicitly state this
+            to avoid ambiguity arising from open-world assumptions.</p></li>
+            <li><p>Utilise correct and high-quality SEO metadata to help surface
+            published summaries in search engine results.</p></li>
+            <li><p>Provide a common area or location for all relevant legal
+            documentation through which stakeholders can also access the published
+            summaries.</p></li>
+            <li><p>Maintain versions of summaries and clearly indicate where to find
+            these in the document.</p></li>
+            <li><p>Ensure the public summaries contain all pertinent information,
+            and refrain from directing stakeholders to other locations to access
+            this information. Links to external resources that expand upon the
+            details provided in the public summary are helpful but should not be
+            used to avoid providing the information in the public summary.</p></li>
+            <li><p>To ensure the public summaries are filled in to a high degree,
+            having the correct and up to date information about datasets used in the
+            model development process is necessary, which in turn requires good data
+            governance.</p></li>
+        </ol>
+    </section>
+
+    <section id="recommendations-for-ai-office-to-improve-the-template" style="border-top: 2px solid black; padding-top: 20px">
+        <h2>Recommendations for AI Office to improve the template</h2>
+
+        <ol>
+            <li><p>Adding more structured questions, i.e. non-narrative, related to
+            provenance and metadata of the document will assist stakeholders in use
+            of summary (e.g. regarding version, published date, link to previous
+            versions).</p></li>
+            <li><p>A broad document-level field that indicates what to expect, for
+            example, whether the published summary relates to a new model, or a
+            modified model; and if the base model’s published summary is available
+            (if yes, a link to it), and if not, then a justification. Ideally, this
+            could be implemented through different versions of the
+            template.</p></li>
+            <li><p>A guide attached to the template that describes which information
+            should be expected for specific fields would be helpful. Though this
+            information is provided in part within the ’help text’ part of the field
+            itself, we found that this could be expanded to cover more use-cases and
+            offer greater guidance.</p></li>
+            <li><p>Fields as currently should be tested for use by specific
+            stakeholders, for example through a workshop that identifies whether
+            information is clear, comprehensible, useful, etc.</p></li>
+            <li><p>Specific sections could benefit obligations for other laws beyond
+            AI Act. For example, Section 2.4 User Data regarding GDPR Articles 13
+            and 14 where providers could provide information (e.g. purpose, legal
+            basis) or a link to external resource (e.g. privacy policy).</p></li>
+            <li><p>The public summaries being difficult to discover is a barrier for
+            stakeholders. The AI Office could consider making a centralised portal
+            that hosts all public summaries, and which would includes an online form
+            for guiding providers in providing specific information. This would
+            strengthen and simplify transparency and accountability for public
+            summaries and would simplify the enforcement of this obligation at
+            scale.</p></li>
+        </ol>
+    </section>
+
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

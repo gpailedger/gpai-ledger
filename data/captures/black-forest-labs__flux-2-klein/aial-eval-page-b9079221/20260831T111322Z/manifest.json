@@ -1,0 +1,39 @@
+{
+  "source_id": "black-forest-labs/flux-2-klein",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2 Klein",
+  "target_kind": "aial-eval-page",
+  "sha256": "5f06446f7aabbdf3c3d1bb19c115dcfd20a49fbea62ef87027a6ba3064eeeda2",
+  "size_bytes": 11445,
+  "stored_as": "raw.html",
+  "text_sha256": "b5576ba0d778486b0383b0311223832c0a330c6aad059b8dd4b2e7c58657af7b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/flux-2-klein/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/flux-2-klein/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"47f8af94446c76a279af9b3329868c3d99587bec42e490d0d30c399813d9a6f2\"",
+    "last_modified": null,
+    "content_length": "2302",
+    "fetched_at": "2026-08-31T11:13:22Z"
+  },
+  "prior_sha256": "8d0db761122d18a84b733c4c216911e446f335ecd9c58dcaacd5777da9dbccd9",
+  "git_commit": "6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451",
+  "git_commit_date": "2026-08-06T10:01:05Z",
+  "git_blob_sha": "0a2eb1d46b4cd458181a597f3bfe623bce35fc7c",
+  "git_path": "public/evals/flux-2-klein/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:13:28Z"
+  }
+}

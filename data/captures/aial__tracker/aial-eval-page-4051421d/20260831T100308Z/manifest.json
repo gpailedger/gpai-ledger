@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "claude-sonnet-4.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "f692dd8a669b930f080170270f9506773f1212f9dfd1942a7bdb051c2f40cccf",
+  "size_bytes": 11407,
+  "stored_as": "raw.html",
+  "text_sha256": "1714c85b359c415eae901040e30703e6e8537f45c7460a5125b95a709fb88a9c",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/3fd05e5847b52094bdfed9cbe04c0c497c02b35d/public/evals/claude-sonnet-4.5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/3fd05e5847b52094bdfed9cbe04c0c497c02b35d/public/evals/claude-sonnet-4.5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"366571b47d92898bb8de933586eb91acd30d259d5556581b79dae37eb7e475d3\"",
+    "last_modified": null,
+    "content_length": "2281",
+    "fetched_at": "2026-08-31T10:03:08Z"
+  },
+  "prior_sha256": "7e801a02c8d57b6b85858ea0f054cfb491df945bb855eb077e1ea5e22eff94b4",
+  "git_commit": "3fd05e5847b52094bdfed9cbe04c0c497c02b35d",
+  "git_commit_date": "2026-07-15T15:56:04Z",
+  "git_blob_sha": "9f00d267917ba661d11e79ac2e0a3aff15d1810c",
+  "git_path": "public/evals/claude-sonnet-4.5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:03:14Z"
+  }
+}

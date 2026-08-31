@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "smollm",
+  "target_kind": "aial-eval-page",
+  "sha256": "2f30a2e561f209a301046c1b0c1eba27fd002eb06438c3e9f419712bffda1b61",
+  "size_bytes": 18400,
+  "stored_as": "raw.html",
+  "text_sha256": "12eece3d1f22cf6b035ab277fe0fc9209a33961c4d5ecbfbe9032997b33eb95f",
+  "doc_links_sha256": "9ee858837aa2ff88866271149b0c655f915ea1adbcf676a9427f5433b466dd0d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/8dd15461fb29410fb5db384ad0358755a669516b/public/evals/smollm/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/8dd15461fb29410fb5db384ad0358755a669516b/public/evals/smollm/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f1d20786cf322405a5322b62dfb4740e2c439762825e6aac6e1e4d002d537df7\"",
+    "last_modified": null,
+    "content_length": "3602",
+    "fetched_at": "2026-08-31T09:59:42Z"
+  },
+  "prior_sha256": "dfd7c9859ae78713d91c99c77d3bad5522361315c1d4416b0121bff84753fc4e",
+  "git_commit": "8dd15461fb29410fb5db384ad0358755a669516b",
+  "git_commit_date": "2026-03-22T21:45:42Z",
+  "git_blob_sha": "a26b194046296ee9d94b1f4cd53778313cf42e0f",
+  "git_path": "public/evals/smollm/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T09:59:48Z"
+  }
+}

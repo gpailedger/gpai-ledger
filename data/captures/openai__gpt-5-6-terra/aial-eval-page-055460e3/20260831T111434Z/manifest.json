@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt-5-6-terra",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Terra",
+  "target_kind": "aial-eval-page",
+  "sha256": "0d447366a4e230e624a187b98f58fef5db9a0c592ffa2a1db7c1bcda5d5a4ade",
+  "size_bytes": 11412,
+  "stored_as": "raw.html",
+  "text_sha256": "79d428ef582880136891c6a94a08bcbbcece40feba94bdf5cc4f12b29d9d7743",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-5-6-terra/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451/public/evals/gpt-5-6-terra/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"05b9794f3c8a59db9091dfd01de1367d4856837eeaf1bf75c0ff233c24976858\"",
+    "last_modified": null,
+    "content_length": "2289",
+    "fetched_at": "2026-08-31T11:14:34Z"
+  },
+  "prior_sha256": "448b00233339868eead148e571874264e595836afae18e1a0a15e888888891eb",
+  "git_commit": "6da9b3fc0d502cd8720a20cd4e9a4f0ce6f8b451",
+  "git_commit_date": "2026-08-06T10:01:05Z",
+  "git_blob_sha": "ca9ea0db7965804e59e6646d4a28d13b9923a595",
+  "git_path": "public/evals/gpt-5-6-terra/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:14:39Z"
+  }
+}

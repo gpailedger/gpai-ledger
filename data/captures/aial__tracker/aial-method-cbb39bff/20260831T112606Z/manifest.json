@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "aial-method",
+  "sha256": "94dc0e4e0403ed7c86c07f35921421cc54b23a689f49242ec2a638c5d2e2e94f",
+  "size_bytes": 25996,
+  "stored_as": "raw.html",
+  "text_sha256": "51dda676bc0385c927074c1d0444df68822c1b96236e3a8f9a7c8814189165bd",
+  "doc_links_sha256": "3ea0574a1b7a03978f27452e63d4db87834159a88b70b5e843e54d8fbeb5f0b4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9966fb823140d6538004466926f26018baa523b8/public/list_summaries.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9966fb823140d6538004466926f26018baa523b8/public/list_summaries.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e6d43c9476965816835936d67c4ea849324dc720f669a231669e4a4adcfc275d\"",
+    "last_modified": null,
+    "content_length": "4436",
+    "fetched_at": "2026-08-31T11:26:06Z"
+  },
+  "prior_sha256": "7aee1b691aae949e7accada848e851990e8874c4aa84744bd16c16e0e2153c92",
+  "git_commit": "9966fb823140d6538004466926f26018baa523b8",
+  "git_commit_date": "2026-08-06T15:53:32Z",
+  "git_blob_sha": "55c73834c79ee79bca414748b84de3c9e5364170",
+  "git_path": "public/list_summaries.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:26:12Z"
+  }
+}

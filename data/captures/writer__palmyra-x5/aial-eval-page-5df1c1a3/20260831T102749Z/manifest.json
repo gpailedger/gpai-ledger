@@ -1,0 +1,39 @@
+{
+  "source_id": "writer/palmyra-x5",
+  "provider": "WRITER",
+  "model": "Palmyra X5",
+  "target_kind": "aial-eval-page",
+  "sha256": "1bac3e67558f95012a9b941188659aebde392fd51b6d3ff6f343b93907e81551",
+  "size_bytes": 11382,
+  "stored_as": "raw.html",
+  "text_sha256": "477ce54582e5a51fcc0e8b0f970c27a372363523320d0d446b58c47e4bbab798",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/public/evals/palmyra-x5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/public/evals/palmyra-x5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0856bd12ac15d6dc71d115da6747f88f0d3e24fd44d3e7098e5fa60b7d353628\"",
+    "last_modified": null,
+    "content_length": "2282",
+    "fetched_at": "2026-08-31T10:27:49Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "52fcf78158412a0467924b0d2e326b7fe3fc5739",
+  "git_commit_date": "2026-07-27T15:08:29Z",
+  "git_blob_sha": "5f2346ac2d94fd870787d840fd22c359a95c9edc",
+  "git_path": "public/evals/palmyra-x5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:27:55Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "aial-eval-page",
+  "sha256": "1a60325168e151e4bdb803029b51fd8e17a5f94c12c9c40b2bf4635869ce38f7",
+  "size_bytes": 20471,
+  "stored_as": "raw.html",
+  "text_sha256": "f710f70e675b6ed8a30317b54fc61e31463e64b847cb0724e703c34c5d61c0c5",
+  "doc_links_sha256": "a0226b176498d8d01ad0003b30db301fe27a7ec19d84c0c04816969166d04cc1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/command-a-plus/version-2026-08-04.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/command-a-plus/version-2026-08-04.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5696f97a3ce9d96125afc979be3d19254bddfb0b430920b646585d71489183db\"",
+    "last_modified": null,
+    "content_length": "3965",
+    "fetched_at": "2026-08-31T11:21:56Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "a3575567d55d0b1e4744c902cf7806232eaef55d",
+  "git_commit_date": "2026-08-06T15:02:07Z",
+  "git_blob_sha": "beba8a4f61148c61a05f5492184d08a1ed1b0692",
+  "git_path": "public/evals/command-a-plus/version-2026-08-04.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:22:02Z"
+  }
+}

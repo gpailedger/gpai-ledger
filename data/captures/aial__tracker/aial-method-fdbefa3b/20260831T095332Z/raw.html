@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPAI Training Transparency</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="static/custom.css">
+    <!-- <link href="static/styles.css" rel="stylesheet"/> -->
+    <style>
+      
+    #evaluations {
+      font-size: 0.7rem;
+    }
+    .alert {
+      color: red;
+    }
+    .grade {
+      width: 20%;
+    }
+    @media (max-width: 768px) {
+      width: 15%;
+    }
+
+    </style>
+    <link href="static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="detailed-overview">Analysis</a></li>
+      <li><a href="methodology">Methodology</a></li>
+      <li><a href="recommendations">Recommendations</a></li>
+      <li style="margin-right: 5px;"><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+      
+      <header>
+        <h1>GPAI Training Transparency</h1>
+        <h2>A Quality Assessment of Public Summaries published under AI Act Article 53(1)(d)</h2>
+        <p><small>The <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53">AI Act's Article 53(1)(d)</a> requires General-Purpose AI (GPAI) model providers to <i>"make publicly available a sufficiently detailed summary about the content used for training ... according to a template provided by the AI Office"</i>. We evaluate the <i>quality</i> for this documentation across two aspects: <mark>Transparency</mark> and <mark>Usefulness</mark> and assign a score using <a href="methodology">our developed methodology</a>. To assist GPAI Providers, the AI Office, and stakeholders, we also work on providing <a href="recommendations">recommendations</a>.</small></p>
+      <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+        <p>Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong> (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo. <a href="https://doi.org/10.5281/zenodo.18803975">DOI:10.5281/zenodo.18803975</a></p>
+      </div>
+      </header>
+
+      <section id="results">
+        <h2>Evaluated Public Summaries</h2>
+        <p><small style="font-size: 0.75rem; line-height: 0;">Below is an overview of the evaluation with each model assigned a grade. <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#3e9b74;color:#fff;border-radius:50%;">A+</span> is the highest grade and <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#e53935;color:#fff;border-radius:50%;">F</span> the lowest, with <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#e53935;color:#fff;border-radius:50%;">N/A</span> shown for missing summaries. Click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. You can also see a <a href="detailed-overview">detailed overview</a> of scores for each section of the public summary.</small></p>
+        <table id="evaluations">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="only-desktop">Provider</th>
+              <th style="text-align: center;">Transparency</th>
+              <th style="text-align: center;">Usefulness</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">
+                <a href="apertus" target="_blank" title="data: apertus.yaml">
+                  <u>Apertus</u>
+                </a>
+                <span class="only-mobile"><small>Swiss AI Initiative</small></span>
+              </td>
+              <td class="only-desktop">
+                Swiss AI Initiative
+              </td>
+              <td class="data-cell grade open">
+                  A&nbsp;&nbsp;
+              </td>
+              <td class="data-cell grade open">
+                  A+
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="bria" target="_blank" title="data: bria.yaml">
+                  <u>Bria 3.2</u>
+                </a>
+                <span class="only-mobile"><small>Bria AI</small></span>
+              </td>
+              <td class="only-desktop">
+                Bria AI
+              </td>
+              <td class="data-cell grade open">
+                  B+
+              </td>
+              <td class="data-cell grade open">
+                  A&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="smollm" target="_blank" title="data: smollm.yaml">
+                  <u>SmolLM3-3B</u>
+                </a>
+                <span class="only-mobile"><small>HuggingFace</small></span>
+              </td>
+              <td class="only-desktop">
+                HuggingFace
+              </td>
+              <td class="data-cell grade open">
+                  B+
+              </td>
+              <td class="data-cell grade open">
+                  B+
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="bielik" target="_blank" title="data: bielik.yaml">
+                  <u>Bielik v3 11B Instruct</u>
+                </a>
+                <span class="only-mobile"><small>SpeakLeash</small></span>
+              </td>
+              <td class="only-desktop">
+                SpeakLeash
+              </td>
+              <td class="data-cell grade open">
+                  B+
+              </td>
+              <td class="data-cell grade partial">
+                  C+
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="phi" target="_blank" title="data: phi.yaml">
+                  <u>Phi-4</u>
+                </a>
+                <span class="only-mobile"><small>Microsoft</small></span>
+              </td>
+              <td class="only-desktop">
+                Microsoft
+              </td>
+              <td class="data-cell grade closed">
+                  D&nbsp;&nbsp;
+              </td>
+              <td class="data-cell grade closed">
+                  F&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="claude-sonnet-4.5" target="_blank" title="data: claude-sonnet-4.5.yaml">
+                  <u>Claude Sonnet 4.5</u>
+                </a>
+                <span class="only-mobile"><small>Anthropic</small></span>
+              </td>
+              <td class="only-desktop">
+                Anthropic
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="gemini-2.5-flash-image" target="_blank" title="data: gemini-2.5-flash-image.yaml">
+                  <u>Gemini 2.5 Flash Image</u>
+                </a>
+                <span class="only-mobile"><small>Google</small></span>
+              </td>
+              <td class="only-desktop">
+                Google
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="gpt-5" target="_blank" title="data: gpt-5.yaml">
+                  <u>GPT-5</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="gpt-oss" target="_blank" title="data: gpt-oss.yaml">
+                  <u>GPT-OSS</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+            </tr>
+            <tr>
+              <td class="name-cell">
+                <a href="sora-2" target="_blank" title="data: sora-2.yaml">
+                  <u>Sora 2</u>
+                </a>
+                <span class="only-mobile"><small>OpenAI</small></span>
+              </td>
+              <td class="only-desktop">
+                OpenAI
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+              <td class="data-cell grade na">
+                  N/A
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section><br><br>
+
+      <section id="tldr">
+        <h2>TL;DR</h2>
+        <small style="font-size: 0.75rem;"><p>Our work makes the following <strong>contributions</strong>:</p>
+        <ul>
+        <li>We examine how many organizations provide summaries in line with Art. 53(1)(d) obligations.</li>
+        <li>We review best practices for data transparency, and how they apply to the Article 53(1)(d) template.</li>
+        <li>We evaluate existing public summaries in line with these practices, and rank their quality along two graded scales.</li>
+        <li>We argue that compliance is never a <em>fait accompli</em> unless we make it so, and that openness enables critical computational literacy and rights enforcement.</li>
+        </ul><br>
+        <p>We find the following <strong>recurrent patterns</strong>:</p>
+        <ul>
+        <li>Few organizations across the board provide a data summary in line with EU AI Act Art. 53(1)(d) obligations.</li>
+        <li>Some organizations provide a minimal summary in the shape of the template, concealing data which should be disclosed.</li>
+        <li>A limited number of organizations provide templates which are closely in line with existing obligations, demonstrating that achieving a suitable-quality summary is a reasonable bar.</li>
+        </ul><br>
+        <p>We <strong>conclude</strong> as follows:</p>
+        <blockquote id="conclusion">The industry is yet to react significantly to Article 53(1)(d), with only a handful of GPAI model providers having yet published their training data summaries. To this end, it is imperative to contruct monitoring and assessment capabilities, to ensure that compliance takes place fully and faithfully.
+          </blockquote></small>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

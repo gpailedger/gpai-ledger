@@ -7,8 +7,9 @@
   "size_bytes": 70622,
   "stored_as": "raw.docx",
   "extraction_notes": [
-    "no extractor for .docx",
-    "stored as .bin at capture (origin served Content-Type '/'); magic-byte identified as .docx on 19 Aug 2026 and renamed; bytes and SHA-256 unchanged"
+    "stored as .bin at capture (origin served Content-Type '/'); magic-byte identified as .docx on 19 Aug 2026 and renamed; bytes and SHA-256 unchanged",
+    "repaired 2026-08-31: text extracted when a .docx reader was added; the stored bytes and their SHA-256 are unchanged",
+    "repaired 2026-08-31: text extracted when a .docx reader was added; the stored bytes and their SHA-256 are unchanged"
   ],
   "http": {
     "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118578",
@@ -43,7 +44,7 @@
     "errors": [],
     "at": "2026-08-11T11:02:00Z"
   },
-  "text_sha256": null,
+  "text_sha256": "c9754f09de5680bd825a772ead5c7a8f480a4267c9c755c13a4975c7633212f8",
   "wayback_attempts": [
     {
       "ok": true,

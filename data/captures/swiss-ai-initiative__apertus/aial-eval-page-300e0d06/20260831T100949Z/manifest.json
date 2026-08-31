@@ -1,0 +1,39 @@
+{
+  "source_id": "swiss-ai-initiative/apertus",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus",
+  "target_kind": "aial-eval-page",
+  "sha256": "7cd72415989a2c7eccb325383ae6dc1ef5e657bb83bd113ae024fe4f1888b38f",
+  "size_bytes": 20421,
+  "stored_as": "raw.html",
+  "text_sha256": "fbae928dae20c1df55d5b087657f12170584c33df7e9ac23a62b62eae10d645e",
+  "doc_links_sha256": "d3d2849e995675e919fc430954b5149c1ab617602e3873104f4767a942a920ad",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/apertus/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/apertus/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"137138b09e66406b7766dc91a9f4622f9e5f6536ebd3bac0a64ae5e43f980229\"",
+    "last_modified": null,
+    "content_length": "4502",
+    "fetched_at": "2026-08-31T10:09:49Z"
+  },
+  "prior_sha256": "2f4dbcc7da76f0aa240d9e2e161f8194f4a5bd276eda3b21bd9f1802c5fceb33",
+  "git_commit": "9b4bce99bb5aa6ce9e46070044d32c6ddeea791e",
+  "git_commit_date": "2026-07-23T11:05:55Z",
+  "git_blob_sha": "f3c6287caac431515c8cf5c79447aa9b449ae8fb",
+  "git_path": "public/evals/apertus/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:09:55Z"
+  }
+}

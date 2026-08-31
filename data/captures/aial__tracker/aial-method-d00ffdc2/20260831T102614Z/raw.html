@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analysis of AI Act Art.53(1)(d) Public Summaries</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <style>
+article {
+    max-width: 90vw;
+}
+#table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    display: table;
+}
+#evaluations {
+    font-size: 0.5rem;
+}
+#evaluations .grade.na { background-color:darkgray; }
+#evaluations th:nth-child(1),td:nth-child(1) { 
+    text-align: end;
+    padding-right: 5px;
+}
+th {
+    text-align: center;
+    padding: 0px;
+}
+td {
+    font-size: 0.5rem;
+    padding: 2px;
+    width: 25px;
+}
+.name-cell {
+    font-size: 0.8rem;
+    width: 150px;
+}
+li {
+    font-size: 0.8rem;
+}
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li><a href="./blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="./about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>Overview of Quality Assessment Findings</h1>
+        <p style="font-size: 0.8rem;">Below is an overview of our quality assessment for each public summary. We scored each section of the summary based on <a href="methodology">our developed methodology</a>, and then calculated the overall score and grade. Each summary is scored for two dimensions: <strong>Transparency (T)</strong> on how the information is provided, and <strong> Usefulness (U)</strong> for whether it is sufficient for stakeholders' needs. For convenience, all scores are reflected as a percentage (out of hundred) and the grades are expressed on a scale from A+ (highest) to F (lowest). Sections in public summaries that were not filled in because they were not applicable are marked as "N/A". Public summaries not being provided are marked using "<span style="color:red; font-weight: bold;">&#33;</span>". The development of the framework and the evaluation steps are described on our <a href="methodology">methodology page</a> along with a <a href="methodology#FAQ">FAQ</a>.</p>
+    </div>
+    </header>
+
+    <section id="results">
+        <div id="table-wrapper">
+        <table id="evaluations" class="table-mobile">
+            <thead>
+                <tr class="main-header">
+                    <th>Section&rarr;</th>
+                    <th colspan="2">Grade</th>
+                    <th colspan="2">Overall</th>
+                    <th colspan="2">General Information</th>
+                    <th colspan="2">Public Data Sources</th>
+                    <th colspan="2">Private Data Sources</th>
+                    <th colspan="2">Scraped/Crawled Data</th>
+                    <th colspan="2">User Data</th>
+                    <th colspan="2">Synthetic & Other Data</th>
+                    <th colspan="2">Data Processing</th>
+                    <th colspan="2">Document</th>
+                </tr>
+                <tr class="second-header">
+                    <th>Model&darr;</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                    <th class="dimension-T-label" data-tooltip="Transparency">T</th>
+                    <th class="dimension-U-label" data-tooltip="Usefulness">U</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/apertus/"><u>Apertus</u></a></td>
+<td class="outline open data-cell grade">A&nbsp;&nbsp;</td>
+<td class="outline open data-cell grade">A+</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">97</td>
+<td class="partial data-cell grade">74</td>
+<td class="open data-cell grade">93</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/bria/"><u>Bria 3.2</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">A&nbsp;&nbsp;</td>
+<td class="open data-cell grade">86</td>
+<td class="open data-cell grade">94</td>
+<td class="partial data-cell grade">69</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">70</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/smollm3/"><u>SmolLM3-3B</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="open data-cell grade">82</td>
+<td class="open data-cell grade">86</td>
+<td class="partial data-cell grade">73</td>
+<td class="open data-cell grade">90</td>
+<td class="open data-cell grade">96</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">60</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">68</td>
+<td class="partial data-cell grade">58</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/domyn/"><u>Domyn Large</u></a></td>
+<td class="outline open data-cell grade">B&nbsp;&nbsp;</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="open data-cell grade">79</td>
+<td class="open data-cell grade">81</td>
+<td class="open data-cell grade">80</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">68</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">85</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">83</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">78</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">97</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">98</td>
+<td class="open data-cell grade">77</td>
+<td class="open data-cell grade">81</td>
+<td class="partial data-cell grade">57</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/bielik/"><u>Bielik v3 11B Instruct</u></a></td>
+<td class="outline open data-cell grade">B+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="open data-cell grade">88</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">93</td>
+<td class="open data-cell grade">86</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">83</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">98</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">88</td>
+<td class="open data-cell grade">84</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/adobe-firefly/"><u>Adobe Firefly</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline open data-cell grade">B+</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">82</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">92</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">16</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">89</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/inkling/"><u>Inkling</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">66</td>
+<td class="partial data-cell grade">69</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">56</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">63</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">78</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/fastwebmiia/"><u>FastwebMIIA</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="partial data-cell grade">50</td>
+<td class="partial data-cell grade">73</td>
+<td class="partial data-cell grade">74</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">26</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">45</td>
+<td class="closed data-cell grade">44</td>
+<td class="closed data-cell grade">33</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">40</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">92</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-image-2/"><u>MAI-Image-2</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">66</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">71</td>
+<td class="open data-cell grade">78</td>
+<td class="closed data-cell grade">26</td>
+<td class="closed data-cell grade">44</td>
+<td class="open data-cell grade">89</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">80</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="na data-cell grade">N/A</td>
+<td class="partial data-cell grade">65</td>
+<td class="na data-cell grade">N/A</td>
+<td class="open data-cell grade">75</td>
+<td class="closed data-cell grade">26</td>
+<td class="open data-cell grade">85</td>
+<td class="partial data-cell grade">68</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-5-5/"><u>GPT-5.5</u></a></td>
+<td class="outline partial data-cell grade">C+</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">62</td>
+<td class="closed data-cell grade">47</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">27</td>
+<td class="closed data-cell grade">7</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">73</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">74</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">92</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">57</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">65</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gemini-3-pro/"><u>Gemini 3 Pro</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">56</td>
+<td class="partial data-cell grade">53</td>
+<td class="partial data-cell grade">72</td>
+<td class="partial data-cell grade">54</td>
+<td class="closed data-cell grade">4</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">59</td>
+<td class="closed data-cell grade">39</td>
+<td class="closed data-cell grade">45</td>
+<td class="partial data-cell grade">50</td>
+<td class="open data-cell grade">78</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">90</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">57</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/grok-4.5/"><u>Grok 4.5</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="partial data-cell grade">54</td>
+<td class="partial data-cell grade">51</td>
+<td class="open data-cell grade">77</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">5</td>
+<td class="closed data-cell grade">0</td>
+<td class="closed data-cell grade">34</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">63</td>
+<td class="closed data-cell grade">39</td>
+<td class="open data-cell grade">100</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">62</td>
+<td class="partial data-cell grade">58</td>
+<td class="open data-cell grade">76</td>
+<td class="closed data-cell grade">35</td>
+<td class="open data-cell grade">87</td>
+<td class="partial data-cell grade">63</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/muse-image/"><u>Muse Image</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">52</td>
+<td class="closed data-cell grade">49</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">32</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">55</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">15</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">66</td>
+<td class="closed data-cell grade">48</td>
+<td class="open data-cell grade">83</td>
+<td class="partial data-cell grade">63</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/muse-spark/"><u>Muse Spark</u></a></td>
+<td class="outline partial data-cell grade">C&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">D+</td>
+<td class="partial data-cell grade">52</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">67</td>
+<td class="open data-cell grade">90</td>
+<td class="closed data-cell grade">32</td>
+<td class="closed data-cell grade">44</td>
+<td class="partial data-cell grade">72</td>
+<td class="open data-cell grade">100</td>
+<td class="partial data-cell grade">55</td>
+<td class="closed data-cell grade">24</td>
+<td class="open data-cell grade">86</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">15</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">66</td>
+<td class="closed data-cell grade">48</td>
+<td class="partial data-cell grade">72</td>
+<td class="closed data-cell grade">47</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/phi-4/"><u>Phi-4</u></a></td>
+<td class="outline closed data-cell grade">D&nbsp;&nbsp;</td>
+<td class="outline closed data-cell grade">F&nbsp;&nbsp;</td>
+<td class="closed data-cell grade">33</td>
+<td class="closed data-cell grade">24</td>
+<td class="partial data-cell grade">70</td>
+<td class="open data-cell grade">100</td>
+<td class="closed data-cell grade">3</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">53</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">0</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">0</td>
+<td class="na data-cell grade">N/A</td>
+<td class="closed data-cell grade">8</td>
+<td class="closed data-cell grade">0</td>
+<td class="partial data-cell grade">52</td>
+<td class="closed data-cell grade">0</td>
+<td class="open data-cell grade">87</td>
+<td class="open data-cell grade">81</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mai-code-1-flash/"><u>MAI Code 1 Flash</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/devstral-2/"><u>Devstral 2 123B Instruct 2502</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/veo/"><u>Veo 3.1</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/palmyra-x5/"><u>Palmyra X5</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/command-a/"><u>C4AI Command A Plus 05 2026</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gemma-4/"><u>Gemma 4 31B</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-image-2/"><u>GPT Image 2</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/north-mini-code/"><u>North Mini Code 1.0</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/claude-fable-5/"><u>Claude Fable 5</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gemini-3-6-flash/"><u>Gemini 3.6 Flash</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/mistral-3-5/"><u>Mistral Large 3 675B Base 2512</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/flux-2/"><u>FLUX.2</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/aya-vision/"><u>Aya Vision 32B</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-oss/"><u>GPT-OSS</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/apriel-1-5/"><u>Apriel 1.5 15B Thinker</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/nova-2/"><u>Amazon Nova 2</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/gpt-5-6/"><u>GPT-5.6 Sol</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/sora-2/"><u>Sora 2</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+                <tr class="row-a">
+                    <td class="name-cell"><a href="evals/fibo/"><u>FIBO</u></a></td>
+<td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td><td class="closed data-cell grade"><span style="color:white; font-weight: bold;">&#33;</span></td>                </tr>
+            </tbody>
+        </table>
+        </div>
+    </section>
+
+    <section id="collected_summaries">
+        <p><strong>Source and Analysis</strong>
+        <ul style="list-style-type: none;">
+            <li>
+                <strong>Adobe Firefly</strong> by Adobe
+                <br/><small>
+                    Based on <a href="https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/creative-cloud/adobe-firefly-image-model-5-training-set.pdf?msockid=0852fa814c266ee002e8ede54d7b6fd3">public summary</a> dated 2025-11-01 and evaluated on 2026-07-22.
+                    See <a href="./evals/adobe-firefly/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Apertus</strong> by Swiss AI Initiative
+                <br/><small>
+                    Based on <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf">public summary</a> dated 2025-09-01 and evaluated on 2026-03-30.
+                    See <a href="./evals/apertus/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Apriel 1.5 15B Thinker</strong> by OpenAI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Aya Vision 32B</strong> by Cohere
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Bielik v3 11B Instruct</strong> by SpeakLeash
+                <br/><small>
+                    Based on <a href="https://bielik.ai/downloads/Bielik%2011B%20v3%20EU%20Public%20Summary.pdf">public summary</a> dated 2026-01-01 and evaluated on 2026-03-30.
+                    See <a href="./evals/bielik/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Bria 3.2</strong> by Bria AI
+                <br/><small>
+                    Based on <a href="https://drive.google.com/file/d/13BhHQhd7vcDArPmpBrl_b2FpdBqkYU4n/view">public summary</a> dated 2026-01-06 and evaluated on 2026-03-31.
+                    See <a href="./evals/bria/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Claude Fable 5</strong> by Anthropic
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>C4AI Command A Plus 05 2026</strong> by Cohere
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Devstral 2 123B Instruct 2502</strong> by Mistral AI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Domyn Large</strong> by Domyn
+                <br/><small>
+                    Based on <a href="https://www.domyn.com/summary-of-training-data/domyn-large">public summary</a> dated 2026-03-19 and evaluated on 2026-07-21.
+                    See <a href="./evals/domyn/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>FastwebMIIA</strong> by Fastweb
+                <br/><small>
+                    Based on <a href="https://www.fastweb.it/grandi-aziende/artificial-intelligence/fastweb-miia/documentazione-trasparenza-ai/sintesi%20contenuti%20training.pdf">public summary</a> dated 2026-03-23 and evaluated on 2026-07-22.
+                    See <a href="./evals/fastwebmiia/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>FIBO</strong> by Bria AI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>FLUX.2</strong> by Black Forest Labs
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Gemini 3.6 Flash</strong> by Google
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Gemini 3 Pro</strong> by Google
+                <br/><small>
+                    Based on <a href="https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-ii_2026-7-2_2026-7-2_en_v1.pdf">public summary</a> dated 2026-07-02 and evaluated on 2026-07-21.
+                    See <a href="./evals/gemini-3-pro/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Gemma 4 31B</strong> by Google
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>GPT-5.5</strong> by OpenAI
+                <br/><small>
+                    Based on <a href="cdn.openai.com/pdf/eb1f5ac3-009e-4d51-b2da-f5f327913115/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf">public summary</a> dated 2026-06-26 and evaluated on 2026-07-09.
+                    See <a href="./evals/gpt-5-5/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>GPT-5.6 Sol</strong> by OpenAI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>GPT Image 2</strong> by OpenAI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>GPT-OSS</strong> by OpenAI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Grok 4.5</strong> by xAI
+                <br/><small>
+                    Based on <a href="https://media.x.ai/v1/website/public-summary-of-training-content-for-grok-4.5_8jul2026.docx-fc25014a.pdf">public summary</a> dated 2026-07-08 and evaluated on 2026-07-20.
+                    See <a href="./evals/grok-4.5/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Inkling</strong> by Thinking Machines
+                <br/><small>
+                    Based on <a href="https://thinkingmachines.ai/documents/inkling-public-summary-training-content.pdf">public summary</a> dated 2026-07-16 and evaluated on 2026-07-20.
+                    See <a href="./evals/inkling/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>MAI Code 1 Flash</strong> by Microsoft AI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>MAI-Image-2</strong> by Microsoft
+                <br/><small>
+                    Based on <a href="https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf">public summary</a> dated 2026-03-19 and evaluated on 2026-07-21.
+                    See <a href="./evals/mai-image-2/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Mistral Large 3 675B Base 2512</strong> by Mistral AI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Muse Image</strong> by Meta
+                <br/><small>
+                    Based on <a href="https://scontent-ams2-1.xx.fbcdn.net/m1/v/t0.84174-6/An9BF4dBYkAKjeGpluhekU7VtJbQg6ES6EFahpoJ6kryNn3RSmmTp3y4bKULETf302pS_BxNlBlyBagbElNaEr28zpo5DB0vqojbfYh-zurs4Q0XVVKOBAnbeSHTz_7_TedTRoU?_nc_gid=BAjn2i1WTzzLRGnbFEyYfQ&amp;_nc_oc=AdoWY07EO0haRKgq_ymFg45hG-MtS5xRzcyTiFfZiP_OZ8DdqgO2Dea0JvOIB_zAdxU&amp;ccb=10-5&amp;oh=00_AQCbD9n5XY1_SjPRIVHBULk5w3cbkVxnj5ujvO0smvwKcw&amp;oe=6A63BEC4&amp;_nc_sid=68f2c3">public summary</a> dated 2026-07-06 and evaluated on 2026-07-21.
+                    See <a href="./evals/muse-image/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Muse Spark</strong> by Meta
+                <br/><small>
+                    Based on <a href="https://scontent-cdg4-2.xx.fbcdn.net/m1/v/t0.84174-6/An9xMwStIQozRLYaee-vSr7pS5-Lw_ehrGZVc7ZqV3zsQjKchhXWc8Db5ilTBhsolBYyFrwH1SjrqvZB_I57i3R1RxDFCTsDz4T7V2AbYonPi8s4HSvzqK8jhbNctEz1omCwR7c?_nc_gid=ysdJnUxZm5-oco3l1t5YEg&amp;_nc_oc=Ado4QLg8VjK5cG0Ahy2vVQR85rS-huUntkgkNpI5JMMtHQAvDoWUg8X8yy8X65ElHG0&amp;ccb=10-5&amp;oh=00_AQDXEjGU5aJbaJ_VFJh5zCogRpTzXIi_Uv7aPsJzRVloUQ&amp;oe=6A61267A&amp;_nc_sid=68f2c3">public summary</a> dated 2026-07-08 and evaluated on 2026-07-21.
+                    See <a href="./evals/muse-spark/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>North Mini Code 1.0</strong> by Cohere
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Amazon Nova 2</strong> by Amazon
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Palmyra X5</strong> by WRITER
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Phi-4</strong> by Microsoft
+                <br/><small>
+                    Based on <a href="https://huggingface.co/microsoft/phi-4/blob/main/data_summary_card.md">public summary</a> dated 2025-11-24 and evaluated on 2026-03-31.
+                    See <a href="./evals/phi-4/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>SmolLM3-3B</strong> by HuggingFace
+                <br/><small>
+                    Based on <a href="https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency">public summary</a> dated 2025-07-25 and evaluated on 2026-03-31.
+                    See <a href="./evals/smollm3/">detailed analysis</a>.
+                </small>
+            </li>
+            <li>
+                <strong>Sora 2</strong> by OpenAI
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+            <li>
+                <strong>Veo 3.1</strong> by Google
+                <br/><small>
+                    <i>no public summary found</i>
+                </small>
+            </li>
+        </ul>
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

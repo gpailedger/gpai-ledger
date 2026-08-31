@@ -1,0 +1,39 @@
+{
+  "source_id": "mistral-ai/mistral-small-4",
+  "provider": "Mistral AI",
+  "model": "Mistral Small 4",
+  "target_kind": "aial-eval-page",
+  "sha256": "b32dcab19f8866a38482d45aecb716051f14d7d076d7261e3f87abb191badca0",
+  "size_bytes": 20174,
+  "stored_as": "raw.html",
+  "text_sha256": "0eb9ab54a1523f5eee2dfb144da6eb8c111ae3b77f3c76d0f10401df15be8e66",
+  "doc_links_sha256": "52998b7722ba55a2f9fd8d3f3147330e7e0572bdb018821a6566084be6638839",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/mistral-small-4/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/mistral-small-4/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d37b9799ba1a4e03168a738df72367478347338285df714d14257194b77d3f90\"",
+    "last_modified": null,
+    "content_length": "3694",
+    "fetched_at": "2026-08-31T11:24:57Z"
+  },
+  "prior_sha256": "28fbeacf70d53a247ac30ae3fd3f572d3f0ae910db4b88e7971ed79b775eb39b",
+  "git_commit": "a3575567d55d0b1e4744c902cf7806232eaef55d",
+  "git_commit_date": "2026-08-06T15:02:07Z",
+  "git_blob_sha": "156c8cf15ae3a87310d066e9d80c7afdfa4432a6",
+  "git_path": "public/evals/mistral-small-4/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:25:03Z"
+  }
+}

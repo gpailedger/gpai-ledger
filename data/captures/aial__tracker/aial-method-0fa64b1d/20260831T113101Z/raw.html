@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Methodology</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <script src="./static/sorttable.js"></script>
+    <style>
+body {
+    font-size: 0.75rem;
+}
+details {
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid lightgray; 
+}
+table { font-size: 0.5rem; }
+table > tr,th,td { border: 1px solid black; }
+      .sticky-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        background: #F33;
+        color: #fff;
+        padding: 20px 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 999;
+      }
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li><a href="./blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="./about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <div class="sticky-popup">
+      NOTICE: We are currently working hard on updates and the start of enforcement as of 2nd August 2026! Stay tuned.
+    </div>
+    <article>
+    <header>
+        <h1>Methodology</h1>
+        <h2 style="font-size: 0.8rem;">Development of a Quality Assessment Framework for the AI Act's Article 53(1)(d) Public Summaries</h2>
+        <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+  <p>See our peer-reviewed article: Dick A. H. Blankvoort, Harshvardhan J. Pandit, and Maximilian Gahntz (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong>. 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo. <a href="https://doi.org/10.1145/3805689.3806755">DOI:10.1145/3805689.3806755</a></p>
+</div>
+
+
+        <blockquote style="border-left: 5px solid #a5410f; font-size: 0.7rem;">
+            Using our quality assessment framework, a <em>'high-quality'</em> public summary is  a document that
+            provides information in a clear, structured, accurate, and consistent
+            manner (which means it has high <em>transparency</em>) such that it allows relevant stakeholders
+            to understand the training process and to take relevant actions where
+            necessary (which means it has high <em>usefulness</em>). This makes our quality scores a relevant measure of the degree to which the public summary achieves the intended goals as stated in the AI Act and the template's explanatory note.
+            <strong>Public summaries that are <em>'low-quality'</em>, i.e., they do not demonstrate sufficient transparency and usefulness, are also likely to not meet the Article 53(1)(d) obligations.</strong>
+        </blockquote>
+    </header>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>The broad objective of our work is to support the implementation and enforcement of <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53#053.001">AI Act Article 53(1)(d)</a> that requires GPAI Providers to publish a public summary of training content based on the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models">template provided by the AI Office</a>. We do this by assessing the <i>quality</i> of the public summary across two key criteria: <i>Transparency</i> and <i>Usefulness</i>. Transparency refers to the extent of information provided through the public summary, and Usefulness represents the utility of provided information as well as its potential to be actionable by specific stakeholders. Using our framework, a 'high-quality' public summary is described as a document that provides information in a clear, structured, accurate, and consistent manner (transparency) such that it allows relevant stakeholders to understand the training process and to take relevant actions where necessary (usefulness). Public summaries that do not meet these requirements are considered as `low-quality', and are potentially in breach of the template and the corresponding Article 53(1)(d) obligations.</p>
+
+        <p>To assess <em>Transparency</em>, we identified 6 dimensions: <em>Clarity</em>,
+        <em>Completeness</em>, <em>Consistency</em>, and <em>Correctness</em>, and for <em>Usefulness</em> we identified <em>Accessibility</em> and
+        <em>Comprehension</em>. We then developed 242 <em>metrics</em> (or more generally, <i>questions</i>) as specific questions or criteria that evaluate each field in each section of the public summary template. Since the public summary is structured such that each section has different implications for stakeholders, e.g. some may be interested only in Section 2.2 or Section 3, we evaluate each section using these metrics and then aggregate their scores to get the overall quality. Applying this framework means taking each public summary and assessing it by scoring each of the 242 metrics/questions and then combining them to achieve the combined/aggregated scores. These terms and the methods used are well-established in the field of data governance as the process of 'data quality assessment', with our work based on the work that specialises these for 'documentation quality assesssment'.</p>
+
+        <p>Below we provide a comprehensive description of <a href="#development">the methodology used in our development process</a>, the <a href="#framework">quality assessment framework</a>, the <a href="#calculation">process for calculation of scores</a>, and <a href="#interpretation">guidance on interpretation of outcomes</a>. Click <button id="btn_openAllDetails" onclick="openAllDetails();" style="padding: 1px; line-height: 1; font-size: var(--pico-font-weight);">here</button> to expand all sections.</p>
+    </section>
+
+    <section id="development">
+        <h2>Development Process</h2>
+        <details id="development-selection">
+            <summary>
+                Selection of Criteria/Dimensions
+            </summary>
+            <p><a href="https://en.wikipedia.org/wiki/Data_quality">Data Quality Assessment</a> is a broad field that describes both qualitative and quantitative methods to evaluate the 'fitness', 'usefulness', or 'utility' towards specific purpose(s). By extension, <i>Documentation Quality Assessment</i> refers to evaluation of the documentation towards specific purposes, such as the role of technical documentation in equipping developers or engineers with a sufficient understanding of the system. Quality assessments consist of selecting 'dimensions', which are broad objectives that we want to assess, and then identifying specific 'metrics', which are granular evaluations, for example as tests or questions, whose answer produces a quantifiable number to represent degree to which the documentation satisfies the criteria. There are various ways in which the metrics can be combined to produce a single score or label for a dimension, and similarly there are various ways in which dimension scores can be consolidated to create an overall or global quality representation.</p>
+            <p>For our work, the document in question is the template for the public summary, which is not a dataset or a technical documentation, but is in essence a legally relevant document. This means 'quality' not only refers to typical characteristics associated with use of a document, but must also include the specific objectives of why the AI Act requires the public summary to be published in a specific manner and to include specific content. For practicality, we chose two hypothetical use-cases to guide what the assessment is intended to highlight: '<i>good faith</i>' implementations where we can see that a conscentious effort has been made to provide the summary as intended, and '<i>bad faith'</i> implementations where the summary has one or more major flaws -- intentional or otherwise. These corresponded to what we wanted to evaluate as <i>good faith</i> and <i>bad faith</i> respectively.</p>
+            <p>To start with, we conducted a literature review of documentation quality assessment frameworks, where we identified the different methods used and studied the dimensions used as well as their role in the assessment of specific information and use by stakeholders. From this, we selected the <a href="https://en.wikipedia.org/wiki/GQM">Goal, Question, Metric (GQM)</a> as our overall approach to structure the process. The GQM method provides a three-step process:</p>
+            <ol>
+                <li>Define the conceptual goal</li>
+                <li>For each goal, identify questions to describe the characteristics or model</li>
+                <li>For each question, what must be evaluated as a metric i.e. an assessment that produces a measurable result</li>
+            </ol>
+            <p>Using GQM, and considering the broader objectives of the public summary as established in the AI Act as well as in the explanatory note accompanying the template, we chose the following two as our broad goals:</p>
+            <ol>
+                <li><strong>Transparency:</strong> The extent to which the public summary provides the required information.</li>
+                <li><strong>Usefulness:</strong> The extent to which the provided information can be utilised for the intended purposes.</li>
+            </ol>
+            <p>To evaluate each of these, we utilised our literature survey to select 'dimensions' or 'categories of quality' that would provide the best model or description for the information in the public summary. For Transparency these were:</p>
+            <ol>
+                <li><strong>Clarity:</strong> Is the information unambiguous, easy to understand, and avoids misinterpretation?</li>
+                <li><strong>Completeness:</strong> Is the information relevant to what is asked is the necessary information provided?</li>
+                <li><strong>Consistency:</strong> Does the information use the appropriate terminology, format, and structure in a manner that is consistent within and across the document(s)?</li>
+                <li><strong>Correctness:</strong> Is the information accurate, validated, and reliable?</li>
+            </ol>
+            <p>By using these, a public summary that has a high degree of transparency can be understood as the document and the information being clear, complete, consistent, and correct. We identified similar dimensions for assessing Usefulness:</p>
+            <ol>
+                <li><strong>Accessibility:</strong> Is the information easy to obtain, navigate, interact with, &amp; includes or follows accessibility standards?</li>
+                <li><strong>Comprehension:</strong> Is the information understandable and interpretable for the intended audience?</li>
+            </ol>
+            <p>The choice of dimensions was not merely from theoretical considerations. We also discussed common issues such as providing information but in an obfuscated or confusing manner (clarity), not providing information in a specific field (completeness), using different terms across sections (consistency), providing information that is inaccurate or is later shown to be invalid (correctness), publishing the summary but in a manner that is not easily found (accessibility), and using highly technical jargon that cannot be understood by specific stakeholders (comprehension). Thus, the dimensions not only help to assess the quality of provided information, but also help categorise and assess issues.</p>
+        </details>
+        <details id="development-metrics">
+            <summary>Development of Metrics</summary>
+            <p>To evaluate the selected dimensions over the public summary, we chose to assess each section of the public summary independently as it pertains to a specific topic. For example, Section 2.1 concerns public data whereas Section 2.4 concerns user data. Each of these sections would be of interest to specific stakeholders, and therefore they may be interested in the quality only for that specific section. In addition to these 'stakeholder-oriented' sections, we also considered the document itself as a separate category to assess criteria such as the manner in which it was provided and the metadata fields that are not part of any section. In total, we identified 8 sections:</p>
+            <ol>
+                <li>Document: entire document</li>
+                <li>General information: Section 1</li>
+                <li>Public Data Sources: Section 2.1</li>
+                <li>Private Data Sources: Section 2.2</li>
+                <li>Scraped/Crawled Data: Section 2.3</li>
+                <li>User Data: Section 2.4</li>
+                <li>Synthetic &amp; Other Data: Section 2.5 &amp; 2.6</li>
+                <li>Data Processing: Section 3</li>
+            </ol>
+            <p>Assessing the quality of each section meant assessing the <i>transparency</i> and <i>usefulness</i> of each section independently, which meant assessing the 6 dimensions (or questions under GQM) for each section. To do so, we created evaluation metrics using the following process:</p>
+            <ol>
+                <li>First, separate each independent information field in the template. This was necessary as the template uses numbers for a group of fields, and where one field can ask several pieces of information. To evaluate each asked information on its own merit, we split the field into separate parts as necessary. For example, there is a single field for the Provider name and contact. Here, 'name' and 'contact' are independent pieces of information, and thus we created two fields to represent these.</li>
+                <li>We started from existential assessments i.e. is the field filled in or not (completeness).</li>
+                <li>We then considered what would be required for this information to be clear. For example, if the field for contact provides a generic contact that is not distinguishable from other contacts (e.g. a generic postal address), then this would not be clear.</li>
+                <li>We then considered whether the information across the fields is consistent e.g. the terms used in the model section are different from those in later sections (consistency).</li>
+                <li>We assumed that the information in specific fields in the public summary is correct for the moment, unless there are discrepancies in the public summary itself which invalidate this assumption (correctness).  For these fields, if later it is found that the public summary has inaccurate or invalid information, this field would be used to identify and represent these issues.</li>
+                <li>Once we had ensured that the information is provided in a transparent manner, we focused on how this information could be used. For example, the Provider name must indicate the specific legal entity (comprehension). We also considered identifiers used being comprehensible, and key information that affects what obligations apply -- such as whether the model is a new model or has been fine-tuned on existing models.</li>
+                <li>For information where links would be needed, or where links are provided in a field, we considered how to evaluate the use of links and the information provided through the links, such as if these links lead to relevant locations (accessibility).</li>
+            </ol>
+            <p>By using this approach, we identified a total of 242 evaluation metrics. This means that to assess the quality of a public summary that has all sections filled in, we would have to assess 242 things to evaluate its overall quality. Or, if we wanted to evaluate the quality only of a specific section, then the number of evaluations would be a subset of 242 (likely including the document section as well since it contains evaluation of how the public summary itself is provided). We think these 242 metrics are currently sufficient, based on our understanding of the template as well as how it may be filled in. However, as with any quality assessment framework, once we perform a number of evaluations, we would likely update the metrics -- including adding new ones -- to reflect the evolving practices and the need to identify and highlight specific practices (as good or bad quality).</p>
+        </details>
+        <details id="development-weights">
+            <summary>Determination of Weights</summary>
+            <p>In quality assessment methods, different information is likely to have a differing interpretation of <i>importance</i>. For example, in the public summary, the format of the date is not as important as contact details or the identifiers for the model. To reflect this difference, <i>weights</i> are assigned to specific evaluations, such as that the <i>weighted score</i> reflects the impact of that field being correctly or incorrectly provided. To determine the weights, we discussed each metric and what would be the implication of that metric on the use of the public summary. We assigned weights for metrics from 1 to 25, with 1 representing the lowest impact and 25 the highest. <i><strong>Note:</strong> The subjective choosing of weights is an accepted practice in developing quality assessment frameworks, as long as the method for assigning weights is justified. In our case, we determined the weights based on the perceived 'importance' of the information and the 'impact' of not having that information.</i></p>
+            <p>Using the weights, the scoring process becomes as follows: First, we evaluate the metrics, and then we multiply each metric by its score. For example, if there are two metrics in a section: A and B, with weights 25 and 1 respectively, then the scoring is as follows: (A x 25) + (B x 1). This means that if A is not provided and B is provided, the score would be much lower than if A is provided and B is not.</p>
+            <p>As the public summaries are assessed, certain fields and corresponding metrics may emerge to be more prominent -- either because they require additional considerations or because they are the areas where most summaries do not have an adequate quality. To address these, updating quality assessment frameworks also includes an assessment of whether the current set of weights is sufficient or should be changed.</p>
+        </details>
+    </section>
+
+    <section id="framework">
+        <h2>Quality Assessment Framework</h2>
+        <details id="framework-grades">
+            <summary>Grades</summary>
+            Grades represent a summarised overview of the quality of the public summary. We assign grades individually to transparency and usefulness scores to differentiate between the quality of the public summary in providing information and in it being useful.
+            <table class="tableshort">
+                <tr>
+                    <td>Grade</td>
+                    <td>Label</td>
+                    <td>Score</td>
+                    <td>Interpretation</td>
+                </tr>
+                <tr>
+                    <td>A+</td>
+                    <td>Excellent</td>
+                    <td>95+</td>
+                    <td>Documentation is transparent and useful with very few, if any, limitations</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Highly Satisfactory</td>
+                    <td>90+</td>
+                    <td>Documentation is transparent and useful with some limitations</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>Satisfactory</td>
+                    <td>80+</td>
+                    <td>Documentation is transparent and useful but has numerous limitations</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>Acceptable</td>
+                    <td>75+</td>
+                    <td>Documentation is mostly transparent and useful with some major limitations</td>
+                </tr>
+                <tr>
+                    <td>C+</td>
+                    <td>Adequate</td>
+                    <td>60+</td>
+                    <td>Documentation is somewhat transparent and useful with major limitations</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Marginal</td>
+                    <td>50+</td>
+                    <td>Documentation is not transparent and useful and has some major limitations</td>
+                </tr>
+                <tr>
+                    <td>D+</td>
+                    <td>Inadequate</td>
+                    <td>40+</td>
+                    <td>Documentation is not transparent and useful and has several major limitations</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>Unsatisfactory</td>
+                    <td>25+</td>
+                    <td>Documentation is not transparent and useful and has systemic limitations</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>Unacceptable</td>
+                    <td>0+</td>
+                    <td>Documentation is not provided or has systemic problems</td>
+                </tr>
+            </table>
+        </details>
+        <details id="framework-matrix">
+            <summary>Broader framework</summary>
+            The broader framework is essentially a matrix similar to the table shown below. To fill it, we calculate the quality scores for each section of the public summary (using the granular metrics in the next section), and then calculate a percentage score by dividing it with the maximum possible score for that section. The scores for transparency and usefulness are the sums of their respective quality dimensions, and their percentages are calculated using the same method (divide total score by the maximum possible score). 
+            <table id="framework-broad" class="tableshort">
+                <tr>
+                    <td></td>
+                    <td>Clarity</td>
+                    <td>Completeness</td>
+                    <td>Consistency</td>
+                    <td>Correctness</td>
+                    <td>Accessibility</td>
+                    <td>Comprehension</td>
+                </tr>
+                <tr>
+                    <td>Document</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>General information</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Public Data Sources</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Private Data Sources</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Scraped/Crawled Data</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>User Data</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Synthetic &amp; Other Data</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Data Processing</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sum</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Final scores</td>
+                    <td colspan="4">Transparency = Sum (Clarity, Completeness, Consistency, Correctness)</td>
+                    <td colspan="2">Usefulness = Sum (Accessibility, Comprehension)</td>
+                </tr>
+                <tr>
+                    <td>Percentage scores</td>
+                    <td colspan="6">(Total score / Maximum possible score) x 100</td>
+                </tr>
+            </table>
+        </details>
+        <details id="framework-metrics">
+            <summary>Granular metrics</summary>
+            <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Metric</th>
+                        <th>Section</th>
+                        <th>Field</th>
+                        <th>Dimension</th>
+                        <th>Weight</th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td>D1</td>
+                        <td>All information must be provided within a single document</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D2</td>
+                        <td>Document must be easy to find</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D3</td>
+                        <td>Document must be accessible</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D4</td>
+                        <td>Document should be comprehensible</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Comprehension</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D5</td>
+                        <td>Document should have the correct structure</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D6</td>
+                        <td>Document must be readable</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Comprehension</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D7</td>
+                        <td>Document should have clear provenance</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D8</td>
+                        <td>Document should have assured integrity</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Correctness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>D9</td>
+                        <td>Document should be in a well-defined, structured, and interoperable format</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D10</td>
+                        <td>Document should support sharing and exporting</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D11</td>
+                        <td>Document language should be consistent with the language used in other external documentation</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Consistency</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D12</td>
+                        <td>Document should be provided in the same context as the model</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D13</td>
+                        <td>Document should be consistent with other documents provided elsewhere representing the same model version(s) and summary</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D14</td>
+                        <td>Document should be consistent across versions (across updates)</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D15</td>
+                        <td>Document should clearly indicate changes from previous version</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Comprehension</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>D16</td>
+                        <td>Document should clearly indicate its current status, in particular whether it is the latest version or if it is outdated and a replacement is made available</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D17</td>
+                        <td>Document should indicate where notice of updates or changes will be provided</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Comprehension</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D18</td>
+                        <td>Document should provide link to authoritative source of the document</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D19</td>
+                        <td>Document should provide link to all versions of the document</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D20</td>
+                        <td>Document with updated information must be provided in the same context as the earlier document</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D21</td>
+                        <td>Document should be provided in a timely manner</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D22</td>
+                        <td>Document export preserves links to external resources</td>
+                        <td>Document</td>
+                        <td>n/a</td>
+                        <td>Accessibility</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Version of the Summary</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>D23</td>
+                        <td>Is a version for the document provided?</td>
+                        <td>0</td>
+                        <td>0.a</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D24</td>
+                        <td>Are link(s) to previous versions of the document provided, where applicable?</td>
+                        <td>0</td>
+                        <td>0.a</td>
+                        <td>Accessibility</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D25</td>
+                        <td>If link(s) to previous versions are provided, does each version have a unique version number?</td>
+                        <td>0</td>
+                        <td>0.a</td>
+                        <td>Consistency</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D26</td>
+                        <td>If each version has a unique version number, do these version numbers adhere to a consistent format so that it is clear which version comes prior and which one comes next?</td>
+                        <td>0</td>
+                        <td>0.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D27</td>
+                        <td>If link(s) to previous versions are provided, are the links accessible for intended stakeholders?</td>
+                        <td>0</td>
+                        <td>0.a</td>
+                        <td>Comprehension</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Last update</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>D28</td>
+                        <td>Does the document have a date of last update?</td>
+                        <td>0</td>
+                        <td>0.b</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D29</td>
+                        <td>Is this date accurate?</td>
+                        <td>0</td>
+                        <td>0.b</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D30</td>
+                        <td>Is the date format correct?</td>
+                        <td>0</td>
+                        <td>0.b</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>General information</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Provider identification</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.1.a</td>
+                        <td>Provider name and contact details</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.a.1</td>
+                        <td>Is the provider name given?</td>
+                        <td>1</td>
+                        <td>1.1.a</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.a.2</td>
+                        <td>Is this provider name sufficiently detailed? (I.e. can be traced back to individual organizations)</td>
+                        <td>1</td>
+                        <td>1.1.a</td>
+                        <td>Comprehension</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.a.3</td>
+                        <td>Are contact details provided?</td>
+                        <td>1</td>
+                        <td>1.1.a</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.a.4</td>
+                        <td>Do these contact details refer to a non-generic contact point? (E.g. not the address used for general correspondence with the company)</td>
+                        <td>1</td>
+                        <td>1.1.a</td>
+                        <td>Clarity</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.1.b</td>
+                        <td>Authorized representative name and contact details</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.b.1</td>
+                        <td>Is the name of the authorized representative given, if required?</td>
+                        <td>1</td>
+                        <td>1.1.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.b.2</td>
+                        <td>If the name is required, is this name sufficiently detailed? (i.e. can be traced back to individual representatives)</td>
+                        <td>1</td>
+                        <td>1.1.b</td>
+                        <td>Comprehension</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.b.3</td>
+                        <td>If required, are contact details for the authorized representative provided?</td>
+                        <td>1</td>
+                        <td>1.1.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.1.b.4</td>
+                        <td>If required, do these contact details refer to a non-generic contact point? (E.g. not the address used for general correspondence with the company)</td>
+                        <td>1</td>
+                        <td>1.1.b</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Model identification</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.2.a</td>
+                        <td>Versioned model name(s)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.a.1</td>
+                        <td>Are the identifier(s) provided for each specific model(s)?</td>
+                        <td>1</td>
+                        <td>1.2.a</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.a.2</td>
+                        <td>Are the provided identifiers traceable and point to a single specific model?</td>
+                        <td>1</td>
+                        <td>1.2.a</td>
+                        <td>Comprehension</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.a.3</td>
+                        <td>Are links to additional publicly available documentation provided for the model(s)?</td>
+                        <td>1</td>
+                        <td>1.2.a</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.a.4</td>
+                        <td>If links are provided, do these links lead to relevant locations?</td>
+                        <td>1</td>
+                        <td>1.2.a</td>
+                        <td>Accessibility</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.a.5</td>
+                        <td>Is the content for all provided model version(s) identical?</td>
+                        <td>1</td>
+                        <td>1.2.a</td>
+                        <td>Consistency</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.2.b</td>
+                        <td>Model dependencies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.b.1</td>
+                        <td>Are dependencies indicated in cases where the model is fine-tuned from another model?</td>
+                        <td>1</td>
+                        <td>1.2.b</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.b.2</td>
+                        <td>If dependencies are indicated, is it clear for which models they apple?</td>
+                        <td>1</td>
+                        <td>1.2.b</td>
+                        <td>Clarity</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.b.3</td>
+                        <td>If dependencies exist, are these dependencies accurate?</td>
+                        <td>1</td>
+                        <td>1.2.b</td>
+                        <td>Correctness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.b.4</td>
+                        <td>If dependencies exist and there exist Summary(ies) for them, are these linked?</td>
+                        <td>1</td>
+                        <td>1.2.b</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.b.5</td>
+                        <td>If Summary(ies) are linked, do these links lead to relevant locations?</td>
+                        <td>1</td>
+                        <td>1.2.b</td>
+                        <td>Accessibility</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.2.c</td>
+                        <td>Date of placement of the model on the Union market</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.c.1</td>
+                        <td>Is/are the date(s) on which the model(s) was/were placed on the Union market given?</td>
+                        <td>1</td>
+                        <td>1.2.c</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.2.c.2</td>
+                        <td>Are dates given accurate?</td>
+                        <td>1</td>
+                        <td>1.2.c</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Modalities, overall training data size and other characteristics</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.a</td>
+                        <td>Modality</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.a.1</td>
+                        <td>Are any modalities checked?</td>
+                        <td>1</td>
+                        <td>1.3.a</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.a.2</td>
+                        <td>Are the checked modalities accurate?</td>
+                        <td>1</td>
+                        <td>1.3.a</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.b</td>
+                        <td>Training Data Size</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.1</td>
+                        <td>For the regular modalities, is exactly only of the checkboxes ticked, or alternatively is the approximate size provided?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.2</td>
+                        <td>For the &#39;Text&#39; modality, if an approximate size is provided, is the unit of measurement sensible?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.3</td>
+                        <td>For the regular modalities, if the unit of measurement is sensible or one of the checkboxes is ticked, is the number of tokens accurate?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.4</td>
+                        <td>For the &#39;Other&#39; modality, are the other modalities listed sensibly?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.5</td>
+                        <td>For the &#39;Other&#39; modality, are the units of measurement provided sensibly?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.6</td>
+                        <td>For the &#39;Other&#39; modality, are the measurements provided accurate?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.b.7</td>
+                        <td>Does the &#39;Other&#39; modality cover all modalities used in the training of the model outside of &#39;Text&#39;, &#39;Image&#39;, &#39;Audio&#39;, and &#39;Video&#39;?</td>
+                        <td>1</td>
+                        <td>1.3.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.c</td>
+                        <td>Types of content</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.c.1</td>
+                        <td>Are any types of content provided?</td>
+                        <td>1</td>
+                        <td>1.3.c</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.c.2</td>
+                        <td>If yes, does the description cover all types of content?</td>
+                        <td>1</td>
+                        <td>1.3.c</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.c.3</td>
+                        <td>Does the description restrict itself to only describing the types of content? In particular, does it refrain from describing the goals for which the content is included?</td>
+                        <td>1</td>
+                        <td>1.3.c</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.d</td>
+                        <td>Latest date of data acquisition/collection for model training</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.1</td>
+                        <td>Is the latest date of data collection/attainment provided?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.2</td>
+                        <td>Is this date provided exactly (i.e. exact month of latest acquisition/collection) rather than as a loose description?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.3</td>
+                        <td>If yes, does this date have the proper format?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.4</td>
+                        <td>Is the date provided accurate?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.5</td>
+                        <td>Is it indicated whether the model is continuously trained on new or dynamic data after the date provided?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Comprehension</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.d.6</td>
+                        <td>If yes, is this information true?</td>
+                        <td>1</td>
+                        <td>1.3.d</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.e</td>
+                        <td>Description of the linguistic characteristics of the overall training data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.e.1</td>
+                        <td>Are the languages covered by the training data described?</td>
+                        <td>1</td>
+                        <td>1.3.e</td>
+                        <td>Completeness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.e.2</td>
+                        <td>If yes, are these languages described exactly (i.e. as a list of languages rather than as the number covered)?</td>
+                        <td>1</td>
+                        <td>1.3.e</td>
+                        <td>Clarity</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.e.3</td>
+                        <td>Are the EU languages which are covered mentioned?</td>
+                        <td>1</td>
+                        <td>1.3.e</td>
+                        <td>Completeness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.e.4</td>
+                        <td>Is provided information relating to the linguistic characteristics of the overall training data accurate?</td>
+                        <td>1</td>
+                        <td>1.3.e</td>
+                        <td>Correctness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.e.5</td>
+                        <td>Does the field not contain any superfluous information?</td>
+                        <td>1</td>
+                        <td>1.3.e</td>
+                        <td>Clarity</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.f</td>
+                        <td>Other relevant characteristics of the overall training data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.f.1</td>
+                        <td>Are national/regional specificities of the training data provided?</td>
+                        <td>1</td>
+                        <td>1.3.f</td>
+                        <td>Completeness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.f.2</td>
+                        <td>Are demographic specificities of the training data provided?</td>
+                        <td>1</td>
+                        <td>1.3.f</td>
+                        <td>Completeness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.f.3</td>
+                        <td>Is any other relevant information relating to the characteristics of the overall training data provided?</td>
+                        <td>1</td>
+                        <td>1.3.f</td>
+                        <td>Clarity</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.f.4</td>
+                        <td>Is the provided data accurate?</td>
+                        <td>1</td>
+                        <td>1.3.f</td>
+                        <td>Correctness</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.f.5</td>
+                        <td>Is all provided information relevant? In particular, does the field not contain any information which should be provided elsewhere in the template?</td>
+                        <td>1</td>
+                        <td>1.3.f</td>
+                        <td>Clarity</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.3.g</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.g.1</td>
+                        <td>Is information regarding the compression methodologies applied for the data size calculation supplied?</td>
+                        <td>1</td>
+                        <td>1.3.g</td>
+                        <td>Completeness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.g.2</td>
+                        <td>Is information regarding the tokenization methodologies applied for the data size calculation supplied?</td>
+                        <td>1</td>
+                        <td>1.3.g</td>
+                        <td>Completeness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.g.3</td>
+                        <td>If audio or video content is provided, is information provided regarding the sampling frequency or rate plays?</td>
+                        <td>1</td>
+                        <td>1.3.g</td>
+                        <td>Completeness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.g.4</td>
+                        <td>Is any other relevant information disclosed?</td>
+                        <td>1</td>
+                        <td>1.3.g</td>
+                        <td>Completeness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>F1.3.g.5</td>
+                        <td>Is all information contained within this field relevant?</td>
+                        <td>1</td>
+                        <td>1.3.g</td>
+                        <td>Clarity</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>SECTION 2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Publicly available datasets</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.1</td>
+                        <td>2.1</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.1.a</td>
+                        <td>Dick informed me you made time to talk to him. Thank you.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.1</td>
+                        <td>2.1.a</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.1</td>
+                        <td>2.1.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1.b</td>
+                        <td>If yes, specify the modality(ies) of the content covered by the datasets concerned</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.b.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.1</td>
+                        <td>2.1.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.b.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.1</td>
+                        <td>2.1.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1.c</td>
+                        <td>List of large publicly available datasets</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.1</td>
+                        <td>Does this field only provide a list of large publicly available datasets, with explanations for selecting part of the datasets where necessary?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Completeness</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.2</td>
+                        <td>Are no large publicly available datasets which were used left out?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Completeness</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.3</td>
+                        <td>Is a link provided for each identifier/name listed?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Accessibility</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.4</td>
+                        <td>If yes, does each identifier/name match the identifier/name of the dataset linked?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Consistency</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.5</td>
+                        <td>Are specific versions of the datasets listed?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.6</td>
+                        <td>Is a general approach to selecting part of the datasets provided wherever part of a dataset was selected?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.c.7</td>
+                        <td>Are the descriptions clearly understandable for the approaches to selecting part of the datasets?</td>
+                        <td>2.1</td>
+                        <td>2.1.c</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1.d</td>
+                        <td>General description of other publicly available datasets not listed above</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.1</td>
+                        <td>Are general descriptions provided for publicly available datasets which were used and not listed above?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.2</td>
+                        <td>Does the field only contain such descriptions?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Clarity</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.3</td>
+                        <td>Do the descriptions contain information relating to the types of modality contained in the datasets?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.4</td>
+                        <td>Do the descriptions contain information relating to the nature of the content contained in the datasets?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.5</td>
+                        <td>Do the descriptions contain information relating to the linguistic characteristics of the datasets, where applicable?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.6</td>
+                        <td>Do the descriptions contain information relating to the approximate start and end dates of the data collection, or otherwise contain that such information is &quot;not known&quot;?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.7</td>
+                        <td>Do the descriptions contain any other relevant information?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.8</td>
+                        <td>Are the descriptions provided clearly readable, such that someone without expertise could understand them?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Comprehension</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.9</td>
+                        <td>Do the descriptions limit themselves to relevant information?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Clarity</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.d.10</td>
+                        <td>Are all descriptions accurate?</td>
+                        <td>2.1</td>
+                        <td>2.1.d</td>
+                        <td>Correctness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1.e</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.e.1</td>
+                        <td>Is information relating to the size of the datasets provided?</td>
+                        <td>2.1</td>
+                        <td>2.1.e</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.e.2</td>
+                        <td>Are other relevant details provided in this field?</td>
+                        <td>2.1</td>
+                        <td>2.1.e</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.e.3</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.1</td>
+                        <td>2.1.e</td>
+                        <td>Comprehension</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.1.e.4</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.1</td>
+                        <td>2.1.e</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Private non-publicly available datasets obtained from third parties</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.2</td>
+                        <td>2.2</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.2.1</td>
+                        <td>Datasets commercially licensed by rightsholders or their representatives</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.1.a</td>
+                        <td>Have you concluded transactional commercial licensing agreement(s) with rightholder(s) or with their representatives?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.1.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.2</td>
+                        <td>2.2.1.a</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.1.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.1.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.1.b</td>
+                        <td>If yes, specify the modality(ies) of the content covered by the datasets concerned</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.1.b.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.2</td>
+                        <td>2.2.1.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.1.b.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.1.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2</td>
+                        <td>Private datasets obtained from other third parties</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2.a</td>
+                        <td>Have you obtained private datasets from third parties that are not licensed as described in Section 2.2.1., such as data obtained from providers of private databases, or data intermediaries?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.a</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2.b</td>
+                        <td>If yes, specify the modality(ies) of the content covered by the datasets concerned</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.b.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.b.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2.c</td>
+                        <td>If publicly known, list private datasets obtained from other third parties</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.c.1</td>
+                        <td>Does this field only provide a list of publicly known private datasets obtained from other third parties without license?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.c</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.c.2</td>
+                        <td>Are any publicly known private datasets obtained from third parties without license, which were used for this model, left out?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.c</td>
+                        <td>Correctness</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.c.3</td>
+                        <td>Are specific versions of the datasets listed?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.c</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.c.4</td>
+                        <td>Are links to relevant information provided?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.c</td>
+                        <td>Accessibility</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2.d</td>
+                        <td>General description of non-publicly known private datasets obtained from third parties</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.1</td>
+                        <td>Are general descriptions provided for all non-publicly known, non-licensed private datasets obtained from third parties which were used?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.2</td>
+                        <td>Does the field only contain such descriptions?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Clarity</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.3</td>
+                        <td>Do the descriptions contain information relating to the types of modality contained in the datasets?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.4</td>
+                        <td>Do the descriptions contain information relating to the nature of the content contained in the datasets?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.5</td>
+                        <td>Do the descriptions contain information relating to the linguistic characteristics of the datasets, where applicable?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.6</td>
+                        <td>Do the descriptions contain any other relevant information?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Completeness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.7</td>
+                        <td>Are the descriptions provided clearly readable, such that someone without expertise could understand them?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Comprehension</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.8</td>
+                        <td>Do the descriptions limit themselves to relevant information?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Clarity</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.d.9</td>
+                        <td>Are all descriptions accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.d</td>
+                        <td>Correctness</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.2.2.e</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.e.1</td>
+                        <td>Is information relating to the period of data collection provided?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.e</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.e.2</td>
+                        <td>Is information relating to the size of the datasets provided?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.e</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.e.3</td>
+                        <td>Are other relevant details provided in this field?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.e</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.e.4</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.e</td>
+                        <td>Clarity</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.2.2.e.5</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.2</td>
+                        <td>2.2.2.e</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Data crawled and scraped from online sources</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.3</td>
+                        <td>2.3</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.3.a</td>
+                        <td>Were crawlers used by the provider or on behalf of?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.3</td>
+                        <td>2.3.a</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.a</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.b</td>
+                        <td>If yes, specify crawler name(s)/identifier(s)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.b.1</td>
+                        <td>Does the field only contain crawler name(s)/identifier(s)?</td>
+                        <td>2.3</td>
+                        <td>2.3.b</td>
+                        <td>Clarity</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.b.2</td>
+                        <td>Can these name(s)/identifier(s) each be used to identify specific crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.b</td>
+                        <td>Clarity</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.b.3</td>
+                        <td>Were all crawlers which are listed indeed used?</td>
+                        <td>2.3</td>
+                        <td>2.3.b</td>
+                        <td>Correctness</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.b.4</td>
+                        <td>Are all crawlers which were used described?</td>
+                        <td>2.3</td>
+                        <td>2.3.b</td>
+                        <td>Completeness</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.b.5</td>
+                        <td>Is the information provided in a clearly-structured form?</td>
+                        <td>2.3</td>
+                        <td>2.3.b</td>
+                        <td>Clarity</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.c</td>
+                        <td>Purposes of the crawler(s)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.c.1</td>
+                        <td>Are descriptions relating to the purposes of the crawler(s) provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.c</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.c.2</td>
+                        <td>Are descriptions provided for each crawler?</td>
+                        <td>2.3</td>
+                        <td>2.3.c</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.c.3</td>
+                        <td>Are these descriptions understandable, such that someone without specialized expertise can understand the purposes of the crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.c</td>
+                        <td>Comprehension</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.c.4</td>
+                        <td>Does the field only contain information relating to the purposes of the crawlers listed?</td>
+                        <td>2.3</td>
+                        <td>2.3.c</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.c.5</td>
+                        <td>Are all of the descriptions accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.c</td>
+                        <td>Correctness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.d</td>
+                        <td>General description of crawler behaviour</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.1</td>
+                        <td>Is a general description of crawler behavior provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.2</td>
+                        <td>If a description is provided, does it contain information relating to the respect of captchas by crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.3</td>
+                        <td>If a description is provided, does it contain information relating to the handling of password protected websites by crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.4</td>
+                        <td>If a description is provided, does it contain information relating to the handling of paywalls by crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.5</td>
+                        <td>If a description is provided, does it contain information relating to the respect of robots.txt by crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.6</td>
+                        <td>If a description is provided, does it contain information relating to the respect of protocols outside of robots.txt by crawlers?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.7</td>
+                        <td>Does the description contain other relevant information?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Completeness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.8</td>
+                        <td>Is the description clearly understandable, such that someone without detailed technical knowledge can understand the crawler behavior?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Comprehension</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.9</td>
+                        <td>Does the description limit itself to relevant information?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Clarity</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.d.10</td>
+                        <td>Is the description accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.d</td>
+                        <td>Correctness</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.e</td>
+                        <td>Period of data collection</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.e.1</td>
+                        <td>Is a period of data collection provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.e</td>
+                        <td>Completeness</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.e.2</td>
+                        <td>If a period of data collection is provided, is it provided for each crawler?</td>
+                        <td>2.3</td>
+                        <td>2.3.e</td>
+                        <td>Clarity</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.e.3</td>
+                        <td>If a period of data collection is provided, are exact dates given?</td>
+                        <td>2.3</td>
+                        <td>2.3.e</td>
+                        <td>Clarity</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.e.4</td>
+                        <td>If exact dates are given, are these in the appropriate format (MM/YYYY)?</td>
+                        <td>2.3</td>
+                        <td>2.3.e</td>
+                        <td>Correctness</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.e.5</td>
+                        <td>Is all information provided accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.e</td>
+                        <td>Correctness</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.f</td>
+                        <td>Comprehensive description of the type of content and online sources crawled</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.1</td>
+                        <td>Is information relating to the geographical characteristics of the crawled content provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Completeness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.2</td>
+                        <td>Is information relating to the linguistic characteristics of the crawled content provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Completeness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.3</td>
+                        <td>Is information relating to the demographic characteristics of the crawled content provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Completeness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.4</td>
+                        <td>Is an indication given regarding which type(s) of websites are scraped?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Completeness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.5</td>
+                        <td>Is any other pertinent information relating to the types of content crawled provided?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Completeness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.6</td>
+                        <td>Is all provided information relevant?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Comprehension</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.f.7</td>
+                        <td>Is all provided information accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.f</td>
+                        <td>Correctness</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.g</td>
+                        <td>Type of modality covered</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.g.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.3</td>
+                        <td>2.3.g</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.g.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.g</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.h</td>
+                        <td>Summary of the most relevant domain names crawled</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.h.1</td>
+                        <td>Is a list of the most relevant internet domains provided as per the requirements?</td>
+                        <td>2.3</td>
+                        <td>2.3.h</td>
+                        <td>Completeness</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.h.2</td>
+                        <td>Is the provided list accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.h</td>
+                        <td>Correctness</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.h.3</td>
+                        <td>Is the provided list easily accessible?</td>
+                        <td>2.3</td>
+                        <td>2.3.h</td>
+                        <td>Accessibility</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.h.4</td>
+                        <td>Is the provided list provided in a straightforwardly readable format?</td>
+                        <td>2.3</td>
+                        <td>2.3.h</td>
+                        <td>Comprehension</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.3.i</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.i.1</td>
+                        <td>In this field, are more domains disclosed than those required in the list above?</td>
+                        <td>2.3</td>
+                        <td>2.3.i</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.i.2</td>
+                        <td>Are the URLs and sources of individual works provided in this field?</td>
+                        <td>2.3</td>
+                        <td>2.3.i</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.i.3</td>
+                        <td>Are other relevant details provided in this field?</td>
+                        <td>2.3</td>
+                        <td>2.3.i</td>
+                        <td>Clarity</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.i.4</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.3</td>
+                        <td>2.3.i</td>
+                        <td>Comprehension</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>F2.3.i.5</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.3</td>
+                        <td>2.3.i</td>
+                        <td>Correctness</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.4</td>
+                        <td>User data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.4</td>
+                        <td>2.4</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.4.a</td>
+                        <td>Was data from user interactions with the AI model (e.g. user input and prompts) used to train the model?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.4</td>
+                        <td>2.4.a</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.4</td>
+                        <td>2.4.a</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.4.b</td>
+                        <td>Was data collected from user interactions with the provider&#39;s other services or products used to train the model?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.b.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.4</td>
+                        <td>2.4.b</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.b.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.4</td>
+                        <td>2.4.b</td>
+                        <td>Correctness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.4.c</td>
+                        <td>If yes, provide a general description of the provider&#39;s services or products that were used to collect the user data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.c.1</td>
+                        <td>Does this field only contain the relevant services or products by the provider used to train the model?</td>
+                        <td>2.4</td>
+                        <td>2.4.c</td>
+                        <td>Clarity</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.c.2</td>
+                        <td>Are the services or products each clearly identified?</td>
+                        <td>2.4</td>
+                        <td>2.4.c</td>
+                        <td>Comprehension</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.c.3</td>
+                        <td>Are all involved services or products by the provider listed?</td>
+                        <td>2.4</td>
+                        <td>2.4.c</td>
+                        <td>Completeness</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.c.4</td>
+                        <td>Is the description provided in a readable format?</td>
+                        <td>2.4</td>
+                        <td>2.4.c</td>
+                        <td>Accessibility</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.4.d</td>
+                        <td>Type of modality covered</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.d.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.4</td>
+                        <td>2.4.d</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.d.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.4</td>
+                        <td>2.4.d</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.4.e</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.e.1</td>
+                        <td>Are relevant details provided in this field?</td>
+                        <td>2.4</td>
+                        <td>2.4.e</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.e.2</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.4</td>
+                        <td>2.4.e</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.4.e.3</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.4</td>
+                        <td>2.4.e</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.5</td>
+                        <td>Synthetic data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.5</td>
+                        <td>2.5</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.5.a</td>
+                        <td>Was synthetic AI-generated data created by the provider or on their behalf to train the model?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.5</td>
+                        <td>2.5.a</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.5</td>
+                        <td>2.5.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.5.b</td>
+                        <td>If yes, modality of the synthetic data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.b.1</td>
+                        <td>Are any modalities supplied?</td>
+                        <td>2.5</td>
+                        <td>2.5.b</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.b.2</td>
+                        <td>Are all provided modalities accurate?</td>
+                        <td>2.5</td>
+                        <td>2.5.b</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.5.c</td>
+                        <td>If yes, specify the general-purpose AI model(s) used to generate the synthetic data if available on the market</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.c.1</td>
+                        <td>If yes was ticked, are models provided?</td>
+                        <td>2.5</td>
+                        <td>2.5.c</td>
+                        <td>Completeness</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.c.2</td>
+                        <td>If models are provided, are these uniquely identifiable?</td>
+                        <td>2.5</td>
+                        <td>2.5.c</td>
+                        <td>Clarity</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.c.3</td>
+                        <td>Are the correct models provided?</td>
+                        <td>2.5</td>
+                        <td>2.5.c</td>
+                        <td>Correctness</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.c.4</td>
+                        <td>Is a link to the Summary(ies) of the relevant models provided where such a summary is available?</td>
+                        <td>2.5</td>
+                        <td>2.5.c</td>
+                        <td>Comprehension</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.c.5</td>
+                        <td>Does the field only contain the list of GPAI models used and a link to their Summary(ies) where available?</td>
+                        <td>2.5</td>
+                        <td>2.5.c</td>
+                        <td>Clarity</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.5.d</td>
+                        <td>Information about other AI models, includer provider&#39;s own AI model(s) not available on the market, used to generate synthetic data to train the model to which this Summary applies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.d.1</td>
+                        <td>Is information provided for each AI model used to generate synthetic data which is not available on the market?</td>
+                        <td>2.5</td>
+                        <td>2.5.d</td>
+                        <td>Completeness</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.d.2</td>
+                        <td>Does the field only contain information about the relevant group of AI models?</td>
+                        <td>2.5</td>
+                        <td>2.5.d</td>
+                        <td>Clarity</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.d.3</td>
+                        <td>Does the information provided include a general description of each model&#39;s training data if known and necessary as described?</td>
+                        <td>2.5</td>
+                        <td>2.5.d</td>
+                        <td>Comprehension</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.d.4</td>
+                        <td>Is any other relevant information about the relevant group of AI models provided?</td>
+                        <td>2.5</td>
+                        <td>2.5.d</td>
+                        <td>Clarity</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.d.5</td>
+                        <td>Is all provided information accurate?</td>
+                        <td>2.5</td>
+                        <td>2.5.d</td>
+                        <td>Correctness</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.5.e</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.e.1</td>
+                        <td>Is relevant information provided in this field?</td>
+                        <td>2.5</td>
+                        <td>2.5.e</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.e.2</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.5</td>
+                        <td>2.5.e</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.5.e.3</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.5</td>
+                        <td>2.5.e</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.6</td>
+                        <td>Other sources of data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>2.5</td>
+                        <td>2.6</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2.6.a</td>
+                        <td>Have data sources other than those described in Sections 2.1 to 2.5. been used to train the model?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>2.5</td>
+                        <td>2.6.a</td>
+                        <td>Completeness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>2.5</td>
+                        <td>2.6.a</td>
+                        <td>Correctness</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.6.b</td>
+                        <td>If yes, provide a narrative description of these data sources and the data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.b.1</td>
+                        <td>Does this field contain relevant information relating to the miscellaneous data sources and their data?</td>
+                        <td>2.5</td>
+                        <td>2.6.b</td>
+                        <td>Completeness</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.b.2</td>
+                        <td>Does this field restrict itself to relevant information relating to the miscellaneous data sources and their data?</td>
+                        <td>2.5</td>
+                        <td>2.6.b</td>
+                        <td>Clarity</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.b.3</td>
+                        <td>Is all information accurate?</td>
+                        <td>2.5</td>
+                        <td>2.6.b</td>
+                        <td>Correctness</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.b.4</td>
+                        <td>Is the information provided in a clearly readable format?</td>
+                        <td>2.5</td>
+                        <td>2.6.b</td>
+                        <td>Accessibility</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.6.c</td>
+                        <td>Additional comments (optional), for other sources of data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.c.1</td>
+                        <td>Is relevant information provided in this field?</td>
+                        <td>2.5</td>
+                        <td>2.6.c</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.c.2</td>
+                        <td>Is all information provided in this field relevant?</td>
+                        <td>2.5</td>
+                        <td>2.6.c</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F2.6.c.3</td>
+                        <td>Is all information provided in this field accurate?</td>
+                        <td>2.5</td>
+                        <td>2.6.c</td>
+                        <td>Accessibility</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>SECTION 3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.1</td>
+                        <td>Is the information provided in this field consistent with other sections and other documentation provided for the same model(s)?</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Consistency</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Respect of reservation of rights from text and data mining exception or limitation</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.1.a</td>
+                        <td>Are you a Signatory to the Code of Practice for general-purpose AI models that includes commitments to respect reservations of rights from the TDM exception or limitation?</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.a.1</td>
+                        <td>Is this field filled in?</td>
+                        <td>3</td>
+                        <td>3.1.a</td>
+                        <td>Completeness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.a.2</td>
+                        <td>Is this field accurate?</td>
+                        <td>3</td>
+                        <td>3.1.a</td>
+                        <td>Correctness</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.1.b</td>
+                        <td>Describe the measures implemented before model training to respect reservations of rights from the TDM exception or limitation before and during data collection, including the opt-out proticols and solutions honoured by the provider or, as applicable, by third parties from which datasets have been obtained</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.b.1</td>
+                        <td>Does the provider describe how they respect robots.txt?</td>
+                        <td>3</td>
+                        <td>3.1.b</td>
+                        <td>Comprehension</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.b.2</td>
+                        <td>Does the provider describe how they use datasets with opt-out mechanisms, if applicable?</td>
+                        <td>3</td>
+                        <td>3.1.b</td>
+                        <td>Comprehension</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.b.3</td>
+                        <td>Does the provider describe how they ensure that they are up to date with user rights requests?</td>
+                        <td>3</td>
+                        <td>3.1.b</td>
+                        <td>Comprehension</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.b.4</td>
+                        <td>Is all other information relevant?</td>
+                        <td>3</td>
+                        <td>3.1.b</td>
+                        <td>Clarity</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.b.5</td>
+                        <td>Is all information provided accurate?</td>
+                        <td>3</td>
+                        <td>3.1.b</td>
+                        <td>Correctness</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.1.c</td>
+                        <td>Additional comments (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.c.1</td>
+                        <td>Is a summary of the providers copyright policy provided, if this policy is made publicly available?</td>
+                        <td>3</td>
+                        <td>3.1.c</td>
+                        <td>Completeness</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>F3.1.c.2</td>
+                        <td>Is all other information provided relevant?</td>
+                        <td>3</td>
+                        <td>3.1.c</td>
+                        <td>Clarity</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.2</td>
+                        <td>Removal of illegal content</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.2.a</td>
+                        <td>General decription of measures taken</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.2.a.1</td>
+                        <td>Are any measures described to avoid or remove illegal content under Union law from the training data?</td>
+                        <td>3</td>
+                        <td>3.2.a</td>
+                        <td>Completeness</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F3.2.a.2</td>
+                        <td>If measures are described, are these measures described in an easily understandable manner?</td>
+                        <td>3</td>
+                        <td>3.2.a</td>
+                        <td>Comprehension</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F3.2.a.3</td>
+                        <td>If measures are described, is the information provided accurate?</td>
+                        <td>3</td>
+                        <td>3.2.a</td>
+                        <td>Correctness</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>F3.2.a.4</td>
+                        <td>Is all information provided pertinent? In particular, does the information not include an information relating to data selection practices, for example to increase the capability of the model?</td>
+                        <td>3</td>
+                        <td>3.2.a</td>
+                        <td>Accessibility</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.3</td>
+                        <td>Other information (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.3.a</td>
+                        <td>Other relevant information about data processing (optional)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>F3.3.a.1</td>
+                        <td>Is any additional information provided?</td>
+                        <td>3</td>
+                        <td>3.3.a</td>
+                        <td>Completeness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F3.3.a.2</td>
+                        <td>If yes, is this relevant to data processing aspects and measures taken before or after training model that his relevant for the respect and exercise of rights protected under Union law?</td>
+                        <td>3</td>
+                        <td>3.3.a</td>
+                        <td>Clarity</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F3.3.a.3</td>
+                        <td>If yes, is this information accurate?</td>
+                        <td>3</td>
+                        <td>3.3.a</td>
+                        <td>Correctness</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+
+    </section>
+
+    <section id="evaluation">
+        <h2>Evaluation Strategy</h2>
+        <details id="evaluation-scoping">
+            <summary>Model Scoping</summary>
+            For our selection of GPAI models, we undertake a filtering approach spanning each criterion provided in the AI Act. At a high level, our filtering approach can be seen as undertaking the following steps:
+            <ol>
+                <li>Evaluating whether a given model meets the generality requirement.</li>
+                <li>Evaluating whether a given model likely meets the FLOP requirement.</li>
+                <li>Evaluating whether a given model is produced by a commercial entity or is <i>provided in the course of a commercial activity</i>.</li>
+                <li>Evaluating whether a given model is <i>placed on the EU market</i>.</li>
+            </ol>
+        </details>
+        <details id="evaluation-searching">
+            <summary>Public Summary Discovery</summary>
+            <ul>
+                <li>We expected the public summary to be explicitly indicated as such (i.e. titled 'public summary') or by referring to AI Act's Article 53(1)(d) obligations or broadly referring to AI Act compliance.</li>
+                <li>We utilised a combination of search engines (using queries such as "public summary of training content" and "Article 53(1)(d) public summary") and utilising experimental web-search features of GenAI services such as Google Search and ChatGPT.</li>
+                <li>We also undertook a manual discovery process where we looked at:
+                    <ol type="1">
+                        <li>The webpage or README in the repository where the model weights or model card are provided;</li>
+                        <li>The legal or compliance page on the model provider's webpage;</li>
+                        <li>The technical report or paper where the model's architecture and functioning are described.</li>
+                    </ol>
+                </li>
+            </ul>                        
+        </details>
+        <details id="evaluation-steps">
+            <summary>Evaluation Steps</summary>
+            <ol>
+                <li>The evaluator scores each (granular) metric by assesses the corresponding information field and element, and records a value that reflects their findings as:
+                    <ol type="a">
+                        <li><i>sufficient</i> (scored as <em>1</em>) to indicate the provided information meets or satisfies the requirement e.g. by being clear, or being complete;</li>
+                        <li><em>insufficient</em> (scored as <em>0</em>) to indicate either an absence of information or where the information does not meet the
+                        criteria of the metric e.g. by being obfuscated or being
+                        incomprehensible; and </li>
+                        <li><em>partially sufficient</em> (scored as
+                        <em>0.5</em>) to indicate that information partially satisfies the
+                        requirement.</li>
+                        </ol>
+                </li>
+                <li>The final score for each metric is then multiplied by the weight.</li>
+                <li><i><strong>Note:</strong> If a specific metric or section is not applicable, then it is not given a '0' but is marked as 'N/A'. There is no penalty for the public summary providing no information in non-applicable sections, and the maximum possible score includes only those sections/metrics that are applicable.</i>
+                <li>Each dimension within a section is scored by taking the sum of all metrics associated with that dimension and section.</li>
+                <li>The transparency and usefulness scores are then calculated for each section by taking the sum of the scores of their respective dimensions.</li>
+                <li>The scores are then converted to percentages for convenience and ease of comparison across documents by dividing them by the maximum possible score i.e. the sum of maximum scores for each selected/evaluated metric. (as noted above, if a metric/field is not applicable, it is not included in the scoring).</li>
+                <li>A letter grade system from <em>A</em> as the highest quality and <em>F</em> as the lowest quality is assigned based on the scores to enable stakeholders to understand quality implications at a glance.</li>
+                </ol>
+        </details>
+
+    </section>
+
+    <section id="limitations">
+        <h2>Ongoing Works and Limitations</h2>
+        <p>We are currently working to provide greater clarity on which models should be required to publish the public summary based on the criteria established in the AI Act and the associated guidelines. We are also working on developing more concrete recommendations for providers to publish their public summaries in a consistent and useful manner. We welcome engagements and contributions towards this.</p>
+    </section>
+
+    <section id="FAQ">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <p>This section is intended to provide help for Providers and other stakeholders looking to better understand the scores provided in the <a href="detailed-overview">overview</a> and analysis pages. The scores represent the calculated final percentages for the specific sections based on an evaluation carried out using our granular metrics (see above section).</p>
+        <p><strong>Sections without information / Why did this this section get a '0' (zero)?</strong> A score of 0 means the section was applicable, but no information was provided.</p>
+        <p><strong>Sections not applicable / What does 'N/A' mean?</strong> It means 'not applicable' i.e. the section is not applicable and therefore does not need to be filled. There is no negative marking or penalty fo this as the total score and grade is only calculated based on applicable sections.</p>
+        <p><strong>No public summary exists / What does "!" (exclamation) mean?</strong> For models where we could not find any public summary, we marked these using the ! mark.</p>
+        <p><strong>What are the exact issues in a given summary?</strong> Each analysis page provides our notes which highlight the found issues and our suggestions on how to resolve them. As the framework is quite large (see granular metrics above), it is difficult to depict it in a convenient manner. However, we welcome engagements to further discuss the scores, found issues, and how the quality of the document can be improved -- please see the contact page.</p>
+        <p><strong>What should be done to improve the summary?</strong> (see above for suggestions in analysis page) Our granular metrics suggest specific questions that can be used to do a self-assessment.</p>
+        <p><strong>Other issues / queries</strong> Please <a href="about">get in touch</a> with us.</p>
+    </section>     
+
+    <section>
+        <h2>Website Development</h2>
+        <p>
+            We were inspired by previous approaches which analysed GPAI models and developed a website to share their assessments, in particular the
+            <a href="https://osai-index.eu/">Open Source AI Index (OSAI)</a> and its predecessor <a href="https://opening-up-chatgpt.github.io/">Opening up ChatGPT</a> (see the 
+            <span class="link-icon">🔗</span><a href="https://dl.acm.org/doi/10.1145/3630106.3659005" target="_blank">FAccT'24 paper</a>).
+        </p>
+    </section>
+
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+<script>
+    var openAllDetails = function() {
+        document.body.querySelectorAll('details').forEach((e) => {
+            if (e.hasAttribute('open')) {
+                e.removeAttribute('open');
+            } else {
+                e.setAttribute('open', true);
+            }
+        });
+    };
+</script>
+</body>
+</html>

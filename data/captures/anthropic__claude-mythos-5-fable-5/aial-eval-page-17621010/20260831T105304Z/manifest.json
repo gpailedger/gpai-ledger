@@ -1,0 +1,39 @@
+{
+  "source_id": "anthropic/claude-mythos-5-fable-5",
+  "provider": "Anthropic",
+  "model": "Claude Mythos 5 / Claude Fable 5",
+  "target_kind": "aial-eval-page",
+  "sha256": "4b38b796a579fd15d77479314e8587d164b1e3b629198c9fff7355aa5d725989",
+  "size_bytes": 20429,
+  "stored_as": "raw.html",
+  "text_sha256": "3214af03d9101749150e7ec8e7cab6024f850a71f4a566d7baf34e4d81e15e4e",
+  "doc_links_sha256": "9cdc3f9d2d0e0e0097a7e1161682dc087fd262120b5fd64f79b2821972983172",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/public/evals/claude-mythos-5-fable-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/public/evals/claude-mythos-5-fable-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d1d64e3925baf603188223901a8163f57d917ad8e830403356a877ce075c50f0\"",
+    "last_modified": null,
+    "content_length": "3720",
+    "fetched_at": "2026-08-31T10:53:04Z"
+  },
+  "prior_sha256": "732865b787fbe85f52024144f1a7da5d1a6e0a8bd688bfc8f07530e48af5fcd0",
+  "git_commit": "06ddb124fa2483d962c846bc0ea88b030295607a",
+  "git_commit_date": "2026-08-05T18:57:50Z",
+  "git_blob_sha": "255cdb032638c8f2cb94e0159bb5a965fd7c5158",
+  "git_path": "public/evals/claude-mythos-5-fable-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:53:11Z"
+  }
+}

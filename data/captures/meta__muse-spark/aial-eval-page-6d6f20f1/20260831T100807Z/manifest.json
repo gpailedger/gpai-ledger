@@ -1,0 +1,39 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "aial-eval-page",
+  "sha256": "84075b6d66950c6cd3a14fa8c8791d647b00120e13ce87cfc84614e550c3b53e",
+  "size_bytes": 19606,
+  "stored_as": "raw.html",
+  "text_sha256": "90e6a3dd667a1901640404cabc9792239e45898cb5bac036053164ff2aa216f0",
+  "doc_links_sha256": "e51dfd32b1cbf86e47fd2d25967aaf5193d8b4066af13f00d2787a98574283ee",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6f96f3797b190af176c8d53bf1e04fe4675992c6/public/evals/muse-spark/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6f96f3797b190af176c8d53bf1e04fe4675992c6/public/evals/muse-spark/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6cd326b33727eef92a9d0fdce4e48c21f5da33b116e275e407b889fc865fd2a0\"",
+    "last_modified": null,
+    "content_length": "3399",
+    "fetched_at": "2026-08-31T10:08:07Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "6f96f3797b190af176c8d53bf1e04fe4675992c6",
+  "git_commit_date": "2026-07-23T10:06:33Z",
+  "git_blob_sha": "3411a4044ed3cbd631f60fa70f66ef078e95cdf7",
+  "git_path": "public/evals/muse-spark/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:08:12Z"
+  }
+}

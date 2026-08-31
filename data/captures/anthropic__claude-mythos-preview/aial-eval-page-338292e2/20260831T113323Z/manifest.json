@@ -1,0 +1,39 @@
+{
+  "source_id": "anthropic/claude-mythos-preview",
+  "provider": "Anthropic",
+  "model": "Claude Mythos Preview",
+  "target_kind": "aial-eval-page",
+  "sha256": "9561a8249573bc89bc58a462185bdb04ff4088e1bd2fb782f591f5d1b92d3b59",
+  "size_bytes": 20873,
+  "stored_as": "raw.html",
+  "text_sha256": "218512b6d18b186cc2d4c81c3747518ed8986c544a26e46412a1b2e7f77c627c",
+  "doc_links_sha256": "dc08fbe8cbe43980849e19a749c841164c9b55e7a6c2acf1b08fc150b74b9f35",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4c332ff3420ed7bf1328d384d4b53bbfe3489f9d/public/evals/claude-mythos-preview/version-2026-08-04.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4c332ff3420ed7bf1328d384d4b53bbfe3489f9d/public/evals/claude-mythos-preview/version-2026-08-04.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0795890b0b2cc204be91ae56c992e9f26c76522d26bd4b5830ea52c1d35b82fa\"",
+    "last_modified": null,
+    "content_length": "3849",
+    "fetched_at": "2026-08-31T11:33:23Z"
+  },
+  "prior_sha256": "e4e29e6ac11459d44d3d8c79d697101cf743d81f2f3f154dd95008669737ad9c",
+  "git_commit": "4c332ff3420ed7bf1328d384d4b53bbfe3489f9d",
+  "git_commit_date": "2026-08-06T16:25:59Z",
+  "git_blob_sha": "3eac3083e5f3a4b6f7aea7e6adea96f00ad6c8e6",
+  "git_path": "public/evals/claude-mythos-preview/version-2026-08-04.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:33:28Z"
+  }
+}

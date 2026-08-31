@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "gemini-2.5-flash-image",
+  "target_kind": "aial-eval-page",
+  "sha256": "dcf4d9fa0afb67ef5b8c199073875d650bd3eff8ca9f2d4b1e0a2e789b4fb371",
+  "size_bytes": 12901,
+  "stored_as": "raw.html",
+  "text_sha256": "603438a037feaff4409e25e3db9baeb429e1cc76a90fb8f7bbb6aa4cafb7e6da",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ba85baa38308f6e2503c1cec4a9b7805d998dce3/public/gemini-2.5-flash-image.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ba85baa38308f6e2503c1cec4a9b7805d998dce3/public/gemini-2.5-flash-image.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c6bcb6201ab83dcc5df0f0e28569896477fba4e3c4088c2583746c54b36ccf84\"",
+    "last_modified": null,
+    "content_length": "2130",
+    "fetched_at": "2026-08-31T09:52:33Z"
+  },
+  "prior_sha256": "59c299962329c5889ddf5d305ad943d23dade74d0b5001b41984f31e7dfc85e5",
+  "git_commit": "ba85baa38308f6e2503c1cec4a9b7805d998dce3",
+  "git_commit_date": "2026-03-02T17:55:43Z",
+  "git_blob_sha": "1139afc5d5c2955666e09550abbfb691a40d167b",
+  "git_path": "public/gemini-2.5-flash-image.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T09:52:38Z"
+  }
+}

@@ -1,0 +1,110 @@
+Methodology
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Contact
+
+Methodology
+
+Development of a Quality Assessment Framework for the AI Act's Article 53(1)(d) Public Summaries
+
+Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+ (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo.
+DOI:10.5281/zenodo.18803975
+
+Overview
+
+After conducting a literature review of documentation quality assessment frameworks, we picked
+Goal, Question, Metric (GQM)
+  as the approach to identify criteria to assess the public summaries. Using GQM, we identified we identified
+Transparency
+ and
+Usefulness
+ as good
+        overall indicators for intended stakeholders to understand the quality
+        of the public summary. In this,
+transparency
+ refers to the
+        extent of information provided through the public summary, and
+
+usefulness
+ represents the utility of provided information as
+        well as its potential to be actionable by specific stakeholders. We
+        selected
+transparency
+ due to its existing and established
+        application in the context of legal documentation, for example as a
+        principle in the GDPR, as well as being listed as an objective of
+        methods such as model cards. And we chose
+usefulness
+, which is
+        well-defined as a quality dimension in literature, as a broad measure of
+        whether the provided information is sufficient to take meaningful
+        actions and ensure accountability.
+
+To assess
+Transparency
+, we identified 6 dimensions:
+Clarity
+,
+
+Completeness
+,
+Consistency
+, and
+Correctness
+, and for
+Usefulness
+ we identified
+Accessibility
+ and
+
+Comprehension
+. We then developed 242
+metrics
+ as specific questions or criteria that evaluate each field in each section of the public summary template. Since the public summary is structured such that each section has different implications for stakeholders, e.g. some may be interested only in Section 2.2 or Section 3, we evaluate each section using these metrics and then aggregate their scores to get the overall quality.
+
+Using our framework, a
+'high-quality'
+ public summary is described as a document that
+        provides information in a clear, structured, accurate, and consistent
+        manner (
+transparency
+) such that it allows relevant stakeholders
+        to understand the training process and to take relevant actions where
+        necessary (
+usefulness
+). Public summaries that do not meet these
+        requirements are considered as
+`low-quality'
+, and are
+        potentially in breach of the template and the corresponding Article
+        53(1)(d) obligations.
+
+Complete details of our methodology and its use in assessments is provided in the article linked above.
+
+Website Development
+
+            We were inspired by previous approaches which analysed GPAI models and developed a website to share their assessments, in particular the
+
+Open Source AI Index (OSAI)
+ and its predecessor
+Opening up ChatGPT
+ (see the
+
+🔗
+FAccT'24 paper
+).
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

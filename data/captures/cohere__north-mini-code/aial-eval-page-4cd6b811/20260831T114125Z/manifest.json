@@ -1,0 +1,39 @@
+{
+  "source_id": "cohere/north-mini-code",
+  "provider": "Cohere",
+  "model": "North Mini Code 1.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "e1b10dcf597733c86eaf585535f5c64bcf2c081f527d5345bfdd4a46bdcfc7cd",
+  "size_bytes": 11817,
+  "stored_as": "raw.html",
+  "text_sha256": "928afbf4a8f1b647eebb6ea56e5bfaac7f1b4bec58500d260a1af51e5db9d724",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4c332ff3420ed7bf1328d384d4b53bbfe3489f9d/public/evals/north-mini-code/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4c332ff3420ed7bf1328d384d4b53bbfe3489f9d/public/evals/north-mini-code/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9e89e58cf51808c2eef1d54cfead62519f3d01a45b10b0eafa64995c8a601c93\"",
+    "last_modified": null,
+    "content_length": "2427",
+    "fetched_at": "2026-08-31T11:41:25Z"
+  },
+  "prior_sha256": "da3a7321774d061d7cc9aa4f04a64dbd01b05c2f22dd209d57bf497569e156fd",
+  "git_commit": "4c332ff3420ed7bf1328d384d4b53bbfe3489f9d",
+  "git_commit_date": "2026-08-06T16:25:59Z",
+  "git_blob_sha": "c3319c7d21d710293b4ae0dbbec00a0161688f98",
+  "git_path": "public/evals/north-mini-code/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:41:31Z"
+  }
+}

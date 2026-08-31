@@ -1,0 +1,39 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "aial-eval-page",
+  "sha256": "1bc47d53e397abe5410c8d3ae622a63eb8a15723d617557134af3cddc3236219",
+  "size_bytes": 20528,
+  "stored_as": "raw.html",
+  "text_sha256": "6390421e9cb936ac5c74f0da8e1649a8aed230480d625c225614cf7411d4c781",
+  "doc_links_sha256": "d0f3ea6a0a20d7c6dd1e95bc11481b95a68398d0e8e0c23d3757a70149c8f017",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/claude-sonnet-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a3575567d55d0b1e4744c902cf7806232eaef55d/public/evals/claude-sonnet-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9c1479079829a67c9019de944224ca68a6072d7fae0ff746d3bc029bd6182d42\"",
+    "last_modified": null,
+    "content_length": "3731",
+    "fetched_at": "2026-08-31T11:21:34Z"
+  },
+  "prior_sha256": "9c6c93d4d4613e4582b99905159185e1fd81f937c646544187a026763972a908",
+  "git_commit": "a3575567d55d0b1e4744c902cf7806232eaef55d",
+  "git_commit_date": "2026-08-06T15:02:07Z",
+  "git_blob_sha": "fd63d7377ff4ff75c16621c5f2388e3581982c8e",
+  "git_path": "public/evals/claude-sonnet-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:21:40Z"
+  }
+}

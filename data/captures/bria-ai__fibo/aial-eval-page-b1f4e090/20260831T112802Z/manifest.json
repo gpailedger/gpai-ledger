@@ -1,0 +1,39 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "aial-eval-page",
+  "sha256": "3c79ff122362f017e6278a55e9145edb96e852327b83ad6385080267ec9fb789",
+  "size_bytes": 16429,
+  "stored_as": "raw.html",
+  "text_sha256": "8c5c9e3864e394f08637f90546709bb69d29d307ee24c0a300b4e7f99ab09363",
+  "doc_links_sha256": "cfb7be45a9272bb54130870c214918d4d35a2f0139b979dc2fecc9293eb5c4a0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/dde2e75780172362bcc4eb5b46ee17bf7046829d/public/evals/fibo/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/dde2e75780172362bcc4eb5b46ee17bf7046829d/public/evals/fibo/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"68f3d5241f95dca4582340e9520f916b2b8f566ccc5c7d955f55ab40d0a9c305\"",
+    "last_modified": null,
+    "content_length": "3631",
+    "fetched_at": "2026-08-31T11:28:02Z"
+  },
+  "prior_sha256": "96ca7aef71c9bb101ff1e1ef0223567e1ee96c6a05864d35390e4cb20ffead32",
+  "git_commit": "dde2e75780172362bcc4eb5b46ee17bf7046829d",
+  "git_commit_date": "2026-08-06T16:25:02Z",
+  "git_blob_sha": "e708e90b6ba2f66a9c9b77b8789349e50706ca55",
+  "git_path": "public/evals/fibo/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:28:08Z"
+  }
+}

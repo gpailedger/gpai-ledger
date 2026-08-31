@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assessment of Phi-4</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="../../static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="../../static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="../../static/custom.css">
+    <!-- <link href="../../static/styles.css" rel="stylesheet"/> -->
+    <style>
+article {
+    max-width: 90vw;
+    font-size: 0.8rem;
+}
+th {
+    text-align: center;
+}
+#evaluations .grade.na { background-color:darkgray; }
+
+span.openness { display:inline-block;
+padding:1px 5px; color:#ffffff }
+span.open { background-color:#3e9b74; }
+span.partial { background-color:#dd9f1c; }
+span.closed { background-color:#ca6014; }
+
+#evaluations {
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.5rem;
+    border: 1px solid #EEE;
+}
+
+colgroup col:first-child {
+    width: auto;
+}
+
+colgroup col:not(:first-child) {
+    width: calc((100% - auto) / 4);
+}
+th { 
+    border: none; 
+    white-space: nowrap;
+}
+td {
+    white-space: nowrap;
+}
+tr:not(:last-child) td:nth-child(1),th:nth-child(1) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(5),th:nth-child(5) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(7),th:nth-child(7) {
+     border-right: 1px solid #EEE;
+}
+
+    </style>
+    <link href="../../static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../detailed-overview">Analysis</a></li>
+      <li><a href="../../methodology">Methodology</a></li>
+      <li><a href="../../recommendations">Recommendations</a></li>
+      <li style="margin-right: 5px;"><a href="about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>Phi-4</h1>
+        <h2 style="font-size: 0.8rem;">GPAI Provider: <a href="https://www.microsoft.com/en-us/research/" target="_blank">Microsoft</a></h2>
+    </header>
+
+    <section>
+        <h2>Metadata</h2>
+        <p>
+            <strong>Model URL:</strong> <a href="https://huggingface.co/microsoft/phi-4" target="_blank">https://huggingface.co/microsoft/phi-4</a><br/>
+            <strong>When was this model published?</strong> 2024-12-12<br/>
+            <strong>Is this a new or a fine-tuned model?</strong> New model<br/>
+            <strong>When was the Public Summary last updated?</strong> 2025-11-24<br/>
+            <strong>When did we evaluate the Public Summary?</strong> 2026-01-12<br/>
+            <strong>Where did we find the Public Summary?</strong> We found <a href="" target="_blank">this document</a> linked on <a href="" target="_blank">this page</a>. An archived version can be found <a href="./static/Phi 4 -- 2026_02_05.pdf">here</a>.
+        </p>
+    </section>
+    <section>        
+        <h2>Results of Evaluation</h2>
+        <table id="evaluations" class="table-mobile" style="table-layout: fixed;">
+            <colgroup>
+                <col />
+                <col span="4" />
+                <col span="2" />
+                <col span="2" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th colspan="4" style="border-right: 1px solid #EEE;">Transparency</th>
+                    <th colspan="2" style="border-right: 1px solid #EEE;">Usefulness</th>
+                    <th colspan="2">General</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Clarity</th>
+                    <th>Completeness</th>
+                    <th>Consistency</th>
+                    <th>Correctness</th>
+                    <th>Accessibility</th>
+                    <th>Comprehension</th>
+                    <th><strong><i>Transparency</i></strong></th>
+                    <th><strong><i>Usefulness</i></strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell">Document</td>
+                    <td class="open grade data-cell">81.82</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">70.0</td>
+                    <td class="open grade data-cell">95.0</td>
+                    <td class="partial grade data-cell">66.67</td>
+                    <td class="open grade data-cell">87.04</td>
+                    <td class="open grade data-cell">81.58</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">General information</td>
+                    <td class="partial grade data-cell">50.0</td>
+                    <td class="open grade data-cell">78.95</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">53.85</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">70.59</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Public Data Sources</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">1.67</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">5.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">3.7</td>
+                    <td class="closed grade data-cell">0.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Private Data Sources</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">40.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">40.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="partial grade data-cell">53.85</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Scraped/Crawled Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">User Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Synthetic/Other Data</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">3.33</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">3.33</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">8.89</td>
+                    <td class="closed grade data-cell">0.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Data Processing</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">50.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                    <td class="partial grade data-cell">52.0</td>
+                    <td class="closed grade data-cell">0.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Sum</td>
+                    <td class="closed grade data-cell">30.23</td>
+                    <td class="closed grade data-cell">28.65</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="closed grade data-cell">27.08</td>
+                    <td class="closed grade data-cell">21.11</td>
+                    <td class="closed grade data-cell">26.98</td>
+                    <td class="closed grade data-cell">33.3</td>
+                    <td class="closed grade data-cell">24.54</td>
+                </tr>
+                <tr class="row-a row-last">
+                    <td>Grades</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="outline data-cell" style="text-align: center;"><strong>D</strong></td><td class="outline data-cell" style="text-align: center;"><strong>F</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<section id="notes">
+        <h2>Evaluation Notes</h2>
+        <blockquote>
+            <small>If you update your public summary, please <a href="../../about">let us know</a> so that we can update the evaluation and scores.</small>
+        </blockquote>
+        <p>We did not find an explicitly published summary for Microsoft's Phi-4 model, but found a file <a href="https://huggingface.co/microsoft/phi-4/blob/main/data_summary_card.md" target="_blank">in its repository on HuggingFace</a> called "data_summary_card.md", whose structure closely matched that of the template. The title used in the file was "Data Summary", which was also title used by HuggingFace in its SmolLM public summary. We are uncertain as to whether this represents an industry practice of co-opting of the formal title of "public summary of training content" present in the template with a broader and vague title that could be confused with other data-related documentation also provided with GPAI models. We opted to assess this model regardless based on the assumption of stakeholders viewing the document as fulfilling the template requirements, as explained earlier.<br><br>The assessment showed that fields provided in the document are filled in to some extent, but that the document itself is quite sparse and does not provide many details and also had sections missing. We further found that section numbers and questions had a significant mismatch from what was provided in the template. The document also suffered from subjective non-relevant statements, such as question 2.3.1 on whether public data was used to train the model being answered with "<i>Microsoft follows all relevant laws and regulations pertaining to personal information</i>" &mdash; which is neither relevant nor clear. We also found the document did not provide required information significantly, for example subsequent parts that enquire about the source and uses of personal data (2.4 User data in template) were found completely missing. Our assessment reflects these systematic major issues in the outcomes where the document scored <span class="openness closed">33.30%</span> with a Grade <strong>D</strong> for <i>transparency</i>, and <span class="openness closed">24.54%</span> with a Grade <strong>F</strong> for <i>usefulness</i>, which is the lowest score amongst all assessed summaries published before and during our initial research.</p>
+
+        <p>
+            <strong>Suggested Improvements</strong><br/>
+            The following are the suggested improvements based on using our <a href="../../methodology">our methodology</a> where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.</p>
+        </p>
+        <ul>            <li><strong>Document</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>General information</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>Public Data Sources</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Private Data Sources</strong>
+                <ul>                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Scraped/Crawled Data</strong>
+                <ul>                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>User Data</strong>
+                <ul>                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Synthetic/Other Data</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Data Processing</strong>
+                <ul>                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+            <li><strong>Sum</strong>
+                <ul>                    <li>M1 The document and the information should be simple and clear <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 The document and information must be filled in completely <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M4 The information must be correct and accurate <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M5 The document and information must be accessible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M6 The document and information must be comprehensible for stakeholders <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+</ul>
+            </li>
+</ul>
+
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

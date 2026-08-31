@@ -1,0 +1,39 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "aial-eval-page",
+  "sha256": "0b0fdae323baab8d5acbe66bb974e4b2fc341ce4be2b58b9ecf905540d8c3be0",
+  "size_bytes": 18940,
+  "stored_as": "raw.html",
+  "text_sha256": "2233e7744889a818027b3a7b66ba45e0389f41ed321465bddcfdaf4de3ab697d",
+  "doc_links_sha256": "b1bc1438561b688ac0a6ed918337bb714b5f3f3f2c67b2e5822facb57550ad55",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/domyn/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/domyn/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"cf862519f9ccaea51045ed3d184ed9e78dbf4f9d7cfd11c347bbf9594e31b811\"",
+    "last_modified": null,
+    "content_length": "3706",
+    "fetched_at": "2026-08-31T10:43:39Z"
+  },
+  "prior_sha256": "651f5ba4626fe9bc1c051a111d9f043455727c85318dccd68c7d182614d38782",
+  "git_commit": "9b59d877246254be133ea75795e900ae5a01d4d7",
+  "git_commit_date": "2026-08-04T15:49:10Z",
+  "git_blob_sha": "357d73b220385ac1b8a9bff3916e8f5ba9410453",
+  "git_path": "public/evals/domyn/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:43:45Z"
+  }
+}

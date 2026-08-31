@@ -1,0 +1,39 @@
+{
+  "source_id": "microsoft/mai-image-2-5",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "a60c7edefc6cebb89f6e0ee769dbf17cd37e08353be0cc3244517ef93d516fec",
+  "size_bytes": 19065,
+  "stored_as": "raw.html",
+  "text_sha256": "a2f45c89e54cfea9e6044dc9adfcd3fb6c1fbb58bb02b85312607205d4abb45c",
+  "doc_links_sha256": "11240e5598e0e9c701bf7259bf1262c0291bf6075c617dc8ae59dc9432700aac",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/public/evals/mai-image-2_5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/public/evals/mai-image-2_5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"63b80e76af623b8f3ad90f4528d01718357bc5406a2e3434012f7ebc06d7d8f2\"",
+    "last_modified": null,
+    "content_length": "3593",
+    "fetched_at": "2026-08-31T11:01:55Z"
+  },
+  "prior_sha256": "ecbef052234854da8433326be1b2ede09ef8e3772257d94281ec6a9860530bd4",
+  "git_commit": "e23043c1a1254414a190531d23dca9b8b3da3415",
+  "git_commit_date": "2026-08-05T21:04:00Z",
+  "git_blob_sha": "9bb6e1a8d5b957b9ab21fab2a8b985ed2e187ffd",
+  "git_path": "public/evals/mai-image-2_5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:02:02Z"
+  }
+}

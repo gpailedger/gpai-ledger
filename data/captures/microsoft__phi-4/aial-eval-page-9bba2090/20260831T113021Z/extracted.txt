@@ -1,0 +1,402 @@
+Assessment of Phi-4
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+      NOTICE: We are currently working hard on updates and the start of enforcement as of 2nd August 2026! Stay tuned.
+
+Phi-4
+
+GPAI Provider:
+Microsoft
+
+Metadata
+
+Model URL:
+
+https://huggingface.co/microsoft/phi-4
+
+When was this model published?
+ 2024-12-12
+
+Is this a new or a fine-tuned model?
+ New model
+
+When was the Public Summary last updated?
+ 2025-11-24
+
+When did we evaluate the Public Summary?
+ 2026-03-31
+ (see
+previous versions here
+)
+
+Where did we find the Public Summary?
+ We found
+this document
+ linked on
+this page
+. An archived version can be found
+here
+.
+
+Results of Evaluation
+
+Section
+
+Transparency
+
+Usefulness
+
+General
+
+Clarity
+
+Completeness
+
+Consistency
+
+Correctness
+
+Accessibility
+
+Comprehension
+
+Transparency
+
+Usefulness
+
+Document
+
+81.82
+
+100.0
+
+100.0
+
+70.0
+
+95.0
+
+66.67
+
+87.04
+
+81.58
+
+General information
+
+50.0
+
+78.95
+
+100.0
+
+53.85
+
+N/A
+
+100.0
+
+70.59
+
+100.0
+
+Public Data Sources
+
+0.0
+
+1.67
+
+100.0
+
+5.0
+
+0.0
+
+0.0
+
+3.7
+
+0.0
+
+Private Data Sources
+
+N/A
+
+40.0
+
+100.0
+
+40.0
+
+N/A
+
+N/A
+
+53.85
+
+N/A
+
+Scraped/Crawled Data
+
+N/A
+
+0.0
+
+N/A
+
+0.0
+
+N/A
+
+N/A
+
+0.0
+
+N/A
+
+User Data
+
+N/A
+
+0.0
+
+N/A
+
+0.0
+
+N/A
+
+N/A
+
+0.0
+
+N/A
+
+Synthetic/Other Data
+
+0.0
+
+3.33
+
+100.0
+
+3.33
+
+N/A
+
+0.0
+
+8.89
+
+0.0
+
+Data Processing
+
+100.0
+
+0.0
+
+100.0
+
+50.0
+
+0.0
+
+0.0
+
+52.0
+
+0.0
+
+Sum
+
+30.23
+
+28.65
+
+100.0
+
+27.08
+
+21.11
+
+26.98
+
+33.3
+
+24.54
+
+Grades
+
+D
+F
+
+Evaluation Notes
+
+If you update your public summary, please
+let us know
+ so that we can update the evaluation and scores. We also welcome suggestions on improvements to this page, e.g. see
+FAQ section
+.
+
+We did not find an explicitly published summary for Microsoft's Phi-4 model, but found a file
+in its repository on HuggingFace
+ called "data_summary_card.md", whose structure closely matched that of the template. The title used in the file was "Data Summary", which was also title used by HuggingFace in its SmolLM public summary. We are uncertain as to whether this represents an industry practice of co-opting of the formal title of "public summary of training content" present in the template with a broader and vague title that could be confused with other data-related documentation also provided with GPAI models. We opted to assess this model regardless based on the assumption of stakeholders viewing the document as fulfilling the template requirements, as explained earlier.
+The assessment showed that fields provided in the document are filled in to some extent, but that the document itself is quite sparse and does not provide many details and also had sections missing. We further found that section numbers and questions had a significant mismatch from what was provided in the template. The document also suffered from subjective non-relevant statements, such as question 2.3.1 on whether public data was used to train the model being answered with "
+Microsoft follows all relevant laws and regulations pertaining to personal information
+" — which is neither relevant nor clear. We also found the document did not provide required information significantly, for example subsequent parts that enquire about the source and uses of personal data (2.4 User data in template) were found completely missing. Our assessment reflects these systematic major issues in the outcomes where the document scored
+33.3%
+ with a Grade
+D
+ for
+transparency
+, and
+24.54%
+ with a Grade
+F
+ for
+usefulness
+, which is the lowest score amongst all assessed summaries published before and during our initial research.
+
+Suggested Improvements
+
+            The following are the suggested improvements based on using our
+our methodology
+ where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.
+
+Document
+
+M1 Document should clearly indicate whether it is the latest version or if it is outdated and a replacement is made available.
+Document should provide link to all versions of the document.
+low
+
+M4 Document should provide link to authoritative source of the document. Date format should be correct.
+medium
+
+M5 Document must be easy to find.
+low
+
+M6 Document should clearly indicate changes from previous version. Document should indicate where notice of updates or changes will be provided.
+medium
+
+General information
+
+M1 Provider contact details refer to a generic contact point. Date of latest data acquisition should have the right format. Section 'Description of the linguistic characteristics of the overall training data' missing.
+medium
+
+M2 Section 'Description of the linguistic characteristics of the overall training data' missing.
+low
+
+M4 Section 'Description of the linguistic characteristics of the overall training data' missing.
+medium
+
+Public Data Sources
+
+M1 No list of large publicly available datasets provided. No general description of other publicly available datasets provided.
+high
+
+M2 No modalities provided. No list of large publicly available datasets provided. No general description of other publicly available datasets provided.
+high
+
+M4 No modalities provided. No general description of other publicly available datasets provided.
+high
+
+M5 No list of large publicly available datasets provided.
+high
+
+M6 No general description of other publicly available datasets provided.
+high
+
+Private Data Sources
+
+M2 The document and information must be filled in completely
+high
+
+M4 The information must be correct and accurate
+high
+
+Scraped/Crawled Data
+
+M2 Section missing.
+high
+
+M4 Section missing.
+high
+
+User Data
+
+M2 Section missing except for generic statement.
+high
+
+M4 Section missing except for generic statement.
+high
+
+Synthetic/Other Data
+
+M1 Section only affirms that synthetic data was used.
+high
+
+M2 Section only affirms that synthetic data was used.
+high
+
+M4 Section only affirms that synthetic data was used.
+high
+
+M6 Section only affirms that synthetic data was used.
+high
+
+Data Processing
+
+M2 Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+M4 Section contains only generic statements and an affirmation that the data was cleaned.
+medium
+
+M5 Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+M6 Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+Sum
+
+M1 Document should clearly indicate whether it is the latest version or if it is outdated and a replacement is made available.
+Document should provide link to all versions of the document.Provider contact details refer to a generic contact point. Date of latest data acquisition should have the right format. Section 'Description of the linguistic characteristics of the overall training data' missing.No list of large publicly available datasets provided. No general description of other publicly available datasets provided.Section only affirms that synthetic data was used.
+high
+
+M2 Section 'Description of the linguistic characteristics of the overall training data' missing.No modalities provided. No list of large publicly available datasets provided. No general description of other publicly available datasets provided.Section missing.Section missing except for generic statement.Section only affirms that synthetic data was used.Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+M4 Document should provide link to authoritative source of the document. Date format should be correct.Section 'Description of the linguistic characteristics of the overall training data' missing.No modalities provided. No general description of other publicly available datasets provided.Section missing.Section missing except for generic statement.Section only affirms that synthetic data was used.Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+M5 Document must be easy to find.No list of large publicly available datasets provided.Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+M6 Document should clearly indicate changes from previous version. Document should indicate where notice of updates or changes will be provided.No general description of other publicly available datasets provided.Section only affirms that synthetic data was used.Section contains only generic statements and an affirmation that the data was cleaned.
+high
+
+Previous Versions
+
+2026-03-31
+ (current version)
+
+2026-01-12
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

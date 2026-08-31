@@ -1,0 +1,238 @@
+GPAI Training Transparency
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+GPAI Training Transparency
+
+A Quality Assessment of Public Summaries published under AI Act Article 53(1)(d)
+
+The
+AI Act's Article 53(1)(d)
+ requires General-Purpose AI (GPAI) model providers to
+"make publicly available a sufficiently detailed summary about the content used for training ... according to a template provided by the AI Office"
+. We evaluate the
+quality
+ for this documentation across two aspects:
+Transparency
+ and
+Usefulness
+ and assign a score using
+our developed methodology
+. To assist GPAI Providers, the AI Office, and stakeholders, we also work on providing
+recommendations
+.
+
+Cite as: Blankvoort, D. A. H., Pandit, H. J., & Gahntz, M. (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+ (preprint). 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo.
+DOI:10.5281/zenodo.18803975
+
+This work has been featured in Euractiv as "
+Researchers have trouble finding AI training data summaries
+; and in an article in Tech Policy Press as "
+How Big AI Developers are Skirting a Mandate for Training Data Transparency
+.
+
+        The industry is yet to react significantly to Article 53(1)(d), with only a handful of GPAI model providers having yet published their public summaries for training content. These include high-quality summaries which shows the obligation is not a burden, and our framework is helpful to not only assess the quality, but to also improve it further.
+
+Please let us know if you come across additional public summaries.
+
+Evaluated Public Summaries
+
+Below is an overview of the evaluation with each model assigned a grade.
+A+
+ is the highest grade and
+F
+ the lowest, with
+!
+ shown for missing summaries. Click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. You can also see a
+detailed overview
+ of scores for each section of the public summary.
+
+Model
+
+Provider
+
+Transparency
+
+Usefulness
+
+Apertus
+
+Swiss AI Initiative
+
+                Swiss AI Initiative
+
+A
+
+A+
+
+Bria 3.2
+
+Bria AI
+
+                Bria AI
+
+B+
+
+A
+
+SmolLM3-3B
+
+HuggingFace
+
+                HuggingFace
+
+B+
+
+B+
+
+Bielik v3 11B Instruct
+
+SpeakLeash
+
+                SpeakLeash
+
+B+
+
+C+
+
+Inkling
+
+Thinking Machines
+
+                Thinking Machines
+
+C+
+
+C+
+
+GPT-5.5
+
+OpenAI
+
+                OpenAI
+
+C+
+
+D+
+
+Grok 4.5
+
+xAI
+
+                xAI
+
+C
+
+C
+
+Phi-4
+
+Microsoft
+
+                Microsoft
+
+D
+
+F
+
+Claude Fable 5
+
+Anthropic
+
+                Anthropic
+
+!
+
+!
+
+GPT-OSS
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+GPT-5.6 Sol
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+Sora 2
+
+OpenAI
+
+                OpenAI
+
+!
+
+!
+
+Gemini 2.5 Flash Image
+
+Google
+
+                Google
+
+!
+
+!
+
+TL;DR
+
+Our work makes the following
+contributions
+:
+
+We provide a framework to assess the quality of public summaries of training content required under the AI Act's Article 53(1)(d).
+
+Our quality assessment metrics represent best practices for how the information in the public summary should be provided (
+transparency
+) in order for rightsholders to utilise it effectively (
+usefulness
+).
+
+We found only a handful published public summaries, and that they are mostly of a high-quality. Meanwhile other providers, noticeably larger ones, have not published anything yet. Our work sufficiently demonstrates that this is an intentional choice and that the legal obligation is not a burden as the current high-quality summaries are from small organisations and open source oriented efforts.
+
+Our work also contributes towards
+improving the ecosystem
+:
+
+We content that compliance cannot be
+fait accompli
+, and that the public summaries are a key factor in creating transparency and enabling rights enforcement. Towards this, our work also acts as a guide for providers who are yet to publish their summaries to consider how to do so with the highest possible quality and utility.
+
+Compliance also invites practices that are intentionally or unintentionally deficient in achieving the goals. Our work serves as a useful tool for describing how and where and why certain practices are 'bad', e.g., where they use obfuscation, do not provide stated information. Using this, we can detect trends or patterns in whether the same issues occur in many summaries, and if so, how they can be collectively addressed through guidance, or enforced with priority.
+
+The largest challenge in undertaking this work has been finding public summaries as there is no consistent format or practice for how they should be provided. For this, we provide
+recommendations
+.
+
+The template for public summaries provided by the AI Office is intended to be revised with time to improve the state of documentation as well as to better guide the providers. We also provide
+recommendations
+ for these to improve the quality and accessibility of the public summaries.
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

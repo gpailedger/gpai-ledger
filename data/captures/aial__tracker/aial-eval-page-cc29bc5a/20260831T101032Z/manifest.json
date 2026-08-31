@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "claude-fable-5",
+  "target_kind": "aial-eval-page",
+  "sha256": "00e77559298f1d2a44cc70e4f11f8a67b4cb8d4c1106355ae6df8bd31e77d60e",
+  "size_bytes": 11404,
+  "stored_as": "raw.html",
+  "text_sha256": "349f92309e0f0476bea7594321e71696870ad61162db6f43b6687475c63dbe5a",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/claude-fable-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b4bce99bb5aa6ce9e46070044d32c6ddeea791e/public/evals/claude-fable-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4f373790f7c66d75192169998a0692b7939f55a71adbcb64075d6a77e334c12b\"",
+    "last_modified": null,
+    "content_length": "2278",
+    "fetched_at": "2026-08-31T10:10:32Z"
+  },
+  "prior_sha256": "e3b195326de708ead3fe01cba024910774698d50ad0c3dbf475a69fead70e1d5",
+  "git_commit": "9b4bce99bb5aa6ce9e46070044d32c6ddeea791e",
+  "git_commit_date": "2026-07-23T11:05:55Z",
+  "git_blob_sha": "057aa843953827f4c27af4067526db9d5112701d",
+  "git_path": "public/evals/claude-fable-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:10:37Z"
+  }
+}

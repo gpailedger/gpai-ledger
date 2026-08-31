@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPAI Training Transparency</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="./static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="./static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="./static/custom.css">
+    <!-- <link href="./static/styles.css" rel="stylesheet"/> -->
+    <script src="./static/sorttable.js"></script>
+    <style>
+    body {
+      font-size: 0.8rem;
+    }
+    .alert {
+      color: red;
+    }
+    .grade {
+      width: 20%;
+    }
+    @media (max-width: 768px) {
+      width: 15%;
+    }
+
+    section {
+      margin-bottom: 5px;
+      padding-top: 5px;
+      border-top: 2px solid black;
+    }
+      .sticky-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        background: #F33;
+        color: #fff;
+        padding: 20px 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 999;
+      }
+    </style>
+    <link href="./static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="./detailed-overview">Analysis</a></li>
+      <li><a href="./methodology">Methodology</a></li>
+      <li><a href="./recommendations">Recommendations</a></li>
+      <li><a href="./blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="./about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+      <header>
+        <h1>GPAI Training Transparency</h1>
+        <h2>Quality Assessment AI Act Article 53(1)(d) Public Summaries</h2>
+        <p>The <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53">AI Act's Article 53(1)(d)</a> requires General-Purpose AI (GPAI) model providers to publish <i>"a sufficiently detailed summary about the content used for training ... according to <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models">a template</a> provided by the <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-office">AI Office</a>"</i>. Enforcement on this has started from <strong>2nd August 2026</strong>. The AI Office is currently investigating compliance regarding public summaries as reported by <a href="https://www.euractiv.com/news/exclusive-eu-orders-leading-ai-labs-to-detail-security-practices/">Euractiv</a> with non-compliance risking fines.</p>
+        <p>To support this, we discovered <a href="list_summaries"><strong><em>44 public summaries</em></strong></a>, which we evaluate across two aspects: <mark>Transparency</mark> and <mark>Usefulness</mark> and assign a score using <a href="methodology">our developed methodology</a>. Our findings expose challenges regarding accessibility, vagueness and incompleteness of information, and limitations this poses on rightsholders. We also highlight <strong><em>missing summaries for 19 models</em></strong> based on our preliminary analysis. Please <a href="about">get in touch</a> if you find any summaries or would like to know more about our work.</p>
+      <div style="font-size: 0.7rem; background: #FFDDDD; margin: 0px; padding: 0px; padding-top: 2px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+  <p>See our peer-reviewed article: Dick A. H. Blankvoort, Harshvardhan J. Pandit, and Maximilian Gahntz (2026). <strong><i>Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)</i></strong>. 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo. <a href="https://doi.org/10.1145/3805689.3806755">DOI:10.1145/3805689.3806755</a></p>
+</div>
+
+      <div style="font-size: 0.7rem; background: #FFFFDD; margin: 0px; padding: 0px; padding-top: 5px; margin-left: 5px solid black; padding-left: 5px; margin-bottom: 5px;">
+        <p><strong>Media Coverage:</strong> <br/>
+          <em>Euractiv</em> "<a href="https://www.euractiv.com/news/ai-labs-at-odds-with-eu-over-half-hearted-data-disclosures/"><i>AI labs at odds with EU over half-hearted data disclosures</i></a> (7 Aug 2026)<br/>
+          <em>Euractiv</em> "<a href="https://www.euractiv.com/news/researchers-have-trouble-finding-ai-training-data-summaries/"><i>Researchers have trouble finding AI training data summaries</i></a> (2 Mar 2026); <br/>
+          <em>Tech Policy Press</em> "<a href="https://www.techpolicy.press/how-big-ai-developers-are-skirting-a-mandate-for-training-data-transparency/"><i>How Big AI Developers are Skirting a Mandate for Training Data Transparency</i></a> (4 Mar 2026).
+        </p>
+      </div>
+      </header>
+
+      <section id="results">
+        <p>
+          The table below shows an <a href="#evaluations">overview evaluated public summaries</a> with <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#3e9b74;color:#fff;border-radius:50%;">A+</span> as the highest grade score and <span style="display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;background:#a5410f;color:#fff;border-radius:50%;">F</span> the lowest. You can also click on the columns to sort the table by name or by score. A separate list is provided further below with published summaries <a href="#WIP"> currently being evaluated</a>, and another list for models which require a <a href="#missing">public summary is missing</a> despite being necessary.
+          You can click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. See <a href="detailed-overview">detailed overview</a> with scores for each section of the public summary. The <a href="list_summaries">list of summaries</a> provides links to all found summaries.</p>
+        </p>
+        <section id="evaluations">
+          <h3>Evaluated Public Summaries</h3>
+          <table id="table-evaluations" class="sortable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="only-desktop">Provider</th>
+                <th style="text-align: center;">Transparency</th>
+                <th style="text-align: center;">Usefulness</th>
+              </tr>
+            </thead>
+            <tbody>              <tr>
+                <td class="name-cell">
+                  <a href="evals/apertus/" target="_blank" title="data: ">
+                    <u>Apertus</u>
+                  </a>
+                  <span class="only-mobile">Swiss AI Initiative</span>
+                </td>
+                <td class="only-desktop">
+                  Swiss AI Initiative
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="92.9">
+A&nbsp;&nbsp;                </td>
+                <td class="data-cell grade open" sorttable_customkey="97.14">
+A+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/fibo/" target="_blank" title="data: ">
+                    <u>FIBO</u>
+                  </a>
+                  <span class="only-mobile">Bria AI</span>
+                </td>
+                <td class="only-desktop">
+                  Bria AI
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="87.01">
+B+                </td>
+                <td class="data-cell grade open" sorttable_customkey="97.2">
+A+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/bria/" target="_blank" title="data: ">
+                    <u>Bria 3.2</u>
+                  </a>
+                  <span class="only-mobile">Bria AI</span>
+                </td>
+                <td class="only-desktop">
+                  Bria AI
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="86.97">
+B+                </td>
+                <td class="data-cell grade open" sorttable_customkey="94.74">
+A&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/smollm3/" target="_blank" title="data: ">
+                    <u>SmolLM3-3B</u>
+                  </a>
+                  <span class="only-mobile">HuggingFace</span>
+                </td>
+                <td class="only-desktop">
+                  HuggingFace
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="82.5">
+B+                </td>
+                <td class="data-cell grade open" sorttable_customkey="86.01">
+B+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/domyn/" target="_blank" title="data: ">
+                    <u>Domyn Large</u>
+                  </a>
+                  <span class="only-mobile">Domyn</span>
+                </td>
+                <td class="only-desktop">
+                  Domyn
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="83.2">
+B+                </td>
+                <td class="data-cell grade open" sorttable_customkey="81.82">
+B+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/bielik/" target="_blank" title="data: ">
+                    <u>Bielik v3 11B Instruct</u>
+                  </a>
+                  <span class="only-mobile">SpeakLeash</span>
+                </td>
+                <td class="only-desktop">
+                  SpeakLeash
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="89.53">
+B+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="71.11">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/adobe-firefly/" target="_blank" title="data: ">
+                    <u>Adobe Firefly</u>
+                  </a>
+                  <span class="only-mobile">Adobe</span>
+                </td>
+                <td class="only-desktop">
+                  Adobe
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="71.79">
+C+                </td>
+                <td class="data-cell grade open" sorttable_customkey="82.38">
+B+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/inkling/" target="_blank" title="data: ">
+                    <u>Inkling</u>
+                  </a>
+                  <span class="only-mobile">Thinking Machines</span>
+                </td>
+                <td class="only-desktop">
+                  Thinking Machines
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="67.23">
+C+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="70.77">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/inkling-small/" target="_blank" title="data: ">
+                    <u>Inkling Small</u>
+                  </a>
+                  <span class="only-mobile">Thinking Machines</span>
+                </td>
+                <td class="only-desktop">
+                  Thinking Machines
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="67.74">
+C+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="69.93">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/flux-3/" target="_blank" title="data: ">
+                    <u>FLUX.3</u>
+                  </a>
+                  <span class="only-mobile">Black Forest Labs</span>
+                </td>
+                <td class="only-desktop">
+                  Black Forest Labs
+                </td>
+                <td class="data-cell grade open" sorttable_customkey="76.16">
+B&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="59.42">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/nova-2-lite/" target="_blank" title="data: ">
+                    <u>Nova 2 Lite</u>
+                  </a>
+                  <span class="only-mobile">Amazon</span>
+                </td>
+                <td class="only-desktop">
+                  Amazon
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="71.93">
+C+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="62.3">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/fastwebmiia/" target="_blank" title="data: ">
+                    <u>FastwebMIIA</u>
+                  </a>
+                  <span class="only-mobile">Fastweb</span>
+                </td>
+                <td class="only-desktop">
+                  Fastweb
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="53.19">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="73.23">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mai-cyber-1-flash/" target="_blank" title="data: ">
+                    <u>MAI Cyber 1 Flash</u>
+                  </a>
+                  <span class="only-mobile">Microsoft</span>
+                </td>
+                <td class="only-desktop">
+                  Microsoft
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="69.67">
+C+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="50.0">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/minimax-m3/" target="_blank" title="data: ">
+                    <u>Minimax M3</u>
+                  </a>
+                  <span class="only-mobile">Minimax</span>
+                </td>
+                <td class="only-desktop">
+                  Minimax
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="70.06">
+C+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.89">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mai-code-1-flash/" target="_blank" title="data: ">
+                    <u>MAI Code 1 Flash</u>
+                  </a>
+                  <span class="only-mobile">Microsoft</span>
+                </td>
+                <td class="only-desktop">
+                  Microsoft
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="68.82">
+C+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="50.0">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mai-image-2_5/" target="_blank" title="data: ">
+                    <u>MAI-Image-2.5</u>
+                  </a>
+                  <span class="only-mobile">Microsoft</span>
+                </td>
+                <td class="only-desktop">
+                  Microsoft
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="71.08">
+C+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="46.2">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/ministral-3-14B/" target="_blank" title="data: ">
+                    <u>Ministral 3 14B</u>
+                  </a>
+                  <span class="only-mobile">Mistral AI</span>
+                </td>
+                <td class="only-desktop">
+                  Mistral AI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="57.93">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="58.93">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/ministral-3-3B/" target="_blank" title="data: ">
+                    <u>Ministral 3 3B</u>
+                  </a>
+                  <span class="only-mobile">Mistral AI</span>
+                </td>
+                <td class="only-desktop">
+                  Mistral AI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="57.93">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="58.93">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/ministral-3-8B/" target="_blank" title="data: ">
+                    <u>Ministral 3 8B</u>
+                  </a>
+                  <span class="only-mobile">Mistral AI</span>
+                </td>
+                <td class="only-desktop">
+                  Mistral AI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="57.93">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="58.93">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mai-image-2/" target="_blank" title="data: ">
+                    <u>MAI-Image-2</u>
+                  </a>
+                  <span class="only-mobile">Microsoft</span>
+                </td>
+                <td class="only-desktop">
+                  Microsoft
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="70.12">
+C+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="46.2">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-6-luna/" target="_blank" title="data: ">
+                    <u>GPT-5.6 Luna</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="67.76">
+C+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="47.52">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/apertus-1-5/" target="_blank" title="data: ">
+                    <u>Apertus v1.5</u>
+                  </a>
+                  <span class="only-mobile">Swiss AI Initiative</span>
+                </td>
+                <td class="only-desktop">
+                  Swiss AI Initiative
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="54.24">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="60.99">
+C+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-5/" target="_blank" title="data: ">
+                    <u>GPT-5.5</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="67.59">
+C+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="47.52">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gemma-4/" target="_blank" title="data: ">
+                    <u>Gemma 4</u>
+                  </a>
+                  <span class="only-mobile">Google</span>
+                </td>
+                <td class="only-desktop">
+                  Google
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="59.54">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="53.6">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gemini-3-pro/" target="_blank" title="data: ">
+                    <u>Gemini 3 Pro</u>
+                  </a>
+                  <span class="only-mobile">Google</span>
+                </td>
+                <td class="only-desktop">
+                  Google
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="59.5">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="53.6">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mistral-large-3/" target="_blank" title="data: ">
+                    <u>Mistral Large 3</u>
+                  </a>
+                  <span class="only-mobile">Mistral AI</span>
+                </td>
+                <td class="only-desktop">
+                  Mistral AI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="54.08">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="58.93">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/mistral-small-4/" target="_blank" title="data: ">
+                    <u>Mistral Small 4</u>
+                  </a>
+                  <span class="only-mobile">Mistral AI</span>
+                </td>
+                <td class="only-desktop">
+                  Mistral AI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="54.08">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="58.93">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/grok-voice-think-fast-2/" target="_blank" title="data: ">
+                    <u>Grok Voice Think Fast 2.0</u>
+                  </a>
+                  <span class="only-mobile">xAI</span>
+                </td>
+                <td class="only-desktop">
+                  xAI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="57.33">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="51.53">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/grok-4.5/" target="_blank" title="data: ">
+                    <u>Grok 4.5</u>
+                  </a>
+                  <span class="only-mobile">xAI</span>
+                </td>
+                <td class="only-desktop">
+                  xAI
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="57.33">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="51.53">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/command-a-plus/" target="_blank" title="data: ">
+                    <u>C4AI Command A Plus</u>
+                  </a>
+                  <span class="only-mobile">Cohere</span>
+                </td>
+                <td class="only-desktop">
+                  Cohere
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="55.66">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade partial" sorttable_customkey="51.28">
+C&nbsp;&nbsp;                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-4-7/" target="_blank" title="data: ">
+                    <u>Claude Opus 4.7</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-mythos-preview/" target="_blank" title="data: ">
+                    <u>Claude Mythos Preview</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-5/" target="_blank" title="data: ">
+                    <u>Claude Opus 5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-sonnet-5/" target="_blank" title="data: ">
+                    <u>Claude Sonnet 5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-mythos-5-fable-5/" target="_blank" title="data: ">
+                    <u>Claude Mythos 5 / Claude Fable 5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-4-8/" target="_blank" title="data: ">
+                    <u>Claude Opus 4.8</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="56.45">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.92">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/muse-image/" target="_blank" title="data: ">
+                    <u>Muse Image</u>
+                  </a>
+                  <span class="only-mobile">Meta</span>
+                </td>
+                <td class="only-desktop">
+                  Meta
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="53.17">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="49.66">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/muse-spark/" target="_blank" title="data: ">
+                    <u>Muse Spark</u>
+                  </a>
+                  <span class="only-mobile">Meta</span>
+                </td>
+                <td class="only-desktop">
+                  Meta
+                </td>
+                <td class="data-cell grade partial" sorttable_customkey="53.61">
+C&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="48.64">
+D+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/phi-4/" target="_blank" title="data: ">
+                    <u>Phi-4</u>
+                  </a>
+                  <span class="only-mobile">Microsoft</span>
+                </td>
+                <td class="only-desktop">
+                  Microsoft
+                </td>
+                <td class="data-cell grade closed" sorttable_customkey="33.3">
+D&nbsp;&nbsp;                </td>
+                <td class="data-cell grade closed" sorttable_customkey="24.54">
+F&nbsp;&nbsp;                </td>
+              </tr>            </tbody>
+          </table>
+        </section>
+
+        <section id="WIP">
+  
+          <h3>Summaries currently being evaluated</h3>
+          <p>We are currently evaluating 5 public summaries. Their scores and our notes will be published shortly. In the meantime, you can access the public summary through the details page by clicking the model name.</p>          
+          <table id="table-WIP" class="sortable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="only-desktop">Provider</th>
+              </tr>
+            </thead>
+            <tbody>              <tr>
+                <td class="name-cell">
+                  <a href="evals/pllum/" target="_blank" title="data: ">
+                    <u>PLLuM 2512 Base</u>
+                  </a>
+                  <span class="only-mobile">Ministry of Digital Affairs of Poland</span>
+                </td>
+                <td class="only-desktop">
+                  Ministry of Digital Affairs of Poland
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-image-2/" target="_blank" title="data: ">
+                    <u>GPT Image 2</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/muse-glimmer/" target="_blank" title="data: ">
+                    <u>Muse Glimmer</u>
+                  </a>
+                  <span class="only-mobile">Meta</span>
+                </td>
+                <td class="only-desktop">
+                  Meta
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-4-nano/" target="_blank" title="data: ">
+                    <u>GPT-5.4 Nano</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-2/" target="_blank" title="data: ">
+                    <u>GPT-5.2</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>            </tbody>
+          </table>
+        </section>
+
+        <section id="missing">
+          <h3>Models with missing summaries</h3>
+          <p>Based on our preliminary analysis, we have assessed the following models as requiring a mandatory public summary, but which we could not discover.</p>
+          <table id="table-missing" class="sortable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="only-desktop">Provider</th>
+              </tr>
+            </thead>
+            <tbody>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-sonnet-4-6/" target="_blank" title="data: ">
+                    <u>Claude Sonnet 4.6</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/flux-2-max/" target="_blank" title="data: ">
+                    <u>FLUX.2 [max]</u>
+                  </a>
+                  <span class="only-mobile">Black Forest Labs</span>
+                </td>
+                <td class="only-desktop">
+                  Black Forest Labs
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/apriel-1-5/" target="_blank" title="data: ">
+                    <u>Apriel 1.5 15B Thinker</u>
+                  </a>
+                  <span class="only-mobile">ServiceNow</span>
+                </td>
+                <td class="only-desktop">
+                  ServiceNow
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-4-6/" target="_blank" title="data: ">
+                    <u>Claude Opus 4.6</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-6-sol/" target="_blank" title="data: ">
+                    <u>GPT-5.6 Sol</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/flux-2-klein/" target="_blank" title="data: ">
+                    <u>FLUX.2 Klein</u>
+                  </a>
+                  <span class="only-mobile">Black Forest Labs</span>
+                </td>
+                <td class="only-desktop">
+                  Black Forest Labs
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-oss/" target="_blank" title="data: ">
+                    <u>GPT-OSS</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/granite-4-1/" target="_blank" title="data: ">
+                    <u>Granite 4.1</u>
+                  </a>
+                  <span class="only-mobile">IBM</span>
+                </td>
+                <td class="only-desktop">
+                  IBM
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/flux-2/" target="_blank" title="data: ">
+                    <u>FLUX.2</u>
+                  </a>
+                  <span class="only-mobile">Black Forest Labs</span>
+                </td>
+                <td class="only-desktop">
+                  Black Forest Labs
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/gpt-5-6-terra/" target="_blank" title="data: ">
+                    <u>GPT-5.6 Terra</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-4-1/" target="_blank" title="data: ">
+                    <u>Claude Opus 4.1</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/sora-2/" target="_blank" title="data: ">
+                    <u>Sora 2</u>
+                  </a>
+                  <span class="only-mobile">OpenAI</span>
+                </td>
+                <td class="only-desktop">
+                  OpenAI
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/granite-4-0-h/" target="_blank" title="data: ">
+                    <u>Granite 4.0 H</u>
+                  </a>
+                  <span class="only-mobile">IBM</span>
+                </td>
+                <td class="only-desktop">
+                  IBM
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/palmyra-x5/" target="_blank" title="data: ">
+                    <u>Palmyra X5</u>
+                  </a>
+                  <span class="only-mobile">WRITER</span>
+                </td>
+                <td class="only-desktop">
+                  WRITER
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-haiku-4-5/" target="_blank" title="data: ">
+                    <u>Claude Haiku 4.5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-opus-4-5/" target="_blank" title="data: ">
+                    <u>Claude Opus 4.5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/north-mini-code/" target="_blank" title="data: ">
+                    <u>North Mini Code 1.0</u>
+                  </a>
+                  <span class="only-mobile">Cohere</span>
+                </td>
+                <td class="only-desktop">
+                  Cohere
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/claude-sonnet-4-5/" target="_blank" title="data: ">
+                    <u>Claude Sonnet 4.5</u>
+                  </a>
+                  <span class="only-mobile">Anthropic</span>
+                </td>
+                <td class="only-desktop">
+                  Anthropic
+                </td>
+              </tr>              <tr>
+                <td class="name-cell">
+                  <a href="evals/veo-3-1/" target="_blank" title="data: ">
+                    <u>Veo 3.1</u>
+                  </a>
+                  <span class="only-mobile">Google</span>
+                </td>
+                <td class="only-desktop">
+                  Google
+                </td>
+              </tr>            </tbody>
+          </table>
+        </section>
+
+      </section>
+
+      <section id="tldr">
+        <h2>Why we started this project:</h2>
+        <ul>
+            <li>We contend that compliance cannot be <em>fait accompli</em>, and that the public summaries are a key factor in creating transparency and enabling rights enforcement. Towards this, our work also acts as a guide for providers who are yet to publish their summaries to consider how to do so with the highest possible quality and utility.</li>
+            <li>Compliance also invites practices that are intentionally or unintentionally deficient in achieving the goals. Our work serves as a useful tool for describing how and where and why certain practices are 'bad', e.g., where they use obfuscation, do not provide stated information. Using this, we can detect trends or patterns in whether the same issues occur in many summaries, and if so, how they can be collectively addressed through guidance, or enforced with priority.</li>
+            <li>The largest challenge in undertaking this work has been finding public summaries as there is no consistent format or practice for how they should be provided. For this, we provide <a href="recommendations">recommendations</a>.</li>
+            <li>The template for public summaries provided by the AI Office is intended to be revised with time to improve the state of documentation as well as to better guide the providers. We also provide <a href="recommendations">recommendations</a> for these to improve the quality and accessibility of the public summaries.</li>
+          </ul>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "aial-eval-page",
+  "sha256": "ebb610a66012042472a6857bb2ee4d3efcc056ff285a625c468ab47cc8c8506e",
+  "size_bytes": 20223,
+  "stored_as": "raw.html",
+  "text_sha256": "eba6ecaf429636080d5f6dfdda63c4c98d5138f137fa36d30b796278ccd173ec",
+  "doc_links_sha256": "f1424ddb54d308163d2a0bd3a3850b5ac45ec004c1b71db54b90c5bed97883b0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6bef10f0ec4084670e18c06e02d6a1cc926092aa/public/evals/muse-image/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6bef10f0ec4084670e18c06e02d6a1cc926092aa/public/evals/muse-image/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1e9e3191f5a21001f88dc23ff52ef5e0c6887318025115b29eae94975ed3fbcc\"",
+    "last_modified": null,
+    "content_length": "3582",
+    "fetched_at": "2026-08-31T10:30:01Z"
+  },
+  "prior_sha256": "b6c84ba8bb1f97136ec2513d84ea5ba6c7900b41934ffa758e0a26f049c23b05",
+  "git_commit": "6bef10f0ec4084670e18c06e02d6a1cc926092aa",
+  "git_commit_date": "2026-07-27T15:13:59Z",
+  "git_blob_sha": "4064d477688a2d85c4152d67381e9eddac7722d5",
+  "git_path": "public/evals/muse-image/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T10:30:06Z"
+  }
+}
