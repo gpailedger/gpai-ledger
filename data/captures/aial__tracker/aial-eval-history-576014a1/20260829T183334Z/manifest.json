@@ -38,11 +38,17 @@
     "at": "2026-08-29T18:33:41Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260831063544/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/f0e434e12a91c0781460a6322c1b0be1236c8728/evals/gpt-5.yaml",
+    "snapshot_ts": "20260831063544",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-b5102042c9227975cded7b4175f010a680ec5fa5",
     "via": "spn2",
-    "requested_at": "2026-08-30T06:35:24Z",
-    "at": "2026-08-30T06:35:25Z"
+    "requested_at": "2026-08-31T06:35:44Z",
+    "at": "2026-08-31T06:35:49Z"
   },
   "wayback_attempts": [
     {
@@ -51,6 +57,13 @@
       "via": "spn2",
       "requested_at": "2026-08-29T22:47:13Z",
       "at": "2026-08-29T22:47:29Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-08-30T06:35:24Z",
+      "at": "2026-08-30T06:35:25Z"
     }
   ]
 }
