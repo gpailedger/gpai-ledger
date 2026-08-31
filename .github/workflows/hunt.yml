@@ -35,15 +35,20 @@ jobs:
       - name: Tier-1 probe (missing models against their provider's own URL patterns)
         run: python crawler/probe_missing.py
 
+      # The approval queue is retired (31 Aug 2026). AIAL's evaluation metadata
+      # names the document URL for every model they list — including the five
+      # they have listed but not yet graded — so the judgement the queue existed
+      # to collect is already answered upstream, and a model they do not list
+      # contributes no scored reference point to FilingBench anyway.
+      #
+      # Discovery itself keeps running below and writes reports/hunt-latest.md.
+      # It asks nobody anything. It stays because AIAL is one small academic
+      # project with one repository, and if it stops, a ledger that only mirrors
+      # it would freeze; the leads are then already there.
       - name: Queue candidates from the weekly Tier-3 report, if one has landed
+        id: ingest
+        continue-on-error: true      # never lose the week's discovery to a bad report
         run: python crawler/decisions.py ingest
-
-      - name: Open decision issues for candidates a machine cannot judge
-        id: propose
-        continue-on-error: true      # never lose the week's discovery work to a GitHub hiccup
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: python crawler/decisions.py propose
 
       - name: Tier-2 relocation hunt (bounded site crawl, fingerprint-confirmed)
         run: python crawler/site_hunt.py
@@ -77,7 +82,7 @@ jobs:
           git remote set-url origin "https://github.com/${{ github.repository }}.git"
 
       - name: Fail the run if a candidate could not be asked
-        if: always() && steps.propose.outcome != 'success'
+        if: always() && steps.ingest.outcome != 'success'
         run: |
           echo "a decision issue could not be opened — the candidate stays queued"
           exit 1

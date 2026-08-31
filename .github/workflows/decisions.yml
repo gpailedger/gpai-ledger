@@ -5,9 +5,11 @@ name: decision-queue
 # Only the repository owner is obeyed — the guard is in the job condition below
 # AND again inside crawler/decisions.py, because this writes to a public record.
 
+# RETIRED 31 Aug 2026: the approval queue no longer opens issues, so there is
+# nothing to answer. Kept, disabled, because reinstating it is a one-line change
+# if AIAL ever stops maintaining the list this project now follows.
 on:
-  issue_comment:
-    types: [created]
+  workflow_dispatch:
 
 concurrency:
   group: decision-queue          # serialise: every run commits decisions.json
