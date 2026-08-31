@@ -1,0 +1,34 @@
+{
+  "source_id": "mistral-ai/ministral-3-3b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 3B",
+  "target_kind": "aial-eval-page",
+  "sha256": "d927ac798afda3a9783af6cd99ef69fd1588100fc02986d1e4502a7e18dabda8",
+  "size_bytes": 20322,
+  "stored_as": "raw.html",
+  "text_sha256": "da44b278c5733ccfd1507f1bb84435929db4c496e1a35cbbc99c367b90b71903",
+  "doc_links_sha256": "cf49e6b883c94457e7b616c86a639d2ec7a58cd11b6ac6b42524e3851fd7bc15",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-3B/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/ministral-3-3B/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwfoi\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:10:13Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:10:17Z"
+  }
+}

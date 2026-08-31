@@ -1,0 +1,34 @@
+{
+  "source_id": "xai/grok-voice-think-fast-2",
+  "provider": "xAI",
+  "model": "Grok Voice Think Fast 2.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "78e26abd2bb4295d5d4474a94f2835df9276aeb5c9060f760e16890b03052ebf",
+  "size_bytes": 19680,
+  "stored_as": "raw.html",
+  "text_sha256": "4f75322caeb624a2bbea34413a6e5c42855c52796a9cb2d8e4f1f21842b6439c",
+  "doc_links_sha256": "423eb06a4176c2a7bd8a0174128c745ab064f312fd6d0cdecd5ca517e242f0b1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/grok-voice-think-fast-2/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/grok-voice-think-fast-2/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjwyq2f6o\"",
+    "last_modified": "Mon, 17 Aug 2026 12:30:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:07:04Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:07:08Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "mistral-ai/mistral-small-4",
+  "provider": "Mistral AI",
+  "model": "Mistral Small 4",
+  "target_kind": "aial-eval-page",
+  "sha256": "92af5d801700dbe226efbc2f9b2a31c439e9c64e89ef7548290ad7b308629608",
+  "size_bytes": 20481,
+  "stored_as": "raw.html",
+  "text_sha256": "92a929ae7ca5e71d778dc8cead7f38227e0351bff15bbf6112220a4171a7df22",
+  "doc_links_sha256": "52998b7722ba55a2f9fd8d3f3147330e7e0572bdb018821a6566084be6638839",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-small-4/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-small-4/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcx0ifsx\"",
+    "last_modified": "Thu, 06 Aug 2026 16:41:06 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:10:56Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:11:01Z"
+  }
+}

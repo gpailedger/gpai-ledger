@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-opus-5",
+  "provider": "Anthropic",
+  "model": "Claude Opus 5",
+  "target_kind": "aial-eval-page",
+  "sha256": "26f03dc67c223b5ddff1fc388caad18758c7daa88dd218744e0952857249747b",
+  "size_bytes": 20845,
+  "stored_as": "raw.html",
+  "text_sha256": "81d03396ba2f1373dc2ed70c6e865f4af8d025caadde927b2312377a652939b5",
+  "doc_links_sha256": "e3b0739ee684bf4aa22741088a3c6195e58fa047dc752a19f32bbf027ae7ab8c",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwg31\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:00:45Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:00:51Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "aial-eval-page",
+  "sha256": "d857098ee8eeae08d1b4eabfea0139c336575207fe08e361fabfba8551ba7cf8",
+  "size_bytes": 20855,
+  "stored_as": "raw.html",
+  "text_sha256": "6390421e9cb936ac5c74f0da8e1649a8aed230480d625c225614cf7411d4c781",
+  "doc_links_sha256": "d0f3ea6a0a20d7c6dd1e95bc11481b95a68398d0e8e0c23d3757a70149c8f017",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/claude-sonnet-5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwg3b\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:01:24Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:01:29Z"
+  }
+}

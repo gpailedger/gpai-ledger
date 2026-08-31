@@ -1,0 +1,34 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "aial-eval-page",
+  "sha256": "5e8462d65ee87ef1b2e386ffa29045fdc0c1bfc3ee4f509a20ed5b604cbf5618",
+  "size_bytes": 18661,
+  "stored_as": "raw.html",
+  "text_sha256": "6ed810ac9d4391da52353348a0fb059f7b848cdcc01b4a5a023e4a5cd3fc92d9",
+  "doc_links_sha256": "e51515d665d42db6ec792081e55645f729b18750692bdc7f93843813d50e28e4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bria/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bria/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbweed\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:58:53Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:58:58Z"
+  }
+}

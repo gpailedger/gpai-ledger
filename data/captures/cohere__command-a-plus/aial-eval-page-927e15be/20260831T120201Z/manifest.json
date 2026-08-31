@@ -1,0 +1,34 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "aial-eval-page",
+  "sha256": "08e449f9961cdcc6f9174f1f1e759c7aa42a89cb4fdd457c5fa18612ea3d7000",
+  "size_bytes": 20782,
+  "stored_as": "raw.html",
+  "text_sha256": "aedcd1f20c07bf7d5b99df67fd204f8a20d831b6a91ea103becf990bec01142e",
+  "doc_links_sha256": "a0226b176498d8d01ad0003b30db301fe27a7ec19d84c0c04816969166d04cc1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/command-a-plus/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/command-a-plus/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcx0ig1a\"",
+    "last_modified": "Thu, 06 Aug 2026 16:41:06 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:02:01Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:02:06Z"
+  }
+}

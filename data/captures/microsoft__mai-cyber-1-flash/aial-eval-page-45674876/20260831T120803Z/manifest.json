@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/mai-cyber-1-flash",
+  "provider": "Microsoft",
+  "model": "MAI-Cyber-1-Flash",
+  "target_kind": "aial-eval-page",
+  "sha256": "cd8f5574168b055a2555ea8a66bab7de3891ee9e25d03194de43b07eaf01f498",
+  "size_bytes": 19673,
+  "stored_as": "raw.html",
+  "text_sha256": "7e60f405f98556e6025dc80e48ef5bf5cb557939e27c61bec31c705ba7964e0d",
+  "doc_links_sha256": "d4cc29cab7eb27fc817cc921e8ca97353d8201431245b7949765935430d75440",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-cyber-1-flash/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/mai-cyber-1-flash/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwf6h\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:08:03Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:08:07Z"
+  }
+}

@@ -1,0 +1,666 @@
+GPAI Training Transparency
+
+AIAL
+
+☰
+
+Home
+
+Analysis
+
+Methodology
+
+Recommendations
+
+Blog
+
+Contact
+
+GPAI Training Transparency
+
+Quality Assessment AI Act Article 53(1)(d) Public Summaries
+
+The
+AI Act's Article 53(1)(d)
+ requires General-Purpose AI (GPAI) model providers to publish
+"a sufficiently detailed summary about the content used for training ... according to
+a template
+ provided by the
+AI Office
+"
+. Enforcement on this has started from
+2nd August 2026
+. The AI Office is currently investigating compliance regarding public summaries as reported by
+Euractiv
+ with non-compliance risking fines.
+
+To support this, we discovered
+44 public summaries
+, which we evaluate across two aspects:
+Transparency
+ and
+Usefulness
+ and assign a score using
+our developed methodology
+. Our findings expose challenges regarding accessibility, vagueness and incompleteness of information, and limitations this poses on rightsholders. We also highlight
+missing summaries for 19 models
+ based on our preliminary analysis. Please
+get in touch
+ if you find any summaries or would like to know more about our work.
+
+See our peer-reviewed article: Dick A. H. Blankvoort, Harshvardhan J. Pandit, and Maximilian Gahntz (2026).
+Quality Assessment of Public Summary of Training Content for GPAI models required by AI Act Article 53(1)(d)
+. 9th ACM Conference on Fairness, Accountability, and Transparency (FAccT), Montreal, Canada. Zenodo.
+DOI:10.1145/3805689.3806755
+
+Media Coverage:
+
+Euractiv
+ "
+AI labs at odds with EU over half-hearted data disclosures
+ (7 Aug 2026)
+
+Euractiv
+ "
+Researchers have trouble finding AI training data summaries
+ (2 Mar 2026);
+
+Tech Policy Press
+ "
+How Big AI Developers are Skirting a Mandate for Training Data Transparency
+ (4 Mar 2026).
+
+          The table below shows an
+overview evaluated public summaries
+ with
+A+
+ as the highest grade score and
+F
+ the lowest. You can also click on the columns to sort the table by name or by score. A separate list is provided further below with published summaries
+ currently being evaluated
+, and another list for models which require a
+public summary is missing
+ despite being necessary.
+          You can click the model name to go to the detailed evaluation page which has more information, a link to the summary, and our evaluation notes. See
+detailed overview
+ with scores for each section of the public summary. The
+list of summaries
+ provides links to all found summaries.
+
+Evaluated Public Summaries
+
+Model
+
+Provider
+
+Transparency
+
+Usefulness
+
+Apertus
+
+Swiss AI Initiative
+
+                  Swiss AI Initiative
+
+A
+
+A+
+
+FIBO
+
+Bria AI
+
+                  Bria AI
+
+B+
+
+A+
+
+Bria 3.2
+
+Bria AI
+
+                  Bria AI
+
+B+
+
+A
+
+SmolLM3-3B
+
+HuggingFace
+
+                  HuggingFace
+
+B+
+
+B+
+
+Domyn Large
+
+Domyn
+
+                  Domyn
+
+B+
+
+B+
+
+Bielik v3 11B Instruct
+
+SpeakLeash
+
+                  SpeakLeash
+
+B+
+
+C+
+
+Adobe Firefly
+
+Adobe
+
+                  Adobe
+
+C+
+
+B+
+
+Inkling
+
+Thinking Machines
+
+                  Thinking Machines
+
+C+
+
+C+
+
+Inkling Small
+
+Thinking Machines
+
+                  Thinking Machines
+
+C+
+
+C+
+
+FLUX.3
+
+Black Forest Labs
+
+                  Black Forest Labs
+
+B
+
+C
+
+Nova 2 Lite
+
+Amazon
+
+                  Amazon
+
+C+
+
+C+
+
+FastwebMIIA
+
+Fastweb
+
+                  Fastweb
+
+C
+
+C+
+
+MAI Cyber 1 Flash
+
+Microsoft
+
+                  Microsoft
+
+C+
+
+C
+
+Minimax M3
+
+Minimax
+
+                  Minimax
+
+C+
+
+D+
+
+MAI Code 1 Flash
+
+Microsoft
+
+                  Microsoft
+
+C+
+
+C
+
+MAI-Image-2.5
+
+Microsoft
+
+                  Microsoft
+
+C+
+
+D+
+
+Ministral 3 14B
+
+Mistral AI
+
+                  Mistral AI
+
+C
+
+C
+
+Ministral 3 3B
+
+Mistral AI
+
+                  Mistral AI
+
+C
+
+C
+
+Ministral 3 8B
+
+Mistral AI
+
+                  Mistral AI
+
+C
+
+C
+
+MAI-Image-2
+
+Microsoft
+
+                  Microsoft
+
+C+
+
+D+
+
+GPT-5.6 Luna
+
+OpenAI
+
+                  OpenAI
+
+C+
+
+D+
+
+Apertus v1.5
+
+Swiss AI Initiative
+
+                  Swiss AI Initiative
+
+C
+
+C+
+
+GPT-5.5
+
+OpenAI
+
+                  OpenAI
+
+C+
+
+D+
+
+Gemma 4
+
+Google
+
+                  Google
+
+C
+
+C
+
+Gemini 3 Pro
+
+Google
+
+                  Google
+
+C
+
+C
+
+Mistral Small 4
+
+Mistral AI
+
+                  Mistral AI
+
+C
+
+C
+
+Mistral Large 3
+
+Mistral AI
+
+                  Mistral AI
+
+C
+
+C
+
+Grok Voice Think Fast 2.0
+
+xAI
+
+                  xAI
+
+C
+
+C
+
+Grok 4.5
+
+xAI
+
+                  xAI
+
+C
+
+C
+
+C4AI Command A Plus
+
+Cohere
+
+                  Cohere
+
+C
+
+C
+
+Claude Opus 5
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Claude Mythos Preview
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Claude Opus 4.7
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Claude Opus 4.8
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Claude Sonnet 5
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Claude Mythos 5 / Claude Fable 5
+
+Anthropic
+
+                  Anthropic
+
+C
+
+D+
+
+Muse Image
+
+Meta
+
+                  Meta
+
+C
+
+D+
+
+Muse Spark
+
+Meta
+
+                  Meta
+
+C
+
+D+
+
+Phi-4
+
+Microsoft
+
+                  Microsoft
+
+D
+
+F
+
+Summaries currently being evaluated
+
+We are currently evaluating 5 public summaries. Their scores and our notes will be published shortly. In the meantime, you can access the public summary through the details page by clicking the model name.
+
+Model
+
+Provider
+
+GPT Image 2
+
+OpenAI
+
+                  OpenAI
+
+Muse Glimmer
+
+Meta
+
+                  Meta
+
+GPT-5.4 Nano
+
+OpenAI
+
+                  OpenAI
+
+GPT-5.2
+
+OpenAI
+
+                  OpenAI
+
+PLLuM 2512 Base
+
+Ministry of Digital Affairs of Poland
+
+                  Ministry of Digital Affairs of Poland
+
+Models with missing summaries
+
+Based on our preliminary analysis, we have assessed the following models as requiring a mandatory public summary, but which we could not discover.
+
+Model
+
+Provider
+
+FLUX.2 [max]
+
+Black Forest Labs
+
+                  Black Forest Labs
+
+Granite 4.1
+
+IBM
+
+                  IBM
+
+Veo 3.1
+
+Google
+
+                  Google
+
+Palmyra X5
+
+WRITER
+
+                  WRITER
+
+Claude Opus 4.6
+
+Anthropic
+
+                  Anthropic
+
+Claude Sonnet 4.6
+
+Anthropic
+
+                  Anthropic
+
+North Mini Code 1.0
+
+Cohere
+
+                  Cohere
+
+FLUX.2
+
+Black Forest Labs
+
+                  Black Forest Labs
+
+GPT-5.6 Sol
+
+OpenAI
+
+                  OpenAI
+
+GPT-OSS
+
+OpenAI
+
+                  OpenAI
+
+GPT-5.6 Terra
+
+OpenAI
+
+                  OpenAI
+
+Apriel 1.5 15B Thinker
+
+ServiceNow
+
+                  ServiceNow
+
+Claude Haiku 4.5
+
+Anthropic
+
+                  Anthropic
+
+FLUX.2 Klein
+
+Black Forest Labs
+
+                  Black Forest Labs
+
+Granite 4.0 H
+
+IBM
+
+                  IBM
+
+Claude Opus 4.5
+
+Anthropic
+
+                  Anthropic
+
+Sora 2
+
+OpenAI
+
+                  OpenAI
+
+Claude Opus 4.1
+
+Anthropic
+
+                  Anthropic
+
+Claude Sonnet 4.5
+
+Anthropic
+
+                  Anthropic
+
+Why we started this project:
+
+We contend that compliance cannot be
+fait accompli
+, and that the public summaries are a key factor in creating transparency and enabling rights enforcement. Towards this, our work also acts as a guide for providers who are yet to publish their summaries to consider how to do so with the highest possible quality and utility.
+
+Compliance also invites practices that are intentionally or unintentionally deficient in achieving the goals. Our work serves as a useful tool for describing how and where and why certain practices are 'bad', e.g., where they use obfuscation, do not provide stated information. Using this, we can detect trends or patterns in whether the same issues occur in many summaries, and if so, how they can be collectively addressed through guidance, or enforced with priority.
+
+The largest challenge in undertaking this work has been finding public summaries as there is no consistent format or practice for how they should be provided. For this, we provide
+recommendations
+.
+
+The template for public summaries provided by the AI Office is intended to be revised with time to improve the state of documentation as well as to better guide the providers. We also provide
+recommendations
+ for these to improve the quality and accessibility of the public summaries.
+
+This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are:

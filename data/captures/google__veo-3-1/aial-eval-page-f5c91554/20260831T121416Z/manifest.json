@@ -1,0 +1,34 @@
+{
+  "source_id": "google/veo-3-1",
+  "provider": "Google",
+  "model": "Veo 3.1",
+  "target_kind": "aial-eval-page",
+  "sha256": "c87ba7d7857e4f7ac81d04099597f229e842eb5bee131bb82dbd432f449720e9",
+  "size_bytes": 11767,
+  "stored_as": "raw.html",
+  "text_sha256": "dc5d557fc84979bc7994306c9f67843c8c25e82f124b917eac6d423ab6995206",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/veo-3-1/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/veo-3-1/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw92v\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:14:16Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:14:21Z"
+  }
+}

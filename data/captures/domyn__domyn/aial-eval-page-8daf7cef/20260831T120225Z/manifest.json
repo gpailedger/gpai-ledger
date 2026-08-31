@@ -1,0 +1,34 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "aial-eval-page",
+  "sha256": "3ff1ed1ed829f4eca9a9741e7fea107033d7ef9b27ee7d7fc2ffb455e16cc0ff",
+  "size_bytes": 18902,
+  "stored_as": "raw.html",
+  "text_sha256": "a87366d2cd49522fdd8dc6a385de511ebf66d699b1d6203570e7ca62798b0a3a",
+  "doc_links_sha256": "b1bc1438561b688ac0a6ed918337bb714b5f3f3f2c67b2e5822facb57550ad55",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/domyn/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/domyn/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwel2\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:02:25Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:02:29Z"
+  }
+}

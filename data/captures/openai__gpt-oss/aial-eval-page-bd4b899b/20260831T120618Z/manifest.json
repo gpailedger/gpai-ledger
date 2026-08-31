@@ -1,0 +1,34 @@
+{
+  "source_id": "openai/gpt-oss",
+  "provider": "OpenAI",
+  "model": "GPT-OSS",
+  "target_kind": "aial-eval-page",
+  "sha256": "3a621ebf1dce7645425ccad179022959ff49b5040abdfdd5874133d6db75ddf6",
+  "size_bytes": 11771,
+  "stored_as": "raw.html",
+  "text_sha256": "395ac02afe3121f305f0d2dd02eacf4d1b60b761386e810ad1b6b772504dbe97",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-oss/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-oss/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw92z\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:06:18Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:06:23Z"
+  }
+}

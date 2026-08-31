@@ -1,0 +1,34 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "aial-eval-page",
+  "sha256": "55762803c6ddf26cc8934b12d428f984abc1519fea20b6eb2321efdbc0f9891a",
+  "size_bytes": 16268,
+  "stored_as": "raw.html",
+  "text_sha256": "76cf13c0eaf06dc615359f1312503116c7c2c28569cb4230da8e676fd4ef01f9",
+  "doc_links_sha256": "cfb7be45a9272bb54130870c214918d4d35a2f0139b979dc2fecc9293eb5c4a0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/fibo/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/fibo/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwcjw\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:03:00Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:03:04Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "cohere/north-mini-code",
+  "provider": "Cohere",
+  "model": "North Mini Code 1.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "e1b10dcf597733c86eaf585535f5c64bcf2c081f527d5345bfdd4a46bdcfc7cd",
+  "size_bytes": 11817,
+  "stored_as": "raw.html",
+  "text_sha256": "928afbf4a8f1b647eebb6ea56e5bfaac7f1b4bec58500d260a1af51e5db9d724",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/north-mini-code/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/north-mini-code/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw949\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:12:10Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:12:15Z"
+  }
+}

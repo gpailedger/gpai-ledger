@@ -1,0 +1,34 @@
+{
+  "source_id": "google/gemma-4",
+  "provider": "Google",
+  "model": "Gemma 4",
+  "target_kind": "aial-eval-page",
+  "sha256": "90ca1fac1e6e4966f9a7e4596444dc13e7540c8045bce730df233d5c6d8d81e3",
+  "size_bytes": 20877,
+  "stored_as": "raw.html",
+  "text_sha256": "f332f3120e4ffc9b7b80bca648c5af382953924966d245e0ce04ea0c34122a02",
+  "doc_links_sha256": "4d7b3092eec77e3cfb572a4b34647f6751b12831f9448ecb077ced0290a85e3a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gemma-4/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gemma-4/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwg3x\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:04:38Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:04:42Z"
+  }
+}

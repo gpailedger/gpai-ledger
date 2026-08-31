@@ -1,0 +1,45 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "watch-page",
+  "sha256": "1a3580bd75f599b1b512a1035020c9c2adc78d64cb35d49b2abec24aafb9a6c1",
+  "size_bytes": 44403,
+  "stored_as": "raw.html",
+  "text_sha256": "b293a7a2522fd347e0229a747d6b16eabd0d340cda5d4997fa49463708bdd7c7",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tkmslgy9f\"",
+    "last_modified": "Mon, 31 Aug 2026 11:15:16 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:14:58Z"
+  },
+  "prior_sha256": "a59e465945c3176962ac6294090478eeca400fe54388d4f8e02c0bc73fe91c08",
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:no-captures",
+    "answered": true,
+    "job_id": "spn2-23c613e64aeb6ea8dce89ea5c31869de9a61ee1f",
+    "via": "spn2",
+    "requested_at": "2026-08-31T12:14:58Z",
+    "at": "2026-08-31T12:15:11Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:15:18Z"
+  }
+}

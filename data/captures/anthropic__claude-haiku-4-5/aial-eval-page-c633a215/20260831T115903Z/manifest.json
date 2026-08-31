@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-haiku-4-5",
+  "provider": "Anthropic",
+  "model": "Claude Haiku 4.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "501c45489e33fc2e1f37c934e7c20ee468a82a5b2a4da741988e3be8e6d16589",
+  "size_bytes": 11791,
+  "stored_as": "raw.html",
+  "text_sha256": "82980cc48f2b7e2f5d279c45159148ba8b3f1b11d75160d709c7f9a0bcb5d977",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-haiku-4-5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/claude-haiku-4-5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw93j\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:59:03Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:59:07Z"
+  }
+}

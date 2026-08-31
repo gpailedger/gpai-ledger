@@ -1,0 +1,34 @@
+{
+  "source_id": "thinking-machines/inkling",
+  "provider": "Thinking Machines",
+  "model": "Inkling",
+  "target_kind": "aial-eval-page",
+  "sha256": "918f9c1e30773e69f249675c7bb6e5b6a0dd6a86b03fec4f582f1724399496fe",
+  "size_bytes": 19348,
+  "stored_as": "raw.html",
+  "text_sha256": "76008c38f42b8bca56afc8c4ff00a979e1f435e6056f37bc207fe2ea966f0006",
+  "doc_links_sha256": "6423610e2a187a9abe9d77642cab3a6657a7258c8bffce2316e4472385def8e2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/inkling/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/inkling/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwexg\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:07:36Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:07:41Z"
+  }
+}

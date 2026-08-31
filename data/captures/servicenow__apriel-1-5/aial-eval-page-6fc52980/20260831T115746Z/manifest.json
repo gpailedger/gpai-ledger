@@ -1,0 +1,34 @@
+{
+  "source_id": "servicenow/apriel-1-5",
+  "provider": "ServiceNow",
+  "model": "Apriel 1.5 15B Thinker",
+  "target_kind": "aial-eval-page",
+  "sha256": "e80a4c6eea404271e288fdafadecb8296dfe7cb7d18907d926d97613be06759b",
+  "size_bytes": 11847,
+  "stored_as": "raw.html",
+  "text_sha256": "d59ac1f2b14420cb325e58d906538d26bf786f0b91a804e528df92352958c049",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/apriel-1-5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/apriel-1-5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw953\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:57:46Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:57:49Z"
+  }
+}

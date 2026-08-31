@@ -1,0 +1,34 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "aial-eval-page",
+  "sha256": "8650661563a685eaded0edbaa115587f9c5b7101f542bb73008b8799eb002899",
+  "size_bytes": 20745,
+  "stored_as": "raw.html",
+  "text_sha256": "de3e421c2d2afc5a0834e111a36ca8f4705d1d7a584d2be43ce11e3448bb35ea",
+  "doc_links_sha256": "f1424ddb54d308163d2a0bd3a3850b5ac45ec004c1b71db54b90c5bed97883b0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/muse-image/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/muse-image/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwg09\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:11:46Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:11:51Z"
+  }
+}

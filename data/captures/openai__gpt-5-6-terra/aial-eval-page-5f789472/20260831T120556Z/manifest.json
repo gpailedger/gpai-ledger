@@ -1,0 +1,34 @@
+{
+  "source_id": "openai/gpt-5-6-terra",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Terra",
+  "target_kind": "aial-eval-page",
+  "sha256": "5ac90b02cc56d2018d80de2e8d35b2eedfac3725cc1dae1fcb32e7e35fb456dd",
+  "size_bytes": 11739,
+  "stored_as": "raw.html",
+  "text_sha256": "79d428ef582880136891c6a94a08bcbbcece40feba94bdf5cc4f12b29d9d7743",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-terra/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-6-terra/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw923\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:05:56Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:06:00Z"
+  }
+}

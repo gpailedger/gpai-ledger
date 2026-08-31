@@ -1,0 +1,34 @@
+{
+  "source_id": "adobe/adobe-firefly",
+  "provider": "Adobe",
+  "model": "Adobe Firefly",
+  "target_kind": "aial-eval-page",
+  "sha256": "03b08967e911b252db0dcc9f5456a41e2bd42a83e84df3f7d883a9ebc5a39216",
+  "size_bytes": 18459,
+  "stored_as": "raw.html",
+  "text_sha256": "fcb48c772bee5c40eebf04c6d3d5b24cf0a4eb0e78874722b127cf379bdc5e27",
+  "doc_links_sha256": "f26c8bb67b3aeeb278c4f0847ed274abd80c9516822d6ba45323c6fc2f395f8b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/adobe-firefly/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/adobe-firefly/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwe8r\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:56:59Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:57:03Z"
+  }
+}

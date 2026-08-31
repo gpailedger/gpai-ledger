@@ -1,0 +1,34 @@
+{
+  "source_id": "black-forest-labs/flux-2-klein",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2 Klein",
+  "target_kind": "aial-eval-page",
+  "sha256": "1322faa34f9bf512bf97f5813804262ae1c06e93d5f9a0b12964b9790c033f2f",
+  "size_bytes": 11772,
+  "stored_as": "raw.html",
+  "text_sha256": "b5576ba0d778486b0383b0311223832c0a330c6aad059b8dd4b2e7c58657af7b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-klein/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-klein/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw930\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:03:10Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:03:12Z"
+  }
+}

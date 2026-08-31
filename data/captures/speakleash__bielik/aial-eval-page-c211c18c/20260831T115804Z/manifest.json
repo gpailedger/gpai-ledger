@@ -1,0 +1,34 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "SpeakLeash",
+  "model": "Bielik v3 11B Instruct",
+  "target_kind": "aial-eval-page",
+  "sha256": "711cd4d0b3558c97ae97951847cc757019fca511502422691c71d1e063debe98",
+  "size_bytes": 21567,
+  "stored_as": "raw.html",
+  "text_sha256": "073a5f7aa305a387413bc9a309b724b3ffa7cd717209787c98ba5c43606f53e9",
+  "doc_links_sha256": "195377b6a7ec57522e187c18b2577be116e9c5ea8ddc5b7b8fd15a44e571052f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bielik/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bielik/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwgn3\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:58:04Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:58:08Z"
+  }
+}

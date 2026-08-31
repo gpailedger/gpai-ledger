@@ -1,0 +1,34 @@
+{
+  "source_id": "ibm/granite-4-0-h",
+  "provider": "IBM",
+  "model": "Granite 4.0 H",
+  "target_kind": "aial-eval-page",
+  "sha256": "f18ddabd46749be405bf6e0d0ab3fbfad405f6f6dc0804fa53e3adf87db9661c",
+  "size_bytes": 11820,
+  "stored_as": "raw.html",
+  "text_sha256": "1f11232e07dcd7b84b3b81b4bea504a16e5a17870543ce75e19fe3aef8eb5139",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-0-h/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-0-h/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcx0i94c\"",
+    "last_modified": "Thu, 06 Aug 2026 16:41:06 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T12:06:26Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T12:06:30Z"
+  }
+}

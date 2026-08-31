@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-opus-4-1",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.1",
+  "target_kind": "aial-eval-page",
+  "sha256": "879071227e202f2f96e407d1739f6697daf05a8d1e37f644e706af73ba1681c6",
+  "size_bytes": 11787,
+  "stored_as": "raw.html",
+  "text_sha256": "1daf3df3c6498dcf5401f1836693fdeacda8f0a9f665e7950097e67ae035f235",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-1/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/claude-opus-4-1/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbw93f\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-08-31T11:59:44Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-08-31T11:59:49Z"
+  }
+}
