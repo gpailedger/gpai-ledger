@@ -539,6 +539,41 @@ def normalize(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text).strip() + "\n"
 
 
+def extract_docx_text(data: bytes) -> str:
+    """Text of an OOXML .docx, using the standard library only.
+
+    The Commission's Article 53(1)(d) template is published as a .docx, and it is
+    the form providers actually fill in: its headings and field labels are the
+    structure every summary is measured against. The ledger held those bytes for
+    weeks with "no extractor for .docx" and so could not read the one document
+    every other document in the corpus is written against.
+
+    Paragraphs inside table cells are ordinary <w:p> elements, so iterating
+    paragraphs picks up the template's tables as well as its prose. Text runs are
+    joined without a separator because Word splits a single word across runs
+    wherever formatting changes mid-word."""
+    import xml.etree.ElementTree as ET
+    W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    with zipfile.ZipFile(io.BytesIO(data)) as zf:
+        if "word/document.xml" not in zf.namelist():
+            raise RuntimeError("docx has no word/document.xml")
+        info = zf.getinfo("word/document.xml")
+        # the same class of guard the zip path applies: an archive can advertise
+        # any size it likes, so cap before reading
+        if info.file_size > MAX_ZIP_MEMBER_BYTES:
+            raise RuntimeError("docx document.xml exceeds the member cap")
+        xml = zf.read("word/document.xml")
+    # ElementTree does not resolve external entities, so a hostile document
+    # cannot reach the filesystem or the network through this parse.
+    root = ET.fromstring(xml)
+    out = []
+    for para in root.iter(W + "p"):
+        line = "".join(t.text or "" for t in para.iter(W + "t"))
+        if line.strip():
+            out.append(line)
+    return "\n".join(out)
+
+
 def extract_text(data: bytes, ext: str):
     """Returns (text or None, notes list). ZIPs: concatenates text of inner PDFs."""
     notes = []
@@ -557,6 +592,8 @@ def extract_text(data: bytes, ext: str):
             return _finish(normalize(_pdf_text_bounded(data)))
         if ext == ".html":
             return normalize(extract_html_text(data)), notes
+        if ext == ".docx":
+            return _finish(normalize(extract_docx_text(data)))
         # .yaml/.yml are read as text but are deliberately NOT in the site's
         # DOC_SUFFIXES: an AIAL evaluation is evidence about a summary, never the
         # summary itself, and must never be counted as a document version

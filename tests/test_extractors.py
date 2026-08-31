@@ -398,3 +398,70 @@ def test_yaml_is_read_as_text_but_is_not_a_document_format():
                         "build_for_yaml_check")
     assert ".yaml" not in build.DOC_SUFFIXES
 
+
+# --- the Commission's template is a .docx, and it is the form providers fill in -
+
+def _docx(paragraphs, extra_names=()):
+    """A minimal but real OOXML .docx carrying the given paragraphs."""
+    import io
+    import zipfile
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    ps = "".join(
+        "<w:p>" + "".join(f"<w:r><w:t>{run}</w:t></w:r>" for run in runs) + "</w:p>"
+        for runs in paragraphs)
+    doc = (f'<?xml version="1.0"?><w:document xmlns:w="{W}"><w:body>'
+           f"{ps}</w:body></w:document>")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/document.xml", doc)
+        for n in extra_names:
+            zf.writestr(n, "x")
+    return buf.getvalue()
+
+
+def test_a_docx_is_read_paragraph_by_paragraph():
+    raw = _docx([["Template for the Public Summary"],
+                 ["1.1. Provider identification"],
+                 ["Replace this with your response"]])
+    text, notes = cap.extract_text(raw, ".docx")
+    assert "Template for the Public Summary" in text
+    assert "1.1. Provider identification" in text
+    assert text.splitlines()[0] == "Template for the Public Summary"
+    assert not [n for n in notes if isinstance(n, str) and "no extractor" in n]
+
+
+def test_a_word_split_across_runs_is_not_split_in_the_text():
+    # Word breaks a run wherever formatting changes, often mid-word; joining runs
+    # with a separator would invent spaces that are not in the document
+    raw = _docx([["Provi", "der", " identification"]])
+    text, _ = cap.extract_text(raw, ".docx")
+    assert "Provider identification" in text
+
+
+def test_an_empty_paragraph_does_not_become_a_blank_line():
+    raw = _docx([["real text"], [], ["  "]])
+    text, _ = cap.extract_text(raw, ".docx")
+    assert text.splitlines() == ["real text"]
+
+
+def test_a_docx_without_a_document_part_fails_loudly_not_silently():
+    import io
+    import zipfile
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/other.xml", "<a/>")
+    text, notes = cap.extract_text(buf.getvalue(), ".docx")
+    assert text is None
+    assert any("extraction failed" in str(n) for n in notes)
+
+
+def test_docx_is_a_document_format_on_the_site():
+    # unlike an evaluation, the template IS a document the ledger holds
+    import sys
+    from pathlib import Path as _P
+    sys.path.insert(0, str(_P(__file__).resolve().parent.parent / "site"))
+    from conftest import load_module
+    build = load_module(str(_P(__file__).resolve().parent.parent / "site" / "build.py"),
+                        "build_for_docx_check")
+    assert ".docx" in build.DOC_SUFFIXES
+
