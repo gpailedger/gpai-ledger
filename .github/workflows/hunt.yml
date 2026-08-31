@@ -63,7 +63,7 @@ jobs:
           # discovered.json exists only once the probe has promoted something,
           # and `git add` is fatal on a missing pathspec
           for f in crawler/relocations.json crawler/discovered.json \
-                   crawler/pending.json crawler/decisions.json \
+                   reports/unattributed-leads.json crawler/decisions.json \
                    reports/hunt-latest.md reports/org-watch-latest.md \
                    reports/probe-missing-latest.md; do
             if [ -f "$f" ]; then git add "$f"; fi

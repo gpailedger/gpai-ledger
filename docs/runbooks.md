@@ -321,7 +321,15 @@ Both run inside the daily sweep and need no operator action:
 Some candidates cannot be judged by a machine: a document that may or may not be
 an Article 53(1)(d) summary, or a company nobody has assessed, whose source id
 would become a permanent public URL this project promises never to rename. Those
-go to `crawler/pending.json` instead of into the ledger.
+go to `reports/unattributed-leads.json` instead of into the ledger.
+
+Since 31 Aug 2026 nothing consumes that file. The approval queue is retired: AIAL's
+evaluation metadata names the document URL for every model they list, so the
+judgement it collected is answered upstream, and a model they do not list carries
+no grade for FilingBench to reason from. The leads are still written, because AIAL
+is one small academic project with one repository — if it stopped, that file is
+where an independent list would start. **It is a record, not a queue: nothing in it
+is waiting for anyone.**
 
 The loop needs no new credentials and nothing new to remember:
 

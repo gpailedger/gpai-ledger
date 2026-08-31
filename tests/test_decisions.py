@@ -278,3 +278,13 @@ def test_report_fields_are_bounded_so_a_report_cannot_bloat_the_queue(tmp_path):
     v = next(iter(json.loads(DEC.PENDING.read_text(encoding="utf-8")).values()))
     assert len(v["provider"]) <= 120 and len(v["url"]) <= 500
 
+
+def test_the_leads_file_is_named_for_what_it_is():
+    # The approval queue is retired: nothing consumes this file, so its name must
+    # not imply that something is waiting for someone. Read from the source,
+    # because the autouse fixture points PENDING at a tmp path for every test.
+    root = Path(__file__).resolve().parent.parent
+    src = (root / "crawler" / "decisions.py").read_text(encoding="utf-8")
+    assert 'PENDING = HERE.parent / "reports" / "unattributed-leads.json"' in src
+    assert not (root / "crawler" / "pending.json").exists(),         "the retired queue file is back under crawler/"
+

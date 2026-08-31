@@ -61,7 +61,7 @@ jobs:
           git config user.name "GPAI Ledger"
           git config user.email "contact@gpailedger.com"
           git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${{ github.repository }}.git"
-          for f in crawler/pending.json crawler/decisions.json; do
+          for f in reports/unattributed-leads.json crawler/decisions.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then

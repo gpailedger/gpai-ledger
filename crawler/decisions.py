@@ -9,7 +9,8 @@ rename. Those land here.
 
 The loop, with no new credentials and nothing new to remember:
 
-  propose   reads crawler/pending.json and opens ONE GitHub issue per candidate,
+  propose   RETIRED: read reports/unattributed-leads.json and open ONE GitHub
+            issue per candidate,
             labelled "decision". GitHub e-mails the repository owner.
   (reply)   the owner answers that e-mail. GitHub turns the reply into an issue
             comment. The words that count:
@@ -45,7 +46,12 @@ import requests
 import capture as cap
 
 HERE = Path(__file__).resolve().parent
-PENDING = HERE / "pending.json"
+# Named for what it is since the approval queue was retired (31 Aug 2026):
+# documents the hunt fetched but would not attribute on its own. Nothing consumes
+# it — it is a record of what was found and declined, kept because AIAL is one
+# small project and a ledger that only mirrors them would have nowhere to start
+# if they stopped. It lives under reports/ because it is output, not configuration.
+PENDING = HERE.parent / "reports" / "unattributed-leads.json"
 DECISIONS = HERE / "decisions.json"
 API = "https://api.github.com"
 LABEL = "decision"

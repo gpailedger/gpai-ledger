@@ -322,8 +322,10 @@ def main(argv=None) -> int:
                                                      ensure_ascii=False))
 
     if candidates:
-        # a document we fetched but would not attribute on our own goes to the
-        # operator's decision queue rather than dying in a report nobody opens
+        # A document we fetched but would not attribute on our own. It is
+        # recorded rather than acted on: since the approval queue was retired the
+        # ledger follows AIAL's list, and an attribution this project would not
+        # make by machine is not one it should make by guessing.
         import decisions as dec
         queued = dec.add_candidates([{
             "source_id": c["id"], "model": c["model"], "url": c["url"],
