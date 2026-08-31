@@ -1155,3 +1155,56 @@ def test_a_capture_records_which_documents_it_linked(tmp_path, monkeypatch):
     m = json.loads((data_root / d / "manifest.json").read_text(encoding="utf-8"))
     assert m["doc_links_sha256"] == cap.doc_links_sha(LINKS_A)
 
+
+# --- a host being down is not a finding about a document ---------------------
+
+def test_a_host_outage_alone_does_not_redden_the_run(tmp_path, monkeypatch):
+    # aial.ie was unreachable for two days: three connection failures reddened the
+    # run before the breaker skipped the rest, and a red run that means "someone
+    # else's server is down" masks one that means a document needs attention
+    reg = _write_registry(tmp_path, _many_sources("dead.example", 8))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    monkeypatch.setattr(cap, "fetch",
+                        lambda url, **kw: (_ for _ in ()).throw(
+                            ConnectionError("connection timed out")))
+    assert _run_wb(monkeypatch, reg, data_root) == 0
+    events = _events(data_root)
+    # the failures are still on the record exactly as they happened
+    assert len([e for e in events if e.get("outcome") == "error"]) == \
+        rc_mod.HOST_FAILURES_BEFORE_SKIP
+    summary = [e for e in events if e.get("outcome") == "host-unreachable-summary"]
+    assert summary and summary[0]["outage_errors"] == rc_mod.HOST_FAILURES_BEFORE_SKIP
+
+
+def test_a_document_the_host_answered_about_still_reddens(tmp_path, monkeypatch):
+    # the exemption is for "the origin never answered", never for what it said
+    reg = _write_registry(tmp_path,
+                          _many_sources("dead.example", 6, "live.example"))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+
+    def answer(url, **kw):
+        if "live.example" in url:
+            raise _err(404)
+        raise ConnectionError("connection timed out")
+    monkeypatch.setattr(cap, "fetch", answer)
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+
+
+def test_a_connection_failure_short_of_an_outage_still_reddens(tmp_path, monkeypatch):
+    # two failures on a host that then answers is not an outage: nothing proved
+    # the host unreachable, so those failures are still this project's problem
+    reg = _write_registry(tmp_path, _many_sources("flaky.example", 3))
+    data_root = tmp_path / "data"
+    monkeypatch.setattr(rc_mod, "RECHECK_DELAY", 0)
+    seen = []
+
+    def flaky(url, **kw):
+        seen.append(url)
+        if len(seen) <= 2:
+            raise ConnectionError("connection timed out")
+        return b"body", _meta(url)
+    monkeypatch.setattr(cap, "fetch", flaky)
+    assert _run_wb(monkeypatch, reg, data_root) == 1
+

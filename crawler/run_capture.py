@@ -289,6 +289,10 @@ def main() -> int:
     budget_skipped = []  # "source::target" keys not checked: the time budget ran out
     host_failures = {}   # host -> consecutive failures where the origin never answered
     host_skipped = {}    # host -> keys skipped because the host is down
+    # host -> failures counted as errors where the origin never answered. If the
+    # host goes on to trip the breaker, these were the same outage as the skips
+    # that follow, and the split at HOST_FAILURES_BEFORE_SKIP is arbitrary.
+    host_outage_errors = {}
 
     for source in registry["sources"]:
         if args.only:
@@ -342,7 +346,8 @@ def main() -> int:
                 host_failures.pop(host, None)      # the host answered
             except Exception as exc:  # noqa: BLE001
                 status = getattr(exc, "status_code", None)
-                if is_transport_failure(exc):
+                transport = is_transport_failure(exc)
+                if transport:
                     # the origin never answered: the host, not the document
                     host_failures[host] = host_failures.get(host, 0) + 1
                 else:
@@ -352,6 +357,8 @@ def main() -> int:
                 if not (status in ABSENCE_STATUSES and had_capture):
                     # not an absence claim: a plain error, red like any failure
                     stats["errors"] += 1
+                    if transport:
+                        host_outage_errors[host] = host_outage_errors.get(host, 0) + 1
                     failures.append((source["id"], url, repr(exc)))
                     store.event(source=source["id"], target=tslug, url=url,
                                 kind=kind, outcome="error", error=repr(exc),
@@ -620,10 +627,11 @@ def main() -> int:
         stats["host_skipped"] = sum(len(v) for v in host_skipped.values())
         for h, keys in sorted(host_skipped.items()):
             store.event(outcome="host-unreachable-summary", host=h,
-                        skipped=keys, after_failures=host_failures.get(h))
-            print(f"  HOST    {h} unreachable — {len(keys)} target(s) skipped "
-                  f"(its first {HOST_FAILURES_BEFORE_SKIP} failures are logged "
-                  f"above and redden this run)", flush=True)
+                        skipped=keys, after_failures=host_failures.get(h),
+                        outage_errors=host_outage_errors.get(h, 0))
+            print(f"  HOST    {h} unreachable — {len(keys)} target(s) skipped, "
+                  f"and the {host_outage_errors.get(h, 0)} failure(s) that "
+                  f"proved it unreachable do not redden this run", flush=True)
 
     if budget_skipped:
         stats["skipped"] = len(budget_skipped)
@@ -634,6 +642,15 @@ def main() -> int:
                     checked=stats["checked"], skipped=budget_skipped)
         print(f"  BUDGET  {len(budget_skipped)} target(s) skipped after "
               f"{SWEEP_BUDGET_S:.0f}s", flush=True)
+    # Failures where the origin never answered, on a host that then proved
+    # unreachable, are one outage rather than that many findings. They stay in the
+    # event log exactly as they happened; they simply stop deciding the exit code,
+    # so a red run keeps meaning "a document this project tracks needs attention"
+    # rather than "someone else's server was down". Anything the host DID answer
+    # still counts, on that host as on any other.
+    outage_errors = sum(host_outage_errors.get(h, 0) for h in host_skipped)
+    if outage_errors:
+        stats["errors_from_host_outage"] = outage_errors
     store.save_state()
     print("\n=== sweep summary ===")
     for k, v in stats.items():
@@ -644,13 +661,14 @@ def main() -> int:
             print(f"  {sid}: {url}\n    {err}")
     # non-zero on the FIRST confirmation of an absence, on every PERSISTENT one
     # (single vantage, still unresolved) and on plain errors, so CI shows red —
+    # except failures that were a whole host being unreachable (see above) —
     # the workflow runs this step with continue-on-error, so captured data is
     # still committed, but a partial sweep is never silently reported as a
     # success. A confirmed absence the site already publishes (known_absence),
     # an unconfirmed one, and a contradicted one are fully logged but do not
     # redden the run, except a repeated contradiction, which reddens as a vantage
     # problem.
-    return 1 if stats.get("errors") else 0
+    return 1 if (stats.get("errors", 0) - outage_errors) > 0 else 0
 
 
 if __name__ == "__main__":

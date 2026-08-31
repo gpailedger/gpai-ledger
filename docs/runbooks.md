@@ -119,9 +119,18 @@ the origin never answered at all** — connection refused, timed out; a 404 is a
 answer and never counts — the remaining targets on that host are recorded as
 `host-unreachable` events without a network attempt, a `host-unreachable-summary`
 event names the host and lists them, and the time goes to hosts that are up. Any
-answer from the host clears the count, and the next sweep starts fresh. The
-first failures are logged as ordinary errors and still redden the run, so a
-host being down is never silent.
+answer from the host clears the count, and the next sweep starts fresh.
+
+Those first failures are logged exactly as they happened, but they **do not
+redden the run**: they and the skips that follow are one outage, and the split at
+three is arbitrary. A red run keeps meaning "a document this project tracks needs
+attention" rather than "someone else's server was down" — which for two days in
+August was noise that could have masked something real. The outage is still
+plainly visible: the `host-unreachable-summary` event carries `outage_errors`,
+and the sweep prints the host and the count. Anything the host *did* answer —
+a 404, a 500, a changed document — counts as it always has. If a host you depend
+on is down for days, the signal to watch is that summary event, not the exit
+code.
 
 ## Absence claims (404/410 on a previously captured target)
 
