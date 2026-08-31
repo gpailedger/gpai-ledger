@@ -43,6 +43,59 @@ API = "https://api.github.com"
 RAW = "https://raw.githubusercontent.com"
 EVAL_DIR = "evals"
 KIND = "aial-eval-history"
+
+# AIAL's website is SERVED from public/ in this repository, so the repository is
+# the whole data surface and then some: it carries the rendered pages (including
+# models and grade rounds no longer on the live site), the archived provider
+# documents (including ones since deleted), and conf/config.json - the scoring
+# model itself, as data rather than as prose on a methodology page.
+#
+# Order matters: the first group whose prefix matches owns the path, so the two
+# public/ subtrees must be listed before public/ itself.
+GROUPS = (
+    {"prefix": "evals/", "deep": False, "exts": (".yaml", ".yml"),
+     "kind": KIND, "place": "evaluation"},
+    {"prefix": "public/evals/", "deep": True, "exts": (".html",),
+     "kind": "aial-eval-page", "place": "slug"},
+    {"prefix": "public/archive/", "deep": True,
+     "exts": (".pdf", ".zip", ".docx", ".doc"),
+     "kind": "aial-archive", "place": "archive", "only_new_names": True},
+    # AIAL's own framework pages. Named explicitly, because until May 2026 the
+    # per-model evaluations ALSO lived at public/<model>.html, and a rule that
+    # took every top-level page for the framework filed an evaluation of GPT-5
+    # under "AIAL scoring framework".
+    {"prefix": "public/", "deep": False, "exts": (".html",),
+     "names": ("about.html", "detailed-overview.html", "index.html",
+               "list_summaries.html", "methodology.html", "recommendations.html"),
+     "kind": "aial-method", "place": "aial"},
+    # anything else at the top level is a per-model page from that earlier layout
+    {"prefix": "public/", "deep": False, "exts": (".html",),
+     "kind": "aial-eval-page", "place": "flat"},
+    {"prefix": "conf/", "deep": False, "exts": (".json",),
+     "kind": "aial-method", "place": "aial"},
+)
+HARVEST_KINDS = {g["kind"] for g in GROUPS}
+# the top-level paths whose commits are worth walking; everything else in the
+# repository is application code and presentation, not the record
+WATCH_PATHS = ("evals", "public", "conf")
+
+
+def group_for(path: str):
+    """Which group harvests this repository path, or None to ignore it.
+
+    Static assets - 248 files of CSS, JavaScript and logos - are deliberately not
+    a group: they are how the site looks, not what it says."""
+    for g in GROUPS:
+        if not path.startswith(g["prefix"]):
+            continue
+        if not path.lower().endswith(g["exts"]):
+            continue
+        if not g["deep"] and "/" in path[len(g["prefix"]):]:
+            continue
+        if g.get("names") and path.rsplit("/", 1)[-1] not in g["names"]:
+            continue
+        return g
+    return None
 # where a history state lands when its model cannot be resolved — AIAL's own
 # source, which is where an artifact of theirs belongs when it names no model we
 # track (a deleted eval for a model the ledger never had)
@@ -88,21 +141,31 @@ def api(path: str, tok: str):
 
 
 def commits(tok: str) -> list:
-    """Every commit touching evals/, oldest first."""
-    out, page = [], 1
-    while True:
-        batch = api(f"repos/{REPO}/commits?path={EVAL_DIR}&per_page=100&page={page}", tok)
-        out += batch
-        if len(batch) < 100:
-            break
-        page += 1
-        if page > 50:            # a runaway guard, not a real bound
-            break
+    """Every commit touching anything the harvest tracks, oldest first.
+
+    Asked per tracked top-level path and unioned, rather than listing every
+    commit in the repository: the application code changes far more often than
+    the record does, and each extra commit costs a tree walk."""
+    seen, out = set(), []
+    for tracked in WATCH_PATHS:
+        page = 1
+        while True:
+            batch = api(f"repos/{REPO}/commits?path={tracked}&per_page=100"
+                        f"&page={page}", tok)
+            for c in batch:
+                if c["sha"] not in seen:
+                    seen.add(c["sha"])
+                    out.append(c)
+            if len(batch) < 100:
+                break
+            page += 1
+            if page > 50:        # a runaway guard, not a real bound
+                break
     return sorted(out, key=lambda c: c["commit"]["author"]["date"])
 
 
 def tree_at(sha: str, tok: str) -> dict:
-    """filename -> blob sha for evals/ at one commit.
+    """path -> blob sha for everything the harvest tracks at one commit.
 
     A commit that predates the directory genuinely has no tree there (404) and
     that is normal. ANY other failure — a rate limit, a 5xx, a dropped
@@ -111,15 +174,20 @@ def tree_at(sha: str, tok: str) -> dict:
     plan() records the first commit at which it SEES a state. A grade would be
     published as having stood from a date months after it really did."""
     try:
-        t = api(f"repos/{REPO}/git/trees/{sha}:{EVAL_DIR}", tok)
+        t = api(f"repos/{REPO}/git/trees/{sha}?recursive=1", tok)
     except urllib.error.HTTPError as exc:
         if exc.code == 404:
             return {}
         raise
     except (urllib.error.URLError, ValueError) as exc:
         raise RuntimeError(f"tree lookup failed for {sha[:8]}: {exc!r}") from exc
+    if t.get("truncated"):
+        # a partial tree is indistinguishable from "these files did not exist
+        # yet", which is the same silent mis-dating the note above describes
+        raise RuntimeError(f"tree for {sha[:8]} came back truncated - refusing to "
+                           f"read a partial tree as the state of the repository")
     return {e["path"]: e["sha"] for e in t.get("tree", [])
-            if e.get("type") == "blob" and e["path"].lower().endswith((".yaml", ".yml"))}
+            if e.get("type") == "blob" and group_for(e["path"])}
 
 
 def plan(tok: str) -> list:
@@ -131,11 +199,12 @@ def plan(tok: str) -> list:
     seen, out = set(), []
     for c in commits(tok):
         sha, when = c["sha"], c["commit"]["author"]["date"]
-        for name, blob in sorted(tree_at(sha, tok).items()):
-            if (name, blob) in seen:
+        for path, blob in sorted(tree_at(sha, tok).items()):
+            if (path, blob) in seen:
                 continue
-            seen.add((name, blob))
-            out.append({"file": name, "blob": blob, "commit": sha, "date": when})
+            seen.add((path, blob))
+            out.append({"path": path, "blob": blob, "commit": sha, "date": when,
+                        "group": group_for(path)})
     return out
 
 
@@ -149,7 +218,7 @@ def held(store: cap.Store) -> set:
             j = json.loads(m.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             continue
-        if j.get("target_kind") == KIND and j.get("git_blob_sha"):
+        if j.get("target_kind") in HARVEST_KINDS and j.get("git_blob_sha"):
             # keyed with the path: two evaluations can hold identical bytes (a
             # freshly added file is often a copy of the template, and a rename
             # lands the same blob under a new name). Keying on the blob alone
@@ -228,6 +297,48 @@ def _identity(text: str, filename: str) -> tuple:
             _field(text, "model_name") or filename.rsplit(".", 1)[0])
 
 
+def place(state, text, idx, by_id, archive_owners) -> tuple:
+    """(source_id, provider, model) for one harvested state.
+
+    Filing and description are separate decisions. A state the ledger cannot
+    place is filed under AIAL's own source, but it must still describe what it
+    IS - an evaluation of Claude Fable 5 filed there is not a capture of AIAL's
+    tracker - so the provider and model never come from the filing cabinet.
+    AIAL's own framework pages are the exception: those really are theirs."""
+    g = state["group"]
+    name = state["path"].rsplit("/", 1)[-1]
+    tracker = by_id.get(FALLBACK_SOURCE) or {}
+    if g["place"] == "evaluation":
+        sid = resolve(text or "", name, idx)
+        own = _identity(text or "", name)
+    elif g["place"] == "flat":
+        # public/<model>.html, AIAL's layout before evaluations moved into
+        # public/evals/<model>/ — the stem is the same slug
+        slug = name.rsplit(".", 1)[0]
+        sid = idx.get(("file", slug.lower() + ".yaml")) or FALLBACK_SOURCE
+        own = (tracker.get("provider") or "AI Accountability Lab (AIAL)", slug)
+    elif g["place"] == "slug":
+        # public/evals/<slug>/... - the slug is the evaluation file's stem, which
+        # the registry already keys every AIAL evaluation target by
+        slug = state["path"][len(g["prefix"]):].split("/")[0]
+        sid = idx.get(("file", slug.lower() + ".yaml")) or FALLBACK_SOURCE
+        own = (tracker.get("provider") or "AI Accountability Lab (AIAL)", slug)
+    elif g["place"] == "archive":
+        owner = archive_owners.get(name)
+        sid = owner[0] if owner else FALLBACK_SOURCE
+        own = ((owner[1], owner[2]) if owner
+               else (tracker.get("provider") or "AI Accountability Lab (AIAL)",
+                     name.rsplit(".", 1)[0]))
+    else:                       # AIAL's own framework pages and scoring config
+        return (FALLBACK_SOURCE,
+                tracker.get("provider") or "AI Accountability Lab (AIAL)",
+                tracker.get("model") or "GPAI Training Transparency tracker")
+    src = by_id.get(sid) if sid != FALLBACK_SOURCE else None
+    if src:
+        return sid, src.get("provider") or own[0], src.get("model") or own[1]
+    return sid, own[0], own[1]
+
+
 def newest_upstream_date(store, sid: str, tslug: str) -> str:
     """The upstream date of the newest state already stored for this target."""
     entry = store.state.get(store.key(sid, tslug)) or {}
@@ -241,15 +352,16 @@ def newest_upstream_date(store, sid: str, tslug: str) -> str:
     return str(m.get("git_commit_date") or "")
 
 
-def pinned_url(commit: str, filename: str) -> str:
-    # a filename can contain a space ("inkling small.yaml"); quote the path only
-    return f"{RAW}/{REPO}/{commit}/{EVAL_DIR}/{urllib.parse.quote(filename)}"
+def pinned_url(commit: str, path: str) -> str:
+    # a path can contain a space ("evals/inkling small.yaml"); the separators are
+    # structure, so they must survive quoting
+    return f"{RAW}/{REPO}/{commit}/{urllib.parse.quote(path, safe='/')}"
 
 
-def identity_url(filename: str) -> str:
+def identity_url(path: str) -> str:
     """The stable identity a file's history is keyed on: its main-branch URL. Every
-    state of one evaluation is a version of ONE target, not a target of its own."""
-    return f"{RAW}/{REPO}/main/{EVAL_DIR}/{urllib.parse.quote(filename)}"
+    state of one file is a version of ONE target, not a target of its own."""
+    return f"{RAW}/{REPO}/main/{urllib.parse.quote(path, safe='/')}"
 
 
 VERSION_KIND = "aial-eval-page"
@@ -483,8 +595,19 @@ def main() -> int:
              (json.loads(REGISTRY.read_text(encoding="utf-8"))["sources"]
               if REGISTRY.exists() else [])}
     done = held(store)
-    todo = [s for s in plan(tok)
-            if (f"{EVAL_DIR}/{s['file']}", s["blob"]) not in done]
+    archive_owners = named_archives()
+    have_names = held_archive_names()
+    todo = []
+    for s in plan(tok):
+        if (s["path"], s["blob"]) not in done:
+            # A provider document the ledger already holds under its own address
+            # does not need a second copy from the repository: the bytes are the
+            # same and the archive is large. Only a document we hold NOWHERE -
+            # the ones AIAL has since deleted - is worth the fetch.
+            if s["group"].get("only_new_names") and \
+                    s["path"].rsplit("/", 1)[-1] in have_names:
+                continue
+            todo.append(s)
     print(f"harvest_eval_history: {len(done)} state(s) already held, "
           f"{len(todo)} to fetch", flush=True)
     stored = errors = 0
@@ -498,23 +621,19 @@ def main() -> int:
         attempted += 1
         if attempted > 1:
             time.sleep(PAUSE_S)
-        url = pinned_url(state["commit"], state["file"])
+        url = pinned_url(state["commit"], state["path"])
         try:
             raw, meta = cap.fetch(url)
         except Exception as exc:                                  # noqa: BLE001
-            print(f"  ERROR {state['file']}@{state['commit'][:8]}: {exc!r}", flush=True)
+            print(f"  ERROR {state['path']}@{state['commit'][:8]}: {exc!r}",
+                  flush=True)
             errors += 1
             continue
         ext = cap.guess_ext(meta.get("content_type", ""), url, raw)
         text, notes = cap.extract_text(raw, ext)
-        sid = resolve(text or "", state["file"], idx)
-        # An evaluation the ledger cannot place is FILED under AIAL's source, but
-        # it is not a capture OF that source: inheriting its provider and model
-        # would publish "GPAI Training Transparency tracker" as the model of an
-        # evaluation of Claude Fable 5. Placement is a filing decision; the
-        # provider and model are a claim, and must come from the file.
-        own_provider, own_model = _identity(text or "", state["file"])
-        tslug = cap.target_slug(KIND, identity_url(state["file"]))
+        kind = state["group"]["kind"]
+        sid, provider, model = place(state, text, idx, by_id, archive_owners)
+        tslug = cap.target_slug(kind, identity_url(state["path"]))
         if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
             continue          # unchanged from the state already stored for it
         # States are harvested oldest-first, so a state OLDER than the newest one
@@ -524,21 +643,16 @@ def main() -> int:
         # say so: a gap that is reported can be repaired, a false chain cannot.
         newest = newest_upstream_date(store, sid, tslug)
         if newest and state["date"] < newest:
-            print(f"  SKIP   {state['file']} @{state['commit'][:8]} "
+            print(f"  SKIP   {state['path']} @{state['commit'][:8]} "
                   f"({state['date'][:10]}) predates the newest state held for "
-                  f"this evaluation ({newest[:10]}) — storing it would imply a "
+                  f"this file ({newest[:10]}) — storing it would imply a "
                   f"succession that did not happen; re-harvest this target from "
                   f"scratch to repair the gap", flush=True)
             errors += 1
             continue
-        src = by_id.get(sid)
         cap.store_new_version(
-            store, source_id=sid,
-            provider=((src or {}).get("provider") if sid != FALLBACK_SOURCE
-                      else own_provider) or own_provider,
-            model=((src or {}).get("model") if sid != FALLBACK_SOURCE
-                   else own_model) or own_model,
-            kind=KIND, tslug=tslug, event_url=url, raw=raw, meta=meta, ext=ext,
+            store, source_id=sid, provider=provider, model=model,
+            kind=kind, tslug=tslug, event_url=url, raw=raw, meta=meta, ext=ext,
             text=text, notes=notes,
             text_sha=cap.canonical_text_sha(text) if text else None,
             # GitHub's raw host is not the Wayback Machine's job, and the commit
@@ -547,14 +661,14 @@ def main() -> int:
             manifest_extra={"git_commit": state["commit"],
                             "git_commit_date": state["date"],
                             "git_blob_sha": state["blob"],
-                            "git_path": f"{EVAL_DIR}/{state['file']}",
+                            "git_path": state["path"],
                             # this is provenance from the upstream repository, not
                             # an observation this project made at that date
                             "harvested_from": "upstream git history"},
             event_extra={"git_commit": state["commit"],
                          "git_commit_date": state["date"]})
         stored += 1
-        print(f"  NEW  {sid} {state['file']} @{state['commit'][:8]} "
+        print(f"  NEW  {sid} {state['path']} @{state['commit'][:8]} "
               f"({state['date'][:10]})", flush=True)
     left = max(0, len(todo) - attempted)
     print(f"harvest_eval_history: stored {stored}, errors {errors}, "

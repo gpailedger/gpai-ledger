@@ -38,13 +38,25 @@ domain* looks for it at a new location. This is broader, so it is more conservat
 **3. The evaluation record (`harvest_eval_history.py`, daily).** The AI
 Accountability Lab grades these summaries and revises the grades in place, so a
 once-a-day look at their files loses every intermediate state, and a renamed or
-deleted evaluation disappears entirely. Their repository history is public, so the
-full record is read from the **GitHub API** rather than from their website: a
-routine run costs a few dozen API calls to github.com, and a state already held is
-never fetched again. Their published earlier-version pages are discovered by
-reading pages the sweep has already captured, so discovery costs aial.ie nothing,
-and only a page we do not already hold is requested — paced, capped per run, and
-abandoned for the day after three consecutive failures.
+deleted evaluation disappears entirely.
+
+Their website is served from `public/` in their public repository, so the record
+is read from the **GitHub API** rather than from their server: the evaluation
+files, the rendered pages, the archived provider documents, and `conf/config.json`
+— the scoring model itself. This is not a workaround, it is the better source.
+It carries what the live site cannot: models and grade rounds since removed,
+provider documents since deleted, and the state of each file at the commit that
+introduced it, at an address that can never change. A routine run costs a few
+dozen API calls to github.com, and a state already held is never fetched again.
+
+What that means for their server: **we do not need to crawl aial.ie to get the
+data.** The live-site targets remain because a capture from their own address
+records what was published there, which a repository read cannot attest — but if
+the Lab would rather we stopped fetching from their host altogether, nothing in
+the record would be lost by it, and the contact address in our User-Agent reaches
+a human who can say so. Requests to their site are paced, capped per run, and
+abandoned for the day after three consecutive failures; a document already held is
+never re-requested.
 
 Stated plainly, because this is the paragraph a reader would use to decide whether
 to object: **aial.ie carries 111 of this project's daily targets** — 63 evaluation

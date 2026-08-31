@@ -40,9 +40,9 @@ def test_each_distinct_state_is_planned_once_and_dated_by_its_first_commit(monke
     commits = [{"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}},
                {"sha": "c2", "commit": {"author": {"date": "2026-04-01T00:00:00Z"}}},
                {"sha": "c3", "commit": {"author": {"date": "2026-05-01T00:00:00Z"}}}]
-    trees = {"c1": {"phi.yaml": "blobA"},
-             "c2": {"phi.yaml": "blobB"},
-             "c3": {"phi.yaml": "blobA"}}          # reverted
+    trees = {"c1": {"evals/phi.yaml": "blobA"},
+             "c2": {"evals/phi.yaml": "blobB"},
+             "c3": {"evals/phi.yaml": "blobA"}}          # reverted
     monkeypatch.setattr(H, "commits", lambda tok: commits)
     monkeypatch.setattr(H, "tree_at", lambda sha, tok: trees[sha])
     plan = H.plan("")
@@ -82,13 +82,13 @@ def test_a_missing_evals_directory_is_normal_but_any_other_failure_is_not(monkey
 def test_every_state_of_one_evaluation_is_one_targets_history():
     # each state is fetched from its own pinned commit URL, but they are versions
     # of ONE target — otherwise the history is 318 unrelated single-capture targets
-    a = H.identity_url("phi.yaml")
-    b = H.identity_url("phi.yaml")
+    a = H.identity_url("evals/phi.yaml")
+    b = H.identity_url("evals/phi.yaml")
     assert a == b and "/main/" in a
-    assert H.pinned_url("c1", "phi.yaml") != H.pinned_url("c2", "phi.yaml")
+    assert H.pinned_url("c1", "evals/phi.yaml") != H.pinned_url("c2", "evals/phi.yaml")
     # a filename with a space must still produce a fetchable URL
-    assert " " not in H.pinned_url("c1", "inkling small.yaml")
-    assert "inkling%20small.yaml" in H.pinned_url("c1", "inkling small.yaml")
+    assert " " not in H.pinned_url("c1", "evals/inkling small.yaml")
+    assert "evals/inkling%20small.yaml" in H.pinned_url("c1", "evals/inkling small.yaml")
 
 
 # --- where it lands ----------------------------------------------------------
@@ -127,7 +127,7 @@ def test_a_harvested_state_records_upstream_provenance_without_claiming_to_have_
                               "model": "Phi-4", "targets": []}])
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"phi.yaml": "blobA"})
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"evals/phi.yaml": "blobA"})
     monkeypatch.setattr(H, "token", lambda: "")
     monkeypatch.setattr(cap, "fetch", lambda url, **k: (A_YAML, {
         "url": url, "final_url": url, "status_code": 200,
@@ -156,7 +156,7 @@ def test_a_second_run_re_fetches_nothing(_data_in_tmp, monkeypatch):
                               "model": "Phi-4", "targets": []}])
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"phi.yaml": "blobA"})
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"evals/phi.yaml": "blobA"})
     monkeypatch.setattr(H, "token", lambda: "")
     monkeypatch.setattr(cap, "ots_stamp", lambda d: (b"proof", {"ok": True}))
     calls = []
@@ -286,8 +286,9 @@ def test_two_evaluations_with_identical_bytes_both_keep_their_history(_data_in_t
     _registry(_data_in_tmp, [])
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"a.yaml": "sameblob",
-                                                        "b.yaml": "sameblob"})
+    monkeypatch.setattr(H, "tree_at",
+                        lambda sha, tok: {"evals/a.yaml": "sameblob",
+                                          "evals/b.yaml": "sameblob"})
     monkeypatch.setattr(H, "token", lambda: "")
     monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
     monkeypatch.setattr(H, "PAUSE_S", 0)
@@ -327,7 +328,7 @@ def test_a_run_stops_on_the_clock_and_leaves_the_rest_for_the_next_run(_data_in_
         {"sha": f"c{i}", "commit": {"author": {"date": f"2026-03-0{i}T00:00:00Z"}}}
         for i in range(1, 5)])
     monkeypatch.setattr(H, "tree_at",
-                        lambda sha, tok: {f"{sha}.yaml": f"blob-{sha}"})
+                        lambda sha, tok: {f"evals/{sha}.yaml": f"blob-{sha}"})
     monkeypatch.setattr(H, "token", lambda: "")
     monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
     monkeypatch.setattr(H, "BUDGET_S", -1)          # the budget is already spent
@@ -353,7 +354,8 @@ def test_an_evaluation_the_ledger_cannot_place_still_describes_itself(_data_in_t
                               "targets": []}])
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"claude-fable-5.yaml": "b1"})
+    monkeypatch.setattr(H, "tree_at",
+                        lambda sha, tok: {"evals/claude-fable-5.yaml": "b1"})
     monkeypatch.setattr(H, "token", lambda: "")
     monkeypatch.setattr(H, "PAUSE_S", 0)
     monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
@@ -399,12 +401,12 @@ def test_a_state_older_than_one_already_held_is_refused_not_appended(_data_in_tm
                                    "fetched_at": "2026-08-29T14:00:00Z"}))
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c2", "commit": {"author": {"date": "2026-05-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"x.yaml": "newblob"})
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"evals/x.yaml": "newblob"})
     assert H.main() == 0
     seq["n"] = 1
     monkeypatch.setattr(H, "commits", lambda tok: [
         {"sha": "c1", "commit": {"author": {"date": "2026-03-01T00:00:00Z"}}}])
-    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"x.yaml": "oldblob"})
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: {"evals/x.yaml": "oldblob"})
     assert H.main() == 1, "an out-of-order state was accepted silently"
     mans = [json.loads(m.read_text(encoding="utf-8"))
             for m in (_data_in_tmp / "data" / "captures").glob("*/*/*/manifest.json")]
