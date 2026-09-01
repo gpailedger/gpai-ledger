@@ -22,7 +22,8 @@ def test_fingerprint_check_never_fetches_an_off_site_redirect(monkeypatch):
         heads.append(url)
         assert kw.get("allow_redirects") is False
         return _resp(302, location="https://cdn.other.example/doc.pdf")
-    monkeypatch.setattr(site_hunt.requests, "head", head)
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: (head)(url, **kw))
     fetched = []
     monkeypatch.setattr(cap, "fetch", lambda url, **k: fetched.append(url) or (b"x", {}))
     res, sim = site_hunt.fingerprint_check("https://example.com/doc.pdf", "text", "example.com")
@@ -31,9 +32,10 @@ def test_fingerprint_check_never_fetches_an_off_site_redirect(monkeypatch):
 
 
 def test_fingerprint_check_follows_on_site_hops_then_fetches(monkeypatch):
-    monkeypatch.setattr(site_hunt.requests, "head", site_hunt.requests.head)
+    monkeypatch.setattr(cap, "guarded_request", cap.guarded_request)
     responses = iter([_resp(301, location="https://docs.example.com/doc.pdf"), _resp(200)])
-    monkeypatch.setattr(site_hunt.requests, "head", lambda url, **kw: next(responses))
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: (lambda url, **kw: next(responses))(url, **kw))
     monkeypatch.setattr(cap, "fetch", lambda url, **k: (
         b"%PDF", {"content_type": "application/pdf", "final_url": url}))
     monkeypatch.setattr(cap, "guess_ext", lambda *a: ".pdf")
@@ -44,7 +46,8 @@ def test_fingerprint_check_follows_on_site_hops_then_fetches(monkeypatch):
 
 
 def test_fingerprint_check_discards_a_body_whose_final_url_left_the_site(monkeypatch):
-    monkeypatch.setattr(site_hunt.requests, "head", lambda url, **kw: _resp(200))
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: (lambda url, **kw: _resp(200))(url, **kw))
     monkeypatch.setattr(cap, "fetch", lambda url, **k: (
         b"x", {"content_type": "text/html", "final_url": "https://evil.example/x"}))
     assert site_hunt.fingerprint_check("https://example.com/a", "t", "example.com") == (None, 0.0)
@@ -64,7 +67,8 @@ def test_crawl_domain_queues_on_site_redirects_and_drops_off_site_ones(monkeypat
         if url == "https://example.com/away":
             return _resp(302, location="https://other.example/")
         return _resp(404)
-    monkeypatch.setattr(site_hunt.requests, "get", get)
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: (get)(url, **kw))
     pages = list(site_hunt.crawl_domain("example.com", ["https://example.com/"], 10, throttle=0))
     assert [p for p, _ in pages] == ["https://example.com/home"]
     assert pages[0][1] == ["https://example.com/legal/summary.pdf"]
@@ -79,7 +83,8 @@ def test_sitemap_is_read_without_following_redirects(monkeypatch):
         return _resp(200, ctype="application/xml",
                      body=b"<loc>https://example.com/legal/summary.pdf</loc>"
                           b"<loc>https://other.example/summary.pdf</loc>")
-    monkeypatch.setattr(site_hunt.requests, "get", get)
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: (get)(url, **kw))
     assert site_hunt.sitemap_urls("example.com") == ["https://example.com/legal/summary.pdf"]
     assert all(v is False for v in seen.values())
 
@@ -197,3 +202,34 @@ def test_third_party_only_source_is_not_hunted(tmp_path, monkeypatch):
     assert site_hunt.main() == 0
     report = (root / "reports" / "hunt-latest.md").read_text(encoding="utf-8")
     assert "no provider site to hunt" in report and called == []
+
+
+def test_the_hunt_cannot_reach_a_private_address(monkeypatch):
+    # discovery URLs come out of third-party DOMs and third-party metadata; the
+    # four raw requests here used to bypass the guard fetch() applies
+    import pytest as _pytest
+    for url in ("http://127.0.0.1/doc.pdf", "http://169.254.169.254/latest/meta-data",
+                "file:///etc/passwd"):
+        with _pytest.raises(Exception):
+            cap.guarded_request("GET", url)
+
+
+def test_a_guarded_request_bounds_the_body(monkeypatch):
+    class _R:
+        status_code = 200
+        headers = {}
+        history = []
+        url = "https://example.org/x"
+
+        def iter_content(self, n):
+            while True:
+                yield b"x" * n
+
+        def close(self):
+            pass
+
+    monkeypatch.setattr(cap, "_assert_public_http", lambda u: None)
+    monkeypatch.setattr(cap.requests, "request", lambda *a, **k: _R())
+    import pytest as _pytest
+    with _pytest.raises(RuntimeError, match="exceeded"):
+        cap.guarded_request("GET", "https://example.org/x", max_bytes=1024)

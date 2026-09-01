@@ -4,6 +4,7 @@ import types
 import pytest
 
 import build_registry as br
+import capture as cap
 import site_hunt
 from pathlib import Path
 
@@ -55,7 +56,8 @@ class _Head:
 
 def test_probe_redirect_follows_same_site_hops_only(monkeypatch):
     head = _Head([(301, "https://docs.example.com/summary.pdf"), (200, None)])
-    monkeypatch.setattr(site_hunt.requests, "head", head)
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: head(url, **kw))
     assert site_hunt.probe_redirect("https://example.com/old.pdf", "example.com") \
         == "https://docs.example.com/summary.pdf"
     assert head.calls == ["https://example.com/old.pdf", "https://docs.example.com/summary.pdf"]
@@ -63,7 +65,8 @@ def test_probe_redirect_follows_same_site_hops_only(monkeypatch):
 
 def test_probe_redirect_never_requests_an_off_site_location(monkeypatch):
     head = _Head([(302, "https://cdn.other.example/summary.pdf"), (200, None)])
-    monkeypatch.setattr(site_hunt.requests, "head", head)
+    monkeypatch.setattr(cap, "guarded_request",
+                        lambda method, url, **kw: head(url, **kw))
     assert site_hunt.probe_redirect("https://example.com/old.pdf", "example.com") is None
     assert head.calls == ["https://example.com/old.pdf"]
 

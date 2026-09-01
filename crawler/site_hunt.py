@@ -227,7 +227,7 @@ def _resolve_on_site(url: str, domain: str, max_hops: int = 5):
     a server that refuses HEAD (403/405) is left to the GET that follows."""
     cur = url
     for _ in range(max_hops):
-        r = requests.head(cur, headers=cap.HEADERS, timeout=30, allow_redirects=False)
+        r = cap.guarded_request("HEAD", cur, timeout=30, allow_redirects=False)
         loc = r.headers.get("Location") or ""
         if r.status_code in REDIRECTS and loc:
             nxt = urljoin(cur, loc)
@@ -248,7 +248,7 @@ def probe_redirect(url: str, domain: str, max_hops: int = 5):
     cur = url
     try:
         for _ in range(max_hops):
-            r = requests.head(cur, headers=cap.HEADERS, timeout=30, allow_redirects=False)
+            r = cap.guarded_request("HEAD", cur, timeout=30, allow_redirects=False)
             loc = r.headers.get("Location") or ""
             if r.status_code in REDIRECTS and loc:
                 nxt = urljoin(cur, loc)
@@ -269,7 +269,7 @@ def sitemap_urls(domain: str):
     for path in ("/sitemap.xml", "/sitemap_index.xml"):
         try:
             # a sitemap that redirects elsewhere is not this site's sitemap
-            r = requests.get(f"https://{domain}{path}", headers=cap.HEADERS, timeout=30,
+            r = cap.guarded_request("GET", f"https://{domain}{path}", timeout=30,
                              allow_redirects=False)
             if r.status_code == 200:
                 out += re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)[:500]
@@ -298,7 +298,7 @@ def crawl_domain(domain: str, seeds, max_pages: int, max_requests: int = 300,
         seen.add(url)
         requests_made += 1
         try:
-            r = requests.get(url, headers=cap.HEADERS, timeout=30, allow_redirects=False)
+            r = cap.guarded_request("GET", url, timeout=30, allow_redirects=False)
             time.sleep(throttle)
             if r.status_code in REDIRECTS:
                 loc = urljoin(url, r.headers.get("Location") or "")

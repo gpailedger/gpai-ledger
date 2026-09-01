@@ -42,7 +42,7 @@ deleted evaluation disappears entirely.
 
 Their website is served from `public/` in their public repository, so the record
 is read from the **GitHub API** rather than from their server: the evaluation
-files, the rendered pages, the archived provider documents, and `conf/config.json`
+files, the rendered pages, and `conf/config.json`
 — the scoring model itself. This is not a workaround, it is the better source.
 It carries what the live site cannot: models and grade rounds since removed,
 provider documents since deleted, and the state of each file at the commit that
@@ -69,7 +69,9 @@ are not the origin's servers. If that is more than the Lab wants from us, the
 contact address in the User-Agent reaches a human who will reduce it.
 
 Everything captured from AIAL is a third party's own research: it is archived,
-hashed and timestamped, and it is **not republished** — see the *Rights* section of
+hashed and timestamped, and it is **not served on the site or in the dataset**
+(the captures remain in the public corpus, so the hashes stay reproducible) — see
+the *Rights* section of
 the README. Their permission, not a code change, is what would alter that.
 
 If a provider asks us to reduce or stop either activity, we comply. The contact
@@ -77,7 +79,7 @@ address in the User-Agent is monitored for exactly this.
 
 ## What we never do
 
-We also do not redistribute another organisation's research because we happened to
+We also do not publish another organisation's research because we happened to
 crawl it. Third-party evaluations are archived so a revised score stays recoverable,
 and published only as facts about the file — size, hash, timestamp proof — unless
 the rights holder agrees otherwise.

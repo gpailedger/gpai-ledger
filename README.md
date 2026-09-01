@@ -110,7 +110,7 @@ Three different things live here, under three different rights.
   an evidence archive of what a provider disclosed is worthless if the bytes can be
   edited after the fact. Most are Article 53(1)(d) training-data summaries: documents
   the EU AI Act requires their providers to make public.
-- **A third party's own research** is archived but deliberately not republished. The
+- **A third party's own research** is archived but deliberately not served. The
   AI Accountability Lab's scored evaluations (`aial-eval` captures) are their work,
   and their repository carries no licence granting redistribution. The ledger keeps
   them because a grade becomes unrecoverable once revised, and publishes only what it

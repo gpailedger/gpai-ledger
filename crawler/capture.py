@@ -320,6 +320,34 @@ def _get_following_public_redirects(url: str, headers: dict, timeout: int):
     raise PermanentFetchError(f"more than {MAX_REDIRECTS} redirects for {url}")
 
 
+def guarded_request(method: str, url: str, *, timeout: int = 30,
+                    allow_redirects: bool = False, max_bytes: int = MAX_FETCH_BYTES):
+    """A raw HEAD/GET that still refuses private addresses and still bounds the
+    body. The hunt's discovery calls used requests directly, so a mined URL could
+    reach an internal address the SSRF guard had just refused for the same host,
+    and a hostile origin could stream without limit into an unattended runner.
+
+    Returns the response with `.content` already bounded; callers read
+    `.status_code`, `.headers` and `.content` as usual."""
+    _assert_public_http(url)
+    resp = requests.request(method, url, headers=HEADERS, timeout=timeout,
+                            allow_redirects=allow_redirects, stream=True)
+    if allow_redirects:
+        for hop in resp.history:
+            _assert_public_http(hop.url)
+        _assert_public_http(resp.url)
+    body, total = [], 0
+    for chunk in resp.iter_content(64 * 1024):
+        total += len(chunk)
+        if total > max_bytes:
+            resp.close()
+            raise RuntimeError(f"response exceeded {max_bytes} bytes: {url[:120]}")
+        body.append(chunk)
+    resp._content = b"".join(body)          # noqa: SLF001 — requests' own cache
+    resp._content_consumed = True           # noqa: SLF001
+    return resp
+
+
 def fetch(url: str, retries: int = 2, timeout: int = 90, validators: dict = None):
     """Fetch a URL; returns (bytes, meta dict). Raises the last error on failure.
 

@@ -1053,7 +1053,9 @@ def test_the_scoring_framework_gets_its_own_section():
                    url="https://aial.ie/research/gpai-training-transparency/methodology")]
     html = "".join(build.render_version_sections(rows, set()))
     assert "The framework these evaluations use" in html
-    assert "not republished" in html
+    # the claim must name the surface it applies to: the captures do live in
+    # the public corpus, so an unqualified "not republished" was false
+    assert "not served on this site or in the dataset" in html
     assert "Watch-surface captures" not in html
 
 

@@ -650,7 +650,8 @@ def restriction_of(source, m):
     http = m.get("http") or {}
     for u in (http.get("url"), http.get("final_url")):
         if u in cap.RESTRICTED_URLS:
-            return "third-party research, archived but not republished here"
+            return ("third-party research, not served on this site or in the "
+                    "dataset")
     return None
 
 
@@ -1102,7 +1103,8 @@ def render_version_sections(rows_data, inpage_urls) -> list:
             "they are revised over time and a score is otherwise unrecoverable once "
             "changed. It is AIAL's research judgement, not a legal determination, "
             "and not the provider's document. Their assessment is archived "
-            "here but <strong>not republished</strong>: each capture below "
+            "here but <strong>not served on this site or in the dataset</strong>: "
+            "each capture below "
             "proves what was published and when, and points to AIAL for the "
             "content. Attribution: "
             "<a href='https://aial.ie/research/gpai-training-transparency/'>aial.ie"
@@ -1114,7 +1116,8 @@ def render_version_sections(rows_data, inpage_urls) -> list:
             "<p class='muted'>AIAL's scoring framework, weightings and grade "
             "boundaries — the pages that make a published score readable as a "
             "grade. Archived for the same reason as the evaluations, and on the "
-            "same terms: held and hashed here, <strong>not republished</strong>. "
+            "same terms: held and hashed here, <strong>not served on this site "
+            "or in the dataset</strong>. "
             "Attribution: <a href='https://aial.ie/research/gpai-training-"
             "transparency/methodology'>aial.ie</a>.</p>"
             + wrap_table("Scoring framework", VHEAD + "".join(method_rows)))
@@ -1480,9 +1483,13 @@ time by seconds; the manifest's <code>fetched_at</code> is authoritative.</p>
 full-text archiving is switched to the treatment described next. Separately, a
 third party's own research — the AI Accountability Lab's scored evaluations of
 published summaries — is archived so that a grade stays recoverable after they
-revise it, but their words are not republished here: those pages carry the
+revise it, but their words are not served on this site, in the CC0 dataset or in
+the change ledger: those pages carry the
 hashes, size, and timestamp proof, and link to AIAL for the assessment itself.
-No objection has been made; the ledger simply does not redistribute another
+The captures themselves remain in this project's public corpus on GitHub, so
+that every hash published here can be reproduced from it — withholding applies to
+what this site and its dataset serve, not to the evidence trail. No objection has
+been made; the ledger simply does not republish another
 organisation's work without their permission.</p>
 <h2>Provider objections</h2>
 <p>A provider who objects to full-text archiving of a document is switched to a
