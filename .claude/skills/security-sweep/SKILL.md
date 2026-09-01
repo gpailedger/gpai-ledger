@@ -65,6 +65,11 @@ What follows from this, and must not be argued away in a later session:
 - `$SWEEP` = a fresh directory under the session scratchpad. Nothing else.
 - Report findings as `file:line`. If a tool fails to install or run on this
   host, say exactly that. **Never invent tool output.**
+- **Run the project's own lint before pushing any code change from a sweep.**
+  `ruff check --select E9,F63,F7,F82,F401,F811,F821 crawler site tests`. Routing
+  a call through a new helper leaves the old import behind, and CI's lint step
+  runs *after* the security gates — so a security fix can pass all three
+  scanners and still redden the run on F401.
 
 ---
 
