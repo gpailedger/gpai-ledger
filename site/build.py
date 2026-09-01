@@ -1843,10 +1843,25 @@ def main(generated: str = None) -> int:
     drift_notes, near_notes, history_notes = {}, {}, {}
     if drift_p.exists():
         for rrec in json.loads(drift_p.read_text(encoding="utf-8")):
-            if rrec.get("verdict") == "DRIFT-CANDIDATE" and "similarity" in rrec:
-                drift_notes[rrec["id"]] = rrec["similarity"]
-            elif rrec.get("verdict") == "near-identical" and "similarity" in rrec:
-                near_notes[rrec["id"]] = rrec
+            # The live-vs-archive banners describe a comparison between the
+            # provider's live copy and AIAL's archived copy. A record whose basis
+            # is the capture's own history is NOT that comparison, and its
+            # self-history note is rendered separately below; narrating it here
+            # asserted a comparison the ledger never performed. Records written
+            # before `basis` existed carry the in-page branch's own wording, so
+            # fall back to that rather than trusting the verdict alone.
+            note = str(rrec.get("note") or "")
+            live_vs_archive = (rrec.get("basis") == "live-vs-archive"
+                               if rrec.get("basis")
+                               else "in-page document" not in note)
+            if live_vs_archive:
+                if rrec.get("verdict") == "DRIFT-CANDIDATE" and "similarity" in rrec:
+                    drift_notes[rrec["id"]] = rrec["similarity"]
+                elif rrec.get("verdict") == "near-identical" and "similarity" in rrec:
+                    near_notes[rrec["id"]] = rrec
+            # the self-history note stands either way: it describes the comparison
+            # that WAS performed, and for an in-page publication it is the only
+            # difference the ledger can speak to
             sh = rrec.get("self_history") or {}
             if sh.get("verdict") == "changed" and sh.get("word_delta"):
                 history_notes[rrec["id"]] = sh
@@ -2042,7 +2057,19 @@ def main(generated: str = None) -> int:
                         "iso": iso_date(cap_slug), "ts": cap_slug,
                         "date": human_date(cap_slug),
                         "model": source["model"], "provider": source["provider"],
-                        "what": ("summary content changed vs the previous capture"
+                        # For an in-page publication the summary IS a page, and
+                        # the extracted text carries that page's own furniture —
+                        # navigation, footers, calls to action. A rename in a
+                        # header is a real difference between captures, but it is
+                        # not "summary content changed", and a subscriber acting
+                        # on it as a filing change is being misled. Say which one
+                        # the ledger can actually see.
+                        "what": (("the page carrying this summary changed vs the "
+                                  "previous capture (the extracted text includes "
+                                  "the page's own navigation and footer, so the "
+                                  "difference need not be in the summary)"
+                                  if row["url"] in inpage_urls else
+                                  "summary content changed vs the previous capture")
                                  + (" made with the same capture method"
                                     if pair and pair.get("compared_with") else "")
                                  + (f" ({pair['word_delta']} word(s) differ in the "

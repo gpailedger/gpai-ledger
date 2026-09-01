@@ -1230,3 +1230,52 @@ def test_lint_flags_a_page_that_both_publishes_and_no_longer_resolves(tmp_path,
     rc, findings = run_lint(monkeypatch, dist)
     assert any(f.startswith("L21") for f in findings), findings
 
+
+
+# --- A4: narrate the comparison that happened, not the one that did not ------
+
+def test_a_self_history_record_never_becomes_a_live_vs_archive_banner(corpus,
+                                                                      tmp_path,
+                                                                      monkeypatch):
+    # for in-page publications the analyser compares a capture with its OWN
+    # predecessor; Bria's page carried "the newest live copy and the archived
+    # third-party copy differ in 10 word(s)" for a comparison that does not exist
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 a", text="alpha beta", tslug=SLUG)
+    corpus.add_capture(ts=V2, raw=b"%PDF-1.4 b", text="alpha gamma", tslug=SLUG)
+    corpus.finish()
+    drift = [{"id": "prov/model", "model": "Model", "verdict": "near-identical",
+              "similarity": 0.9971, "same_tool": True, "basis": "self-history",
+              "note": "in-page document: compared to its own previous capture",
+              "self_history": {"verdict": "changed", "word_delta": 10,
+                               "from_dir": "captures/x/y/" + V1,
+                               "to_dir": "captures/x/y/" + V2}}]
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, drift=drift)
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "archived third-party copy of this summary" not in page
+    # the comparison that WAS performed is still reported
+    assert "Latest version differs from the previous one" in page
+
+
+def test_a_record_predating_the_basis_field_is_read_from_its_own_note(corpus,
+                                                                     tmp_path,
+                                                                     monkeypatch):
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 a", text="alpha beta", tslug=SLUG)
+    corpus.finish()
+    drift = [{"id": "prov/model", "model": "Model", "verdict": "near-identical",
+              "similarity": 0.99, "same_tool": True,
+              "note": "in-page document: compared to its own previous capture"}]
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, drift=drift)
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "archived third-party copy of this summary" not in page
+
+
+def test_a_genuine_live_vs_archive_record_still_gets_its_banner(corpus, tmp_path,
+                                                               monkeypatch):
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 a", text="alpha beta", tslug=SLUG)
+    corpus.finish()
+    drift = [{"id": "prov/model", "model": "Model", "verdict": "near-identical",
+              "similarity": 0.9971, "same_tool": True, "basis": "live-vs-archive",
+              "word_delta": 3, "note": ""}]
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, drift=drift)
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "archived third-party copy of this summary" in page

@@ -664,6 +664,10 @@ def main() -> None:
                 rec = {"id": source["id"], "model": source["model"], "verdict": verdict,
                        "similarity": round(sim, 4), "compared_via": history.get("compared_via"),
                        "same_tool": history.get("same_tool", False),
+                       # what was actually compared. Consumers must not infer it
+                       # from the verdict: this branch compares a capture with its
+                       # own predecessor, never with the archived third-party copy.
+                       "basis": "self-history",
                        "note": note, "self_history": history}
                 if verdict in ("near-identical", "DRIFT-CANDIDATE"):
                     rec["word_delta"] = history.get("word_delta")
@@ -710,14 +714,16 @@ def main() -> None:
                 "similarity": rec["similarity"], "compared_via": rec["compared_via"],
                 "same_tool": rec.get("same_tool", False), "self_history": history}
         if rec["verdict"] == "identical-text":
-            results.append({**base, "verdict": "same-content"})
+            results.append({**base, "basis": "live-vs-archive",
+                            "verdict": "same-content"})
         else:
             verdict = "near-identical" if rec["similarity"] >= SIMILAR else "DRIFT-CANDIDATE"
             # this list only ever compares a provider's live document with its
             # archived copy, so no restricted kind reaches it today; the guard
             # keeps that true if the comparison is ever widened
             allowed = excerpts_allowed(rec)
-            results.append({**base, "verdict": verdict, "word_delta": rec["word_delta"],
+            results.append({**base, "basis": "live-vs-archive", "verdict": verdict,
+                            "word_delta": rec["word_delta"],
                             "moved_words": rec.get("moved_words", 0),
                             "changes": rec.get("changes", []) if allowed else [],
                             **({} if allowed else {"changes_withheld": True})})
