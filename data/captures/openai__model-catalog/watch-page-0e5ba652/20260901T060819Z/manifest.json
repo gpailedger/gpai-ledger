@@ -1,0 +1,41 @@
+{
+  "source_id": "openai/model-catalog",
+  "provider": "OpenAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "5e44cad30a073bf1256edc02830c8b55cfc523a897e59487f68ca30125170253",
+  "size_bytes": 349252,
+  "stored_as": "raw.html",
+  "text_sha256": "ff43d771354cca80042a2b9d73ca58ed2c628ffa6a3fe37ab141190986f327e2",
+  "doc_links_sha256": "eb1119ab46acbbe2ac257ea98091c12f07d8e27df4b37206292850dc5d301fda",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://developers.openai.com/api/docs/models",
+    "final_url": "https://developers.openai.com/api/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-01T06:08:19Z"
+  },
+  "prior_sha256": "ed0d685a0502a80e138c35220dc71c45d7357406d1965b0902c334ee9fddaf1e",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-01T06:08:19Z",
+    "at": "2026-09-01T06:08:21Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-01T06:08:27Z"
+  }
+}

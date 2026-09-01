@@ -7445,6 +7445,29 @@
     "to_sha256": "e2ec785e7535156631a04d167ebfc7b8012dd076d745bbb3545a51183b3836ef",
     "computed_at": "2026-08-29T11:43:21Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260829T113903Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260901T060835Z": {
+    "verdict": "changed",
+    "similarity": 0.998,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": ". For how model",
+        "new": ". To understand how"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260829T113903Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260901T060835Z",
+    "from_sha256": "e2ec785e7535156631a04d167ebfc7b8012dd076d745bbb3545a51183b3836ef",
+    "to_sha256": "e4910d36ae58ae500abcb0ba8b4d178169b08f97fe11c72a8150ec187d8c21c9",
+    "computed_at": "2026-09-01T06:15:25Z"
+  },
   "black-forest-labs/flux-2-klein::aial-eval-page-b9079221::captures/black-forest-labs__flux-2-klein/aial-eval-page-b9079221/20260831T103246Z>captures/black-forest-labs__flux-2-klein/aial-eval-page-b9079221/20260831T111322Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -9589,6 +9612,22 @@
     "from_sha256": "2e536d34dc01f4b3c3ffa1a14b4185c1997cc0f53fb5fb6cdd0490c4f50e837c",
     "to_sha256": "2185d8b007cb144ea906622e045314b443030b8590e9e7b6c9fb3b6a4a8de14d",
     "computed_at": "2026-08-31T07:01:25Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260831T061224Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260901T055918Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260831T061224Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260901T055918Z",
+    "from_sha256": "2185d8b007cb144ea906622e045314b443030b8590e9e7b6c9fb3b6a4a8de14d",
+    "to_sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
+    "computed_at": "2026-09-01T06:15:25Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
@@ -11831,6 +11870,19 @@
     "from_sha256": "e6f78ffdd15ae2792c0097e10cca8646560077956960cc6c327fbd57842a38e9",
     "to_sha256": "371a934e0400c6997f7b4ef7b321fdd9afe8982b0cf2d8024a19b972bbb98f4d",
     "computed_at": "2026-08-29T11:43:21Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260829T114024Z>captures/google__transparency-bucket/watch-page-81cd3682/20260901T060928Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260829T114024Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260901T060928Z",
+    "from_sha256": "371a934e0400c6997f7b4ef7b321fdd9afe8982b0cf2d8024a19b972bbb98f4d",
+    "to_sha256": "e93848951ade5ba5be871d2acd48efb4779d990f097e01f00b7204a0db085b1d",
+    "computed_at": "2026-09-01T06:15:25Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -19510,6 +19562,29 @@
     "from_sha256": "72c9a7c7fe595f2e6dce27744d8c89471b6bdc806994d04fb79304c0f9018072",
     "to_sha256": "ed0d685a0502a80e138c35220dc71c45d7357406d1965b0902c334ee9fddaf1e",
     "computed_at": "2026-08-31T07:01:26Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260831T061839Z>captures/openai__model-catalog/watch-page-0e5ba652/20260901T060819Z": {
+    "verdict": "changed",
+    "similarity": 0.9992,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "and provisioning Roles and",
+        "new": "provisioning User lifecycle management Roles"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260831T061839Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260901T060819Z",
+    "from_sha256": "ed0d685a0502a80e138c35220dc71c45d7357406d1965b0902c334ee9fddaf1e",
+    "to_sha256": "5e44cad30a073bf1256edc02830c8b55cfc523a897e59487f68ca30125170253",
+    "computed_at": "2026-09-01T06:15:25Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

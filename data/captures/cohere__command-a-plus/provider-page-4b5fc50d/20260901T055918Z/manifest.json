@@ -1,0 +1,48 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
+  "size_bytes": 840988,
+  "stored_as": "raw.html",
+  "text_sha256": "722b58b67a1c8aeedfbe571f02e22675b2d58e54118d1270b5079b99006ff37f",
+  "doc_links_sha256": "eed4891a40e8df951d56baf40c9fdf16616553573c61967d627425bd467dd48c",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "840988",
+    "fetched_at": "2026-09-01T05:59:18Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "2185d8b007cb144ea906622e045314b443030b8590e9e7b6c9fb3b6a4a8de14d",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-3becc468daa9100d793391d0186c931e5a435029 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-3becc468daa9100d793391d0186c931e5a435029",
+    "via": "spn2",
+    "requested_at": "2026-09-01T05:59:18Z",
+    "at": "2026-09-01T05:59:46Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-01T05:59:50Z"
+  }
+}

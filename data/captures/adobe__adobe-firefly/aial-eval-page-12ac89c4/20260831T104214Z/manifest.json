@@ -37,10 +37,25 @@
     "at": "2026-08-31T10:42:22Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7faa40ad4440>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260901061331/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/adobe-firefly/index.html",
+    "snapshot_ts": "20260901061331",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-97fe77906ad44bccdfeff50a6aeaee7b5179842a",
     "via": "spn2",
-    "requested_at": "2026-08-31T12:21:59Z",
-    "at": "2026-08-31T12:23:59Z"
-  }
+    "requested_at": "2026-09-01T06:13:30Z",
+    "at": "2026-09-01T06:13:36Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7faa40ad4440>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-08-31T12:21:59Z",
+      "at": "2026-08-31T12:23:59Z"
+    }
+  ]
 }

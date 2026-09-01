@@ -1,0 +1,42 @@
+{
+  "source_id": "google/transparency-bucket",
+  "provider": "Google",
+  "model": "Transparency-report file store (watched for summary drops)",
+  "target_kind": "watch-page",
+  "sha256": "e93848951ade5ba5be871d2acd48efb4779d990f097e01f00b7204a0db085b1d",
+  "size_bytes": 72731,
+  "stored_as": "raw.bin",
+  "text_sha256": null,
+  "extraction_notes": [
+    "no extractor for .bin"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "final_url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "status_code": 200,
+    "content_type": "application/xml",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "72731",
+    "fetched_at": "2026-09-01T06:09:28Z"
+  },
+  "prior_sha256": "371a934e0400c6997f7b4ef7b321fdd9afe8982b0cf2d8024a19b972bbb98f4d",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-01T06:09:28Z",
+    "at": "2026-09-01T06:09:30Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-01T06:09:34Z"
+  }
+}
