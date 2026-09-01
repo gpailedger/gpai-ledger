@@ -926,8 +926,10 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                           "proves the bytes existed no later than the attestation "
                           "time — an upper bound on the capture time; the fetch time "
                           "above is the archive's own record")
-                       + " (fresh proofs report 'pending' until bitcoin-anchored, "
-                       "typically within a day). <code>ots verify</code> needs a local "
+                       + " (a freshly captured proof reports 'pending' here: the "
+                       "calendars anchor within hours, but this archive only "
+                       "upgrades the stored proof to its anchor on a later run, "
+                       "so expect a day or two). <code>ots verify</code> needs a local "
                        "Bitcoin Core node (a pruned one is fine); without one, "
                        "<code>ots info</code> on the proof prints the attesting block "
                        "height and merkle path to check on any block explorer.</p>")
@@ -1510,7 +1512,8 @@ pages, an inner-file hash set for provider bundles.</li>
 <li><strong>Prove.</strong> Each stored version keeps the exact fetched bytes, the
 extracted text, HTTP metadata, a SHA-256, an
 <a href="https://opentimestamps.org">OpenTimestamps</a> proof (anchored in the
-bitcoin blockchain, typically within a day), and — where the URL permits — a triggered
+bitcoin blockchain; the stored proof is upgraded to its anchor on a later run, a
+day or two after capture), and — where the URL permits — a triggered
 Internet Archive (Wayback) snapshot as an independent witness.</li>
 <li><strong>Publish.</strong> Every version gets a permanent page; stored bytes are
 served under their own hash from the content-addressed <code>/blob/</code> store.</li>
@@ -1521,7 +1524,10 @@ the filename is the expected checksum:</p>
 <pre>sha256sum &lt;sha256&gt;.pdf          # must equal the filename / the version page's SHA-256
 ots verify &lt;sha256&gt;.pdf.ots -f &lt;sha256&gt;.pdf   # proves the bytes existed no later than the attestation time (opentimestamps.org)</pre>
 <p>OpenTimestamps proofs are attested by public calendar servers within seconds and
-anchored in the bitcoin blockchain, typically within a day; anchored proofs verify against the
+anchored in the bitcoin blockchain within hours. This archive re-checks pending
+proofs on a later run and only then stores the anchored form, so a proof
+downloaded within a day or two of capture may still read as pending — the
+attestation it carries is already valid. Anchored proofs verify against the
 blockchain with no trust in this site required. <code>ots verify</code> checks the attestation
 against a local Bitcoin Core node (a pruned node is enough); without one, <code>ots info
 &lt;proof&gt;</code> prints the attesting block height and merkle path, which any block explorer
@@ -2107,13 +2113,20 @@ def main(generated: str = None) -> int:
                 # feed. The ledger's common-extractor verdict decides whether one
                 # exists for this pair; only a pair without a record falls back
                 # to the stored text hashes (which an extractor change can alter)
+                unverified = False
                 if pair:
                     # a pure move (a running header on another page) changes no words
                     changed = pair["verdict"] == "changed" and bool(pair.get("word_delta"))
                 else:
+                    # No ledger record for this pair — the drift step runs with
+                    # continue-on-error, so a failed run leaves the feed reading
+                    # stored text hashes, which an extractor change alters on its
+                    # own. The entry still goes out (a real change must not be
+                    # swallowed by a failed analysis) but it says what it rests on.
                     changed = (row["prior_text_sha"] is not None
                                and row["text_sha"] is not None
                                and row["prior_text_sha"] != row["text_sha"])
+                    unverified = changed
                 if changed and is_document(row, inpage_urls):
                     change_entries.append({
                         "iso": iso_date(cap_slug), "ts": cap_slug,
@@ -2135,7 +2148,12 @@ def main(generated: str = None) -> int:
                                  + (" made with the same capture method"
                                     if pair and pair.get("compared_with") else "")
                                  + (f" ({pair['word_delta']} word(s) differ in the "
-                                    f"extracted text)" if pair else "")),
+                                    f"extracted text)" if pair else "")
+                                 + (" — the stored text hashes differ; the "
+                                    "like-for-like comparison that would confirm "
+                                    "a content change is not available for this "
+                                    "pair" if unverified else "")),
+                        "unverified": unverified,
                         "word_delta": pair.get("word_delta") if pair else None,
                         "link": f"{PREFIX}ledger/{sid}/v/{cap_slug}/",
                         "prior_link": (f"{PREFIX}ledger/{sid}/v/{prior_slug}/"

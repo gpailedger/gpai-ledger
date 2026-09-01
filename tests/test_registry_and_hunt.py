@@ -322,3 +322,30 @@ def test_the_scoring_framework_is_tracked_so_a_score_can_be_read_as_a_grade(tmp_
     assert any(t["url"].endswith("/methodology") for t in method), (
         "without the methodology page a percentage cannot be read as a letter grade")
 
+
+
+def test_two_eval_files_that_collapse_to_one_id_fail_the_build(tmp_path):
+    # "claude-sonnet-4.5.yaml" and "claude-sonnet-4-5.yaml" both slugify to the
+    # same source id; the second silently overwrote the first's history
+    repo = _fake_aial(tmp_path, ["sonnet-4-5"])
+    (repo / "evals" / "sonnet 4 5.yaml").write_text(
+        'model_name: "Sonnet 4.5 again"\norganization: "Testorg"\n', encoding="utf-8")
+    with pytest.raises(SystemExit) as exc:
+        br.main(str(repo), out_path=tmp_path / "sources.json")
+    assert "same source id" in str(exc.value)
+
+
+def test_a_model_with_a_tracked_document_is_not_reported_missing(tmp_path):
+    # status came from AIAL's archive_file_name alone, so a page serving the
+    # provider's captured, hashed PDF could render "Missing / none located"
+    repo = _fake_aial(tmp_path, [])
+    (repo / "evals" / "solo.yaml").write_text(
+        'model_name: "Solo"\norganization: "Testorg"\n'
+        'public_summary_link: "https://example.org/solo-summary.pdf"\n',
+        encoding="utf-8")
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    src = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+           if s["id"].endswith("/solo")][0]
+    assert any(t["kind"] == "provider-live" for t in src["targets"])
+    assert src["status"] == "published", "a tracked document rendered as missing"

@@ -350,6 +350,7 @@ def main(aial_repo: str, out_path=None) -> None:
                           capture_output=True, text=True).stdout.strip()
 
     sources = []
+    seen_ids = {}          # source id -> the eval filename that claimed it
     for path in evals:
         raw = yaml.safe_load(path.read_text(encoding="utf-8"))
         model = (raw.get("model_name") or path.stem).strip()
@@ -406,11 +407,29 @@ def main(aial_repo: str, out_path=None) -> None:
             "grade (attribution: aial.ie; AIAL's research, not a legal determination)")
 
         sid = f"{org_slug(org)}/{slug}"
+        # Two eval filenames differing only by "." / "_" / " " collapse to one id.
+        # Silently, and the second file's whole history then lands on the first
+        # model. Fail closed: a registry that quietly loses a model is worse than
+        # a registry that does not build.
+        if sid in seen_ids:
+            sys.exit(f"two AIAL evaluations map to the same source id {sid!r}: "
+                     f"{seen_ids[sid]} and {path.name} — one of them would be "
+                     f"silently discarded")
+        seen_ids[sid] = path.name
         sources.append({
             "id": sid,
             "provider": org,
             "model": model,
-            "status": "published" if (archive_file or extra_doc) else "missing",
+            # "published" means a document exists at a location this project
+            # tracks — not that AIAL happened to archive a copy. Deriving it from
+            # archive_file alone rendered "Missing / none located" on pages that
+            # were serving the provider's captured, hashed, published PDF,
+            # because AIAL names the document in public_summary_link before they
+            # snapshot it.
+            "status": ("published"
+                       if any(t["kind"] in ("provider-live", "provider-page")
+                              for t in targets) or archive_file or extra_doc
+                       else "missing"),
             "targets": targets,
             "aial": {
                 "eval_yaml": f"evals/{path.name}",
