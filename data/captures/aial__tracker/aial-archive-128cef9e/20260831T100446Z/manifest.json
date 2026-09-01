@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "gpt-5-5-eu-ai-act-public-summary-of-training-content",
+  "provider": "OpenAI",
+  "model": "GPT-5.5",
   "target_kind": "aial-archive",
   "sha256": "f67f1e9c64ee86060a9af7d1d1f52e502f45701e8fccae29db530504007dac25",
   "size_bytes": 209991,
   "stored_as": "raw.pdf",
   "text_sha256": "dc5f6ff0a9e2ddd7fb545fb5aeb8f05c44b917113f6071b3d5c37751da867c80",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-09-01: this is the provider's own document, mirrored by AIAL; it had inherited the provider and model of the AIAL source it is filed under. Bytes and SHA-256 unchanged."
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cca9304e89a804655bbba8fa5ff0273fd5f4e246/public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cca9304e89a804655bbba8fa5ff0273fd5f4e246/public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",

@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "MAI_Cyber_1_Flash_2026_08_03",
+  "provider": "Microsoft",
+  "model": "MAI Cyber 1 Flash",
   "target_kind": "aial-archive",
   "sha256": "4fbb2114d0fae0963a9e42aecc0a73d63e785c81a802f978c5e5b8ecec350ae5",
   "size_bytes": 287542,
   "stored_as": "raw.pdf",
   "text_sha256": "5ed123ccf3a661f71ba6ed6f9788509e95fe349ab8fc70c422e71c9c343ffcff",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-09-01: this is the provider's own document, mirrored by AIAL; it had inherited the provider and model of the AIAL source it is filed under. Bytes and SHA-256 unchanged."
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/MAI_Cyber_1_Flash_2026_08_03.pdf",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/MAI_Cyber_1_Flash_2026_08_03.pdf",

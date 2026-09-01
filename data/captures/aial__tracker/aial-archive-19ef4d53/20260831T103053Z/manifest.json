@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "nova_2_lite_2026_08_03",
+  "provider": "Amazon",
+  "model": "Nova 2 Lite",
   "target_kind": "aial-archive",
   "sha256": "b073bdc1de04f384330754dbb3a8a5871aa3c524f63ff5cf46f29063ed6f9884",
   "size_bytes": 326861,
   "stored_as": "raw.pdf",
   "text_sha256": "8ede149f6f004944e1ce275c05987e5ca7dff3e20ce0e9a10603108f18c5e343",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-09-01: this is the provider's own document, mirrored by AIAL; it had inherited the provider and model of the AIAL source it is filed under. Bytes and SHA-256 unchanged."
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/nova_2_lite_2026_08_03.pdf",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/nova_2_lite_2026_08_03.pdf",

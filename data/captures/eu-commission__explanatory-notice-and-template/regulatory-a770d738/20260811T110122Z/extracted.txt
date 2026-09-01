@@ -121,8 +121,10 @@ Providers may also disclose other relevant information on a voluntary basis, for
 2.4 User data
 This Section requires information about user data collected by all services and products of the provider, including through mail services, social media platforms, content platforms or interaction with the providers’ AI models and/or systems. This does not cover data licensed by users based on commercial transactional agreements described in Section 2.2.1., or customer data to fine-tune models for specific purposes.
 Was data from user interactions with the AI model (e.g. user input and prompts) used to train the model?
+
 ☐ Yes     ☐ No
 Was data collected from user interactions with the provider’s other services or products used to train the model?
+
 ☐ Yes     ☐ No
 If yes, provide a general description of the provider’s services or products that were used to collect the user data:
 Replace this with your response…
@@ -134,6 +136,7 @@ Providers may also disclose other relevant information on a voluntary basis.
 2.5 Synthetic data
 This Section requires information about synthetic data created by or on behalf of the provider for training the model directly on the outputs of another AI model, in particular through model distillation or model alignment (e.g. AI feedback through reinforcement learning). This does not include the use of AI models to clean or enrich data (e.g. AI-generated metadata to enrich or modify a dataset, such as creating depth maps or text descriptions of images). In case this concerns publicly available datasets as described in Section 2.1, these should be reported in that Section of the Template. In case this concerns synthetic datasets created by third parties on behalf of the provider, these should be reported in this Section of the Template instead of in Section 2.2.2.
 Was synthetic AI-generated data created by the provider or on their behalf to train the model?
+
 ☐ Yes     ☐ No
 If yes, modality of the synthetic data:
  ☐ Text   ☐ Image   ☐ Video  ☐ Audio       ☐ Other  If so, please specify…
@@ -148,6 +151,7 @@ This Section requires information about data that does not fall under any of the
 Have data sources other than those described in Sections 2.1 to 2.5 been used to train the model?
 ☐ Yes     ☐ No
 If yes, provide a narrative description of these data sources and the data:
+
 Replace this with your response…
 Additional comments (optional):
 Providers may also disclose other relevant information on a voluntary basis.
@@ -158,6 +162,7 @@ This Section concerns measures implemented by the provider to identify and compl
 Are you a Signatory to the Code of Practice for general-purpose AI models that includes commitments to respect reservations of rights from the TDM exception or limitation?
 ☐ Yes     ☐ No
 Describe the measures implemented before model training to respect reservations of rights from the TDM exception or limitation before and during data collection, including the opt-out protocols and solutions honoured by the provider or, as applicable, by third parties from which datasets have been obtained:
+
 Replace this with your response…
 Additional comments (optional):
 Providers may also disclose other relevant information on a voluntary basis. Providers are also encouraged to disclose a summary of their copyright policy under Article 53(1)(c) AI Act, if made publicly available (e.g., by providing a link to the relevant web-page).
@@ -168,3 +173,7 @@ Replace this with your response…
 3.3. Other information (optional)
 Other relevant information about data processing (optional):
 Providers are also encouraged to disclose on a voluntary basis other relevant information about relevant data processing aspects and measures taken before or after the training of the model that is relevant for the respect and exercise of rights  protected under Union law.
+===== footnotes =====
+ Excluding audio that is part of video, as this should be reported under the “video” modality instead. Furthermore, the Commission understands the modality of ‘audio’ to include ‘speech’.
+===== footer2 =====
+1

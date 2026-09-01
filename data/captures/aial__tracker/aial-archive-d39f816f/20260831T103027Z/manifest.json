@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
+  "provider": "provider not identified by this project",
   "model": "ElevenLabs_2026_08_03",
   "target_kind": "aial-archive",
   "sha256": "c6e2947ba8335be352a9b3009c7359520326e241e8db872f65c7d73ac0ebadf7",
   "size_bytes": 110127,
   "stored_as": "raw.pdf",
   "text_sha256": "56e2d06f9c70b5e9dc76aeb9709555c112512561bcd8cdaa685eea2831574519",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-09-01: this is the provider's own document, mirrored by AIAL; it had inherited the provider and model of the AIAL source it is filed under. Bytes and SHA-256 unchanged."
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/ElevenLabs_2026_08_03.pdf",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/ElevenLabs_2026_08_03.pdf",

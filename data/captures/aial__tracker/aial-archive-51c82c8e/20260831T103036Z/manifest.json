@@ -1,13 +1,15 @@
 {
   "source_id": "aial/tracker",
-  "provider": "AI Accountability Lab (AIAL)",
-  "model": "GPT-5_6_Luna_2026_08_03",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Luna",
   "target_kind": "aial-archive",
   "sha256": "0d92de5d44874b7a82948c2daafd4ab4e8ef3ec7775854a2521f6d9bb67d07ca",
   "size_bytes": 207613,
   "stored_as": "raw.pdf",
   "text_sha256": "a7a34dda65142db088495b3491cd0cdc84ea36562f079bd25bc41a4663ff26f5",
-  "extraction_notes": [],
+  "extraction_notes": [
+    "repaired 2026-09-01: this is the provider's own document, mirrored by AIAL; it had inherited the provider and model of the AIAL source it is filed under. Bytes and SHA-256 unchanged."
+  ],
   "http": {
     "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/GPT-5_6_Luna_2026_08_03.pdf",
     "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/1582f2e46486be6a5574eff2bf0cbe3afb3c50f7/public/archive/GPT-5_6_Luna_2026_08_03.pdf",
