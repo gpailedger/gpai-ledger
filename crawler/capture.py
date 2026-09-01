@@ -618,9 +618,22 @@ def extract_docx_text(data: bytes) -> str:
             # advertise any size it likes, so cap before reading
             if info.file_size > MAX_ZIP_MEMBER_BYTES:
                 raise RuntimeError(f"docx {name} exceeds the member cap")
-            # ElementTree does not resolve external entities, so a hostile
-            # document cannot reach the filesystem or the network through this.
-            root = ET.fromstring(zf.read(name))
+            part = zf.read(name)
+            # ElementTree refuses EXTERNAL entities (verified: a SYSTEM entity
+            # raises "undefined entity"), so a hostile document cannot reach the
+            # filesystem or the network through this. It does NOT refuse internal
+            # ones: a billion-laughs DTD expands, and the member cap above bounds
+            # the bytes read, not what they expand to — a few KB of .docx fetched
+            # from a third party could exhaust an unattended runner.
+            #
+            # An OOXML part never legitimately carries a DTD, so refusing one
+            # outright closes entity expansion completely and needs no dependency.
+            head = part[:8192].lstrip()
+            if b"<!DOCTYPE" in head.upper() or b"<!ENTITY" in part.upper():
+                raise RuntimeError(f"docx {name} declares a DTD or entity; OOXML "
+                                   f"parts do not, and entity expansion is a "
+                                   f"memory-exhaustion vector")
+            root = ET.fromstring(part)
             label = ("" if name == "word/document.xml"
                      else f"===== {name.rsplit('/', 1)[-1].rsplit('.', 1)[0]} =====")
             part = _docx_paragraphs(root, W, MC)

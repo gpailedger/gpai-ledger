@@ -509,3 +509,43 @@ def test_a_break_separates_words_instead_of_fusing_them():
     assert "CrawlWikipedia" not in text
     assert "Wikipedia" in text
 
+
+
+def test_a_docx_entity_bomb_is_refused_not_expanded():
+    # ElementTree refuses EXTERNAL entities but expands INTERNAL ones, and the
+    # member cap bounds the bytes read, not what they expand to — a few KB of
+    # .docx fetched from a third party could exhaust an unattended runner
+    import io
+    import zipfile
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    bomb = ('<?xml version="1.0"?><!DOCTYPE lolz [<!ENTITY lol "lol">'
+            '<!ENTITY lol2 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">]>'
+            f'<w:document xmlns:w="{W}"><w:body><w:p><w:r><w:t>&lol2;</w:t>'
+            "</w:r></w:p></w:body></w:document>")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/document.xml", bomb)
+    text, notes = cap.extract_text(buf.getvalue(), ".docx")
+    assert text is None
+    assert any("DTD or entity" in str(n) for n in notes), notes
+
+
+def test_an_external_entity_cannot_reach_the_filesystem():
+    import io
+    import zipfile
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    xxe = ('<?xml version="1.0"?><!DOCTYPE r [<!ENTITY x SYSTEM "file:///etc/passwd">]>'
+           f'<w:document xmlns:w="{W}"><w:body><w:p><w:r><w:t>&x;</w:t>'
+           "</w:r></w:p></w:body></w:document>")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/document.xml", xxe)
+    text, _notes = cap.extract_text(buf.getvalue(), ".docx")
+    assert text is None
+
+
+def test_an_ordinary_docx_is_unaffected_by_the_dtd_guard():
+    raw = _docx([["Template for the Public Summary"], ["1.1. Provider identification"]])
+    text, notes = cap.extract_text(raw, ".docx")
+    assert "1.1. Provider identification" in text
+    assert not [n for n in notes if "DTD" in str(n)]
