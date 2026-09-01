@@ -217,26 +217,30 @@ not a general opinion.
 
 ## 6. Known state, last verified 1 Sep 2026
 
-- **Bandit:** 17 low, **2 medium**, 0 high. Both mediums examined; the XML one
-  was real and is fixed (`capture.py` now refuses a DTD or entity declaration in
-  an OOXML part — `ElementTree` refuses *external* entities but expands
-  *internal* ones, and the member-size cap bounds the bytes read, not what they
-  expand to). Regression tests cover the bomb, the XXE, and an ordinary file.
-- **zizmor:** 39 findings, 38 suppressed, 1 informational — a template expansion
-  in `decisions.yml:87`, which is the retired, `workflow_dispatch`-only workflow.
-- **pip-audit:** no vulnerable package.
-- **Repo:** secret scanning **on**, push protection **on**, vulnerability alerts
-  **off** (404), Dependabot security updates off.
+All three tools are gates in `verify.yml` (weekly) and exit 0 on the current tree.
 
-Open work items, ranked:
+- **Bandit:** 0 findings at `-ll -ii`. Two mediums were found and closed at the
+  cause, not suppressed: `ElementTree` parsing an OOXML part (real — see below),
+  and a raw `urlopen` in the harvest, which now goes through
+  `cap.guarded_request` like every other outbound call. One `# nosec B314`
+  remains on the XML parse, with the reason in the comment above it.
+- **pip-audit:** `No known vulnerabilities found` across the pinned set.
+- **zizmor:** `No findings to report` (35 suppressed). The template expansion in
+  `decisions.yml` now reaches the shell through `env:` as data.
+- **Repo:** secret scanning **on**, push protection **on**, Dependabot
+  vulnerability **alerts on**, Dependabot **security updates off**, contributors
+  exactly `gpailedger` + `github-actions[bot]`.
 
-1. **Enable Dependabot vulnerability alerts.** Nothing today would ever tell the
-   maintainer that a pinned package or action has a CVE. Alerts notify without
-   opening PRs, so the contributor-list constraint is preserved. Owner action, in
-   repo settings.
-2. **Add a dependency-advisory step to CI.** `verify.yml` runs weekly and is the
-   natural home. Without it, §2.2 only happens when someone remembers.
-3. **`opentimestamps-client` is an unused direct dependency** in
-   `crawler/requirements.txt:7`. Nothing imports `otsclient`; the code imports
-   `opentimestamps.core.*`, which is the `opentimestamps` library. Declaring the
-   library directly drops six installed packages from the runner.
+### The one real vulnerability this sweep found
+
+`ElementTree` refuses *external* entities — verified, a `SYSTEM` entity raises
+`undefined entity` — but it *expands internal ones*, and a billion-laughs DTD
+expanded in testing. The OOXML member-size cap bounds the bytes read, not what
+they expand to, so a few KB of `.docx` fetched from a third party could exhaust
+the unattended runner. `capture.py` now refuses any OOXML part carrying a DTD or
+entity declaration; a legitimate part never has one. Three tests cover it: the
+bomb, the external entity, and an ordinary document.
+
+The lesson worth keeping: the code carried a comment asserting the parser was
+safe. It was half right, and nobody had tested the other half. **Test the claim,
+do not read it.**

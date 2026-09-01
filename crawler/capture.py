@@ -321,7 +321,8 @@ def _get_following_public_redirects(url: str, headers: dict, timeout: int):
 
 
 def guarded_request(method: str, url: str, *, timeout: int = 30,
-                    allow_redirects: bool = False, max_bytes: int = MAX_FETCH_BYTES):
+                    allow_redirects: bool = False, max_bytes: int = MAX_FETCH_BYTES,
+                    headers: dict = None):
     """A raw HEAD/GET that still refuses private addresses and still bounds the
     body. The hunt's discovery calls used requests directly, so a mined URL could
     reach an internal address the SSRF guard had just refused for the same host,
@@ -330,8 +331,9 @@ def guarded_request(method: str, url: str, *, timeout: int = 30,
     Returns the response with `.content` already bounded; callers read
     `.status_code`, `.headers` and `.content` as usual."""
     _assert_public_http(url)
-    resp = requests.request(method, url, headers=HEADERS, timeout=timeout,
-                            allow_redirects=allow_redirects, stream=True)
+    resp = requests.request(method, url, headers={**HEADERS, **(headers or {})},
+                            timeout=timeout, allow_redirects=allow_redirects,
+                            stream=True)
     if allow_redirects:
         for hop in resp.history:
             _assert_public_http(hop.url)
@@ -633,7 +635,11 @@ def extract_docx_text(data: bytes) -> str:
                 raise RuntimeError(f"docx {name} declares a DTD or entity; OOXML "
                                    f"parts do not, and entity expansion is a "
                                    f"memory-exhaustion vector")
-            root = ET.fromstring(part)
+            # The DTD/entity refusal above closes the attack B314 is about:
+            # external entities are refused by ElementTree itself (verified with a
+            # SYSTEM entity), internal ones cannot reach the parser, and defusedxml
+            # would add a dependency for coverage already held.
+            root = ET.fromstring(part)  # nosec B314
             label = ("" if name == "word/document.xml"
                      else f"===== {name.rsplit('/', 1)[-1].rsplit('.', 1)[0]} =====")
             part = _docx_paragraphs(root, W, MC)

@@ -81,15 +81,19 @@ jobs:
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
+          # expansions reach the shell as data, never as code: ISSUE is a number
+          # and SUMMARY is built from an issue body a person wrote
+          ISSUE: ${{ github.event.issue.number }}
+          SUMMARY: ${{ steps.record.outputs.summary }}
         run: |
-          if git log -1 --format=%s | grep -q "decision on #${{ github.event.issue.number }}"; then
-            gh issue comment "${{ github.event.issue.number }}" --body \
-              "Recorded: ${{ steps.record.outputs.summary }}
+          if git log -1 --format=%s | grep -q "decision on #${ISSUE}"; then
+            gh issue comment "${ISSUE}" --body \
+              "Recorded: ${SUMMARY}
 
             An approval takes effect at the next registry refresh; the daily sweep
             then captures the document with a hash, an OpenTimestamps proof and a
             Wayback witness before the site says anything about it."
-            gh issue close "${{ github.event.issue.number }}" --reason completed
+            gh issue close "${ISSUE}" --reason completed
           else
             echo "nothing was recorded; leaving the issue open"
           fi

@@ -1,26 +1,22 @@
-# Transitive and tooling pins: the exact set resolved in the 22 Aug 2026 trial venv
+# Transitive and tooling pins: the exact set resolved in a trial venv (22 Aug 2026;
+# re-resolved 1 Sep 2026 when opentimestamps-client was replaced by the library it
+# wraps, which dropped GitPython, PySocks, appdirs, gitdb and smmap)
 # for requirements.txt. Installed as `pip install -r requirements.txt -c constraints.txt`
 # so no run ever resolves a package to "latest". Refresh deliberately — see
 # docs/runbooks.md, "Dependency refresh". Packages absent on a platform are ignored.
-GitPython==3.1.59
-PySocks==1.7.1
 Pygments==2.21.0
-appdirs==1.4.4
 certifi==2026.7.22
 cffi==2.1.1
 charset-normalizer==3.5.1
 colorama==0.4.6
-gitdb==4.0.12
 greenlet==3.5.5
 idna==3.19
 iniconfig==2.3.0
-opentimestamps==0.4.5
 packaging==26.3
 pluggy==1.6.0
 pycparser==3.0
 pycryptodomex==3.23.0
 pyee==13.0.1
 python-bitcoinlib==0.12.2
-smmap==5.0.3
 soupsieve==2.9.2
 typing_extensions==4.16.0

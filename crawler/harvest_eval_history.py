@@ -131,13 +131,21 @@ def token() -> str:
 
 
 def api(path: str, tok: str):
-    req = urllib.request.Request(
-        f"{API}/{path}",
+    """A GitHub API call through the project's one guarded outbound path.
+
+    This used urllib.request.urlopen directly, which is the only outbound call in
+    the crawler that skipped _assert_public_http — and the rule established for
+    site_hunt is that every request goes through the same guard. The URL is built
+    from a constant host so its scheme was never attacker-controllable, but a
+    second way out of the process is a second thing to keep correct."""
+    resp = cap.guarded_request(
+        "GET", f"{API}/{path}", timeout=60, allow_redirects=True,
         headers={"Accept": "application/vnd.github+json",
-                 "User-Agent": cap.USER_AGENT,
                  **({"Authorization": f"Bearer {tok}"} if tok else {})})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read().decode("utf-8"))
+    if resp.status_code >= 400:
+        raise urllib.error.HTTPError(f"{API}/{path}", resp.status_code,
+                                     resp.reason or "", resp.headers, None)
+    return json.loads(resp.content.decode("utf-8"))
 
 
 def commits(tok: str) -> list:

@@ -31,10 +31,31 @@ jobs:
           cache-dependency-path: crawler/requirements.txt
 
       - name: Install dependencies
-        run: pip install -r crawler/requirements.txt -c crawler/constraints.txt pytest==9.1.1 ruff==0.14.14
+        run: |
+          pip install -r crawler/requirements.txt -c crawler/constraints.txt             pytest==9.1.1 ruff==0.14.14 pip-audit==2.10.1 bandit==1.9.4 zizmor==1.30.0
 
       - name: Unit tests
         run: python -m pytest tests/ -q
+
+      # Nothing else in this project consults an advisory database. Without this
+      # step a CVE in a pinned package reaches the daily unattended job — which
+      # holds contents: write and the archive credentials — and nobody is told.
+      # Dependabot's PR-opening half stays off deliberately: it would add
+      # dependabot[bot] to the public contributor list.
+      - name: Dependency advisories (pip-audit)
+        run: |
+          pip-audit -r crawler/requirements.txt --no-deps -s osv             --progress-spinner=off --strict
+
+      # Python security lint. -ll -ii is the only usable threshold here: the
+      # unfiltered run is dominated by asserts and try/except/pass. A finding is
+      # real only if it escapes the guarded fetch path or an input bound.
+      - name: Python security lint (bandit)
+        run: python -m bandit -q -r crawler site -ll -ii
+
+      # Token scope, template expansion and secret handling across the workflows
+      # themselves — this project's largest attack surface is its own CI.
+      - name: Workflow security audit (zizmor)
+        run: zizmor --offline .github/workflows/
 
       - name: Code lint (error-class rules only)
         run: ruff check --select E9,F63,F7,F82,F401,F811,F821 crawler site tests
