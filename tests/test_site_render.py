@@ -1356,3 +1356,55 @@ def test_lint_L15_fires_when_a_domain_deploy_has_no_seo_surface(tmp_path,
     rc, findings = run_lint(monkeypatch, dist)
     assert any(f.startswith("L15") for f in findings), findings
 
+
+
+def test_last_checked_is_the_oldest_check_and_names_what_was_skipped(corpus,
+                                                                     tmp_path,
+                                                                     monkeypatch):
+    # the sweep skips per TARGET; the date was kept per SOURCE, so a live target
+    # published today's date over a sibling nobody contacted (62 model pages on
+    # 30 Aug, during the aial.ie outage)
+    other = cap.target_slug("aial-archive", "https://aial.ie/archive/M.pdf")
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 a", text="alpha", tslug=SLUG)
+    corpus.finish()
+    ev = corpus.root / "events.jsonl"
+    ev.write_text(ev.read_text(encoding="utf-8")
+                  + json.dumps({"ts": "2026-08-30T06:00:00Z", "source": "prov/model",
+                                "target": SLUG, "outcome": "unchanged"}) + "\n"
+                  + json.dumps({"ts": "2026-08-30T06:00:00Z", "source": "prov/model",
+                                "target": other, "outcome": "host-unreachable",
+                                "host": "aial.ie"}) + "\n", encoding="utf-8")
+    src = dict(FULL_SRC, targets=[
+        {"kind": "provider-live", "url": "https://example.org/doc.pdf"},
+        {"kind": "aial-archive", "url": "https://aial.ie/archive/M.pdf"},
+    ])
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=src)
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    assert "not reached on the most recent sweep" in page, \
+        "a skipped target was hidden behind its sibling's success"
+    assert "tracked locations" in page and "1 of this source" in page
+
+
+def test_last_checked_takes_the_oldest_of_two_real_checks(corpus, tmp_path,
+                                                          monkeypatch):
+    # both targets were checked, on different days: the page may only claim the
+    # older one, because that is the date true of everything it covers
+    other = cap.target_slug("aial-archive", "https://aial.ie/archive/M.pdf")
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 a", text="alpha", tslug=SLUG)
+    corpus.finish()
+    ev = corpus.root / "events.jsonl"
+    ev.write_text(ev.read_text(encoding="utf-8")
+                  + json.dumps({"ts": "2026-08-20T06:00:00Z", "source": "prov/model",
+                                "target": other, "outcome": "unchanged"}) + NL
+                  + json.dumps({"ts": "2026-08-30T06:00:00Z", "source": "prov/model",
+                                "target": SLUG, "outcome": "unchanged"}) + NL,
+                  encoding="utf-8")
+    src = dict(FULL_SRC, targets=[
+        {"kind": "provider-live", "url": "https://example.org/doc.pdf"},
+        {"kind": "aial-archive", "url": "https://aial.ie/archive/M.pdf"},
+    ])
+    dist = _build_site(tmp_path, monkeypatch, corpus.root, src=src)
+    page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
+    shown = page.split("Last checked: ")[1][:10]
+    assert shown == "2026-08-20", f"published the newer check as if it covered both: {shown}"
+    assert "not reached on the most recent sweep" not in page

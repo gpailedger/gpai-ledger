@@ -401,10 +401,25 @@ def load_version_diffs() -> dict:
     return out
 
 
+# source id -> a sentence naming what the sweep did not reach, or absent
+UNCHECKED_NOTES = {}
+
+
 def last_checked_map():
-    """source id -> latest event timestamp (proof-of-life for every page). Also
-    collects REPACKED_SHAS from scope-repack events in the same pass."""
+    """source id -> the date on which EVERY active target was last checked.
+
+    Not the latest event: the sweep skips per target when a host is unreachable,
+    so a source with a live target and a dead one would otherwise publish today's
+    date over a target nobody contacted. The value is the OLDEST of the active
+    targets' own last checks, which is the only date true of the whole page, and
+    UNCHECKED_NOTES carries what was missed. Also collects REPACKED_SHAS from
+    scope-repack events in the same pass."""
     out = {}
+    # module-level and rebuilt per build: a stale note would disclose a skip that
+    # belonged to a previous run
+    UNCHECKED_NOTES.clear()
+    per_target = {}          # (source, target) -> newest non-skipped ts
+    skipped = {}             # (source, target) -> newest skip ts
     p = DATA / "events.jsonl"
     if not p.exists():
         return out
@@ -422,6 +437,15 @@ def last_checked_map():
         if src and ts and e.get("outcome") not in ("host-unreachable",
                                                    "host-unreachable-summary"):
             out[src] = max(out.get(src, ""), ts)
+            tgt = e.get("target")
+            if tgt:
+                key = (src, tgt)
+                per_target[key] = max(per_target.get(key, ""), ts)
+        elif src and ts and e.get("outcome") == "host-unreachable":
+            tgt = e.get("target")
+            if tgt:
+                key = (src, tgt)
+                skipped[key] = max(skipped.get(key, ""), ts)
         if e.get("outcome") == "scope-repack" and e.get("prior_sha256"):
             REPACKED_SHAS.add(e["prior_sha256"])
         d = str(e.get("dir") or "").replace("\\", "/")
@@ -432,7 +456,41 @@ def last_checked_map():
             if sha:
                 PRUNED_EVENTS[sha] = e
         _track_absence(e, src)
+    _narrow_to_every_target(out, per_target, skipped)
     return out
+
+
+def _narrow_to_every_target(out, per_target, skipped) -> None:
+    """Replace each source's latest-event date with the oldest of its ACTIVE
+    targets' last checks, and record what the sweep did not reach."""
+    reg_p = ROOT / "crawler" / "sources.json"
+    if not reg_p.exists():
+        return
+    try:
+        sources = json.loads(reg_p.read_text(encoding="utf-8"))["sources"]
+    except (OSError, ValueError, KeyError):
+        return
+    for s in sources:
+        sid = s["id"]
+        active = [cap.target_slug(t["kind"], t["url"]) for t in s.get("targets", [])]
+        if not active:
+            continue
+        dates = [per_target.get((sid, t), "") for t in active]
+        never = [t for t, d in zip(active, dates) if not d]
+        stale = [t for t in active
+                 if skipped.get((sid, t), "") > per_target.get((sid, t), "")]
+        seen = [d for d in dates if d]
+        if seen:
+            out[sid] = min(seen)
+        elif sid in out:
+            del out[sid]
+        missed = set(never) | set(stale)
+        if missed:
+            UNCHECKED_NOTES[sid] = (
+                f"{len(missed)} of this source's {len(active)} tracked locations "
+                + ("was" if len(missed) == 1 else "were")
+                + " not reached on the most recent sweep; the date above is the "
+                  "oldest check that did happen")
 
 
 def _track_absence(e, src) -> None:
@@ -1197,10 +1255,14 @@ def render_model_page(source, vsections, checked):
                         f"<a href='{PREFIX}about/'>contact details</a>.</p>")
     elif last_ts:
         label = "Last checked" if sid in checked else "Last sweep"
+        # a target the sweep could not reach is disclosed rather than hidden
+        # behind a sibling target's success
+        missed = UNCHECKED_NOTES.get(sid)
         checked_line = (f"<p class='muted'>{label}: {esc(last_ts[:10])} "
                         f"(re-checked on the daily schedule — see "
                         f"<a href='{PREFIX}methodology/'>Methodology</a>). "
-                        f"Seen a summary we missed? See the "
+                        + (f"{esc(missed)}. " if missed else "")
+                        + f"Seen a summary we missed? See the "
                         f"<a href='{PREFIX}about/'>contact details</a>.</p>")
 
     purpose = (f"<p>{esc(source['note'])}</p>" if source.get("note") else "")
