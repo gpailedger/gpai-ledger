@@ -109,6 +109,14 @@ Linux CI a single invocation is fine.
 **Act first on** `cryptography`, `requests`, `urllib3`, `pypdf` — those touch
 fetched bytes inside the daily unattended job that holds `contents: write`.
 
+**An outage is not a finding.** pip-audit exits 1 both when a package is
+vulnerable and when the advisory service does not answer — OSV returned a
+`ServiceError` on this step's very first CI run. The workflow step therefore
+inspects the output: a `ServiceError`/`ConnectionError` retries, then falls back
+from OSV to PyPI, and only a real finding fails the gate. If no service answers
+it emits a **warning that says nothing was checked**, because a silent pass here
+would be indistinguishable from a clean audit.
+
 ### 2.3 zizmor — workflow token and expansion audit
 
 ```bash

@@ -44,7 +44,34 @@ jobs:
       # dependabot[bot] to the public contributor list.
       - name: Dependency advisories (pip-audit)
         run: |
-          pip-audit -r crawler/requirements.txt --no-deps -s osv             --progress-spinner=off --strict
+          set -u
+          # Two failure modes share one exit code: "this package has a CVE"
+          # and "the advisory service did not answer". Only the first is ours.
+          # OSV returned a ServiceError on this step's first run, which would
+          # have made the weekly gate red over someone else's outage - the same
+          # mistake the sweep's host-unreachable rule already corrects.
+          for svc in osv pypi; do
+            for attempt in 1 2 3; do
+              if out=$(pip-audit -r crawler/requirements.txt --no-deps -s "$svc" --progress-spinner=off --strict 2>&1); then
+                echo "$out"
+                echo "advisories: clean via $svc"
+                exit 0
+              fi
+              echo "$out"
+              case "$out" in
+                *ServiceError*|*ConnectionError*|*TimeoutError*)
+                  echo "::notice::$svc unreachable (attempt $attempt), retrying"
+                  sleep $((attempt * 5)) ;;
+                *)
+                  echo "::error::pip-audit reported findings via $svc"
+                  exit 1 ;;
+              esac
+            done
+            echo "::notice::$svc unreachable after 3 attempts, trying the next"
+          done
+          echo "::warning::No advisory service answered this run. This is NOT a
+          clean result - nothing was checked. If it recurs, the weekly audit has
+          stopped covering us."
 
       # Python security lint. -ll -ii is the only usable threshold here: the
       # unfiltered run is dominated by asserts and try/except/pass. A finding is
