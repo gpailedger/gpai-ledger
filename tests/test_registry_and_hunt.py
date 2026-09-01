@@ -349,3 +349,23 @@ def test_a_model_with_a_tracked_document_is_not_reported_missing(tmp_path):
            if s["id"].endswith("/solo")][0]
     assert any(t["kind"] == "provider-live" for t in src["targets"])
     assert src["status"] == "published", "a tracked document rendered as missing"
+
+
+def test_a_hand_verified_kind_overrides_the_one_derived_from_metadata(tmp_path,
+                                                                      monkeypatch):
+    # EXTRA_TARGETS is a hand-verified classification; a URL-only dedupe kept the
+    # derived kind, and kind drives the gone-wording and the hunt's suppression
+    url = "https://example.org/nova-summary.pdf"
+    repo = _fake_aial(tmp_path, [])
+    (repo / "evals" / "nova.yaml").write_text(
+        'model_name: "Nova"\norganization: "Testorg"\n'
+        f'public_summary_link: "{url}"\n', encoding="utf-8")
+    monkeypatch.setattr(br, "EXTRA_TARGETS", {"nova": [("provider-page", url)]})
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    src = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+           if s["id"].endswith("/nova")][0]
+    hits = [t for t in src["targets"] if t["url"] == url]
+    assert len(hits) == 1, "the URL was added twice"
+    assert hits[0]["kind"] == "provider-page", \
+        "the hand-verified classification was discarded for the derived one"

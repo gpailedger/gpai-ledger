@@ -2156,9 +2156,21 @@ def main(generated: str = None) -> int:
                         "unverified": unverified,
                         "word_delta": pair.get("word_delta") if pair else None,
                         "link": f"{PREFIX}ledger/{sid}/v/{cap_slug}/",
-                        "prior_link": (f"{PREFIX}ledger/{sid}/v/{prior_slug}/"
-                                       if prior_slug else None),
-                        "prior_date": (human_date(prior_slug) if prior_slug
+                        # When the ledger compared like for like with an earlier
+                        # same-method capture, the delta was measured against THAT
+                        # capture — linking the immediate predecessor invites the
+                        # reader to diff two texts that do not yield the number.
+                        "prior_link": (
+                            f"{PREFIX}ledger/{sid}/v/"
+                            + str(pair["compared_with"]).rstrip("/").rsplit("/", 1)[-1]
+                            + "/"
+                            if pair and pair.get("compared_with")
+                            else (f"{PREFIX}ledger/{sid}/v/{prior_slug}/"
+                                  if prior_slug else None)),
+                        "prior_date": (human_date(
+                            str(pair["compared_with"]).rstrip("/").rsplit("/", 1)[-1])
+                            if pair and pair.get("compared_with")
+                            else human_date(prior_slug) if prior_slug
                                        else None),
                     })
                 prior_sha = m["sha256"]

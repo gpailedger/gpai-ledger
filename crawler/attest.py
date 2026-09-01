@@ -45,12 +45,37 @@ ROOT = Path(__file__).resolve().parent.parent
 ABSENCE_STATUSES = (404, 410)
 
 
+def _registry_slugs(source_id: str) -> set:
+    """The target slugs this project currently tracks for a source."""
+    reg = ROOT / "crawler" / "sources.json"
+    if not reg.exists():
+        return set()
+    try:
+        sources = json.loads(reg.read_text(encoding="utf-8"))["sources"]
+    except (OSError, ValueError, KeyError):
+        return set()
+    for s in sources:
+        if s["id"] == source_id:
+            return {cap.target_slug(t["kind"], t["url"]) for t in s.get("targets", [])}
+    return set()
+
+
 def _targets(store: cap.Store, source_id: str, only: str):
+    # A confirmed absence can only be cleared by a success on the same slug, so
+    # attesting against a slug the registry has dropped mints a finding nothing
+    # will ever clear. state.json keeps orphans by design (their evidence stays);
+    # the registry is what the project still claims to track.
+    tracked = _registry_slugs(source_id)
     for key, entry in store.state.items():
         sid, tslug = key.split("::", 1)
         if sid != source_id or entry.get("retired"):
             continue
         if only and tslug != only:
+            continue
+        if tracked and tslug not in tracked:
+            print(f"  SKIP   {tslug} — no longer in the registry for {source_id}; "
+                  f"attesting it would record an absence nothing can clear",
+                  flush=True)
             continue
         if not only and not tslug.startswith(("provider-live", "provider-page")):
             continue

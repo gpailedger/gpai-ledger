@@ -364,13 +364,27 @@ def main(aial_repo: str, out_path=None) -> None:
         targets = []
         seen = set()
 
-        def add(kind: str, url: str, note: str = "") -> None:
-            if url and url not in seen:
-                seen.add(url)
-                t = {"kind": kind, "url": url, **({"note": note} if note else {})}
-                if url.startswith(RENDER_URL_PREFIXES):
-                    t["render"] = True
-                targets.append(t)
+        def add(kind: str, url: str, note: str = "", *, authoritative=False) -> None:
+            if not url:
+                return
+            if url in seen:
+                # An EXTRA_TARGETS entry is a hand-verified classification of a
+                # URL AIAL's metadata also names. Dropping it on a URL match kept
+                # the derived kind, and the kind drives the gone-wording and the
+                # hunt's suppression rule — so an explicit correction was silently
+                # discarded (live for nova-2-lite). The explicit one wins.
+                if authoritative:
+                    for t in targets:
+                        if t["url"] == url and t["kind"] != kind:
+                            t["kind"] = kind
+                            if note:
+                                t["note"] = note
+                return
+            seen.add(url)
+            t = {"kind": kind, "url": url, **({"note": note} if note else {})}
+            if url.startswith(RENDER_URL_PREFIXES):
+                t["render"] = True
+            targets.append(t)
 
         if summary_link:
             normalized = normalize_url(summary_link)
@@ -386,7 +400,7 @@ def main(aial_repo: str, out_path=None) -> None:
                 add("provider-live", normalized, note)
         extra_doc = False
         for kind, url in EXTRA_TARGETS.get(slug, []):
-            add(kind, url, "manually verified direct URL")
+            add(kind, url, "manually verified direct URL", authoritative=True)
             if kind == "provider-live":
                 extra_doc = True
         if archive_file:

@@ -2,6 +2,7 @@
 absent: what it records, what it refuses to record, and how the sweep and the
 hunt treat the event."""
 import json
+import types
 
 import attest
 import capture as cap
@@ -150,3 +151,27 @@ def test_operator_supplied_file_is_attested_without_any_fetch(tmp_path, monkeypa
     # the file mode needs exactly one selected target
     assert attest.main(["--source", "prov/model", "--target", "nope", "--file", str(f),
                         "--data-root", str(root)]) == 2
+
+
+def test_a_target_the_registry_dropped_is_not_attested(tmp_path, monkeypatch, capsys):
+    # a confirmed absence is cleared only by a success on the SAME slug, so
+    # attesting a slug the registry no longer carries mints a finding that
+    # nothing will ever clear
+    import attest
+    live = cap.target_slug("provider-live", "https://example.org/now.pdf")
+    gone = cap.target_slug("provider-live", "https://example.org/old.pdf")
+    reg = tmp_path / "crawler" / "sources.json"
+    reg.parent.mkdir(parents=True)
+    reg.write_text(json.dumps({"sources": [{
+        "id": "prov/model", "provider": "P", "model": "M", "status": "published",
+        "targets": [{"kind": "provider-live", "url": "https://example.org/now.pdf"}],
+    }]}), encoding="utf-8")
+    monkeypatch.setattr(attest, "ROOT", tmp_path)
+
+    store = types.SimpleNamespace(state={
+        f"prov/model::{live}": {"last_capture": "x"},
+        f"prov/model::{gone}": {"last_capture": "y"},
+    })
+    slugs = [t for t, _e in attest._targets(store, "prov/model", "")]
+    assert slugs == [live], slugs
+    assert "no longer in the registry" in capsys.readouterr().out
