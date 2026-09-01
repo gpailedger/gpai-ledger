@@ -297,7 +297,31 @@ def _identity(text: str, filename: str) -> tuple:
             _field(text, "model_name") or filename.rsplit(".", 1)[0])
 
 
-def place(state, text, idx, by_id, archive_owners) -> tuple:
+def _fold(name: str) -> str:
+    """An archive filename as a lookup key: AIAL writes the same document as
+    Nova_2_Lite_2026_08_03.pdf and nova_2_lite_2026_08_03.pdf, and a
+    case-sensitive miss used to file a provider's filing under AIAL's own name."""
+    return "".join(c for c in (name or "").lower() if c.isalnum())
+
+
+def owners_by_hash() -> dict:
+    """sha256 -> (source_id, provider, model) for every capture already filed
+    under a real source. An archived copy of a provider's document is the SAME
+    BYTES as the provider's own filing, so the corpus itself identifies the owner
+    when a filename lookup cannot."""
+    out = {}
+    for mp in (DATA / "captures").glob("*/*/*/manifest.json"):
+        try:
+            m = json.loads(mp.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if m.get("source_id") and m["source_id"] != FALLBACK_SOURCE and m.get("sha256"):
+            out.setdefault(m["sha256"], (m["source_id"], m.get("provider"),
+                                         m.get("model")))
+    return out
+
+
+def place(state, text, idx, by_id, archive_owners, raw=None, by_hash=None) -> tuple:
     """(source_id, provider, model) for one harvested state.
 
     Filing and description are separate decisions. A state the ledger cannot
@@ -324,10 +348,20 @@ def place(state, text, idx, by_id, archive_owners) -> tuple:
         sid = idx.get(("file", slug.lower() + ".yaml")) or FALLBACK_SOURCE
         own = (tracker.get("provider") or "AI Accountability Lab (AIAL)", slug)
     elif g["place"] == "archive":
-        owner = archive_owners.get(name)
+        owner = archive_owners.get(name) or archive_owners.get(_fold(name))
+        if not owner and raw is not None and by_hash:
+            # the same bytes filed under a real source identify the owner
+            hit = by_hash.get(cap.sha256_hex(raw))
+            if hit:
+                owner = hit
         sid = owner[0] if owner else FALLBACK_SOURCE
+        # This is a PROVIDER's mandated document that AIAL mirrors. Inheriting the
+        # tracker's provider and model published five companies' Article 53
+        # filings as "AI Accountability Lab (AIAL) — GPAI Training Transparency
+        # tracker". When the owner cannot be established, say so; never borrow
+        # the identity of the source it happens to be filed under.
         own = ((owner[1], owner[2]) if owner
-               else (tracker.get("provider") or "AI Accountability Lab (AIAL)",
+               else ("provider not identified by this project",
                      name.rsplit(".", 1)[0]))
     else:                       # AIAL's own framework pages and scoring config
         return (FALLBACK_SOURCE,
@@ -596,6 +630,9 @@ def main() -> int:
               if REGISTRY.exists() else [])}
     done = held(store)
     archive_owners = named_archives()
+    for key in list(archive_owners):
+        archive_owners.setdefault(_fold(key), archive_owners[key])
+    by_hash = owners_by_hash()
     have_names = held_archive_names()
     todo = []
     for s in plan(tok):
@@ -632,7 +669,8 @@ def main() -> int:
         ext = cap.guess_ext(meta.get("content_type", ""), url, raw)
         text, notes = cap.extract_text(raw, ext)
         kind = state["group"]["kind"]
-        sid, provider, model = place(state, text, idx, by_id, archive_owners)
+        sid, provider, model = place(state, text, idx, by_id, archive_owners,
+                                     raw=raw, by_hash=by_hash)
         tslug = cap.target_slug(kind, identity_url(state["path"]))
         if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
             continue          # unchanged from the state already stored for it

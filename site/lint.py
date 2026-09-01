@@ -17,6 +17,10 @@ Checks:
   L10 captured HTML is never served executable from the blob store
   L11 every state.json entry's source id exists in crawler/sources.json (an
       orphan entry would silently render nowhere)
+  L20 a page never points the reader at a Wayback witness it also reports as
+      not saved (1,396 pages did)
+  L21 a model page never asserts a provider "publishes a" summary while also
+      carrying a confirmed "no longer resolves" banner for it
   L12 at most one rel=canonical per page; JSON-LD blocks parse as JSON
   L13 model pages and reference pages carry a meta description
   L14 sitemap.xml (when present) lists only URLs that resolve to built pages,
@@ -124,6 +128,11 @@ def main() -> int:
         else:
             titles[title] = rel
 
+        # L21: a confirmed absence makes the present tense false
+        if "publishes a" in html and "no longer resolves" in html:
+            findings.append(f"L21 page says the provider publishes a summary and "
+                            f"that it no longer resolves: {rel}")
+
         # model pages: L3/L4
         if len(parts) == 4 and parts[0] == "ledger" and parts[3] == "index.html":
             has_captures = "v/" in html
@@ -192,6 +201,13 @@ def main() -> int:
                         findings.append(f"L18 SHA-256 cell {sha_m.group(1)[:12]}… links a "
                                         f"different blob {linked[:12]}…: {rel}")
             n_version_pages += 1
+
+            # L20: do not send a reader to a witness this same page says is absent
+            if ("Wayback witness below" in html or
+                    "from the Wayback snapshot below" in html):
+                if re.search(r"<th>Wayback</th>\s*<td>[^<]*not saved", html):
+                    findings.append(f"L20 page promises a Wayback witness it also "
+                                    f"reports as not saved: {rel}")
 
             # L5: a document-format capture must show extracted text, a no-text
             # note, or the structured-facts treatment

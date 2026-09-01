@@ -465,3 +465,47 @@ def test_docx_is_a_document_format_on_the_site():
                         "build_for_docx_check")
     assert ".docx" in build.DOC_SUFFIXES
 
+
+def test_an_ooxml_file_is_not_sniffed_as_a_plain_zip():
+    # the Commission serves the Article 53(1)(d) template from an extensionless
+    # URL with Content-Type "/"; sniffing it as .zip published "no text extracted"
+    # for the one document every filing in this archive is measured against
+    raw = _docx([["Template for the Public Summary"]])
+    assert cap.guess_ext("/", "https://ec.europa.eu/newsroom/dae/document/11857", raw) == ".docx"
+    assert cap.guess_ext("application/zip", "https://x/bundle.zip", raw) == ".zip"
+
+
+def test_a_docx_footnote_is_not_silently_dropped():
+    # the template's normative footnote ("the Commission understands the modality
+    # of 'audio' to include 'speech'") lives in footnotes.xml, not the body
+    import io
+    import zipfile
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    body = (f'<?xml version="1.0"?><w:document xmlns:w="{W}"><w:body>'
+            "<w:p><w:r><w:t>Body sentence</w:t></w:r></w:p></w:body></w:document>")
+    notes = (f'<?xml version="1.0"?><w:footnotes xmlns:w="{W}">'
+             "<w:footnote><w:p><w:r><w:t>NORMATIVE-FOOTNOTE</w:t></w:r></w:p>"
+             "</w:footnote></w:footnotes>")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/document.xml", body)
+        zf.writestr("word/footnotes.xml", notes)
+    text, _ = cap.extract_text(buf.getvalue(), ".docx")
+    assert "Body sentence" in text
+    assert "NORMATIVE-FOOTNOTE" in text
+
+
+def test_a_break_separates_words_instead_of_fusing_them():
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    import io
+    import zipfile
+    doc = (f'<?xml version="1.0"?><w:document xmlns:w="{W}"><w:body><w:p>'
+           "<w:r><w:t>Common Crawl</w:t><w:br/><w:t>Wikipedia</w:t></w:r>"
+           "</w:p></w:body></w:document>")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("word/document.xml", doc)
+    text, _ = cap.extract_text(buf.getvalue(), ".docx")
+    assert "CrawlWikipedia" not in text
+    assert "Wikipedia" in text
+

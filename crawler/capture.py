@@ -447,6 +447,21 @@ def guess_ext(content_type: str, url: str, raw: bytes = None) -> str:
         if raw[:5] == b"%PDF-":
             return ".pdf"
         if raw[:4] == b"PK\x03\x04":
+            # An OOXML document is a zip, and the Commission serves the Article
+            # 53(1)(d) template from an extensionless URL with Content-Type "/".
+            # Sniffing it as .zip made extract_text report "no extractable PDFs"
+            # for the one document every filing in this archive is measured
+            # against. Look inside before deciding.
+            try:
+                with zipfile.ZipFile(io.BytesIO(raw)) as zf:
+                    names = set(zf.namelist())
+                for marker, ext in (("word/document.xml", ".docx"),
+                                    ("xl/workbook.xml", ".xlsx"),
+                                    ("ppt/presentation.xml", ".pptx")):
+                    if marker in names:
+                        return ext
+            except Exception:            # noqa: BLE001 — a truncated or hostile
+                pass                     # archive is still just a .zip to us
             return ".zip"
         if raw[:200].lstrip()[:15].lower().startswith((b"<!doctype html", b"<html")):
             return ".html"
@@ -554,24 +569,77 @@ def extract_docx_text(data: bytes) -> str:
     wherever formatting changes mid-word."""
     import xml.etree.ElementTree as ET
     W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
-    with zipfile.ZipFile(io.BytesIO(data)) as zf:
-        if "word/document.xml" not in zf.namelist():
-            raise RuntimeError("docx has no word/document.xml")
-        info = zf.getinfo("word/document.xml")
-        # the same class of guard the zip path applies: an archive can advertise
-        # any size it likes, so cap before reading
-        if info.file_size > MAX_ZIP_MEMBER_BYTES:
-            raise RuntimeError("docx document.xml exceeds the member cap")
-        xml = zf.read("word/document.xml")
-    # ElementTree does not resolve external entities, so a hostile document
-    # cannot reach the filesystem or the network through this parse.
-    root = ET.fromstring(xml)
+    MC = "{http://schemas.openxmlformats.org/markup-compatibility/2006}"
+    # The body is not the whole document. The Commission's template carries a
+    # normative footnote ("the Commission understands the modality of 'audio' to
+    # include 'speech'") that lives in footnotes.xml and was silently absent from
+    # every extract. Headers and footers carry the version and date blocks.
+    PARTS = ("word/document.xml", "word/footnotes.xml", "word/endnotes.xml")
     out = []
-    for para in root.iter(W + "p"):
-        line = "".join(t.text or "" for t in para.iter(W + "t"))
-        if line.strip():
-            out.append(line)
+    with zipfile.ZipFile(io.BytesIO(data)) as zf:
+        names = zf.namelist()
+        if "word/document.xml" not in names:
+            raise RuntimeError("docx has no word/document.xml")
+        wanted = [n for n in PARTS if n in names]
+        wanted += sorted(n for n in names
+                         if n.startswith(("word/header", "word/footer"))
+                         and n.endswith(".xml"))
+        for name in wanted:
+            info = zf.getinfo(name)
+            # the same class of guard the zip path applies: an archive can
+            # advertise any size it likes, so cap before reading
+            if info.file_size > MAX_ZIP_MEMBER_BYTES:
+                raise RuntimeError(f"docx {name} exceeds the member cap")
+            # ElementTree does not resolve external entities, so a hostile
+            # document cannot reach the filesystem or the network through this.
+            root = ET.fromstring(zf.read(name))
+            label = ("" if name == "word/document.xml"
+                     else f"===== {name.rsplit('/', 1)[-1].rsplit('.', 1)[0]} =====")
+            part = _docx_paragraphs(root, W, MC)
+            if part:
+                out.extend(([label] if label else []) + part)
     return "\n".join(out)
+
+
+def _docx_paragraphs(root, W, MC) -> list:
+    """Paragraph text, in document order, without counting anything twice.
+
+    <w:p> nests: a paragraph inside a table cell inside another paragraph is
+    reached repeatedly by root.iter, and mc:AlternateContent holds the SAME text
+    once per fallback rendering. Walking explicitly and skipping mc:Fallback
+    keeps a text box from being published four times."""
+    out, seen = [], set()
+
+    def walk(node):
+        for child in node:
+            if child.tag == MC + "Fallback":
+                continue                      # a duplicate of mc:Choice
+            if child.tag == W + "p":
+                if id(child) not in seen:
+                    seen.add(id(child))
+                    line = _docx_para_text(child, W)
+                    if line.strip():
+                        out.append(line)
+            walk(child)
+
+    walk(root)
+    return out
+
+
+def _docx_para_text(para, W) -> str:
+    """One paragraph's text. Runs are joined WITHOUT a separator because Word
+    splits a word across runs wherever formatting changes mid-word; breaks and
+    tabs carry their own separator, or "Common Crawl" and "Wikipedia" fuse into
+    one token."""
+    parts = []
+    for node in para.iter():
+        if node.tag == W + "t":
+            parts.append(node.text or "")
+        elif node.tag == W + "br":
+            parts.append("\n")
+        elif node.tag == W + "tab":
+            parts.append("\t")
+    return "".join(parts)
 
 
 def extract_text(data: bytes, ext: str):

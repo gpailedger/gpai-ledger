@@ -477,7 +477,10 @@ def test_build_ledger_changed_drives_change_note_feed_entry_and_banner(corpus, t
     model = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
     assert "content changed vs the previous capture of this target (1 word(s) differ" in model
     assert "Latest version differs from the previous one:" in model
-    assert "both extracted with the same tool" in model
+    # the page must not claim the served extracts reproduce the count: the
+    # comparison re-extracts, the archived extracts are from other extractor eras
+    assert "re-extracted both copies with one tool" in model
+    assert "need not reproduce this count" in model
     changes = (dist / "changes" / "index.html").read_text(encoding="utf-8")
     assert "content changed (1 word(s) differ in the extracted text) between" in changes
 
@@ -1175,4 +1178,53 @@ def test_the_dataset_page_never_names_a_kind_list_the_data_contradicts():
         assert kind in html, f"{kind} is missing from the dataset field description"
     for rec in json.loads(data.read_text(encoding="utf-8"))["records"]:
         assert rec["kind"] in html, f"{rec['kind']} is in the data but not described"
+
+
+# --- audit fixes: a page must not assert what the data does not carry --------
+
+def test_identical_text_does_not_assert_a_cause():
+    # the ledger sees two matching word streams; it does not see WHY the bytes
+    # differ, and a form PDF's text layer does not carry checkbox state at all
+    r = mk_row(prior_sha="1" * 64, diff_verdict="identical-text", diff_words=0)
+    notes = build.reader_row_notes(r) if hasattr(build, "reader_row_notes") else None
+    html = "".join(build.render_version_sections([r], set()))
+    assert "re-serialization, not a content change" not in html
+    assert "no change is visible in the text layer" in html
+    assert "checkbox" in html
+
+
+def test_a_confirmed_absence_puts_the_intro_in_the_past_tense(monkeypatch):
+    monkeypatch.setitem(build.GONE_TARGETS, ("prov/model", "provider-live-x"),
+                        {"first": "2026-08-20T00:00:00Z", "by": ["witness"],
+                         "url": "https://example.org/doc.pdf", "kind": "provider-live"})
+    src = dict(SRC, id="prov/model", status="published")
+    body, _title = build.render_model_page(src, [], {})
+    assert "publishes a" not in body, "present tense over a confirmed absence"
+    assert "published a" in body
+    assert "no longer resolves" in body or "below" in body
+
+
+def test_lint_flags_a_wayback_promise_with_no_snapshot(tmp_path, monkeypatch):
+    dist = _mk_dist(tmp_path)
+    vdir = dist / "ledger" / "prov" / "model" / "v" / "20260101T000000Z"
+    vdir.mkdir(parents=True)
+    body = ("<table><tr><th>Stored file</th><td>16 bytes — not served (x); the hash "
+            "and timestamp proof and Wayback witness below still establish it</td></tr>"
+            "<tr><th>SHA-256</th><td><code>" + "2" * 64 + "</code></td></tr>"
+            "<tr><th>Wayback</th><td>not saved</td></tr></table>")
+    (vdir / "index.html").write_text(_page("M @ x", body), encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L20") for f in findings), findings
+
+
+def test_lint_flags_a_page_that_both_publishes_and_no_longer_resolves(tmp_path,
+                                                                      monkeypatch):
+    dist = _mk_dist(tmp_path)
+    mdir = dist / "ledger" / "prov" / "model"
+    mdir.mkdir(parents=True)
+    body = ("<p>Prov publishes a public summary for Model.</p>"
+            "<p>The provider's copy of this document no longer resolves.</p>")
+    (mdir / "index.html").write_text(_page("Model", body), encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L21") for f in findings), findings
 

@@ -86,6 +86,9 @@ KIND_LABELS = {
 THIRD_PARTY_EVAL_KINDS = ("aial-eval", "aial-eval-history", "aial-eval-page")
 # the framework those assessments are made with; belongs to AIAL's own source
 THIRD_PARTY_METHOD_KINDS = ("aial-method",)
+# kinds that ARE the provider's own document: an absence on one of these is a
+# statement about the provider, and the page's tense has to follow it
+PROVIDER_DOC_KINDS = ("provider-live", "provider-page")
 
 STATUS_LABELS = {"published": "Published", "missing": "Missing",
                  "regulatory": "Regulatory", "watch": "Watch"}
@@ -805,11 +808,15 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                   "captured page cannot run scripts on this site; bytes are "
                   "identical — the SHA-256 verifies against this file)</span>"
                   if blob_ext.endswith(".txt") else "")
+    # a page must not promise a witness the same page reports as absent
+    has_snap = bool((m.get("wayback") or {}).get("ok")
+                    and (m.get("wayback") or {}).get("snapshot"))
     if restricted:
         stored_cell = (f"{m['size_bytes']:,} bytes — <span class='muted'>"
-                       f"not served ({esc(str(restricted))}); the hash, "
-                       f"timestamp proof, and Wayback witness below still "
-                       f"establish what was published when</span>")
+                       f"not served ({esc(str(restricted))}); the hash"
+                       + (", timestamp proof and Wayback witness below"
+                          if has_snap else " and timestamp proof below")
+                       + f" still establish what was published when</span>")
     else:
         stored_cell = (f"<a href='{esc(serve_name)}' download>{esc(blob_name)}</a> "
                        f"({m['size_bytes']:,} bytes){serve_note}"
@@ -840,8 +847,9 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                 f"<span class='muted'>({ots_caption})</span>" if ots_exists else "not stamped")
     if restricted:
         verify_line = ("<p class='muted'>Verify: obtain the file from the "
-                       "target address above, or from the Wayback snapshot, "
-                       "then <code>sha256sum</code> it — it must equal the "
+                       "target address above"
+                       + (", or from the Wayback snapshot below" if has_snap else "")
+                       + ", then <code>sha256sum</code> it — it must equal the "
                        "hash above; the <code>.ots</code> proof dates that "
                        "hash.</p>")
     else:
@@ -902,8 +910,10 @@ def render_version_page(source, m, cap_slug, corpus_shas, text,
                   f"<p class='muted'>Filed under "
                   f"{esc(source.get('provider') or '')} — "
                   f"{esc(source.get('model') or '')}, the source this project "
-                  f"captured it from; the assessment itself is of the model "
-                  f"named above.</p>")
+                  f"captured it from; the "
+                  + ("assessment itself is" if m.get("target_kind") in THIRD_PARTY_EVAL_KINDS
+                     else "document itself is the filing")
+                  + f" of the model named above.</p>")
     return (f"<h1>{esc(shown_model)} — capture {esc(cap_slug)}</h1>"
             + filed_note + cop_warn +
             f"<div class='tablewrap' role='region' aria-label='Capture provenance' tabindex='0'><table>"
@@ -997,8 +1007,14 @@ def version_row_html(r, inpage_urls, sha_first) -> str:
                      f"captures could not be re-extracted with one tool, so this is not "
                      f"verified as a content change")
     elif r.get("diff_verdict") == "identical-text":
-        notes.append("bytes differ from the previous capture but the extracted text "
-                     "is identical (re-serialization, not a content change)")
+        # The ledger sees two matching word streams. It does not see WHY the bytes
+        # differ, and for a form-style PDF the extracted text does not carry
+        # checkbox state at all — so a flipped answer, the most material edit a
+        # provider can make, changes the SHA-256 and leaves this text identical.
+        # Asserting "not a content change" claimed knowledge the data cannot give.
+        notes.append("bytes differ from the previous capture; the extracted text "
+                     "is identical, so no change is visible in the text layer "
+                     "(the text layer does not carry checkbox or form-field state)")
     elif r.get("diff_verdict") == "method-changed":
         notes.append("captured with a different method than the previous capture "
                      "(rendering, frame or consent handling changed): the extracted "
@@ -1195,10 +1211,24 @@ def render_model_page(source, vsections, checked):
         expl = (f"<a href='{PREFIX}what-is-a-training-data-summary/'>public "
                 f"summary of training content</a>")
         if status == "published":
-            intro = (f"<p>{esc(source['provider'])} publishes a {expl} "
-                     f"for {esc(source['model'])} under the EU AI "
-                     f"Act; every version this ledger has captured is archived below "
-                     f"with its hash and timestamp proof.</p>")
+            # A confirmed absence on one of this source's own document targets
+            # makes the present tense false: the Microsoft MAI-Image-2 page
+            # asserted the provider "publishes a" summary three lines above its
+            # own "no longer resolves" banner.
+            gone_here = any(s == source["id"]
+                            and (r.get("kind") or "") in PROVIDER_DOC_KINDS
+                            for (s, _t), r in GONE_TARGETS.items())
+            if gone_here:
+                intro = (f"<p>{esc(source['provider'])} published a {expl} "
+                         f"for {esc(source['model'])} under the EU AI Act. The "
+                         f"copy this ledger tracked no longer resolves (see "
+                         f"below); every version captured while it did is "
+                         f"archived here with its hash and timestamp proof.</p>")
+            else:
+                intro = (f"<p>{esc(source['provider'])} publishes a {expl} "
+                         f"for {esc(source['model'])} under the EU AI "
+                         f"Act; every version this ledger has captured is archived below "
+                         f"with its hash and timestamp proof.</p>")
         else:
             intro = (f"<p>No {expl} has been located "
                      f"for {esc(source['model'])}. "
@@ -1708,10 +1738,17 @@ def render_dataset_page(n_versions: int, first_date: str) -> str:
             + ", ".join(f"<code>{esc(k)}</code>" for k in sorted(KIND_LABELS))
             + " (labels as on the site: "
             + "; ".join(f"{esc(KIND_LABELS[k])}" for k in sorted(KIND_LABELS))
-            + "). The <code>aial-*</code> kinds are the AI Accountability Lab's "
-            "own research about a summary, archived here and deliberately not "
-            "served: those records carry hashes and provenance, and their "
-            "<code>blob_url</code> is null</li>"
+            + "). "
+            + ("The AI Accountability Lab's own research about a summary — "
+               + ", ".join(f"<code>{esc(k)}</code>"
+                           for k in sorted(cap.RESTRICTED_KINDS))
+               + " — is archived here and deliberately not served: those records "
+                 "carry hashes and provenance, and their <code>blob_url</code> is "
+                 "null. <code>aial-archive</code> is <em>not</em> withheld: it is "
+                 "the provider's own document, mirrored by the Lab, and is served "
+                 "like any other provider document. A capture of the Lab's tracker "
+                 "pages is withheld by address rather than by kind.")
+            + "</li>"
             f"<li><code>captured_utc</code> — record-write timestamp (UTC, ISO "
             f"8601); it can trail the HTTP fetch by seconds (for fanned-out "
             f"captures, up to ~90s) — the version page's <em>Fetched</em> field "
@@ -1949,8 +1986,13 @@ def main(generated: str = None) -> int:
                 n_versions_total += 1
                 first_capture_overall = min(first_capture_overall, cap_slug[:8])
                 export_rows.append({
-                    "source_id": sid, "provider": source["provider"],
-                    "model": source["model"], "kind": m["target_kind"],
+                    "source_id": sid,
+                    # the capture's own description wins over the source it is
+                    # filed under — a provider's document mirrored by AIAL is
+                    # that provider's, and the dataset must say so too
+                    "provider": m.get("provider") or source["provider"],
+                    "model": m.get("model") or source["model"],
+                    "filed_under_source": sid, "kind": m["target_kind"],
                     "captured_utc": iso_date(cap_slug) or cap_slug,
                     "url": mask_tokens(m["http"]["url"]),
                     "sha256": m["sha256"], "size_bytes": m["size_bytes"],
@@ -2085,7 +2127,10 @@ def main(generated: str = None) -> int:
                 f"<p><strong>Small difference observed:</strong> the newest live "
                 f"copy and the archived third-party copy of this summary {what} "
                 f"(similarity {float(nr['similarity']):.4f}"
-                + ("; both copies extracted with the same tool" if nr.get("same_tool") else "")
+                + ("; the comparison re-extracted both copies with one tool, so "
+                   "the archived extracts on this site — made by different "
+                   "extractor eras — need not reproduce this count"
+                   if nr.get("same_tool") else "")
                 + "). The differing words are listed in the repository's drift "
                 "report; compare the extracted text of the two document versions "
                 "below.</p>"))
@@ -2098,7 +2143,9 @@ def main(generated: str = None) -> int:
                 f"{int(hn.get('word_delta') or 0)} word(s) of extracted text changed "
                 f"between the captures of {esc(human_date(f_ts))} and "
                 f"{esc(human_date(t_ts))}"
-                + (" (both extracted with the same tool)" if hn.get("same_tool") else "")
+                + (" (the comparison re-extracted both copies with one tool; the "
+                   "archived extracts on this site need not reproduce this count)"
+                   if hn.get("same_tool") else "")
                 + "; both versions are archived below with their full text.</p>"))
         if source.get("retired"):
             vsections.insert(0, (
