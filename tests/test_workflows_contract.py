@@ -45,7 +45,20 @@ def _sweep_step_ids():
             if s.get("id") and s.get("continue-on-error") is True]
 
 
-SWEEP_STEP_IDS = _sweep_step_ids()
+# Pinned, NOT derived. Deriving the subject set from continue-on-error made the
+# test assert itself: removing the flag from a step silently removed that step
+# from the red-flag gate's coverage too, with the suite green. The equality check
+# below makes adding or un-flagging a sweep step a deliberate edit.
+EXPECTED_SWEEP_STEP_IDS = ["registry", "capture", "metahub", "derived",
+                           "evalhistory", "waybackretry", "otsupgrade", "drift",
+                           "verify"]
+SWEEP_STEP_IDS = EXPECTED_SWEEP_STEP_IDS
+
+
+def test_the_continue_on_error_sweep_steps_are_exactly_the_pinned_set():
+    assert _sweep_step_ids() == EXPECTED_SWEEP_STEP_IDS, (
+        "a sweep step gained or lost continue-on-error; the red-flag gate's "
+        "coverage changed with it — update the pinned list deliberately")
 
 
 def all_steps(wf: dict):

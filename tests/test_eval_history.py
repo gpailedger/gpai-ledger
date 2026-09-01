@@ -496,3 +496,38 @@ def test_a_graded_snapshot_is_a_providers_document_and_is_not_withheld():
     assert H.ARCHIVE_KIND == "aial-archive"
     assert H.ARCHIVE_KIND not in cap.RESTRICTED_KINDS
 
+
+
+# --- B26/B27: the routing and the withholding must be pinned -----------------
+
+def test_every_public_path_routes_to_the_kind_it_belongs_to():
+    # deleting two lines in group_for() republished AIAL's per-model evaluation
+    # pages as "the framework these evaluations use" with the whole suite green
+    cases = {
+        "evals/apertus.yaml": "aial-eval-history",
+        "public/evals/apertus/index.html": "aial-eval-page",
+        "public/evals/apertus/version-2026-01-12.html": "aial-eval-page",
+        "public/gpt-5.html": "aial-eval-page",          # AIAL's pre-May layout
+        "public/methodology.html": "aial-method",
+        "public/index.html": "aial-method",
+        "public/list_summaries.html": "aial-method",
+        "conf/config.json": "aial-method",
+        "public/archive/Some_Doc_2026.pdf": "aial-archive",
+    }
+    for path, kind in cases.items():
+        g = H.group_for(path)
+        assert g and g["kind"] == kind, (path, g and g["kind"])
+    for ignored in ("static/app.css", "eval.py", "README.md",
+                    "public/static/logo.png", "blogposts/post.md"):
+        assert H.group_for(ignored) is None, ignored
+
+
+def test_everything_harvested_from_aial_is_withheld_except_their_mirrors():
+    # a one-word rename of a group's kind would un-withhold AIAL's scoring config
+    # with the suite green; aial-archive is the deliberate carve-out, because
+    # those are the PROVIDERS' own mandated documents
+    withheld = set(H.HARVEST_KINDS) - {H.ARCHIVE_KIND}
+    assert withheld, "no harvested kind is withheld — the restriction is gone"
+    assert withheld <= set(cap.RESTRICTED_KINDS), (
+        f"harvested but not withheld: {sorted(withheld - set(cap.RESTRICTED_KINDS))}")
+    assert H.ARCHIVE_KIND not in cap.RESTRICTED_KINDS

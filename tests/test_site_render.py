@@ -1279,3 +1279,80 @@ def test_a_genuine_live_vs_archive_record_still_gets_its_banner(corpus, tmp_path
     dist = _build_site(tmp_path, monkeypatch, corpus.root, drift=drift)
     page = (dist / "ledger" / "prov" / "model" / "index.html").read_text(encoding="utf-8")
     assert "archived third-party copy of this summary" in page
+
+
+# --- B25: every lint rule must be shown to fire ------------------------------
+
+def test_lint_L3_fires_on_a_model_page_with_captures_and_no_section(tmp_path,
+                                                                    monkeypatch):
+    dist = _mk_dist(tmp_path)
+    mdir = dist / "ledger" / "prov" / "model"
+    mdir.mkdir(parents=True)
+    (mdir / "index.html").write_text(
+        _page("Model", "<p>a capture lives at v/20260101T000000Z/ but no heading "
+                       "explains what it is</p><a href='v/20260101T000000Z/'>x</a>"),
+        encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L3") for f in findings), findings
+
+
+def test_lint_L4_fires_on_a_document_row_carrying_the_app_shell_note(tmp_path,
+                                                                     monkeypatch):
+    dist = _mk_dist(tmp_path)
+    mdir = dist / "ledger" / "prov" / "model"
+    mdir.mkdir(parents=True)
+    # the exact marker the generator emits for a rendered app shell
+    (mdir / "index.html").write_text(
+        _page("Model", "<h2>Document versions</h2><table><tr>"
+                       "<td>raw.pdf</td><td>JS app shell</td></tr></table>"),
+        encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L4") for f in findings), findings
+
+
+def test_lint_L4_fires_when_a_published_source_has_no_document_entry(tmp_path,
+                                                                     monkeypatch):
+    dist = _mk_dist(tmp_path)
+    mdir = dist / "ledger" / "prov" / "model"
+    mdir.mkdir(parents=True)
+    (mdir / "index.html").write_text(
+        _page("Model", "<span class='tag tag-published'>Published</span>"
+                       "<h2>Watch-surface captures</h2>"
+                       "<a href='v/20260101T000000Z/'>a capture</a>"),
+        encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L4") for f in findings), findings
+
+
+def test_lint_L12_fires_on_two_canonicals_and_on_broken_jsonld(tmp_path,
+                                                               monkeypatch):
+    dist = _mk_dist(tmp_path)
+    (dist / "index.html").write_text(
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        '<title>GPAI Ledger</title>'
+        '<link rel="canonical" href="/"><link rel="canonical" href="/x">'
+        '<script type="application/ld+json">{not json}</script>'
+        '<meta name="description" content="fixture"></head><body><p>x</p></body></html>',
+        encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L12") for f in findings), findings
+
+
+def test_lint_L14_fires_on_a_sitemap_entry_that_resolves_nowhere(tmp_path,
+                                                                 monkeypatch):
+    dist = _mk_dist(tmp_path)
+    (dist / "sitemap.xml").write_text(
+        '<?xml version="1.0"?><urlset><url><loc>https://www.gpailedger.com/gone/</loc>'
+        "</url></urlset>", encoding="utf-8")
+    monkeypatch.setenv("GPAI_SITE_URL", "https://www.gpailedger.com")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L14") for f in findings), findings
+
+
+def test_lint_L15_fires_when_a_domain_deploy_has_no_seo_surface(tmp_path,
+                                                               monkeypatch):
+    dist = _mk_dist(tmp_path)                       # index.html only
+    monkeypatch.setenv("GPAI_SITE_URL", "https://www.gpailedger.com")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert any(f.startswith("L15") for f in findings), findings
+
