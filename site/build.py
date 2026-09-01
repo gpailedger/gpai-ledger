@@ -90,6 +90,11 @@ THIRD_PARTY_METHOD_KINDS = ("aial-method",)
 # statement about the provider, and the page's tense has to follow it
 PROVIDER_DOC_KINDS = ("provider-live", "provider-page")
 
+# Bumped BY HAND when a person actually re-reads the legal explainer against the
+# current text of the Regulation. Deriving it from the build date asserted a
+# review on every deploy that nobody had performed.
+LEGAL_TEXT_REVIEWED = "2026-08-22"
+
 STATUS_LABELS = {"published": "Published", "missing": "Missing",
                  "regulatory": "Regulatory", "watch": "Watch"}
 
@@ -1582,7 +1587,7 @@ href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-te
 Explanatory Notice &amp; template (public summary of training content)</a> · <a
 href="https://aial.ie/research/gpai-training-transparency/">AIAL's quality
 grades</a></p>
-<p class='muted'>Last reviewed: {esc((GENERATED or '')[:10])}. This page summarizes
+<p class='muted'>Last reviewed: {esc(LEGAL_TEXT_REVIEWED)}. This page summarizes
 the law for orientation; it is not legal advice.</p>"""
 
 
@@ -2203,7 +2208,10 @@ def main(generated: str = None) -> int:
         "Providers": f"{len(providers)}",
         "Summaries published": f"{n_published}",
         "Summaries missing": f"{n_missing}",
-        "Archived versions": f"{n_versions_total}",
+        # this counts CAPTURES, most of which are a third party's research whose
+        # content the site does not serve; calling them "archived versions" of
+        # summaries overstated the corpus by an order of magnitude
+        "Captures": f"{n_versions_total}",
         "Last sweep": last_sweep or "—",
     }
 

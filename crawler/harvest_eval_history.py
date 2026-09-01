@@ -562,8 +562,12 @@ def harvest_named_archives(store, started=None) -> tuple:
     already hold. These are the PROVIDERS' own documents that AIAL mirrors, so
     they are archived on the same terms as the rest of the corpus and are not
     withheld — unlike AIAL's assessment of them."""
+    # held_archive_names() globs every manifest in the corpus; calling it inside
+    # the comprehension re-scanned 1,640 manifests once per candidate and cost
+    # ~55s of the daily run for an answer that does not change mid-loop
+    have = held_archive_names()
     wanted = [(n, meta) for n, meta in sorted(named_archives().items())
-              if n not in held_archive_names()]
+              if n not in have]
     if not wanted:
         return 0, 0
     started = time.monotonic() if started is None else started
@@ -612,7 +616,9 @@ def harvest_named_archives(store, started=None) -> tuple:
                             "aial_archive_file_name": name})
         stored += 1
         print(f"  NEW  {sid} graded snapshot {name}", flush=True)
-    left = max(0, len(wanted) - MAX_ARCHIVES)
+    # "left" must count what was not attempted, not what the cap would have
+    # allowed: the two lines used to disagree with each other on one run
+    left = max(0, len(wanted) - i - 1) if wanted else 0
     print(f"harvest_eval_history: graded snapshots — stored {stored}, "
           f"errors {errors}, {left} left for the next run")
     return stored, errors

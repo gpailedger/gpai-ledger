@@ -16,6 +16,8 @@ Checks:
   C6  last_sha256 == versions[-1].sha256; last_capture == versions[-1].dir;
       last_text_sha256 == the last version manifest's text_sha256
   C7  retired entries carry a string reason and no live versions
+  C10 every entry's versions are in capture order (the prior-capture link and
+      every drift pair derive from it)
   C9  (warn) a proof still pending a bitcoin attestation after PENDING_WARN_DAYS
 
 Usage: python crawler/verify_corpus.py [--data-root data]
@@ -124,6 +126,14 @@ def verify(data_root: Path) -> int:
                 fail("C5", txt_p, "extracted.txt present but manifest text_sha256 is "
                                   "null — extracted text is unverifiable")
         if versions:
+            # C10: versions must be in capture order. That order decides which
+            # capture the site calls "the previous one", and every drift record
+            # is computed from consecutive pairs — a swap publishes a succession
+            # that never happened.
+            slugs = [str(v.get("dir", "")).rsplit("/", 1)[-1] for v in versions]
+            if slugs != sorted(slugs):
+                fail("C10", key, "versions are not in capture order — the prior-"
+                                 "capture link and every drift pair derive from it")
             last = versions[-1]
             if entry.get("last_sha256") != last["sha256"]:
                 fail("C6", key, "last_sha256 != versions[-1].sha256")

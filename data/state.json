@@ -1065,7 +1065,8 @@
     ],
     "last_sha256": "6d0dce769e8b2edd5ef6f6963fb31facca5211c9344970016434cf300d2a3729",
     "last_capture": "captures/meta__muse-spark/aial-archive-9e5b0e16/20260811T111428Z",
-    "last_text_sha256": "fe327ddcc0f506779d9b1b42304cfcfb2eb2e03f08f61732efa1b623d17d3f9a"
+    "last_text_sha256": "fe327ddcc0f506779d9b1b42304cfcfb2eb2e03f08f61732efa1b623d17d3f9a",
+    "retired": "superseded: AIAL corrected the archive_file_name for this model (it had pointed at Gemini_2026_07_21.pdf, another provider's document); the registry now tracks the corrected filename and this target no longer exists upstream"
   },
   "swiss-ai-initiative/apertus::provider-live-60cc0226": {
     "versions": [

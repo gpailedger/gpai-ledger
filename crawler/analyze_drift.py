@@ -266,7 +266,10 @@ def compare_words(a, b) -> dict:
     ma, mb, blocks = _moves(ia, ib)
     changes = [{"op": "moved", "old": " ".join(a[i1:i2])[:300], "new": " ".join(b[j1:j2])[:300]}
                for i1, i2, j1, j2 in blocks]
-    moved_words = sum(i2 - i1 for i1, i2, _, _ in blocks)
+    # count the words that moved, not the span they occupied on the old side:
+    # summing (i2 - i1) makes the total depend on which side is "old" and lets a
+    # non-identity token inflate it
+    moved_words = sum(len(set(range(i1, i2))) for i1, i2, _, _ in blocks)
     # residual sequences: moved words removed on both sides
     ra = [w for i, w in enumerate(a) if i not in ma]
     rb = [w for j, w in enumerate(b) if j not in mb]
@@ -645,6 +648,15 @@ def main() -> None:
                     note = ("compared captures were made with different capture "
                             "methods (rendering/frame/consent handling changed "
                             "between them) — not evidence of a provider edit")
+                elif history["verdict"] == "changed-unverified":
+                    # the two captures could not be re-extracted with one tool,
+                    # so the measurement is not comparable — reporting it as
+                    # near-identical or a drift candidate asserts a number the
+                    # module docstring says this verdict cannot support
+                    verdict = "incomplete"
+                    note = ("the two captures could not be re-extracted with one "
+                            "tool, so their difference is not a verified content "
+                            "comparison")
                 elif sim >= SIMILAR:
                     verdict = "near-identical"
                 else:
