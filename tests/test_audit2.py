@@ -2,10 +2,13 @@
 wording that must state only what the data supports, per-capture proofs,
 the consent-chrome dedupe, the OTS upgrade guard and the C5 bundle check."""
 import inspect
+import datetime
 import json
 import sys
 
 import pytest
+
+NL = chr(10)
 
 import build
 import capture as cap
@@ -231,7 +234,11 @@ def test_c5_fails_a_zip_bundle_whose_served_text_has_no_hash(tmp_path, monkeypat
         "versions": [{"sha256": sha, "dir": "captures/prov__model/provider-live-aaaa1111/20260811T100000Z"}],
         "last_sha256": sha, "last_text_sha256": None,
         "last_capture": "captures/prov__model/provider-live-aaaa1111/20260811T100000Z"}}), encoding="utf-8")
-    (root / "events.jsonl").write_text("", encoding="utf-8")
+    # a realistic corpus has swept recently; an empty log is itself a C11 failure
+    (root / "events.jsonl").write_text(json.dumps({
+        "ts": datetime.datetime.now(datetime.timezone.utc)
+        .strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "outcome": "unchanged"}) + NL, encoding="utf-8")
     monkeypatch.setattr(sys, "argv", ["verify_corpus.py", "--data-root", str(root)])
     verify_corpus.FAILS.clear()
     verify_corpus.WARNS.clear()
@@ -275,7 +282,11 @@ def test_c9_warns_on_a_proof_still_pending_after_a_week(tmp_path, monkeypatch):
         "versions": [{"sha256": sha, "dir": "captures/prov__model/provider-live-aaaa1111/20260701T100000Z"}],
         "last_sha256": sha, "last_text_sha256": None,
         "last_capture": "captures/prov__model/provider-live-aaaa1111/20260701T100000Z"}}), encoding="utf-8")
-    (root / "events.jsonl").write_text("", encoding="utf-8")
+    # a realistic corpus has swept recently; an empty log is itself a C11 failure
+    (root / "events.jsonl").write_text(json.dumps({
+        "ts": datetime.datetime.now(datetime.timezone.utc)
+        .strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "outcome": "unchanged"}) + NL, encoding="utf-8")
     monkeypatch.setattr(sys, "argv", ["verify_corpus.py", "--data-root", str(root)])
     verify_corpus.FAILS.clear()
     verify_corpus.WARNS.clear()

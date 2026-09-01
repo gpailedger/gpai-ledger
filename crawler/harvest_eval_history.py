@@ -373,17 +373,25 @@ def place(state, text, idx, by_id, archive_owners, raw=None, by_hash=None) -> tu
     return sid, own[0], own[1]
 
 
-def newest_upstream_date(store, sid: str, tslug: str) -> str:
-    """The upstream date of the newest state already stored for this target."""
-    entry = store.state.get(store.key(sid, tslug)) or {}
-    d = entry.get("last_capture")
-    if not d:
-        return ""
-    try:
-        m = json.loads((DATA / d / "manifest.json").read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return ""
-    return str(m.get("git_commit_date") or "")
+def newest_upstream_dates() -> dict:
+    """git_path -> the newest upstream date already stored for that file.
+
+    Keyed on the PATH, not on (source, target). A state's source id is resolved
+    from the file's own contents, so an upstream model_name edit moves the next
+    state to a different source — and a guard keyed on the source it landed in
+    would not see the newer state already held elsewhere, and would append an
+    older one after it. prior_sha256 would then assert a succession that never
+    happened, which is the one thing this record must never do."""
+    out = {}
+    for mp in (DATA / "captures").glob("*/*/*/manifest.json"):
+        try:
+            m = json.loads(mp.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        path, when = m.get("git_path"), m.get("git_commit_date")
+        if path and when:
+            out[path] = max(out.get(path, ""), str(when))
+    return out
 
 
 def pinned_url(commit: str, path: str) -> str:
@@ -420,7 +428,13 @@ def version_links(html: str, page_url: str) -> list:
     global VERSION_RE
     import re as _re
     if VERSION_RE is None:
-        VERSION_RE = _re.compile(r'href=["\']([^"\']*?/version-[0-9]{4}-[0-9]{2}-[0-9]{2}/?)["\']')
+        # AIAL emits these as BARE relative hrefs - href="version-2026-03-30",
+        # no leading slash and no trailing one. Requiring "/version-" meant
+        # this matched nothing, ever: zero version pages have been captured
+        # since it was written, and the run said nothing because the summary
+        # line was suppressed whenever the list came back empty.
+        VERSION_RE = _re.compile(
+            r'href=["\']([^"\']*version-[0-9]{4}-[0-9]{2}-[0-9]{2}/?)["\']')
     out = []
     for href in VERSION_RE.findall(html or ""):
         url = urllib.parse.urljoin(page_url, href)
@@ -465,6 +479,10 @@ def harvest_version_pages(store, started=None) -> tuple:
                 queued.add(url)
                 wanted.append((sid, url))
     stored = errors = 0
+    # Say the count even when it is zero. A silent nothing is how a regex that
+    # matched no href for its whole life went unnoticed.
+    print(f"harvest_eval_history: {len(wanted)} version page(s) to fetch",
+          flush=True)
     started = time.monotonic() if started is None else started
     consecutive = 0
     for i, (sid, url) in enumerate(wanted[:MAX_VERSION_PAGES]):
@@ -484,6 +502,14 @@ def harvest_version_pages(store, started=None) -> tuple:
         try:
             raw, meta = cap.fetch(url)
             consecutive = 0
+        except cap.PermanentFetchError as exc:
+            # AIAL links a few version pages that do not resolve. That is a fact
+            # about their site, not a failure of this harvest; counting it makes
+            # the daily run red forever over a page nobody can fetch.
+            print(f"  GONE   version page {url} — {exc.status_code}: linked by an "
+                  f"evaluation page but not published", flush=True)
+            consecutive = 0
+            continue
         except Exception as exc:                                  # noqa: BLE001
             print(f"  ERROR version page {url}: {exc!r}", flush=True)
             errors += 1
@@ -635,6 +661,7 @@ def main() -> int:
              (json.loads(REGISTRY.read_text(encoding="utf-8"))["sources"]
               if REGISTRY.exists() else [])}
     done = held(store)
+    newest_by_path = newest_upstream_dates()
     archive_owners = named_archives()
     for key in list(archive_owners):
         archive_owners.setdefault(_fold(key), archive_owners[key])
@@ -685,7 +712,7 @@ def main() -> int:
         # Appending it now would record it as following a state it preceded, and
         # prior_sha256 would assert a succession that never happened. Refuse, and
         # say so: a gap that is reported can be repaired, a false chain cannot.
-        newest = newest_upstream_date(store, sid, tslug)
+        newest = newest_by_path.get(state["path"], "")
         if newest and state["date"] < newest:
             print(f"  SKIP   {state['path']} @{state['commit'][:8]} "
                   f"({state['date'][:10]}) predates the newest state held for "
@@ -712,6 +739,8 @@ def main() -> int:
             event_extra={"git_commit": state["commit"],
                          "git_commit_date": state["date"]})
         stored += 1
+        newest_by_path[state["path"]] = max(newest_by_path.get(state["path"], ""),
+                                            state["date"])
         print(f"  NEW  {sid} {state['path']} @{state['commit'][:8]} "
               f"({state['date'][:10]})", flush=True)
     left = max(0, len(todo) - attempted)

@@ -6,6 +6,7 @@ exactly one invariant and asserts the right check code fires.
 """
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -396,3 +397,39 @@ def test_c7_nonretired_entry_without_versions_warns_not_fails(corpus):
     assert VC.verify(root) == 0
     assert VC.FAILS == []
     assert any(c == "C7" and "no versions" in m for c, _, m in VC.WARNS)
+
+
+def test_a_sweep_that_stopped_running_is_detected(tmp_path, monkeypatch, capsys):
+    # GitHub silently stopped this project's crons on 28 Aug 2026: no failed run,
+    # no notification, just an event log that stopped growing, found by chance.
+    # This is the only detector, and it must reach the exit code.
+    import verify_corpus as vc
+    data = tmp_path / "data"
+    (data / "captures").mkdir(parents=True)
+    (data / "state.json").write_text("{}", encoding="utf-8")
+    (data / "events.jsonl").write_text(
+        json.dumps({"ts": "2026-08-01T06:00:00Z", "outcome": "unchanged"}) + "\n",
+        encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["verify_corpus.py", "--data-root", str(data)])
+    vc.FAILS.clear()
+    vc.WARNS.clear()
+    rc = vc.main()
+    out = capsys.readouterr().out
+    assert "C11" in out and "stopped running" in out
+    assert rc == 1, "a stopped sweep printed a failure but the run stayed green"
+
+
+def test_a_fresh_event_log_passes(tmp_path, monkeypatch, capsys):
+    import datetime
+    import verify_corpus as vc
+    data = tmp_path / "data"
+    (data / "captures").mkdir(parents=True)
+    (data / "state.json").write_text("{}", encoding="utf-8")
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    (data / "events.jsonl").write_text(
+        json.dumps({"ts": now, "outcome": "unchanged"}) + "\n", encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["verify_corpus.py", "--data-root", str(data)])
+    vc.FAILS.clear()
+    vc.WARNS.clear()
+    assert vc.main() == 0
+    assert "C11" not in capsys.readouterr().out

@@ -531,3 +531,25 @@ def test_everything_harvested_from_aial_is_withheld_except_their_mirrors():
     assert withheld <= set(cap.RESTRICTED_KINDS), (
         f"harvested but not withheld: {sorted(withheld - set(cap.RESTRICTED_KINDS))}")
     assert H.ARCHIVE_KIND not in cap.RESTRICTED_KINDS
+
+
+def test_version_links_match_the_bare_relative_hrefs_aial_actually_emits():
+    # AIAL writes href="version-2026-03-30": no leading slash, no trailing one.
+    # The original pattern required "/version-", so it matched nothing for its
+    # entire life and the run reported nothing because zero was never printed.
+    html = ('<a href="version-2026-03-30">2026-03-30</a>'
+            '<a href="version-2026-01-12">2026-01-12</a>'
+            '<a href="/research/x/evals/m/version-2025-11-12/">older</a>'
+            '<a href="/elsewhere/not-a-version">no</a>')
+    base = "https://aial.ie/research/gpai-training-transparency/evals/apertus/"
+    found = H.version_links(html, base)
+    assert found == [
+        base + "version-2026-03-30",
+        base + "version-2026-01-12",
+        "https://aial.ie/research/x/evals/m/version-2025-11-12/",
+    ], found
+
+
+def test_version_links_stay_on_aial():
+    html = '<a href="https://evil.example/version-2026-03-30">x</a>'
+    assert H.version_links(html, "https://aial.ie/a/") == []

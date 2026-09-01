@@ -18,6 +18,8 @@ Checks:
   C7  retired entries carry a string reason and no live versions
   C10 every entry's versions are in capture order (the prior-capture link and
       every drift pair derive from it)
+  C11 the event log is not stale — a sweep that silently stops firing leaves
+      every page publishing a "Last checked" date that quietly ages
   C9  (warn) a proof still pending a bitcoin attestation after PENDING_WARN_DAYS
 
 Usage: python crawler/verify_corpus.py [--data-root data]
@@ -25,6 +27,7 @@ Usage: python crawler/verify_corpus.py [--data-root data]
 import argparse
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -33,6 +36,50 @@ FAILS, WARNS, STATS = [], [], {}
 
 def _target_slug(kind: str, url: str) -> str:
     return f"{kind}-{hashlib.sha256(url.encode()).hexdigest()[:8]}"
+
+
+# A sweep runs daily; two missed days is unambiguous. Generous enough that a
+# one-off outage or a manual re-run does not cry wolf.
+MAX_EVENT_AGE_HOURS = float(os.environ.get("GPAI_MAX_EVENT_AGE_H", "48") or "48")
+
+
+def _check_event_log_is_fresh(data_root) -> None:
+    """C11: the newest event must be recent. This is the only detector for a cron
+    that stops firing — the failure has happened once and was found by chance."""
+    import datetime as _dt
+    p = Path(data_root) / "events.jsonl"
+    if not p.exists():
+        fail("C11", str(p), "no event log at all — nothing has ever swept")
+        return
+    newest = ""
+    with p.open(encoding="utf-8") as fh:
+        for line in fh:
+            i = line.find('"ts"')
+            if i < 0:
+                continue
+            try:
+                ts = json.loads(line).get("ts") or ""
+            except (ValueError, AttributeError):
+                continue
+            if ts > newest:
+                newest = ts
+    if not newest:
+        fail("C11", str(p), "event log carries no timestamps")
+        return
+    try:
+        when = _dt.datetime.strptime(newest[:19], "%Y-%m-%dT%H:%M:%S").replace(
+            tzinfo=_dt.timezone.utc)
+    except ValueError:
+        fail("C11", str(p), f"newest event timestamp is unparseable: {newest!r}")
+        return
+    age = (_dt.datetime.now(_dt.timezone.utc) - when).total_seconds() / 3600
+    if age > MAX_EVENT_AGE_HOURS:
+        fail("C11", str(p),
+             f"newest event is {age:.0f}h old ({newest[:16]}), over the "
+             f"{MAX_EVENT_AGE_HOURS:.0f}h limit — the sweep has stopped running. "
+             f"GitHub has silently disabled this project's crons before; "
+             f"re-enable with `gh workflow disable ledger.yml && gh workflow "
+             f"enable ledger.yml`")
 
 
 def fail(check, path, msg):
@@ -299,6 +346,9 @@ def main() -> int:
     ap.add_argument("--data-root", default=str(Path(__file__).resolve().parent.parent / "data"))
     args = ap.parse_args()
     rc = verify(Path(args.data_root))
+    # C11 runs after verify() so its failure joins the same report, and its
+    # result must reach the exit code
+    _check_event_log_is_fresh(Path(args.data_root))
     print("=== corpus stats ===")
     for k, v in STATS.items():
         print(f"  {k}: {v}")
@@ -313,7 +363,11 @@ def main() -> int:
         print("\nRESULT: FAIL")
     else:
         print("\nRESULT: OK — corpus integrity verified")
-    return rc
+    # rc came from verify(); C11 runs after it, so the exit code must
+    # be derived from the failure list rather than from rc alone —
+    # otherwise the check prints a failure and the run stays green,
+    # which is worse than having no check
+    return 1 if FAILS else rc
 
 
 if __name__ == "__main__":
