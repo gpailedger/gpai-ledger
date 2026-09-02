@@ -1,0 +1,47 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "63b398e72aa0743838d6f66105450cf82f3dbcba3ca9b5016463676471de3166",
+  "size_bytes": 827470,
+  "stored_as": "raw.html",
+  "text_sha256": "722b58b67a1c8aeedfbe571f02e22675b2d58e54118d1270b5079b99006ff37f",
+  "doc_links_sha256": "e8ab8b2ad431c61e6775be03b7bf26749df33787de2fef11c66d315eb0699e00",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "827470",
+    "fetched_at": "2026-09-02T06:03:24Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-02T06:03:24Z",
+    "at": "2026-09-02T06:05:24Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:05:30Z"
+  }
+}

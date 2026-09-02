@@ -4887,6 +4887,34 @@
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:42Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260826T081032Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260902T055919Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260826T081032Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260902T055919Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:40Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-history-941c4fb5::captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184254Z>captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184536Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -5296,6 +5324,34 @@
     "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:42Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260826T081049Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260902T060003Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260826T081049Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260902T060003Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:40Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -5815,6 +5871,34 @@
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:42Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260826T081303Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260902T060047Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260826T081303Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260902T060047Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:40Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-history-1346dfa5::captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184309Z>captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184549Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -6225,6 +6309,34 @@
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:43Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260826T081323Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260902T060113Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260826T081323Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260902T060113Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:40Z"
+  },
   "anthropic/claude-opus-5::aial-eval-history-e94ba648::captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184317Z>captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184556Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -6634,6 +6746,34 @@
     "from_sha256": "d35a4e92d16ca1ee2103e0547b06a5ab020d33cd5e217d1e96562c105fe01faa",
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:43Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260826T081537Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260902T060138Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260826T081537Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260902T060138Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:41Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -7117,6 +7257,34 @@
     "to_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "computed_at": "2026-08-26T08:46:43Z"
   },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260826T081751Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260902T060232Z": {
+    "verdict": "changed",
+    "similarity": 0.9837,
+    "word_delta": 56,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Documentation Form Training",
+        "new": "Documentation Form Claude Mythos 5.1 Fable 5.1 Model Documentation Form Copy link for Claude Mythos 5.1 Fable 5.1 Model Documentation Form View Claude Mythos 5.1 Fable 5.1 Model Documentation Form"
+      },
+      {
+        "op": "insert",
+        "old": "5 Training Data",
+        "new": "Training Data Summary Claude Mythos 5.1 Fable 5.1 Training Data Summary Copy link for Claude Mythos 5.1 Fable 5.1 Training Data Summary View Claude Mythos 5.1 Fable 5.1 Training Data"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260826T081751Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260902T060232Z",
+    "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
+    "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "computed_at": "2026-09-02T07:01:41Z"
+  },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
     "similarity": 0.9823,
@@ -7467,6 +7635,92 @@
     "from_sha256": "e2ec785e7535156631a04d167ebfc7b8012dd076d745bbb3545a51183b3836ef",
     "to_sha256": "e4910d36ae58ae500abcb0ba8b4d178169b08f97fe11c72a8150ec187d8c21c9",
     "computed_at": "2026-09-01T06:15:25Z"
+  },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260901T060835Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260902T061505Z": {
+    "verdict": "changed",
+    "similarity": 0.9702,
+    "word_delta": 46,
+    "moved_words": 107,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Claude Platform Docs Solutions AI agents Code modernization Coding Customer support Financial services Government Higher education K-12 teachers Life sciences Partners Claude on AWS Claude on Google Cloud Learn Blog Courses Use cases Connectors Customer stories Engineering at Anthropic Events Powere",
+        "new": "Claude Platform Docs Solutions AI agents Code modernization Coding Customer support Financial services Government Higher education K-12 teachers Life sciences Partners Claude on AWS Claude on Google Cloud Learn Blog Courses Use cases Connectors Customer stories Engineering at Anthropic Events Powere"
+      },
+      {
+        "op": "insert",
+        "old": "Fable 5 Claude Opus",
+        "new": "Fable 5.1 Claude"
+      },
+      {
+        "op": "replace",
+        "old": "for complex agentic coding and enterprise work for the highest available capability, use Claude",
+        "new": "for most workloads. Use Claude"
+      },
+      {
+        "op": "insert",
+        "old": "Fable 5 . All current",
+        "new": "Fable 5.1 for demanding reasoning and long-horizon agentic work, or when your evals on Claude Opus 5 at higher effort still fall short. All"
+      },
+      {
+        "op": "replace",
+        "old": "use each model",
+        "new": "use. Each model"
+      },
+      {
+        "op": "delete",
+        "old": "it is available",
+        "new": "platforms it s available"
+      },
+      {
+        "op": "replace",
+        "old": "5 Next-generation intelligence for long-running agents Claude",
+        "new": "Fable 5.1 For demanding reasoning and long-horizon agentic work Claude"
+      },
+      {
+        "op": "insert",
+        "old": "ID claude-fable-5 claude-opus-5 claude-sonnet-5",
+        "new": "ID claude-fable-5-1 claude-opus-5"
+      },
+      {
+        "op": "replace",
+        "old": "cutoff Jan 2026",
+        "new": "cutoff Jun 2026"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260901T060835Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260902T061505Z",
+    "from_sha256": "e4910d36ae58ae500abcb0ba8b4d178169b08f97fe11c72a8150ec187d8c21c9",
+    "to_sha256": "cc823394d2f9915fba7956604cde0bcdd04c4327db9394bc506abde60f35d66e",
+    "computed_at": "2026-09-02T07:01:46Z"
+  },
+  "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
+    "verdict": "changed",
+    "similarity": 0.9204,
+    "word_delta": 1383,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Content Claude Mythos Preview",
+        "new": "Content Claude Fable 5.1 Claude Mythos 5.1 Training Data Summary Version of the Summary: Version 1 Last update: September 1, 2026 1. General information 1.1. Provider identification Provider name and contact details: Anthropic Ireland, Limited 6th Floor South Bank House, Barrow Street, Dublin 4, Dub"
+      }
+    ],
+    "source": "anthropic/trust-center-bundle",
+    "target": "provider-live-9af5dc02",
+    "from_dir": "captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z",
+    "to_dir": "captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z",
+    "from_sha256": "4d2f4ba23f6af556bd0fad6cbc2fa40c1fad17fc98d40f4834d06ec32bd3aa14",
+    "to_sha256": "16a06978e951ed6ed4b95d19b1e5cba180505a23efef21c63713b2c7e6017925",
+    "computed_at": "2026-09-02T07:01:46Z"
   },
   "black-forest-labs/flux-2-klein::aial-eval-page-b9079221::captures/black-forest-labs__flux-2-klein/aial-eval-page-b9079221/20260831T103246Z>captures/black-forest-labs__flux-2-klein/aial-eval-page-b9079221/20260831T111322Z": {
     "verdict": "identical-text",
@@ -9628,6 +9882,22 @@
     "from_sha256": "2185d8b007cb144ea906622e045314b443030b8590e9e7b6c9fb3b6a4a8de14d",
     "to_sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
     "computed_at": "2026-09-01T06:15:25Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260901T055918Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260902T060324Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260901T055918Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260902T060324Z",
+    "from_sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
+    "to_sha256": "63b398e72aa0743838d6f66105450cf82f3dbcba3ca9b5016463676471de3166",
+    "computed_at": "2026-09-02T07:01:41Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
@@ -13976,6 +14246,59 @@
     "computed_at": "2026-08-31T12:28:17Z",
     "changes": [],
     "changes_withheld": true
+  },
+  "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
+    "verdict": "changed",
+    "similarity": 0.9944,
+    "word_delta": 15,
+    "moved_words": 5,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Public Summary of Training Content",
+        "new": "Public Summary of Training Content"
+      },
+      {
+        "op": "insert",
+        "old": "number: V3 Last Update:",
+        "new": "number: V3.1Last Update:"
+      },
+      {
+        "op": "replace",
+        "old": "August 4, 20261.",
+        "new": "August 21, 20261."
+      },
+      {
+        "op": "insert",
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+      },
+      {
+        "op": "replace",
+        "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+        "new": "details: N/A1.2. Model"
+      },
+      {
+        "op": "replace",
+        "old": "s :Purposes of",
+        "new": "s and purposes of"
+      },
+      {
+        "op": "replace",
+        "old": "training datasets.3.2 Other",
+        "new": "training datasets.3.3 Other"
+      }
+    ],
+    "source": "meta/muse-spark",
+    "target": "live-vs-archive",
+    "from_dir": "captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z",
+    "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
+    "from_sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+    "to_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
+    "computed_at": "2026-09-02T07:01:46Z"
   },
   "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-9e5b0e16/20260811T111428Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
@@ -19585,6 +19908,29 @@
     "from_sha256": "ed0d685a0502a80e138c35220dc71c45d7357406d1965b0902c334ee9fddaf1e",
     "to_sha256": "5e44cad30a073bf1256edc02830c8b55cfc523a897e59487f68ca30125170253",
     "computed_at": "2026-09-01T06:15:25Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260901T060819Z>captures/openai__model-catalog/watch-page-0e5ba652/20260902T061433Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "ChatGPT Work Overview",
+        "new": "ChatGPT Work ChatGPT Work"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260901T060819Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260902T061433Z",
+    "from_sha256": "5e44cad30a073bf1256edc02830c8b55cfc523a897e59487f68ca30125170253",
+    "to_sha256": "48a9764aef1b955d3bfb6dee62d052c7ca592e6a2ff52b669dcc9f220cb277f5",
+    "computed_at": "2026-09-02T07:01:46Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

@@ -1,0 +1,36 @@
+{
+  "source_id": "microsoft/phi-4",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "phi-4",
+  "target_kind": "aial-eval-page",
+  "sha256": "4e6d5ecb4bb6448ba23c8bc30d3b70a30901326b980bae2865fb1fea1824a316",
+  "size_bytes": 24667,
+  "stored_as": "raw.html",
+  "text_sha256": "33f33285fa5835bfc7a03daf440c053a6f9766798f0bb9697b41f389cb350d2c",
+  "doc_links_sha256": "0fc696b7a90d7391714c8fe07d94485176d9385125003e92ca395a44dca84b11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4/version-2026-03-31",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4/version-2026-03-31",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwj17\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:18:23Z"
+  },
+  "prior_sha256": null,
+  "aial_published_version": "2026-03-31",
+  "harvested_from": "an evaluation page already captured",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:18:28Z"
+  }
+}

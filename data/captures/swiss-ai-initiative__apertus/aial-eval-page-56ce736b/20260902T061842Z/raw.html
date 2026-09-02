@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assessment of Apertus</title>
+    <meta name="color-scheme" content="light only">
+    <!-- <link rel="stylesheet" href="../../static/pico/pico.min.css"> -->
+    <link rel="stylesheet" href="../../static/pico/pico.classless.violet.min.css">
+    <link rel="stylesheet" href="../../static/custom.css">
+    <!-- <link href="../../static/styles.css" rel="stylesheet"/> -->
+    <script src="../../static/sorttable.js"></script>
+    <style>
+article {
+    max-width: 90vw;
+    font-size: 0.8rem;
+}
+th {
+    text-align: center;
+}
+#evaluations .grade.na { background-color:darkgray; }
+
+span.openness { display:inline-block;
+padding:1px 5px; color:#ffffff }
+span.open { background-color:#3e9b74; }
+span.partial { background-color:#dd9f1c; }
+span.closed { background-color:#ca6014; }
+
+#evaluations {
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.5rem;
+    border: 1px solid #EEE;
+}
+
+colgroup col:first-child {
+    width: auto;
+}
+
+colgroup col:not(:first-child) {
+    width: calc((100% - auto) / 4);
+}
+th { 
+    border: none; 
+    white-space: nowrap;
+}
+td {
+    white-space: nowrap;
+}
+tr:not(:last-child) td:nth-child(1),th:nth-child(1) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(5),th:nth-child(5) {
+     border-right: 1px solid #EEE;
+}
+tr:not(:last-child) td:nth-child(7),th:nth-child(7) {
+     border-right: 1px solid #EEE;
+}
+
+      .sticky-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        background: #F33;
+        color: #fff;
+        padding: 20px 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 999;
+      }
+    </style>
+    <link href="../../static/favicon.png" rel="icon" type="image/x-icon"/>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://aial.ie">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:black;border-radius:50%;padding:0.2rem;">
+            <img src="https://aial.ie/logo.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aial.ie">AIAL</a>
+      </li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <ul id="main-menu" class="menu">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../detailed-overview">Analysis</a></li>
+      <li><a href="../../methodology">Methodology</a></li>
+      <li><a href="../../recommendations">Recommendations</a></li>
+      <li><a href="../../blog/">Blog</a></li>
+      <li style="margin-right: 5px;"><a href="../../about">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <article>
+    <header>
+        <h1>Apertus</h1>
+        <h2 style="font-size: 0.8rem;">GPAI Provider: <a href="https://www.swiss-ai.org/" target="_blank">Swiss AI Initiative</a></h2>
+    </header>
+
+    <section>
+        <h2>Metadata</h2>
+        <p>
+            <strong>Model URL:</strong> <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509" target="_blank">https://huggingface.co/swiss-ai/Apertus-70B-2509</a><br/>
+            <strong>When was this model published?</strong> 2025-09-02<br/>
+            <strong>Is this a new or a fine-tuned model?</strong> New model<br/>
+            <strong>When was the Public Summary last updated?</strong> 2025-09-01<br/>
+            <strong>When did we evaluate the Public Summary?</strong> 2026-03-30<small> (see <a href="#previous-versions">previous versions here</a>)</small><br/>
+            <strong>Where did we find the Public Summary?</strong> We found <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf" target="_blank">this document</a> linked on <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509" target="_blank">this page</a>. An archived version can be found <a href="../../archive/Apertus_2025_11_12.pdf">here</a>.
+        </p>
+    </section>
+    <section>        
+        <h2>Results of Evaluation</h2>
+        <table id="evaluations" class="table-mobile" style="table-layout: fixed;">
+            <colgroup>
+                <col />
+                <col span="4" />
+                <col span="2" />
+                <col span="2" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th colspan="4" style="border-right: 1px solid #EEE;">Transparency</th>
+                    <th colspan="2" style="border-right: 1px solid #EEE;">Usefulness</th>
+                    <th colspan="2">General</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Clarity</th>
+                    <th>Completeness</th>
+                    <th>Consistency</th>
+                    <th>Correctness</th>
+                    <th>Accessibility</th>
+                    <th>Comprehension</th>
+                    <th><strong><i>Transparency</i></strong></th>
+                    <th><strong><i>Usefulness</i></strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-a">
+                    <td class="name-cell">Document</td>
+                    <td class="open grade data-cell">81.82</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">70.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="partial grade data-cell">66.67</td>
+                    <td class="open grade data-cell">87.04</td>
+                    <td class="open grade data-cell">84.21</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">General information</td>
+                    <td class="closed grade data-cell">47.62</td>
+                    <td class="open grade data-cell">82.26</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">90.91</td>
+                    <td class="partial grade data-cell">74.62</td>
+                    <td class="open grade data-cell">93.75</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Public Data Sources</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Private Data Sources</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Scraped/Crawled Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">User Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Synthetic/Other Data</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="na grade data-cell">N/A</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="na grade data-cell">N/A</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Data Processing</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">100.0</td>
+                </tr>
+                <tr class="row-a">
+                    <td class="name-cell">Sum</td>
+                    <td class="open grade data-cell">85.8</td>
+                    <td class="open grade data-cell">94.39</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">98.48</td>
+                    <td class="open grade data-cell">100.0</td>
+                    <td class="open grade data-cell">95.56</td>
+                    <td class="open grade data-cell">92.9</td>
+                    <td class="open grade data-cell">97.14</td>
+                </tr>
+                <tr class="row-a row-last">
+                    <td>Grades</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="outline data-cell" style="text-align: center;"><strong>A</strong></td><td class="outline data-cell" style="text-align: center;"><strong>A+</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<section id="notes">
+        <h2>Evaluation Notes</h2>
+        <blockquote>
+            <small>If you update your public summary, please <a href="../../about">let us know</a> so that we can update the evaluation and scores. We also welcome suggestions on improvements to this page, e.g. see <a href="../../methodology#FAQ">FAQ section</a>.</small>
+        </blockquote>
+        <p>The public summary for the Apertus model family can be found as a PDF on HuggingFace in the same context as its models, for instance at <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf" target="_blank">the repository of Apertus-70B-2509</a>. Each field of the template was filled in, including explicitly marking sections as not applicable, though some fields included superfluous information not relevant to the topic or question which caused a few points deduction. We assessed its score to be <span class="openness open">92.90%</span> with Grade <strong>A</strong> for <strong><i>transparency</i></strong>, and <span class="openness open">97.14%</span> with Grade <strong>A+</strong> for <strong><i>usefulness</i></strong>, which were the highest of all assessed summaries published before and during our initial research.</p>
+
+        <p>
+            <strong>Suggested Improvements</strong><br/>
+            The following are the suggested improvements based on using our <a href="../../methodology">our methodology</a> where the public summary had issues related to the specified metric. The severity represents the extent of the issue, with low indicating aspects that could be fixable, and high representing missing information or requiring major changes.</p>
+        </p>
+        <ul>            <li><strong>Document</strong>
+                <ul>                    <li>M1 Document should clearly whether it is the latest version or if it is outdated and a replacement is made available. Document should provide a link to all versions of the document. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 Document should provide link to authoritative source of the document. Date format for date of last update should be correct. <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+                    <li>M6 Document should clearly indicate changes from previous version, as well as where notice of updates or changes will be provided <sup><span class="partial" style="padding: 2px; color: white; font-size: 0.5rem;">medium</sup></li>
+</ul>
+            </li>
+            <li><strong>General information</strong>
+                <ul>                    <li>M1 Description of types of content can be made more precise, i.e. categories of content such as legal text, social media comments rather than a generic description of 'public text-only data derived mainly from web documents'.<br/><br/>Our suggestion: specify categories in which the public datasets are actually provided, mentioning that training data primarily consists of educational webpages (from FineWeb-Edu and DCLM-Edu), crawled web-pages filtered for high-quality content (FineWeb-2, FineWeb-HQ, and FineWeb2-HQ), code data (The Stack dedup and StackV2_Edu_Filtered), and mathematical pretraining data (FineMath and MegaMath).<br/><br/>Mention of training data being fully transparent and reproducible is not strictly necessary given the field. We think this would be better in Additional comments (optional) field.<br/><br/>Other relevant characteristics of the overall training data: respecting of consent and the removal of toxic content, which should be provided in the assigned field in section 3.1 (consent), 3.2 (toxic content) or 3.3 (optional info). <sup><span class="closed" style="padding: 2px; color: white; font-size: 0.5rem;">high</sup></li>
+                    <li>M2 Description of the linguistic characteristics of the overall training data: Missing info on language and EU languages.<br/><br/>Our suggestion: given the large number of languages used in pretraining (999+), mention the EU languages covered, e.g. 'text from all EU languages was used in the training of this model', with perhaps a link to the list of language-script pairs or where to find info on languages. This would already provide enough information to writers of a given language to be able to see whether training may have spanned their writing in that language. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 Latest date of data acquisition/collection for model training: indicate whether continuous training is employed (see template placeholder text).<br/><br/>Our suggestion: Even though this is fairly evident given the type of model which Apertus is, it is still handy to include, and is expected by the template. The phrasing 'later date' is also ambiguous with fine-tuning. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+</ul>
+            </li>
+            <li><strong>Sum</strong>
+                <ul>                    <li>M1 Document should clearly whether it is the latest version or if it is outdated and a replacement is made available. Document should provide a link to all versions of the document.Description of types of content can be made more precise, i.e. categories of content such as legal text, social media comments rather than a generic description of 'public text-only data derived mainly from web documents'.<br/><br/>Our suggestion: specify categories in which the public datasets are actually provided, mentioning that training data primarily consists of educational webpages (from FineWeb-Edu and DCLM-Edu), crawled web-pages filtered for high-quality content (FineWeb-2, FineWeb-HQ, and FineWeb2-HQ), code data (The Stack dedup and StackV2_Edu_Filtered), and mathematical pretraining data (FineMath and MegaMath).<br/><br/>Mention of training data being fully transparent and reproducible is not strictly necessary given the field. We think this would be better in Additional comments (optional) field.<br/><br/>Other relevant characteristics of the overall training data: respecting of consent and the removal of toxic content, which should be provided in the assigned field in section 3.1 (consent), 3.2 (toxic content) or 3.3 (optional info). <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M2 Description of the linguistic characteristics of the overall training data: Missing info on language and EU languages.<br/><br/>Our suggestion: given the large number of languages used in pretraining (999+), mention the EU languages covered, e.g. 'text from all EU languages was used in the training of this model', with perhaps a link to the list of language-script pairs or where to find info on languages. This would already provide enough information to writers of a given language to be able to see whether training may have spanned their writing in that language. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M4 Document should provide link to authoritative source of the document. Date format for date of last update should be correct. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+                    <li>M6 Document should clearly indicate changes from previous version, as well as where notice of updates or changes will be providedLatest date of data acquisition/collection for model training: indicate whether continuous training is employed (see template placeholder text).<br/><br/>Our suggestion: Even though this is fairly evident given the type of model which Apertus is, it is still handy to include, and is expected by the template. The phrasing 'later date' is also ambiguous with fine-tuning. <sup><span class="open" style="padding: 2px; color: white; font-size: 0.5rem;">low</sup></li>
+</ul>
+            </li>
+</ul>
+
+    </section>
+<section id="previous-versions">
+        <h2>Previous Versions</h2>
+        <ul>
+            <li><a href="version-2026-03-30">2026-03-30</a> (current version)</li>
+            <li><a href="version-2026-01-12">2026-01-12</a></li>
+</ul>
+    </section>    </article>
+  </main>
+  <footer>
+    <p>This work has received funding from the Mozilla Foundation. The AIAL is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; the European Artificial Intelligence & Society Fund; and the John D. and Catherine T. MacArthur Foundation. Our Host Institute are: <br/>
+      <a href="https://tcd.ie/"><img src="https://aial.ie/tcd-logo.png" alt="Trinity College Dublin Logo" width="150" height="100" style="box-shadow: none;"></a>
+      <a href="https://adaptcentre.ie/"><img src="https://aial.ie/adapt-logo.png" alt="The Adapt Centre Logo" width="60" height="50" style="box-shadow: none;"></a>
+    </p>
+  </footer>
+
+<script>
+  const button = document.querySelector('.hamburger');
+  const menu = document.getElementById('main-menu');
+
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+</body>
+</html>

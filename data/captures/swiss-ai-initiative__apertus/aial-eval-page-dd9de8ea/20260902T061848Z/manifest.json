@@ -1,0 +1,36 @@
+{
+  "source_id": "swiss-ai-initiative/apertus",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "apertus",
+  "target_kind": "aial-eval-page",
+  "sha256": "2c014a5820e5a9c65538ee918957349d622a200547f7bf7b7a01c3cf19fd480b",
+  "size_bytes": 15745,
+  "stored_as": "raw.html",
+  "text_sha256": "fd50a08c9848f53ab114ae22721cc8b577beeb3e741f4415cf8ae1ddff4a9022",
+  "doc_links_sha256": "9ce3475fdcdd00e27071796e582e373ccff2919bde3abc37fb7bcc42d793ea66",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/apertus/version-2026-01-12",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/apertus/version-2026-01-12",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tcbmg2c5d\"",
+    "last_modified": "Sun, 22 Mar 2026 22:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:18:48Z"
+  },
+  "prior_sha256": null,
+  "aial_published_version": "2026-01-12",
+  "harvested_from": "an evaluation page already captured",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:18:53Z"
+  }
+}

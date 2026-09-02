@@ -1,0 +1,36 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "bria",
+  "target_kind": "aial-eval-page",
+  "sha256": "5e8462d65ee87ef1b2e386ffa29045fdc0c1bfc3ee4f509a20ed5b604cbf5618",
+  "size_bytes": 18661,
+  "stored_as": "raw.html",
+  "text_sha256": "6ed810ac9d4391da52353348a0fb059f7b848cdcc01b4a5a023e4a5cd3fc92d9",
+  "doc_links_sha256": "e51515d665d42db6ec792081e55645f729b18750692bdc7f93843813d50e28e4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bria/version-2026-03-31",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bria/version-2026-03-31",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbweed\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:17:57Z"
+  },
+  "prior_sha256": null,
+  "aial_published_version": "2026-03-31",
+  "harvested_from": "an evaluation page already captured",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:18:03Z"
+  }
+}

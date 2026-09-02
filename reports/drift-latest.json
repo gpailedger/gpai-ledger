@@ -37,6 +37,7 @@
       "from_dir": "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260820T105752Z",
       "to_dir": "captures/adobe__adobe-firefly/provider-live-9a31ba20/20260828T082256Z"
     },
+    "basis": "live-vs-archive",
     "verdict": "DRIFT-CANDIDATE",
     "word_delta": 67,
     "moved_words": 0,
@@ -94,6 +95,7 @@
     "similarity": 0.9971,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
+    "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
@@ -183,6 +185,7 @@
     "similarity": 0.9885,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
+    "basis": "self-history",
     "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
     "self_history": {
       "verdict": "method-changed",
@@ -211,6 +214,7 @@
     "self_history": {
       "verdict": "single-version"
     },
+    "basis": "live-vs-archive",
     "verdict": "DRIFT-CANDIDATE",
     "word_delta": 1664,
     "moved_words": 34,
@@ -522,6 +526,7 @@
     "self_history": {
       "verdict": "single-version"
     },
+    "basis": "live-vs-archive",
     "verdict": "same-content"
   },
   {
@@ -645,6 +650,7 @@
       "from_dir": "captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z",
       "to_dir": "captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z"
     },
+    "basis": "live-vs-archive",
     "verdict": "near-identical",
     "word_delta": 12,
     "moved_words": 2,
@@ -704,6 +710,7 @@
       "from_dir": "captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z",
       "to_dir": "captures/meta__muse-image/provider-live-e520ba83/20260828T083700Z"
     },
+    "basis": "live-vs-archive",
     "verdict": "DRIFT-CANDIDATE",
     "word_delta": 18,
     "moved_words": 5,
@@ -748,7 +755,7 @@
   {
     "id": "meta/muse-spark",
     "model": "Muse Spark",
-    "similarity": 0.9871,
+    "similarity": 0.9944,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
     "same_tool": true,
     "self_history": {
@@ -798,8 +805,9 @@
       "from_dir": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z",
       "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
     },
+    "basis": "live-vs-archive",
     "verdict": "DRIFT-CANDIDATE",
-    "word_delta": 35,
+    "word_delta": 15,
     "moved_words": 5,
     "changes": [
       {
@@ -808,9 +816,14 @@
         "new": "Public Summary of Training Content"
       },
       {
+        "op": "insert",
+        "old": "number: V3 Last Update:",
+        "new": "number: V3.1Last Update:"
+      },
+      {
         "op": "replace",
-        "old": "number: V2 Last Update: 7/8/261. General",
-        "new": "number: V3.1Last Update: August 21, 20261. General"
+        "old": "August 4, 20261.",
+        "new": "August 21, 20261."
       },
       {
         "op": "insert",
@@ -824,33 +837,8 @@
       },
       {
         "op": "replace",
-        "old": "Union market:4/8/261.3. Modalities,",
-        "new": "Union market:April 8, 20261.3. Modalities,"
-      },
-      {
-        "op": "replace",
-        "old": "to June 2026Description",
-        "new": "to July 2026Description"
-      },
-      {
-        "op": "delete",
-        "old": "third partiesYesHave you",
-        "new": "third partiesHave you"
-      },
-      {
-        "op": "insert",
-        "old": "data intermediaries Text Image",
-        "new": "intermediaries YesIf yes, specify the modality ies of the content covered by the datasetsconcerned: Text"
-      },
-      {
-        "op": "replace",
         "old": "s :Purposes of",
         "new": "s and purposes of"
-      },
-      {
-        "op": "replace",
-        "old": "to June 2026",
-        "new": "to July 2026Comprehensive"
       },
       {
         "op": "replace",
@@ -868,6 +856,7 @@
     "self_history": {
       "verdict": "single-version"
     },
+    "basis": "live-vs-archive",
     "verdict": "same-content"
   },
   {
@@ -879,6 +868,7 @@
     "self_history": {
       "verdict": "single-version"
     },
+    "basis": "live-vs-archive",
     "verdict": "near-identical",
     "word_delta": 3,
     "moved_words": 0,
@@ -915,6 +905,7 @@
     "similarity": 0.0522,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
+    "basis": "self-history",
     "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
     "self_history": {
       "verdict": "method-changed",

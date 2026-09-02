@@ -1,0 +1,41 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "cc823394d2f9915fba7956604cde0bcdd04c4327db9394bc506abde60f35d66e",
+  "size_bytes": 447859,
+  "stored_as": "raw.html",
+  "text_sha256": "8098221caeff651066b02ca06e074411ad472f836b2d542d6dc9f852fd14deea",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:15:05Z"
+  },
+  "prior_sha256": "e4910d36ae58ae500abcb0ba8b4d178169b08f97fe11c72a8150ec187d8c21c9",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-02T06:15:05Z",
+    "at": "2026-09-02T06:15:21Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:15:26Z"
+  }
+}

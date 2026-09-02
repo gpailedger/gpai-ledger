@@ -1,0 +1,36 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "smollm3",
+  "target_kind": "aial-eval-page",
+  "sha256": "1c6efda77988cb930d7f0cae2c04dbd7c9cec84b30ea05f8a2f9129227cfce95",
+  "size_bytes": 22568,
+  "stored_as": "raw.html",
+  "text_sha256": "6c1ca60156956475d86e2ea2fc11634cdc11eaffb3ca5d1e0dc0f85c3e72f16c",
+  "doc_links_sha256": "9ee858837aa2ff88866271149b0c655f915ea1adbcf676a9427f5433b466dd0d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/smollm3/version-2026-03-31",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/smollm3/version-2026-03-31",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tjcwbwhew\"",
+    "last_modified": "Thu, 06 Aug 2026 16:26:20 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:18:13Z"
+  },
+  "prior_sha256": null,
+  "aial_published_version": "2026-03-31",
+  "harvested_from": "an evaluation page already captured",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:18:20Z"
+  }
+}

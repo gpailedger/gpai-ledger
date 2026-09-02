@@ -1,0 +1,189 @@
+{
+  "source_id": "anthropic/trust-center-bundle",
+  "provider": "Anthropic",
+  "model": "Trust-center document bundle",
+  "target_kind": "provider-live",
+  "sha256": "16a06978e951ed6ed4b95d19b1e5cba180505a23efef21c63713b2c7e6017925",
+  "size_bytes": 1552029,
+  "stored_as": "raw.zip",
+  "text_sha256": "3ab8e13065a18d3cc8116cd6588db1787695f84531b5b4bb8c708a565decca62",
+  "extraction_notes": [
+    {
+      "inner_file": "Claude Mythos 5 and Claude Fable 5 Training Data Summary .pdf",
+      "inner_sha256": "765afb9d4e62fa40c1f61ed01e27e39a93160b1ab5a5a60248c033788e31fdbc"
+    },
+    {
+      "inner_file": "Claude Opus 4.7 Training Data Summary .pdf",
+      "inner_sha256": "184c573a50ec4e70417ef445c3185df50ec6add6ea9fe90de7ad9baa78ae879d"
+    },
+    {
+      "inner_file": "Claude Opus 4.8 Training Data Summary .pdf",
+      "inner_sha256": "ccac79227fc4e9fd2fa7b41785d4fc15ed8725aafcb9cee14aa63f9bf3768188"
+    },
+    {
+      "inner_file": "Claude Opus 5 Training Data Summary .pdf",
+      "inner_sha256": "06dfc855a9905ffd6a949942abc6857889a558d5dbed756d6f0fd3a908bbc1d2"
+    },
+    {
+      "inner_file": "Claude Sonnet 5 Training Data Summary .pdf",
+      "inner_sha256": "c84c83a1215c56cf5734bd030292789b40f61e5d3dc2cd870c3fdf0e96a89ca3"
+    },
+    {
+      "inner_file": "Claude Training Data Summary (Fable 5.1 + Mythos 5.1) PDF.pdf",
+      "inner_sha256": "ff3ed62ab5d93f5841d328f1473c9f74fc170acf16c66a46c60bcbcf0c65040e"
+    },
+    {
+      "inner_file": "_Claude Mythos Preview Training Data Summary .pdf",
+      "inner_sha256": "038c305c4760c4d21caee8e9a017d9b3f483d6cad338f5f6715894987132a646"
+    },
+    "downloaded via the bulk-download link publicly offered on the provider's trust-center page (the link embeds a rotating token)",
+    {
+      "stable_key": "https://trust.anthropic.com/doc/trust-zip"
+    },
+    {
+      "members_not_stored": [
+        {
+          "inner_file": "AB 2013 Training Data Documentation [June 2026].pdf",
+          "inner_sha256": "df55f60c9bc1cd11867acf68a605ada2f0858a9c77d9a65e59a86175e9b2dd2d"
+        },
+        {
+          "inner_file": "ACR for Claude Android Enterprise - May 2026 - Anthropic PBC.pdf",
+          "inner_sha256": "541652aea109b82d27692a205d858eabc95c12d6606508286b9a43b6aa36de50"
+        },
+        {
+          "inner_file": "ACR for Claude Web Enterprise - April 2026 - Anthropic PBC.pdf",
+          "inner_sha256": "b428badebb1568f79638537cecd45fbafa765de94e1a88d06ec423806efce0aa"
+        },
+        {
+          "inner_file": "ACR for Claude iOS Enterprise - May 2026 - Anthropic PBC.pdf",
+          "inner_sha256": "35f9ea604acc09f8fefcede70517cf2f5e70cf3fb2194f03293e8daf8c5e9795"
+        },
+        {
+          "inner_file": "Anthropic Statement on Modern Slavery Act 2015.pdf",
+          "inner_sha256": "d1d71f9119098a4ef651e02ce507a59548bebdd30f4e5af6ba95a8ab3fbaec1b"
+        },
+        {
+          "inner_file": "CVE-2026-22561 - DLL Search Order Hijacking in Claude for Windows installer.pdf",
+          "inner_sha256": "50b69a0273d342569a49c3e06444e70fb09078621afff48ce6c30e8a71f40ef2"
+        },
+        {
+          "inner_file": "Claude Desktop 3P Security Overview.pdf",
+          "inner_sha256": "a3fcdcc61d5802de587d295b09c172030e8a056ca1b62490df507bfea2ad7129"
+        },
+        {
+          "inner_file": "Claude Mythos 5 + Fable 5 Model Documentation Form v2.pdf",
+          "inner_sha256": "d4c04c6e2beb0f5877568562b6d239f3ecf9770a22be0b615edb3e2f1dcb05ab"
+        },
+        {
+          "inner_file": "Claude Mythos Preview Model Documentation Form v2 [PDF].pdf",
+          "inner_sha256": "9fb3d243e095589046e0a2e96c744ad3db3d183b8c8fcba533dd350e04104af8"
+        },
+        {
+          "inner_file": "Claude Opus 4.7 Model Documentation Form for Downstream Providers_v2.pdf",
+          "inner_sha256": "2bebf9186e1b22fd950463f4d112d08a0fd68ad7fca49ae4b022f60e9858d194"
+        },
+        {
+          "inner_file": "Claude Opus 4.8 Model Documentation Form for downstream providers_v2  (1).pdf",
+          "inner_sha256": "6645a5afcaad0eb0833f13242377e3a44f2b273b526e10687d09d85bd7691621"
+        },
+        {
+          "inner_file": "Claude Opus 5_ Model Documentation Form for downstream providers [PDF].pdf",
+          "inner_sha256": "5a740095beed9ef0429656982a08b612f1a13e8b229789c36d384035c247a140"
+        },
+        {
+          "inner_file": "Claude Sonnet 5 Model Documentation Form v2.pdf",
+          "inner_sha256": "df248a415f6f2b033f5cde02f84aeba87f75f92e75f37cd3abd1c3c23b2a03cf"
+        },
+        {
+          "inner_file": "Claude in Excel & PowerPoint Architecture Overview.pdf",
+          "inner_sha256": "8dc1b3025d9368e5585ee21e53a3af2df6054cf58c383a37bbf26d40e9fca7ee"
+        },
+        {
+          "inner_file": "Frontier Compliance Framework_July 2026.pdf",
+          "inner_sha256": "8e4d91e12861218ee8068e2ad1f50ce84d803d0fac22f0492e6a9dccbbe5e23f"
+        },
+        {
+          "inner_file": "Model Documentation Form [Fable 5.1 & Mythos 5.1] for Downstream Providers PDF.pdf",
+          "inner_sha256": "79fa36acac8578b8998359bd4a881e506204788d500dd6f515243572c459ea5a"
+        },
+        {
+          "inner_file": "Office Agents 3P Architecture.pdf",
+          "inner_sha256": "21214bde3519c4d3d4a30340e4e9ecc32ff4836cb9dc7ac4f934f79fabe3d5a1"
+        },
+        {
+          "inner_file": "[Anthropic Ireland Limited] Cyber Essentials Certificate (2025).pdf",
+          "inner_sha256": "223c71464e409116cc3d2a26f54d24f7507cf87d70ba21730cfde4a3920c29d7"
+        },
+        {
+          "inner_file": "[Anthropic] 2025 Type 2 SOC 3 Report.pdf",
+          "inner_sha256": "4a2eec78000029cc5ce1f1f22ed9e79b221832ff3a4964a6c7f459507d96185b"
+        },
+        {
+          "inner_file": "[Anthropic] Anthropic's Enterprise Security Posture.pdf",
+          "inner_sha256": "ae3a40f6cd75a651579375033414a74f2803eb16e25f70202a50a865c78be42f"
+        },
+        {
+          "inner_file": "[Anthropic] Data Handling & Key Management.pdf",
+          "inner_sha256": "4d86c308354881f83cd904b95e8b0bba7a964773c4722593dbf03073a82846a6"
+        },
+        {
+          "inner_file": "[Anthropic] Data Loss Prevention & Content Controls.pdf",
+          "inner_sha256": "cd85d044e4ccf41fa4dd53f9dafc6b6ee74b1b92c0a397926d7b17bead5f15a2"
+        },
+        {
+          "inner_file": "[Anthropic] ISO 27001 Certificate (2025).pdf",
+          "inner_sha256": "b8d621cc3c9ac880adefea054738017bbbe0002fc2d3b31f76e0b91ec8e54658"
+        },
+        {
+          "inner_file": "[Anthropic] ISO 42001 Certificate (2025).pdf",
+          "inner_sha256": "a72bbe24b44b5c179175ccf586febbcc9337c702eee7fe62687d3052cd5dbe5a"
+        },
+        {
+          "inner_file": "[Anthropic] Identity & Access Controls.pdf",
+          "inner_sha256": "1b9f0c3575e892b5bced7021b100a548e5492ff54c7db84188c4af68d7eea993"
+        },
+        {
+          "inner_file": "[Anthropic] Isolation & Connectivity.pdf",
+          "inner_sha256": "092b7815b2e4ca76d97b304bd1d0d4c6ca4ead193c87e026d2671b5867ec559f"
+        },
+        {
+          "inner_file": "c4ecertificationpackageoverview.clean.json",
+          "inner_sha256": "2feb224ff02db96d6e3c6a2703388a553f260a29b99b7eade5899b9b085c6eef"
+        },
+        {
+          "inner_file": "v1.0 Claude Code FISMA Best Practices.pdf",
+          "inner_sha256": "1c4ab4052647fe75ad142f54f1d308d792b9a3414586fecbcf713059c0c5e649"
+        }
+      ]
+    }
+  ],
+  "http": {
+    "url": "https://trust.anthropic.com/doc/trust-zip?r=iz673w96495gyjer8h78n",
+    "final_url": "https://trust.anthropic.com/doc/trust-zip?r=iz673w96495gyjer8h78n",
+    "status_code": 200,
+    "content_type": "application/zip",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:16:56Z"
+  },
+  "prior_sha256": "4d2f4ba23f6af556bd0fad6cbc2fa40c1fad17fc98d40f4834d06ec32bd3aa14",
+  "extracted_text_sha256": "b1143e36dac3af51a61d8573221e878d3a9734c7d1024fcbfca1264668613990",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://trust.anthropic.com/doc/trust-zip?r=iz673w96495gyjer8h78n (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "requested_at": "2026-09-02T06:16:59Z",
+    "at": "2026-09-02T06:17:14Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:17:20Z"
+  }
+}

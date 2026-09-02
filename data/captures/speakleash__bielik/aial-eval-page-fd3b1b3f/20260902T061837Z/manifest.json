@@ -1,0 +1,36 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "bielik",
+  "target_kind": "aial-eval-page",
+  "sha256": "2f1c6be095b10d59f7e8103c11121226e4f7b305db10b2052a90dbf8287e1699",
+  "size_bytes": 18191,
+  "stored_as": "raw.html",
+  "text_sha256": "9f4c315bd4e93dfe0e8c58b8c37965439eca71a47bc8fe2432f893b332fb1263",
+  "doc_links_sha256": "195377b6a7ec57522e187c18b2577be116e9c5ea8ddc5b7b8fd15a44e571052f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bielik/version-2026-01-12",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bielik/version-2026-01-12",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tcbmg2e1b\"",
+    "last_modified": "Sun, 22 Mar 2026 22:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-02T06:18:37Z"
+  },
+  "prior_sha256": null,
+  "aial_published_version": "2026-01-12",
+  "harvested_from": "an evaluation page already captured",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-02T06:18:42Z"
+  }
+}
