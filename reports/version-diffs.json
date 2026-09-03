@@ -7699,6 +7699,29 @@
     "to_sha256": "cc823394d2f9915fba7956604cde0bcdd04c4327db9394bc506abde60f35d66e",
     "computed_at": "2026-09-02T07:01:46Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260902T061505Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260903T061512Z": {
+    "verdict": "changed",
+    "similarity": 0.998,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "details Show fewer details Once",
+        "new": "all details Once"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260902T061505Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20260903T061512Z",
+    "from_sha256": "cc823394d2f9915fba7956604cde0bcdd04c4327db9394bc506abde60f35d66e",
+    "to_sha256": "094890eb1de535fc0348fd4806865bbe604245bb05461358d125a1ed1aad90a9",
+    "computed_at": "2026-09-03T06:23:36Z"
+  },
   "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
     "verdict": "changed",
     "similarity": 0.9204,
@@ -9898,6 +9921,22 @@
     "from_sha256": "e5e9425941e70f629c121b166f7b5af11c7eade08f6f957e39ddc08b5d0945e5",
     "to_sha256": "63b398e72aa0743838d6f66105450cf82f3dbcba3ca9b5016463676471de3166",
     "computed_at": "2026-09-02T07:01:41Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260902T060324Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260903T060544Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260902T060324Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260903T060544Z",
+    "from_sha256": "63b398e72aa0743838d6f66105450cf82f3dbcba3ca9b5016463676471de3166",
+    "to_sha256": "f9f0f68439f6e171d7f7de1e143841d08bf108fa92401d351163759430db18b8",
+    "computed_at": "2026-09-03T06:23:35Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
@@ -14300,6 +14339,59 @@
     "to_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
     "computed_at": "2026-09-02T07:01:46Z"
   },
+  "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z>captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z": {
+    "verdict": "changed",
+    "similarity": 0.9902,
+    "word_delta": 23,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "number: V3 Last Update: August 4, 20261.",
+        "new": "number: V4Last Update: September 2, 20261."
+      },
+      {
+        "op": "insert",
+        "old": "Limited MPIL Authorized representative",
+        "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+      },
+      {
+        "op": "replace",
+        "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
+        "new": "details: N/A1.2. Model"
+      },
+      {
+        "op": "replace",
+        "old": "to July 2026Description",
+        "new": "to August 2026Description"
+      },
+      {
+        "op": "replace",
+        "old": "s :Purposes of",
+        "new": "s and purposes of"
+      },
+      {
+        "op": "replace",
+        "old": "to July 2026 Public Summary of Training Content Comprehensive",
+        "new": "to August 2026Comprehensive description"
+      },
+      {
+        "op": "replace",
+        "old": "training datasets.3.2 Other",
+        "new": "training datasets.3.3 Other"
+      }
+    ],
+    "source": "meta/muse-spark",
+    "target": "live-vs-archive",
+    "from_dir": "captures/meta__muse-spark/aial-archive-2693391f/20260829T133054Z",
+    "to_dir": "captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z",
+    "from_sha256": "fb8e4a1daaba1538587bee5658f0afa2b52b082edfcc3132b5d215e3c2542217",
+    "to_sha256": "5adae941d8f2823a3421e6633ab6cfc38bbf9bd5135ca30b336ea71831516326",
+    "computed_at": "2026-09-03T06:23:37Z"
+  },
   "meta/muse-spark::live-vs-archive::captures/meta__muse-spark/aial-archive-9e5b0e16/20260811T111428Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
     "similarity": 0.9871,
@@ -14453,6 +14545,44 @@
         "computed_at": "2026-08-22T23:24:23Z"
       }
     ]
+  },
+  "meta/muse-spark::provider-live-df0a7357::captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z>captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z": {
+    "verdict": "changed",
+    "similarity": 0.9954,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "number: V3.1Last Update: August 21, 20261.",
+        "new": "number: V4Last Update: September 2, 20261. General"
+      },
+      {
+        "op": "replace",
+        "old": "to July 2026Description",
+        "new": "to August 2026Description"
+      },
+      {
+        "op": "replace",
+        "old": "to July 2026Comprehensive",
+        "new": "to August 2026Comprehensive"
+      },
+      {
+        "op": "delete",
+        "old": "crawlers. Public Summary of Training Content Type",
+        "new": "web crawlers. Type of"
+      }
+    ],
+    "source": "meta/muse-spark",
+    "target": "provider-live-df0a7357",
+    "from_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
+    "to_dir": "captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z",
+    "from_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
+    "to_sha256": "5adae941d8f2823a3421e6633ab6cfc38bbf9bd5135ca30b336ea71831516326",
+    "computed_at": "2026-09-03T06:23:36Z"
   },
   "meta/muse-spark::provider-live-df0a7357::captures/meta__muse-spark/provider-live-41432250/20260817T085600Z>captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z": {
     "verdict": "changed",
@@ -16118,6 +16248,29 @@
     "to_sha256": "40f242cad78bdd55e77d34a53938f01359eb9a6c3976a4d8f1792b91469b7c4d",
     "computed_at": "2026-08-31T12:28:14Z",
     "changes_withheld": true
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260819T150606Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260903T061819Z": {
+    "verdict": "changed",
+    "similarity": 0.9951,
+    "word_delta": 8,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "min read Optimizing the frontier performance curve 4 min read",
+        "new": "3 min read"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260819T150606Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260903T061819Z",
+    "from_sha256": "4e17d9a4beb3b8e72fe80ffdc315abd7fc7d6281bb7961af30cc441eed9d763d",
+    "to_sha256": "9df9affea2d6c981208019c0d4235e96989815fe2bb675a345b540dcbe34c5f8",
+    "computed_at": "2026-09-03T06:23:36Z"
   },
   "microsoft/phi-4::aial-eval-history-142fd02d::captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183348Z>captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183430Z": {
     "verdict": "changed",
@@ -18195,6 +18348,224 @@
     "to_sha256": "92af5d801700dbe226efbc2f9b2a31c439e9c64e89ef7548290ad7b308629608",
     "computed_at": "2026-08-31T12:28:30Z",
     "changes_withheld": true
+  },
+  "mistral-ai/model-catalog::watch-page-de362d33::captures/mistral-ai__model-catalog/watch-page-de362d33/20260819T150414Z>captures/mistral-ai__model-catalog/watch-page-de362d33/20260903T061527Z": {
+    "verdict": "changed",
+    "similarity": 0.8939,
+    "word_delta": 117,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Legal Center Mistral AI Legal",
+        "new": "Models Mistral Legal Center Legal Center"
+      },
+      {
+        "op": "insert",
+        "old": "AI Models Browse",
+        "new": "Models AI Systems Search... K Terms AI Models AI Systems Models Browse"
+      },
+      {
+        "op": "replace",
+        "old": "documentation. AI models",
+        "new": "documentation. 41 models"
+      },
+      {
+        "op": "replace",
+        "old": "Release Date Newest Release Date Oldest Codestral",
+        "new": "Release date oldest Release date newest Codestral"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 1/13/2025 Devstral",
+        "new": "versions. January 13,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/9/2025 Devstral",
+        "new": "versions. December 9,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 7/10/2025 Devstral",
+        "new": "versions. July 10,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 7/10/2025 Devstral",
+        "new": "versions. July 10,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/9/2025 Leanstral",
+        "new": "versions. December 9,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 3/16/2026 Magistral",
+        "new": "versions. March 16,"
+      },
+      {
+        "op": "replace",
+        "old": "version. Release: 6/10/2025 Magistral",
+        "new": "version. June 10, 2025"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 6/10/2025 Mathstral",
+        "new": "versions. June 10, 2025"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 7/16/2024 Ministral",
+        "new": "versions. July 16,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 10/9/2024 Ministral",
+        "new": "versions. October 9,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 10/9/2024 Ministral",
+        "new": "versions. October 9,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/2/2025 Ministral",
+        "new": "versions. December 2,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/2/2025 Ministral",
+        "new": "versions. December 2,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/2/2025 Mistral",
+        "new": "versions. December 2,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 9/27/2023 Mistral",
+        "new": "versions. September 27,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/11/2023 Mistral",
+        "new": "versions. December 11,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 2/26/2024 Mistral",
+        "new": "versions. February 26,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 7/16/2024 Mistral",
+        "new": "versions. July 16,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/2/2025 Mistral",
+        "new": "versions. December 2,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/11/2023 Mistral",
+        "new": "versions. December 11,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 5/7/2025 Mistral",
+        "new": "versions. May 7,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 11/6/2024 Mistral",
+        "new": "versions. November 6,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 7/18/2025 Mistral",
+        "new": "versions. July 18,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 2/6/2024 Mistral",
+        "new": "versions. February 6,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 5/22/2025 Mistral",
+        "new": "versions. May 22,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/15/2025 Mistral",
+        "new": "versions. December 15,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 6/23/2026 Mistral",
+        "new": "versions. June 23, 2026"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 2/17/2025 Mistral",
+        "new": "versions. February 17,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 2/26/2024 Mistral",
+        "new": "versions. February 26,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 9/17/2024 Mistral",
+        "new": "versions. September 17,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 1/30/2025 Mistral",
+        "new": "versions. January 30,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 3/16/2026 Mixtral",
+        "new": "versions. March 16,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 12/11/2023 Mixtral",
+        "new": "versions. December 11,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 4/17/2024 Pixtral",
+        "new": "versions. April 17, 2024"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 9/11/2024 Pixtral",
+        "new": "versions. September 11,"
+      },
+      {
+        "op": "replace",
+        "old": "versions. Release: 11/18/2024 Robostral",
+        "new": "versions. November 18,"
+      }
+    ],
+    "source": "mistral-ai/model-catalog",
+    "target": "watch-page-de362d33",
+    "from_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20260819T150414Z",
+    "to_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20260903T061527Z",
+    "from_sha256": "ed708010d954fa80e146b42174308e404c4bccc70bbe86e1645317c1a21d4511",
+    "to_sha256": "1fca5b088c4137eac67e9b1d22a4cefaa770a0f6b1a259cd589b303228cb034c",
+    "computed_at": "2026-09-03T06:23:36Z"
   },
   "openai/gpt-5-5::aial-eval-history-0ed16cc0::captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20260829T183557Z>captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20260829T183634Z": {
     "verdict": "changed",
@@ -23165,5 +23536,43 @@
         "computed_at": "2026-08-22T23:25:18Z"
       }
     ]
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z>captures/xai__model-catalog/watch-page-905d5d7a/20260903T061741Z": {
+    "verdict": "changed",
+    "similarity": 0.9908,
+    "word_delta": 18,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Migration Guides Model Retirement",
+        "new": "Guides Imagine Image Quality Retirement on Nov 2 New Model"
+      },
+      {
+        "op": "delete",
+        "old": "15 New Migrating",
+        "new": "May 15 Migrating to"
+      },
+      {
+        "op": "insert",
+        "old": "Migration Guides Model Retirement",
+        "new": "Guides Imagine Image Quality Retirement on Nov 2 New Model"
+      },
+      {
+        "op": "delete",
+        "old": "15 New Migrating",
+        "new": "May 15 Migrating to"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260822T072833Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260903T061741Z",
+    "from_sha256": "40c2ba912e30c54e2f5e6436453b078ec2b208336cfc9546f99a25fb69db0ed6",
+    "to_sha256": "a72a5ea96227a6fcdd22c663d0baa1589406f9f6b51fe349bd326ded4ab81eb9",
+    "computed_at": "2026-09-03T06:23:36Z"
   }
 }

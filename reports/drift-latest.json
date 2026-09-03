@@ -755,75 +755,50 @@
   {
     "id": "meta/muse-spark",
     "model": "Muse Spark",
-    "similarity": 0.9944,
+    "similarity": 0.9902,
     "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
     "same_tool": true,
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9944,
-      "word_delta": 15,
-      "moved_words": 5,
+      "similarity": 0.9954,
+      "word_delta": 10,
+      "moved_words": 0,
       "changes": [
         {
-          "op": "moved",
-          "old": "Public Summary of Training Content",
-          "new": "Public Summary of Training Content"
-        },
-        {
-          "op": "insert",
-          "old": "number: V3 Last Update:",
-          "new": "number: V3.1Last Update:"
+          "op": "replace",
+          "old": "number: V3.1Last Update: August 21, 20261.",
+          "new": "number: V4Last Update: September 2, 20261. General"
         },
         {
           "op": "replace",
-          "old": "August 4, 20261.",
-          "new": "August 21, 20261."
-        },
-        {
-          "op": "insert",
-          "old": "Limited MPIL Authorized representative",
-          "new": "MPIL Merrion Road, Dublin 4, D04 X2K5, IrelandAuthorized representative"
+          "old": "to July 2026Description",
+          "new": "to August 2026Description"
         },
         {
           "op": "replace",
-          "old": "details: Support Contact: https://ai.meta.com/help1.2. Model",
-          "new": "details: N/A1.2. Model"
+          "old": "to July 2026Comprehensive",
+          "new": "to August 2026Comprehensive"
         },
         {
-          "op": "replace",
-          "old": "s :Purposes of",
-          "new": "s and purposes of"
-        },
-        {
-          "op": "replace",
-          "old": "training datasets.3.2 Other",
-          "new": "training datasets.3.3 Other"
+          "op": "delete",
+          "old": "crawlers. Public Summary of Training Content Type",
+          "new": "web crawlers. Type of"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
       "same_tool": true,
-      "from_dir": "captures/meta__muse-spark/provider-live-41432250/20260817T085600Z",
-      "to_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z"
+      "from_dir": "captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z",
+      "to_dir": "captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z"
     },
     "basis": "live-vs-archive",
     "verdict": "DRIFT-CANDIDATE",
-    "word_delta": 15,
-    "moved_words": 5,
+    "word_delta": 23,
+    "moved_words": 0,
     "changes": [
       {
-        "op": "moved",
-        "old": "Public Summary of Training Content",
-        "new": "Public Summary of Training Content"
-      },
-      {
-        "op": "insert",
-        "old": "number: V3 Last Update:",
-        "new": "number: V3.1Last Update:"
-      },
-      {
         "op": "replace",
-        "old": "August 4, 20261.",
-        "new": "August 21, 20261."
+        "old": "number: V3 Last Update: August 4, 20261.",
+        "new": "number: V4Last Update: September 2, 20261."
       },
       {
         "op": "insert",
@@ -837,8 +812,18 @@
       },
       {
         "op": "replace",
+        "old": "to July 2026Description",
+        "new": "to August 2026Description"
+      },
+      {
+        "op": "replace",
         "old": "s :Purposes of",
         "new": "s and purposes of"
+      },
+      {
+        "op": "replace",
+        "old": "to July 2026 Public Summary of Training Content Comprehensive",
+        "new": "to August 2026Comprehensive description"
       },
       {
         "op": "replace",

@@ -1,0 +1,46 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "provider-live",
+  "sha256": "5adae941d8f2823a3421e6633ab6cfc38bbf9bd5135ca30b336ea71831516326",
+  "size_bytes": 258570,
+  "stored_as": "raw.pdf",
+  "text_sha256": "f8700393896dc6cb7a6a22ebb312cf3e5a7a1c9b645c92acae240fd83d578e66",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = hub edition label (CDN path rotates per re-issue)",
+    {
+      "stable_base": "/m1/v/t0.84174-6/An-I62Jn-BJ4mGRkH0CEb_DsS3vP6L1VgCNECFcyJPb2FC-X7RVNhy94bsVO2mUED4QxPJwUZWpqI1KPvluL01wyHch1Ae1Z2BziKzTUeCMGw_AracKSqMPoauGZuRFhQo11arc",
+      "hub_period": "2026 - Muse Spark",
+      "edition_key": "meta-hub:2026 - Muse Spark"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-sin2-2.xx.fbcdn.net/m1/v/t0.84174-6/An-I62Jn-BJ4mGRkH0CEb_DsS3vP6L1VgCNECFcyJPb2FC-X7RVNhy94bsVO2mUED4QxPJwUZWpqI1KPvluL01wyHch1Ae1Z2BziKzTUeCMGw_AracKSqMPoauGZuRFhQo11arc?_nc_gid=6ZCVtuvq-r1VGtlafWoiaQ&_nc_oc=AdqKbuGgJFTnuFWq7aUuph1PeGjNeZ1pBu_Ok6cLG9D0oXeNCM_CvUPuLZuXl8FkG7k&ccb=10-5&oh=00_AQJ6iHKmg_b-JO_LfT175dmdhtIhk4vC4-B7iEfeqP7zgA&oe=6A9AEF12&_nc_sid=68f2c3",
+    "final_url": "https://scontent-sin2-2.xx.fbcdn.net/m1/v/t0.84174-6/An-I62Jn-BJ4mGRkH0CEb_DsS3vP6L1VgCNECFcyJPb2FC-X7RVNhy94bsVO2mUED4QxPJwUZWpqI1KPvluL01wyHch1Ae1Z2BziKzTUeCMGw_AracKSqMPoauGZuRFhQo11arc?_nc_gid=6ZCVtuvq-r1VGtlafWoiaQ&_nc_oc=AdqKbuGgJFTnuFWq7aUuph1PeGjNeZ1pBu_Ok6cLG9D0oXeNCM_CvUPuLZuXl8FkG7k&ccb=10-5&oh=00_AQJ6iHKmg_b-JO_LfT175dmdhtIhk4vC4-B7iEfeqP7zgA&oe=6A9AEF12&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "5884736273327537194",
+    "last_modified": null,
+    "content_length": "258570",
+    "fetched_at": "2026-09-03T06:19:55Z"
+  },
+  "prior_sha256": "08e43427de4af5032399696f1643210743f8322a1937d29fb22a59f93b30939d",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/https://scontent-sin2-2.xx.fbcdn.net/m1/v/t0.84174-6/An-I62Jn-BJ4mGRkH0CEb_DsS3vP6L1VgCNECFcyJPb2FC-X7RVNhy94bsVO2mUED4QxPJwUZWpqI1KPvluL01wyHch1Ae1Z2BziKzTUeCMGw_AracKSqMPoauGZuRFhQo11arc?_nc_gid=6ZCVtuvq-r1VGtlafWoiaQ&_nc_oc=AdqKbuGgJFTnuFWq7aUuph1PeGjNeZ1pBu_Ok6cLG9D0oXeNCM_CvUPuLZuXl8FkG7k&ccb=10-5&oh=00_AQJ6iHKmg_b-JO_LfT175dmdhtIhk4vC4-B7iEfeqP7zgA&oe=6A9AEF12&_nc_sid=68f2c3 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "requested_at": "2026-09-03T06:19:56Z",
+    "at": "2026-09-03T06:20:20Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-03T06:20:24Z"
+  }
+}
