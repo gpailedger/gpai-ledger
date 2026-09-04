@@ -9938,6 +9938,22 @@
     "to_sha256": "f9f0f68439f6e171d7f7de1e143841d08bf108fa92401d351163759430db18b8",
     "computed_at": "2026-09-03T06:23:35Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260903T060544Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260904T055959Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260903T060544Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260904T055959Z",
+    "from_sha256": "f9f0f68439f6e171d7f7de1e143841d08bf108fa92401d351163759430db18b8",
+    "to_sha256": "4942ad2465dab3f7fddb3513e08169fd2594bd6d95189556a736a546399ea7bc",
+    "computed_at": "2026-09-04T06:14:14Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -12192,6 +12208,19 @@
     "from_sha256": "371a934e0400c6997f7b4ef7b321fdd9afe8982b0cf2d8024a19b972bbb98f4d",
     "to_sha256": "e93848951ade5ba5be871d2acd48efb4779d990f097e01f00b7204a0db085b1d",
     "computed_at": "2026-09-01T06:15:25Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260901T060928Z>captures/google__transparency-bucket/watch-page-81cd3682/20260904T061006Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260901T060928Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260904T061006Z",
+    "from_sha256": "e93848951ade5ba5be871d2acd48efb4779d990f097e01f00b7204a0db085b1d",
+    "to_sha256": "bdb559d0f3255f0bf838d412aa4812fedbbf6e36dfdd194e414d1d81e857b80a",
+    "computed_at": "2026-09-04T06:14:14Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -16272,6 +16301,64 @@
     "to_sha256": "9df9affea2d6c981208019c0d4235e96989815fe2bb675a345b540dcbe34c5f8",
     "computed_at": "2026-09-03T06:23:36Z"
   },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260903T061819Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260904T060921Z": {
+    "verdict": "changed",
+    "similarity": 0.9731,
+    "word_delta": 35,
+    "moved_words": 32,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Turn noisy audio into precise, domain-specific transcripts, with leading FLEURS and Artificial Analysis accuracy scores.",
+        "new": "Turn noisy audio into precise, domain-specific transcripts, with leading FLEURS and Artificial Analysis accuracy scores."
+      },
+      {
+        "op": "moved",
+        "old": "Learn more Turn noisy audio into precise, domain-specific transcripts, with leading FLEURS and Artificial Analysis accuracy scores.",
+        "new": "Learn more Turn noisy audio into precise, domain-specific transcripts, with leading FLEURS and Artificial Analysis accuracy scores."
+      },
+      {
+        "op": "insert",
+        "old": "intelligence MAI-Thinking-1 MAI-Code-1.1-Flash",
+        "new": "intelligence MAI-Transcribe-2 MAI-Thinking-1 MAI-Code-1.1-Flash"
+      },
+      {
+        "op": "replace",
+        "old": "MAI-Voice-2 MAI-Transcribe-1.5 All models MAI-Thinking-1 Built",
+        "new": "MAI-Image-2.5 MAI-Voice-2 All models MAI-Transcribe-2 MAI-Thinking-1"
+      },
+      {
+        "op": "delete",
+        "old": "generations. MAI-Transcribe-1.5 Blog",
+        "new": "long generations. Blog Featured"
+      },
+      {
+        "op": "insert",
+        "old": "our team MAI-Code-1.1-Flash: Better,",
+        "new": "team MAI-Transcribe-2 is the fastest, most accurate and cheapest speech recognition model in the world 4 min read MAI-Code-1.1-Flash:"
+      },
+      {
+        "op": "insert",
+        "old": "Foundational model MAI-Thinking-1",
+        "new": "Foundational model MAI-Transcribe-2 Learn more Learn more Foundational model"
+      },
+      {
+        "op": "delete",
+        "old": "Learn more Learn more Foundational model MAI-Transcribe-1.5 Learn more",
+        "new": "generations. Learn more"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260903T061819Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260904T060921Z",
+    "from_sha256": "9df9affea2d6c981208019c0d4235e96989815fe2bb675a345b540dcbe34c5f8",
+    "to_sha256": "873257b9ab59cbe427c2c28ae99f1f4e5903b7fcf6c5b86e07807435aa6dd128",
+    "computed_at": "2026-09-04T06:14:15Z"
+  },
   "microsoft/phi-4::aial-eval-history-142fd02d::captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183348Z>captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183430Z": {
     "verdict": "changed",
     "similarity": 0.9967,
@@ -20302,6 +20389,59 @@
     "from_sha256": "5e44cad30a073bf1256edc02830c8b55cfc523a897e59487f68ca30125170253",
     "to_sha256": "48a9764aef1b955d3bfb6dee62d052c7ca592e6a2ff52b669dcc9f220cb277f5",
     "computed_at": "2026-09-02T07:01:46Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260902T061433Z>captures/openai__model-catalog/watch-page-0e5ba652/20260904T060847Z": {
+    "verdict": "changed",
+    "similarity": 0.9729,
+    "word_delta": 120,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Using GPT-5.6 Key concepts",
+        "new": "Using GPT-6 Astra Key"
+      },
+      {
+        "op": "insert",
+        "old": "WebSocket mode Multi-agent Webhooks",
+        "new": "mode Mid-turn steering Multi-agent"
+      },
+      {
+        "op": "insert",
+        "old": "tool calling Computer",
+        "new": "tool calling Async tool calling"
+      },
+      {
+        "op": "replace",
+        "old": "Safety checks Cybersecurity checks Under 18 API Guidance CSAM",
+        "new": "Safety checks Safety classifiers Cybersecurity checks Misalignment monitoring Under-18 guidance CSAM"
+      },
+      {
+        "op": "replace",
+        "old": "use GPT-5.6 Sol ,",
+        "new": "use GPT-6 Astra ,"
+      },
+      {
+        "op": "replace",
+        "old": "models Start with GPT-5.6 Sol for complex reasoning and coding, choose GPT-5.6 Terra to balance intelligence and cost, or use GPT-5.6 Luna for cost-sensitive, high-volume workloads. View",
+        "new": "models Compare model capabilities and specifications. View"
+      },
+      {
+        "op": "insert",
+        "old": "models GPT-5.6 Sol",
+        "new": "GPT 6 Astra is rolling out today for enterprises in our Trusted Access Program , with access through API and our Plus, Pro, Business and Enterprise plans coming in the coming days. Astra GPT-6 Astra Our most capable model, built for the hardest end-to-end work Model ID gpt-6-astra Reasoning low medi"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260902T061433Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260904T060847Z",
+    "from_sha256": "48a9764aef1b955d3bfb6dee62d052c7ca592e6a2ff52b669dcc9f220cb277f5",
+    "to_sha256": "273cc997e3ff203beae427302afcc65e1273661800ba4237ab42fa6111d3a8ab",
+    "computed_at": "2026-09-04T06:14:14Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
