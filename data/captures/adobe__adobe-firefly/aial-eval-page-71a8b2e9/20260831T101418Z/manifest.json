@@ -37,15 +37,17 @@
     "at": "2026-08-31T10:14:24Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:no-captures",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260905061426/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/3d8f5c2964dc1143987680c7a79aa56e8e86c30c/public/evals/adobe-firefly/version-2026-07-22.html",
+    "snapshot_ts": "20260905061426",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-926ba4c456b7d713d41dc9d073ed00c97a8ddc8a",
     "via": "spn2",
-    "requested_at": "2026-09-04T06:12:08Z",
-    "at": "2026-09-04T06:12:19Z"
+    "requested_at": "2026-09-05T06:14:25Z",
+    "at": "2026-09-05T06:14:31Z"
   },
   "wayback_attempts": [
     {
@@ -63,6 +65,17 @@
       "via": "spn2",
       "requested_at": "2026-09-03T06:21:43Z",
       "at": "2026-09-03T06:22:11Z"
+    },
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:no-captures",
+      "answered": true,
+      "job_id": "spn2-926ba4c456b7d713d41dc9d073ed00c97a8ddc8a",
+      "via": "spn2",
+      "requested_at": "2026-09-04T06:12:08Z",
+      "at": "2026-09-04T06:12:19Z"
     }
   ]
 }

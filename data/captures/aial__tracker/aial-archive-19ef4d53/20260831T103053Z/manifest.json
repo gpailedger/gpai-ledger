@@ -36,5 +36,12 @@
     ],
     "errors": [],
     "at": "2026-08-31T10:30:58Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-05T06:23:28Z",
+    "at": "2026-09-05T06:25:28Z"
   }
 }

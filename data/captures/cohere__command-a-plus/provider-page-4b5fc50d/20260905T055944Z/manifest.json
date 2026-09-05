@@ -1,0 +1,53 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "provider-page",
+  "sha256": "5222493810d9b18da029f91e04d17de8967b10e73c0cf4780fe2d0c4458bc42e",
+  "size_bytes": 814129,
+  "stored_as": "raw.html",
+  "text_sha256": "30e0bcd5a3f33a127a43c7b6749c6968ed84f81c73693e8002bd46132651be93",
+  "doc_links_sha256": "5c05e95f0bfdb75a43d56d2b0a01deeca348f70b2ff9bac48fae80632dcedcd7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/command-a-plus",
+    "final_url": "https://docs.cohere.com/docs/command-a-plus",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "814129",
+    "fetched_at": "2026-09-05T05:59:44Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 3,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "4942ad2465dab3f7fddb3513e08169fd2594bd6d95189556a736a546399ea7bc",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260905055956/https://docs.cohere.com/docs/command-a-plus",
+    "snapshot_ts": "20260905055956",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-3becc468daa9100d793391d0186c931e5a435029",
+    "via": "spn2",
+    "requested_at": "2026-09-05T05:59:44Z",
+    "at": "2026-09-05T06:00:12Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-05T06:00:16Z"
+  }
+}

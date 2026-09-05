@@ -2109,6 +2109,24 @@
     "computed_at": "2026-08-31T12:27:42Z",
     "changes_withheld": true
   },
+  "aial/tracker::aial-method-9a435cf4::captures/aial__tracker/aial-method-9a435cf4/20260831T113118Z>captures/aial__tracker/aial-method-9a435cf4/20260905T061412Z": {
+    "verdict": "changed",
+    "similarity": 0.9967,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-9a435cf4",
+    "from_dir": "captures/aial__tracker/aial-method-9a435cf4/20260831T113118Z",
+    "to_dir": "captures/aial__tracker/aial-method-9a435cf4/20260905T061412Z",
+    "from_sha256": "f1a9ff0f465407b0500924b5397cc79f467aa46c997a954e714a2a8603458832",
+    "to_sha256": "5ba0816b4ef7ec790914af596f0fea785573af2b34105e6706ba70a24ef842af",
+    "computed_at": "2026-09-05T06:25:59Z",
+    "changes_withheld": true
+  },
   "aial/tracker::aial-method-ca01de1a::captures/aial__tracker/aial-method-ca01de1a/20260831T095130Z>captures/aial__tracker/aial-method-ca01de1a/20260831T095312Z": {
     "verdict": "changed",
     "similarity": 0.9957,
@@ -9954,6 +9972,34 @@
     "to_sha256": "4942ad2465dab3f7fddb3513e08169fd2594bd6d95189556a736a546399ea7bc",
     "computed_at": "2026-09-04T06:14:14Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260904T055959Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260905T055944Z": {
+    "verdict": "changed",
+    "similarity": 0.9987,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Text Safety Modes Embeddings",
+        "new": "Summarizing Text Embeddings Vectors,"
+      },
+      {
+        "op": "delete",
+        "old": "Text Safety Modes Introduction",
+        "new": "Summarizing Text Introduction to"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260904T055959Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260905T055944Z",
+    "from_sha256": "4942ad2465dab3f7fddb3513e08169fd2594bd6d95189556a736a546399ea7bc",
+    "to_sha256": "5222493810d9b18da029f91e04d17de8967b10e73c0cf4780fe2d0c4458bc42e",
+    "computed_at": "2026-09-05T06:25:59Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -10011,6 +10057,34 @@
     "from_sha256": "b5c8ede22b7c63a54209f4cde30f7bef29ea58f88bb31617998c9353dfd8aeea",
     "to_sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
     "computed_at": "2026-08-28T08:50:48Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z>captures/cohere__model-catalog/watch-page-e9526454/20260905T061129Z": {
+    "verdict": "changed",
+    "similarity": 0.9993,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Text Safety Modes Embeddings",
+        "new": "Summarizing Text Embeddings Vectors,"
+      },
+      {
+        "op": "delete",
+        "old": "Text Safety Modes Introduction",
+        "new": "Summarizing Text Introduction to"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260905T061129Z",
+    "from_sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
+    "to_sha256": "571cfff4407ca595863976bc779de09164c994af48b0fe6db3f6fc389a3f0b72",
+    "computed_at": "2026-09-05T06:25:59Z"
   },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
@@ -16359,6 +16433,49 @@
     "to_sha256": "873257b9ab59cbe427c2c28ae99f1f4e5903b7fcf6c5b86e07807435aa6dd128",
     "computed_at": "2026-09-04T06:14:15Z"
   },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260904T060921Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260905T061204Z": {
+    "verdict": "changed",
+    "similarity": 0.9872,
+    "word_delta": 28,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "MAI-Code-1.1-Flash MAI-Image-2.5 MAI-Voice-2",
+        "new": "MAI-Code-1.1-Flash MAI-Image-2.6 MAI-Voice-2"
+      },
+      {
+        "op": "replace",
+        "old": "Code. MAI-Image-2.5 Create",
+        "new": "Code. MAI-Image-2.6 Create"
+      },
+      {
+        "op": "insert",
+        "old": "our team MAI-Transcribe-2 is",
+        "new": "team Pushing the quality-cost frontier with MAI-Image-2.6 3 min read MAI-Transcribe-2"
+      },
+      {
+        "op": "delete",
+        "old": "min read MAI-Image-2.6 launches at No. 2 on Arena ahead of Google, Meta and xAI 3 min read",
+        "new": "2 min read"
+      },
+      {
+        "op": "replace",
+        "old": "model MAI-Image-2.5 Learn",
+        "new": "model MAI-Image-2.6 Learn"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260904T060921Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260905T061204Z",
+    "from_sha256": "873257b9ab59cbe427c2c28ae99f1f4e5903b7fcf6c5b86e07807435aa6dd128",
+    "to_sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
+    "computed_at": "2026-09-05T06:25:59Z"
+  },
   "microsoft/phi-4::aial-eval-history-142fd02d::captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183348Z>captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183430Z": {
     "verdict": "changed",
     "similarity": 0.9967,
@@ -20442,6 +20559,39 @@
     "from_sha256": "48a9764aef1b955d3bfb6dee62d052c7ca592e6a2ff52b669dcc9f220cb277f5",
     "to_sha256": "273cc997e3ff203beae427302afcc65e1273661800ba4237ab42fa6111d3a8ab",
     "computed_at": "2026-09-04T06:14:14Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260904T060847Z>captures/openai__model-catalog/watch-page-0e5ba652/20260905T060952Z": {
+    "verdict": "changed",
+    "similarity": 0.9884,
+    "word_delta": 54,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "posts Recent Meet Rosalind",
+        "new": "Recent Architectural visualization with Astra Building games with Astra Meet"
+      },
+      {
+        "op": "delete",
+        "old": "Week Scaling cyber defenders with Daybreak Codex as a platform: build on the open agent harness Topics",
+        "new": "Build Week Topics General"
+      },
+      {
+        "op": "delete",
+        "old": "models GPT 6 Astra is rolling out today for enterprises in our Trusted Access Program , with access through API and our Plus, Pro, Business and Enterprise plans coming in the coming days. Astra GPT-6",
+        "new": "Compare models Astra GPT-6"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260904T060847Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260905T060952Z",
+    "from_sha256": "273cc997e3ff203beae427302afcc65e1273661800ba4237ab42fa6111d3a8ab",
+    "to_sha256": "9ea5f627b4af5b66c10f279b492b2883e966dfa6558b0e4227f83632152c54a1",
+    "computed_at": "2026-09-05T06:25:59Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

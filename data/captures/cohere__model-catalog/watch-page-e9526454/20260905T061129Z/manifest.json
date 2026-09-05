@@ -1,0 +1,42 @@
+{
+  "source_id": "cohere/model-catalog",
+  "provider": "Cohere",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "571cfff4407ca595863976bc779de09164c994af48b0fe6db3f6fc389a3f0b72",
+  "size_bytes": 819239,
+  "stored_as": "raw.html",
+  "text_sha256": "13813daf5c7f4a1a15a7e395cbf201cd3d868593b4692dccefa4a242d444f130",
+  "doc_links_sha256": "fb9a2628a73abb4286fd922d8a54c7dd2cb22540b5bedbb4cc2eb4a18057aa76",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/models",
+    "final_url": "https://docs.cohere.com/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"98525w4svyhk21\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-05T06:11:29Z"
+  },
+  "prior_sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-b921c6ed4ac694cff40718b75a0aaee66ec2d7fa (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-b921c6ed4ac694cff40718b75a0aaee66ec2d7fa",
+    "via": "spn2",
+    "requested_at": "2026-09-05T06:11:29Z",
+    "at": "2026-09-05T06:11:51Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-05T06:11:54Z"
+  }
+}

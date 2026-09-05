@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
+  "size_bytes": 230357,
+  "stored_as": "raw.html",
+  "text_sha256": "9b93f71fddaa3fa04bf952ecfdb4798a86c41a9440b55ec337eef7b8929eb288",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Sat, 05 Sep 2026 06:12:04 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-05T06:12:04Z"
+  },
+  "prior_sha256": "873257b9ab59cbe427c2c28ae99f1f4e5903b7fcf6c5b86e07807435aa6dd128",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-05T06:12:04Z",
+    "at": "2026-09-05T06:12:04Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-05T06:12:08Z"
+  }
+}
