@@ -38,15 +38,17 @@
     "at": "2026-08-31T10:04:52Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260907061201/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cca9304e89a804655bbba8fa5ff0273fd5f4e246/public/archive/gpt-5-5-eu-ai-act-public-summary-of-training-content.pdf",
+    "snapshot_ts": "20260907061201",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-6071208c935962bffbdb18c83ef9201adbc63fdf",
     "via": "spn2",
-    "requested_at": "2026-09-06T06:09:29Z",
-    "at": "2026-09-06T06:09:34Z"
+    "requested_at": "2026-09-07T06:11:54Z",
+    "at": "2026-09-07T06:12:05Z"
   },
   "wayback_attempts": [
     {
@@ -55,6 +57,17 @@
       "via": "spn2",
       "requested_at": "2026-09-05T06:21:16Z",
       "at": "2026-09-05T06:23:16Z"
+    },
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-6071208c935962bffbdb18c83ef9201adbc63fdf",
+      "via": "spn2",
+      "requested_at": "2026-09-06T06:09:29Z",
+      "at": "2026-09-06T06:09:34Z"
     }
   ]
 }

@@ -38,14 +38,17 @@
     "at": "2026-08-29T18:40:10Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260907061331/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/52fcf78158412a0467924b0d2e326b7fe3fc5739/evals/devstral-2.yaml",
+    "snapshot_ts": "20260907061331",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-fa8ed10c1c74b6cdd7ae6ce19df6f343760c95a4",
     "via": "spn2",
-    "requested_at": "2026-09-06T06:10:57Z",
-    "at": "2026-09-06T06:10:57Z"
+    "requested_at": "2026-09-07T06:12:17Z",
+    "at": "2026-09-07T06:13:31Z"
   },
   "wayback_attempts": [
     {
@@ -55,6 +58,16 @@
       "via": "spn2",
       "requested_at": "2026-08-31T06:36:36Z",
       "at": "2026-08-31T06:39:43Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-09-06T06:10:57Z",
+      "at": "2026-09-06T06:10:57Z"
     }
   ]
 }

@@ -37,10 +37,25 @@
     "at": "2026-08-31T10:45:00Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260907061634/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/9b59d877246254be133ea75795e900ae5a01d4d7/public/evals/gpt-5-6/index.html",
+    "snapshot_ts": "20260907061634",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-b58c94ccab929866697eeeb66a7e3724684c8f83",
     "via": "spn2",
-    "requested_at": "2026-09-06T06:18:08Z",
-    "at": "2026-09-06T06:20:08Z"
-  }
+    "requested_at": "2026-09-07T06:16:28Z",
+    "at": "2026-09-07T06:16:39Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-06T06:18:08Z",
+      "at": "2026-09-06T06:20:08Z"
+    }
+  ]
 }
