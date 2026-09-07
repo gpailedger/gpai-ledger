@@ -1,4 +1,4 @@
-# Probe of missing summaries — 2026-08-31
+# Probe of missing summaries — 2026-09-07
 
 Probed 21 model(s) marked missing against 18 provider URL pattern(s); 36 URL(s) fetched.
 
