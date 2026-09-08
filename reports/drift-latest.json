@@ -546,10 +546,88 @@
   {
     "id": "microsoft/mai-image-2",
     "model": "MAI-Image-2",
-    "verdict": "identical-bytes",
+    "similarity": 0.9943,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
     "self_history": {
       "verdict": "single-version"
-    }
+    },
+    "basis": "live-vs-archive",
+    "verdict": "DRIFT-CANDIDATE",
+    "word_delta": 21,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "insert",
+        "old": "for MAI-Image-2 Version of",
+        "new": "for MAI-Image-2.6 / 2.6-Flash Version"
+      },
+      {
+        "op": "replace",
+        "old": "Summary: 19 March 2026",
+        "new": "Summary: 14 Aug 2026"
+      },
+      {
+        "op": "replace",
+        "old": "update: 19 March 2026",
+        "new": "update: 4 September 2026 1."
+      },
+      {
+        "op": "insert",
+        "old": ": MAI-Image-2 1.2.2 Model",
+        "new": ": MAI-Image-2.6, MAI-Image-2.6-Flash 1.2.2"
+      },
+      {
+        "op": "replace",
+        "old": "date: 19 March 2026",
+        "new": "date: 14 August 2026"
+      },
+      {
+        "op": "replace",
+        "old": "market: Coming soon. 1.3",
+        "new": "market: 4 September 2026 1.3"
+      },
+      {
+        "op": "insert",
+        "old": "The MAI-Image-2 text training",
+        "new": "The MAI-Image-2.6 text"
+      },
+      {
+        "op": "insert",
+        "old": "The MAI-Image-2 image training",
+        "new": "The MAI-Image-2.6 image"
+      },
+      {
+        "op": "replace",
+        "old": "as February 2026",
+        "new": "as May 2026"
+      },
+      {
+        "op": "replace",
+        "old": "model: January 2026",
+        "new": "model: April 2026"
+      },
+      {
+        "op": "insert",
+        "old": "for MAI-Image-2 was primarily",
+        "new": "for MAI-Image-2.6 was"
+      },
+      {
+        "op": "replace",
+        "old": "to January 2026",
+        "new": "to May 2026"
+      },
+      {
+        "op": "insert",
+        "old": "train MAI-Image-2 is a",
+        "new": "train MAI-Image-2.6 is"
+      },
+      {
+        "op": "insert",
+        "old": "in training 2 was generated",
+        "new": "training MAI-Image-2.6 was"
+      }
+    ]
   },
   {
     "id": "microsoft/mai-image-2-5",

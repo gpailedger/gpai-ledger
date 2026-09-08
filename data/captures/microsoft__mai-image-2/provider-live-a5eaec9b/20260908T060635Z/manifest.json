@@ -1,0 +1,44 @@
+{
+  "source_id": "microsoft/mai-image-2",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2",
+  "target_kind": "provider-live",
+  "sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+  "size_bytes": 300017,
+  "stored_as": "raw.pdf",
+  "text_sha256": "3ee668405be782d6a510f7259a16743a20092e6843f491e87662a31e27603c49",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/pdf/MAI-Image-2.6-Data-Summary.pdf",
+    "final_url": "https://microsoft.ai/pdf/MAI-Image-2.6-Data-Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"6a99fa31-493f1\"",
+    "last_modified": "Thu, 03 Sep 2026 22:52:33 GMT",
+    "content_length": "300017",
+    "fetched_at": "2026-09-08T06:06:34Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:gateway-timeout",
+    "answered": true,
+    "job_id": "spn2-a9b0708bae3f95b9935866f70e68f947c034f29b",
+    "via": "spn2",
+    "requested_at": "2026-09-08T06:06:35Z",
+    "at": "2026-09-08T06:06:41Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-08T06:06:45Z"
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-02T05:57:24Z",
+  "generated_utc": "2026-09-08T05:57:06Z",
   "seed": {
     "aial_repo": "https://github.com/AIAccountabilityLab/gpai-training-transparency",
-    "aial_head": "14c53fcdc56d005e8d02e2ea182c4aa3c1790803"
+    "aial_head": "1af5301afc27a216431b6dbf11e974d558f9aeac"
   },
   "counts": {
     "published": 46,
@@ -1543,6 +1543,11 @@
           "kind": "aial-eval-page",
           "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2/",
           "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Image-2.6-Data-Summary.pdf",
+          "note": "auto-relocation, fingerprint-confirmed 2026-09-07 06:51 UTC (similarity 0.9950; best sibling 0.7747; no other candidate >= 0.98; replaces https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf)"
         }
       ],
       "aial": {

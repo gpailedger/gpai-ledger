@@ -38,11 +38,10 @@
   },
   "wayback": {
     "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-db525707fa2014b90073d38920da3f1cdbd775f1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fec7b5515b0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
-    "job_id": "spn2-db525707fa2014b90073d38920da3f1cdbd775f1",
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7faab4b577d0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
     "via": "spn2",
-    "requested_at": "2026-09-07T06:14:06Z",
-    "at": "2026-09-07T06:16:16Z"
+    "requested_at": "2026-09-08T06:13:14Z",
+    "at": "2026-09-08T06:15:14Z"
   },
   "wayback_attempts": [
     {
@@ -51,6 +50,14 @@
       "via": "spn2",
       "requested_at": "2026-09-06T06:15:56Z",
       "at": "2026-09-06T06:17:56Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-db525707fa2014b90073d38920da3f1cdbd775f1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fec7b5515b0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "job_id": "spn2-db525707fa2014b90073d38920da3f1cdbd775f1",
+      "via": "spn2",
+      "requested_at": "2026-09-07T06:14:06Z",
+      "at": "2026-09-07T06:16:16Z"
     }
   ]
 }

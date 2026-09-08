@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-09-07
+# Live-vs-archive drift — 2026-09-08
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -6,6 +6,7 @@
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
+| MAI-Image-2 | DRIFT-CANDIDATE | 0.9943 | single version |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Phi-4 | near-identical | 0.9996 — 3 word(s) differ | single version |
@@ -28,7 +29,6 @@
 | Gemini 3 Pro | identical-bytes |  | single version |
 | Gemma 4 | identical-bytes |  | single version |
 | MAI-Code-1-Flash | identical-bytes |  | single version |
-| MAI-Image-2 | identical-bytes |  | single version |
 | MAI-Image-2.5 | identical-bytes |  | single version |
 | Minimax M3 | identical-bytes |  | single version |
 | PLLuM 2512 Base | identical-bytes |  | single version |

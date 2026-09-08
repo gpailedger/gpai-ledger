@@ -16368,6 +16368,94 @@
     "computed_at": "2026-08-31T12:28:14Z",
     "changes_withheld": true
   },
+  "microsoft/mai-image-2::live-vs-archive::captures/microsoft__mai-image-2/aial-archive-0cc441b3/20260811T104233Z>captures/microsoft__mai-image-2/provider-live-a5eaec9b/20260908T060635Z": {
+    "verdict": "changed",
+    "similarity": 0.9943,
+    "word_delta": 21,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "for MAI-Image-2 Version of",
+        "new": "for MAI-Image-2.6 / 2.6-Flash Version"
+      },
+      {
+        "op": "replace",
+        "old": "Summary: 19 March 2026",
+        "new": "Summary: 14 Aug 2026"
+      },
+      {
+        "op": "replace",
+        "old": "update: 19 March 2026",
+        "new": "update: 4 September 2026 1."
+      },
+      {
+        "op": "insert",
+        "old": ": MAI-Image-2 1.2.2 Model",
+        "new": ": MAI-Image-2.6, MAI-Image-2.6-Flash 1.2.2"
+      },
+      {
+        "op": "replace",
+        "old": "date: 19 March 2026",
+        "new": "date: 14 August 2026"
+      },
+      {
+        "op": "replace",
+        "old": "market: Coming soon. 1.3",
+        "new": "market: 4 September 2026 1.3"
+      },
+      {
+        "op": "insert",
+        "old": "The MAI-Image-2 text training",
+        "new": "The MAI-Image-2.6 text"
+      },
+      {
+        "op": "insert",
+        "old": "The MAI-Image-2 image training",
+        "new": "The MAI-Image-2.6 image"
+      },
+      {
+        "op": "replace",
+        "old": "as February 2026",
+        "new": "as May 2026"
+      },
+      {
+        "op": "replace",
+        "old": "model: January 2026",
+        "new": "model: April 2026"
+      },
+      {
+        "op": "insert",
+        "old": "for MAI-Image-2 was primarily",
+        "new": "for MAI-Image-2.6 was"
+      },
+      {
+        "op": "replace",
+        "old": "to January 2026",
+        "new": "to May 2026"
+      },
+      {
+        "op": "insert",
+        "old": "train MAI-Image-2 is a",
+        "new": "train MAI-Image-2.6 is"
+      },
+      {
+        "op": "insert",
+        "old": "in training 2 was generated",
+        "new": "training MAI-Image-2.6 was"
+      }
+    ],
+    "source": "microsoft/mai-image-2",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__mai-image-2/aial-archive-0cc441b3/20260811T104233Z",
+    "to_dir": "captures/microsoft__mai-image-2/provider-live-a5eaec9b/20260908T060635Z",
+    "from_sha256": "0c29e9f3ad0f006260da86742c482616d649ee9df3ad4537a180656fa0aaaa34",
+    "to_sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+    "computed_at": "2026-09-08T06:22:20Z"
+  },
   "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260819T150606Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260903T061819Z": {
     "verdict": "changed",
     "similarity": 0.9951,
@@ -23880,5 +23968,208 @@
     "from_sha256": "40c2ba912e30c54e2f5e6436453b078ec2b208336cfc9546f99a25fb69db0ed6",
     "to_sha256": "a72a5ea96227a6fcdd22c663d0baa1589406f9f6b51fe349bd326ded4ab81eb9",
     "computed_at": "2026-09-03T06:23:36Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260903T061741Z>captures/xai__model-catalog/watch-page-905d5d7a/20260908T061043Z": {
+    "verdict": "changed",
+    "similarity": 0.9015,
+    "word_delta": 145,
+    "moved_words": 44,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Completions Legacy",
+        "new": "Completions Legacy"
+      },
+      {
+        "op": "moved",
+        "old": "Ephemeral Tokens",
+        "new": "Ephemeral Tokens"
+      },
+      {
+        "op": "moved",
+        "old": "Cost Tracking Debugging Errors",
+        "new": "Cost Tracking Debugging Errors"
+      },
+      {
+        "op": "moved",
+        "old": "Prompt Caching Context Compaction",
+        "new": "Prompt Caching Context Compaction"
+      },
+      {
+        "op": "moved",
+        "old": "Migration Guides Imagine Image Quality Retirement",
+        "new": "Migration Guides Imagine Image Quality Retirement"
+      },
+      {
+        "op": "moved",
+        "old": "Migrating to Responses API",
+        "new": "Migrating to Responses API"
+      },
+      {
+        "op": "moved",
+        "old": "Completions Legacy",
+        "new": "Completions Legacy"
+      },
+      {
+        "op": "moved",
+        "old": "Ephemeral Tokens",
+        "new": "Ephemeral Tokens"
+      },
+      {
+        "op": "moved",
+        "old": "Cost Tracking Debugging Errors",
+        "new": "Cost Tracking Debugging Errors"
+      },
+      {
+        "op": "moved",
+        "old": "Prompt Caching Context Compaction",
+        "new": "Prompt Caching Context Compaction"
+      },
+      {
+        "op": "moved",
+        "old": "Migration Guides Imagine Image Quality Retirement",
+        "new": "Migration Guides Imagine Image Quality Retirement"
+      },
+      {
+        "op": "moved",
+        "old": "Migrating to Responses API",
+        "new": "Migrating to Responses API"
+      },
+      {
+        "op": "replace",
+        "old": "Docs Docs Search",
+        "new": "Docs API Grok Build Grok Bot Grok Search"
+      },
+      {
+        "op": "replace",
+        "old": "Started Welcome Grok",
+        "new": "Started Overview Quickstart Grok"
+      },
+      {
+        "op": "delete",
+        "old": "4.6 Latest Quickstart Models New Pricing Release Notes Grok Build Getting Started Modes and Commands Keyboard Shortcuts Features Settings CLI Enterprise Deployments Text",
+        "new": "4.6 Latest Models Pricing Release Notes Text Text"
+      },
+      {
+        "op": "insert",
+        "old": "Text Generation Reasoning Structured",
+        "new": "Generation Streaming Reasoning"
+      },
+      {
+        "op": "replace",
+        "old": "Outputs Streaming Multi",
+        "new": "Outputs Image Understanding Multi"
+      },
+      {
+        "op": "delete",
+        "old": "Extension Files API Integration Voice New Overview",
+        "new": "Video Extension Voice Overview Speech"
+      },
+      {
+        "op": "delete",
+        "old": "New Resources Rate Limits Docs MCP Files",
+        "new": "Voices New Files Collections"
+      },
+      {
+        "op": "insert",
+        "old": "Collection Metadata Tools Overview",
+        "new": "Metadata Generated Media Tools"
+      },
+      {
+        "op": "replace",
+        "old": "MCP Tools Deep Dive Advanced",
+        "new": "Tools In Depth Advanced"
+      },
+      {
+        "op": "insert",
+        "old": "API Usage Batch API",
+        "new": "Usage Rate Limits Priority Processing Batch"
+      },
+      {
+        "op": "delete",
+        "old": "Completions New Priority Processing New mTLS Authentication Async",
+        "new": "Deferred Completions Async Requests"
+      },
+      {
+        "op": "replace",
+        "old": "Mode New on Nov 2 New Model Retirement on May 15 Community Community Integrations",
+        "new": "Mode mTLS Authentication Platforms Community Integrations"
+      },
+      {
+        "op": "insert",
+        "old": "Microsoft Foundry FAQ Data",
+        "new": "Foundry Docs MCP Nov 2, 2026 New Model Retirement May 15, 2026 Chat FAQ"
+      },
+      {
+        "op": "replace",
+        "old": "Privacy General Docs Grok Bot Grok Console REST API gRPC Get Started Welcome Grok",
+        "new": "General API Docs REST Reference Grok Build Grok Bot Grok Get Started Overview Quickstart Grok"
+      },
+      {
+        "op": "delete",
+        "old": "4.6 Latest Quickstart Models New Pricing Release Notes Grok Build Getting Started Modes and Commands Keyboard Shortcuts Features Settings CLI Enterprise Deployments Text",
+        "new": "4.6 Latest Models Pricing Release Notes Text Text"
+      },
+      {
+        "op": "insert",
+        "old": "Text Generation Reasoning Structured",
+        "new": "Generation Streaming Reasoning"
+      },
+      {
+        "op": "replace",
+        "old": "Outputs Streaming Multi",
+        "new": "Outputs Image Understanding Multi"
+      },
+      {
+        "op": "delete",
+        "old": "Extension Files API Integration Voice New Overview",
+        "new": "Video Extension Voice Overview Speech"
+      },
+      {
+        "op": "delete",
+        "old": "New Resources Rate Limits Docs MCP Files",
+        "new": "Voices New Files Collections"
+      },
+      {
+        "op": "insert",
+        "old": "Collection Metadata Tools Overview",
+        "new": "Metadata Generated Media Tools"
+      },
+      {
+        "op": "replace",
+        "old": "MCP Tools Deep Dive Advanced",
+        "new": "Tools In Depth Advanced"
+      },
+      {
+        "op": "insert",
+        "old": "API Usage Batch API",
+        "new": "Usage Rate Limits Priority Processing Batch"
+      },
+      {
+        "op": "delete",
+        "old": "Completions New Priority Processing New mTLS Authentication Async",
+        "new": "Deferred Completions Async Requests"
+      },
+      {
+        "op": "replace",
+        "old": "Mode New on Nov 2 New Model Retirement on May 15 Community Community Integrations",
+        "new": "Mode mTLS Authentication Platforms Community Integrations"
+      },
+      {
+        "op": "insert",
+        "old": "Microsoft Foundry FAQ Data",
+        "new": "Foundry Docs MCP Nov 2, 2026 New Model Retirement May 15, 2026 Chat FAQ"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260903T061741Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260908T061043Z",
+    "from_sha256": "a72a5ea96227a6fcdd22c663d0baa1589406f9f6b51fe349bd326ded4ab81eb9",
+    "to_sha256": "66dc2b0f212b15076dd13bdec3ddad2e685ed4b3cd73a6f0513d53962255adf4",
+    "computed_at": "2026-09-08T06:22:19Z"
   }
 }
