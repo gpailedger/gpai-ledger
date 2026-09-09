@@ -488,10 +488,67 @@
   {
     "id": "openai/gpt-image-2",
     "model": "GPT Image 2",
-    "verdict": "identical-bytes",
+    "similarity": 0.9948,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
     "self_history": {
-      "verdict": "single-version"
-    }
+      "verdict": "changed",
+      "similarity": 0.9948,
+      "word_delta": 19,
+      "moved_words": 0,
+      "changes": [
+        {
+          "op": "replace",
+          "old": "Summary: v1 Last",
+          "new": "Summary: v3 Last"
+        },
+        {
+          "op": "replace",
+          "old": "update: 30 July 2026",
+          "new": "update: 8 September 2026"
+        },
+        {
+          "op": "replace",
+          "old": "than April 2026.",
+          "new": "than August 2026."
+        },
+        {
+          "op": "replace",
+          "old": "market: N/A. 5 Information",
+          "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+      "same_tool": true,
+      "from_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260811T111046Z",
+      "to_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "DRIFT-CANDIDATE",
+    "word_delta": 19,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Summary: v1 Last",
+        "new": "Summary: v3 Last"
+      },
+      {
+        "op": "replace",
+        "old": "update: 30 July 2026",
+        "new": "update: 8 September 2026"
+      },
+      {
+        "op": "replace",
+        "old": "than April 2026.",
+        "new": "than August 2026."
+      },
+      {
+        "op": "replace",
+        "old": "market: N/A. 5 Information",
+        "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
+      }
+    ]
   },
   {
     "id": "xai/grok-4-5",

@@ -20009,6 +20009,82 @@
     "computed_at": "2026-08-31T12:28:20Z",
     "changes_withheld": true
   },
+  "openai/gpt-image-2::live-vs-archive::captures/openai__gpt-image-2/aial-archive-a2c97132/20260818T164324Z>captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z": {
+    "verdict": "changed",
+    "similarity": 0.9948,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Summary: v1 Last",
+        "new": "Summary: v3 Last"
+      },
+      {
+        "op": "replace",
+        "old": "update: 30 July 2026",
+        "new": "update: 8 September 2026"
+      },
+      {
+        "op": "replace",
+        "old": "than April 2026.",
+        "new": "than August 2026."
+      },
+      {
+        "op": "replace",
+        "old": "market: N/A. 5 Information",
+        "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
+      }
+    ],
+    "source": "openai/gpt-image-2",
+    "target": "live-vs-archive",
+    "from_dir": "captures/openai__gpt-image-2/aial-archive-a2c97132/20260818T164324Z",
+    "to_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z",
+    "from_sha256": "8a3ac329e248433d3a2db555236fcc94684c0294d2a705bbaf2a60995c216b3a",
+    "to_sha256": "7e7360ea30e21281e67cbc5869ab12031d009f9f7216241fd961e9ec173af13a",
+    "computed_at": "2026-09-09T06:17:34Z"
+  },
+  "openai/gpt-image-2::provider-live-ad7df3d6::captures/openai__gpt-image-2/provider-live-ad7df3d6/20260811T111046Z>captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z": {
+    "verdict": "changed",
+    "similarity": 0.9948,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Summary: v1 Last",
+        "new": "Summary: v3 Last"
+      },
+      {
+        "op": "replace",
+        "old": "update: 30 July 2026",
+        "new": "update: 8 September 2026"
+      },
+      {
+        "op": "replace",
+        "old": "than April 2026.",
+        "new": "than August 2026."
+      },
+      {
+        "op": "replace",
+        "old": "market: N/A. 5 Information",
+        "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
+      }
+    ],
+    "source": "openai/gpt-image-2",
+    "target": "provider-live-ad7df3d6",
+    "from_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260811T111046Z",
+    "to_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z",
+    "from_sha256": "8a3ac329e248433d3a2db555236fcc94684c0294d2a705bbaf2a60995c216b3a",
+    "to_sha256": "7e7360ea30e21281e67cbc5869ab12031d009f9f7216241fd961e9ec173af13a",
+    "computed_at": "2026-09-09T06:17:32Z"
+  },
   "openai/gpt-oss::aial-eval-page-a338da47::captures/openai__gpt-oss/aial-eval-page-a338da47/20260831T095100Z>captures/openai__gpt-oss/aial-eval-page-a338da47/20260831T095245Z": {
     "verdict": "changed",
     "similarity": 0.8981,
@@ -20696,6 +20772,44 @@
     "from_sha256": "273cc997e3ff203beae427302afcc65e1273661800ba4237ab42fa6111d3a8ab",
     "to_sha256": "9ea5f627b4af5b66c10f279b492b2883e966dfa6558b0e4227f83632152c54a1",
     "computed_at": "2026-09-05T06:25:59Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260905T060952Z>captures/openai__model-catalog/watch-page-0e5ba652/20260909T061008Z": {
+    "verdict": "changed",
+    "similarity": 0.9933,
+    "word_delta": 25,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Image generation Video generation",
+        "new": "generation Overview Image prompting Video"
+      },
+      {
+        "op": "insert",
+        "old": "Prompt caching Batch Flex",
+        "new": "caching Prompt cache diagnostics Batch"
+      },
+      {
+        "op": "insert",
+        "old": "Image generation Video generation",
+        "new": "generation Overview Image prompting Video"
+      },
+      {
+        "op": "replace",
+        "old": "editing GPT-Image-2 State-of-the-art image generation model Realtime Models",
+        "new": "editing GPT-Image-2.5 Sunburst Our most capable model for image generation and editing GPT-Image-2.5 Flare Fast, high-quality everyday image generation Realtime"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260905T060952Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260909T061008Z",
+    "from_sha256": "9ea5f627b4af5b66c10f279b492b2883e966dfa6558b0e4227f83632152c54a1",
+    "to_sha256": "c79e1b273b50a255e8c278fe6096b5aaaa18148258708e9b524fb639a0ae2f96",
+    "computed_at": "2026-09-09T06:17:32Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

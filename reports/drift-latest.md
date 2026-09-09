@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-09-08
+# Live-vs-archive drift — 2026-09-09
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -7,6 +7,7 @@
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
 | MAI-Image-2 | DRIFT-CANDIDATE | 0.9943 | single version |
+| GPT Image 2 | DRIFT-CANDIDATE | 0.9948 | changed (19 word(s)) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Phi-4 | near-identical | 0.9996 — 3 word(s) differ | single version |
@@ -41,7 +42,6 @@
 | GPT-5.4 Nano | identical-bytes |  | single version |
 | GPT-5.5 | identical-bytes |  | single version |
 | GPT-5.6 Luna | identical-bytes |  | single version |
-| GPT Image 2 | identical-bytes |  | single version |
 | Bielik v3 11B Instruct | identical-bytes |  | single version |
 | Apertus | identical-bytes |  | single version |
 | Apertus v1.5 | identical-bytes |  | single version |
