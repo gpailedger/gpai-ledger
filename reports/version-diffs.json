@@ -4933,6 +4933,29 @@
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:40Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260902T055919Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260910T055859Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260902T055919Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260910T055859Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:52Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-history-941c4fb5::captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184254Z>captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184536Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -5370,6 +5393,29 @@
     "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:40Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260902T060003Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260910T055938Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260902T060003Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260910T055938Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:52Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -5917,6 +5963,29 @@
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:40Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260902T060047Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260910T060029Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260902T060047Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260910T060029Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:52Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-history-1346dfa5::captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184309Z>captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184549Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -6355,6 +6424,29 @@
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:40Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260902T060113Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260910T060058Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260902T060113Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260910T060058Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:53Z"
+  },
   "anthropic/claude-opus-5::aial-eval-history-e94ba648::captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184317Z>captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184556Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -6792,6 +6884,29 @@
     "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:41Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260902T060138Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260910T060123Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260902T060138Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260910T060123Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:53Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -7302,6 +7417,29 @@
     "from_sha256": "ef1cae6ce146db4f5284f3bd53424db0444fa30f8c70fa85fa3932e665776971",
     "to_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "computed_at": "2026-09-02T07:01:41Z"
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260902T060232Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260910T060355Z": {
+    "verdict": "changed",
+    "similarity": 0.9942,
+    "word_delta": 19,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Whitepaper Claude Cowork",
+        "new": "Claude Cowork Security Best Practices Copy link for Claude Cowork Security Best Practices View Claude Cowork Security Best Practices Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260902T060232Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260910T060355Z",
+    "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
+    "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "computed_at": "2026-09-10T06:30:53Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -10016,6 +10154,29 @@
     "to_sha256": "10e460fb42573027203c7985c4856b9f0251850478cbb3b712d87682558a855c",
     "computed_at": "2026-09-07T06:21:59Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260907T060023Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260910T060629Z": {
+    "verdict": "changed",
+    "similarity": 0.999,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Embed North Mini",
+        "new": "North Small Translate North Mini"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260907T060023Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260910T060629Z",
+    "from_sha256": "10e460fb42573027203c7985c4856b9f0251850478cbb3b712d87682558a855c",
+    "to_sha256": "ab49c1aeacce01bd455048181888c7f05c1eeff9f1958170ca1a0f10caf16ed5",
+    "computed_at": "2026-09-10T06:30:53Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -10101,6 +10262,44 @@
     "from_sha256": "43c57c51a8c8c36e464b92a5efe5f2b37510ac13ff5658e832cbf600d538b74f",
     "to_sha256": "571cfff4407ca595863976bc779de09164c994af48b0fe6db3f6fc389a3f0b72",
     "computed_at": "2026-09-05T06:25:59Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260905T061129Z>captures/cohere__model-catalog/watch-page-e9526454/20260910T061703Z": {
+    "verdict": "changed",
+    "similarity": 0.9798,
+    "word_delta": 126,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Embed North Mini",
+        "new": "Embed North Small Translate North"
+      },
+      {
+        "op": "insert",
+        "old": "Different Platforms Embed Using",
+        "new": "Platforms North Embed"
+      },
+      {
+        "op": "insert",
+        "old": "Chat endpoint. Command Command",
+        "new": "endpoint. The North family includes purpose-built models such as North Small Translate for machine translation and North Mini Code for agentic coding. Both are available through the Chat endpoint and support production deployment through Model Vault. Command"
+      },
+      {
+        "op": "insert",
+        "old": "N/A N/A Embed These",
+        "new": "N/A North North is Cohere s family of purpose-built generative models. North models are available on the Cohere API for evaluation and through Model Vault for production deployment. Model Name Status Description Modality Context Length Maximum Output Tokens Endpoints north-small-translate-1-0 Live N"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260905T061129Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260910T061703Z",
+    "from_sha256": "571cfff4407ca595863976bc779de09164c994af48b0fe6db3f6fc389a3f0b72",
+    "to_sha256": "66ef3dc40d89e4a93b904f8a2b51129857c09fdd551ddd718c5b7e4abf7913ed",
+    "computed_at": "2026-09-10T06:30:54Z"
   },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
