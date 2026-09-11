@@ -10177,6 +10177,22 @@
     "to_sha256": "ab49c1aeacce01bd455048181888c7f05c1eeff9f1958170ca1a0f10caf16ed5",
     "computed_at": "2026-09-10T06:30:53Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260910T060629Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260911T060055Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260910T060629Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260911T060055Z",
+    "from_sha256": "ab49c1aeacce01bd455048181888c7f05c1eeff9f1958170ca1a0f10caf16ed5",
+    "to_sha256": "e50bc2af967ace6b9977fb8b559a3dec7bf1488ce4b64d2a1e975dbd722313cd",
+    "computed_at": "2026-09-11T06:24:16Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -12831,6 +12847,29 @@
         "computed_at": "2026-08-22T23:24:23Z"
       }
     ]
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z>captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z": {
+    "verdict": "method-changed",
+    "similarity": 0.9991,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "smollm3-eu-data-transparency like 8",
+        "new": "smollm3-eu-data-transparency Like 8"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z",
+    "from_sha256": "d5faa968264dc23767c56e3f02683f1ed242132a23ec0989f77d0d2213593efc",
+    "to_sha256": "7b55759c7359f549e05120ae92da569a3e250c47d85c87ff36de07dba6ceb29f",
+    "computed_at": "2026-09-11T06:24:16Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -21009,6 +21048,79 @@
     "from_sha256": "9ea5f627b4af5b66c10f279b492b2883e966dfa6558b0e4227f83632152c54a1",
     "to_sha256": "c79e1b273b50a255e8c278fe6096b5aaaa18148258708e9b524fb639a0ae2f96",
     "computed_at": "2026-09-09T06:17:32Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260909T061008Z>captures/openai__model-catalog/watch-page-0e5ba652/20260911T061818Z": {
+    "verdict": "changed",
+    "similarity": 0.9602,
+    "word_delta": 131,
+    "moved_words": 2,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Custom Audiences",
+        "new": "Custom Audiences"
+      },
+      {
+        "op": "replace",
+        "old": "Tools Voice Audio Production API",
+        "new": "Agents Tools Audio voice Production"
+      },
+      {
+        "op": "replace",
+        "old": "Tools Voice Audio Production API",
+        "new": "Agents Tools Audio voice Production"
+      },
+      {
+        "op": "replace",
+        "old": "Tools Voice Audio Production API",
+        "new": "Agents Tools Audio voice Production"
+      },
+      {
+        "op": "replace",
+        "old": "speech Overview Voice",
+        "new": "speech Getting started Voice"
+      },
+      {
+        "op": "insert",
+        "old": "Overview Agents SDK Quickstart Agent",
+        "new": "Overview Agents API Overview Quickstart Architecture Configuring Agents Sessions Run and continue sessions Events and items Manage sessions Webhooks Environments and sandboxes OpenAI-hosted sandboxes Self-hosted sandboxes Sandbox lifecycle Sandbox security Files and artifacts Tools and integrations "
+      },
+      {
+        "op": "replace",
+        "old": "Overview Get started Voice agents Live translation Realtime prompting guide Audio Audio and speech Transcription File transcription Realtime transcription Speech generation Connection methods WebRTC WebSocket SIP Sessions and operations Managing",
+        "new": "Overview GPT-Live Getting started Prompting Managing sessions Delegation and tools Migrate to GPT-Live Partner integrations Realtime API Getting started Prompting Managing conversations"
+      },
+      {
+        "op": "replace",
+        "old": "detection Realtime with tools Webhooks and server-side controls Managing costs Go",
+        "new": "detection Tools and MCP Build with voice Voice agents Custom voices Cost optimization Connections WebRTC WebSockets Telephony and SIP Server-side controls Audio processing File transcription Live transcription Live translation Text to speech Audio in Chat Completions Go"
+      },
+      {
+        "op": "insert",
+        "old": "Campaign Targeting Conversion-Optimized",
+        "new": "Targeting Location Targeting Platform Targeting Conversion-Optimized"
+      },
+      {
+        "op": "replace",
+        "old": "speech Overview Voice",
+        "new": "speech Getting started Voice"
+      },
+      {
+        "op": "insert",
+        "old": "translation GPT-Realtime-2.1 Reasoning",
+        "new": "translation GPT-Live 1 Our premier model for natural, expressive voice conversations with smooth interruption handling. GPT-Realtime-2.1 Reasoning"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260909T061008Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260911T061818Z",
+    "from_sha256": "c79e1b273b50a255e8c278fe6096b5aaaa18148258708e9b524fb639a0ae2f96",
+    "to_sha256": "fab67b101a914792fa67e8b8ce56fd8ddd89080d87a5f91632175549c3c1ffed",
+    "computed_at": "2026-09-11T06:24:16Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

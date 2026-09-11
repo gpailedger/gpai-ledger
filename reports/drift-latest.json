@@ -1022,27 +1022,27 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "capture-method-change",
-    "similarity": 0.0522,
+    "similarity": 0.9991,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
     "self_history": {
       "verdict": "method-changed",
-      "similarity": 0.0522,
-      "word_delta": 1114,
+      "similarity": 0.9991,
+      "word_delta": 1,
       "moved_words": 0,
       "changes": [
         {
-          "op": "insert",
-          "old": "repository... Refreshing",
-          "new": "Refreshing SmolLM3-3B EU Data Transparency SmolLM3-3B Public Summary of Training Content Summary v1.0 - Last updated: 25/07/2025 This Space contains the transparency report for the SmolLM3-3B GPAI model developed by Hugging Face following the guidelines provided by the AI Office. It may serve as an "
+          "op": "replace",
+          "old": "smollm3-eu-data-transparency like 8",
+          "new": "smollm3-eu-data-transparency Like 8"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260811T105844Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z"
     }
   },
   {
