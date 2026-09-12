@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Microsoft",
+  "model": "Phi-4 Multimodal Instruct",
+  "target_kind": "aial-eval-history",
+  "sha256": "bfd288ca1edd8f338aebf1930e40530df6a7610e858040173ba621f67663cee9",
+  "size_bytes": 4020,
+  "stored_as": "raw.yaml",
+  "text_sha256": "86f4dcbcbb68318aa80d4714f117b92d0260e4041d6284fd532e0aebdfc71021",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-4-multimodal-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-4-multimodal-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6500b8e8d09f0b13798335d2a124246566f2cb4bfab698db3c5974325f35cbea\"",
+    "last_modified": null,
+    "content_length": "613",
+    "fetched_at": "2026-09-12T06:38:55Z"
+  },
+  "prior_sha256": "da0e986cf199f50759bc43bd3658a13e5c40971bcb30f2af711f0be506215abd",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "ce4d9ff8380228b14daf46300208713f890f5231",
+  "git_path": "evals/phi-4-multimodal-instruct.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:38:58Z"
+  }
+}

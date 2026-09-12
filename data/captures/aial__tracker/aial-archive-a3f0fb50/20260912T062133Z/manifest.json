@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Claude_Fable_Mythos_5_1_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "ff3ed62ab5d93f5841d328f1473c9f74fc170acf16c66a46c60bcbcf0c65040e",
+  "size_bytes": 293261,
+  "stored_as": "raw.pdf",
+  "text_sha256": "65725043edacbab8b1b66a41e4dc1e75c443a304a8312e3d3b06d85919c8db6a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"ca23169dc8336bb75cfdd8998d078c37d74055bd2e09d97058e43d77c85ec4f1\"",
+    "last_modified": null,
+    "content_length": "293261",
+    "fetched_at": "2026-09-12T06:21:33Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "52cd0847de7d3bb83dd9e9259cb11b7302e9ccf7",
+  "git_path": "public/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:21:35Z"
+  }
+}

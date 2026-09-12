@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Microsoft",
+  "model": "Phi-3.5 Vision Instruct",
+  "target_kind": "aial-eval-history",
+  "sha256": "bc59e57b3c4345779873e7b056d503d1b4e2fe0563840a7e148cc43037edb128",
+  "size_bytes": 4010,
+  "stored_as": "raw.yaml",
+  "text_sha256": "83c5972efd226bd60c71ceb9424a9fd2a4e4966c9894e0ee97916323866e718f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-3.5-reasoning.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-3.5-reasoning.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0901b6f051ff29abc6aa65364a6733959f130cd91efe997ce8975bf79f8a09cb\"",
+    "last_modified": null,
+    "content_length": "615",
+    "fetched_at": "2026-09-12T06:38:45Z"
+  },
+  "prior_sha256": "f8338c7c37163662ee5964e91084c4bd7ee6528c878e23f4d44515cc4312ee53",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "e6d08dc48339807afc0e63810531e883ad93ef54",
+  "git_path": "evals/phi-3.5-reasoning.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:38:48Z"
+  }
+}

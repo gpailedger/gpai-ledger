@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Microsoft",
+  "model": "Phi-4 Reasoning",
+  "target_kind": "aial-eval-history",
+  "sha256": "4c454a262146ac03d1e0cd873434c95c8aa6f7c3884fba4e69ffb94192fe9e94",
+  "size_bytes": 3833,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b05f16d469b0db33a1a94ca2ecc2ab72bf7c9a216976e33ee2ac9f0cf463ce9f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/evals/phi-4-reasoning.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/evals/phi-4-reasoning.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"bcc8017dee52e9310f2b9f0aa81a93e2fe343145af097827263de3dba8e3d232\"",
+    "last_modified": null,
+    "content_length": "569",
+    "fetched_at": "2026-09-12T06:36:20Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "215145044dd56ed879b4c56d87d0bd7b3f94e787",
+  "git_commit_date": "2026-09-11T16:31:52Z",
+  "git_blob_sha": "f106dec343a68c51e19a3acd1dc8abbd0119aa91",
+  "git_path": "evals/phi-4-reasoning.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:36:24Z"
+  }
+}

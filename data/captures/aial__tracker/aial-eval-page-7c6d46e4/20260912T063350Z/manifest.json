@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "north-micro-vision-instruct",
+  "target_kind": "aial-eval-page",
+  "sha256": "968aec77da3a3d830bd8229988d1c9401b53b73589fa15b1491814c386fa8936",
+  "size_bytes": 11849,
+  "stored_as": "raw.html",
+  "text_sha256": "9f7de963dd185f07149993902768e9cb255306c7dcfa2d6806e34e4fc988384c",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/north-micro-vision-instruct/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/north-micro-vision-instruct/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5727b9503646e09f71fc86f86da6fbdf2c350377281fd0ca1b8926a01b4e81fb\"",
+    "last_modified": null,
+    "content_length": "2439",
+    "fetched_at": "2026-09-12T06:33:50Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "c25891c07dc864c50dd95cff06087f3746c323f1",
+  "git_path": "public/evals/north-micro-vision-instruct/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:33:54Z"
+  }
+}

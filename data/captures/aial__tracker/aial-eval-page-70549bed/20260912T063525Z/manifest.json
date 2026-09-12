@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "vitra",
+  "target_kind": "aial-eval-page",
+  "sha256": "45b90b493c5099e2ec9129613e0c112c2d8de312748a3c2607acdb5cf642a648",
+  "size_bytes": 11783,
+  "stored_as": "raw.html",
+  "text_sha256": "5721542606df9838645b36b0bcd477268314dcd1d9342049c5d56d4cfebe0408",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/vitra/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/vitra/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ff378742bf384e8a29b606bcc16431499db7d6d280196d67306f7b39717641e4\"",
+    "last_modified": null,
+    "content_length": "2420",
+    "fetched_at": "2026-09-12T06:35:25Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "c0c67807d73868e565ece5d540482e97b61132d5",
+  "git_path": "public/evals/vitra/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:35:28Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "meta-muse-glimmer",
+  "target_kind": "aial-eval-page",
+  "sha256": "3ad03664dbd3247958864921a621d04e594ef53b7c06e5a71d61647d5fda3139",
+  "size_bytes": 20145,
+  "stored_as": "raw.html",
+  "text_sha256": "2fbc979f723a0fdbc9952984e8e332bf86e663157da3d9b8afefc1cc36a9582b",
+  "doc_links_sha256": "dcb1cc968891324c188d0bff6ba7972bb58f3a90f36e235cec359cb4e968adbd",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/meta-muse-glimmer/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/meta-muse-glimmer/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e53598b905b6863083663dd38b857390cc69f66f53b6826134584d56c4215fa4\"",
+    "last_modified": null,
+    "content_length": "3560",
+    "fetched_at": "2026-09-12T06:24:41Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "de4ce42e6d48cdc2baf75200ac94b221a72016ae",
+  "git_commit_date": "2026-09-10T21:19:29Z",
+  "git_blob_sha": "ff310577568c453ff02f1d3a0a1d38ead584c9d6",
+  "git_path": "public/evals/meta-muse-glimmer/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:24:45Z"
+  }
+}

@@ -1,0 +1,334 @@
+1
+TemplateforthePublicSummaryofTraining
+ContentforGeneral-PurposeAImodels
+VersionoftheSummary :V1.1,firstpublishedversion.Nopreviouslypublished
+versionofthisSummaryexists.
+Lastupdate:31/07/2026
+Generalinformation
+1.Generalinformation
+1.1.Provideridentification
+Providernameandcontactdetails
+LINAGORA—SIREN431473669,registeredundernumber431473669R.C.S.
+Nanterre.
+Registeredoffice:VillaGoodTech,37ruePierrePoli,92130Issy-les-Moulineaux,
+France.
+ContactformattersrelatingtothisSummary:jplorre@linagora.com
+Websites:
+ https://www.linagora.com
+ https://openllm-france.fr
+LINAGORAisasmallormedium-sizedenterprisewithinthemeaningofCommission
+Recommendation2003/361/EC.TheSMEthresholdreferredtoinSection2.3ofthis
+templateisthereforetheapplicableone.
+Authorisedrepresentativenameandcontactdetails
+Notapplicable.TheproviderisestablishedintheUnion(France);Article54AIActdoes
+notapply.
+1.2.Modelidentification
+Versionedmodelname(s)
+This Summary covers the following models, whose training content is identical, in
+accordancewithpoint30oftheCommissionExplanatoryNotice:
+ Luciole-1B-Base:
+https://huggingface.co/OpenLLM-France/Luciole-1B-Base
+ Luciole-8B-Base:
+https://huggingface.co/OpenLLM-France/Luciole-8B-Base
+ Luciole-23B-Base:https://huggingface.co/OpenLLM-France/Luciole-23B-Base
+AllmodelsarereleasedundertheApache2.0licencewithpubliclyavailableweights,
+includingintermediatecheckpointsavailablehere:
+https://dl.labs.linagora.com/files/models/OpenLLM-France/
+2
+Modeldependencies
+The Luciole base models are pre-trained from scratch by the provider. Their training
+did not involve modification or fine-tuning of third-party model weights. There are
+accordingly no general-purpose AI models already placed on the Union market on
+which the base models depend. All models were trained using version 2.3.1 of the
+NeMolibrary.
+
+Luciole-1B-Base:adensetransformermodeltrainedusingacustomadaptation
+oftheNemotron34Barchitecturerecipe.
+
+Luciole-8B-Base: a hybrid Mamba-transformer model trained using a custom
+adaptationoftheNemotronH-8Brecipe.
+
+Luciole-23B-Base: a dense transformer model trained using a custom
+adaptationoftheNemotron322Barchitecturerecipe.
+DateofplacementofthemodelontheUnionmarket
+02June2026
+1.3Modalities,overalltrainingdatasizeandother
+characteristics
+Modality
+☒Text
+Textistheonlymodalitypresentinthetrainingdata
+Trainingdatasize
+☒1billionto10trilliontokens
+Approximately4.65trilliontokensafterpre-processing.
+Typesofcontent
+Encyclopaedicandreferencecontent;scientificandacademictext(arXiv,HAL,doctoral
+theses,PubMed);legal,parliamentaryandinstitutionaldocuments(EUR-Lex,French
+Parliament,OECD,WTO,INSEE);pressandhistoricalnewspapers;public-domain
+literature;webpages;forumandquestion-and-answercontent;sourcecode;
+mathematicaltext;paralleltranslationcorpora;transcribedspeech(subtitles);
+instruction,reasoninganddialoguedata.
+Latestdateofdataacquisition/collectionformodeltraining
+ Principaltrainingphases(1and2):June2025;themostrecentweb-derived
+materialcomesfromtheCommonCrawldumpCC-MAIN-2025-26.
+ Annealingandcontextextension:December2025.
+Descriptionofthelinguisticcharacteristicsoftheoveralltrainingdata
+Rawpretrainingdataset:Thepre-trainingdataismultilingualwithadeliberate
+Europeanemphasis.Compositionofthecorpusasassembled:
+ English53.4%
+ French16.3%
+ German5.6%
+ Spanish4.9%
+ Italian2.8%
+3
+ Portuguese1.9%
+ Dutch1.4%
+ Arabic0.7%
+ Parallelbilingualdata0.7%
+ Programminglanguages11.3%
+ Mathematicalcontent4.7%.
+Trainingproportionsafterapplyingsamplingweights(includingupsamplingofFrench
+data):
+ English41.9%
+ French30.4%
+ German3.8%
+ Spanish3.5%
+ Italian1.9%
+ Portuguese1.3%
+ Dutch1.0%
+ Arabic0.5%
+ Parallelbilingualdata1.7%
+ Programminglanguages9.2%
+ Mathematicalcontent3.5%
+RegionalandminoritylanguagesoftheUnionaccountforapproximately0.4%ofthe
+corpus:Basque,Breton,Catalan,Corsican,Franco-Provençal,French-basedcreoles,
+Occitan,PicardandWalloon(togetherwithTahitian).Wikimedia-derivedcontent
+covers21languages.
+Otherrelevantcharacteristicsoftheoveralltrainingdata
+The corpus contains a substantial share of French institutional, legal, parliamentary,
+statistical and heritage content — proceedings and written questions of the French
+Parliament, EUR-Lex, INSEE, Gallica monographs and press, HAL, French doctoral
+theses and data.gouv.fr — reflecting the intended use of the models in French and
+otherEuropean-languagesettings.
+Additionalcomments
+Tokeniservocabulary:128000tokens.
+Context length: 131 072 tokens for the base models, extended progressively during
+trainingfrom4096.
+Training phases: the base models were exposed to approximately 4.9 trillion tokens
+across five training phases: 3.5 T, 1.5 T, 300 B annealing, 50 B and 50 B for context
+extension(forthe8B,contextextensionwasperformedasasingle,fourthphase).The
+difference from the 4.65 trillion tokens of the raw corpus reflects the re-use and re-
+weightingofpartsofthecorpus,notadditionalcontent.
+Training infrastructure: training was carried out on 256–512 NVIDIA H100 80 GB GPUs
+oftheJeanZaysupercomputer(GENCI/IDRIS),representing576,587GPU-hoursforthe
+23Bmodel,237,037GPU-hoursforthe8Band41,912GPU-hoursforthe1B.
+Funding: development was carried out by LINAGORA within the OpenLLM-France
+consortiumwithfundingfromBpifranceundertheFrance2030programme.
+4
+1 Only subcorpora whose licences allow for commercial use were selected from the Claire corpora.
+2.Listofdatasources
+2.Listofdatasources
+2.1.Publiclyavailabledatasets
+Haveyouusedpubliclyavailabledatasetstotrainthemodel?
+☒Yes
+Ifyes,specifythemodality(ies)ofthecontentcoveredbythedatasets
+concerned
+☒Text
+Listoflargepubliclyavailabledatasets
+Substantially all of the training content consists of pre-packaged, openly licensed
+datasetscompiledbythirdparties.Ratherthanapplythe3%materialitythreshold,the
+providerdisclosesthecompletelistofthe87sourceconfigurationsused.Thatlist,with
+per-sourcelicenceinformation,ispublishedandkeptuptodateat:
+https://huggingface.co/datasets/OpenLLM-France/Luciole-Training-Dataset
+Theprincipalsourcesarethefollowing.
+ Web (filtered): FineWeb 2 and FineWeb2-HQ (ODC-BY); FineWeb-Edu (ODC-BY);
+DCLMDolmino(ODC-BY);CulturaX(mC4/OSCARterms);HPLT2(CC01.0).
+ Encyclopaedic: Wikipedia, Wikibooks, Wiktionary, Wikisource, Wikiquote,
+Wikinews,Wikivoyage,Wikiversity(GFDL/CCBY-SA);Vikidia(GFDL).
+ Institutional and legal: Common Corpus subsets EUR-Lex, OECD, WTO, TED EU
+tendersandGATTlibrary(publicdomain/open);Eurovoc(EUPL1.1);data.gouv.fr
+open data (ODC-BY); INSEE publications (ODC-BY); French Parliament
+amendments, public speeches, interventions and written questions (CC BY-SA /
+LicenceOuverteEtalab2.0);Europarl(open).
+ Academic:CommonPile,PubMed,LibreTexts,StackExchange,arXivpapersand
+abstracts (mixed open); HAL (HAL licence); French doctoral theses (Licence
+OuverteEtalab2.0).
+ Books and heritage: Project Gutenberg (public domain); Gallica monographs
+and press (public domain); Common Pile pre-1929 books (public domain); BNL
+Luxembourgnewspapers1841–1879(publicdomain).
+ Code: StarCoder Data (mixed open); StarCoder Olmomix (ODC-BY); Stack-Edu
+(mixedopen);CommonPileGitHubArchive(mixedopen);OpenCodeReasoning
+(CCBY4.0).
+ Mathematics: FineMath 3+ and 4+ (ODC-BY); InfiMM-WebMath (ODC-BY);
+MegaMath Web (ODC-BY, more than 300 B tokens); MathPile Commercial (CC
+BY-SA4.0).
+ Instruction and dialogue: Aya Dataset (Apache 2.0); Claire dialogue corpora (CC
+BY-NC-SA 4.0)1; Nemotron Post-Training v2 (CC BY 4.0); OpenThoughts (Apache
+2.0);OpenMathInstruct-1(NVIDIAlicence);PleiasSynth(CDLA-Permissive2.0).
+ Parallel corpora: Europarl parallel (open); CroissantAligned (CC BY-SA 4.0);
+ParaDocs(Apache2.0);Translation-Instruct(CCBY-SA4.0).
+ Transcribedspeech:subtitlesofFrench-languagepublicvideocontentavailable
+underpermissiveterms,usedastext.
+5
+Approach to selecting parts of datasets: several of these datasets were used only in
+part. Selection was made by language, by quality score (for example FineWeb2-HQ
+retains the top decile by classifier score), by mathematical or educational subset, and
+by the retrospective robots.txt filtering described in Section 3.1. The selection criteria
+applied to each source are documented in the published corpus card and in the
+processingscriptsfoundat:
+https://github.com/OpenLLM-France/Luciole-
+Training/tree/main/data/processing/pretraining.
+Generaldescriptionofotherpubliclyavailabledatasetsnotlistedabove
+None. All publicly available datasets used are enumerated in the published corpus
+documentationreferredtoabove.
+The corpus is restricted to material distributed under open licences or in the public
+domain (public domain dedications, CC0, CC BY, CC BY-SA, ODC-BY, Apache 2.0, EUPL,
+Licence Ouverte Etalab 2.0 and comparable terms). It includes copyright-protected
+content distributed under those open licences; personal data present in public web
+and institutional content, subject to the pseudonymisation described in Section 3.2;
+and machine-generated content originating from the third-party instruction datasets
+listedabove.
+Additionalcomments
+ThecorpusitselfispublishedunderCCBY-SA4.0with87loadableconfigurationsand
+per-sourcedocumentationandtheprocessingscriptsarepublicat
+https://github.com/OpenLLM-France/Luciole-
+Training/tree/main/data/processing/pretraining
+VerificationofthestatementsinthisSummaryisthereforepossibleatsourcelevel.
+2.2Privatenon-publiclyavailabledatasetsobtainedfromthird
+parties
+2.2.1.Datasetscommerciallylicensedbyrightsholdersortheir
+representatives
+Haveyouconcludedtransactionalcommerciallicensingagreement(s)with
+rightsholder(s)orwiththeirrepresentatives?
+☒No
+2.2.2.Privatedatasetsobtainedfromotherthirdparties
+Haveyouobtainedprivatedatasetsfromthirdpartiesthatarenotlicensedas
+describedinSection2.2.1,suchasdataobtainedfromprovidersofprivatedatabases,
+ordataintermediaries?
+☒No
+2.3Datacrawledandscrapedfromonlinesources
+Werecrawlersusedbytheprovideroronbehalfof?
+☒No
+6
+2.4Userdata
+WasdatafromuserinteractionswiththeAImodel(e.g.userinputandprompts)used
+totrainthemodel?
+☒No
+Wasdatacollectedfromuserinteractionswiththeprovider’sotherservicesor
+productsusedtotrainthemodel?
+☒No
+Nodatafromusersoftheprovider'sservicesorproductswasusedtotrainthe
+models.Inparticular,noLinTO,TwakeorotherLINAGORAproductdata,andnologs
+frompublicLucioledemonstrators,enteredthepre-trainingorpost-trainingcorpora.
+2.5Syntheticdata
+WassyntheticAI-generateddatacreatedbytheproviderorontheirbehalfto
+trainthemodel?
+☒Yes
+Ifyes,modalityofthesyntheticdata
+☒Text
+Ifyes,specifythegeneral-purposeAImodel(s)usedtogeneratethesynthetic
+dataifavailableonthemarket
+SynthFineWeb2:usingQwen38B,wesyntheticallyaugmenteddocumentsfrom
+FineWeb2bypromptingthemodeltoreformulatethemusingthreedifferentlevelsof
+difficulty:easy,medium,difficult.
+SynthWikipedia:usingQwen38B,wesyntheticallyaugmenteddocumentsfrom
+Wikipediabygeneratingquestion/responsepairsbasedonthecontentofthe
+Wikipediadocument.Thequestion/answerpairswereappendedtotheendofthe
+documentconcerned.
+InformationaboutotherAImodels,includingprovider’sownAImodel(s)not
+availableonthemarket,usedtogeneratesyntheticdatatotrainthemodelto
+whichthisSummaryapplies: N/A
+Additionalcomments
+Several third-party post-training datasets used by the provider were themselves
+produced by AI models (e.g., Nemotron, OpenCodeReasoning, OpenThoughts,
+PleiasSynth). Because they were obtained as publicly available datasets rather than
+generatedbyoronbehalfoftheprovider,theyarereportedunderSection2.1.
+Beforeuse,theproviderremovedreferencestothird-partymodelnamesandcompany
+names, and removed Chinese and Russian script, in order to limit the transfer of
+provenanceartefactsandculturalbias.
+2.6Othersourcesofdata
+HavedatasourcesotherthanthosedescribedinSections2.1to2.5beenusedto
+trainthemodel?
+☒No
+7
+1. Dataprocessingaspects
+3.Dataprocessingaspects
+3.1.Respectofreservationofrightsfromtextanddatamining
+exceptionorlimitation
+AreyouaSignatorytotheCodeofPracticeforgeneral-purposeAImodelsthat
+includescommitmentstorespectreservationsofrightsfromtheTDMexception
+orlimitation?
+☒Yes
+Describe the measures implemented before model training to respect
+reservations of rights from the TDM exception or limitation before and during
+data collection, including the opt-out protocols and solutions honoured by the
+provider or, as applicable, by third parties from which datasets have been
+obtained:
+LINAGORAisasignatorytotheGeneral-PurposeAICodeofPracticeandadherestoits
+Copyright chapter, including Measure 1.3 on the identification of and compliance with
+reservationsofrights.Themeasuresbelowimplementthatcommitment.
+1. Restrictionofthecorpustoopenlylicensedmaterial.Thecorpuswas
+assembledexclusivelyfromsourcesdistributedunderopenlicencesorinthe
+publicdomain.ContentwhoserightsholdershadreservedrightsunderArticle
+4(3)ofDirective(EU)2019/790wasthereforenotatargetofcollection.
+2. Retrospectiveapplicationofrobots.txttoallweb-deriveddatasets.Robots.txt
+fileswereretrievedfromtheCommonCrawldumpCC-MAIN-2025-26,themost
+recentfileforeachhostwasretained,andadocumentwaskeptonlywherethe
+robots.txtexplicitlypermittedcrawlingbyCCBotorwherethefilewas
+malformed.ThisfilterwasappliedtoFineWebanditsderivativedatasets,
+CulturaX,DCLMDolmino,FineMath,HPLT2InfiWebMathandMegaMath.The
+processingcodeispublic.
+3. Astandingopt-outmechanism.Rightsholdersanddatasubjectswhoidentify
+theirprotectedworkorpersonaldatainthecorpusmayrequestitsremoval
+throughtheformpublishedat https://openllm-france.fr/delete-data/.Requests
+areprocessedagainstthepublishedcorpusandremovalsarereflectedinthe
+nextcorpusrelease.
+Fordatasetsobtainedfromthirdparties,theprovideradditionallyreliesonthe
+collectionpracticesandrights-reservationcomplianceoftheupstreamcompilers,as
+documentedbythosecompilers.
+Limitsofthesemeasures,statedforcompleteness:Therobots.txtfilterwasapplied
+aftercollectionbytheupstreamcompilersratherthanduringcollectionandrelieson
+asinglesnapshotdatedJune2025.ItevaluatestheCCBotuser-agentonly,anditdoes
+notcapturereservationsexpressedbymeansotherthanrobots.txt,suchastheTDM
+ReservationProtocol,metadataassertionsorcontractualtermsofuse.Theprovider
+hasundertaken,initscopyrightpolicy,tore-runtheevaluationateachcorpusrelease,
+toextendittofurtheruser-agentsandtoreadTDMRepassertionswherepresent.
+8
+3.2Removalofillegalcontent
+Generaldescriptionofmeasurestaken
+Sourcingconstraint:Byrestrictingsourcecorporatoopenlylicensed,largely
+institutional,encyclopaedic,academicandheritagesources,wesubstantiallyreduce
+exposuretoillegalmaterial;themainsourcesofillegalcontentareexpectedtocome
+fromwebcrawleddata,forwhichwetookadditionalmeasuresdescribedbelow.
+Pseudonymisationofpersonaldata:E-mailaddresseswerereplacedbyplaceholders
+(forexampleemail@example.com),IPaddressesbythetoken<IP_ADDRESS>,and
+telephonenumbers(detectedwiththephonenumberslibrary)bythetoken
+<PHONE_NUMBER>.PseudonymisationwasappliedtoCulturaX,DCLM,FineWeb2,
+FineWeb-Edu,FineWeb-HQ,FineWeb2-HQ,HPLT2andCommonCorpus.
+Qualityandtoxicityfiltering:Englishwebdatasources(DCLMDolmino,FineWeb-edu,
+FineWeb-HQ)wereannotatedandfilteredusingmodel-basedqualityandcontent
+classifierspriortopublication.Multiligualwebsources(FineWeb2,HPLT,CulturaX)
+wereannotatedforqualityandtoxicityusinganin-houseclassifiertrainedfollowing
+theFineWeb-eduapproach.Inlaterphases,datafromFineWeb2-HQ,whichwere
+filteredforqualityandtoxicitypriortopublication,wereused.Laterstagesoftraining
+wererestrictedtodatawithhighqualityandeducationalscores.
+Childsexualabusematerialandterroristcontent:AllFineWebcorporaarefilteredas
+describedinthecodehere
+https://github.com/huggingface/datatrove/blob/main/src/datatrove/pipeline/filters/url
+_filter.py#L33.CulturaXandHPLTwerefilteredforadultcontentbasedontheblacklist
+providedbytheUniversityofToulouse https://dsi.ut-capitole.fr/blacklists/.
+Disclaimer:Theproviderstatesopenlyinthepublishedcorpusdocumentationthat,
+despitethesemeasures,toxicandoffensivedocumentsmayremainintheweb-
+derivedportion,andthathistoricalmaterialcarriesperiodbiasesrelatingtogender,
+ethnicity,skincolourandreligion.
+3.3.Otherinformation
+Otherrelevantinformationaboutdataprocessing
+Deduplicationwasappliedacrossthecorpus;themethodsaredocumentedinthe
+publicprocessingscripts.
+Thecompletecorpus,theprocessingpipelineandthetrainingconfigurationare
+published,sothatthestatementsinthisSummarycanbeindependentlyverified
+ratherthanmerelyasserted.
+ThisSummaryiskeptuptodateandrepublishedatleasteverysixmonths,orsooner
+uponanymaterialchangesuchasfurtherpre-training,anewpost-trainingrunora
+newcorpusrelease.Supersededversionsarearchivedandremainaccessible.
+RequestsconcerningthisSummary,andrights-relatedrequests,maybeaddressedto
+thecontactgiveninSection1.1.

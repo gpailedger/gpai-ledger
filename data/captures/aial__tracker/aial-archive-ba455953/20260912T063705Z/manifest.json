@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Phi4_Multimodal_Instruct_2026_09_11.pdf",
+  "target_kind": "aial-archive",
+  "sha256": "c7322d453ce6b90fbd95e2e7d3fd68e00bd649a661762d3e1b61931db41fea0e",
+  "size_bytes": 99743,
+  "stored_as": "raw.pdf",
+  "text_sha256": "7d4377f47e2a387c9a18e0d77c7f8728056cc221f10841fea4e4453e5c5f8a80",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi4_Multimodal_Instruct_2026_09_11.pdf.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi4_Multimodal_Instruct_2026_09_11.pdf.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"26ec10c5595859c9eafe6adc56dd8e7acb276991aa7619c8717f80a0841e443d\"",
+    "last_modified": null,
+    "content_length": "99743",
+    "fetched_at": "2026-09-12T06:37:05Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "215145044dd56ed879b4c56d87d0bd7b3f94e787",
+  "git_commit_date": "2026-09-11T16:31:52Z",
+  "git_blob_sha": "d853cca3e72afdb3fc115968511d8d70af7844ed",
+  "git_path": "public/archive/Phi4_Multimodal_Instruct_2026_09_11.pdf.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:37:10Z"
+  }
+}

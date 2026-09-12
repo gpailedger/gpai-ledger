@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "mai-thinking-1",
+  "target_kind": "aial-eval-page",
+  "sha256": "a3638cd21357bdc02ed8b880db9aa097ebe72feeabbeb06c848a53f2ece2fb0d",
+  "size_bytes": 13195,
+  "stored_as": "raw.html",
+  "text_sha256": "d6b226df0473911939541ab4bea56d9972b142d97b80e9ba04551d11bf5997e2",
+  "doc_links_sha256": "910c46f2f6966d9d569486155ee45ab596b0c508ef2a9bedccafafe1782ebc8b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/evals/mai-thinking-1/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/evals/mai-thinking-1/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4a289d39628ee50b76005bdc6333db2929863265da5b18dcc3e8d63ddec2b52d\"",
+    "last_modified": null,
+    "content_length": "2935",
+    "fetched_at": "2026-09-12T06:28:51Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "a030eede7e4582b27dd04a8453647824d8da9784",
+  "git_commit_date": "2026-09-11T13:30:30Z",
+  "git_blob_sha": "9945c1f6ce6b42364fd700c83fa25adca34d520c",
+  "git_path": "public/evals/mai-thinking-1/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:28:55Z"
+  }
+}

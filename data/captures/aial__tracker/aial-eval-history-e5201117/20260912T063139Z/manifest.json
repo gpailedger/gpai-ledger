@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Almawave",
+  "model": "Velvet 2B 1.5",
+  "target_kind": "aial-eval-history",
+  "sha256": "b029b9c0928405930ab678e01c8e9fc13ea8c55eeece0118459875e21c50e63f",
+  "size_bytes": 3802,
+  "stored_as": "raw.yaml",
+  "text_sha256": "756e1c556a595f818f9165bcff37735e4b90a816b48bfce1ff507783bd91f0c6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/velvet-2b-1.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/velvet-2b-1.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4eb4d29871d14d736f184817529330085eabd0ceb9b89a1ce68c2b694e144860\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-09-12T06:31:39Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "f810efc19aa1911a00622319b699746841fe8a6f",
+  "git_path": "evals/velvet-2b-1.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:31:44Z"
+  }
+}

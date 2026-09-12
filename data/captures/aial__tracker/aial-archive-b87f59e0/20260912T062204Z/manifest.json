@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Pleias_Baguettotron_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "74c5db3df4962d252f5a6cc8735eabc1cf1e3bed570b1178bc05265f82a573e5",
+  "size_bytes": 708180,
+  "stored_as": "raw.pdf",
+  "text_sha256": "8e53ce8da3632dc70d922503e53b1637fe205c644bb78392cf3eaab51da8673d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/Pleias_Baguettotron_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/Pleias_Baguettotron_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"7fcdd66f198374067ffe61ad0c9029568bb8b4bbd637b7881de9a787b3c37073\"",
+    "last_modified": null,
+    "content_length": "708180",
+    "fetched_at": "2026-09-12T06:22:03Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "4b24f49175549ca8ff4c8eb9ab8199587b864157",
+  "git_path": "public/archive/Pleias_Baguettotron_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:22:07Z"
+  }
+}

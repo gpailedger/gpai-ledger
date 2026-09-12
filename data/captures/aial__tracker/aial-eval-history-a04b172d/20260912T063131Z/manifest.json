@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Cohere",
+  "model": "Tiny Aya Base",
+  "target_kind": "aial-eval-history",
+  "sha256": "c0399daa8dcdeb485d950bf542f72c3b82e59f2d58649cfcf8ffdf3012fbb17a",
+  "size_bytes": 3795,
+  "stored_as": "raw.yaml",
+  "text_sha256": "8b3e507dd05bfbba01349eea8947ef107f67d8514b64e9929597ada6db3d300a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/tiny-aya-base.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/tiny-aya-base.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d9fa5d601bb2e1367f4eff5ecf2facf4460190fee5552bc7055c7d9b16e752ca\"",
+    "last_modified": null,
+    "content_length": "555",
+    "fetched_at": "2026-09-12T06:31:31Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "96bd8d1d76d9e8232c7afeee4cff46d0dad6ff13",
+  "git_path": "evals/tiny-aya-base.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:31:35Z"
+  }
+}

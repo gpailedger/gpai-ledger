@@ -1048,8 +1048,10 @@
   {
     "id": "microsoft/mai-thinking-1",
     "model": "MAI-Thinking-1",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "microsoft/mai-code-1-1-flash",

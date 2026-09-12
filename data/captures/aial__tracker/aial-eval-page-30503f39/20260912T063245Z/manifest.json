@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "gemini-3.5-flash-cyber",
+  "target_kind": "aial-eval-page",
+  "sha256": "bb849082b1108f683ae215f46c97289f7bdc9c78c45505ed63c7a4f7adb62d9e",
+  "size_bytes": 11847,
+  "stored_as": "raw.html",
+  "text_sha256": "9b7308064578c692d43a8ef39cae4e5c07ab866273b7449fbe922b42c5b7f5d9",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/gemini-3.5-flash-cyber/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/gemini-3.5-flash-cyber/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f3cbfd81474906414f06373ffbafa66e99f1003e8547b973a3c68f6921ab5fff\"",
+    "last_modified": null,
+    "content_length": "2438",
+    "fetched_at": "2026-09-12T06:32:45Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "c62510793893026d7af934d0104363540f8f34e6",
+  "git_path": "public/evals/gemini-3.5-flash-cyber/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:32:49Z"
+  }
+}

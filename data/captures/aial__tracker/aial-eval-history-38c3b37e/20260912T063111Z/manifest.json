@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Google",
+  "model": "Imagen 4 Fast",
+  "target_kind": "aial-eval-history",
+  "sha256": "fa82247482c5aff6c2f3c344bd39c8b2d5491aff55256c8f4b959033de9c41e9",
+  "size_bytes": 3788,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d4aa78c60ff833e44bbce09387a393836bf6eadbc61e7580308da8abab6ebb11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/imagen-4-fast.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/imagen-4-fast.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"917227789bc222825bd6bd52b874d53c44297c571de4472ff40164ea556c982d\"",
+    "last_modified": null,
+    "content_length": "550",
+    "fetched_at": "2026-09-12T06:31:11Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "5447cbf4c7f398492ca9d550532ef9ab7d114304",
+  "git_path": "evals/imagen-4-fast.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:31:17Z"
+  }
+}

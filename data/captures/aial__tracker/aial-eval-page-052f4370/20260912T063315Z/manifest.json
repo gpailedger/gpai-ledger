@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "gemini-robotics-1.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "e211af23c7c6a54b1025d2bd59099fd595c30c80683733ae4f7f28885ab5125c",
+  "size_bytes": 11891,
+  "stored_as": "raw.html",
+  "text_sha256": "effb6e9ba7a4e18036edeb7a8e63ff54c7e68bec1bf9a9c02e21cc262b26b962",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/gemini-robotics-1.5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/gemini-robotics-1.5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6a3d640acff060163deabfb51c373e93cf2564bb42fbed38f9ca73f417c37a3c\"",
+    "last_modified": null,
+    "content_length": "2447",
+    "fetched_at": "2026-09-12T06:33:15Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "37d0d1082b8d0039c0c185788e8bc8bee6fac605",
+  "git_path": "public/evals/gemini-robotics-1.5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:33:20Z"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Phi1_2026_09_11",
+  "target_kind": "aial-archive",
+  "sha256": "dec291766ae33b1ba5fd9e9da584d58db1193c1145b68f32b171cc845333b3b6",
+  "size_bytes": 98805,
+  "stored_as": "raw.pdf",
+  "text_sha256": "c2661eaba40ce937119b42e80284870e755851a14307ee189bd947fd590d3558",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi1_2026_09_11.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi1_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"25a2567973181406576b528131ee70ed592eb3f6ed809128e12da12473b01974\"",
+    "last_modified": null,
+    "content_length": "98805",
+    "fetched_at": "2026-09-12T06:36:42Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "215145044dd56ed879b4c56d87d0bd7b3f94e787",
+  "git_commit_date": "2026-09-11T16:31:52Z",
+  "git_blob_sha": "6eabd9f1af838ac5f155d418036c08ac57216ded",
+  "git_path": "public/archive/Phi1_2026_09_11.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:36:46Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-12T06:43:05Z",
+    "at": "2026-09-12T06:43:21Z"
+  }
+}

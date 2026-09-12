@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "phi-4-multimodal-instruct",
+  "target_kind": "aial-eval-page",
+  "sha256": "299001022f71c8ffd7f1f770ab5a425f1ba9957305f3e66ca8d3bd136bcf6039",
+  "size_bytes": 13295,
+  "stored_as": "raw.html",
+  "text_sha256": "0e50a2f872249b51cbd484b394bfc766a6630c03be6bc3da6f12c8c5f1772d12",
+  "doc_links_sha256": "8ff267b03a8552ac8072fba7e4956ba2a1a23d594d2307739abfce8e22bf4683",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/phi-4-multimodal-instruct/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/phi-4-multimodal-instruct/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"2ef6666545ab4b9c015b1656b3e552f637e2a8703b3990140610c33bff9dec55\"",
+    "last_modified": null,
+    "content_length": "2947",
+    "fetched_at": "2026-09-12T06:39:34Z"
+  },
+  "prior_sha256": "cbb855415d205e2f12f883b486eb4d8af154737f999075e1342f947f5d47021c",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "2ad8124fa0c18c7949dfa55b9da19e9a083c3415",
+  "git_path": "public/evals/phi-4-multimodal-instruct/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:39:38Z"
+  }
+}

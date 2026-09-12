@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "cyfragolvpl_pllum-instruct",
+  "target_kind": "aial-eval-page",
+  "sha256": "0d308fd064ce1ffd3b24c958a632110b02be61e0adeb02684ead6f2027a414ce",
+  "size_bytes": 13363,
+  "stored_as": "raw.html",
+  "text_sha256": "69e787d2acdee955f8cb8ee36a59f86edac2ef3d293e778bc4c29415ddcbb9d8",
+  "doc_links_sha256": "cffab5010cfcb0523819b2e08345b55d5f6857b0dae6127e6708769b75f41923",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/evals/cyfragolvpl_pllum-instruct/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/evals/cyfragolvpl_pllum-instruct/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"dcc064c1dface6e2e21357df3a1c0d4a8569501baa786c5d8a7824a294f52fba\"",
+    "last_modified": null,
+    "content_length": "2992",
+    "fetched_at": "2026-09-12T06:28:43Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "a030eede7e4582b27dd04a8453647824d8da9784",
+  "git_commit_date": "2026-09-11T13:30:30Z",
+  "git_blob_sha": "1aa45ceb8e153f2c3636c9c0350489449a0d7f55",
+  "git_path": "public/evals/cyfragolvpl_pllum-instruct/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:28:47Z"
+  }
+}

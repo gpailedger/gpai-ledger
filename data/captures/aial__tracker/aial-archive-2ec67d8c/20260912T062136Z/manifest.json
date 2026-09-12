@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "DeepSeek_DeepSeek_V4_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+  "size_bytes": 253321,
+  "stored_as": "raw.pdf",
+  "text_sha256": "47accbf49046c9d573a88d187da155388f3d75d9091c32677c5d306e73d069b5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/DeepSeek_DeepSeek_V4_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/DeepSeek_DeepSeek_V4_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"f2c50a2ae78da38ad9853bcede4fb2d6e13250e4784cb21be8d6549afaea1ea6\"",
+    "last_modified": null,
+    "content_length": "253321",
+    "fetched_at": "2026-09-12T06:21:36Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "9e3f42a80fa689252c21bb3828086b0e72935ae8",
+  "git_path": "public/archive/DeepSeek_DeepSeek_V4_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:21:39Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260912064152/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/DeepSeek_DeepSeek_V4_2026_09_08.pdf",
+    "snapshot_ts": "20260912064152",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-fa30ddb37c4285a1ea3ea435f784bde5c179c2ad",
+    "via": "spn2",
+    "requested_at": "2026-09-12T06:41:51Z",
+    "at": "2026-09-12T06:41:57Z"
+  }
+}

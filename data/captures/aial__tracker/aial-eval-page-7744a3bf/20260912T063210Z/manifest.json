@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "devstral-2",
+  "target_kind": "aial-eval-page",
+  "sha256": "1239e2e3a8d1fcc75e038fd69840ce231b05ad0109ba1bda5f1efad47e2c62d8",
+  "size_bytes": 11818,
+  "stored_as": "raw.html",
+  "text_sha256": "a465d17783ff9edce737c1043c42aa11e607af805a3d0deb322c93a7c7c6409b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/devstral-2/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/devstral-2/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4cbf31aa467ee0a9fd7d21a41a6055a6a4d119525c083ba393d96def89630977\"",
+    "last_modified": null,
+    "content_length": "2430",
+    "fetched_at": "2026-09-12T06:32:10Z"
+  },
+  "prior_sha256": "8e072395615957b73d075f932db769b4c41c444f9e1c7639cdc9b4ef43c19410",
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "37e48a2fdb5853f9ad79c72eb188d08d801facbf",
+  "git_path": "public/evals/devstral-2/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:32:14Z"
+  }
+}

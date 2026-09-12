@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "velvet-25b",
+  "target_kind": "aial-eval-page",
+  "sha256": "23c71df9452cb184adeeacd5c1635774d25a7c255877b63a9d24fdadcab51a23",
+  "size_bytes": 11785,
+  "stored_as": "raw.html",
+  "text_sha256": "d53ac868893fe1b009ee9f8860814827fffb2bebfb261c5d6b6090ba9bc2291c",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/velvet-25b/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/velvet-25b/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"58df7ab9871487e4ef71f21eb3feea1f24845cfa80ebb3b19f1431435f179baf\"",
+    "last_modified": null,
+    "content_length": "2412",
+    "fetched_at": "2026-09-12T06:35:05Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "81a12879f949f34f65b1304e0589564473055605",
+  "git_path": "public/evals/velvet-25b/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:35:09Z"
+  }
+}

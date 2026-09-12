@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "diffusiongemma",
+  "target_kind": "aial-eval-page",
+  "sha256": "77fd5e1f595b1f6c39fc326ccf4235e5ca870dd9f790ca46c373778908d091b1",
+  "size_bytes": 11843,
+  "stored_as": "raw.html",
+  "text_sha256": "ef2608750a5883814ba6665d77d82db698c5d2aae0bf3dcbd2da5ace9121dad8",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/diffusiongemma/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/diffusiongemma/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f11c153eff7d853c609561c536675d8c7568f487d432157f45ebee0f7c070a33\"",
+    "last_modified": null,
+    "content_length": "2431",
+    "fetched_at": "2026-09-12T06:32:20Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "7e454e3a727690a8a6ecbc21d5a9d8d019c3b8cf",
+  "git_path": "public/evals/diffusiongemma/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:32:24Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "magma-8b",
+  "target_kind": "aial-eval-page",
+  "sha256": "4782c43242133518038719e3b43eb6fd5272bc30c7d836cf0091753d997c064e",
+  "size_bytes": 13177,
+  "stored_as": "raw.html",
+  "text_sha256": "a19a8732cfe5a6f71836d77b5d2506424dab4bd9fb58a885b06b14dbdfdd331d",
+  "doc_links_sha256": "8e096f3daebfe1b8a6c3aa9c3cc3919c56ea16215cd93ecace390a937680e39e",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/magma-8b/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/magma-8b/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"bbcbc2e5ec074c108abd4134e48ac93acf0e4af661218da1aeb826f9929ecd22\"",
+    "last_modified": null,
+    "content_length": "2920",
+    "fetched_at": "2026-09-12T06:39:06Z"
+  },
+  "prior_sha256": "7e456cbaf248443cc04138ec88231d12f60f35f38fb19e463ab28f9b751d3cd9",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "ed1d71ce8f3fb47c0872025989575eb1637550f1",
+  "git_path": "public/evals/magma-8b/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:39:08Z"
+  }
+}

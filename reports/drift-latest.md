@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-09-11
+# Live-vs-archive drift — 2026-09-12
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -13,7 +13,6 @@
 | Phi-4 | near-identical | 0.9996 — 3 word(s) differ | single version |
 | MAI-Code-1.1-Flash | incomplete | live=1 archive=n | — |
 | MAI-Cyber-1-Flash | incomplete | live=1 archive=n | — |
-| MAI-Thinking-1 | incomplete | live=1 archive=n | — |
 | Nova 2 Lite | same-content | 1.0 | single version |
 | Inkling | same-content | 1.0 | single version |
 | Domyn Large | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
@@ -31,6 +30,7 @@
 | Gemma 4 | identical-bytes |  | single version |
 | MAI-Code-1-Flash | identical-bytes |  | single version |
 | MAI-Image-2.5 | identical-bytes |  | single version |
+| MAI-Thinking-1 | identical-bytes |  | single version |
 | Minimax M3 | identical-bytes |  | single version |
 | PLLuM 2512 Base | identical-bytes |  | single version |
 | Ministral 3 14B | identical-bytes |  | single version |

@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Microsoft",
+  "model": "Magma-8B",
+  "target_kind": "aial-eval-history",
+  "sha256": "b3763ab0043a7514df6aa2e49359579bb49bcc12405c8b6f4d371b8bc2921cf2",
+  "size_bytes": 3813,
+  "stored_as": "raw.yaml",
+  "text_sha256": "6746af5ca5f47e92dec681c04d0141069440fb3fce3c57a91a42c443e8056a0c",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/evals/magma-8b.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/evals/magma-8b.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"cf248390d0205ae137d35912dce61ac71de7b1b84392be476baca18bc5703af1\"",
+    "last_modified": null,
+    "content_length": "561",
+    "fetched_at": "2026-09-12T06:35:44Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "215145044dd56ed879b4c56d87d0bd7b3f94e787",
+  "git_commit_date": "2026-09-11T16:31:52Z",
+  "git_blob_sha": "b1c5fe960d892e8c5ca630ce05d9a806a69e4e0c",
+  "git_path": "evals/magma-8b.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:35:46Z"
+  }
+}

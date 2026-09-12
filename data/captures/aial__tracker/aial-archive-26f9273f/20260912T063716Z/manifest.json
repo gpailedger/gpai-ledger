@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Phi_MoE_2026_09_11",
+  "target_kind": "aial-archive",
+  "sha256": "fa0f62be9fd9134497225b7b73c967d5750bf759dc41d59e6e3054542edeea99",
+  "size_bytes": 101363,
+  "stored_as": "raw.pdf",
+  "text_sha256": "90d90e288e102358176f9edc616c0c5cc3bc2a27e6eac9a2415922968e9cf3ec",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi_MoE_2026_09_11.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi_MoE_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"69baff37e280360ed646c770392d3c11e4c425e1af08d400b61f6d7a2ce4d460\"",
+    "last_modified": null,
+    "content_length": "101363",
+    "fetched_at": "2026-09-12T06:37:16Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "215145044dd56ed879b4c56d87d0bd7b3f94e787",
+  "git_commit_date": "2026-09-11T16:31:52Z",
+  "git_blob_sha": "7b815b34024e462f0fd916e2c7f56c75c3dabad6",
+  "git_path": "public/archive/Phi_MoE_2026_09_11.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:37:23Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260912064115/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi_MoE_2026_09_11.pdf",
+    "snapshot_ts": "20260912064115",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-2431e27bdbfec1671bd8379093f5ad1ad3496145",
+    "via": "spn2",
+    "requested_at": "2026-09-12T06:41:15Z",
+    "at": "2026-09-12T06:41:21Z"
+  }
+}

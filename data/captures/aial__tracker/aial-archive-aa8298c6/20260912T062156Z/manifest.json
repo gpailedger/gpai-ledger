@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "OpenLLM_France_Luciole_1_1_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "7698fd7f846c2e6b4b319bdaff9af1f4e4a6b79de00c74a10a8d85ff47bc34cc",
+  "size_bytes": 181820,
+  "stored_as": "raw.pdf",
+  "text_sha256": "406687b11fafeadda6ab22b00f2acc33f7dc2bc395088aaaf470ccd702e191fa",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/OpenLLM_France_Luciole_1_1_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/OpenLLM_France_Luciole_1_1_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"e570fa25a802deb9f44cca42e6ae636f71ffd64a5b0092f32ec2a49e70decda5\"",
+    "last_modified": null,
+    "content_length": "181820",
+    "fetched_at": "2026-09-12T06:21:56Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "8b504afb0fb846807b69853a07c8f479cddf5a1e",
+  "git_path": "public/archive/OpenLLM_France_Luciole_1_1_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:21:59Z"
+  }
+}

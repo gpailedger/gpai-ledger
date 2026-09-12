@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "openai-gpt5.4-nano",
+  "target_kind": "aial-eval-page",
+  "sha256": "5679bba256ddec952c4d97479e835bef1b1c45fe6653901639c5f7f1a0cd9082",
+  "size_bytes": 20806,
+  "stored_as": "raw.html",
+  "text_sha256": "b72524980793f2f188725791cb8b8a00b310d6a2b1e59b688e50fa1b68cc6ff7",
+  "doc_links_sha256": "a597f4a821f2f65d1391afd54dbea0ba283cc9c6fd2b4f709e190006e44bae67",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/openai-gpt5.4-nano/version-2026-08-17%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/openai-gpt5.4-nano/version-2026-08-17%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"aaeb7b948389e34479dc272810079c964c3bb0427fbd69f4562d920fcaa8ff64\"",
+    "last_modified": null,
+    "content_length": "3677",
+    "fetched_at": "2026-09-12T06:25:51Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "de4ce42e6d48cdc2baf75200ac94b221a72016ae",
+  "git_commit_date": "2026-09-10T21:19:29Z",
+  "git_blob_sha": "fbacd54618169128ab328f55cc5265167e215a03",
+  "git_path": "public/evals/openai-gpt5.4-nano/version-2026-08-17 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:25:54Z"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "NVIDIA_Nemotron_3_5_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+  "size_bytes": 262374,
+  "stored_as": "raw.pdf",
+  "text_sha256": "83f86c2f0a74b8de0cba1bfb790ed725625c73f13e8acc768bd8564e4f2bb680",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/NVIDIA_Nemotron_3_5_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/NVIDIA_Nemotron_3_5_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"6f1a7df5a9b0d21df1cd12c5d51f06ce84e018b1228eec382b384cd6de7c162a\"",
+    "last_modified": null,
+    "content_length": "262374",
+    "fetched_at": "2026-09-12T06:21:46Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "d46d8545a7f78e6144c83eb1e01c344edeec7415",
+  "git_path": "public/archive/NVIDIA_Nemotron_3_5_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:21:50Z"
+  },
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:gateway-timeout",
+    "answered": true,
+    "job_id": "spn2-d27083764238d958a0de21ee82589e82f09d115a",
+    "via": "spn2",
+    "requested_at": "2026-09-12T06:40:20Z",
+    "at": "2026-09-12T06:40:26Z"
+  }
+}

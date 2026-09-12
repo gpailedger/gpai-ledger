@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Microsoft",
+  "model": "Phi-1.5",
+  "target_kind": "aial-eval-history",
+  "sha256": "6b0189ed3952f389b150f399fdca88239fa2ddf71d559758dbd01bdce53fb626",
+  "size_bytes": 3930,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ec211a867b8e3ac58042eee58c7c6bad4bf489c8fede5d8cef9521d13482db11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-1.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-1.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8bca740ea7b79a173fade822d1efdbdd4cf332d20d666f41a81101ce15baf4ab\"",
+    "last_modified": null,
+    "content_length": "592",
+    "fetched_at": "2026-09-12T06:38:33Z"
+  },
+  "prior_sha256": "8b9e3b0820a2215a60e4fdcca3cddd53adb1bb1d011d0c5bccdb13cc6952619b",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "811d42aab349f7c345ab1022b3e74c9d8ca7b423",
+  "git_path": "evals/phi-1.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:38:36Z"
+  }
+}

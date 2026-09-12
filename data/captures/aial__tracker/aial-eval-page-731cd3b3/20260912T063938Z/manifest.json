@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "phi-4-reasoning",
+  "target_kind": "aial-eval-page",
+  "sha256": "cffc28b4c2d4124e06e107b592e1913b4f086ed171753fd617f9534f02074083",
+  "size_bytes": 13225,
+  "stored_as": "raw.html",
+  "text_sha256": "856c4bec5b90886365ea51c6a76b32bc3a605c18011302083ac340934252a46c",
+  "doc_links_sha256": "1c3a9ddd918df9333d3e7934482cab4dbc920257a4795a09a65c575e9dea25ae",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/phi-4-reasoning/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/public/evals/phi-4-reasoning/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"2a47f84360027125a4535fc0a6df9751efd741a3aec892fdf4d1a1e70c8e970c\"",
+    "last_modified": null,
+    "content_length": "2931",
+    "fetched_at": "2026-09-12T06:39:38Z"
+  },
+  "prior_sha256": "67130b32b8683cfbd3a5e6654629152edb97220b9afb6db949ba6ff9af4880f3",
+  "git_commit": "cfa144b5ccc179cd806a31dd036745164b1d2c0c",
+  "git_commit_date": "2026-09-11T16:47:33Z",
+  "git_blob_sha": "75ff6873f6c243472c6e0cb09fe6ee5991336f0b",
+  "git_path": "public/evals/phi-4-reasoning/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:39:41Z"
+  }
+}

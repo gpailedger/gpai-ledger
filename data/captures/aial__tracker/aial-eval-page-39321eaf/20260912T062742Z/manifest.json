@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "bytedance-seed-2.0pro",
+  "target_kind": "aial-eval-page",
+  "sha256": "5ec5dce8088dffaddf38bcc7f812d4e0dc1127d5e5c40a5c26bcbe20aa12ab29",
+  "size_bytes": 21558,
+  "stored_as": "raw.html",
+  "text_sha256": "734f5abf4222dbcb92cc5f49d1b0f68819d9225475cea772e0d3342d822e1808",
+  "doc_links_sha256": "84a7d385bf4ce809567743ab759f99d2899f48594a3e52c9b13dbc3d35eb1193",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/baa1c2faa8e5e05fe677f399f0bc95e9a9ffd407/public/evals/bytedance-seed-2.0pro/version-2026-09-08%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/baa1c2faa8e5e05fe677f399f0bc95e9a9ffd407/public/evals/bytedance-seed-2.0pro/version-2026-09-08%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"65b2123852639dcd96e8276666e1807ef8dde8f16c5ab493d46eea48af8ac482\"",
+    "last_modified": null,
+    "content_length": "3714",
+    "fetched_at": "2026-09-12T06:27:42Z"
+  },
+  "prior_sha256": "08f8d5dcd88dad64246caba89b2ba0851f54887ef044a0191035579d2d63d539",
+  "git_commit": "baa1c2faa8e5e05fe677f399f0bc95e9a9ffd407",
+  "git_commit_date": "2026-09-11T06:09:19Z",
+  "git_blob_sha": "c139ec29b900eb3fd491c4fd5a58fb913a8748b3",
+  "git_path": "public/evals/bytedance-seed-2.0pro/version-2026-09-08 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:27:46Z"
+  }
+}

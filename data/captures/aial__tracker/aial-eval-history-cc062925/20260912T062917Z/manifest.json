@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "NVIDIA",
+  "model": "Nemotron 3 and 3.5 Family",
+  "target_kind": "aial-eval-history",
+  "sha256": "a201900cf9d8ca4200c97a19b71d19c17f1e64d8b4f686d866e576e04c83c8b4",
+  "size_bytes": 3314,
+  "stored_as": "raw.yaml",
+  "text_sha256": "4633bb0d81902fd3ccde2090e5654fc812efcb641e2e393e84d770bca05b6081",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c51789900b4ca296dfd0c9f95d17c0df9f53a521/evals/nvidia-nemotron3.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c51789900b4ca296dfd0c9f95d17c0df9f53a521/evals/nvidia-nemotron3.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"69134288ac10408ba0d292252a3b3ca3464fb33ef1c70443541c3c8ea54baa34\"",
+    "last_modified": null,
+    "content_length": "653",
+    "fetched_at": "2026-09-12T06:29:17Z"
+  },
+  "prior_sha256": "bae9d1cfdbc145c78af008eb9dc2caeca0afb2b71f814975916e8341e9e958bc",
+  "git_commit": "c51789900b4ca296dfd0c9f95d17c0df9f53a521",
+  "git_commit_date": "2026-09-11T13:35:32Z",
+  "git_blob_sha": "3cac250435b639ff4ba63656f903f1447b846923",
+  "git_path": "evals/nvidia-nemotron3.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:29:21Z"
+  }
+}

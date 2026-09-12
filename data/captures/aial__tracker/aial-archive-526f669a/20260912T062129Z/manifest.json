@@ -1,0 +1,46 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "ByteDance_Seedeam_5_0_2026_09_08",
+  "target_kind": "aial-archive",
+  "sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+  "size_bytes": 251620,
+  "stored_as": "raw.pdf",
+  "text_sha256": "04034d2e92f0bd9bedf2749353e4cc801567ea7582e68b7dd934b1529f73f925",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"2b044663ae6b0f7e710dbf20a71fc620a8e72376e2bae54e2ef9e69c6a618f07\"",
+    "last_modified": null,
+    "content_length": "251620",
+    "fetched_at": "2026-09-12T06:21:29Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "c878ebbe5a3d7585857ed203f59f34551d7e72f7",
+  "git_commit_date": "2026-09-08T15:15:47Z",
+  "git_blob_sha": "40b56e4d4908db26fd3c8a124ad6bf12aa9c8b3e",
+  "git_path": "public/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:21:32Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-72368e6367916ffdaef5b33628777e0566713011 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-72368e6367916ffdaef5b33628777e0566713011",
+    "via": "spn2",
+    "requested_at": "2026-09-12T06:42:33Z",
+    "at": "2026-09-12T06:42:53Z"
+  }
+}

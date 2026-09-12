@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "anthropic-mythos5.1",
+  "target_kind": "aial-eval-page",
+  "sha256": "abdb14d358b9c095db9b4fcb73a630f3aa08781ef6ed65402fd64d5d85112e97",
+  "size_bytes": 19957,
+  "stored_as": "raw.html",
+  "text_sha256": "f312a5b2d2e77c7ec8905893600e931aee3e2f767e698bb0e4aa44728bb49e66",
+  "doc_links_sha256": "863637718e293e2dc371345c47895677534bdee0bb31eb9cfd953c0bd300cfe2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/anthropic-mythos5.1/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/anthropic-mythos5.1/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b7bcf696f8186efb7f9cbe8f1faef8b9e036916b59c3ae2b5abd39f18d24025a\"",
+    "last_modified": null,
+    "content_length": "3561",
+    "fetched_at": "2026-09-12T06:23:52Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "de4ce42e6d48cdc2baf75200ac94b221a72016ae",
+  "git_commit_date": "2026-09-10T21:19:29Z",
+  "git_blob_sha": "b84c083285def26cec5b29d7a62af122615b90c6",
+  "git_path": "public/evals/anthropic-mythos5.1/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:23:54Z"
+  }
+}

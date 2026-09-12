@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "tencent-hy3",
+  "target_kind": "aial-eval-page",
+  "sha256": "d4b516f3a5ef04c376849456ff593ff46cf8cd4ff3e99fe4439bef0ae9f248c8",
+  "size_bytes": 19639,
+  "stored_as": "raw.html",
+  "text_sha256": "365dcaac2eb74c1acba19776236296fc0f46fd947be8b0b4d544ba4f93b08806",
+  "doc_links_sha256": "9f0f184c4396af69c7dcb27450f45458a0645c7bbaad4e1d6581c8c9ab5eb820",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/tencent-hy3/version-2026-09-08%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/tencent-hy3/version-2026-09-08%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b9e78de1b1d54761fd1df42636983bedfe41064b15c5652a56d5b4156725cb23\"",
+    "last_modified": null,
+    "content_length": "3542",
+    "fetched_at": "2026-09-12T06:26:48Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "de4ce42e6d48cdc2baf75200ac94b221a72016ae",
+  "git_commit_date": "2026-09-10T21:19:29Z",
+  "git_blob_sha": "e0b3c707a5efe90498fef57cedf00b88fcb8d4e1",
+  "git_path": "public/evals/tencent-hy3/version-2026-09-08 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:26:52Z"
+  }
+}

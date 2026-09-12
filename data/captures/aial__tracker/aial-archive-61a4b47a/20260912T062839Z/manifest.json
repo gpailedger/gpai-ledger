@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "PLLuM_2512_Instruct_2026_09_11",
+  "target_kind": "aial-archive",
+  "sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+  "size_bytes": 387652,
+  "stored_as": "raw.pdf",
+  "text_sha256": "ac3479db71bf11f2375cae2688be9dee6adf92b845701f2ab4e1d9128bf10b70",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"f262589f66dddcb0c04cbcf742d71e090e6e494b60a622c3f5808dadd5038ffa\"",
+    "last_modified": null,
+    "content_length": "387652",
+    "fetched_at": "2026-09-12T06:28:38Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "a030eede7e4582b27dd04a8453647824d8da9784",
+  "git_commit_date": "2026-09-11T13:30:30Z",
+  "git_blob_sha": "991c932c76c2bf833374d429defb3cb89fbb61c3",
+  "git_path": "public/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:28:43Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Google",
+  "model": "Gemini Robotics ER 2",
+  "target_kind": "aial-eval-history",
+  "sha256": "e52d6dcb6e8e4f17643bb52fe2fd9962a5151de6dfc438140372616fe469fcae",
+  "size_bytes": 3852,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ad309ec205b7de08edd22ac08d4a6d50d9a076ae88125ee5e2778fb6068f753f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/gemini-robotics-er-2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/gemini-robotics-er-2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6aeccb81f1e5bb4862a9b32d72f4eb523abd5f2b3047a94939b98de8a0eaf318\"",
+    "last_modified": null,
+    "content_length": "580",
+    "fetched_at": "2026-09-12T06:30:55Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa",
+  "git_commit_date": "2026-09-11T16:09:42Z",
+  "git_blob_sha": "4575b3bc221d0dbf27b18459f3aeae267390440b",
+  "git_path": "evals/gemini-robotics-er-2.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:31:00Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Ministry of Digital Affairs of Poland",
+  "model": "PLLuM-12B-instruct-2512",
+  "target_kind": "aial-eval-history",
+  "sha256": "e41265496041793a6246aa7cc2c3ef395e364baa75bde30433418ecd67bde267",
+  "size_bytes": 2946,
+  "stored_as": "raw.yaml",
+  "text_sha256": "965999eb28bbf5b5583b5e2c0166342be9b490a704f1197a9ac623f80c6a2099",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/evals/cyfragolvpl_pllum-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/evals/cyfragolvpl_pllum-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4eb505641974c387ea115da1b59018f3e2638f645e866b62b6e58857dd961cb4\"",
+    "last_modified": null,
+    "content_length": "396",
+    "fetched_at": "2026-09-12T06:28:02Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "a030eede7e4582b27dd04a8453647824d8da9784",
+  "git_commit_date": "2026-09-11T13:30:30Z",
+  "git_blob_sha": "49055c9dafac9358185697d9124f399701dec215",
+  "git_path": "evals/cyfragolvpl_pllum-instruct.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:28:06Z"
+  }
+}

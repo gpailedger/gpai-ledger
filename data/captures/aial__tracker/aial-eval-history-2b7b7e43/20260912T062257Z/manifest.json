@@ -1,0 +1,38 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Midjourney",
+  "model": "Midjourney Image and Video family of models",
+  "target_kind": "aial-eval-history",
+  "sha256": "23b8bcb6f67d2a5fdff9d0db87ebc2fa6c9ea801e1d173935034c4a7e9d6aa8d",
+  "size_bytes": 3283,
+  "stored_as": "raw.yaml",
+  "text_sha256": "2d391b3e30894b5ba4f93aa3ca2e735527a74107c63b4061e2462d0b08f5bd84",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/evals/midjourney-midjourney.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/evals/midjourney-midjourney.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5d7f770d07b68e879fdae44f0ac437014f351ad7738c2af281db13f6162384c5\"",
+    "last_modified": null,
+    "content_length": "607",
+    "fetched_at": "2026-09-12T06:22:57Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "de4ce42e6d48cdc2baf75200ac94b221a72016ae",
+  "git_commit_date": "2026-09-10T21:19:29Z",
+  "git_blob_sha": "fc0a65d264921446a7c28be9752be0f50b5b3610",
+  "git_path": "evals/midjourney-midjourney.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-12T06:23:01Z"
+  }
+}
