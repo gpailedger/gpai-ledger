@@ -37,13 +37,22 @@
   },
   "wayback": {
     "ok": false,
-    "status_code": 200,
-    "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
-    "job_id": "spn2-a2ab8a62ecd31447792c0f736cfdc083742de22d",
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2f65d3c170>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
     "via": "spn2",
-    "requested_at": "2026-09-12T06:41:33Z",
-    "at": "2026-09-12T06:41:39Z"
-  }
+    "requested_at": "2026-09-13T06:31:38Z",
+    "at": "2026-09-13T06:33:39Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-a2ab8a62ecd31447792c0f736cfdc083742de22d",
+      "via": "spn2",
+      "requested_at": "2026-09-12T06:41:33Z",
+      "at": "2026-09-12T06:41:39Z"
+    }
+  ]
 }

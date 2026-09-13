@@ -36,14 +36,29 @@
     "at": "2026-09-12T06:36:36Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260913063047/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Magma_8B_2026_09_11.pdf",
+    "snapshot_ts": "20260913063047",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-eee244c78f3b9a37d094d13e2f4906d5d0a2c4ff",
     "via": "spn2",
-    "requested_at": "2026-09-12T06:40:38Z",
-    "at": "2026-09-12T06:40:44Z"
-  }
+    "requested_at": "2026-09-13T06:29:41Z",
+    "at": "2026-09-13T06:30:47Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-eee244c78f3b9a37d094d13e2f4906d5d0a2c4ff",
+      "via": "spn2",
+      "requested_at": "2026-09-12T06:40:38Z",
+      "at": "2026-09-12T06:40:44Z"
+    }
+  ]
 }

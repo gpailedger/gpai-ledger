@@ -36,14 +36,29 @@
     "at": "2026-09-12T06:21:50Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260913062924/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/NVIDIA_Nemotron_3_5_2026_09_08.pdf",
+    "snapshot_ts": "20260913062924",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-d27083764238d958a0de21ee82589e82f09d115a",
     "via": "spn2",
-    "requested_at": "2026-09-12T06:40:20Z",
-    "at": "2026-09-12T06:40:26Z"
-  }
+    "requested_at": "2026-09-13T06:28:48Z",
+    "at": "2026-09-13T06:29:29Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-d27083764238d958a0de21ee82589e82f09d115a",
+      "via": "spn2",
+      "requested_at": "2026-09-12T06:40:20Z",
+      "at": "2026-09-12T06:40:26Z"
+    }
+  ]
 }

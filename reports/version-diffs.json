@@ -11523,6 +11523,22 @@
     "to_sha256": "3a520cb3ca6cd6979975747c84e96aa18839fcdfe00c62d96422d31c2833fe47",
     "computed_at": "2026-09-12T06:43:58Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260912T055914Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260913T060001Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260912T055914Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260913T060001Z",
+    "from_sha256": "3a520cb3ca6cd6979975747c84e96aa18839fcdfe00c62d96422d31c2833fe47",
+    "to_sha256": "e7a38cdc133699b899b42b8c43a86aa1f02fabd80dd9f7d86c834c32e6d3fe0d",
+    "computed_at": "2026-09-13T06:47:58Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -25987,5 +26003,28 @@
     "from_sha256": "a72a5ea96227a6fcdd22c663d0baa1589406f9f6b51fe349bd326ded4ab81eb9",
     "to_sha256": "66dc2b0f212b15076dd13bdec3ddad2e685ed4b3cd73a6f0513d53962255adf4",
     "computed_at": "2026-09-08T06:22:19Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260908T061043Z>captures/xai__model-catalog/watch-page-905d5d7a/20260913T062450Z": {
+    "verdict": "changed",
+    "similarity": 0.9987,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "at 0.05 /",
+        "new": "at 0.08 /"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260908T061043Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260913T062450Z",
+    "from_sha256": "66dc2b0f212b15076dd13bdec3ddad2e685ed4b3cd73a6f0513d53962255adf4",
+    "to_sha256": "881cf7ad9c74cdd3eb47d33e579910e900c0f8a3ac8b246d75a776c607c1f457",
+    "computed_at": "2026-09-13T06:47:58Z"
   }
 }

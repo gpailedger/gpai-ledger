@@ -1,0 +1,47 @@
+{
+  "source_id": "xai/model-catalog",
+  "provider": "xAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "881cf7ad9c74cdd3eb47d33e579910e900c0f8a3ac8b246d75a776c607c1f457",
+  "size_bytes": 404586,
+  "stored_as": "raw.html",
+  "text_sha256": "47ffb1273ae649180fc4f3dae4d383c85ab9ae4d6b6dac0851b6c165da84cc1e",
+  "doc_links_sha256": "13f163cb58bac465ff91304ae6e89f29219bf4e97e5df8391447e17621e5cc50",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.x.ai/developers/models",
+    "final_url": "https://docs.x.ai/developers/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T06:24:50Z"
+  },
+  "prior_sha256": "66dc2b0f212b15076dd13bdec3ddad2e685ed4b3cd73a6f0513d53962255adf4",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913062603/https://docs.x.ai/developers/models",
+    "snapshot_ts": "20260913062603",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a684e4a7060586c9d5737a3fabadb5056cc41728",
+    "via": "spn2",
+    "requested_at": "2026-09-13T06:24:51Z",
+    "at": "2026-09-13T06:26:18Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T06:26:22Z"
+  }
+}
