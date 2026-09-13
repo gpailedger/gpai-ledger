@@ -55,6 +55,7 @@ from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
 import capture as cap
+from probe_missing import names_the_model
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -167,7 +168,7 @@ def stored_shas(source_id: str, target_slug: str = None) -> set:
     target is unknown): a byte-identical candidate is the document, wherever it sits."""
     out = set()
     for key, entry in _state().items():
-        if not key.startswith(source_id + "::"):
+        if entry.get("retired") or not key.startswith(source_id + "::"):
             continue
         if target_slug and key.split("::", 1)[1] != target_slug:
             continue
@@ -194,6 +195,24 @@ def sibling_texts(source_id: str):
         if text:
             out.append((s["id"], text))
     return out
+
+
+def model_names(source_id: str):
+    """(this source's model name, the names of its provider's other models)."""
+    reg = _registry()
+    me = next((s for s in reg["sources"] if s["id"] == source_id), {})
+    siblings = [s.get("model") or "" for s in reg["sources"]
+                if s["id"] != source_id and s.get("provider") == me.get("provider")]
+    return me.get("model") or "", siblings
+
+
+def tracked_elsewhere(source_id: str) -> set:
+    """Document addresses the registry tracks for OTHER sources: however close its
+    text, a document another model already tracks is that model's filing."""
+    return {t["url"].split("#")[0].rstrip("/")
+            for s in _registry()["sources"] if s["id"] != source_id
+            for t in s.get("targets", [])
+            if t.get("kind") in ("provider-live", "provider-page", "aial-archive")}
 
 
 def _norm_host(host: str) -> str:
@@ -363,10 +382,11 @@ def provider_site(source_id: str, dead_url: str):
 
 def judge(scored, own_shas):
     """(confirmed, reason) for the best-scored candidate. scored: list of
-    (similarity, url, sha256, best_sibling_similarity), best first."""
+    (similarity, url, sha256, best_sibling_similarity, names_this_model), best
+    first."""
     if not scored:
         return False, ""
-    sim, _url, sha, sib = scored[0]
+    sim, _url, sha, sib, named = scored[0]
     if sha in own_shas:
         return True, "byte-identical to an archived version of this target"
     if sim < CONFIRM_SIM:
@@ -378,6 +398,14 @@ def judge(scored, own_shas):
     if sib >= sim - SIBLING_MARGIN:
         return False, (f"not attributable: a sibling model's summary scores {sib:.4f} "
                        f"against this candidate vs {sim:.4f} for this model's own text")
+    # Similarity shows the template, not the model. On 7 Sep 2026 the summary of
+    # MAI-Image-2.6 / 2.6-Flash scored 0.995 against MAI-Image-2's, beat every
+    # sibling this ledger then tracked (2.6 was not one), and was recorded as
+    # MAI-Image-2's relocation. A document that does not name the model is not
+    # its filing, however close the text.
+    if not named:
+        return False, (f"not attributable: similarity {sim:.4f}, but the candidate "
+                       f"does not name this model")
     return True, f"similarity {sim:.4f}; best sibling {sib:.4f}; no other candidate >= {CONFIRM_SIM}"
 
 
@@ -445,14 +473,17 @@ def main() -> int:
             candidates += page_candidates
 
         dead_norm = dead_url.split("#")[0].rstrip("/")
+        # nor a document another model already tracks, however similar it reads
+        skip = tracked_elsewhere(source_id) | {dead_norm}
         cands = [c for c in dict.fromkeys(candidates)
-                 if same_site(c, provider_domain) and c.split("#")[0].rstrip("/") != dead_norm]
+                 if same_site(c, provider_domain) and c.split("#")[0].rstrip("/") not in skip]
         cands.sort(key=lambda u: 0 if re.search(r"\.pdf($|\?)", u, re.I) else 1)
         dropped = max(0, len(cands) - MAX_CANDIDATES)
         cands = cands[:MAX_CANDIDATES]
 
         own_shas = stored_shas(source_id, target)
         siblings = sibling_texts(source_id)
+        own_model, sibling_models = model_names(source_id)
         scored, budget_hit = [], False
         t0 = time.monotonic()
         for cand in cands:
@@ -465,7 +496,8 @@ def main() -> int:
             raw, _meta, _ext, text = res
             sib = (max((similarity(st, text) for _sid, st in siblings), default=0.0)
                    if sim >= CONFIRM_SIM else 0.0)
-            scored.append((sim, cand, cap.sha256_hex(raw), sib))
+            scored.append((sim, cand, cap.sha256_hex(raw), sib,
+                           names_the_model(text, own_model, sibling_models)))
         scored.sort(key=lambda s: -s[0])
         confirmed, why = judge(scored, own_shas)
         bounds = ((f" {dropped} further candidate(s) were not scored (cap {MAX_CANDIDATES});"

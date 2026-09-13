@@ -1895,6 +1895,17 @@ CORRECTION_LOG = [
      "does evaluate that model, and no rename is evidenced. Restated as "
      "observables: the summary is published under a '-Data-Card' filename that "
      "breaks the provider's own '-Data-Summary' pattern."),
+    ("13 Sep 2026", "From 8 Sep, MAI-Image-2's page presented the summary of a "
+     "different model, MAI-Image-2.6 / 2.6-Flash, as its own document at a new "
+     "address: the relocation hunt had accepted it on text similarity (0.995) before "
+     "this ledger tracked 2.6. On 12 Sep the same error filed AIAL's archived copy "
+     "and evaluation of 2.6 under MAI-Image-2, and a trust-centre page several "
+     "Anthropic models link filed AIAL's evaluation of Mythos 5.1 / Fable 5.1 under "
+     "Claude Mythos 5 / Claude Fable 5. Those four captures now name the model each "
+     "is about and are listed as superseded where they were filed; both models are "
+     "tracked in their own right. A relocation must now name its model and may not "
+     "take a document another model tracks, and a page several models link no "
+     "longer identifies any one of them."),
 ]
 
 
@@ -2225,9 +2236,13 @@ def main(generated: str = None) -> int:
                             f"{when}: SHA-256 {m['sha256'][:12]}…, "
                             f"{m['size_bytes']:,} bytes, OpenTimestamps-attested.")
                 else:
-                    title = (f"{source['model']} training data summary — version of "
+                    # a document filed under one source but naming another model is
+                    # that model's summary; the heading already says so, and a title
+                    # taken from the source called it a version of the wrong filing
+                    about = m.get("model") or source["model"]
+                    title = (f"{about} training data summary — version of "
                              f"{when} (SHA-256 verified) | GPAI Ledger")
-                    desc = (f"Archived copy of {source['model']}'s training-data "
+                    desc = (f"Archived copy of {about}'s training-data "
                             f"summary captured {when}: SHA-256 "
                             f"{m['sha256'][:12]}…, {m['size_bytes']:,} bytes, "
                             f"OpenTimestamps-attested, full extracted text.")

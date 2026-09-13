@@ -33,6 +33,7 @@ import urllib.request
 from pathlib import Path
 
 import capture as cap
+from build_registry import MISATTRIBUTED_EVAL_FILES
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -216,15 +217,37 @@ def plan(tok: str) -> list:
     return out
 
 
+def retired_keys() -> set:
+    """"source::target" keys of retired state entries. A retired entry is a filing
+    this ledger no longer stands behind as filed - a superseded identity, or a
+    capture placed under the wrong model - so its captures must not vouch for an
+    owner, name one, date a file's newest state, or count as held: that would
+    keep the harvest from filing the same state where it belongs."""
+    p = DATA / "state.json"
+    try:
+        state = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except (OSError, ValueError):
+        return set()
+    return {k for k, e in state.items() if isinstance(e, dict) and e.get("retired")}
+
+
+def _filed_key(manifest_path: Path, m: dict) -> str:
+    """The state key a manifest's capture is filed under."""
+    return f"{m.get('source_id')}::{manifest_path.parent.parent.name}"
+
+
 def held(store: cap.Store) -> set:
     """Blob shas already stored. Read from the manifests rather than from state,
     so a state whose capture dir was pruned is harvested again rather than
-    silently treated as held."""
+    silently treated as held - and so is one filed under an entry since retired."""
     done = set()
+    retired = retired_keys()
     for m in (DATA / "captures").glob("*/*/*/manifest.json"):
         try:
             j = json.loads(m.read_text(encoding="utf-8"))
         except (OSError, ValueError):
+            continue
+        if _filed_key(m, j) in retired:
             continue
         if j.get("target_kind") in HARVEST_KINDS and j.get("git_blob_sha"):
             # keyed with the path: two evaluations can hold identical bytes (a
@@ -256,7 +279,7 @@ def registry_index() -> dict:
     if not REGISTRY.exists():
         return {}
     srcs = json.loads(REGISTRY.read_text(encoding="utf-8"))["sources"]
-    idx = {}
+    idx, url_owners = {}, {}
     for s in srcs:
         idx[(_norm(s.get("provider")), _norm(s.get("model")))] = s["id"]
         # a model renamed upstream is carried in the registry as "Old / New"
@@ -273,7 +296,14 @@ def registry_index() -> dict:
             # the model has been renamed on both sides (AIAL's "Sintesi" is the
             # ledger's "FastwebMIIA"); a name match cannot see that, a URL can
             elif t.get("kind") in ("provider-live", "provider-page", "aial-archive"):
-                idx.setdefault(("url", _norm_url(t["url"])), s["id"])
+                url_owners.setdefault(_norm_url(t["url"]), set()).add(s["id"])
+    # ...but only a document exactly one model claims. A hub page several models
+    # link identifies none of them: through Anthropic's trust-centre page, AIAL's
+    # evaluation of Mythos 5.1 / Fable 5.1 was filed under Claude Mythos 5 /
+    # Claude Fable 5 on 12 Sep 2026.
+    for url, owners in url_owners.items():
+        if len(owners) == 1:
+            idx[("url", url)] = next(iter(owners))
     return idx
 
 
@@ -285,6 +315,12 @@ def resolve(text: str, filename: str, idx: dict) -> str:
     then to AIAL's own source — never guesses a neighbouring model."""
     def field(name):
         return _field(text, name)
+    held = MISATTRIBUTED_EVAL_FILES.get(filename)
+    if held and field("public_summary_link") == held[0]:
+        # the registry holds this evaluation out because its link is another
+        # model's document, so neither that link nor the filename may place it
+        return (idx.get((_norm(field("organization")), _norm(field("model_name"))))
+                or FALLBACK_SOURCE)
     hit = idx.get((_norm(field("organization")), _norm(field("model_name"))))
     # then the document it graded: survives a rename on either side
     hit = hit or idx.get(("url", _norm_url(field("public_summary_link"))))
@@ -318,10 +354,13 @@ def owners_by_hash() -> dict:
     BYTES as the provider's own filing, so the corpus itself identifies the owner
     when a filename lookup cannot."""
     out = {}
+    retired = retired_keys()
     for mp in (DATA / "captures").glob("*/*/*/manifest.json"):
         try:
             m = json.loads(mp.read_text(encoding="utf-8"))
         except (OSError, ValueError):
+            continue
+        if _filed_key(mp, m) in retired:
             continue
         if m.get("source_id") and m["source_id"] != FALLBACK_SOURCE and m.get("sha256"):
             out.setdefault(m["sha256"], (m["source_id"], m.get("provider"),
@@ -391,10 +430,13 @@ def newest_upstream_dates() -> dict:
     older one after it. prior_sha256 would then assert a succession that never
     happened, which is the one thing this record must never do."""
     out = {}
+    retired = retired_keys()
     for mp in (DATA / "captures").glob("*/*/*/manifest.json"):
         try:
             m = json.loads(mp.read_text(encoding="utf-8"))
         except (OSError, ValueError):
+            continue
+        if _filed_key(mp, m) in retired:
             continue
         path, when = m.get("git_path"), m.get("git_commit_date")
         if path and when:
@@ -557,10 +599,13 @@ def named_archives() -> dict:
     replaced, may be the only surviving copy. The registry only ever carries the
     CURRENT filename, so these are reachable from the harvested history alone."""
     out = {}
+    retired = retired_keys()
     for mp in sorted((DATA / "captures").glob("*/*/*/manifest.json")):
         try:
             m = json.loads(mp.read_text(encoding="utf-8"))
         except (OSError, ValueError):
+            continue
+        if _filed_key(mp, m) in retired:
             continue
         if m.get("target_kind") not in ("aial-eval", KIND):
             continue

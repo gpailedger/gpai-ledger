@@ -369,3 +369,167 @@ def test_a_hand_verified_kind_overrides_the_one_derived_from_metadata(tmp_path,
     assert len(hits) == 1, "the URL was added twice"
     assert hits[0]["kind"] == "provider-page", \
         "the hand-verified classification was discarded for the derived one"
+
+
+# --- AIAL's newer metadata (the refresh failed on 12 and 13 Sep 2026) ---------
+
+def test_unquoted_dates_and_placeholder_values_do_not_break_the_refresh(tmp_path):
+    # one unquoted date in one upstream file parsed as a date object and crashed
+    # the refresh two days running, leaving every sweep on a stale registry
+    repo = _fake_aial(tmp_path, [])
+    (repo / "evals" / "solo.yaml").write_text(
+        "model_name: Solo\norganization: Testorg\n"
+        "public_summary_link: https://example.org/solo.pdf\n"
+        "archive_file_name: None\n"
+        "public_summary_date: 2026-05-11\n"
+        "model_publication_date: 2026-05-21 08:00:00\n"
+        "evaluation_date: '2026-08-17 08:00:00'\n", encoding="utf-8")
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    solo = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+            if s["id"] == "testorg/solo"][0]
+    assert solo["aial"]["public_summary_date"] == "2026-05-11"
+    assert solo["aial"]["model_publication_date"] == "2026-05-21"
+    assert solo["aial"]["evaluation_date"] == "2026-08-17"
+    assert solo["aial"]["archive_file_name"] == ""
+    assert not any(t["kind"] == "aial-archive" for t in solo["targets"]), \
+        "the string 'None' became an archive address that 404s every run"
+
+
+def test_an_unreadable_upstream_file_does_not_hold_back_the_other_models(tmp_path):
+    repo = _fake_aial(tmp_path, ["alpha"])
+    (repo / "evals" / "broken.yaml").write_text("model_name: [unclosed\n", encoding="utf-8")
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    assert "testorg/alpha" in {s["id"] for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+
+
+def test_an_eval_file_renamed_with_an_organisation_prefix_keeps_its_model_id(tmp_path):
+    # gpt-5-2.yaml became openai-gpt-5.2.yaml upstream; the id is the model's
+    # permalink and every capture of it is filed under that id
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha-1-5"])
+    br.main(str(repo), out_path=out)
+    (repo / "evals" / "alpha-1-5.yaml").rename(repo / "evals" / "testorg-alpha-1.5.yaml")
+    br.main(str(repo), out_path=out)              # used to refuse: it dropped testorg/alpha-1-5
+    src = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+           if s["id"] == "testorg/alpha-1-5"][0]
+    assert src["aial"]["eval_yaml"] == "evals/testorg-alpha-1.5.yaml"
+
+
+def test_the_organisation_prefix_stays_when_it_is_part_of_the_models_name(tmp_path):
+    repo = _fake_aial(tmp_path, [])
+    for stem, name in (("testorg-one", "Testorg One"), ("testorg-testorg-two", "Testorg Two")):
+        (repo / "evals" / f"{stem}.yaml").write_text(
+            f"model_name: {name}\norganization: Testorg\n", encoding="utf-8")
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    ids = {s["id"] for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert "testorg/testorg-one" in ids           # like Adobe Firefly, Minimax M3
+    assert "testorg/testorg-two" in ids           # like deepseek-deepseek-v4
+
+
+def test_one_organisation_spelled_two_ways_stays_one_provider(tmp_path):
+    repo = _fake_aial(tmp_path, [])
+    (repo / "evals" / "meta-glimmer.yaml").write_text(
+        "model_name: Glimmer\norganization: Meta AI\n", encoding="utf-8")
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    src = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+           if s["model"] == "Glimmer"][0]
+    assert (src["id"], src["provider"]) == ("meta/glimmer", "Meta")
+
+
+def test_a_declared_duplicate_is_skipped_only_while_its_model_is_built_elsewhere(
+        tmp_path, monkeypatch):
+    repo = _fake_aial(tmp_path, ["alpha"])
+    (repo / "evals" / "alpha-copy.yaml").write_text(
+        "model_name: Something Else\norganization: Otherorg\n"
+        "public_summary_link: https://example.org/alpha.pdf\n", encoding="utf-8")
+    monkeypatch.setattr(br, "DUPLICATE_EVAL_FILES",
+                        {"alpha-copy.yaml": ("testorg/alpha", "a copy under a wrong header")})
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    srcs = json.loads(out.read_text(encoding="utf-8"))["sources"]
+    assert [s["id"] for s in srcs if s.get("aial")] == ["testorg/alpha"]
+    (repo / "evals" / "alpha.yaml").unlink()
+    with pytest.raises(SystemExit, match="alpha-copy.yaml"):
+        br.main(str(repo), out_path=out)
+
+
+def test_an_evaluation_linking_another_models_document_is_held_out_while_the_link_stands(
+        tmp_path, monkeypatch, capsys):
+    # AIAL's "Nemotron 3 and 3.5 Family" links NVIDIA's Nemotron Nano v2 summary
+    repo = _fake_aial(tmp_path, ["nano"])
+    (repo / "evals" / "family.yaml").write_text(
+        "model_name: Family\norganization: Testorg\n"
+        "public_summary_link: https://example.org/nano.pdf\n", encoding="utf-8")
+    monkeypatch.setattr(br, "MISATTRIBUTED_EVAL_FILES",
+                        {"family.yaml": ("https://example.org/nano.pdf", "links nano's summary")})
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)                  # no longer refused as a shared document
+    ids = {s["id"] for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert "testorg/nano" in ids and "testorg/family" not in ids
+    (repo / "evals" / "family.yaml").write_text(
+        "model_name: Family\norganization: Testorg\n"
+        "public_summary_link: https://example.org/family.pdf\n", encoding="utf-8")
+    br.main(str(repo), out_path=out)
+    assert "testorg/family" in {s["id"] for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert "no longer links" in capsys.readouterr().out
+
+
+def test_an_archive_name_upstream_does_not_hold_is_corrected_or_left_out(tmp_path, monkeypatch):
+    # PLLuM 2512 Instruct's metadata names ..._instruct_... for a file archived as
+    # ..._Instruct_...; Phi-4 Multimodal's names a .pdf archived as .pdf.pdf. Either
+    # target would have failed on every sweep.
+    repo = _fake_aial(tmp_path, [])
+    for n, archive in (("one", "one_instruct_2026.pdf"), ("two", "Two_2026.pdf")):
+        (repo / "evals" / f"{n}.yaml").write_text(
+            f"model_name: {n}\norganization: Testorg\n"
+            f"public_summary_link: https://example.org/{n}.pdf\n"
+            f"archive_file_name: {archive}\n", encoding="utf-8")
+    monkeypatch.setattr(br, "aial_archive_names",
+                        lambda repo: {"One_Instruct_2026.pdf", "Two_2026.pdf.pdf"})
+    out = tmp_path / "sources.json"
+    br.main(str(repo), out_path=out)
+    by = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+
+    def archives(sid):
+        return [t["url"] for t in by[sid]["targets"] if t["kind"] == "aial-archive"]
+    assert archives("testorg/one") == [br.AIAL_ARCHIVE_BASE + "One_Instruct_2026.pdf"]
+    assert archives("testorg/two") == []
+    assert by["testorg/two"]["status"] == "published"     # the provider's own copy stands
+
+
+def test_an_archived_copy_already_tracked_is_kept_when_upstream_no_longer_holds_it(
+        tmp_path, monkeypatch):
+    repo = _fake_aial(tmp_path, ["solo"])                 # names solo.pdf
+    out = tmp_path / "sources.json"
+    monkeypatch.setattr(br, "aial_archive_names", lambda repo: {"solo.pdf"})
+    br.main(str(repo), out_path=out)
+    monkeypatch.setattr(br, "aial_archive_names", lambda repo: {"other.pdf"})
+    br.main(str(repo), out_path=out)
+    solo = [s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]
+            if s["id"] == "testorg/solo"][0]
+    assert br.AIAL_ARCHIVE_BASE + "solo.pdf" in [t["url"] for t in solo["targets"]], \
+        "a tracked copy that vanishes is the sweep's absence to record, not the registry's to hide"
+
+
+def test_two_models_claiming_one_document_fail_the_build(tmp_path):
+    # an upstream file headed "Muse Glimmer / Meta AI" links xAI's Grok document
+    repo = _fake_aial(tmp_path, ["grok"])
+    (repo / "evals" / "glimmer.yaml").write_text(
+        "model_name: Glimmer\norganization: Otherorg\n"
+        "public_summary_link: https://example.org/grok.pdf\n", encoding="utf-8")
+    with pytest.raises(SystemExit, match="more than one model"):
+        br.main(str(repo), out_path=tmp_path / "sources.json")
+
+
+def test_a_hub_page_several_models_link_is_not_a_document_claim(tmp_path):
+    repo = _fake_aial(tmp_path, [])
+    for n in ("one", "two"):
+        (repo / "evals" / f"{n}.yaml").write_text(
+            f"model_name: {n}\norganization: Anthropic\n"
+            "public_summary_link: https://trust.anthropic.com/resources\n",
+            encoding="utf-8")
+    br.main(str(repo), out_path=tmp_path / "sources.json")      # does not refuse

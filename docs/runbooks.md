@@ -403,26 +403,68 @@ the site asserts anything. Bounds: `--max-per-model` (6), `GPAI_PROBE_BUDGET`
 To undo a promotion: delete the entry from `crawler/discovered.json` and rebuild
 the registry. To probe one source: `--only <source id>`.
 
-## Registry refresh red (a tracked source id would disappear)
+## Registry refresh red (the registry refuses to build)
 
 `build_registry.py` rebuilds `crawler/sources.json` from AIAL's eval metadata
-every sweep and **fails closed** if the rebuilt registry would drop a source id
-the committed registry tracks (an upstream rename or removal): the step fails,
+every sweep and **fails closed** when the result would mislead: the step fails,
 the committed registry stays in force, the sweep and the deploy proceed
 normally, and the run is red until the change is handled. The failure message
-names the missing ids.
+names what was refused. While it stays red the sweep runs on the old registry,
+so upstream renames surface a day later as absences on the old addresses.
+
+**A tracked source id would disappear** (an upstream rename or removal):
 
 1. Find the cause in the AIAL repo (`evals/*.yaml`): renamed file, changed
    `organization` string, or removed model.
-2. A rename or re-labelling: map it explicitly (`MODEL_NAME_OVERRIDES` /
-   the id derivation) so the existing id — and its permalinks — survive.
+2. A rename or re-labelling keeps the existing id — and its permalinks. AIAL's
+   newer files carry the organisation in the filename (`openai-gpt-5.2.yaml`
+   replaced `gpt-5-2.yaml`); `eval_slug()` drops that prefix, so most renames
+   map back without help. When one does not, pin the file stem to its old slug
+   in `EVAL_FILE_SLUGS`. A second spelling of an organisation goes in
+   `ORG_ALIASES`, a display name in `MODEL_NAME_OVERRIDES`.
 3. A genuine removal: add the id to `RETIRED_SOURCE_IDS` (id → dated reason).
    The refresh then carries the source's last committed entry forward flagged
    `retired`, the sweep stops fetching it, and the site keeps its pages and
    permalinks with a "no longer tracked" note and drops it from the tracked
    count — never unpublished.
-4. Never let a stale "per AIAL's assessment" attribution stand: that is the
+4. Retire the state entries the old addresses leave behind — `verify_corpus.py`
+   lists them under C8 — with a reason that says where the file went.
+5. Never let a stale "per AIAL's assessment" attribution stand: that is the
    reason the refresh fails closed instead of carrying the source forward.
+
+**Two eval files build the same id.** If both evaluate the same model, declare
+the second in `DUPLICATE_EVAL_FILES` (file → the id it duplicates, and why). It
+is skipped only while another file still builds that id; if that file goes, the
+refresh fails again, so which file carries the model is decided, not inherited.
+If they are different models, pin one of them in `EVAL_FILE_SLUGS`.
+
+**One document is claimed by more than one model** (a `provider-live` or
+`aial-archive` address; rendered hub pages such as a trust centre are exempt).
+Read the document before anything else. If it names only one of the models, the
+other claim is presenting that model's filing as its own:
+
+- an AIAL entry that links another model's document goes in
+  `MISATTRIBUTED_EVAL_FILES` (file → the link as read, and why). It is held out
+  while that link stands and taken in again when AIAL changes it, and the
+  history harvest will not place its evaluation by that link either;
+- a relocation that took another model's document is undone by deleting its
+  entry from `crawler/relocations.json` (the file stays, as `{}` if empty: the
+  sweep's commit step names it). Retire the captures it produced with the
+  reason, and relabel their manifests with the model each is about.
+
+An eval file that is not readable YAML is skipped with a warning rather than
+holding back every other model; if it carried a tracked model, the first check
+above still refuses the write.
+
+Two upstream faults are handled without a red run, because a new target that
+cannot be fetched would otherwise fail every sweep from its first day. An
+archived copy the metadata names but AIAL's archive does not hold (checked
+against their git tree) is corrected when exactly one archived file differs only
+by case, and otherwise left out — unless it is already tracked, in which case its
+disappearance is the sweep's to record. A provider address whose host never
+serves this crawler the document (a JavaScript file browser, a bot challenge)
+goes in `DROP_URL_PREFIXES` with the reason, and AIAL's archived copy carries the
+model.
 
 ## Dependency refresh
 
@@ -488,7 +530,11 @@ source and says in `reports/hunt-latest.md` what it dropped. A relocation is
 written to `relocations.json` only when the best candidate is byte-identical to an
 archived version of the target, or is the only candidate at or above 0.98
 similarity AND beats every sibling model's summary by 0.002 (summaries of one
-provider follow one template and sit at 0.993–0.998 to each other). Anything else
+provider follow one template and sit at 0.993–0.998 to each other) AND names the
+model, by the rule `probe_missing.py` promotes on: a name ending in a number
+refuses a following number, so a summary headed "MAI-Image-2.6" is never
+MAI-Image-2's (on 7 Sep 2026 it was, at 0.995, before 2.6 was tracked). A document
+the registry already tracks for another model is never a candidate. Anything else
 is reported for human review. The hunt never crawls `aial.ie` or `archive.org`,
 never follows a redirect off the provider's site, and reports
 `recovered-at-recorded-location` when the dead URL answers 200 again.

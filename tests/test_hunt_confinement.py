@@ -120,28 +120,52 @@ SHA = "f" * 64
 
 
 def test_judge_confirms_byte_identity_whatever_the_similarity():
-    assert site_hunt.judge([(0.5, "u", SHA, 0.0)], {SHA}) == (
+    assert site_hunt.judge([(0.5, "u", SHA, 0.0, False)], {SHA}) == (
         True, "byte-identical to an archived version of this target")
 
 
 def test_judge_refuses_two_strong_candidates():
-    ok, why = site_hunt.judge([(0.999, "a", "1" * 64, 0.0), (0.985, "b", "2" * 64, 0.0)], set())
+    ok, why = site_hunt.judge([(0.999, "a", "1" * 64, 0.0, True), (0.985, "b", "2" * 64, 0.0, True)], set())
     assert ok is False and "ambiguous" in why
 
 
 def test_judge_refuses_a_candidate_a_sibling_explains_as_well():
     # sibling summaries of one provider score 0.993-0.998 against each other
-    ok, why = site_hunt.judge([(0.9990, "a", "1" * 64, 0.9981)], set())
+    ok, why = site_hunt.judge([(0.9990, "a", "1" * 64, 0.9981, True)], set())
     assert ok is False and "not attributable" in why
 
 
 def test_judge_confirms_a_unique_attributable_match():
-    ok, why = site_hunt.judge([(0.9995, "a", "1" * 64, 0.9900), (0.90, "b", "2" * 64, 0.0)], set())
+    ok, why = site_hunt.judge([(0.9995, "a", "1" * 64, 0.9900, True), (0.90, "b", "2" * 64, 0.0, True)], set())
     assert ok is True and "best sibling 0.9900" in why
 
 
 def test_judge_reports_similarity_below_confirmation():
-    assert site_hunt.judge([(0.90, "a", "1" * 64, 0.0)], set()) == (False, "similarity 0.9000")
+    assert site_hunt.judge([(0.90, "a", "1" * 64, 0.0, True)], set()) == (False, "similarity 0.9000")
+
+
+def test_judge_refuses_a_close_match_that_does_not_name_the_model():
+    # 7 Sep 2026: MAI-Image-2.6's summary, 0.995 against MAI-Image-2's own text and
+    # with no tracked sibling closer, was recorded as MAI-Image-2's relocation
+    ok, why = site_hunt.judge([(0.9950, "a", "1" * 64, 0.7747, False)], set())
+    assert ok is False and "does not name this model" in why
+
+
+def test_a_successor_models_summary_does_not_name_its_predecessor():
+    head = ("Data Summary for MAI-Image-2.6 / 2.6-Flash Version of the Summary: "
+            "14 Aug 2026 Last update: 4 September 2026 1. General information")
+    assert site_hunt.names_the_model(head, "MAI-Image-2", ["MAI-Image-2.5"]) is False
+
+
+def test_a_document_another_model_tracks_is_never_a_relocation_candidate(tmp_path, monkeypatch):
+    _registry(tmp_path, monkeypatch, [
+        {"id": "ms/image-2", "provider": "MS", "model": "Image-2", "targets": [
+            {"kind": "provider-live", "url": "https://ms.example/pdf/Image-2.pdf"}]},
+        {"id": "ms/image-2-6", "provider": "MS", "model": "Image-2.6", "targets": [
+            {"kind": "provider-live", "url": "https://ms.example/pdf/Image-2.6.pdf"}]}])
+    elsewhere = site_hunt.tracked_elsewhere("ms/image-2")
+    assert "https://ms.example/pdf/Image-2.6.pdf" in elsewhere
+    assert "https://ms.example/pdf/Image-2.pdf" not in elsewhere
 
 
 def test_similarity_is_cheap_for_unrelated_texts():

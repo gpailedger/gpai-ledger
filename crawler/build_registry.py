@@ -10,9 +10,10 @@ Gate 1 and the Commission's own regulatory baseline documents.
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -21,9 +22,11 @@ import yaml
 # spaced variants; microsoft.ai uses hyphenated names).
 MODEL_NAME_OVERRIDES = {
     "MAI Code 1 Flash": "MAI-Code-1-Flash",
+    "MAI Code 1.1 Flash": "MAI-Code-1.1-Flash",
     "MAI Cyber 1 Flash": "MAI-Cyber-1-Flash",
     "MAI Image 2": "MAI-Image-2",
     "MAI Image 2.5": "MAI-Image-2.5",
+    "MAI Thinking 1": "MAI-Thinking-1",
 }
 
 AIAL_SITE = "https://aial.ie/research/gpai-training-transparency/"
@@ -41,9 +44,10 @@ AIAL_ARCHIVE_BASE = "https://aial.ie/research/gpai-training-transparency/archive
 AIAL_EVAL_BASE = "https://aial.ie/research/gpai-training-transparency/evals/"
 
 # URLs dropped from AIAL metadata: mechanically dead links (expired pre-signed URLs,
-# login-gated repos) and dead links whose content has a verified successor tracked in
-# EXTRA_TARGETS. A dead link with no known successor stays in the registry so its
-# recurring error event remains the record of continued absence.
+# login-gated repos, hosts that never serve this crawler the document) and dead links
+# whose content has a verified successor tracked in EXTRA_TARGETS. A dead link with no
+# known successor stays in the registry so its recurring error event remains the
+# record of continued absence.
 DROP_URL_PREFIXES = (
     # Cohere: pre-signed URL (expired); document now captured via derived_targets.py
     "https://fdr-prod-docs-files-public.s3",
@@ -53,6 +57,27 @@ DROP_URL_PREFIXES = (
     # Apertus 1.5: HF repo is login-gated (HTTP 401); public copy tracked in
     # EXTRA_TARGETS from the provider's apertus-legal GitHub repo
     "https://huggingface.co/swiss-ai/Apertus-v1.5-70B",
+    # MAI Code 1.1 Flash: AIAL links the upper-case .PDF spelling; microsoft.ai
+    # serves the same bytes at the .pdf address this ledger has tracked since
+    # 17 Aug 2026, which stays the tracked target (EXTRA_TARGETS)
+    "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.PDF",
+    # Mistral AI moved its five summaries from legal.cms.mistral.ai/assets/ to
+    # legal.mistral.ai/documents/. The old addresses have answered 404 since
+    # 11 Sep 2026; each new one serves bytes identical to the last capture of the
+    # old one (verified 13 Sep 2026). Successors tracked in EXTRA_TARGETS.
+    "https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",  # Ministral 3 14B
+    "https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",  # Ministral 3 8B
+    "https://legal.cms.mistral.ai/assets/a46dbe23-1c74-4dae-8a16-ace1f9bdb995",  # Ministral 3 3B
+    "https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",  # Mistral Large 3
+    "https://legal.cms.mistral.ai/assets/5f6ed10f-4320-41b2-9f76-d6718533c744",  # Mistral Small 4
+    # Hosts that never hand this crawler the document, so the fetch would fail on
+    # every sweep while saying nothing about the document itself; AIAL's archived
+    # copy carries the model instead (both verified 13 Sep 2026):
+    # - OpenLLM France: the summaries sit in a File Browser web app that answers
+    #   every file address with the same HTML application shell
+    "https://dl.labs.linagora.com/files/models/OpenLLM-France/AI_Act_summaries/",
+    # - Tencent Hy3: the EdgeOne edge answers HTTP 567 with a challenge page
+    "https://hy.tencent.ai/legal/Hy3-Training-Data-Summary-20260820.pdf",
 )
 
 # Corrections to AIAL metadata bugs; drop each override once the upstream eval YAML
@@ -144,6 +169,11 @@ EXTRA_TARGETS = {
     "mai-cyber-1-flash": [
         ("provider-live", "https://microsoft.ai/pdf/MAI-Cyber-1-Flash-Data-Card.pdf"),
     ],
+    # found by this project's Tier-3 hunt 17 Aug 2026, before AIAL tracked the
+    # model; kept over AIAL's .PDF spelling of the same file (DROP_URL_PREFIXES)
+    "mai-code-1-1-flash": [
+        ("provider-live", "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf"),
+    ],
     # Locations verified by manual browser check, 17 Aug 2026:
     "bria": [
         ("provider-live", "https://bria.ai/eu-policy"),
@@ -169,6 +199,22 @@ EXTRA_TARGETS = {
     ],
     "fibo": [
         ("provider-live", "https://drive.google.com/uc?export=download&id=1z3JFPBQCRKdj5F-Qfgp4TaNITWcMZtOi"),
+    ],
+    # Mistral AI's new document addresses (see DROP_URL_PREFIXES), 13 Sep 2026:
+    "ministral-3-14b": [
+        ("provider-live", "https://legal.mistral.ai/documents/Ministral%203%20-%2014B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf"),
+    ],
+    "ministral-3-8b": [
+        ("provider-live", "https://legal.mistral.ai/documents/Ministral%203%20-%208B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf"),
+    ],
+    "ministral-3-3b": [
+        ("provider-live", "https://legal.mistral.ai/documents/Ministral%203%20-%203B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf"),
+    ],
+    "mistral-large-3": [
+        ("provider-live", "https://legal.mistral.ai/documents/Mistral%20Large%203%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf"),
+    ],
+    "mistral-small-4": [
+        ("provider-live", "https://legal.mistral.ai/documents/Mistral%20Small%204%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf"),
     ],
 }
 
@@ -228,28 +274,11 @@ STANDALONE_SOURCES = [
              "note": "Commission FAQ on the template"},
         ],
     },
-    {
-        "id": "microsoft/mai-thinking-1",
-        "provider": "Microsoft",
-        "model": "MAI-Thinking-1",
-        "status": "published",
-        "targets": [
-            {"kind": "provider-live", "url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
-             "note": "found by Tier-3 hunt 17 Aug 2026; summary v1.0 dated 12 Aug 2026; "
-                     "not linked from the model page as of discovery (found via the "
-                     "/pdf/ filename convention)"},
-        ],
-    },
-    {
-        "id": "microsoft/mai-code-1-1-flash",
-        "provider": "Microsoft",
-        "model": "MAI-Code-1.1-Flash",
-        "status": "published",
-        "targets": [
-            {"kind": "provider-live", "url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
-             "note": "found by Tier-3 hunt 17 Aug 2026; Data Card v1.0 uploaded 11 Aug 2026"},
-        ],
-    },
+    # microsoft/mai-thinking-1 and microsoft/mai-code-1-1-flash were standalone
+    # entries while AIAL did not track them (both found by this project's Tier-3
+    # hunt on 17 Aug 2026; the Thinking summary through the /pdf/ filename
+    # convention, before the model page linked it). AIAL added evaluations of both
+    # on 10-11 Sep 2026, so the AIAL-derived sources now carry them, same ids.
     {
         "id": "microsoft/mai-voice-2",
         "provider": "Microsoft",
@@ -332,6 +361,118 @@ def org_slug(org: str) -> str:
     return slugify(org.strip()) or "unknown"
 
 
+def _alnum(s: str) -> str:
+    return "".join(ch for ch in (s or "").lower() if ch.isalnum())
+
+
+# One organisation, two spellings. AIAL's newer files write "Meta AI" and
+# "Mistral" where the older ones, and every committed source id, use "Meta" and
+# "Mistral AI"; left alone, one provider forks into two provider slugs.
+ORG_ALIASES = {"Meta AI": "Meta", "Mistral": "Mistral AI"}
+
+# Eval files whose name cannot give the right slug, keyed on the stem exactly as
+# AIAL writes it: renames the prefix rule in eval_slug() cannot map back (pinned to
+# the slug the model was first tracked under, where its captures live), and files
+# whose name contradicts everything inside them (a source id is a permanent address).
+EVAL_FILE_SLUGS = {
+    "openai-gpt5.4-nano": "gpt-5-4-nano",            # was gpt-5-4-nano.yaml
+    "openai-gpt-image2": "gpt-image-2",              # was gpt-image-2.yaml
+    "cyfragolvpl_pllum": "pllum",                    # was pllum.yaml
+    "cyfragolvpl_pllum-instruct": "pllum-instruct",  # new; named like its sibling
+    # model name, summary link and archived copy all say Phi-3.5 Vision Instruct
+    "phi-3.5-reasoning": "phi-3-5-vision-instruct",
+    # model name and summary title say Seedream 5.0 Pro, ByteDance's image model,
+    # not Seedance, its video model
+    "bytedance-seedance-5.0pro": "seedream-5-0-pro",
+}
+
+# A second AIAL evaluation file of a model already built from another file. It is
+# skipped while that source is still built from its own file; if that ever stops,
+# the refresh fails, so which file carries the model is decided, not inherited.
+DUPLICATE_EVAL_FILES = {
+    "veo-3.1.yaml": (
+        "google/veo-3-1",
+        "the same Veo 3.1 evaluation as veo-3-1.yaml, differing only in the model "
+        "publication date (2025-10-14 against 2025-10-15) and a trailing slash"),
+    "xai-grok-voice-think-fast2.0.yaml": (
+        "xai/grok-voice-think-fast-2",
+        "grades the same xAI document and archived copy as "
+        "grok-voice-think-fast-2.yaml, under a header that reads Muse Glimmer / "
+        "Meta AI, copied from meta-muse-glimmer.yaml"),
+}
+
+# AIAL evaluation files whose link this project has read and found to be ANOTHER
+# model's document: (the link as read, why). Left out while that link stands, as
+# following it would publish the document as this model's summary; a changed link
+# takes the file in again, with a note to drop the entry.
+MISATTRIBUTED_EVAL_FILES = {
+    "nvidia-nemotron3.5.yaml": (
+        "https://developer.download.nvidia.com/assets/nemo/docs/public-summary-of-training-content-for-nvidia-nemotron.pdf",
+        "its 'Nemotron 3 and 3.5 Family' entry links NVIDIA's summary for Nemotron "
+        "Nano v2 12B VL, the document nvidia-nemotron-nano.yaml links; AIAL's archived "
+        "copy under this entry is the same file, and neither names a Nemotron 3 or "
+        "3.5 model (read 13 Sep 2026)"),
+}
+
+
+def eval_slug(stem: str, org: str, model: str) -> str:
+    """The slug an eval file contributes to its source id.
+
+    AIAL's newer files carry the organisation in their name (openai-gpt-5.2.yaml
+    replaced gpt-5-2.yaml in September 2026). The prefix is dropped, so a renamed
+    file keeps its model's id and a new one does not read openai/openai-gpt6 -
+    unless the model's own name starts with the organisation (Adobe Firefly,
+    Minimax M3), where the prefix is the name. A doubled prefix
+    (deepseek-deepseek-v4, for DeepSeek-V4) loses one copy."""
+    if stem in EVAL_FILE_SLUGS:
+        return EVAL_FILE_SLUGS[stem]
+    slug, prefix = slugify(stem), org_slug(org)
+    if slug.startswith(prefix + "-"):
+        rest = slug[len(prefix) + 1:]
+        if (rest == prefix or rest.startswith(prefix + "-")
+                or not _alnum(model).startswith(_alnum(org))):
+            return rest
+    return slug
+
+
+# AIAL's YAML is written by hand and by tooling in turn. An unquoted date parses as
+# a date object (one such value crashed every refresh on 12 and 13 Sep 2026), a
+# blank as None, newer files spell a missing value as the string "None", and
+# dates arrive as "2026-08-11 08:00:00": a date field carrying a serialiser's
+# clock.
+_DATE_WITH_CLOCK = re.compile(r"^(\d{4}-\d{2}-\d{2})[ T]\d{2}:\d{2}(:\d{2})?$")
+
+
+def _text(value) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, date):
+        return value.isoformat()
+    text = str(value).strip()
+    return "" if text in ("None", "null") else text
+
+
+def _date(value) -> str:
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    text = _text(value)
+    m = _DATE_WITH_CLOCK.match(text)
+    return m.group(1) if m else text
+
+
+def aial_archive_names(repo: Path):
+    """The filenames in AIAL's archive at the checked-out commit, or None when that
+    cannot be read. The sweep's clone is sparse and blob-less, but git still has the
+    tree, so this costs no network and no checkout."""
+    r = subprocess.run(["git", "-C", str(repo), "ls-tree", "-r", "-z", "--name-only",
+                        "HEAD", "public/archive"], capture_output=True)
+    if r.returncode != 0:
+        return None
+    names = {p.split("/", 2)[2] for p in r.stdout.decode("utf-8", "replace").split("\0")
+             if p.startswith("public/archive/")}
+    return names or None
+
+
 # Source ids the operator has deliberately retired (id -> dated reason). A retired
 # source is never dropped: the refresh carries its last committed entry forward
 # flagged "retired", the sweep stops fetching it, and the site keeps its pages and
@@ -348,18 +489,58 @@ def main(aial_repo: str, out_path=None) -> None:
 
     head = subprocess.run(["git", "-C", str(repo), "rev-parse", "HEAD"],
                           capture_output=True, text=True).stdout.strip()
+    archived = aial_archive_names(repo)
+    out = Path(out_path) if out_path else Path(__file__).parent / "sources.json"
+    prev_sources = ({s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))
+                     .get("sources", [])} if out.exists() else {})
+    prev_targets = {(s["id"], t["url"]) for s in prev_sources.values()
+                    for t in s.get("targets", [])}
 
     sources = []
     seen_ids = {}          # source id -> the eval filename that claimed it
     for path in evals:
-        raw = yaml.safe_load(path.read_text(encoding="utf-8"))
-        model = (raw.get("model_name") or path.stem).strip()
+        if path.name in DUPLICATE_EVAL_FILES:
+            continue           # checked against what the other files built, below
+        # One unreadable upstream file must not hold back every other model: it is
+        # reported and left out. If it carried a model this registry already
+        # tracks, the fail-closed check at the end still refuses the write.
+        try:
+            raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+        except yaml.YAMLError as exc:
+            print(f"  WARNING: {path.name} is not readable YAML, skipped: {exc}")
+            continue
+        if not isinstance(raw, dict):
+            print(f"  WARNING: {path.name} holds no metadata mapping, skipped")
+            continue
+        model = _text(raw.get("model_name")) or path.stem
         model = MODEL_NAME_OVERRIDES.get(model, model)
-        org = (raw.get("organization") or "unknown").strip()
-        summary_link = (raw.get("public_summary_link") or "").strip()
-        archive_file = (raw.get("archive_file_name") or "").strip()
-        slug = slugify(path.stem)
+        org = _text(raw.get("organization")) or "unknown"
+        org = ORG_ALIASES.get(org, org)
+        summary_link = _text(raw.get("public_summary_link"))
+        held = MISATTRIBUTED_EVAL_FILES.get(path.name)
+        if held and summary_link == held[0]:
+            print(f"  skipped {path.name}: {held[1]}")
+            continue
+        if held:
+            print(f"  NOTE: {path.name} no longer links the document it was held out "
+                  f"for, so it is taken in again; drop it from MISATTRIBUTED_EVAL_FILES")
+        archive_file = _text(raw.get("archive_file_name"))
+        slug = eval_slug(path.stem, org, model)
         archive_file = ARCHIVE_FILE_OVERRIDES.get(slug, archive_file)
+        sid = f"{org_slug(org)}/{slug}"
+        # An archived copy AIAL names but its archive does not hold fails on every
+        # sweep. A name differing only in case is corrected to the file that exists;
+        # an absent one is left out - unless it is already tracked, when its
+        # disappearance is the sweep's to record, not the registry's to hide.
+        if archive_file and archived is not None and archive_file not in archived:
+            same = sorted(n for n in archived if n.lower() == archive_file.lower())
+            if len(same) == 1:
+                print(f"  NOTE: {path.name} names {archive_file}; AIAL's archive holds {same[0]}")
+                archive_file = same[0]
+            elif (sid, AIAL_ARCHIVE_BASE + archive_file) not in prev_targets:
+                print(f"  NOTE: {path.name} names {archive_file}, which AIAL's archive "
+                      f"does not hold; no archive target")
+                archive_file = ""
 
         targets = []
         seen = set()
@@ -420,8 +601,8 @@ def main(aial_repo: str, out_path=None) -> None:
             "AIAL's published evaluation page for this model, carrying the letter "
             "grade (attribution: aial.ie; AIAL's research, not a legal determination)")
 
-        sid = f"{org_slug(org)}/{slug}"
-        # Two eval filenames differing only by "." / "_" / " " collapse to one id.
+        # Two eval filenames differing only by "." / "_" / " ", or by the
+        # organisation prefix eval_slug() drops, collapse to one id.
         # Silently, and the second file's whole history then lands on the first
         # model. Fail closed: a registry that quietly loses a model is worse than
         # a registry that does not build.
@@ -448,13 +629,25 @@ def main(aial_repo: str, out_path=None) -> None:
             "aial": {
                 "eval_yaml": f"evals/{path.name}",
                 "eval_page": AIAL_EVAL_BASE + path.stem + "/",
-                "public_summary_date": (raw.get("public_summary_date") or "").strip(),
-                "model_publication_date": (raw.get("model_publication_date") or "").strip(),
-                "evaluation_date": (raw.get("evaluation_date") or "").strip(),
-                "category": (raw.get("category") or "").strip(),
+                "public_summary_date": _date(raw.get("public_summary_date")),
+                "model_publication_date": _date(raw.get("model_publication_date")),
+                "evaluation_date": _date(raw.get("evaluation_date")),
+                "category": _text(raw.get("category")),
                 "archive_file_name": archive_file,
             },
         })
+
+    # a declared duplicate may only be skipped while its model is still built from
+    # its own file; otherwise the model would vanish with nobody having decided it
+    for name, (dup_of, why) in DUPLICATE_EVAL_FILES.items():
+        if not (repo / "evals" / name).exists():
+            print(f"  NOTE: {name} is no longer upstream; drop it from DUPLICATE_EVAL_FILES")
+        elif dup_of not in seen_ids:
+            sys.exit(f"{name} is declared a duplicate of {dup_of}, but no other eval "
+                     f"file builds {dup_of} any more: decide which file now carries "
+                     f"that model ({why})")
+        else:
+            print(f"  skipped {name} ({dup_of} is built from {seen_ids[dup_of]}): {why}")
 
     # STANDALONE ids are hand-authored; guard against a future collision with an
     # AIAL-derived id (which would produce two sources sharing one id)
@@ -580,9 +773,24 @@ def main(aial_repo: str, out_path=None) -> None:
             if t["url"] in INPAGE_DOC_URLS:
                 t["inpage"] = True
 
-    out = Path(out_path) if out_path else Path(__file__).parent / "sources.json"
-    prev_sources = ({s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))
-                     .get("sources", [])} if out.exists() else {})
+    # One document, one model. Two sources claiming one document file means one of
+    # them presents another model's filing as its own: a relocation attached
+    # MAI-Image-2.6's summary to MAI-Image-2 on 7 Sep 2026, and an AIAL file headed
+    # "Muse Glimmer / Meta AI" links xAI's Grok document. Hub pages several models
+    # link are rendered (Anthropic's trust centre, Meta's transparency hub) and
+    # shared by design; overview pages (provider-page) are not the document.
+    claims = {}
+    for s in sources:
+        for t in s.get("targets", []):
+            if t["kind"] in ("provider-live", "aial-archive") and not t.get("render"):
+                base, sep, query = t["url"].split("#")[0].partition("?")
+                claims.setdefault(base.rstrip("/").lower() + sep + query, set()).add(s["id"])
+    shared = sorted((url, sorted(ids)) for url, ids in claims.items() if len(ids) > 1)
+    if shared:
+        sys.exit("refusing to write a registry in which one document is claimed by "
+                 "more than one model: " + "; ".join(
+                     f"{url} <- {', '.join(ids)}" for url, ids in shared[:5]))
+
     new_ids = {s["id"] for s in sources}
     for rid, reason in RETIRED_SOURCE_IDS.items():
         if rid in new_ids:

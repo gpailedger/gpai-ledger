@@ -135,7 +135,9 @@ def main() -> int:
 
         # model pages: L3/L4
         if len(parts) == 4 and parts[0] == "ledger" and parts[3] == "index.html":
-            has_captures = "v/" in html
+            # a version link, not any "v/": a model id ending in "v" (flux-2-dev)
+            # carries "v/" in the page's own addresses and reads as captured
+            has_captures = "href='v/" in html
             has_section = any(s in html for s in SEMANTIC_SECTIONS)
             if has_captures and not has_section:
                 findings.append(f"L3 model page with captures but no semantic section: {rel}")

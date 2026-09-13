@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-09-08T05:57:06Z",
+  "generated_utc": "2026-09-13T11:29:30Z",
   "seed": {
     "aial_repo": "https://github.com/AIAccountabilityLab/gpai-training-transparency",
-    "aial_head": "1af5301afc27a216431b6dbf11e974d558f9aeac"
+    "aial_head": "cfa144b5ccc179cd806a31dd036745164b1d2c0c"
   },
   "counts": {
-    "published": 46,
-    "missing": 21,
+    "published": 75,
+    "missing": 49,
     "watch": 12,
     "regulatory": 1,
-    "total": 80
+    "total": 137
   },
   "sources": [
     {
@@ -47,6 +47,44 @@
         "evaluation_date": "2026-07-22",
         "category": "New model",
         "archive_file_name": "Adobe_Firefly_2026_07_22.pdf"
+      }
+    },
+    {
+      "id": "anthropic/mythos5-1",
+      "provider": "Anthropic",
+      "model": "Mythos 5.1 / Fable 5.1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://trust.anthropic.com/resources",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-mythos5.1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-mythos5.1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/anthropic-mythos5.1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-mythos5.1/",
+        "public_summary_date": "2026-09-01",
+        "model_publication_date": "2026-09-01",
+        "evaluation_date": "2026-09-04",
+        "category": "New",
+        "archive_file_name": "Claude_Fable_Mythos_5_1_2026_09_08.pdf"
       }
     },
     {
@@ -229,6 +267,154 @@
         "evaluation_date": "2026-03-31",
         "category": "New model",
         "archive_file_name": "Bria_32_2026_01_12.pdf"
+      }
+    },
+    {
+      "id": "bytedance/seed-2-0pro",
+      "provider": "ByteDance",
+      "model": "Seed 2.0 Pro",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seed%202.0%20Pro%20.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seed_2_0_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seed-2.0pro.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seed-2.0pro/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bytedance-seed-2.0pro.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seed-2.0pro/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-03-01",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "ByteDance_Seed_2_0_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "bytedance/seedream-5-0-pro",
+      "provider": "ByteDance",
+      "model": "Seedream 5.0 Pro",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedream%205.0%20Pro%20.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seedance-5.0pro.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance-5.0pro/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bytedance-seedance-5.0pro.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance-5.0pro/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-07-01",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "ByteDance_Seedeam_5_0_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "bytedance/seedance2-0",
+      "provider": "ByteDance",
+      "model": "Seedance 2.0",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.0.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedance_2_0_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seedance2.0.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.0/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bytedance-seedance2.0.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.0/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-03-01",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "ByteDance_Seedance_2_0_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "bytedance/seedance2-5",
+      "provider": "ByteDance",
+      "model": "Seedance 2.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.5.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedance_2_5_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seedance2.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/bytedance-seedance2.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.5/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-07-01",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "ByteDance_Seedance_2_5_2026_09_08.pdf"
       }
     },
     {
@@ -660,6 +846,198 @@
       }
     },
     {
+      "id": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+      "provider": "Ministry of Digital Affairs of Poland",
+      "model": "PLLuM-12B-instruct-2512",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-instruct-2512/resolve/main/PLLuM_2512_instruct_Public_Summary_of_Training_Content.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cyfragolvpl_pllum-instruct.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/cyfragolvpl_pllum-instruct/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/cyfragolvpl_pllum-instruct.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/cyfragolvpl_pllum-instruct/",
+        "public_summary_date": "2026-06-11",
+        "model_publication_date": "2026-05-21",
+        "evaluation_date": "",
+        "category": "Fine-tune",
+        "archive_file_name": "PLLuM_2512_Instruct_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "ministry-of-digital-affairs-of-poland/pllum",
+      "provider": "Ministry of Digital Affairs of Poland",
+      "model": "PLLuM-12B-base-2512",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/resolve/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_base_2026_08_06.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cyfragolvpl_pllum.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/cyfragolvpl_pllum/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/cyfragolvpl_pllum.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/cyfragolvpl_pllum/",
+        "public_summary_date": "2026-05-11",
+        "model_publication_date": "2026-05-21",
+        "evaluation_date": "2026-08-17",
+        "category": "New",
+        "archive_file_name": "PLLuM_2512_base_2026_08_06.pdf"
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4",
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V4",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.deepseek.com/policies/DeepSeek_Template_for_the_Public_Summary_of_Training_Content_for_GeneralPurpose_AI_model.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/DeepSeek_DeepSeek_V4_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/deepseek-deepseek-v4.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/deepseek-deepseek-v4/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/deepseek-deepseek-v4.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/deepseek-deepseek-v4/",
+        "public_summary_date": "2026-08-04",
+        "model_publication_date": "2026-04-24",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "DeepSeek_DeepSeek_V4_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "mistral-ai/devstral-2",
+      "provider": "Mistral AI",
+      "model": "Devstral 2",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/devstral-2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/devstral-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/devstral-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/devstral-2/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-12-09",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "mistral-ai/devstral-small",
+      "provider": "Mistral AI",
+      "model": "Devstral Small",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/devstral-small.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/devstral-small/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/devstral-small.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/devstral-small/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-12-09",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/diffusiongemma",
+      "provider": "Google",
+      "model": "DiffusionGemma 26B A4B IT",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/diffusiongemma.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/diffusiongemma/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/diffusiongemma.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/diffusiongemma/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-06-10",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "domyn/domyn",
       "provider": "Domyn",
       "model": "Domyn Large",
@@ -736,6 +1114,33 @@
       }
     },
     {
+      "id": "bria-ai/fibo-1-5",
+      "provider": "Bria AI",
+      "model": "FIBO 1.5",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/fibo-1.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/fibo-1.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/fibo-1.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/fibo-1.5/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "bria-ai/fibo",
       "provider": "Bria AI",
       "model": "FIBO",
@@ -775,6 +1180,33 @@
         "evaluation_date": "2026-08-04",
         "category": "New model",
         "archive_file_name": "FIBO_2026_08_03.pdf"
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-2-dev",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.2 [dev]",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-dev.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-dev/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/flux-2-dev.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-dev/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-11-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
       }
     },
     {
@@ -824,6 +1256,33 @@
       "aial": {
         "eval_yaml": "evals/flux-2-max.yaml",
         "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-max/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-11-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "black-forest-labs/flux-2-pro",
+      "provider": "Black Forest Labs",
+      "model": "FLUX.2 [pro]",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-pro.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-pro/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/flux-2-pro.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-pro/",
         "public_summary_date": "",
         "model_publication_date": "2025-11-25",
         "evaluation_date": "",
@@ -902,6 +1361,33 @@
       }
     },
     {
+      "id": "google/gemini-2-5-flash-image",
+      "provider": "Google",
+      "model": "Gemini 2.5 Flash Image",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-2.5-flash-image.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-2.5-flash-image/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-2.5-flash-image.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-2.5-flash-image/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-08-26",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "google/gemini-3-pro",
       "provider": "Google",
       "model": "Gemini 3 Pro",
@@ -939,6 +1425,276 @@
       }
     },
     {
+      "id": "google/gemini-3-5-flash-cyber",
+      "provider": "Google",
+      "model": "Gemini 3.5 Flash Cyber",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.5-flash-cyber.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.5-flash-cyber/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-3.5-flash-cyber.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.5-flash-cyber/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-3-5-flash-lite",
+      "provider": "Google",
+      "model": "Gemini 3.5 Flash Lite",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.5-flash-lite.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.5-flash-lite/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-3.5-flash-lite.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.5-flash-lite/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-3-6-flash",
+      "provider": "Google",
+      "model": "Gemini 3.6 Flash",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.6-flash.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.6-flash/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-3.6-flash.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.6-flash/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-3-7-flash",
+      "provider": "Google",
+      "model": "Gemini 3.7 Flash",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.7-flash.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.7-flash/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-3.7-flash.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.7-flash/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-08-13",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-flash-3-1-lite",
+      "provider": "Google",
+      "model": "Gemini Flash 3.1 Lite",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-flash-3.1-lite.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-flash-3.1-lite/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-flash-3.1-lite.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-flash-3.1-lite/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-05-07",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-omni",
+      "provider": "Google",
+      "model": "Gemini Omni",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-omni.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-omni/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-omni.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-omni/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-05-19",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-robotics-1-5",
+      "provider": "Google",
+      "model": "Gemini Robotics 1.5",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-robotics-1.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-1.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-robotics-1.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-1.5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-robotics-er-1-5",
+      "provider": "Google",
+      "model": "Gemini Robotics ER 1.5",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-robotics-er-1.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-1.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-robotics-er-1.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-1.5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-09-25",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-robotics-er-1-6",
+      "provider": "Google",
+      "model": "Gemini Robotics ER 1.6",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-robotics-er-1.6.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-1.6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-robotics-er-1.6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-1.6/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-04-14",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "google/gemini-robotics-er-2",
+      "provider": "Google",
+      "model": "Gemini Robotics ER 2",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-robotics-er-2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/gemini-robotics-er-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-er-2/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-07-30",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "google/gemma-4",
       "provider": "Google",
       "model": "Gemma 4",
@@ -973,80 +1729,6 @@
         "evaluation_date": "2026-08-04",
         "category": "New model",
         "archive_file_name": "Gemma_4_2028_08_03.pdf"
-      }
-    },
-    {
-      "id": "openai/gpt-5-2",
-      "provider": "OpenAI",
-      "model": "GPT-5.2",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://cdn.openai.com/pdf/gpt-5-2-eu-ai-act-public-summary-of-training-content.pdf",
-          "note": "public_summary_link per AIAL eval metadata"
-        },
-        {
-          "kind": "aial-archive",
-          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_2_2026_08_17.pdf",
-          "note": "AIAL write-once snapshot (attribution: aial.ie)"
-        },
-        {
-          "kind": "aial-eval",
-          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-2.yaml",
-          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
-        },
-        {
-          "kind": "aial-eval-page",
-          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-2/",
-          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
-        }
-      ],
-      "aial": {
-        "eval_yaml": "evals/gpt-5-2.yaml",
-        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-2/",
-        "public_summary_date": "2026-07-30",
-        "model_publication_date": "2025-12-11",
-        "evaluation_date": "",
-        "category": "New model",
-        "archive_file_name": "GPT_5_2_2026_08_17.pdf"
-      }
-    },
-    {
-      "id": "openai/gpt-5-4-nano",
-      "provider": "OpenAI",
-      "model": "GPT-5.4 Nano",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
-          "note": "public_summary_link per AIAL eval metadata"
-        },
-        {
-          "kind": "aial-archive",
-          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_5_4_Nano_2026_08_17.pdf",
-          "note": "AIAL write-once snapshot (attribution: aial.ie)"
-        },
-        {
-          "kind": "aial-eval",
-          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-5-4-nano.yaml",
-          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
-        },
-        {
-          "kind": "aial-eval-page",
-          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-4-nano/",
-          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
-        }
-      ],
-      "aial": {
-        "eval_yaml": "evals/gpt-5-4-nano.yaml",
-        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-5-4-nano/",
-        "public_summary_date": "2026-07-31",
-        "model_publication_date": "2026-03-12",
-        "evaluation_date": "",
-        "category": "New model",
-        "archive_file_name": "GPT_5_4_Nano_2026_08_17.pdf"
       }
     },
     {
@@ -1178,43 +1860,6 @@
       }
     },
     {
-      "id": "openai/gpt-image-2",
-      "provider": "OpenAI",
-      "model": "GPT Image 2",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
-          "note": "public_summary_link per AIAL eval metadata"
-        },
-        {
-          "kind": "aial-archive",
-          "url": "https://aial.ie/research/gpai-training-transparency/archive/GPT_Image_2_2026_08_17.pdf",
-          "note": "AIAL write-once snapshot (attribution: aial.ie)"
-        },
-        {
-          "kind": "aial-eval",
-          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gpt-image-2.yaml",
-          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
-        },
-        {
-          "kind": "aial-eval-page",
-          "url": "https://aial.ie/research/gpai-training-transparency/evals/gpt-image-2/",
-          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
-        }
-      ],
-      "aial": {
-        "eval_yaml": "evals/gpt-image-2.yaml",
-        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/gpt-image-2/",
-        "public_summary_date": "2026-07-30",
-        "model_publication_date": "2026-04-21",
-        "evaluation_date": "",
-        "category": "New model",
-        "archive_file_name": "GPT_Image_2_2026_08_17.pdf"
-      }
-    },
-    {
       "id": "openai/gpt-oss",
       "provider": "OpenAI",
       "model": "GPT-OSS",
@@ -1296,6 +1941,60 @@
       }
     },
     {
+      "id": "ibm/granite-4-2",
+      "provider": "IBM",
+      "model": "Granite 4.2",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/granite-4-2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/granite-4-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/granite-4-2/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-08-07",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "ibm/granite-vision-4-1",
+      "provider": "IBM",
+      "model": "Granite 4.1 Vision",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/granite-vision-4-1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/granite-vision-4-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/granite-vision-4-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/granite-vision-4-1/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-04-16",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "xai/grok-4-5",
       "provider": "xAI",
       "model": "Grok 4.5",
@@ -1367,6 +2066,33 @@
         "evaluation_date": "",
         "category": "New model",
         "archive_file_name": "Grok_Voice_Think_Fast_2_0_2026_07_17.pdf"
+      }
+    },
+    {
+      "id": "google/imagen-4-fast",
+      "provider": "Google",
+      "model": "Imagen 4 Fast",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/imagen-4-fast.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/imagen-4-fast/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/imagen-4-fast.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/imagen-4-fast/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-08-15",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
       }
     },
     {
@@ -1450,6 +2176,43 @@
       }
     },
     {
+      "id": "microsoft/magma-8b",
+      "provider": "Microsoft",
+      "model": "Magma-8B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Magma-8B/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Magma_8B_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/magma-8b.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/magma-8b/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/magma-8b.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/magma-8b/",
+        "public_summary_date": "2025-11-24",
+        "model_publication_date": "2025-02-23",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Magma_8B_2026_09_11.pdf"
+      }
+    },
+    {
       "id": "microsoft/mai-code-1-flash",
       "provider": "Microsoft",
       "model": "MAI-Code-1-Flash",
@@ -1519,6 +2282,43 @@
       }
     },
     {
+      "id": "microsoft/mai-ds-r1",
+      "provider": "Microsoft",
+      "model": "MAI-DS-R1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/MAI-DS-R1/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_DS_R1_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-ds-r1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-ds-r1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-ds-r1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-ds-r1/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2025-04-16",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "MAI_DS_R1_2026_09_11.pdf"
+      }
+    },
+    {
       "id": "microsoft/mai-image-2",
       "provider": "Microsoft",
       "model": "MAI-Image-2",
@@ -1543,11 +2343,6 @@
           "kind": "aial-eval-page",
           "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2/",
           "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
-        },
-        {
-          "kind": "provider-live",
-          "url": "https://microsoft.ai/pdf/MAI-Image-2.6-Data-Summary.pdf",
-          "note": "auto-relocation, fingerprint-confirmed 2026-09-07 06:51 UTC (similarity 0.9950; best sibling 0.7747; no other candidate >= 0.98; replaces https://microsoft.ai/pdf/MAI-Image-2-Data-Summary.pdf)"
         }
       ],
       "aial": {
@@ -1598,6 +2393,256 @@
       }
     },
     {
+      "id": "microsoft/mai-image-2-6",
+      "provider": "Microsoft",
+      "model": "MAI-Image-2.6",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Image-2.6-Data-Summary.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_6_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-image-2_6.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2_6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-image-2_6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-image-2_6/",
+        "public_summary_date": "2026-09-04",
+        "model_publication_date": "2026-08-16",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "MAI_Image_2_6_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/mai-thinking-1",
+      "provider": "Microsoft",
+      "model": "MAI-Thinking-1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Thinking_1_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mai-thinking-1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-thinking-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/mai-thinking-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/mai-thinking-1/",
+        "public_summary_date": "2026-08-12",
+        "model_publication_date": "2026-06-02",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "MAI_Thinking_1_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "meta/muse-glimmer",
+      "provider": "Meta",
+      "model": "Muse Glimmer",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+          "note": "public_summary_link per AIAL eval metadata",
+          "render": true
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/meta-muse-glimmer.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-glimmer/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/meta-muse-glimmer.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-glimmer/",
+        "public_summary_date": "2026-08-10",
+        "model_publication_date": "2026-08-10",
+        "evaluation_date": "2026-08-18",
+        "category": "New",
+        "archive_file_name": "Muse_Glimmer_2026_08_17.pdf"
+      }
+    },
+    {
+      "id": "microsoft/mai-code-1-1-flash",
+      "provider": "Microsoft",
+      "model": "MAI-Code-1.1-Flash",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
+          "note": "manually verified direct URL"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-mai-code-1.1-flash.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-mai-code-1.1-flash/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/microsoft-mai-code-1.1-flash.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-mai-code-1.1-flash/",
+        "public_summary_date": "2026-08-11",
+        "model_publication_date": "2026-03-04",
+        "evaluation_date": "2026-09-04",
+        "category": "Fine-tune",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/phi4-reasoning-vision15b",
+      "provider": "Microsoft",
+      "model": "Phi 4 Reasoning Vision 15B",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B/resolve/main/DATACARD.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi4-reasoning-vision15b.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi4-reasoning-vision15b/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/microsoft-phi4-reasoning-vision15b.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi4-reasoning-vision15b/",
+        "public_summary_date": "2026-08-31",
+        "model_publication_date": "2026-03-04",
+        "evaluation_date": "2026-09-04",
+        "category": "Fine-tune",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "midjourney/midjourney",
+      "provider": "Midjourney",
+      "model": "Midjourney Image and Video family of models",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/48067080311309-Public-Summary-of-Training-Content",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Midjourney_Midjourney_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/midjourney-midjourney.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/midjourney-midjourney/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/midjourney-midjourney.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/midjourney-midjourney/",
+        "public_summary_date": "2026-03-17",
+        "model_publication_date": "2026-03-17",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "Midjourney_Midjourney_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "minimax/minimax-h3",
+      "provider": "Minimax",
+      "model": "Minimax H3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://file.cdn.minimax.io/public/8b640d09-235b-4351-a096-2f7bea762e75.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Minimax_H3_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/minimax-h3.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/minimax-h3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/minimax-h3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/minimax-h3/",
+        "public_summary_date": "2026-02-08",
+        "model_publication_date": "2026-02-08",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Minimax_H3_2026_09_11.pdf"
+      }
+    },
+    {
       "id": "minimax/minimax-m3",
       "provider": "Minimax",
       "model": "Minimax M3",
@@ -1642,8 +2687,8 @@
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://legal.cms.mistral.ai/assets/36afc281-be9c-4cd0-9763-81cc19540895",
-          "note": "public_summary_link per AIAL eval metadata"
+          "url": "https://legal.mistral.ai/documents/Ministral%203%20-%2014B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+          "note": "manually verified direct URL"
         },
         {
           "kind": "aial-archive",
@@ -1679,8 +2724,8 @@
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://legal.cms.mistral.ai/assets/a46dbe23-1c74-4dae-8a16-ace1f9bdb995",
-          "note": "public_summary_link per AIAL eval metadata"
+          "url": "https://legal.mistral.ai/documents/Ministral%203%20-%203B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+          "note": "manually verified direct URL"
         },
         {
           "kind": "aial-archive",
@@ -1716,8 +2761,8 @@
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://legal.cms.mistral.ai/assets/17f1f22e-3971-47af-bb1f-d857f389f0f9",
-          "note": "public_summary_link per AIAL eval metadata"
+          "url": "https://legal.mistral.ai/documents/Ministral%203%20-%208B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+          "note": "manually verified direct URL"
         },
         {
           "kind": "aial-archive",
@@ -1753,8 +2798,8 @@
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://legal.cms.mistral.ai/assets/591fbf77-10ba-4aa8-bfe4-ef299c1f024b",
-          "note": "public_summary_link per AIAL eval metadata"
+          "url": "https://legal.mistral.ai/documents/Mistral%20Large%203%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+          "note": "manually verified direct URL"
         },
         {
           "kind": "aial-archive",
@@ -1790,8 +2835,8 @@
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://legal.cms.mistral.ai/assets/5f6ed10f-4320-41b2-9f76-d6718533c744",
-          "note": "public_summary_link per AIAL eval metadata"
+          "url": "https://legal.mistral.ai/documents/Mistral%20Small%204%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+          "note": "manually verified direct URL"
         },
         {
           "kind": "aial-archive",
@@ -1817,44 +2862,6 @@
         "evaluation_date": "2026-08-04",
         "category": "New model",
         "archive_file_name": "Mistral_Small_4_2026_08_03.pdf"
-      }
-    },
-    {
-      "id": "meta/muse-glimmer",
-      "provider": "Meta",
-      "model": "Muse Glimmer",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
-          "note": "public_summary_link per AIAL eval metadata",
-          "render": true
-        },
-        {
-          "kind": "aial-archive",
-          "url": "https://aial.ie/research/gpai-training-transparency/archive/Muse_Glimmer_2026_08_17.pdf",
-          "note": "AIAL write-once snapshot (attribution: aial.ie)"
-        },
-        {
-          "kind": "aial-eval",
-          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/muse-glimmer.yaml",
-          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
-        },
-        {
-          "kind": "aial-eval-page",
-          "url": "https://aial.ie/research/gpai-training-transparency/evals/muse-glimmer/",
-          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
-        }
-      ],
-      "aial": {
-        "eval_yaml": "evals/muse-glimmer.yaml",
-        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/muse-glimmer/",
-        "public_summary_date": "2026-08-10",
-        "model_publication_date": "2026-08-10",
-        "evaluation_date": "",
-        "category": "New model",
-        "archive_file_name": "Muse_Glimmer_2026_08_17.pdf"
       }
     },
     {
@@ -1934,6 +2941,33 @@
       }
     },
     {
+      "id": "cohere/north-micro-vision-instruct",
+      "provider": "Cohere",
+      "model": "North Micro Vision Instruct",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/north-micro-vision-instruct.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/north-micro-vision-instruct/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/north-micro-vision-instruct.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/north-micro-vision-instruct/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-08-10",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "cohere/north-mini-code",
       "provider": "Cohere",
       "model": "North Mini Code 1.0",
@@ -2003,6 +3037,262 @@
       }
     },
     {
+      "id": "amazon/nova-2-sonic",
+      "provider": "Amazon",
+      "model": "Nova 2 Sonic",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/nova-2-sonic.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-sonic/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/nova-2-sonic.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-sonic/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-12-02",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "nvidia/nemotron-nano",
+      "provider": "NVIDIA",
+      "model": "Nemotron Nano",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://developer.download.nvidia.com/assets/nemo/docs/public-summary-of-training-content-for-nvidia-nemotron.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/NVIDIA_Nemotron_Nano_v2_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/nvidia-nemotron-nano.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/nvidia-nemotron-nano/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/nvidia-nemotron-nano.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/nvidia-nemotron-nano/",
+        "public_summary_date": "2025-10-27",
+        "model_publication_date": "2025-10-27",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "NVIDIA_Nemotron_Nano_v2_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "openai/gpt-5-2",
+      "provider": "OpenAI",
+      "model": "GPT-5.2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-5-2-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-5.2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-5.2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openai-gpt-5.2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-5.2/",
+        "public_summary_date": "2026-07-30",
+        "model_publication_date": "2025-12-11",
+        "evaluation_date": "2026-08-17",
+        "category": "New",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/gpt-image-2",
+      "provider": "OpenAI",
+      "model": "GPT Image 2.0",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/chatgpt-images-2-0-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-image2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-image2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openai-gpt-image2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-image2/",
+        "public_summary_date": "2026-07-30",
+        "model_publication_date": "2026-04-21",
+        "evaluation_date": "2026-08-18",
+        "category": "New",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/gpt-5-4-nano",
+      "provider": "OpenAI",
+      "model": "GPT-5.4 Nano",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-5-4-nano-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt5.4-nano.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt5.4-nano/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openai-gpt5.4-nano.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt5.4-nano/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-03-12",
+        "evaluation_date": "2026-08-17",
+        "category": "New",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openai/gpt6",
+      "provider": "OpenAI",
+      "model": "GPT-6 Astra",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://cdn.openai.com/pdf/gpt-6-astra-eu-ai-act-public-summary-of-training-content.pdf",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt6.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openai-gpt6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt6/",
+        "public_summary_date": "2026-09-02",
+        "model_publication_date": "2025-09-03",
+        "evaluation_date": "2026-08-17",
+        "category": "New",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "openllm-france/luciole-base",
+      "provider": "OpenLLM France",
+      "model": "Luciole Base",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/OpenLLM_France_Luciole_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openllm-france-luciole-base.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openllm-france-luciole-base/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openllm-france-luciole-base.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openllm-france-luciole-base/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-06-02",
+        "evaluation_date": "2026-09-07",
+        "category": "New",
+        "archive_file_name": "OpenLLM_France_Luciole_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "openllm-france/luciole-instruct1-1",
+      "provider": "OpenLLM France",
+      "model": "Luciole Instruct 1.1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/OpenLLM_France_Luciole_1_1_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openllm-france-luciole-instruct1.1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/openllm-france-luciole-instruct1.1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/openllm-france-luciole-instruct1.1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/openllm-france-luciole-instruct1.1/",
+        "public_summary_date": "2026-07-31",
+        "model_publication_date": "2026-07-09",
+        "evaluation_date": "2026-09-08",
+        "category": "Fine-tune",
+        "archive_file_name": "OpenLLM_France_Luciole_1_1_2026_09_08.pdf"
+      }
+    },
+    {
       "id": "writer/palmyra-x5",
       "provider": "WRITER",
       "model": "Palmyra X5",
@@ -2027,6 +3317,324 @@
         "evaluation_date": "",
         "category": "New model",
         "archive_file_name": ""
+      }
+    },
+    {
+      "id": "writer/palmyra-x6",
+      "provider": "WRITER",
+      "model": "Palmyra X6",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/palmyra-x6.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/palmyra-x6/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/palmyra-x6.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/palmyra-x6/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-08-17",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/phi-1-5",
+      "provider": "Microsoft",
+      "model": "Phi-1.5",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/phi-1_5/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi1.5_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-1.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-1.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-1.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-1.5/",
+        "public_summary_date": "2025-11-21",
+        "model_publication_date": "2023-09-10",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi1.5_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-1",
+      "provider": "Microsoft",
+      "model": "Phi-1",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/phi-1/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi1_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-1.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-1/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-1.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-1/",
+        "public_summary_date": "2025-11-21",
+        "model_publication_date": "2023-06-21",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi1_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-2",
+      "provider": "Microsoft",
+      "model": "Phi-2",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-2/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi2_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-2.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-2/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-2.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-2/",
+        "public_summary_date": "2025-12-04",
+        "model_publication_date": "2023-12-13",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi2_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-3-5-vision-instruct",
+      "provider": "Microsoft",
+      "model": "Phi-3.5 Vision Instruct",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-3.5-vision-instruct/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi3.5_Vision_Instruct_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-3.5-reasoning.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-3.5-reasoning/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-3.5-reasoning.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-3.5-reasoning/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2024-08-17",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi3.5_Vision_Instruct_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-3",
+      "provider": "Microsoft",
+      "model": "Phi-3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-3-small-128k-instruct/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi3_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-3.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-3/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2024-05-02",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi3_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-4-mini-instruct",
+      "provider": "Microsoft",
+      "model": "Phi-4 Mini Instruct",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi4_Mini_Instruct_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-mini-instruct.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-mini-instruct/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-4-mini-instruct.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-mini-instruct/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2025-02-19",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi4_Mini_Instruct_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "microsoft/phi-4-multimodal-instruct",
+      "provider": "Microsoft",
+      "model": "Phi-4 Multimodal Instruct",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-multimodal-instruct.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-multimodal-instruct/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-4-multimodal-instruct.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-multimodal-instruct/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2025-02-24",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/phi-4-reasoning",
+      "provider": "Microsoft",
+      "model": "Phi-4 Reasoning",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://huggingface.co/microsoft/Phi-4-reasoning/resolve/main/data_summary_card.md",
+          "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi4_Reasoning_2026_09_11.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-reasoning.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-reasoning/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/phi-4-reasoning.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-reasoning/",
+        "public_summary_date": "2025-11-24",
+        "model_publication_date": "2024-04-09",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": "Phi4_Reasoning_2026_09_11.pdf"
       }
     },
     {
@@ -2072,40 +3680,114 @@
       }
     },
     {
-      "id": "ministry-of-digital-affairs-of-poland/pllum",
-      "provider": "Ministry of Digital Affairs of Poland",
-      "model": "PLLuM 2512 Base",
+      "id": "microsoft/phi-moe",
+      "provider": "Microsoft",
+      "model": "Phi-MoE",
       "status": "published",
       "targets": [
         {
           "kind": "provider-live",
-          "url": "https://huggingface.co/CYFRAGOVPL/PLLuM-12B-base-2512/resolve/main/PLLuM_2512_base_Public_Summary_of_Training_Content.pdf",
+          "url": "https://huggingface.co/microsoft/Phi-tiny-MoE-instruct/resolve/main/data_summary_card.md",
           "note": "public_summary_link per AIAL eval metadata, normalized (tracking tokens stripped; HF viewer URLs rewritten to the direct-download form)"
         },
         {
           "kind": "aial-archive",
-          "url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_base_2026_08_06.pdf",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi_MoE_2026_09_11.pdf",
           "note": "AIAL write-once snapshot (attribution: aial.ie)"
         },
         {
           "kind": "aial-eval",
-          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pllum.yaml",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-moe.yaml",
           "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
         },
         {
           "kind": "aial-eval-page",
-          "url": "https://aial.ie/research/gpai-training-transparency/evals/pllum/",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-moe/",
           "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
         }
       ],
       "aial": {
-        "eval_yaml": "evals/pllum.yaml",
-        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/pllum/",
-        "public_summary_date": "2026-05-11",
-        "model_publication_date": "2026-05-21",
+        "eval_yaml": "evals/phi-moe.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/phi-moe/",
+        "public_summary_date": "2025-12-10",
+        "model_publication_date": "2025-06-23",
         "evaluation_date": "",
         "category": "New model",
-        "archive_file_name": "PLLuM_2512_base_2026_08_06.pdf"
+        "archive_file_name": "Phi_MoE_2026_09_11.pdf"
+      }
+    },
+    {
+      "id": "pleias/baguettotron",
+      "provider": "Pleias",
+      "model": "Baguettotron and Monad",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://pleias.ai/training-content/baguettotron-monad",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Pleias_Baguettotron_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-baguettotron.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/pleias-baguettotron/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/pleias-baguettotron.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/pleias-baguettotron/",
+        "public_summary_date": "2026-08-04",
+        "model_publication_date": "2025-11-10",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "Pleias_Baguettotron_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "pleias/pleias",
+      "provider": "Pleias",
+      "model": "Pleias 1.0",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "provider-live",
+          "url": "https://pleias.ai/training-content/pleias-1",
+          "note": "public_summary_link per AIAL eval metadata"
+        },
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Pleias_Pleias_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-pleias.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/pleias-pleias/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/pleias-pleias.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/pleias-pleias/",
+        "public_summary_date": "2026-08-04",
+        "model_publication_date": "2024-11-19",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "Pleias_Pleias_2026_09_08.pdf"
       }
     },
     {
@@ -2175,6 +3857,146 @@
       }
     },
     {
+      "id": "tencent/hy3",
+      "provider": "Tencent",
+      "model": "Hy3",
+      "status": "published",
+      "targets": [
+        {
+          "kind": "aial-archive",
+          "url": "https://aial.ie/research/gpai-training-transparency/archive/Tencent_Hy3_2026_09_08.pdf",
+          "note": "AIAL write-once snapshot (attribution: aial.ie)"
+        },
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tencent-hy3.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/tencent-hy3/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/tencent-hy3.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/tencent-hy3/",
+        "public_summary_date": "2026-08-20",
+        "model_publication_date": "2026-07-06",
+        "evaluation_date": "2026-09-08",
+        "category": "New",
+        "archive_file_name": "Tencent_Hy3_2026_09_08.pdf"
+      }
+    },
+    {
+      "id": "cohere/tiny-aya-base",
+      "provider": "Cohere",
+      "model": "Tiny Aya Base",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tiny-aya-base.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/tiny-aya-base/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/tiny-aya-base.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/tiny-aya-base/",
+        "public_summary_date": "",
+        "model_publication_date": "2026-02-13",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "almawave/velvet-25b",
+      "provider": "Almawave",
+      "model": "Velvet 25B",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/velvet-25b.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/velvet-25b/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/velvet-25b.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/velvet-25b/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-10-14",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "almawave/velvet-2b-1-5",
+      "provider": "Almawave",
+      "model": "Velvet 2B 1.5",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/velvet-2b-1.5.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-1.5/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/velvet-2b-1.5.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-1.5/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-10-14",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "almawave/velvet-2b-speech",
+      "provider": "Almawave",
+      "model": "Velvet 2B Speech",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/velvet-2b-speech.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-speech/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/velvet-2b-speech.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-speech/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-10-14",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
       "id": "google/veo-3-1",
       "provider": "Google",
       "model": "Veo 3.1",
@@ -2196,6 +4018,33 @@
         "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/veo-3-1/",
         "public_summary_date": "",
         "model_publication_date": "2025-10-15",
+        "evaluation_date": "",
+        "category": "New model",
+        "archive_file_name": ""
+      }
+    },
+    {
+      "id": "microsoft/vitra",
+      "provider": "Microsoft",
+      "model": "VITRA",
+      "status": "missing",
+      "targets": [
+        {
+          "kind": "aial-eval",
+          "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/vitra.yaml",
+          "note": "AIAL evaluation rubric, scored (attribution: aial.ie; assessment is AIAL's research, not a legal determination)"
+        },
+        {
+          "kind": "aial-eval-page",
+          "url": "https://aial.ie/research/gpai-training-transparency/evals/vitra/",
+          "note": "AIAL's published evaluation page for this model, carrying the letter grade (attribution: aial.ie; AIAL's research, not a legal determination)"
+        }
+      ],
+      "aial": {
+        "eval_yaml": "evals/vitra.yaml",
+        "eval_page": "https://aial.ie/research/gpai-training-transparency/evals/vitra/",
+        "public_summary_date": "",
+        "model_publication_date": "2025-12-09",
         "evaluation_date": "",
         "category": "New model",
         "archive_file_name": ""
@@ -2353,32 +4202,6 @@
           "kind": "watch-page",
           "url": "https://digital-strategy.ec.europa.eu/en/faqs/template-general-purpose-ai-model-providers-summarise-their-training-content",
           "note": "Commission FAQ on the template"
-        }
-      ]
-    },
-    {
-      "id": "microsoft/mai-thinking-1",
-      "provider": "Microsoft",
-      "model": "MAI-Thinking-1",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://microsoft.ai/pdf/MAI-Thinking-1-Data-Summary.pdf",
-          "note": "found by Tier-3 hunt 17 Aug 2026; summary v1.0 dated 12 Aug 2026; not linked from the model page as of discovery (found via the /pdf/ filename convention)"
-        }
-      ]
-    },
-    {
-      "id": "microsoft/mai-code-1-1-flash",
-      "provider": "Microsoft",
-      "model": "MAI-Code-1.1-Flash",
-      "status": "published",
-      "targets": [
-        {
-          "kind": "provider-live",
-          "url": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Data-Card.pdf",
-          "note": "found by Tier-3 hunt 17 Aug 2026; Data Card v1.0 uploaded 11 Aug 2026"
         }
       ]
     },

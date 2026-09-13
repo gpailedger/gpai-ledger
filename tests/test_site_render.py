@@ -1296,6 +1296,36 @@ def test_lint_L3_fires_on_a_model_page_with_captures_and_no_section(tmp_path,
     assert any(f.startswith("L3") for f in findings), findings
 
 
+def test_lint_L3_does_not_mistake_a_model_id_ending_in_v_for_captures(tmp_path,
+                                                                     monkeypatch):
+    # FLUX.2 [dev] had no captures, but its id put "dev/" - so "v/" - into the
+    # page's own addresses, and the check blocked the deploy (13 Sep 2026)
+    dist = _mk_dist(tmp_path)
+    mdir = dist / "ledger" / "black-forest-labs" / "flux-2-dev"
+    mdir.mkdir(parents=True)
+    (mdir / "index.html").write_text(
+        _page("FLUX.2 [dev]", "<p>AIAL metadata: <a href='https://aial.ie/research/"
+                              "gpai-training-transparency/evals/flux-2-dev/'>eval page</a></p>"),
+        encoding="utf-8")
+    rc, findings = run_lint(monkeypatch, dist)
+    assert not any(f.startswith(("L3", "L4")) for f in findings), findings
+
+
+def test_a_document_filed_under_one_source_is_titled_by_the_model_it_is_about(
+        corpus, tmp_path, monkeypatch):
+    # MAI-Image-2.6's summary was filed under MAI-Image-2 by a mistaken relocation;
+    # relabelled, its heading named 2.6 while its title still called it a version
+    # of MAI-Image-2's summary
+    corpus.add_capture(ts=V1, raw=b"%PDF-1.4 other", text="other body", tslug=SLUG,
+                       model="Other Model")
+    corpus.finish()
+    dist = _build_site(tmp_path, monkeypatch, corpus.root)
+    page = (dist / "ledger" / "prov" / "model" / "v" / V1 / "index.html").read_text(
+        encoding="utf-8")
+    title = page.split("<title>", 1)[1].split("</title>", 1)[0]
+    assert title.startswith("Other Model training data summary"), title
+
+
 def test_lint_L4_fires_on_a_document_row_carrying_the_app_shell_note(tmp_path,
                                                                      monkeypatch):
     dist = _mk_dist(tmp_path)

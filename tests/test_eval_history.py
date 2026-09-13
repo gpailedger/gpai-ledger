@@ -110,6 +110,71 @@ def test_an_evaluation_of_a_model_we_do_not_track_is_not_filed_under_a_neighbour
     assert H.resolve(other, "gemini-2.5-flash-image.yaml", idx) == H.FALLBACK_SOURCE
 
 
+def test_a_hub_page_several_models_link_identifies_none_of_them(_data_in_tmp):
+    # AIAL's Mythos 5.1 evaluation links Anthropic's trust-centre page, which six
+    # tracked models also link; the first of them used to take it (12 Sep 2026)
+    hub = "https://trust.anthropic.com/resources"
+    _registry(_data_in_tmp, [
+        {"id": "anthropic/claude-a", "provider": "Anthropic", "model": "Claude A",
+         "targets": [{"kind": "provider-live", "url": hub}]},
+        {"id": "anthropic/claude-b", "provider": "Anthropic", "model": "Claude B",
+         "targets": [{"kind": "provider-live", "url": hub}]},
+        {"id": "xai/solo", "provider": "xAI", "model": "Solo",
+         "targets": [{"kind": "provider-live", "url": "https://media.x.ai/solo.pdf"}]}])
+    idx = H.registry_index()
+    newer = NL.join(['model_name: "Claude C"', 'organization: "Anthropic"',
+                     f'public_summary_link: "{hub}"', ""])
+    assert H.resolve(newer, "anthropic-claude-c.yaml", idx) == H.FALLBACK_SOURCE
+    # a document exactly one model tracks still identifies it, whatever the header says
+    mislabelled = NL.join(['model_name: "Muse Glimmer"', 'organization: "Meta AI"',
+                           'public_summary_link: "https://media.x.ai/solo.pdf"', ""])
+    assert H.resolve(mislabelled, "xai-solo.yaml", idx) == "xai/solo"
+
+
+def test_a_retired_filing_vouches_for_nothing_and_is_harvested_again(_data_in_tmp, corpus):
+    # AIAL's evaluation of MAI-Image-2.6 was filed under MAI-Image-2 on 12 Sep 2026.
+    # Retiring that entry must stop it placing 2.6's bytes, archive name and dates
+    # there, and let the harvest file the same state where it belongs.
+    text = NL.join(["model_name: MAI-Image-2.6", "organization: Microsoft",
+                    "archive_file_name: MAI_Image_2_6_2026_09_11.pdf", ""])
+    raw = text.encode("utf-8")
+    corpus.add_capture(source_id="microsoft/mai-image-2", tslug="aial-eval-history-bb9a8c63",
+                       raw=raw, ext=".yaml", text=text, kind="aial-eval-history",
+                       provider="Microsoft", model="MAI-Image-2",
+                       url="https://raw.githubusercontent.com/x/evals/mai-image-2_6.yaml",
+                       extra_manifest={"git_path": "evals/mai-image-2_6.yaml",
+                                       "git_blob_sha": "blob26",
+                                       "git_commit_date": "2026-09-11T13:30:30Z"})
+    root = corpus.finish()
+    key = ("evals/mai-image-2_6.yaml", "blob26")
+    assert key in H.held(None)
+    assert "MAI_Image_2_6_2026_09_11.pdf" in H.named_archives()
+    assert cap.sha256_hex(raw) in H.owners_by_hash()
+    assert "evals/mai-image-2_6.yaml" in H.newest_upstream_dates()
+
+    state = json.loads((root / "state.json").read_text(encoding="utf-8"))
+    state["microsoft/mai-image-2::aial-eval-history-bb9a8c63"]["retired"] = "filed under the wrong model"
+    (root / "state.json").write_text(json.dumps(state), encoding="utf-8")
+    assert key not in H.held(None)
+    assert "MAI_Image_2_6_2026_09_11.pdf" not in H.named_archives()
+    assert cap.sha256_hex(raw) not in H.owners_by_hash()
+    assert "evals/mai-image-2_6.yaml" not in H.newest_upstream_dates()
+
+
+def test_an_evaluation_held_out_for_its_link_is_not_placed_by_that_link(_data_in_tmp, monkeypatch):
+    nano = "https://developer.example/nemotron.pdf"
+    _registry(_data_in_tmp, [{"id": "nvidia/nemotron-nano", "provider": "NVIDIA",
+                              "model": "Nemotron Nano",
+                              "targets": [{"kind": "provider-live", "url": nano}]}])
+    monkeypatch.setattr(H, "MISATTRIBUTED_EVAL_FILES", {"family.yaml": (nano, "links Nano's summary")})
+    idx = H.registry_index()
+    family = NL.join(['model_name: "Nemotron 3 and 3.5 Family"', 'organization: "NVIDIA"',
+                      f'public_summary_link: "{nano}"', ""])
+    assert H.resolve(family, "family.yaml", idx) == H.FALLBACK_SOURCE
+    # without the hold, the document it links would decide
+    assert H.resolve(family, "other.yaml", idx) == "nvidia/nemotron-nano"
+
+
 def test_the_filename_only_decides_when_the_content_does_not(_data_in_tmp):
     _registry(_data_in_tmp, [{"id": "org/model", "provider": "Org", "model": "Model",
                               "targets": [{"kind": "aial-eval",
