@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-3-5-vision-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-3.5 Vision Instruct",
+  "target_kind": "aial-archive",
+  "sha256": "87d84c4c1978dc1e6807e6e3983df8cba6e3890ea4e39195c8da4ba013ac6dbe",
+  "size_bytes": 100874,
+  "stored_as": "raw.pdf",
+  "text_sha256": "e32b95d0d878d35ad0f82974f508ed6ecf81decf4945fb383d4758dcbba97ea0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi3.5_Vision_Instruct_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Phi3.5_Vision_Instruct_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7kut25u2\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": "100874",
+    "fetched_at": "2026-09-13T12:41:56Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:42:00Z"
+  }
+}

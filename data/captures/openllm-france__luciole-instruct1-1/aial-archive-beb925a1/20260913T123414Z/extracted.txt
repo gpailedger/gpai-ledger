@@ -1,0 +1,266 @@
+1
+TemplateforthePublicSummaryofTraining
+ContentforGeneral-PurposeAImodels
+VersionoftheSummary :V1.1,firstpublishedversion.Nopreviouslypublished
+versionofthisSummaryexists.
+Lastupdate:31/07/2026
+Generalinformation
+1.Generalinformation
+1.1.Provideridentification
+Providernameandcontactdetails
+LINAGORA—SIREN431473669,registeredundernumber431473669R.C.S.
+Nanterre.
+Registeredoffice:VillaGoodTech,37ruePierrePoli,92130Issy-les-Moulineaux,
+France.
+ContactformattersrelatingtothisSummary:jplorre@linagora.com
+Websites:
+ https://www.linagora.com
+ https://openllm-france.fr
+LINAGORAisasmallormedium-sizedenterprisewithinthemeaningofCommission
+Recommendation2003/361/EC.TheSMEthresholdreferredtoinSection2.3ofthis
+templateisthereforetheapplicableone.
+Authorisedrepresentativenameandcontactdetails
+Notapplicable.TheproviderisestablishedintheUnion(France);Article54AIActdoes
+notapply.
+1.2.Modelidentification
+Versionedmodelname(s)
+This Summary covers the following models, whose training content is identical, in
+accordancewithpoint30oftheCommissionExplanatoryNotice:
+ Luciole-1B-Instruct-1.1:
+https://huggingface.co/OpenLLM-France/Luciole-1B-Instruct-1.1
+ Luciole-8B-Instruct-1.1:
+https://huggingface.co/OpenLLM-France/Luciole-8B-Instruct-1.1
+ Luciole-23B-Instruct-1.1:
+https://huggingface.co/OpenLLM-France/Luciole-23B-Instruct-1.1
+AllmodelsarereleasedundertheApache2.0licencewithpubliclyavailableweights,
+includingintermediatecheckpointsavailablehere:
+https://dl.labs.linagora.com/files/models/OpenLLM-France/
+2
+Modeldependencies
+The Luciole Instruct 1.1 models are post-trained versions of the Luciole base models:
+Luciole-1B-Base,Luciole-8B-Base,Luciole-23B-Basefoundhere:
+https://huggingface.co/collections/OpenLLM-France/luciole-llm. Trainingtookplacein
+threestages,witheachstagestartingfromthelastcheckpointofthepreviousphase:
+
+Luciole-xB-SFT-Thinking: a supervised fine-tuning of the corresponding base
+modelusingdatawiththinkingtraces.
+
+Luciole-xB-SFT-Instruct: a supervised fine-tuning of the corresponding base
+modelusingdatawithoutthinkingtraces.
+
+Luciole-xB-Instruct:alignmentoftheSFT-InstructmodelusingDPO.
+DateofplacementofthemodelontheUnionmarket
+09July2026
+1.3Modalities,overalltrainingdatasizeandother
+characteristics
+Modality
+☒Text
+Textistheonlymodalitypresentinthetrainingdata
+Trainingdatasize
+☒Lessthan1billiontokens
+Approximately4BforSFTThinking,2.3BforSFT,0.75BforSFTDPOafterpre-
+processing
+Typesofcontent
+SFT:Examplesofinstructionswithresponsesinvariousdomainsincluding:code,
+math,STEM,chat,RAG,toolcalling,translationandNLI.
+DPO:Examplesofinstructionswithpairsofresponseswhereoneislabelled“chosen”
+andtheother“rejected”.SamedomainsasSFT,excludingtranslationandincluding
+safety
+Latestdateofdataacquisition/collectionformodeltraining
+June2026
+Descriptionofthelinguisticcharacteristicsoftheoveralltrainingdata
+TheLuciole-PostTraining-Datasetv1.1consistsalmostexclusivelyofEnglishlanguage
+data,withtheexceptionofsomemultilingualrepresentationintheNemotron
+datasetsandsafetydatasets.
+Otherrelevantcharacteristicsoftheoveralltrainingdata
+Thecategoriesofdatausedduringtrainingbreakdownroughlyasfollows:
+ Chat:25%
+ Math:13%
+ STEM:14%
+ Code:16%
+ Toolcalling:11%
+ NLI:13%
+3
+ Safety:5%
+ Other(includingmultilingual):3%
+Additionalcomments
+Tokeniservocabulary:128000tokens.
+Contextlength:16,384tokens.
+Training phases: SFT Thinking used 2.6 million samples, SFT Instruct used 2.1 million,
+andInstructDPOused200,000samples.
+Training infrastructure: training was carried out on NVIDIA H100 80 GB GPUs of the
+JeanZaysupercomputer(GENCI/IDRIS).
+Funding: development was carried out by LINAGORA within the OpenLLM-France
+consortiumwithfundingfromBpifranceundertheFrance2030programme.
+2.Listofdatasources
+2.1.Publiclyavailabledatasets
+Haveyouusedpubliclyavailabledatasetstotrainthemodel?
+☒Yes
+Ifyes,specifythemodality(ies)ofthecontentcoveredbythedatasets
+concerned
+☒Text
+Listoflargepubliclyavailabledatasets
+Muchofthetrainingcontentforthesupervisedfine-tuning(SFT)phasesofInstruct1.1
+models consists of pre-packaged, openly licensed datasets compiled by third parties
+orbyOpenLLMpartners.Ratherthanapplythe3%materialitythreshold,theprovider
+disclosesthecompletelistdatasetsused.Thatlistispublishedandkeptuptodateat:
+https://huggingface.co/datasets/OpenLLM-France/Luciole-PostTraining-Dataset-1.1
+ForSFTThinking,weusedthefollowingthird-partydatasets:
+ DOLCI [Think Persona Precise IF, Think Precise IF, SYNTHETIC-2-SFT-Verified]
+(ODC-BY)
+ NemotronPosttrainingv3[ChatEnglish,Mathv2,ScienceMCQ] (CC-BY-4.0)
+ NemotronPosttrainingv2[Code,Mathfr](CC-BY-4.0)
+ OpenCodeReasoning(CC-BY-4.0)
+ Nemotronagenticsftv2(Apache-2.0)
+ smolagenttoolcalling(Apache-2.0)
+ PleiasRAG(CC-BY-4.0)
+ForSFTwithoutthinking:
+ DOLCI[ThinkPreciseIF,Sciriff,PythonAlgos,Flan2,Logicpuzzles] (ODC-BY)
+ NemotronPosttrainingv3[ChatEnglish](CC-BY-4.0)
+ NemotronPosttrainingv2[Code,Stem](CC-BY-4.0)
+ PleiasRAG(CC-BY-4.0)
+ Linagora[PersonasMath,HotpotQA,TatQA,Hardcoded](CC-BY-4.0)
+ XLAM(CC-BY-4.0)
+ Hermes(Apache-2.0)
+4
+ When2call(CC-BY-4.0)
+ Paradocs(Apache-2.0)
+ Croissant(CC-BY-SA-4.0)
+ Smol[instruct,rewrite,summarize](Apache-2.0)
+ForDPO,weusedpromptsfromthefollowingdatasets:
+ DOLCI [Think Persona Precise IF, Think Precise IF, Sciriff, Python Algos, Flan2 ]
+(ODC-BY)
+ NemotronPosttrainingv3[ChatEnglish,Mathv2,ScienceMCQ] (CC-BY-4.0)
+ NemotronPosttrainingv2[Code,Stem](CC-BY-4.0)
+ NemotronSafety(CC-BY-4.0)
+ OpenMathInstruct(NVIDIALicense)
+ PleiasRAG(CC-BY-4.0)
+ Smol[instruct,rewrite,summarize](Apache-2.0)
+ When2call(CC-BY-4.0)
+ XLAM(CC-BY-4.0)
+Topreprocessthesplitdatasets,wecheckedforthepresenceofnamesofLLMsand
+companies(Claude,Amazon,etc.)aswellasforChineseandRussian.Giventhatmost
+ofthedatawasgeneratedwithopensourcemodelsfromQwenandDeepSeek,there
+wasapreponderanceofChineseandRussianscriptintermingledwithourlanguages
+ofinterest.Samplescontaininganyofthesewereremovedentirely.Theprepocessing
+scriptscanbefoundinthisfolderoftheLuciole-Trainingrepository:
+https://github.com/OpenLLM-France/Luciole-
+Training/tree/main/data/processing/posttraining
+Generaldescriptionofotherpubliclyavailabledatasetsnotlistedabove
+None. All publicly available datasets used are enumerated in the published corpus
+documentationreferredtoabove.
+Thecorpusisrestrictedtomaterialdistributedunderopenlicences.
+Additionalcomments
+ThecorpusitselfispublishedunderCCBY-SA4.0.Theprocessingscriptsarepublicat
+https://github.com/OpenLLM-France/Luciole-
+Training/tree/main/data/processing/posttraining
+VerificationofthestatementsinthisSummaryisthereforepossibleatsourcelevel.
+List of data sources
+2.2Privatenon-publiclyavailabledatasetsobtainedfromthird
+parties
+2.2.1.Datasetscommerciallylicensedbyrightsholdersortheir
+representatives
+Haveyouconcludedtransactionalcommerciallicensingagreement(s)with
+rightsholder(s)orwiththeirrepresentatives?
+☒No
+5
+2.2.2.Privatedatasetsobtainedfromotherthirdparties
+Haveyouobtainedprivatedatasetsfromthirdpartiesthatarenotlicensedas
+describedinSection2.2.1,suchasdataobtainedfromprovidersofprivatedatabases,
+ordataintermediaries?
+☒No
+2.3Datacrawledandscrapedfromonlinesources
+Werecrawlersusedbytheprovideroronbehalfof?
+☒No
+2.4Userdata
+WasdatafromuserinteractionswiththeAImodel(e.g.userinputandprompts)used
+totrainthemodel?
+☒No
+Wasdatacollectedfromuserinteractionswiththeprovider’sotherservicesor
+productsusedtotrainthemodel?
+☒No
+Nodatafromusersoftheprovider'sservicesorproductswasusedtotrainthe
+models.Inparticular,noLinTO,TwakeorotherLINAGORAproductdata,andnologs
+frompublicLucioledemonstrators,enteredthepre-trainingorpost-trainingcorpora.
+2.5Syntheticdata
+WassyntheticAI-generateddatacreatedbytheproviderorontheirbehalfto
+trainthemodel?
+☒Yes
+Ifyes,modalityofthesyntheticdata
+☒Text
+Ifyes,specifythegeneral-purposeAImodel(s)usedtogeneratethesynthetic
+dataifavailableonthemarket
+GenerationwasusedintheDPOphase.Withtheexceptionofdataforsafety
+alignment,thealignmentpairsweregeneratedsyntheticallywithadeltalearning
+approach:allpairsweregeneratedwithQwen3-32BandQwen3-0.6Bandtheformer
+werelabelledastheacceptedresponses.Safetydataweregeneratedwithamixture
+ofQwen3-14B,Ministral-3-14B-Instruct,andaninterimcheckpointofLuciole-8B-
+Instruct,afterSFT.PairswerejudgedwithbothMinistral-14B-ReasoningandQwen3-
+14B.Apairwasincludedonlyifbothmodelsagreedontheirlabels.
+InformationaboutotherAImodels,includingprovider’sownAImodel(s)not
+availableonthemarket,usedtogeneratesyntheticdatatotrainthemodelto
+whichthisSummaryapplies
+6
+AnaninterimcheckpointofLuciole-8B-Instruct,afterSFT,wasusedtomakesome
+safetydata.Thetrainingdatawasthesameasdescribedabove.
+Additionalcomments
+Several third-party post-training datasets used by the provider were themselves
+produced by AI models. Because they were obtained as publicly available datasets
+ratherthangeneratedbyoronbehalfoftheprovider,theyarereportedunderSection
+2.1.
+Beforeuse,theproviderremovedreferencestothird-partymodelnamesandcompany
+names, and removed Chinese and Russian script, in order to limit the transfer of
+provenanceartefactsandculturalbias.
+2.6Othersourcesofdata
+HavedatasourcesotherthanthosedescribedinSections2.1to2.5beenusedto
+trainthemodel?
+☒No
+AnnotationofpreferencepairsforDPOwasdeterminedautomaticallybyusinga
+largermodeltoproducetheacceptedresponsesandaverysmallmodeltogenerate
+therejectedresponses.
+3.Dataprocessingaspects
+3.1.Respectofreservationofrightsfromtextanddatamining
+exceptionorlimitation
+AreyouaSignatorytotheCodeofPracticeforgeneral-purposeAImodelsthat
+includescommitmentstorespectreservationsofrightsfromtheTDMexception
+orlimitation?
+☒Yes
+Describe the measures implemented before model training to respect
+reservations of rights from the TDM exception or limitation before and during
+data collection, including the opt-out protocols and solutions honoured by the
+provider or, as applicable, by third parties from which datasets have been
+obtained:
+LINAGORAisasignatorytotheGeneral-PurposeAICodeofPracticeandadherestoits
+Copyright chapter, including Measure 1.3 on the identification of and compliance with
+reservationsofrights.
+Thiscommitmentismaintainedthroughtestrictionofthecorpustoopenlylicensed
+material.Thecorpuswasassembledexclusivelyfromsourcesdistributedunderopen
+licencesorinthepublicdomain.Contentwhoserightsholdershadreservedrights
+underArticle4(3)ofDirective(EU)2019/790wasthereforenotatargetofcollection.
+BecausethedatacomesentirelyfromsyntheticgenerationorstandardNLPdatasets
+7
+(e.g.,HotPot,FLAN),noparticularmeasuresweretakentofilterprotectedworkor
+personaldata(asthisisnotexpectedtobeaproblem).
+Fordatasetsobtainedfromthirdparties,theprovideradditionallyreliesonthe
+collectionpracticesandrights-reservationcomplianceoftheupstreamcompilers,as
+documentedbythosecompilers.
+3.2Removalofillegalcontent
+Generaldescriptionofmeasurestaken
+Dataiseithergeneratedusingopenmodelsorchosenfromopendatasetspublished
+bythirdpartiesafterextensivefilteringorcarefulurlselectiontotargetspecific
+domainssuchasmath,codeandscience.Itistakennotfrommassive,uncontrolled
+webcontent,thusillegalcontentisnotexpectedtobeaproblem.Highlytoxicor
+dangerouscontentisnotexpectedtobepresenteitherexceptinthecaseofsafety
+datausedintheDPOphase.Thiscontentcannotbeheavilyfilteredduetoitspurpose
+intrainingmodelswhatnottosay.
+1. D
+3.3.Otherinformation
+Otherrelevantinformationaboutdataprocessing
+Topreprocessthesplitdatasets,wecheckedforthepresenceofnamesofLLMsand
+companies(Claude,Amazon,etc.)aswellasforChineseandRussian.Giventhatmost
+ofthedatawasgeneratedwithopensourcemodelsfromQwenandDeepSeek,there
+wasapreponderanceofChineseandRussianscriptintermingledwithourlanguages
+ofinterest.Samplescontaininganyofthesewereremovedentirely.Theprepocessing
+scriptscanbefoundinthisfolderoftheLuciole-Trainingrepository:
+https://github.com/OpenLLM-France/Luciole-
+Training/tree/main/data/processing/posttraining

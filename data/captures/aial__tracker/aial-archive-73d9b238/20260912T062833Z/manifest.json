@@ -36,14 +36,29 @@
     "at": "2026-09-12T06:28:38Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260913125836/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/a030eede7e4582b27dd04a8453647824d8da9784/public/archive/Minimax_H3_2026_09_11.pdf",
+    "snapshot_ts": "20260913125836",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-83684d13fe3cb08922c4cba46b6065e47993ee89",
     "via": "spn2",
-    "requested_at": "2026-09-13T06:35:46Z",
-    "at": "2026-09-13T06:35:51Z"
-  }
+    "requested_at": "2026-09-13T12:57:42Z",
+    "at": "2026-09-13T12:58:41Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-83684d13fe3cb08922c4cba46b6065e47993ee89",
+      "via": "spn2",
+      "requested_at": "2026-09-13T06:35:46Z",
+      "at": "2026-09-13T06:35:51Z"
+    }
+  ]
 }

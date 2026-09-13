@@ -1,0 +1,33 @@
+{
+  "source_id": "bytedance/seedream-5-0-pro",
+  "provider": "ByteDance",
+  "model": "Seedream 5.0 Pro",
+  "target_kind": "aial-archive",
+  "sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+  "size_bytes": 251620,
+  "stored_as": "raw.pdf",
+  "text_sha256": "04034d2e92f0bd9bedf2749353e4cc801567ea7582e68b7dd934b1529f73f925",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedeam_5_0_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv35e5g\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "251620",
+    "fetched_at": "2026-09-13T11:52:01Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:52:06Z"
+  }
+}

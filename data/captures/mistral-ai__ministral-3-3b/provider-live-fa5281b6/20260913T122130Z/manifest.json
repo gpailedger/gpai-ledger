@@ -1,0 +1,46 @@
+{
+  "source_id": "mistral-ai/ministral-3-3b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 3B",
+  "target_kind": "provider-live",
+  "sha256": "1c2b332e6c5815184884a2c2f52b8e68858536c6bde0f914ad2d7ad3552f5562",
+  "size_bytes": 225400,
+  "stored_as": "raw.pdf",
+  "text_sha256": "8ca7c9fb43559ccfc17e8ea027eb73f101453732307d42006dd912419e6b414b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/documents/Ministral%203%20-%203B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "final_url": "https://legal.mistral.ai/documents/Ministral%203%20-%203B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"3c2c58c9fb3df9a78e2d68a9c09e25b7-ssl-df\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:21:29Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913122131/https://legal.mistral.ai/documents/Ministral%203%20-%203B%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "snapshot_ts": "20260913122131",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-baa8c9c64565a52ea5a2d6eff31ea3ad37edab09",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:21:30Z",
+    "at": "2026-09-13T12:21:36Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:21:40Z"
+  }
+}

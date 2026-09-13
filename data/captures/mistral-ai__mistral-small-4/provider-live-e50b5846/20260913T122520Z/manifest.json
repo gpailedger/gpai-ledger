@@ -1,0 +1,40 @@
+{
+  "source_id": "mistral-ai/mistral-small-4",
+  "provider": "Mistral AI",
+  "model": "Mistral Small 4",
+  "target_kind": "provider-live",
+  "sha256": "68cfbe25f05ca6f91eb0064ebf3fe0d40356c51108e13ea48098f1fa50edd0fb",
+  "size_bytes": 217807,
+  "stored_as": "raw.pdf",
+  "text_sha256": "1f488e7193dfe02360219db5744a3592163397f292b8bafadf6a61c86427f78e",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/documents/Mistral%20Small%204%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "final_url": "https://legal.mistral.ai/documents/Mistral%20Small%204%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"47f5e156a6ad827ba790d4d35fb5c54d-ssl-df\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:25:20Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7ff3bb19c590>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:25:20Z",
+    "at": "2026-09-13T12:27:20Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:27:24Z"
+  }
+}

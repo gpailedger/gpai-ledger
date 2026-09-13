@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/mai-code-1-1-flash",
+  "provider": "Microsoft",
+  "model": "MAI-Code-1.1-Flash",
+  "target_kind": "aial-eval-page",
+  "sha256": "a758fa4e5adc2eeac61a9c26bb5e52ea58801f427b59f7428d18ad9dd8959059",
+  "size_bytes": 18998,
+  "stored_as": "raw.html",
+  "text_sha256": "d0521438e161f2e7b848d2932338975931b9db8daad6fce88a043532b5675ae3",
+  "doc_links_sha256": "8e3c330bad4d42a5ee61b484b3bf7dcf4232b81a7be27ead0972d81ea25db128",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-mai-code-1.1-flash/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-mai-code-1.1-flash/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7cv3enq\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:14:12Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:14:17Z"
+  }
+}

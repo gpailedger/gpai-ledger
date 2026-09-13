@@ -1,0 +1,34 @@
+{
+  "source_id": "cohere/tiny-aya-base",
+  "provider": "Cohere",
+  "model": "Tiny Aya Base",
+  "target_kind": "aial-eval-page",
+  "sha256": "54ba9fcf64ef350bea0a5d916ec575bdcf7e330b5f96380af6267d8ef512aa69",
+  "size_bytes": 11793,
+  "stored_as": "raw.html",
+  "text_sha256": "470ce6530aa9287260b77c19a817fa8bb6b436da5b709ee81f25d3ec552a0114",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/tiny-aya-base/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/tiny-aya-base/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut93l\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:53:24Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:53:29Z"
+  }
+}

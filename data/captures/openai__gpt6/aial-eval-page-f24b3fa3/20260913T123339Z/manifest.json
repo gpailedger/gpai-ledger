@@ -1,0 +1,34 @@
+{
+  "source_id": "openai/gpt6",
+  "provider": "OpenAI",
+  "model": "GPT-6 Astra",
+  "target_kind": "aial-eval-page",
+  "sha256": "a95bc784e5bec5a706913b6a9adb120a743016661fc2acc423e10397b0bb65f0",
+  "size_bytes": 20751,
+  "stored_as": "raw.html",
+  "text_sha256": "658c57aae026916dd51d638d7cefaa634785b56163fe4dfd999bb78423ffbe08",
+  "doc_links_sha256": "b32be224cf847938d6b7d00ad3568c019b099cc15cad7a0a59799d241ebe9d56",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt6/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt6/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7cv3g0f\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:33:39Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:33:41Z"
+  }
+}

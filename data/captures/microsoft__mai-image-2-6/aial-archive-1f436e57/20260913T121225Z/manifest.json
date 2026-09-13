@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/mai-image-2-6",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2.6",
+  "target_kind": "aial-archive",
+  "sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+  "size_bytes": 300017,
+  "stored_as": "raw.pdf",
+  "text_sha256": "3ee668405be782d6a510f7259a16743a20092e6843f491e87662a31e27603c49",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_6_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Image_2_6_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv36fht\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "300017",
+    "fetched_at": "2026-09-13T12:12:24Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:12:29Z"
+  }
+}

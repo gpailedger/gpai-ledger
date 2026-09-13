@@ -1,0 +1,40 @@
+{
+  "source_id": "openai/gpt6",
+  "provider": "OpenAI",
+  "model": "GPT-6 Astra",
+  "target_kind": "provider-live",
+  "sha256": "931d16d07381abe0c1e38962af78f08c937b88a1f310385e77bb42fd3fa088cb",
+  "size_bytes": 207583,
+  "stored_as": "raw.pdf",
+  "text_sha256": "c581f69986b8a584905ee0b3eaccf1656d505deee322e2c17d05dad21adfacab",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://cdn.openai.com/pdf/gpt-6-astra-eu-ai-act-public-summary-of-training-content.pdf",
+    "final_url": "https://cdn.openai.com/pdf/gpt-6-astra-eu-ai-act-public-summary-of-training-content.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Wed, 02 Sep 2026 18:27:56 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:31:17Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7ff3bad00d40>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:31:18Z",
+    "at": "2026-09-13T12:33:18Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:33:20Z"
+  }
+}

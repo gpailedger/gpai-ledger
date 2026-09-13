@@ -1,0 +1,33 @@
+{
+  "source_id": "pleias/pleias",
+  "provider": "Pleias",
+  "model": "Pleias 1.0",
+  "target_kind": "aial-archive",
+  "sha256": "ee4fb375f0c0d491185ba824300ecf5b5572e5a20c611567d6bb2e2e93965a19",
+  "size_bytes": 749767,
+  "stored_as": "raw.pdf",
+  "text_sha256": "1b89be26b341b2f8b15874cc145519de6447fe6f96a6bde9ef3eaf621ff51766",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Pleias_Pleias_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Pleias_Pleias_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv3g2iv\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "749767",
+    "fetched_at": "2026-09-13T12:51:41Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:51:51Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "black-forest-labs/flux-2-pro",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2 [pro]",
+  "target_kind": "aial-eval",
+  "sha256": "fdd2f00a365fdceefd09685a6104d2e0912fa66a1bfe06cb851c196bf705768c",
+  "size_bytes": 3782,
+  "stored_as": "raw.yaml",
+  "text_sha256": "be91588f4d3be14f76855b9d7f2466d5477cab05bfcbaa29e9d8c0468bb70524",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-pro.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/flux-2-pro.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8d2cbc343188d2f0ea4cf26d9fc9165621531143daef3f9d42dabefcf05f8384\"",
+    "last_modified": null,
+    "content_length": "554",
+    "fetched_at": "2026-09-13T11:59:43Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:59:48Z"
+  }
+}

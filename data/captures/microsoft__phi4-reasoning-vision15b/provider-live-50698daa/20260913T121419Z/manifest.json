@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/phi4-reasoning-vision15b",
+  "provider": "Microsoft",
+  "model": "Phi 4 Reasoning Vision 15B",
+  "target_kind": "provider-live",
+  "sha256": "7bc0e89f1dcfeb9817d31a67b255443a0457082c3ae8fbaf226d6c31d31cd0a9",
+  "size_bytes": 10421,
+  "stored_as": "raw.md",
+  "text_sha256": "e17f1e0516e6a887f0700d8fff07696039c1a8292405a02bad9985e5dc148539",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B/resolve/main/DATACARD.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-reasoning-vision-15B/c3e4fac79ddace21976ced56fbf1564b8bd8c89f/DATACARD.md?%2Fmicrosoft%2FPhi-4-reasoning-vision-15B%2Fresolve%2Fmain%2FDATACARD.md=&etag=%223a5d22cc6916c45ab61b9155b1ce68b4d9216d74%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"3a5d22cc6916c45ab61b9155b1ce68b4d9216d74\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:14:19Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-cc81cca5e9ceddda5a79bb92cf9ae9ffc443ae27 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7ff3baf18710>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "job_id": "spn2-cc81cca5e9ceddda5a79bb92cf9ae9ffc443ae27",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:14:19Z",
+    "at": "2026-09-13T12:16:25Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:16:29Z"
+  }
+}

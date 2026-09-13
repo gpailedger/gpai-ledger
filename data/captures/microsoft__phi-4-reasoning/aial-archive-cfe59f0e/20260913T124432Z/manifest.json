@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-4-reasoning",
+  "provider": "Microsoft",
+  "model": "Phi-4 Reasoning",
+  "target_kind": "aial-archive",
+  "sha256": "ff2d9002c4e3dccb0b548b987fe3bd9cc6b4462595f35860e0418c58c9422905",
+  "size_bytes": 98812,
+  "stored_as": "raw.pdf",
+  "text_sha256": "284814472a0bad9f16cc0733d60b43ccf26726f128955515bb5476a703b6a510",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi4_Reasoning_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Phi4_Reasoning_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7kut248s\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": "98812",
+    "fetched_at": "2026-09-13T12:44:31Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:44:35Z"
+  }
+}

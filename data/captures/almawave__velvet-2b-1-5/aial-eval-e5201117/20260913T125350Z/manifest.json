@@ -1,0 +1,33 @@
+{
+  "source_id": "almawave/velvet-2b-1-5",
+  "provider": "Almawave",
+  "model": "Velvet 2B 1.5",
+  "target_kind": "aial-eval",
+  "sha256": "b029b9c0928405930ab678e01c8e9fc13ea8c55eeece0118459875e21c50e63f",
+  "size_bytes": 3802,
+  "stored_as": "raw.yaml",
+  "text_sha256": "756e1c556a595f818f9165bcff37735e4b90a816b48bfce1ff507783bd91f0c6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/velvet-2b-1.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/velvet-2b-1.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4eb4d29871d14d736f184817529330085eabd0ceb9b89a1ce68c2b694e144860\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-09-13T12:53:50Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:53:55Z"
+  }
+}

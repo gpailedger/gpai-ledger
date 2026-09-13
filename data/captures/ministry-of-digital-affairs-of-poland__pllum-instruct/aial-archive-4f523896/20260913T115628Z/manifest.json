@@ -1,0 +1,33 @@
+{
+  "source_id": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+  "provider": "Ministry of Digital Affairs of Poland",
+  "model": "PLLuM-12B-instruct-2512",
+  "target_kind": "aial-archive",
+  "sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+  "size_bytes": 387652,
+  "stored_as": "raw.pdf",
+  "text_sha256": "ac3479db71bf11f2375cae2688be9dee6adf92b845701f2ab4e1d9128bf10b70",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/PLLuM_2512_Instruct_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv38b44\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "387652",
+    "fetched_at": "2026-09-13T11:56:27Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:56:31Z"
+  }
+}

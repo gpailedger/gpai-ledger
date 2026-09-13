@@ -1,0 +1,46 @@
+{
+  "source_id": "nvidia/nemotron-nano",
+  "provider": "NVIDIA",
+  "model": "Nemotron Nano",
+  "target_kind": "provider-live",
+  "sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+  "size_bytes": 262374,
+  "stored_as": "raw.pdf",
+  "text_sha256": "83f86c2f0a74b8de0cba1bfb790ed725625c73f13e8acc768bd8564e4f2bb680",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://developer.download.nvidia.com/assets/nemo/docs/public-summary-of-training-content-for-nvidia-nemotron.pdf",
+    "final_url": "https://developer.download.nvidia.com/assets/nemo/docs/public-summary-of-training-content-for-nvidia-nemotron.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"f5196f43af88b39939424db26ed143fd\"",
+    "last_modified": "Fri, 14 Aug 2026 22:11:11 GMT",
+    "content_length": "262374",
+    "fetched_at": "2026-09-13T12:28:41Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913122947/https://developer.download.nvidia.com/assets/nemo/docs/public-summary-of-training-content-for-nvidia-nemotron.pdf",
+    "snapshot_ts": "20260913122947",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-be1b342166dd73eff611570aa5a0788520d27178",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:28:43Z",
+    "at": "2026-09-13T12:29:51Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:29:56Z"
+  }
+}

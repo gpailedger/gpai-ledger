@@ -1,0 +1,34 @@
+{
+  "source_id": "google/gemini-omni",
+  "provider": "Google",
+  "model": "Gemini Omni",
+  "target_kind": "aial-eval-page",
+  "sha256": "78175cf4ba44e8497c73061ba82809de2a6aee28e2e506e17be91fc20211101b",
+  "size_bytes": 11793,
+  "stored_as": "raw.html",
+  "text_sha256": "dc5c0d0a6c245707c13caba34a5e53f4d1fbb6d874d101b3ddaf0e582996d1ce",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-omni/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-omni/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut93l\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:02:47Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:02:52Z"
+  }
+}

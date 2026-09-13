@@ -1,0 +1,34 @@
+{
+  "source_id": "google/gemini-3-6-flash",
+  "provider": "Google",
+  "model": "Gemini 3.6 Flash",
+  "target_kind": "aial-eval-page",
+  "sha256": "726dcc8ca5b86d51eb4a469d1749c6dc290b3f1814f9bcc1f173b4402813e8e4",
+  "size_bytes": 11829,
+  "stored_as": "raw.html",
+  "text_sha256": "b8e9231624315e2095995083f3640592e1dbcfde64d40d103d22b26b69e7162f",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.6-flash/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-3.6-flash/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut94l\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:01:56Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:02:00Z"
+  }
+}

@@ -65,6 +65,12 @@
     ]
   },
   {
+    "id": "anthropic/mythos5-1",
+    "model": "Mythos 5.1 / Fable 5.1",
+    "verdict": "format-mismatch",
+    "note": "live captures are hub/portal HTML only — document URL needed"
+  },
+  {
     "id": "swiss-ai-initiative/apertus-1-5",
     "model": "Apertus v1.5",
     "verdict": "identical-bytes",
@@ -135,6 +141,38 @@
     ]
   },
   {
+    "id": "bytedance/seed-2-0pro",
+    "model": "Seed 2.0 Pro",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "bytedance/seedream-5-0-pro",
+    "model": "Seedream 5.0 Pro",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "bytedance/seedance2-0",
+    "model": "Seedance 2.0",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "bytedance/seedance2-5",
+    "model": "Seedance 2.5",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
     "id": "anthropic/claude-mythos-5-fable-5",
     "model": "Claude Mythos 5 / Claude Fable 5",
     "verdict": "bundle-covered",
@@ -173,6 +211,30 @@
   {
     "id": "cohere/command-a-plus",
     "model": "C4AI Command A Plus",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+    "model": "PLLuM-12B-instruct-2512",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "ministry-of-digital-affairs-of-poland/pllum",
+    "model": "PLLuM-12B-base-2512",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "deepseek/deepseek-v4",
+    "model": "DeepSeek-V4",
     "verdict": "identical-bytes",
     "self_history": {
       "verdict": "single-version"
@@ -454,22 +516,6 @@
     }
   },
   {
-    "id": "openai/gpt-5-2",
-    "model": "GPT-5.2",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "openai/gpt-5-4-nano",
-    "model": "GPT-5.4 Nano",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
     "id": "openai/gpt-5-5",
     "model": "GPT-5.5",
     "verdict": "identical-bytes",
@@ -484,71 +530,6 @@
     "self_history": {
       "verdict": "single-version"
     }
-  },
-  {
-    "id": "openai/gpt-image-2",
-    "model": "GPT Image 2",
-    "similarity": 0.9948,
-    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "same_tool": true,
-    "self_history": {
-      "verdict": "changed",
-      "similarity": 0.9948,
-      "word_delta": 19,
-      "moved_words": 0,
-      "changes": [
-        {
-          "op": "replace",
-          "old": "Summary: v1 Last",
-          "new": "Summary: v3 Last"
-        },
-        {
-          "op": "replace",
-          "old": "update: 30 July 2026",
-          "new": "update: 8 September 2026"
-        },
-        {
-          "op": "replace",
-          "old": "than April 2026.",
-          "new": "than August 2026."
-        },
-        {
-          "op": "replace",
-          "old": "market: N/A. 5 Information",
-          "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
-        }
-      ],
-      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-      "same_tool": true,
-      "from_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260811T111046Z",
-      "to_dir": "captures/openai__gpt-image-2/provider-live-ad7df3d6/20260909T060325Z"
-    },
-    "basis": "live-vs-archive",
-    "verdict": "DRIFT-CANDIDATE",
-    "word_delta": 19,
-    "moved_words": 0,
-    "changes": [
-      {
-        "op": "replace",
-        "old": "Summary: v1 Last",
-        "new": "Summary: v3 Last"
-      },
-      {
-        "op": "replace",
-        "old": "update: 30 July 2026",
-        "new": "update: 8 September 2026"
-      },
-      {
-        "op": "replace",
-        "old": "than April 2026.",
-        "new": "than August 2026."
-      },
-      {
-        "op": "replace",
-        "old": "market: N/A. 5 Information",
-        "new": "market: OpenAI generated synthetic data using its own general-purpose AI models, including GPT-5.4 and GPT-5.5. 5 Information"
-      }
-    ]
   },
   {
     "id": "xai/grok-4-5",
@@ -587,6 +568,37 @@
     "verdict": "same-content"
   },
   {
+    "id": "microsoft/magma-8b",
+    "model": "Magma-8B",
+    "similarity": 0.9996,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.J Other",
+        "new": "mixtures 1.3.1.J Other"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information. 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
     "id": "microsoft/mai-code-1-flash",
     "model": "MAI-Code-1-Flash",
     "verdict": "identical-bytes",
@@ -601,90 +613,43 @@
     "note": "live=1 archive=n"
   },
   {
-    "id": "microsoft/mai-image-2",
-    "model": "MAI-Image-2",
-    "similarity": 0.9943,
-    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
-    "same_tool": true,
+    "id": "microsoft/mai-ds-r1",
+    "model": "MAI-DS-R1",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
     "self_history": {
       "verdict": "single-version"
     },
     "basis": "live-vs-archive",
-    "verdict": "DRIFT-CANDIDATE",
-    "word_delta": 21,
+    "verdict": "near-identical",
+    "word_delta": 3,
     "moved_words": 0,
     "changes": [
       {
-        "op": "insert",
-        "old": "for MAI-Image-2 Version of",
-        "new": "for MAI-Image-2.6 / 2.6-Flash Version"
+        "op": "delete",
+        "old": "1 1.3.2 Latest",
+        "new": "biases 1.3.2 Latest"
       },
       {
-        "op": "replace",
-        "old": "Summary: 19 March 2026",
-        "new": "Summary: 14 Aug 2026"
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
       },
       {
-        "op": "replace",
-        "old": "update: 19 March 2026",
-        "new": "update: 4 September 2026 1."
-      },
-      {
-        "op": "insert",
-        "old": ": MAI-Image-2 1.2.2 Model",
-        "new": ": MAI-Image-2.6, MAI-Image-2.6-Flash 1.2.2"
-      },
-      {
-        "op": "replace",
-        "old": "date: 19 March 2026",
-        "new": "date: 14 August 2026"
-      },
-      {
-        "op": "replace",
-        "old": "market: Coming soon. 1.3",
-        "new": "market: 4 September 2026 1.3"
-      },
-      {
-        "op": "insert",
-        "old": "The MAI-Image-2 text training",
-        "new": "The MAI-Image-2.6 text"
-      },
-      {
-        "op": "insert",
-        "old": "The MAI-Image-2 image training",
-        "new": "The MAI-Image-2.6 image"
-      },
-      {
-        "op": "replace",
-        "old": "as February 2026",
-        "new": "as May 2026"
-      },
-      {
-        "op": "replace",
-        "old": "model: January 2026",
-        "new": "model: April 2026"
-      },
-      {
-        "op": "insert",
-        "old": "for MAI-Image-2 was primarily",
-        "new": "for MAI-Image-2.6 was"
-      },
-      {
-        "op": "replace",
-        "old": "to January 2026",
-        "new": "to May 2026"
-      },
-      {
-        "op": "insert",
-        "old": "train MAI-Image-2 is a",
-        "new": "train MAI-Image-2.6 is"
-      },
-      {
-        "op": "insert",
-        "old": "in training 2 was generated",
-        "new": "training MAI-Image-2.6 was"
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
       }
     ]
+  },
+  {
+    "id": "microsoft/mai-image-2",
+    "model": "MAI-Image-2",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "microsoft/mai-image-2-5",
@@ -695,48 +660,16 @@
     }
   },
   {
-    "id": "minimax/minimax-m3",
-    "model": "Minimax M3",
+    "id": "microsoft/mai-image-2-6",
+    "model": "MAI-Image-2.6",
     "verdict": "identical-bytes",
     "self_history": {
       "verdict": "single-version"
     }
   },
   {
-    "id": "mistral-ai/ministral-3-14b",
-    "model": "Ministral 3 14B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/ministral-3-3b",
-    "model": "Ministral 3 3B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/ministral-3-8b",
-    "model": "Ministral 3 8B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/mistral-large-3",
-    "model": "Mistral Large 3",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/mistral-small-4",
-    "model": "Mistral Small 4",
+    "id": "microsoft/mai-thinking-1",
+    "model": "MAI-Thinking-1",
     "verdict": "identical-bytes",
     "self_history": {
       "verdict": "single-version"
@@ -816,6 +749,80 @@
         "new": "training datasets.3.3 Other"
       }
     ]
+  },
+  {
+    "id": "microsoft/mai-code-1-1-flash",
+    "model": "MAI-Code-1.1-Flash",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "microsoft/phi4-reasoning-vision15b",
+    "model": "Phi 4 Reasoning Vision 15B",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "midjourney/midjourney",
+    "model": "Midjourney Image and Video family of models",
+    "verdict": "format-mismatch",
+    "note": "live captures are hub/portal HTML only — document URL needed"
+  },
+  {
+    "id": "minimax/minimax-h3",
+    "model": "Minimax H3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "model": "Minimax M3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-14b",
+    "model": "Ministral 3 14B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-3b",
+    "model": "Ministral 3 3B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-8b",
+    "model": "Ministral 3 8B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/mistral-large-3",
+    "model": "Mistral Large 3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/mistral-small-4",
+    "model": "Mistral Small 4",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "meta/muse-image",
@@ -980,6 +987,273 @@
     "verdict": "same-content"
   },
   {
+    "id": "nvidia/nemotron-nano",
+    "model": "Nemotron Nano",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "openai/gpt-5-2",
+    "model": "GPT-5.2",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt-image-2",
+    "model": "GPT Image 2.0",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt-5-4-nano",
+    "model": "GPT-5.4 Nano",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt6",
+    "model": "GPT-6 Astra",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openllm-france/luciole-base",
+    "model": "Luciole Base",
+    "verdict": "incomplete",
+    "note": "live=0 archive=y"
+  },
+  {
+    "id": "openllm-france/luciole-instruct1-1",
+    "model": "Luciole Instruct 1.1",
+    "verdict": "incomplete",
+    "note": "live=0 archive=y"
+  },
+  {
+    "id": "microsoft/phi-1-5",
+    "model": "Phi-1.5",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "No 1 1.3.4",
+        "new": "deployment No 1.3.4 Date"
+      },
+      {
+        "op": "delete",
+        "old": "patent 2 3.2",
+        "new": "or patent 3.2 Other"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-1",
+    "model": "Phi-1",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.3 Is",
+        "new": "31-Aug-2023 1.3.3 Is"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-2",
+    "model": "Phi-2",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "No 1 1.3.4",
+        "new": "deployment No 1.3.4 Date"
+      },
+      {
+        "op": "delete",
+        "old": "for 2 processing",
+        "new": "laws for processing data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-3-5-vision-instruct",
+    "model": "Phi-3.5 Vision Instruct",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.J Other",
+        "new": "applicable 1.3.1.J Other"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-3",
+    "model": "Phi-3",
+    "similarity": 0.9996,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.G Video",
+        "new": "applicable 1.3.1.G Video"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-4-mini-instruct",
+    "model": "Phi-4 Mini Instruct",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "data 1 1.3.1.H",
+        "new": "training data 1.3.1.H Video"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "microsoft/phi-4-multimodal-instruct",
+    "model": "Phi-4 Multimodal Instruct",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "microsoft/phi-4-reasoning",
+    "model": "Phi-4 Reasoning",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.3 Is",
+        "new": "31-Mar-2025 1.3.3 Is"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
     "id": "microsoft/phi-4",
     "model": "Phi-4",
     "similarity": 0.9996,
@@ -1011,12 +1285,47 @@
     ]
   },
   {
-    "id": "ministry-of-digital-affairs-of-poland/pllum",
-    "model": "PLLuM 2512 Base",
-    "verdict": "identical-bytes",
+    "id": "microsoft/phi-moe",
+    "model": "Phi-MoE",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
     "self_history": {
       "verdict": "single-version"
-    }
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.2 Latest",
+        "new": "applicable 1.3.2 Latest"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
+  },
+  {
+    "id": "pleias/baguettotron",
+    "model": "Baguettotron and Monad",
+    "verdict": "format-mismatch",
+    "note": "live captures are hub/portal HTML only — document URL needed"
+  },
+  {
+    "id": "pleias/pleias",
+    "model": "Pleias 1.0",
+    "verdict": "format-mismatch",
+    "note": "live captures are hub/portal HTML only — document URL needed"
   },
   {
     "id": "huggingface/smollm3",
@@ -1046,17 +1355,9 @@
     }
   },
   {
-    "id": "microsoft/mai-thinking-1",
-    "model": "MAI-Thinking-1",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "microsoft/mai-code-1-1-flash",
-    "model": "MAI-Code-1.1-Flash",
+    "id": "tencent/hy3",
+    "model": "Hy3",
     "verdict": "incomplete",
-    "note": "live=1 archive=n"
+    "note": "live=0 archive=y"
   }
 ]

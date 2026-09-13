@@ -1,0 +1,53 @@
+{
+  "source_id": "anthropic/mythos5-1",
+  "provider": "Anthropic",
+  "model": "Mythos 5.1 / Fable 5.1",
+  "target_kind": "provider-live",
+  "sha256": "f41756d3de9092e24c3219378d1545fe8c177d177be89279a0fe9386ef435733",
+  "size_bytes": 238732,
+  "stored_as": "raw.html",
+  "text_sha256": "f87590a6cd09c83b6cd447de5426cd48511732361af8ed89e09c5b867fda707f",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Sat, 12 Sep 2026 00:17:16 GMT",
+    "content_length": "238732",
+    "fetched_at": "2026-09-13T11:46:44Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913114648/https://trust.anthropic.com/resources",
+    "snapshot_ts": "20260913114648",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-860dce7cff4f5e89188c16a41828ee4f2ff40665",
+    "via": "spn2",
+    "requested_at": "2026-09-13T11:46:44Z",
+    "at": "2026-09-13T11:47:06Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:47:09Z"
+  }
+}

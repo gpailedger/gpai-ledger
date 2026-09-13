@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi4-reasoning-vision15b",
+  "provider": "Microsoft",
+  "model": "Phi 4 Reasoning Vision 15B",
+  "target_kind": "aial-eval",
+  "sha256": "a4c371c1bb7411193f64182a9478fae0d6ec1355d334e2f049f6de20dc44f60c",
+  "size_bytes": 3229,
+  "stored_as": "raw.yaml",
+  "text_sha256": "bd21c5a60f24ea727d6bd877b878f6b756e873132b224b98759c48e25324a6b2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi4-reasoning-vision15b.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi4-reasoning-vision15b.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c0f25fba0ed7d575040a24ab8dee7bfd5a8abb8b7809afacb1f6c38ac467526c\"",
+    "last_modified": null,
+    "content_length": "547",
+    "fetched_at": "2026-09-13T12:16:36Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:16:40Z"
+  }
+}

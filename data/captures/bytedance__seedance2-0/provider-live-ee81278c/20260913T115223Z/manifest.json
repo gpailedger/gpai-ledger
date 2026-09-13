@@ -1,0 +1,46 @@
+{
+  "source_id": "bytedance/seedance2-0",
+  "provider": "ByteDance",
+  "model": "Seedance 2.0",
+  "target_kind": "provider-live",
+  "sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+  "size_bytes": 246255,
+  "stored_as": "raw.pdf",
+  "text_sha256": "91ef7f4b57fa106ffb0df71122275b804485285b146812486fa57720d583ee31",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.0.pdf",
+    "final_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.0.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"4bfd6c44fee2b2b611137e7160b3a88c\"",
+    "last_modified": "Mon, 03 Aug 2026 06:55:55 GMT",
+    "content_length": "246255",
+    "fetched_at": "2026-09-13T11:52:22Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913115223/https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.0.pdf",
+    "snapshot_ts": "20260913115223",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-74ce46acdce758b2b8559d718541739be5182541",
+    "via": "spn2",
+    "requested_at": "2026-09-13T11:52:23Z",
+    "at": "2026-09-13T11:52:29Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:52:33Z"
+  }
+}

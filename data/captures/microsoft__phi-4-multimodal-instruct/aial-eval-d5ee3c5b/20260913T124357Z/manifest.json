@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-4-multimodal-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-4 Multimodal Instruct",
+  "target_kind": "aial-eval",
+  "sha256": "bfd288ca1edd8f338aebf1930e40530df6a7610e858040173ba621f67663cee9",
+  "size_bytes": 4020,
+  "stored_as": "raw.yaml",
+  "text_sha256": "86f4dcbcbb68318aa80d4714f117b92d0260e4041d6284fd532e0aebdfc71021",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-multimodal-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-multimodal-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6500b8e8d09f0b13798335d2a124246566f2cb4bfab698db3c5974325f35cbea\"",
+    "last_modified": null,
+    "content_length": "613",
+    "fetched_at": "2026-09-13T12:43:57Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:44:01Z"
+  }
+}

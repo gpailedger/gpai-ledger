@@ -1,0 +1,34 @@
+{
+  "source_id": "almawave/velvet-2b-speech",
+  "provider": "Almawave",
+  "model": "Velvet 2B Speech",
+  "target_kind": "aial-eval-page",
+  "sha256": "9b8d85a19ce0adee33f17447f28e927310946756b02229f291e72549fe20bf67",
+  "size_bytes": 11809,
+  "stored_as": "raw.html",
+  "text_sha256": "c5d41a3bdc4578a4f58515fcc284b3fe9e320b04b7133b34f1a31939c092a9e4",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-speech/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/velvet-2b-speech/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut941\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:54:16Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:54:20Z"
+  }
+}

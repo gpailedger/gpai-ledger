@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-4-reasoning",
+  "provider": "Microsoft",
+  "model": "Phi-4 Reasoning",
+  "target_kind": "aial-eval",
+  "sha256": "e45e47c01b71e4002a12208e05452e15426b7d1189c884bf99e5de873bb036ee",
+  "size_bytes": 3970,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b31b29ac68d62c9197225632f56b924349e2793a0ec0cd4c8036777e10c00e4c",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-reasoning.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-reasoning.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ea556279ca97a0a201e6793470c5f4435fbf3a9a8b3381bc98f15d564224ddfd\"",
+    "last_modified": null,
+    "content_length": "599",
+    "fetched_at": "2026-09-13T12:44:37Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:44:43Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/phi-2",
+  "provider": "Microsoft",
+  "model": "Phi-2",
+  "target_kind": "provider-live",
+  "sha256": "a12a5d701ee9e71bc1dde42e53c0e82842f38a6ecbebd595e3c72048c9fb499f",
+  "size_bytes": 3887,
+  "stored_as": "raw.md",
+  "text_sha256": "c2d159fdd4868be72b45612a24df0821c61fcd3b8d94e12311f3ddedfa28cc5f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-2/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/phi-2/810d367871c1d460086d9f82db8696f2e0a0fcd0/data_summary_card.md?%2Fmicrosoft%2Fphi-2%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%228d5ad4504624566754e8c91007faf058afaddec4%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8d5ad4504624566754e8c91007faf058afaddec4\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:36:15Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-9fc918261ddc4ab7362344f0464cc7b2e6ee761e (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7ff3ba753380>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "job_id": "spn2-9fc918261ddc4ab7362344f0464cc7b2e6ee761e",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:36:15Z",
+    "at": "2026-09-13T12:39:09Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:39:12Z"
+  }
+}

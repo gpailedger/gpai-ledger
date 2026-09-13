@@ -1,0 +1,44 @@
+{
+  "source_id": "bytedance/seedance2-5",
+  "provider": "ByteDance",
+  "model": "Seedance 2.5",
+  "target_kind": "provider-live",
+  "sha256": "629ed017d4743e5f7a4959cff420a79536de7c1386db0e0852ea9ce0a19f54fc",
+  "size_bytes": 248271,
+  "stored_as": "raw.pdf",
+  "text_sha256": "f56e1a8f306adb943d2c798ae627b9eaa3792d9a61e043a41590209aab95bad2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.5.pdf",
+    "final_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedance%202.5.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"0369bb1f3d33bb259fb1cd07f5bcd7dd\"",
+    "last_modified": "Mon, 03 Aug 2026 06:55:56 GMT",
+    "content_length": "248271",
+    "fetched_at": "2026-09-13T11:53:02Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:gateway-timeout",
+    "answered": true,
+    "job_id": "spn2-752ed4153259458769b9b185f6a3ee783ff4d89b",
+    "via": "spn2",
+    "requested_at": "2026-09-13T11:53:03Z",
+    "at": "2026-09-13T11:53:09Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:53:13Z"
+  }
+}

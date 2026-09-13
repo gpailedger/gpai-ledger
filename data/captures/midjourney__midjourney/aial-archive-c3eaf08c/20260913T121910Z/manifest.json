@@ -1,0 +1,35 @@
+{
+  "source_id": "midjourney/midjourney",
+  "provider": "Midjourney",
+  "model": "Midjourney Image and Video family of models",
+  "target_kind": "aial-archive",
+  "sha256": "682681e354d89c8c0397fa56a52b13077ce1cddc152d9f43f46e9f6b55c3210d",
+  "size_bytes": 412020,
+  "stored_as": "raw.pdf",
+  "text_sha256": "a72c27c22c68a80b4b502343cb57f64a5c1b4f0c167096ac31fc174c6c44a31e",
+  "extraction_notes": [
+    "16 character(s) (typographic ligatures such as the 'ffi' in 'Office') could not be decoded from the source file's embedded font and are shown as �; this affects only this text rendering — the stored file is exact"
+  ],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Midjourney_Midjourney_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Midjourney_Midjourney_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv38tx0\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "412020",
+    "fetched_at": "2026-09-13T12:19:09Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:19:12Z"
+  }
+}

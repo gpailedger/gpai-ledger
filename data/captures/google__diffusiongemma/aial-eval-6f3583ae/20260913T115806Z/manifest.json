@@ -1,0 +1,33 @@
+{
+  "source_id": "google/diffusiongemma",
+  "provider": "Google",
+  "model": "DiffusionGemma 26B A4B IT",
+  "target_kind": "aial-eval",
+  "sha256": "4a5b06502a66cb8e7b6ab85feaa0f64705664ef546391577279248fd2c7e240c",
+  "size_bytes": 3825,
+  "stored_as": "raw.yaml",
+  "text_sha256": "8da4eff57c2a5e9a91a89d52bd1762dc7630de091fc02ed3fe311445e767d6ae",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/diffusiongemma.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/diffusiongemma.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5d5ce83c4b586e6a39722bd353a8c008dff25d42fc6ee5378f8fda1ccfe8118c\"",
+    "last_modified": null,
+    "content_length": "564",
+    "fetched_at": "2026-09-13T11:58:06Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:58:10Z"
+  }
+}

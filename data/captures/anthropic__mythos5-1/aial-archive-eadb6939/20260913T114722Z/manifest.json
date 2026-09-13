@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/mythos5-1",
+  "provider": "Anthropic",
+  "model": "Mythos 5.1 / Fable 5.1",
+  "target_kind": "aial-archive",
+  "sha256": "ff3ed62ab5d93f5841d328f1473c9f74fc170acf16c66a46c60bcbcf0c65040e",
+  "size_bytes": 293261,
+  "stored_as": "raw.pdf",
+  "text_sha256": "65725043edacbab8b1b66a41e4dc1e75c443a304a8312e3d3b06d85919c8db6a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv36aa5\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "293261",
+    "fetched_at": "2026-09-13T11:47:19Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:47:26Z"
+  }
+}

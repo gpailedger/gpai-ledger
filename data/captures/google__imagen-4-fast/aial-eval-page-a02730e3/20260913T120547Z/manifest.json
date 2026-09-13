@@ -1,0 +1,34 @@
+{
+  "source_id": "google/imagen-4-fast",
+  "provider": "Google",
+  "model": "Imagen 4 Fast",
+  "target_kind": "aial-eval-page",
+  "sha256": "6df3a386033c86c60360fa00fc6c8d18c67c807190f641b2166d002075002de3",
+  "size_bytes": 11777,
+  "stored_as": "raw.html",
+  "text_sha256": "9af32cd4bc2efd0ec7733b7cf5d235cda8a721b8be013746f53ee1ced6aef5fb",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/imagen-4-fast/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/imagen-4-fast/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut935\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:05:47Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:05:51Z"
+  }
+}

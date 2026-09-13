@@ -12666,5 +12666,2073 @@
     "last_sha256": "73c637b7fd9439cb9a086e3c3dad5823f1a09f2bcf9ef2ce468a93a3162e897a",
     "last_text_sha256": "2c996ffb19abf8065e2f4a282901bc23e8af6529f0fed7f49fb4c583de7ff70e",
     "last_capture": "captures/aial__tracker/aial-eval-page-6caa2c0e/20260912T063941Z"
+  },
+  "anthropic/mythos5-1::provider-live-e8cea877": {
+    "versions": [
+      {
+        "sha256": "f41756d3de9092e24c3219378d1545fe8c177d177be89279a0fe9386ef435733",
+        "dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20260913T114644Z"
+      }
+    ],
+    "last_sha256": "f41756d3de9092e24c3219378d1545fe8c177d177be89279a0fe9386ef435733",
+    "last_text_sha256": "f87590a6cd09c83b6cd447de5426cd48511732361af8ed89e09c5b867fda707f",
+    "last_capture": "captures/anthropic__mythos5-1/provider-live-e8cea877/20260913T114644Z"
+  },
+  "anthropic/mythos5-1::aial-archive-eadb6939": {
+    "versions": [
+      {
+        "sha256": "ff3ed62ab5d93f5841d328f1473c9f74fc170acf16c66a46c60bcbcf0c65040e",
+        "dir": "captures/anthropic__mythos5-1/aial-archive-eadb6939/20260913T114722Z"
+      }
+    ],
+    "last_sha256": "ff3ed62ab5d93f5841d328f1473c9f74fc170acf16c66a46c60bcbcf0c65040e",
+    "last_text_sha256": "65725043edacbab8b1b66a41e4dc1e75c443a304a8312e3d3b06d85919c8db6a",
+    "last_capture": "captures/anthropic__mythos5-1/aial-archive-eadb6939/20260913T114722Z"
+  },
+  "anthropic/mythos5-1::aial-eval-038ecb30": {
+    "versions": [
+      {
+        "sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z"
+      }
+    ],
+    "last_sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+    "last_text_sha256": "f66bb8fb7fc3b736fac82b7af570f2db29a43a5c8a403e2cf2379bab52fdcf98",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z"
+  },
+  "anthropic/mythos5-1::aial-eval-page-ad1a3f50": {
+    "versions": [
+      {
+        "sha256": "abdb14d358b9c095db9b4fcb73a630f3aa08781ef6ed65402fd64d5d85112e97",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20260913T114735Z"
+      }
+    ],
+    "last_sha256": "abdb14d358b9c095db9b4fcb73a630f3aa08781ef6ed65402fd64d5d85112e97",
+    "last_text_sha256": "f312a5b2d2e77c7ec8905893600e931aee3e2f767e698bb0e4aa44728bb49e66",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20260913T114735Z"
+  },
+  "bytedance/seed-2-0pro::provider-live-97d7bf41": {
+    "versions": [
+      {
+        "sha256": "0b6178953deaed3aec71895c95bc62d30cd97df6368327115ec8d1506e33e3ce",
+        "dir": "captures/bytedance__seed-2-0pro/provider-live-97d7bf41/20260913T114908Z"
+      }
+    ],
+    "last_sha256": "0b6178953deaed3aec71895c95bc62d30cd97df6368327115ec8d1506e33e3ce",
+    "last_text_sha256": "2406ec72b8992167313e4eef3e8fbec557fdf75cf9f43e63d7c53a74358a90d7",
+    "last_capture": "captures/bytedance__seed-2-0pro/provider-live-97d7bf41/20260913T114908Z"
+  },
+  "bytedance/seed-2-0pro::aial-archive-0316d9c0": {
+    "versions": [
+      {
+        "sha256": "0b6178953deaed3aec71895c95bc62d30cd97df6368327115ec8d1506e33e3ce",
+        "dir": "captures/bytedance__seed-2-0pro/aial-archive-0316d9c0/20260913T115122Z"
+      }
+    ],
+    "last_sha256": "0b6178953deaed3aec71895c95bc62d30cd97df6368327115ec8d1506e33e3ce",
+    "last_text_sha256": "2406ec72b8992167313e4eef3e8fbec557fdf75cf9f43e63d7c53a74358a90d7",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-archive-0316d9c0/20260913T115122Z"
+  },
+  "bytedance/seed-2-0pro::aial-eval-727064e3": {
+    "versions": [
+      {
+        "sha256": "c9c4513765f15add78cd02717b98e71721ee6e9a179eff08cea08d3e6af92460",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-727064e3/20260913T115127Z"
+      }
+    ],
+    "last_sha256": "c9c4513765f15add78cd02717b98e71721ee6e9a179eff08cea08d3e6af92460",
+    "last_text_sha256": "206ae647649affa4277e77be3ab560783b4125302fbb438cd4e6affeee11d3d1",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-727064e3/20260913T115127Z"
+  },
+  "bytedance/seed-2-0pro::aial-eval-page-5106e0e9": {
+    "versions": [
+      {
+        "sha256": "5ec5dce8088dffaddf38bcc7f812d4e0dc1127d5e5c40a5c26bcbe20aa12ab29",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-5106e0e9/20260913T115132Z"
+      }
+    ],
+    "last_sha256": "5ec5dce8088dffaddf38bcc7f812d4e0dc1127d5e5c40a5c26bcbe20aa12ab29",
+    "last_text_sha256": "734f5abf4222dbcb92cc5f49d1b0f68819d9225475cea772e0d3342d822e1808",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-page-5106e0e9/20260913T115132Z"
+  },
+  "bytedance/seedream-5-0-pro::provider-live-f577921b": {
+    "versions": [
+      {
+        "sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+        "dir": "captures/bytedance__seedream-5-0-pro/provider-live-f577921b/20260913T115139Z"
+      }
+    ],
+    "last_sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+    "last_text_sha256": "04034d2e92f0bd9bedf2749353e4cc801567ea7582e68b7dd934b1529f73f925",
+    "last_capture": "captures/bytedance__seedream-5-0-pro/provider-live-f577921b/20260913T115139Z"
+  },
+  "bytedance/seedream-5-0-pro::aial-archive-eae58a5c": {
+    "versions": [
+      {
+        "sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+        "dir": "captures/bytedance__seedream-5-0-pro/aial-archive-eae58a5c/20260913T115202Z"
+      }
+    ],
+    "last_sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+    "last_text_sha256": "04034d2e92f0bd9bedf2749353e4cc801567ea7582e68b7dd934b1529f73f925",
+    "last_capture": "captures/bytedance__seedream-5-0-pro/aial-archive-eae58a5c/20260913T115202Z"
+  },
+  "bytedance/seedream-5-0-pro::aial-eval-d0cdde0a": {
+    "versions": [
+      {
+        "sha256": "88f28e6cf90a26a04164da22edbd4552a1c6addf9da388a78babf13e69045325",
+        "dir": "captures/bytedance__seedream-5-0-pro/aial-eval-d0cdde0a/20260913T115208Z"
+      }
+    ],
+    "last_sha256": "88f28e6cf90a26a04164da22edbd4552a1c6addf9da388a78babf13e69045325",
+    "last_text_sha256": "82ed1f091b4fc2290d6bbabf70f957bc3d50be286cc883710d3247af361e9909",
+    "last_capture": "captures/bytedance__seedream-5-0-pro/aial-eval-d0cdde0a/20260913T115208Z"
+  },
+  "bytedance/seedream-5-0-pro::aial-eval-page-b57e2d15": {
+    "versions": [
+      {
+        "sha256": "68ccf0d1facbd08cb1cbd98d4e18a4267ccc6b24895cfe4c13c26eb063dfbffc",
+        "dir": "captures/bytedance__seedream-5-0-pro/aial-eval-page-b57e2d15/20260913T115216Z"
+      }
+    ],
+    "last_sha256": "68ccf0d1facbd08cb1cbd98d4e18a4267ccc6b24895cfe4c13c26eb063dfbffc",
+    "last_text_sha256": "dd2dd2318c31426ac69c60ba9ec6972075b1f2c9056b9858ed60188161f111ee",
+    "last_capture": "captures/bytedance__seedream-5-0-pro/aial-eval-page-b57e2d15/20260913T115216Z"
+  },
+  "bytedance/seedance2-0::provider-live-ee81278c": {
+    "versions": [
+      {
+        "sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+        "dir": "captures/bytedance__seedance2-0/provider-live-ee81278c/20260913T115223Z"
+      }
+    ],
+    "last_sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+    "last_text_sha256": "91ef7f4b57fa106ffb0df71122275b804485285b146812486fa57720d583ee31",
+    "last_capture": "captures/bytedance__seedance2-0/provider-live-ee81278c/20260913T115223Z"
+  },
+  "bytedance/seedance2-0::aial-archive-441022bb": {
+    "versions": [
+      {
+        "sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+        "dir": "captures/bytedance__seedance2-0/aial-archive-441022bb/20260913T115244Z"
+      }
+    ],
+    "last_sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+    "last_text_sha256": "91ef7f4b57fa106ffb0df71122275b804485285b146812486fa57720d583ee31",
+    "last_capture": "captures/bytedance__seedance2-0/aial-archive-441022bb/20260913T115244Z"
+  },
+  "bytedance/seedance2-0::aial-eval-c645cbe5": {
+    "versions": [
+      {
+        "sha256": "6b27617e7666df5042e971be9384e3e5038c2dc297580e8f3a9bde4c4a408f16",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-c645cbe5/20260913T115250Z"
+      }
+    ],
+    "last_sha256": "6b27617e7666df5042e971be9384e3e5038c2dc297580e8f3a9bde4c4a408f16",
+    "last_text_sha256": "06abbfe6d908298be879a7a2212a0fc8b5257bb1dbec2b535f71030148226d88",
+    "last_capture": "captures/bytedance__seedance2-0/aial-eval-c645cbe5/20260913T115250Z"
+  },
+  "bytedance/seedance2-0::aial-eval-page-0029a0f5": {
+    "versions": [
+      {
+        "sha256": "5defca125b237079da707277832c7cd4209ac7a875130ce44a9c24f3b15326e3",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-page-0029a0f5/20260913T115256Z"
+      }
+    ],
+    "last_sha256": "5defca125b237079da707277832c7cd4209ac7a875130ce44a9c24f3b15326e3",
+    "last_text_sha256": "97e2ce01885a86a045a2d71b6eec3cf1d492c66d8dbb9efdfa869ac5494923cb",
+    "last_capture": "captures/bytedance__seedance2-0/aial-eval-page-0029a0f5/20260913T115256Z"
+  },
+  "bytedance/seedance2-5::provider-live-06eaab2c": {
+    "versions": [
+      {
+        "sha256": "629ed017d4743e5f7a4959cff420a79536de7c1386db0e0852ea9ce0a19f54fc",
+        "dir": "captures/bytedance__seedance2-5/provider-live-06eaab2c/20260913T115303Z"
+      }
+    ],
+    "last_sha256": "629ed017d4743e5f7a4959cff420a79536de7c1386db0e0852ea9ce0a19f54fc",
+    "last_text_sha256": "f56e1a8f306adb943d2c798ae627b9eaa3792d9a61e043a41590209aab95bad2",
+    "last_capture": "captures/bytedance__seedance2-5/provider-live-06eaab2c/20260913T115303Z"
+  },
+  "bytedance/seedance2-5::aial-archive-4705bf29": {
+    "versions": [
+      {
+        "sha256": "629ed017d4743e5f7a4959cff420a79536de7c1386db0e0852ea9ce0a19f54fc",
+        "dir": "captures/bytedance__seedance2-5/aial-archive-4705bf29/20260913T115326Z"
+      }
+    ],
+    "last_sha256": "629ed017d4743e5f7a4959cff420a79536de7c1386db0e0852ea9ce0a19f54fc",
+    "last_text_sha256": "f56e1a8f306adb943d2c798ae627b9eaa3792d9a61e043a41590209aab95bad2",
+    "last_capture": "captures/bytedance__seedance2-5/aial-archive-4705bf29/20260913T115326Z"
+  },
+  "bytedance/seedance2-5::aial-eval-21c8eebb": {
+    "versions": [
+      {
+        "sha256": "018fa7609a8fbdad1fce49ba45d6db152f1dbf96d491a1f15a145d128727299a",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-21c8eebb/20260913T115332Z"
+      }
+    ],
+    "last_sha256": "018fa7609a8fbdad1fce49ba45d6db152f1dbf96d491a1f15a145d128727299a",
+    "last_text_sha256": "8921dbf08dd7118cdcb669c046e809a945947ccb85006d0a2048f35e13979ccd",
+    "last_capture": "captures/bytedance__seedance2-5/aial-eval-21c8eebb/20260913T115332Z"
+  },
+  "bytedance/seedance2-5::aial-eval-page-8d70212e": {
+    "versions": [
+      {
+        "sha256": "2b13371ca3723f7b240d1dc4d4178d6696033a4534a50cd7caf641856a088dff",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-page-8d70212e/20260913T115341Z"
+      }
+    ],
+    "last_sha256": "2b13371ca3723f7b240d1dc4d4178d6696033a4534a50cd7caf641856a088dff",
+    "last_text_sha256": "331339d112dc1304613d852d576a85a300dc14180fb679efb01bbe59c874db9d",
+    "last_capture": "captures/bytedance__seedance2-5/aial-eval-page-8d70212e/20260913T115341Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::provider-live-5f671ff5": {
+    "versions": [
+      {
+        "sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/provider-live-5f671ff5/20260913T115550Z"
+      }
+    ],
+    "last_sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+    "last_text_sha256": "ac3479db71bf11f2375cae2688be9dee6adf92b845701f2ab4e1d9128bf10b70",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/provider-live-5f671ff5/20260913T115550Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::aial-archive-4f523896": {
+    "versions": [
+      {
+        "sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-archive-4f523896/20260913T115628Z"
+      }
+    ],
+    "last_sha256": "cfdc2b61809d6df7dfcc288aab155c1a1deef76052a25c9fb2f650715317c12c",
+    "last_text_sha256": "ac3479db71bf11f2375cae2688be9dee6adf92b845701f2ab4e1d9128bf10b70",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-archive-4f523896/20260913T115628Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::aial-eval-6f7faf35": {
+    "versions": [
+      {
+        "sha256": "e41265496041793a6246aa7cc2c3ef395e364baa75bde30433418ecd67bde267",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20260913T115633Z"
+      }
+    ],
+    "last_sha256": "e41265496041793a6246aa7cc2c3ef395e364baa75bde30433418ecd67bde267",
+    "last_text_sha256": "965999eb28bbf5b5583b5e2c0166342be9b490a704f1197a9ac623f80c6a2099",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20260913T115633Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::aial-eval-page-6c086c8e": {
+    "versions": [
+      {
+        "sha256": "0d308fd064ce1ffd3b24c958a632110b02be61e0adeb02684ead6f2027a414ce",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-page-6c086c8e/20260913T115637Z"
+      }
+    ],
+    "last_sha256": "0d308fd064ce1ffd3b24c958a632110b02be61e0adeb02684ead6f2027a414ce",
+    "last_text_sha256": "69e787d2acdee955f8cb8ee36a59f86edac2ef3d293e778bc4c29415ddcbb9d8",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-page-6c086c8e/20260913T115637Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-492042ce": {
+    "versions": [
+      {
+        "sha256": "787414cdc3cd6759c48836835d0acba868ba9e57331473462cf367114023f902",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20260913T115649Z"
+      }
+    ],
+    "last_sha256": "787414cdc3cd6759c48836835d0acba868ba9e57331473462cf367114023f902",
+    "last_text_sha256": "03448930f785276d753872e6cb4a5077f39770c50cb72823ed92292e17f0c15f",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20260913T115649Z"
+  },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-page-6d18f96e": {
+    "versions": [
+      {
+        "sha256": "868c48a33b9b2aeecc10409778710f7c6cb6ea265537eaab7c8300919b3261d9",
+        "dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-6d18f96e/20260913T115654Z"
+      }
+    ],
+    "last_sha256": "868c48a33b9b2aeecc10409778710f7c6cb6ea265537eaab7c8300919b3261d9",
+    "last_text_sha256": "b598dfed0cb40fa77d246fbf25a587b144cfe8fef3795e3e241a08b743607160",
+    "last_capture": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-6d18f96e/20260913T115654Z"
+  },
+  "deepseek/deepseek-v4::provider-live-33db66b3": {
+    "versions": [
+      {
+        "sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+        "dir": "captures/deepseek__deepseek-v4/provider-live-33db66b3/20260913T115701Z"
+      }
+    ],
+    "last_sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+    "last_text_sha256": "47accbf49046c9d573a88d187da155388f3d75d9091c32677c5d306e73d069b5",
+    "last_capture": "captures/deepseek__deepseek-v4/provider-live-33db66b3/20260913T115701Z"
+  },
+  "deepseek/deepseek-v4::aial-archive-d01e8e2c": {
+    "versions": [
+      {
+        "sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+        "dir": "captures/deepseek__deepseek-v4/aial-archive-d01e8e2c/20260913T115722Z"
+      }
+    ],
+    "last_sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+    "last_text_sha256": "47accbf49046c9d573a88d187da155388f3d75d9091c32677c5d306e73d069b5",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-archive-d01e8e2c/20260913T115722Z"
+  },
+  "deepseek/deepseek-v4::aial-eval-68c2c6e6": {
+    "versions": [
+      {
+        "sha256": "ca8c1bbc202d7ee88cc1697347fc9d33b8ec48d285ed278829a9312351a02ed2",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-68c2c6e6/20260913T115727Z"
+      }
+    ],
+    "last_sha256": "ca8c1bbc202d7ee88cc1697347fc9d33b8ec48d285ed278829a9312351a02ed2",
+    "last_text_sha256": "f3a04660e9c5bb2eefb7d1cff8b79f6488955876869a093002063a1850a6fc01",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-68c2c6e6/20260913T115727Z"
+  },
+  "deepseek/deepseek-v4::aial-eval-page-8d87267a": {
+    "versions": [
+      {
+        "sha256": "e4c617305bacfa3a55ed96e5050f100f5f4eba213c9d80152fb9fccc99911d50",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-8d87267a/20260913T115733Z"
+      }
+    ],
+    "last_sha256": "e4c617305bacfa3a55ed96e5050f100f5f4eba213c9d80152fb9fccc99911d50",
+    "last_text_sha256": "4afb00607243fe1aa069c66336625eb64d8fb4d60d2c0b0ea6d0c9fd030882fd",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-page-8d87267a/20260913T115733Z"
+  },
+  "mistral-ai/devstral-2::aial-eval-c68f01db": {
+    "versions": [
+      {
+        "sha256": "c97eb8f93e6a71161e598b4e9f9bc053612a092af20f5e3f23458015f25e2a16",
+        "dir": "captures/mistral-ai__devstral-2/aial-eval-c68f01db/20260913T115739Z"
+      }
+    ],
+    "last_sha256": "c97eb8f93e6a71161e598b4e9f9bc053612a092af20f5e3f23458015f25e2a16",
+    "last_text_sha256": "a360e37a5a3e347d6078841683d4cd69ef7e31ab9466354e2234b66497144907",
+    "last_capture": "captures/mistral-ai__devstral-2/aial-eval-c68f01db/20260913T115739Z"
+  },
+  "mistral-ai/devstral-2::aial-eval-page-4b503431": {
+    "versions": [
+      {
+        "sha256": "1239e2e3a8d1fcc75e038fd69840ce231b05ad0109ba1bda5f1efad47e2c62d8",
+        "dir": "captures/mistral-ai__devstral-2/aial-eval-page-4b503431/20260913T115749Z"
+      }
+    ],
+    "last_sha256": "1239e2e3a8d1fcc75e038fd69840ce231b05ad0109ba1bda5f1efad47e2c62d8",
+    "last_text_sha256": "a465d17783ff9edce737c1043c42aa11e607af805a3d0deb322c93a7c7c6409b",
+    "last_capture": "captures/mistral-ai__devstral-2/aial-eval-page-4b503431/20260913T115749Z"
+  },
+  "mistral-ai/devstral-small::aial-eval-24319db4": {
+    "versions": [
+      {
+        "sha256": "9d428e352c79d4f1286cf96e8860b1888ce616395f823d797f5f1de67c97e9db",
+        "dir": "captures/mistral-ai__devstral-small/aial-eval-24319db4/20260913T115754Z"
+      }
+    ],
+    "last_sha256": "9d428e352c79d4f1286cf96e8860b1888ce616395f823d797f5f1de67c97e9db",
+    "last_text_sha256": "dd25c5f4c308e44f0b0c457ede6fe8d8324f91e086d740936a2f4c9c38784d38",
+    "last_capture": "captures/mistral-ai__devstral-small/aial-eval-24319db4/20260913T115754Z"
+  },
+  "mistral-ai/devstral-small::aial-eval-page-05c9562f": {
+    "versions": [
+      {
+        "sha256": "fefc7c082902d61f8daadd39d855bc526fa651b8fe4caf048525aafdc7afdf5e",
+        "dir": "captures/mistral-ai__devstral-small/aial-eval-page-05c9562f/20260913T115800Z"
+      }
+    ],
+    "last_sha256": "fefc7c082902d61f8daadd39d855bc526fa651b8fe4caf048525aafdc7afdf5e",
+    "last_text_sha256": "b3f5376aec6fcfb5fec892aba787546c184e53fdca588de7aaa270553fe2e193",
+    "last_capture": "captures/mistral-ai__devstral-small/aial-eval-page-05c9562f/20260913T115800Z"
+  },
+  "google/diffusiongemma::aial-eval-6f3583ae": {
+    "versions": [
+      {
+        "sha256": "4a5b06502a66cb8e7b6ab85feaa0f64705664ef546391577279248fd2c7e240c",
+        "dir": "captures/google__diffusiongemma/aial-eval-6f3583ae/20260913T115806Z"
+      }
+    ],
+    "last_sha256": "4a5b06502a66cb8e7b6ab85feaa0f64705664ef546391577279248fd2c7e240c",
+    "last_text_sha256": "8da4eff57c2a5e9a91a89d52bd1762dc7630de091fc02ed3fe311445e767d6ae",
+    "last_capture": "captures/google__diffusiongemma/aial-eval-6f3583ae/20260913T115806Z"
+  },
+  "google/diffusiongemma::aial-eval-page-648e7a70": {
+    "versions": [
+      {
+        "sha256": "77fd5e1f595b1f6c39fc326ccf4235e5ca870dd9f790ca46c373778908d091b1",
+        "dir": "captures/google__diffusiongemma/aial-eval-page-648e7a70/20260913T115812Z"
+      }
+    ],
+    "last_sha256": "77fd5e1f595b1f6c39fc326ccf4235e5ca870dd9f790ca46c373778908d091b1",
+    "last_text_sha256": "ef2608750a5883814ba6665d77d82db698c5d2aae0bf3dcbd2da5ace9121dad8",
+    "last_capture": "captures/google__diffusiongemma/aial-eval-page-648e7a70/20260913T115812Z"
+  },
+  "bria-ai/fibo-1-5::aial-eval-6336e2aa": {
+    "versions": [
+      {
+        "sha256": "2c99ee42a9f467dc24f0d33fa0feee5999cac7f78015eda6cbacb8dc7d88e909",
+        "dir": "captures/bria-ai__fibo-1-5/aial-eval-6336e2aa/20260913T115853Z"
+      }
+    ],
+    "last_sha256": "2c99ee42a9f467dc24f0d33fa0feee5999cac7f78015eda6cbacb8dc7d88e909",
+    "last_text_sha256": "315055869ec29c36e998fee37fa5916ae7e9f0b765008e9f2451125011110d99",
+    "last_capture": "captures/bria-ai__fibo-1-5/aial-eval-6336e2aa/20260913T115853Z"
+  },
+  "bria-ai/fibo-1-5::aial-eval-page-4ee602cc": {
+    "versions": [
+      {
+        "sha256": "b534be7d6431f1355349b3779330dc15575a9d541ae1e33b0c5188f5f8865465",
+        "dir": "captures/bria-ai__fibo-1-5/aial-eval-page-4ee602cc/20260913T115858Z"
+      }
+    ],
+    "last_sha256": "b534be7d6431f1355349b3779330dc15575a9d541ae1e33b0c5188f5f8865465",
+    "last_text_sha256": "6418e8f03caa0799f3c69967e1d6380404b4f7fd5bf4d188deef892e2597f214",
+    "last_capture": "captures/bria-ai__fibo-1-5/aial-eval-page-4ee602cc/20260913T115858Z"
+  },
+  "black-forest-labs/flux-2-dev::aial-eval-26e5d3a8": {
+    "versions": [
+      {
+        "sha256": "55aa48d90980463370cfca3635d76c95c982f98e4e8e81fb3dec45412fcddba7",
+        "dir": "captures/black-forest-labs__flux-2-dev/aial-eval-26e5d3a8/20260913T115918Z"
+      }
+    ],
+    "last_sha256": "55aa48d90980463370cfca3635d76c95c982f98e4e8e81fb3dec45412fcddba7",
+    "last_text_sha256": "e140a8c7aad01702b5dc9a1e5a4b59bf43b57dd42b09fddac919f252c6a1f931",
+    "last_capture": "captures/black-forest-labs__flux-2-dev/aial-eval-26e5d3a8/20260913T115918Z"
+  },
+  "black-forest-labs/flux-2-dev::aial-eval-page-a8553eb1": {
+    "versions": [
+      {
+        "sha256": "beecbd6d195eed2a2bee6b2b3ef6097c7642d4299887424425327c041a9f6e25",
+        "dir": "captures/black-forest-labs__flux-2-dev/aial-eval-page-a8553eb1/20260913T115923Z"
+      }
+    ],
+    "last_sha256": "beecbd6d195eed2a2bee6b2b3ef6097c7642d4299887424425327c041a9f6e25",
+    "last_text_sha256": "111a3cc078985d107e1b95d1b76ffdbd562a309ebef56d92d4618d9fcd7b96a9",
+    "last_capture": "captures/black-forest-labs__flux-2-dev/aial-eval-page-a8553eb1/20260913T115923Z"
+  },
+  "black-forest-labs/flux-2-pro::aial-eval-22539d3c": {
+    "versions": [
+      {
+        "sha256": "fdd2f00a365fdceefd09685a6104d2e0912fa66a1bfe06cb851c196bf705768c",
+        "dir": "captures/black-forest-labs__flux-2-pro/aial-eval-22539d3c/20260913T115943Z"
+      }
+    ],
+    "last_sha256": "fdd2f00a365fdceefd09685a6104d2e0912fa66a1bfe06cb851c196bf705768c",
+    "last_text_sha256": "be91588f4d3be14f76855b9d7f2466d5477cab05bfcbaa29e9d8c0468bb70524",
+    "last_capture": "captures/black-forest-labs__flux-2-pro/aial-eval-22539d3c/20260913T115943Z"
+  },
+  "black-forest-labs/flux-2-pro::aial-eval-page-ec5b0aa3": {
+    "versions": [
+      {
+        "sha256": "c83bc2e590271823b705aa3523fd76beee1da947984423a1a12d6af91aea2bda",
+        "dir": "captures/black-forest-labs__flux-2-pro/aial-eval-page-ec5b0aa3/20260913T115952Z"
+      }
+    ],
+    "last_sha256": "c83bc2e590271823b705aa3523fd76beee1da947984423a1a12d6af91aea2bda",
+    "last_text_sha256": "09519f70e178e98f396a37b712c464720c66dd32d614c49f069045ed3103fdc5",
+    "last_capture": "captures/black-forest-labs__flux-2-pro/aial-eval-page-ec5b0aa3/20260913T115952Z"
+  },
+  "google/gemini-2-5-flash-image::aial-eval-41984c6e": {
+    "versions": [
+      {
+        "sha256": "4993782ac1c754a9ed99f6a6ebff6e300e1d4983adb925267c0e5151063d813b",
+        "dir": "captures/google__gemini-2-5-flash-image/aial-eval-41984c6e/20260913T120058Z"
+      }
+    ],
+    "last_sha256": "4993782ac1c754a9ed99f6a6ebff6e300e1d4983adb925267c0e5151063d813b",
+    "last_text_sha256": "c07fd3d33aa2111cd38c3671f4bbe228197ba8fed52d2522ebabd6bf404a7ced",
+    "last_capture": "captures/google__gemini-2-5-flash-image/aial-eval-41984c6e/20260913T120058Z"
+  },
+  "google/gemini-2-5-flash-image::aial-eval-page-573a034e": {
+    "versions": [
+      {
+        "sha256": "6541f7e85d386eb636de39f339a25d49f8b99e85de045a8be84c35507e37b474",
+        "dir": "captures/google__gemini-2-5-flash-image/aial-eval-page-573a034e/20260913T120107Z"
+      }
+    ],
+    "last_sha256": "6541f7e85d386eb636de39f339a25d49f8b99e85de045a8be84c35507e37b474",
+    "last_text_sha256": "3f3229b2f97e269983c7eac9a98bdee91b68d2d5f211b51e2e1613b17aa3105f",
+    "last_capture": "captures/google__gemini-2-5-flash-image/aial-eval-page-573a034e/20260913T120107Z"
+  },
+  "google/gemini-3-5-flash-cyber::aial-eval-94a16698": {
+    "versions": [
+      {
+        "sha256": "4eebd4754b7e16c257213172ae6032c21d5c628b44573ad9553b2478e8981fe7",
+        "dir": "captures/google__gemini-3-5-flash-cyber/aial-eval-94a16698/20260913T120119Z"
+      }
+    ],
+    "last_sha256": "4eebd4754b7e16c257213172ae6032c21d5c628b44573ad9553b2478e8981fe7",
+    "last_text_sha256": "5d42a336ae5e2c9bd731b31cdc311ba1796074609d9c07f0ac01f5bc98390593",
+    "last_capture": "captures/google__gemini-3-5-flash-cyber/aial-eval-94a16698/20260913T120119Z"
+  },
+  "google/gemini-3-5-flash-cyber::aial-eval-page-bac90612": {
+    "versions": [
+      {
+        "sha256": "bb849082b1108f683ae215f46c97289f7bdc9c78c45505ed63c7a4f7adb62d9e",
+        "dir": "captures/google__gemini-3-5-flash-cyber/aial-eval-page-bac90612/20260913T120131Z"
+      }
+    ],
+    "last_sha256": "bb849082b1108f683ae215f46c97289f7bdc9c78c45505ed63c7a4f7adb62d9e",
+    "last_text_sha256": "9b7308064578c692d43a8ef39cae4e5c07ab866273b7449fbe922b42c5b7f5d9",
+    "last_capture": "captures/google__gemini-3-5-flash-cyber/aial-eval-page-bac90612/20260913T120131Z"
+  },
+  "google/gemini-3-5-flash-lite::aial-eval-28d76589": {
+    "versions": [
+      {
+        "sha256": "70ca93366867810a7619551caea9accd3ddd67ad130b35c608877788660c68b8",
+        "dir": "captures/google__gemini-3-5-flash-lite/aial-eval-28d76589/20260913T120137Z"
+      }
+    ],
+    "last_sha256": "70ca93366867810a7619551caea9accd3ddd67ad130b35c608877788660c68b8",
+    "last_text_sha256": "73c50deb03e1a412e200bb6f9cfce7f129cae930007a6b06c034fff108e679ec",
+    "last_capture": "captures/google__gemini-3-5-flash-lite/aial-eval-28d76589/20260913T120137Z"
+  },
+  "google/gemini-3-5-flash-lite::aial-eval-page-fa1711aa": {
+    "versions": [
+      {
+        "sha256": "82090f6e37132dd466f76cda95568f17431473d693a833c869c16319338551fe",
+        "dir": "captures/google__gemini-3-5-flash-lite/aial-eval-page-fa1711aa/20260913T120142Z"
+      }
+    ],
+    "last_sha256": "82090f6e37132dd466f76cda95568f17431473d693a833c869c16319338551fe",
+    "last_text_sha256": "b6f68b154a4161e3b963d3955543c80e39c086e6630bb77a333f38d4e8e3da30",
+    "last_capture": "captures/google__gemini-3-5-flash-lite/aial-eval-page-fa1711aa/20260913T120142Z"
+  },
+  "google/gemini-3-6-flash::aial-eval-c872dc01": {
+    "versions": [
+      {
+        "sha256": "dd18c6ddf3135140fdeed956859b2242435893ebf5badbe4269a3bc3a326ce5c",
+        "dir": "captures/google__gemini-3-6-flash/aial-eval-c872dc01/20260913T120148Z"
+      }
+    ],
+    "last_sha256": "dd18c6ddf3135140fdeed956859b2242435893ebf5badbe4269a3bc3a326ce5c",
+    "last_text_sha256": "3f8547440df9d340613c90781a904bb48dad59235ddb6320aac014a451660075",
+    "last_capture": "captures/google__gemini-3-6-flash/aial-eval-c872dc01/20260913T120148Z"
+  },
+  "google/gemini-3-6-flash::aial-eval-page-3785ed02": {
+    "versions": [
+      {
+        "sha256": "726dcc8ca5b86d51eb4a469d1749c6dc290b3f1814f9bcc1f173b4402813e8e4",
+        "dir": "captures/google__gemini-3-6-flash/aial-eval-page-3785ed02/20260913T120156Z"
+      }
+    ],
+    "last_sha256": "726dcc8ca5b86d51eb4a469d1749c6dc290b3f1814f9bcc1f173b4402813e8e4",
+    "last_text_sha256": "b8e9231624315e2095995083f3640592e1dbcfde64d40d103d22b26b69e7162f",
+    "last_capture": "captures/google__gemini-3-6-flash/aial-eval-page-3785ed02/20260913T120156Z"
+  },
+  "google/gemini-3-7-flash::aial-eval-2436a692": {
+    "versions": [
+      {
+        "sha256": "a71a85f12f4506d921f93c704dba1c79c3b8978558bcab5f29bfcc9750f5f0ad",
+        "dir": "captures/google__gemini-3-7-flash/aial-eval-2436a692/20260913T120202Z"
+      }
+    ],
+    "last_sha256": "a71a85f12f4506d921f93c704dba1c79c3b8978558bcab5f29bfcc9750f5f0ad",
+    "last_text_sha256": "621047e312c3f286932e10d1e8f3a5c5cc83f7013d76822b9214a0d077e7a2be",
+    "last_capture": "captures/google__gemini-3-7-flash/aial-eval-2436a692/20260913T120202Z"
+  },
+  "google/gemini-3-7-flash::aial-eval-page-11100c25": {
+    "versions": [
+      {
+        "sha256": "0b2a512d1544dc5d59dd16ef5df0344a1a4eab11cd0a03de23ccb0e1810f8b1c",
+        "dir": "captures/google__gemini-3-7-flash/aial-eval-page-11100c25/20260913T120208Z"
+      }
+    ],
+    "last_sha256": "0b2a512d1544dc5d59dd16ef5df0344a1a4eab11cd0a03de23ccb0e1810f8b1c",
+    "last_text_sha256": "5463ccfcf8fca31ba52e4af13d43cab3242ad1dd284da880a31ba842d6ec2ac0",
+    "last_capture": "captures/google__gemini-3-7-flash/aial-eval-page-11100c25/20260913T120208Z"
+  },
+  "google/gemini-flash-3-1-lite::aial-eval-7aa1453c": {
+    "versions": [
+      {
+        "sha256": "f2a7b89665c26237f2b740f5baff3edcf4782af6edd9b5f05aa4cd3a77ef2d4c",
+        "dir": "captures/google__gemini-flash-3-1-lite/aial-eval-7aa1453c/20260913T120215Z"
+      }
+    ],
+    "last_sha256": "f2a7b89665c26237f2b740f5baff3edcf4782af6edd9b5f05aa4cd3a77ef2d4c",
+    "last_text_sha256": "222a251e196ef02c074279f5e794620dbf1953c9bcac0a86876adf0df7134abd",
+    "last_capture": "captures/google__gemini-flash-3-1-lite/aial-eval-7aa1453c/20260913T120215Z"
+  },
+  "google/gemini-flash-3-1-lite::aial-eval-page-841204ec": {
+    "versions": [
+      {
+        "sha256": "8fb82f8fa1044dd6440c74ede4a72c4bebee1f07ab085860f7224f7496089453",
+        "dir": "captures/google__gemini-flash-3-1-lite/aial-eval-page-841204ec/20260913T120228Z"
+      }
+    ],
+    "last_sha256": "8fb82f8fa1044dd6440c74ede4a72c4bebee1f07ab085860f7224f7496089453",
+    "last_text_sha256": "c5ee7d0fe178509649a5c1954cd089f74aa814f40f173681dd505931499bfc6f",
+    "last_capture": "captures/google__gemini-flash-3-1-lite/aial-eval-page-841204ec/20260913T120228Z"
+  },
+  "google/gemini-omni::aial-eval-2100bfd5": {
+    "versions": [
+      {
+        "sha256": "987353a39b84430cc1ff846f4ad425571802112ff53ebdd22bad173e0ce78a8f",
+        "dir": "captures/google__gemini-omni/aial-eval-2100bfd5/20260913T120234Z"
+      }
+    ],
+    "last_sha256": "987353a39b84430cc1ff846f4ad425571802112ff53ebdd22bad173e0ce78a8f",
+    "last_text_sha256": "b9d587914ec545718979190607fdf9d45d1895b2c0dc972772e3cb92f3b853cd",
+    "last_capture": "captures/google__gemini-omni/aial-eval-2100bfd5/20260913T120234Z"
+  },
+  "google/gemini-omni::aial-eval-page-1c64b6ef": {
+    "versions": [
+      {
+        "sha256": "78175cf4ba44e8497c73061ba82809de2a6aee28e2e506e17be91fc20211101b",
+        "dir": "captures/google__gemini-omni/aial-eval-page-1c64b6ef/20260913T120247Z"
+      }
+    ],
+    "last_sha256": "78175cf4ba44e8497c73061ba82809de2a6aee28e2e506e17be91fc20211101b",
+    "last_text_sha256": "dc5c0d0a6c245707c13caba34a5e53f4d1fbb6d874d101b3ddaf0e582996d1ce",
+    "last_capture": "captures/google__gemini-omni/aial-eval-page-1c64b6ef/20260913T120247Z"
+  },
+  "google/gemini-robotics-1-5::aial-eval-e0c77541": {
+    "versions": [
+      {
+        "sha256": "ee002ed47c6de4c17aef1655b563483360e84fca7f4a96e8f1879e4dcaf5c290",
+        "dir": "captures/google__gemini-robotics-1-5/aial-eval-e0c77541/20260913T120254Z"
+      }
+    ],
+    "last_sha256": "ee002ed47c6de4c17aef1655b563483360e84fca7f4a96e8f1879e4dcaf5c290",
+    "last_text_sha256": "80da26edc4144e58fdef081918e0dabc41fb9b08b07d48c4269cd04c63316585",
+    "last_capture": "captures/google__gemini-robotics-1-5/aial-eval-e0c77541/20260913T120254Z"
+  },
+  "google/gemini-robotics-1-5::aial-eval-page-a060abe9": {
+    "versions": [
+      {
+        "sha256": "e211af23c7c6a54b1025d2bd59099fd595c30c80683733ae4f7f28885ab5125c",
+        "dir": "captures/google__gemini-robotics-1-5/aial-eval-page-a060abe9/20260913T120309Z"
+      }
+    ],
+    "last_sha256": "e211af23c7c6a54b1025d2bd59099fd595c30c80683733ae4f7f28885ab5125c",
+    "last_text_sha256": "effb6e9ba7a4e18036edeb7a8e63ff54c7e68bec1bf9a9c02e21cc262b26b962",
+    "last_capture": "captures/google__gemini-robotics-1-5/aial-eval-page-a060abe9/20260913T120309Z"
+  },
+  "google/gemini-robotics-er-1-5::aial-eval-bffa6aa5": {
+    "versions": [
+      {
+        "sha256": "df074e33f7daee7f4f5457da016f1c154709a47d18cc2e3e3c3fe4ff3aa6d309",
+        "dir": "captures/google__gemini-robotics-er-1-5/aial-eval-bffa6aa5/20260913T120315Z"
+      }
+    ],
+    "last_sha256": "df074e33f7daee7f4f5457da016f1c154709a47d18cc2e3e3c3fe4ff3aa6d309",
+    "last_text_sha256": "e48ea3b2d901de875ead2f7b857e0a0037ae1740e8785da488bae86eeb89f06d",
+    "last_capture": "captures/google__gemini-robotics-er-1-5/aial-eval-bffa6aa5/20260913T120315Z"
+  },
+  "google/gemini-robotics-er-1-5::aial-eval-page-9535590c": {
+    "versions": [
+      {
+        "sha256": "94d135f6c85fb15450f0f536376c7d659fce40b8ef703e25d7a5293ce179d415",
+        "dir": "captures/google__gemini-robotics-er-1-5/aial-eval-page-9535590c/20260913T120328Z"
+      }
+    ],
+    "last_sha256": "94d135f6c85fb15450f0f536376c7d659fce40b8ef703e25d7a5293ce179d415",
+    "last_text_sha256": "c3d3ec7a6cad7245dcd907a1c587129418449e3bc446f8c2e8f3004f1de6c573",
+    "last_capture": "captures/google__gemini-robotics-er-1-5/aial-eval-page-9535590c/20260913T120328Z"
+  },
+  "google/gemini-robotics-er-1-6::aial-eval-095a81e4": {
+    "versions": [
+      {
+        "sha256": "9e273c10b06d3e2c2a8da1ae771d44fb5695d202dd06058ca789fae56756b324",
+        "dir": "captures/google__gemini-robotics-er-1-6/aial-eval-095a81e4/20260913T120334Z"
+      }
+    ],
+    "last_sha256": "9e273c10b06d3e2c2a8da1ae771d44fb5695d202dd06058ca789fae56756b324",
+    "last_text_sha256": "99bd5eba07676c4506e82df2a208fd02a078dd3eec9ae3e3d02fc77de396bf31",
+    "last_capture": "captures/google__gemini-robotics-er-1-6/aial-eval-095a81e4/20260913T120334Z"
+  },
+  "google/gemini-robotics-er-1-6::aial-eval-page-f7b72bfa": {
+    "versions": [
+      {
+        "sha256": "eb00efa3f07cf365970cd19b667eb6e2fdeb5345f1ae248dd083b3f0c3ff4826",
+        "dir": "captures/google__gemini-robotics-er-1-6/aial-eval-page-f7b72bfa/20260913T120340Z"
+      }
+    ],
+    "last_sha256": "eb00efa3f07cf365970cd19b667eb6e2fdeb5345f1ae248dd083b3f0c3ff4826",
+    "last_text_sha256": "0ec0da10ba95abee7c05c878cc5882d7bf3bbfe0eed84989743ff4e124fd809d",
+    "last_capture": "captures/google__gemini-robotics-er-1-6/aial-eval-page-f7b72bfa/20260913T120340Z"
+  },
+  "google/gemini-robotics-er-2::aial-eval-d8bd07f1": {
+    "versions": [
+      {
+        "sha256": "e52d6dcb6e8e4f17643bb52fe2fd9962a5151de6dfc438140372616fe469fcae",
+        "dir": "captures/google__gemini-robotics-er-2/aial-eval-d8bd07f1/20260913T120345Z"
+      }
+    ],
+    "last_sha256": "e52d6dcb6e8e4f17643bb52fe2fd9962a5151de6dfc438140372616fe469fcae",
+    "last_text_sha256": "ad309ec205b7de08edd22ac08d4a6d50d9a076ae88125ee5e2778fb6068f753f",
+    "last_capture": "captures/google__gemini-robotics-er-2/aial-eval-d8bd07f1/20260913T120345Z"
+  },
+  "google/gemini-robotics-er-2::aial-eval-page-28924383": {
+    "versions": [
+      {
+        "sha256": "c5de5ef1f72ae910aba9b3658a08236d30b2529fcfc565ea6e99ce2ac6b88c87",
+        "dir": "captures/google__gemini-robotics-er-2/aial-eval-page-28924383/20260913T120353Z"
+      }
+    ],
+    "last_sha256": "c5de5ef1f72ae910aba9b3658a08236d30b2529fcfc565ea6e99ce2ac6b88c87",
+    "last_text_sha256": "bf0bb742d42b6bcc9ba93d1b36d4fac882012523edb3264f056008f5f2247074",
+    "last_capture": "captures/google__gemini-robotics-er-2/aial-eval-page-28924383/20260913T120353Z"
+  },
+  "ibm/granite-4-2::aial-eval-32083a1b": {
+    "versions": [
+      {
+        "sha256": "624902133a839a6599c4da132bbd5a45e8e7e04b5b2cfde48ed300c05b32e61f",
+        "dir": "captures/ibm__granite-4-2/aial-eval-32083a1b/20260913T120502Z"
+      }
+    ],
+    "last_sha256": "624902133a839a6599c4da132bbd5a45e8e7e04b5b2cfde48ed300c05b32e61f",
+    "last_text_sha256": "a6d09e8ee9819ff7c340a67c8128f71c4328d67582f9de142835261f1bb1518e",
+    "last_capture": "captures/ibm__granite-4-2/aial-eval-32083a1b/20260913T120502Z"
+  },
+  "ibm/granite-4-2::aial-eval-page-5b447301": {
+    "versions": [
+      {
+        "sha256": "3a5275f2be04212cec3ffb95136e8265a5609f439f20e27593f4504c54fc11f5",
+        "dir": "captures/ibm__granite-4-2/aial-eval-page-5b447301/20260913T120510Z"
+      }
+    ],
+    "last_sha256": "3a5275f2be04212cec3ffb95136e8265a5609f439f20e27593f4504c54fc11f5",
+    "last_text_sha256": "ed794c782078fa3399c362532f7950b220bbcfc1e0bef7037887e4661efdc3a9",
+    "last_capture": "captures/ibm__granite-4-2/aial-eval-page-5b447301/20260913T120510Z"
+  },
+  "ibm/granite-vision-4-1::aial-eval-b0aefff1": {
+    "versions": [
+      {
+        "sha256": "03ca4096c0559340203fa331177d4bf20b7cca447a1fc2556cda38a16e851334",
+        "dir": "captures/ibm__granite-vision-4-1/aial-eval-b0aefff1/20260913T120516Z"
+      }
+    ],
+    "last_sha256": "03ca4096c0559340203fa331177d4bf20b7cca447a1fc2556cda38a16e851334",
+    "last_text_sha256": "6aba077d87540625ee29f6f1fc9ff9fa760a0a764bb5972080981f22df79c6a1",
+    "last_capture": "captures/ibm__granite-vision-4-1/aial-eval-b0aefff1/20260913T120516Z"
+  },
+  "ibm/granite-vision-4-1::aial-eval-page-3dff5ee0": {
+    "versions": [
+      {
+        "sha256": "ac03177d0a4e93c26fa75612f6d3f48b4013f793909d02fb463be90f168eb45d",
+        "dir": "captures/ibm__granite-vision-4-1/aial-eval-page-3dff5ee0/20260913T120522Z"
+      }
+    ],
+    "last_sha256": "ac03177d0a4e93c26fa75612f6d3f48b4013f793909d02fb463be90f168eb45d",
+    "last_text_sha256": "fcbbc4075c1c5032cd3f5ada78967daeb103d6c1ff1b60b8c14cb6c51886b144",
+    "last_capture": "captures/ibm__granite-vision-4-1/aial-eval-page-3dff5ee0/20260913T120522Z"
+  },
+  "google/imagen-4-fast::aial-eval-38c3b37e": {
+    "versions": [
+      {
+        "sha256": "fa82247482c5aff6c2f3c344bd39c8b2d5491aff55256c8f4b959033de9c41e9",
+        "dir": "captures/google__imagen-4-fast/aial-eval-38c3b37e/20260913T120541Z"
+      }
+    ],
+    "last_sha256": "fa82247482c5aff6c2f3c344bd39c8b2d5491aff55256c8f4b959033de9c41e9",
+    "last_text_sha256": "d4aa78c60ff833e44bbce09387a393836bf6eadbc61e7580308da8abab6ebb11",
+    "last_capture": "captures/google__imagen-4-fast/aial-eval-38c3b37e/20260913T120541Z"
+  },
+  "google/imagen-4-fast::aial-eval-page-a02730e3": {
+    "versions": [
+      {
+        "sha256": "6df3a386033c86c60360fa00fc6c8d18c67c807190f641b2166d002075002de3",
+        "dir": "captures/google__imagen-4-fast/aial-eval-page-a02730e3/20260913T120547Z"
+      }
+    ],
+    "last_sha256": "6df3a386033c86c60360fa00fc6c8d18c67c807190f641b2166d002075002de3",
+    "last_text_sha256": "9af32cd4bc2efd0ec7733b7cf5d235cda8a721b8be013746f53ee1ced6aef5fb",
+    "last_capture": "captures/google__imagen-4-fast/aial-eval-page-a02730e3/20260913T120547Z"
+  },
+  "microsoft/magma-8b::provider-live-47841b6a": {
+    "versions": [
+      {
+        "sha256": "887e4e132f74bd5e865a3e5c169db0cb7e09b0b2081bc7ed75b125832136d6ed",
+        "dir": "captures/microsoft__magma-8b/provider-live-47841b6a/20260913T120611Z"
+      }
+    ],
+    "last_sha256": "887e4e132f74bd5e865a3e5c169db0cb7e09b0b2081bc7ed75b125832136d6ed",
+    "last_text_sha256": "30e9b0d0ab05005aea500ecda935c62034bf3e2740c93c5dedceff24bd08bf17",
+    "last_capture": "captures/microsoft__magma-8b/provider-live-47841b6a/20260913T120611Z"
+  },
+  "microsoft/magma-8b::aial-archive-635d14df": {
+    "versions": [
+      {
+        "sha256": "9798aad2315fd02224140def006c6d7b66d48d9a50a038ffd874612c08572fad",
+        "dir": "captures/microsoft__magma-8b/aial-archive-635d14df/20260913T120642Z"
+      }
+    ],
+    "last_sha256": "9798aad2315fd02224140def006c6d7b66d48d9a50a038ffd874612c08572fad",
+    "last_text_sha256": "f61dbddf38f4ee9a63ce5615dbe3733e8f8388a5189a1f3aa8d416a6cd4a5017",
+    "last_capture": "captures/microsoft__magma-8b/aial-archive-635d14df/20260913T120642Z"
+  },
+  "microsoft/magma-8b::aial-eval-52afa981": {
+    "versions": [
+      {
+        "sha256": "6dffd0b2073d96848c9c066fd2f62c0cf58ea7f45496ca3dc7b86bd6a7bfed84",
+        "dir": "captures/microsoft__magma-8b/aial-eval-52afa981/20260913T120647Z"
+      }
+    ],
+    "last_sha256": "6dffd0b2073d96848c9c066fd2f62c0cf58ea7f45496ca3dc7b86bd6a7bfed84",
+    "last_text_sha256": "c7dcd34670d0cf8ed99dee6183d5383ae124a6c1b6eb41de328948b84ca62aad",
+    "last_capture": "captures/microsoft__magma-8b/aial-eval-52afa981/20260913T120647Z"
+  },
+  "microsoft/magma-8b::aial-eval-page-a0d1443d": {
+    "versions": [
+      {
+        "sha256": "4782c43242133518038719e3b43eb6fd5272bc30c7d836cf0091753d997c064e",
+        "dir": "captures/microsoft__magma-8b/aial-eval-page-a0d1443d/20260913T120655Z"
+      }
+    ],
+    "last_sha256": "4782c43242133518038719e3b43eb6fd5272bc30c7d836cf0091753d997c064e",
+    "last_text_sha256": "a19a8732cfe5a6f71836d77b5d2506424dab4bd9fb58a885b06b14dbdfdd331d",
+    "last_capture": "captures/microsoft__magma-8b/aial-eval-page-a0d1443d/20260913T120655Z"
+  },
+  "microsoft/mai-ds-r1::provider-live-82698457": {
+    "versions": [
+      {
+        "sha256": "94a7156e8af399651e2624d50a72f8db33595ceaa122c1a85e76c6bff2b0eaa9",
+        "dir": "captures/microsoft__mai-ds-r1/provider-live-82698457/20260913T120717Z"
+      }
+    ],
+    "last_sha256": "94a7156e8af399651e2624d50a72f8db33595ceaa122c1a85e76c6bff2b0eaa9",
+    "last_text_sha256": "163a773327891256c6fee1305a4f5dd5aa6290045d3cd5b07440292a0af9013f",
+    "last_capture": "captures/microsoft__mai-ds-r1/provider-live-82698457/20260913T120717Z"
+  },
+  "microsoft/mai-ds-r1::aial-archive-7c2d4e5a": {
+    "versions": [
+      {
+        "sha256": "30287de14e130953cdd1c139e683002dfa6a61d68f026f9ca130bb5a447b2caa",
+        "dir": "captures/microsoft__mai-ds-r1/aial-archive-7c2d4e5a/20260913T120811Z"
+      }
+    ],
+    "last_sha256": "30287de14e130953cdd1c139e683002dfa6a61d68f026f9ca130bb5a447b2caa",
+    "last_text_sha256": "2fb65edd5c1e20ce4aab543fce29ec0bae16cf232c8a6e64cae5966553ee3e5c",
+    "last_capture": "captures/microsoft__mai-ds-r1/aial-archive-7c2d4e5a/20260913T120811Z"
+  },
+  "microsoft/mai-ds-r1::aial-eval-9c494d32": {
+    "versions": [
+      {
+        "sha256": "c717bb004f3a9bde680f8881e3e388c171dcc96ecd24a4b8d8dc730fea6d48bb",
+        "dir": "captures/microsoft__mai-ds-r1/aial-eval-9c494d32/20260913T120815Z"
+      }
+    ],
+    "last_sha256": "c717bb004f3a9bde680f8881e3e388c171dcc96ecd24a4b8d8dc730fea6d48bb",
+    "last_text_sha256": "8d716a3dc66a1e75adda82b43c56061101a92cf1419648b0b0a68c0da9c3b59f",
+    "last_capture": "captures/microsoft__mai-ds-r1/aial-eval-9c494d32/20260913T120815Z"
+  },
+  "microsoft/mai-ds-r1::aial-eval-page-c155721a": {
+    "versions": [
+      {
+        "sha256": "fd36e982d57708f2ef33921089ee28bdb1a30405b9ab1ced24ab725ada621018",
+        "dir": "captures/microsoft__mai-ds-r1/aial-eval-page-c155721a/20260913T120822Z"
+      }
+    ],
+    "last_sha256": "fd36e982d57708f2ef33921089ee28bdb1a30405b9ab1ced24ab725ada621018",
+    "last_text_sha256": "394905172e18719f988b21f8c080bdab80aa2bc4f13369f13973de329744cd2f",
+    "last_capture": "captures/microsoft__mai-ds-r1/aial-eval-page-c155721a/20260913T120822Z"
+  },
+  "microsoft/mai-image-2-6::provider-live-a5eaec9b": {
+    "versions": [
+      {
+        "sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+        "dir": "captures/microsoft__mai-image-2-6/provider-live-a5eaec9b/20260913T121203Z"
+      }
+    ],
+    "last_sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+    "last_text_sha256": "3ee668405be782d6a510f7259a16743a20092e6843f491e87662a31e27603c49",
+    "last_capture": "captures/microsoft__mai-image-2-6/provider-live-a5eaec9b/20260913T121203Z"
+  },
+  "microsoft/mai-image-2-6::aial-archive-1f436e57": {
+    "versions": [
+      {
+        "sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+        "dir": "captures/microsoft__mai-image-2-6/aial-archive-1f436e57/20260913T121225Z"
+      }
+    ],
+    "last_sha256": "ea8f7c2e201aba25f2526f36614ba6f587976ec5a41ca096a99a15c7a815d010",
+    "last_text_sha256": "3ee668405be782d6a510f7259a16743a20092e6843f491e87662a31e27603c49",
+    "last_capture": "captures/microsoft__mai-image-2-6/aial-archive-1f436e57/20260913T121225Z"
+  },
+  "microsoft/mai-image-2-6::aial-eval-bb9a8c63": {
+    "versions": [
+      {
+        "sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
+        "dir": "captures/microsoft__mai-image-2-6/aial-eval-bb9a8c63/20260913T121230Z"
+      }
+    ],
+    "last_sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
+    "last_text_sha256": "2fbd0f7976b735258f349ee538edfc0d88c8e2b9cdfcdc31ef466bef65397720",
+    "last_capture": "captures/microsoft__mai-image-2-6/aial-eval-bb9a8c63/20260913T121230Z"
+  },
+  "microsoft/mai-image-2-6::aial-eval-page-73fe53a0": {
+    "versions": [
+      {
+        "sha256": "a31b152d6e71a87ec8bd882c54cad49b7de43c38ce919b7ad7b7dffd23b69c07",
+        "dir": "captures/microsoft__mai-image-2-6/aial-eval-page-73fe53a0/20260913T121246Z"
+      }
+    ],
+    "last_sha256": "a31b152d6e71a87ec8bd882c54cad49b7de43c38ce919b7ad7b7dffd23b69c07",
+    "last_text_sha256": "64a0db38109e7a33ef867222cb222106eb0ec969ca8fca1f718dbc656a3861d2",
+    "last_capture": "captures/microsoft__mai-image-2-6/aial-eval-page-73fe53a0/20260913T121246Z"
+  },
+  "microsoft/mai-thinking-1::aial-archive-b6824f91": {
+    "versions": [
+      {
+        "sha256": "1d8241363c5e427dbcd9325e64bdd03863654bf5b13a05fb3d369b8cd0dfd20e",
+        "dir": "captures/microsoft__mai-thinking-1/aial-archive-b6824f91/20260913T121256Z"
+      }
+    ],
+    "last_sha256": "1d8241363c5e427dbcd9325e64bdd03863654bf5b13a05fb3d369b8cd0dfd20e",
+    "last_text_sha256": "84868bc5c745d6cf62d3a061fc2864dae4de2184534e8f728c3bb877000d4ad3",
+    "last_capture": "captures/microsoft__mai-thinking-1/aial-archive-b6824f91/20260913T121256Z"
+  },
+  "microsoft/mai-thinking-1::aial-eval-fea243b5": {
+    "versions": [
+      {
+        "sha256": "b614c7893505653ae3afc4c2f0dd46c8bd4037fe19513bbd485c9cce36924a29",
+        "dir": "captures/microsoft__mai-thinking-1/aial-eval-fea243b5/20260913T121303Z"
+      }
+    ],
+    "last_sha256": "b614c7893505653ae3afc4c2f0dd46c8bd4037fe19513bbd485c9cce36924a29",
+    "last_text_sha256": "da8d1ac5003dda80fbdb0cb7afabfb80d369bb423efcedfbcb234ba74949d23c",
+    "last_capture": "captures/microsoft__mai-thinking-1/aial-eval-fea243b5/20260913T121303Z"
+  },
+  "microsoft/mai-thinking-1::aial-eval-page-e8dd391f": {
+    "versions": [
+      {
+        "sha256": "a3638cd21357bdc02ed8b880db9aa097ebe72feeabbeb06c848a53f2ece2fb0d",
+        "dir": "captures/microsoft__mai-thinking-1/aial-eval-page-e8dd391f/20260913T121309Z"
+      }
+    ],
+    "last_sha256": "a3638cd21357bdc02ed8b880db9aa097ebe72feeabbeb06c848a53f2ece2fb0d",
+    "last_text_sha256": "d6b226df0473911939541ab4bea56d9972b142d97b80e9ba04551d11bf5997e2",
+    "last_capture": "captures/microsoft__mai-thinking-1/aial-eval-page-e8dd391f/20260913T121309Z"
+  },
+  "meta/muse-glimmer::aial-eval-651ed4d8": {
+    "versions": [
+      {
+        "sha256": "6dd2d8b03b966957dcb3c62c0450e8ef3661ad2a241cceb90fc491cecf36bd07",
+        "dir": "captures/meta__muse-glimmer/aial-eval-651ed4d8/20260913T121342Z"
+      }
+    ],
+    "last_sha256": "6dd2d8b03b966957dcb3c62c0450e8ef3661ad2a241cceb90fc491cecf36bd07",
+    "last_text_sha256": "fa4cbbb1861dcbe29899a6ee886bde6d42c0f7309cb64c49bc70e7d7f0fea482",
+    "last_capture": "captures/meta__muse-glimmer/aial-eval-651ed4d8/20260913T121342Z"
+  },
+  "meta/muse-glimmer::aial-eval-page-93da37c8": {
+    "versions": [
+      {
+        "sha256": "3ad03664dbd3247958864921a621d04e594ef53b7c06e5a71d61647d5fda3139",
+        "dir": "captures/meta__muse-glimmer/aial-eval-page-93da37c8/20260913T121348Z"
+      }
+    ],
+    "last_sha256": "3ad03664dbd3247958864921a621d04e594ef53b7c06e5a71d61647d5fda3139",
+    "last_text_sha256": "2fbc979f723a0fdbc9952984e8e332bf86e663157da3d9b8afefc1cc36a9582b",
+    "last_capture": "captures/meta__muse-glimmer/aial-eval-page-93da37c8/20260913T121348Z"
+  },
+  "microsoft/mai-code-1-1-flash::aial-eval-e9e3e756": {
+    "versions": [
+      {
+        "sha256": "73f31ed2fae86bbabe403b0bd3d75a81c03dc3ff9c34d1f402244f9b39c164c7",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-e9e3e756/20260913T121355Z"
+      }
+    ],
+    "last_sha256": "73f31ed2fae86bbabe403b0bd3d75a81c03dc3ff9c34d1f402244f9b39c164c7",
+    "last_text_sha256": "6930f9813748ebfb2c3aba3086ad524d422557e30a62831f42b0b1d9b6921dbd",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-e9e3e756/20260913T121355Z"
+  },
+  "microsoft/mai-code-1-1-flash::aial-eval-page-0d67dc50": {
+    "versions": [
+      {
+        "sha256": "a758fa4e5adc2eeac61a9c26bb5e52ea58801f427b59f7428d18ad9dd8959059",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-0d67dc50/20260913T121412Z"
+      }
+    ],
+    "last_sha256": "a758fa4e5adc2eeac61a9c26bb5e52ea58801f427b59f7428d18ad9dd8959059",
+    "last_text_sha256": "d0521438e161f2e7b848d2932338975931b9db8daad6fce88a043532b5675ae3",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-0d67dc50/20260913T121412Z"
+  },
+  "microsoft/phi4-reasoning-vision15b::provider-live-50698daa": {
+    "versions": [
+      {
+        "sha256": "7bc0e89f1dcfeb9817d31a67b255443a0457082c3ae8fbaf226d6c31d31cd0a9",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/provider-live-50698daa/20260913T121419Z"
+      }
+    ],
+    "last_sha256": "7bc0e89f1dcfeb9817d31a67b255443a0457082c3ae8fbaf226d6c31d31cd0a9",
+    "last_text_sha256": "e17f1e0516e6a887f0700d8fff07696039c1a8292405a02bad9985e5dc148539",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/provider-live-50698daa/20260913T121419Z"
+  },
+  "microsoft/phi4-reasoning-vision15b::aial-eval-bc86418b": {
+    "versions": [
+      {
+        "sha256": "a4c371c1bb7411193f64182a9478fae0d6ec1355d334e2f049f6de20dc44f60c",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-bc86418b/20260913T121636Z"
+      }
+    ],
+    "last_sha256": "a4c371c1bb7411193f64182a9478fae0d6ec1355d334e2f049f6de20dc44f60c",
+    "last_text_sha256": "bd21c5a60f24ea727d6bd877b878f6b756e873132b224b98759c48e25324a6b2",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-bc86418b/20260913T121636Z"
+  },
+  "microsoft/phi4-reasoning-vision15b::aial-eval-page-7ba6f881": {
+    "versions": [
+      {
+        "sha256": "caadcb9a10c20723fd2b9b1b483b692998a39c4212f8e4a092cfe7e79827f0dc",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-7ba6f881/20260913T121645Z"
+      }
+    ],
+    "last_sha256": "caadcb9a10c20723fd2b9b1b483b692998a39c4212f8e4a092cfe7e79827f0dc",
+    "last_text_sha256": "324059fd14d4eef8d4227819a8d753a456a6717638e6e7aa1744829b6b9ed32e",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-7ba6f881/20260913T121645Z"
+  },
+  "midjourney/midjourney::provider-live-12a613cb": {
+    "versions": [
+      {
+        "sha256": "4727620f263f6ca1200ae8769346fdd452f3af4dd4dd4182139dda73f6a9fe9f",
+        "dir": "captures/midjourney__midjourney/provider-live-12a613cb/20260913T121650Z"
+      }
+    ],
+    "last_sha256": "4727620f263f6ca1200ae8769346fdd452f3af4dd4dd4182139dda73f6a9fe9f",
+    "last_text_sha256": "5d1e51bce3f446fc8cfcc56bc12241a5ca276e520ea51d579b6e48826dc2111b",
+    "last_capture": "captures/midjourney__midjourney/provider-live-12a613cb/20260913T121650Z"
+  },
+  "midjourney/midjourney::aial-archive-c3eaf08c": {
+    "versions": [
+      {
+        "sha256": "682681e354d89c8c0397fa56a52b13077ce1cddc152d9f43f46e9f6b55c3210d",
+        "dir": "captures/midjourney__midjourney/aial-archive-c3eaf08c/20260913T121910Z"
+      }
+    ],
+    "last_sha256": "682681e354d89c8c0397fa56a52b13077ce1cddc152d9f43f46e9f6b55c3210d",
+    "last_text_sha256": "a72c27c22c68a80b4b502343cb57f64a5c1b4f0c167096ac31fc174c6c44a31e",
+    "last_capture": "captures/midjourney__midjourney/aial-archive-c3eaf08c/20260913T121910Z"
+  },
+  "midjourney/midjourney::aial-eval-2b7b7e43": {
+    "versions": [
+      {
+        "sha256": "23b8bcb6f67d2a5fdff9d0db87ebc2fa6c9ea801e1d173935034c4a7e9d6aa8d",
+        "dir": "captures/midjourney__midjourney/aial-eval-2b7b7e43/20260913T121914Z"
+      }
+    ],
+    "last_sha256": "23b8bcb6f67d2a5fdff9d0db87ebc2fa6c9ea801e1d173935034c4a7e9d6aa8d",
+    "last_text_sha256": "2d391b3e30894b5ba4f93aa3ca2e735527a74107c63b4061e2462d0b08f5bd84",
+    "last_capture": "captures/midjourney__midjourney/aial-eval-2b7b7e43/20260913T121914Z"
+  },
+  "midjourney/midjourney::aial-eval-page-b3c3c9e0": {
+    "versions": [
+      {
+        "sha256": "4a2691da8eb06cd7d1cba71785f92c52924c64aa2fe71945c03c5ff55e74ba1c",
+        "dir": "captures/midjourney__midjourney/aial-eval-page-b3c3c9e0/20260913T121920Z"
+      }
+    ],
+    "last_sha256": "4a2691da8eb06cd7d1cba71785f92c52924c64aa2fe71945c03c5ff55e74ba1c",
+    "last_text_sha256": "ab7cdf3ff10538a55ce11e1b580f9fb8611d675742d3f7908bc65a0d1fcd3a9e",
+    "last_capture": "captures/midjourney__midjourney/aial-eval-page-b3c3c9e0/20260913T121920Z"
+  },
+  "minimax/minimax-h3::provider-live-db3709c1": {
+    "versions": [
+      {
+        "sha256": "c194fd517d43b7e34635a0ec90d785d32cae9f33e70cddc28f3d885a8362365e",
+        "dir": "captures/minimax__minimax-h3/provider-live-db3709c1/20260913T121926Z"
+      }
+    ],
+    "last_sha256": "c194fd517d43b7e34635a0ec90d785d32cae9f33e70cddc28f3d885a8362365e",
+    "last_text_sha256": "8a250659f43bb7ff8caf1b4711aeca76bf9f046bc869889afc698d31c1a2229b",
+    "last_capture": "captures/minimax__minimax-h3/provider-live-db3709c1/20260913T121926Z"
+  },
+  "minimax/minimax-h3::aial-archive-04cb9eb1": {
+    "versions": [
+      {
+        "sha256": "c194fd517d43b7e34635a0ec90d785d32cae9f33e70cddc28f3d885a8362365e",
+        "dir": "captures/minimax__minimax-h3/aial-archive-04cb9eb1/20260913T121954Z"
+      }
+    ],
+    "last_sha256": "c194fd517d43b7e34635a0ec90d785d32cae9f33e70cddc28f3d885a8362365e",
+    "last_text_sha256": "8a250659f43bb7ff8caf1b4711aeca76bf9f046bc869889afc698d31c1a2229b",
+    "last_capture": "captures/minimax__minimax-h3/aial-archive-04cb9eb1/20260913T121954Z"
+  },
+  "minimax/minimax-h3::aial-eval-6c763ccd": {
+    "versions": [
+      {
+        "sha256": "9fc1fc070e6c0d904f93597ab808878e3f6ed9008d5692bed1da1f9b05518249",
+        "dir": "captures/minimax__minimax-h3/aial-eval-6c763ccd/20260913T121959Z"
+      }
+    ],
+    "last_sha256": "9fc1fc070e6c0d904f93597ab808878e3f6ed9008d5692bed1da1f9b05518249",
+    "last_text_sha256": "7dfed2b7b35e4bf93a6113aac380f031ff6064172b898f68508e077095c19104",
+    "last_capture": "captures/minimax__minimax-h3/aial-eval-6c763ccd/20260913T121959Z"
+  },
+  "minimax/minimax-h3::aial-eval-page-fa0d32a6": {
+    "versions": [
+      {
+        "sha256": "d8ebc186454210cbbc2ae65e6b58729159def8cefee7d15e06ab2ec613da5361",
+        "dir": "captures/minimax__minimax-h3/aial-eval-page-fa0d32a6/20260913T122004Z"
+      }
+    ],
+    "last_sha256": "d8ebc186454210cbbc2ae65e6b58729159def8cefee7d15e06ab2ec613da5361",
+    "last_text_sha256": "0d2b27ca2adf641b82bc0e963046a729056e6b2d3d00ff737c55be0f426f0a8e",
+    "last_capture": "captures/minimax__minimax-h3/aial-eval-page-fa0d32a6/20260913T122004Z"
+  },
+  "mistral-ai/ministral-3-14b::provider-live-d2bfe3ac": {
+    "versions": [
+      {
+        "sha256": "4198542c9ac7776856d379c957c323113950408dd0a72ecaa0095f7ed0c1f28d",
+        "dir": "captures/mistral-ai__ministral-3-14b/provider-live-d2bfe3ac/20260913T122025Z"
+      }
+    ],
+    "last_sha256": "4198542c9ac7776856d379c957c323113950408dd0a72ecaa0095f7ed0c1f28d",
+    "last_text_sha256": "b2c9b1fc6a8f5e1d2353fa1a60dfeda0d7b561d3376daa8085d04aab69f66f4e",
+    "last_capture": "captures/mistral-ai__ministral-3-14b/provider-live-d2bfe3ac/20260913T122025Z"
+  },
+  "mistral-ai/ministral-3-3b::provider-live-fa5281b6": {
+    "versions": [
+      {
+        "sha256": "1c2b332e6c5815184884a2c2f52b8e68858536c6bde0f914ad2d7ad3552f5562",
+        "dir": "captures/mistral-ai__ministral-3-3b/provider-live-fa5281b6/20260913T122130Z"
+      }
+    ],
+    "last_sha256": "1c2b332e6c5815184884a2c2f52b8e68858536c6bde0f914ad2d7ad3552f5562",
+    "last_text_sha256": "8ca7c9fb43559ccfc17e8ea027eb73f101453732307d42006dd912419e6b414b",
+    "last_capture": "captures/mistral-ai__ministral-3-3b/provider-live-fa5281b6/20260913T122130Z"
+  },
+  "mistral-ai/ministral-3-8b::provider-live-a15816bd": {
+    "versions": [
+      {
+        "sha256": "e7f6855bea94bdb663a9cd4aa622d3040efc8589a34da762080c0cc54fc977ea",
+        "dir": "captures/mistral-ai__ministral-3-8b/provider-live-a15816bd/20260913T122157Z"
+      }
+    ],
+    "last_sha256": "e7f6855bea94bdb663a9cd4aa622d3040efc8589a34da762080c0cc54fc977ea",
+    "last_text_sha256": "bcc968f0422793f49204ade255c41d9830fc958c794ece778fbcf7ea9955a266",
+    "last_capture": "captures/mistral-ai__ministral-3-8b/provider-live-a15816bd/20260913T122157Z"
+  },
+  "mistral-ai/mistral-large-3::provider-live-b535d265": {
+    "versions": [
+      {
+        "sha256": "22c6cae662df2b80486a79eeb30c8f99959bd0cf78d52950290141ec52c824bc",
+        "dir": "captures/mistral-ai__mistral-large-3/provider-live-b535d265/20260913T122445Z"
+      }
+    ],
+    "last_sha256": "22c6cae662df2b80486a79eeb30c8f99959bd0cf78d52950290141ec52c824bc",
+    "last_text_sha256": "af4567f17ccc13335848dc948e4ae2228bee3ad4fe41af26002cc5c970318249",
+    "last_capture": "captures/mistral-ai__mistral-large-3/provider-live-b535d265/20260913T122445Z"
+  },
+  "mistral-ai/mistral-small-4::provider-live-e50b5846": {
+    "versions": [
+      {
+        "sha256": "68cfbe25f05ca6f91eb0064ebf3fe0d40356c51108e13ea48098f1fa50edd0fb",
+        "dir": "captures/mistral-ai__mistral-small-4/provider-live-e50b5846/20260913T122520Z"
+      }
+    ],
+    "last_sha256": "68cfbe25f05ca6f91eb0064ebf3fe0d40356c51108e13ea48098f1fa50edd0fb",
+    "last_text_sha256": "1f488e7193dfe02360219db5744a3592163397f292b8bafadf6a61c86427f78e",
+    "last_capture": "captures/mistral-ai__mistral-small-4/provider-live-e50b5846/20260913T122520Z"
+  },
+  "cohere/north-micro-vision-instruct::aial-eval-511d2de2": {
+    "versions": [
+      {
+        "sha256": "e205c96b4a7cbafecf3cd7a691ac79ad6b6d8c102088082c97fc02650447c5bd",
+        "dir": "captures/cohere__north-micro-vision-instruct/aial-eval-511d2de2/20260913T122757Z"
+      }
+    ],
+    "last_sha256": "e205c96b4a7cbafecf3cd7a691ac79ad6b6d8c102088082c97fc02650447c5bd",
+    "last_text_sha256": "73d92cd25820d3c4e5ad5eba2df724a25014e006c68e9e73dfab39d47f7daa4d",
+    "last_capture": "captures/cohere__north-micro-vision-instruct/aial-eval-511d2de2/20260913T122757Z"
+  },
+  "cohere/north-micro-vision-instruct::aial-eval-page-901cfe62": {
+    "versions": [
+      {
+        "sha256": "968aec77da3a3d830bd8229988d1c9401b53b73589fa15b1491814c386fa8936",
+        "dir": "captures/cohere__north-micro-vision-instruct/aial-eval-page-901cfe62/20260913T122806Z"
+      }
+    ],
+    "last_sha256": "968aec77da3a3d830bd8229988d1c9401b53b73589fa15b1491814c386fa8936",
+    "last_text_sha256": "9f7de963dd185f07149993902768e9cb255306c7dcfa2d6806e34e4fc988384c",
+    "last_capture": "captures/cohere__north-micro-vision-instruct/aial-eval-page-901cfe62/20260913T122806Z"
+  },
+  "amazon/nova-2-sonic::aial-eval-95160039": {
+    "versions": [
+      {
+        "sha256": "fb3f1f30e553e9299f8b783ee463002ba481f849b24e4fc73bc3dc74c65f6b14",
+        "dir": "captures/amazon__nova-2-sonic/aial-eval-95160039/20260913T122829Z"
+      }
+    ],
+    "last_sha256": "fb3f1f30e553e9299f8b783ee463002ba481f849b24e4fc73bc3dc74c65f6b14",
+    "last_text_sha256": "f353be2c1fb99c0244a579b010aedc19cdfab2f177bc5c9bb7fe8336d0db8e24",
+    "last_capture": "captures/amazon__nova-2-sonic/aial-eval-95160039/20260913T122829Z"
+  },
+  "amazon/nova-2-sonic::aial-eval-page-e407406d": {
+    "versions": [
+      {
+        "sha256": "f90d249ade062df8c39992bf5b1e108c0f4ed1135f2ea5968eeb1e0ff67b10cd",
+        "dir": "captures/amazon__nova-2-sonic/aial-eval-page-e407406d/20260913T122836Z"
+      }
+    ],
+    "last_sha256": "f90d249ade062df8c39992bf5b1e108c0f4ed1135f2ea5968eeb1e0ff67b10cd",
+    "last_text_sha256": "8025fc193fc8ab393d2844cb94a5a166bd01c9c9c73b9a664783af80074c9a5a",
+    "last_capture": "captures/amazon__nova-2-sonic/aial-eval-page-e407406d/20260913T122836Z"
+  },
+  "nvidia/nemotron-nano::provider-live-14967d04": {
+    "versions": [
+      {
+        "sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+        "dir": "captures/nvidia__nemotron-nano/provider-live-14967d04/20260913T122843Z"
+      }
+    ],
+    "last_sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+    "last_text_sha256": "83f86c2f0a74b8de0cba1bfb790ed725625c73f13e8acc768bd8564e4f2bb680",
+    "last_capture": "captures/nvidia__nemotron-nano/provider-live-14967d04/20260913T122843Z"
+  },
+  "nvidia/nemotron-nano::aial-archive-abf97c7c": {
+    "versions": [
+      {
+        "sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+        "dir": "captures/nvidia__nemotron-nano/aial-archive-abf97c7c/20260913T123008Z"
+      }
+    ],
+    "last_sha256": "69ae78125314d050a048570dbcedf2f9efc74bbae73cb508725f20fb686b6c56",
+    "last_text_sha256": "83f86c2f0a74b8de0cba1bfb790ed725625c73f13e8acc768bd8564e4f2bb680",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-archive-abf97c7c/20260913T123008Z"
+  },
+  "nvidia/nemotron-nano::aial-eval-a337bf3b": {
+    "versions": [
+      {
+        "sha256": "e9214bfdcf59d62d59fc41c8267f4570d1263e38293205ebb6d76c44bbc3c2cd",
+        "dir": "captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260913T123014Z"
+      }
+    ],
+    "last_sha256": "e9214bfdcf59d62d59fc41c8267f4570d1263e38293205ebb6d76c44bbc3c2cd",
+    "last_text_sha256": "12e589df43d6f121d18baba5a06cfcd93d48a5429b58452ec47d7754d88de7ce",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260913T123014Z"
+  },
+  "nvidia/nemotron-nano::aial-eval-page-c036fb63": {
+    "versions": [
+      {
+        "sha256": "dc6fc6f896ab72af5e0d216b1aed275cf799857bc00162e1b66dcfadddcb031b",
+        "dir": "captures/nvidia__nemotron-nano/aial-eval-page-c036fb63/20260913T123025Z"
+      }
+    ],
+    "last_sha256": "dc6fc6f896ab72af5e0d216b1aed275cf799857bc00162e1b66dcfadddcb031b",
+    "last_text_sha256": "4e1bbbc548568b6d10cfc451ef4e3acef12cb71e8686691fee37499769020d23",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-page-c036fb63/20260913T123025Z"
+  },
+  "openai/gpt-5-2::aial-eval-dbed3211": {
+    "versions": [
+      {
+        "sha256": "12c129a63db696977801f81551586927f50855e84c2213be18614c2840bd268b",
+        "dir": "captures/openai__gpt-5-2/aial-eval-dbed3211/20260913T123032Z"
+      }
+    ],
+    "last_sha256": "12c129a63db696977801f81551586927f50855e84c2213be18614c2840bd268b",
+    "last_text_sha256": "d93593e9ce1f947f9fc971c33f5b403ff1bc5880ea650adc60de33f207fdb6f3",
+    "last_capture": "captures/openai__gpt-5-2/aial-eval-dbed3211/20260913T123032Z"
+  },
+  "openai/gpt-5-2::aial-eval-page-a2eed8f1": {
+    "versions": [
+      {
+        "sha256": "acacc00036baf116d1376ec6a8e25d2e042a16c7977b08900f9e3eaa7cc75000",
+        "dir": "captures/openai__gpt-5-2/aial-eval-page-a2eed8f1/20260913T123041Z"
+      }
+    ],
+    "last_sha256": "acacc00036baf116d1376ec6a8e25d2e042a16c7977b08900f9e3eaa7cc75000",
+    "last_text_sha256": "d0de943637d984ad2e81ddab79b5882db6cc284e5d7ebab9e7b652f005bcfd93",
+    "last_capture": "captures/openai__gpt-5-2/aial-eval-page-a2eed8f1/20260913T123041Z"
+  },
+  "openai/gpt-image-2::aial-eval-fc821018": {
+    "versions": [
+      {
+        "sha256": "baa60be09b2efd9e1e3c21b29103350e491e711ba8996da75d5d11eb0e5f4fc3",
+        "dir": "captures/openai__gpt-image-2/aial-eval-fc821018/20260913T123048Z"
+      }
+    ],
+    "last_sha256": "baa60be09b2efd9e1e3c21b29103350e491e711ba8996da75d5d11eb0e5f4fc3",
+    "last_text_sha256": "1de51d420ccf417b2e28011597657a17d51ba48ac3ccf6c8438f2d1b69119113",
+    "last_capture": "captures/openai__gpt-image-2/aial-eval-fc821018/20260913T123048Z"
+  },
+  "openai/gpt-image-2::aial-eval-page-857d8e73": {
+    "versions": [
+      {
+        "sha256": "15cf2d728371d25aa79af149075e68abc3a160a9badc4d5582e94e19b4f0631d",
+        "dir": "captures/openai__gpt-image-2/aial-eval-page-857d8e73/20260913T123055Z"
+      }
+    ],
+    "last_sha256": "15cf2d728371d25aa79af149075e68abc3a160a9badc4d5582e94e19b4f0631d",
+    "last_text_sha256": "0b45366c8df445c32daf1ddcfa7dbe1ff7812803eaf66953b2c321ce25d46187",
+    "last_capture": "captures/openai__gpt-image-2/aial-eval-page-857d8e73/20260913T123055Z"
+  },
+  "openai/gpt-5-4-nano::aial-eval-48cb0db6": {
+    "versions": [
+      {
+        "sha256": "3832a73a1680b5b4b903989ca7b220df06b7c803e2cb2be21f4bfd5bfb878e1c",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-48cb0db6/20260913T123103Z"
+      }
+    ],
+    "last_sha256": "3832a73a1680b5b4b903989ca7b220df06b7c803e2cb2be21f4bfd5bfb878e1c",
+    "last_text_sha256": "dbf707cb969c8c77a394a96e299c06a901bb1c15cadbce451d18ae344bb4d89f",
+    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-48cb0db6/20260913T123103Z"
+  },
+  "openai/gpt-5-4-nano::aial-eval-page-7fe6c46a": {
+    "versions": [
+      {
+        "sha256": "5679bba256ddec952c4d97479e835bef1b1c45fe6653901639c5f7f1a0cd9082",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-7fe6c46a/20260913T123110Z"
+      }
+    ],
+    "last_sha256": "5679bba256ddec952c4d97479e835bef1b1c45fe6653901639c5f7f1a0cd9082",
+    "last_text_sha256": "b72524980793f2f188725791cb8b8a00b310d6a2b1e59b688e50fa1b68cc6ff7",
+    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-page-7fe6c46a/20260913T123110Z"
+  },
+  "openai/gpt6::provider-live-b32be224": {
+    "versions": [
+      {
+        "sha256": "931d16d07381abe0c1e38962af78f08c937b88a1f310385e77bb42fd3fa088cb",
+        "dir": "captures/openai__gpt6/provider-live-b32be224/20260913T123118Z"
+      }
+    ],
+    "last_sha256": "931d16d07381abe0c1e38962af78f08c937b88a1f310385e77bb42fd3fa088cb",
+    "last_text_sha256": "c581f69986b8a584905ee0b3eaccf1656d505deee322e2c17d05dad21adfacab",
+    "last_capture": "captures/openai__gpt6/provider-live-b32be224/20260913T123118Z"
+  },
+  "openai/gpt6::aial-eval-a900ea6c": {
+    "versions": [
+      {
+        "sha256": "8376514bc6f8f33925c09c5d4ad78b1edd5c15cf54d218ccd6215d4b111b5450",
+        "dir": "captures/openai__gpt6/aial-eval-a900ea6c/20260913T123328Z"
+      }
+    ],
+    "last_sha256": "8376514bc6f8f33925c09c5d4ad78b1edd5c15cf54d218ccd6215d4b111b5450",
+    "last_text_sha256": "6c7265623182ad198a40d43b621097a1acc67bc7eaf3ec24da6451dfc454b159",
+    "last_capture": "captures/openai__gpt6/aial-eval-a900ea6c/20260913T123328Z"
+  },
+  "openai/gpt6::aial-eval-page-f24b3fa3": {
+    "versions": [
+      {
+        "sha256": "a95bc784e5bec5a706913b6a9adb120a743016661fc2acc423e10397b0bb65f0",
+        "dir": "captures/openai__gpt6/aial-eval-page-f24b3fa3/20260913T123339Z"
+      }
+    ],
+    "last_sha256": "a95bc784e5bec5a706913b6a9adb120a743016661fc2acc423e10397b0bb65f0",
+    "last_text_sha256": "658c57aae026916dd51d638d7cefaa634785b56163fe4dfd999bb78423ffbe08",
+    "last_capture": "captures/openai__gpt6/aial-eval-page-f24b3fa3/20260913T123339Z"
+  },
+  "openllm-france/luciole-base::aial-archive-2c4f666a": {
+    "versions": [
+      {
+        "sha256": "b1dac9dc75c128f1a4c837bb648961452c50cd815822fc512a3e394b07dc016e",
+        "dir": "captures/openllm-france__luciole-base/aial-archive-2c4f666a/20260913T123349Z"
+      }
+    ],
+    "last_sha256": "b1dac9dc75c128f1a4c837bb648961452c50cd815822fc512a3e394b07dc016e",
+    "last_text_sha256": "b15d2476e377af7b52c83e1d87b2b423d21aaadc69a4e393bdd3cbd808e957d5",
+    "last_capture": "captures/openllm-france__luciole-base/aial-archive-2c4f666a/20260913T123349Z"
+  },
+  "openllm-france/luciole-base::aial-eval-29506391": {
+    "versions": [
+      {
+        "sha256": "2a36112374e13982f1e41ddf335e0308d28064c2c3ae52281d2661103f0e9818",
+        "dir": "captures/openllm-france__luciole-base/aial-eval-29506391/20260913T123354Z"
+      }
+    ],
+    "last_sha256": "2a36112374e13982f1e41ddf335e0308d28064c2c3ae52281d2661103f0e9818",
+    "last_text_sha256": "ef7bbf261adb3e5e85c3c8f099502c522a6972144f6016928bb85833bb227e90",
+    "last_capture": "captures/openllm-france__luciole-base/aial-eval-29506391/20260913T123354Z"
+  },
+  "openllm-france/luciole-base::aial-eval-page-17021937": {
+    "versions": [
+      {
+        "sha256": "bfd2fb80e6bebb9ad5c2397246dc6fafa073a516566eeb8e49d61ee0cbad269a",
+        "dir": "captures/openllm-france__luciole-base/aial-eval-page-17021937/20260913T123401Z"
+      }
+    ],
+    "last_sha256": "bfd2fb80e6bebb9ad5c2397246dc6fafa073a516566eeb8e49d61ee0cbad269a",
+    "last_text_sha256": "53e88adab21f849101d36d13932537dd77a1c083d9b4737eae43af003989c3c1",
+    "last_capture": "captures/openllm-france__luciole-base/aial-eval-page-17021937/20260913T123401Z"
+  },
+  "openllm-france/luciole-instruct1-1::aial-archive-beb925a1": {
+    "versions": [
+      {
+        "sha256": "7698fd7f846c2e6b4b319bdaff9af1f4e4a6b79de00c74a10a8d85ff47bc34cc",
+        "dir": "captures/openllm-france__luciole-instruct1-1/aial-archive-beb925a1/20260913T123414Z"
+      }
+    ],
+    "last_sha256": "7698fd7f846c2e6b4b319bdaff9af1f4e4a6b79de00c74a10a8d85ff47bc34cc",
+    "last_text_sha256": "406687b11fafeadda6ab22b00f2acc33f7dc2bc395088aaaf470ccd702e191fa",
+    "last_capture": "captures/openllm-france__luciole-instruct1-1/aial-archive-beb925a1/20260913T123414Z"
+  },
+  "openllm-france/luciole-instruct1-1::aial-eval-8e95d51f": {
+    "versions": [
+      {
+        "sha256": "5adcbfbc48000b09574e65bc72a4f5dc9e1696da6e9ad7eb77eee774b5a0cf34",
+        "dir": "captures/openllm-france__luciole-instruct1-1/aial-eval-8e95d51f/20260913T123419Z"
+      }
+    ],
+    "last_sha256": "5adcbfbc48000b09574e65bc72a4f5dc9e1696da6e9ad7eb77eee774b5a0cf34",
+    "last_text_sha256": "7ec3f7996e1d65fb5243a857da6923c5051a3c4c858536e002ec0e9ee58fb56b",
+    "last_capture": "captures/openllm-france__luciole-instruct1-1/aial-eval-8e95d51f/20260913T123419Z"
+  },
+  "openllm-france/luciole-instruct1-1::aial-eval-page-04c07069": {
+    "versions": [
+      {
+        "sha256": "233e0145fd1165b432d53850fbdcb14090d8bf3a681ab80042ec6e0a715472af",
+        "dir": "captures/openllm-france__luciole-instruct1-1/aial-eval-page-04c07069/20260913T123427Z"
+      }
+    ],
+    "last_sha256": "233e0145fd1165b432d53850fbdcb14090d8bf3a681ab80042ec6e0a715472af",
+    "last_text_sha256": "8ef84c1b4928662b0e8d72159bfb9fefdf6367392e7cf1a867e952cdefe6a93d",
+    "last_capture": "captures/openllm-france__luciole-instruct1-1/aial-eval-page-04c07069/20260913T123427Z"
+  },
+  "writer/palmyra-x6::aial-eval-9b8498c2": {
+    "versions": [
+      {
+        "sha256": "cb7aa98e70e8d3521a79e1ec94ae699408a9515d4a40b8952399d9890f8e5f78",
+        "dir": "captures/writer__palmyra-x6/aial-eval-9b8498c2/20260913T123441Z"
+      }
+    ],
+    "last_sha256": "cb7aa98e70e8d3521a79e1ec94ae699408a9515d4a40b8952399d9890f8e5f78",
+    "last_text_sha256": "d1d56ca606a84463dfac16404d980ca25263e33b8176c442df10245ec65dad55",
+    "last_capture": "captures/writer__palmyra-x6/aial-eval-9b8498c2/20260913T123441Z"
+  },
+  "writer/palmyra-x6::aial-eval-page-559ad63e": {
+    "versions": [
+      {
+        "sha256": "b57820565ed3b9495fedba4eb6bb3a3ef8e340f9dc4f2ab0d2f1a17245085452",
+        "dir": "captures/writer__palmyra-x6/aial-eval-page-559ad63e/20260913T123448Z"
+      }
+    ],
+    "last_sha256": "b57820565ed3b9495fedba4eb6bb3a3ef8e340f9dc4f2ab0d2f1a17245085452",
+    "last_text_sha256": "064ffd881dbc6e3bb2b3e236f5f8dc816b92d697132f929a3b047080051b10b6",
+    "last_capture": "captures/writer__palmyra-x6/aial-eval-page-559ad63e/20260913T123448Z"
+  },
+  "microsoft/phi-1-5::provider-live-9f089f58": {
+    "versions": [
+      {
+        "sha256": "741d9aa6f11c3cc5aa0c097731133f5055e919a5bac3e014a764ba9b93e05fcb",
+        "dir": "captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z"
+      }
+    ],
+    "last_sha256": "741d9aa6f11c3cc5aa0c097731133f5055e919a5bac3e014a764ba9b93e05fcb",
+    "last_text_sha256": "424d29ca2a7c0ea55c88557d2829351685c83544d547035b1a7ffac8817174a1",
+    "last_capture": "captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z"
+  },
+  "microsoft/phi-1-5::aial-archive-73814f64": {
+    "versions": [
+      {
+        "sha256": "93e4e78152f59b58ea8e379b8de64470d3c6aeae8e9fd7797365b03b329e0d7e",
+        "dir": "captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z"
+      }
+    ],
+    "last_sha256": "93e4e78152f59b58ea8e379b8de64470d3c6aeae8e9fd7797365b03b329e0d7e",
+    "last_text_sha256": "c276fa7b47f117e7caaf9fdfacd44c28bce7810403695de096b1d109f97326bf",
+    "last_capture": "captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z"
+  },
+  "microsoft/phi-1-5::aial-eval-87f63a03": {
+    "versions": [
+      {
+        "sha256": "6b0189ed3952f389b150f399fdca88239fa2ddf71d559758dbd01bdce53fb626",
+        "dir": "captures/microsoft__phi-1-5/aial-eval-87f63a03/20260913T123520Z"
+      }
+    ],
+    "last_sha256": "6b0189ed3952f389b150f399fdca88239fa2ddf71d559758dbd01bdce53fb626",
+    "last_text_sha256": "ec211a867b8e3ac58042eee58c7c6bad4bf489c8fede5d8cef9521d13482db11",
+    "last_capture": "captures/microsoft__phi-1-5/aial-eval-87f63a03/20260913T123520Z"
+  },
+  "microsoft/phi-1-5::aial-eval-page-bb30699b": {
+    "versions": [
+      {
+        "sha256": "4781e61a13866cc2e889c3c08295ebd6097df2ed0a501f5e1634d8ab9c436391",
+        "dir": "captures/microsoft__phi-1-5/aial-eval-page-bb30699b/20260913T123528Z"
+      }
+    ],
+    "last_sha256": "4781e61a13866cc2e889c3c08295ebd6097df2ed0a501f5e1634d8ab9c436391",
+    "last_text_sha256": "75b18f287a77691ee25032c74857f6999f67da8fb1337d9f8f6a4a251571c877",
+    "last_capture": "captures/microsoft__phi-1-5/aial-eval-page-bb30699b/20260913T123528Z"
+  },
+  "microsoft/phi-1::provider-live-c42e88a5": {
+    "versions": [
+      {
+        "sha256": "54127d2839a297b9f51ec96442f0decb42b0d26510f243bcf831c72f6228df3a",
+        "dir": "captures/microsoft__phi-1/provider-live-c42e88a5/20260913T123535Z"
+      }
+    ],
+    "last_sha256": "54127d2839a297b9f51ec96442f0decb42b0d26510f243bcf831c72f6228df3a",
+    "last_text_sha256": "b4cd5a4801c6713d9d6cd22486a38660019f1b52d5c737030f295bd7a80ecea9",
+    "last_capture": "captures/microsoft__phi-1/provider-live-c42e88a5/20260913T123535Z"
+  },
+  "microsoft/phi-1::aial-archive-028efc10": {
+    "versions": [
+      {
+        "sha256": "dec291766ae33b1ba5fd9e9da584d58db1193c1145b68f32b171cc845333b3b6",
+        "dir": "captures/microsoft__phi-1/aial-archive-028efc10/20260913T123555Z"
+      }
+    ],
+    "last_sha256": "dec291766ae33b1ba5fd9e9da584d58db1193c1145b68f32b171cc845333b3b6",
+    "last_text_sha256": "c2661eaba40ce937119b42e80284870e755851a14307ee189bd947fd590d3558",
+    "last_capture": "captures/microsoft__phi-1/aial-archive-028efc10/20260913T123555Z"
+  },
+  "microsoft/phi-1::aial-eval-2a8100fb": {
+    "versions": [
+      {
+        "sha256": "85fd65964d044a7f29531747191ba1fa1ccacf28123729c1751456237b1731dc",
+        "dir": "captures/microsoft__phi-1/aial-eval-2a8100fb/20260913T123602Z"
+      }
+    ],
+    "last_sha256": "85fd65964d044a7f29531747191ba1fa1ccacf28123729c1751456237b1731dc",
+    "last_text_sha256": "60de0af705fb730cc5c14f80409075a70e7edd6926322eaa20838c54a7348576",
+    "last_capture": "captures/microsoft__phi-1/aial-eval-2a8100fb/20260913T123602Z"
+  },
+  "microsoft/phi-1::aial-eval-page-fad255db": {
+    "versions": [
+      {
+        "sha256": "3319f566415d9eba320cd1b39b80441bd39960b425b95859d279c6f5566f33cf",
+        "dir": "captures/microsoft__phi-1/aial-eval-page-fad255db/20260913T123608Z"
+      }
+    ],
+    "last_sha256": "3319f566415d9eba320cd1b39b80441bd39960b425b95859d279c6f5566f33cf",
+    "last_text_sha256": "e0e377d8e1fd35574aad9a7945c255a4fddbe31a37da9b058ae5d4639fd21e25",
+    "last_capture": "captures/microsoft__phi-1/aial-eval-page-fad255db/20260913T123608Z"
+  },
+  "microsoft/phi-2::provider-live-fe435287": {
+    "versions": [
+      {
+        "sha256": "a12a5d701ee9e71bc1dde42e53c0e82842f38a6ecbebd595e3c72048c9fb499f",
+        "dir": "captures/microsoft__phi-2/provider-live-fe435287/20260913T123615Z"
+      }
+    ],
+    "last_sha256": "a12a5d701ee9e71bc1dde42e53c0e82842f38a6ecbebd595e3c72048c9fb499f",
+    "last_text_sha256": "c2d159fdd4868be72b45612a24df0821c61fcd3b8d94e12311f3ddedfa28cc5f",
+    "last_capture": "captures/microsoft__phi-2/provider-live-fe435287/20260913T123615Z"
+  },
+  "microsoft/phi-2::aial-archive-11aa7a8c": {
+    "versions": [
+      {
+        "sha256": "5e8edd3132ad5377616198725f9de3b8653c2ffb55afbc48bcdf37d80fb9c455",
+        "dir": "captures/microsoft__phi-2/aial-archive-11aa7a8c/20260913T123925Z"
+      }
+    ],
+    "last_sha256": "5e8edd3132ad5377616198725f9de3b8653c2ffb55afbc48bcdf37d80fb9c455",
+    "last_text_sha256": "77c49399fee215a7825b83dc77c44d35b16604c36f22f835f76188a73399d646",
+    "last_capture": "captures/microsoft__phi-2/aial-archive-11aa7a8c/20260913T123925Z"
+  },
+  "microsoft/phi-2::aial-eval-075c6a63": {
+    "versions": [
+      {
+        "sha256": "9d2a0488f4409f653da0aa7db648c2d5fa6fed0e5a0372b091b691f4b8b680b0",
+        "dir": "captures/microsoft__phi-2/aial-eval-075c6a63/20260913T123931Z"
+      }
+    ],
+    "last_sha256": "9d2a0488f4409f653da0aa7db648c2d5fa6fed0e5a0372b091b691f4b8b680b0",
+    "last_text_sha256": "f5691ec28c90ff79156f5bd52ad00118278ade8927177386015b959ffe708f4e",
+    "last_capture": "captures/microsoft__phi-2/aial-eval-075c6a63/20260913T123931Z"
+  },
+  "microsoft/phi-2::aial-eval-page-9ef36d2f": {
+    "versions": [
+      {
+        "sha256": "c0c0ea89f78a42dae4ef4efe374f07c31861bd792333d51b6fcb80104013aa6e",
+        "dir": "captures/microsoft__phi-2/aial-eval-page-9ef36d2f/20260913T123939Z"
+      }
+    ],
+    "last_sha256": "c0c0ea89f78a42dae4ef4efe374f07c31861bd792333d51b6fcb80104013aa6e",
+    "last_text_sha256": "87ae170658d997805f4d8fdb58afa0bb52a2478679cf062fbfdf466d04d8d063",
+    "last_capture": "captures/microsoft__phi-2/aial-eval-page-9ef36d2f/20260913T123939Z"
+  },
+  "microsoft/phi-3-5-vision-instruct::provider-live-6204aaf7": {
+    "versions": [
+      {
+        "sha256": "032ef6f50fd7bc98b696a4778a46ea8ba09773031a7a5f591fd7280b0c476701",
+        "dir": "captures/microsoft__phi-3-5-vision-instruct/provider-live-6204aaf7/20260913T123945Z"
+      }
+    ],
+    "last_sha256": "032ef6f50fd7bc98b696a4778a46ea8ba09773031a7a5f591fd7280b0c476701",
+    "last_text_sha256": "e3e1c9a5c4962c6a924b680d5a34a06b834cc9692b9fa8f568393354f47d5e62",
+    "last_capture": "captures/microsoft__phi-3-5-vision-instruct/provider-live-6204aaf7/20260913T123945Z"
+  },
+  "microsoft/phi-3-5-vision-instruct::aial-archive-4263bcc7": {
+    "versions": [
+      {
+        "sha256": "87d84c4c1978dc1e6807e6e3983df8cba6e3890ea4e39195c8da4ba013ac6dbe",
+        "dir": "captures/microsoft__phi-3-5-vision-instruct/aial-archive-4263bcc7/20260913T124156Z"
+      }
+    ],
+    "last_sha256": "87d84c4c1978dc1e6807e6e3983df8cba6e3890ea4e39195c8da4ba013ac6dbe",
+    "last_text_sha256": "e32b95d0d878d35ad0f82974f508ed6ecf81decf4945fb383d4758dcbba97ea0",
+    "last_capture": "captures/microsoft__phi-3-5-vision-instruct/aial-archive-4263bcc7/20260913T124156Z"
+  },
+  "microsoft/phi-3-5-vision-instruct::aial-eval-6f104d06": {
+    "versions": [
+      {
+        "sha256": "bc59e57b3c4345779873e7b056d503d1b4e2fe0563840a7e148cc43037edb128",
+        "dir": "captures/microsoft__phi-3-5-vision-instruct/aial-eval-6f104d06/20260913T124202Z"
+      }
+    ],
+    "last_sha256": "bc59e57b3c4345779873e7b056d503d1b4e2fe0563840a7e148cc43037edb128",
+    "last_text_sha256": "83c5972efd226bd60c71ceb9424a9fd2a4e4966c9894e0ee97916323866e718f",
+    "last_capture": "captures/microsoft__phi-3-5-vision-instruct/aial-eval-6f104d06/20260913T124202Z"
+  },
+  "microsoft/phi-3-5-vision-instruct::aial-eval-page-e14527ec": {
+    "versions": [
+      {
+        "sha256": "bd393bfcb61d1727bda47db209bf5f1aa70edaa712b36e93989a3d2b845e9644",
+        "dir": "captures/microsoft__phi-3-5-vision-instruct/aial-eval-page-e14527ec/20260913T124211Z"
+      }
+    ],
+    "last_sha256": "bd393bfcb61d1727bda47db209bf5f1aa70edaa712b36e93989a3d2b845e9644",
+    "last_text_sha256": "13a0f65da6b2c0516cfbeb330d11e4a3006de0aad42864206eaf6dea01cea56f",
+    "last_capture": "captures/microsoft__phi-3-5-vision-instruct/aial-eval-page-e14527ec/20260913T124211Z"
+  },
+  "microsoft/phi-3::provider-live-8587171e": {
+    "versions": [
+      {
+        "sha256": "7d7a019ce5fe4953e2ea99dc094b4eda9c2e07ce3fb10e82b0a57aa4bce2e348",
+        "dir": "captures/microsoft__phi-3/provider-live-8587171e/20260913T124217Z"
+      }
+    ],
+    "last_sha256": "7d7a019ce5fe4953e2ea99dc094b4eda9c2e07ce3fb10e82b0a57aa4bce2e348",
+    "last_text_sha256": "d40a4b138885fc07e333470b77c07c38dd305f95fc9646037f8e2db7cc08c7ff",
+    "last_capture": "captures/microsoft__phi-3/provider-live-8587171e/20260913T124217Z"
+  },
+  "microsoft/phi-3::aial-archive-759d1675": {
+    "versions": [
+      {
+        "sha256": "efd4825c44868ebd35171257aac6e5cfb3a87f11585d062cfbd7ba27efa7a583",
+        "dir": "captures/microsoft__phi-3/aial-archive-759d1675/20260913T124242Z"
+      }
+    ],
+    "last_sha256": "efd4825c44868ebd35171257aac6e5cfb3a87f11585d062cfbd7ba27efa7a583",
+    "last_text_sha256": "36f5eefe73e0b1bc7d7088052d6e69ff4d56c98d57a1960440ca9e229ca3b706",
+    "last_capture": "captures/microsoft__phi-3/aial-archive-759d1675/20260913T124242Z"
+  },
+  "microsoft/phi-3::aial-eval-06be2fc2": {
+    "versions": [
+      {
+        "sha256": "3ea71b45d42372be8a1cbe7605a059b3267fa9254c30bfe823e0a95989790e7c",
+        "dir": "captures/microsoft__phi-3/aial-eval-06be2fc2/20260913T124247Z"
+      }
+    ],
+    "last_sha256": "3ea71b45d42372be8a1cbe7605a059b3267fa9254c30bfe823e0a95989790e7c",
+    "last_text_sha256": "440ce110d2574763e68df242d1d378918f93941e9e564fbd09a73c2ce5508821",
+    "last_capture": "captures/microsoft__phi-3/aial-eval-06be2fc2/20260913T124247Z"
+  },
+  "microsoft/phi-3::aial-eval-page-1f592818": {
+    "versions": [
+      {
+        "sha256": "de5b4913ef2d83d4c2f31cc660b4f9fd342c8cb044bdf687bab1aef5777fd409",
+        "dir": "captures/microsoft__phi-3/aial-eval-page-1f592818/20260913T124253Z"
+      }
+    ],
+    "last_sha256": "de5b4913ef2d83d4c2f31cc660b4f9fd342c8cb044bdf687bab1aef5777fd409",
+    "last_text_sha256": "910c999430f8a5abb29f3d73d3dcc9a404a7cabd6428c408cc98f47be01158e0",
+    "last_capture": "captures/microsoft__phi-3/aial-eval-page-1f592818/20260913T124253Z"
+  },
+  "microsoft/phi-4-mini-instruct::provider-live-c568ab97": {
+    "versions": [
+      {
+        "sha256": "470514f8d8408e1254c9487401dc4d7d2edb4e08f0453f7bbfb5e01dbb976456",
+        "dir": "captures/microsoft__phi-4-mini-instruct/provider-live-c568ab97/20260913T124258Z"
+      }
+    ],
+    "last_sha256": "470514f8d8408e1254c9487401dc4d7d2edb4e08f0453f7bbfb5e01dbb976456",
+    "last_text_sha256": "23fc00d91c5a399b7b0ba06ef75f6f3dd1c1d8c93070c437a876404a2687803b",
+    "last_capture": "captures/microsoft__phi-4-mini-instruct/provider-live-c568ab97/20260913T124258Z"
+  },
+  "microsoft/phi-4-mini-instruct::aial-archive-6949521e": {
+    "versions": [
+      {
+        "sha256": "981988d89a5e1802d88d86a268a986c5e034050ba819a273b2f25c85d8b4daaa",
+        "dir": "captures/microsoft__phi-4-mini-instruct/aial-archive-6949521e/20260913T124316Z"
+      }
+    ],
+    "last_sha256": "981988d89a5e1802d88d86a268a986c5e034050ba819a273b2f25c85d8b4daaa",
+    "last_text_sha256": "c0a384f5fc6b486b690e068f43a6a0adaefc8bcca1b06850e96cb34fe3eedc6d",
+    "last_capture": "captures/microsoft__phi-4-mini-instruct/aial-archive-6949521e/20260913T124316Z"
+  },
+  "microsoft/phi-4-mini-instruct::aial-eval-f2606084": {
+    "versions": [
+      {
+        "sha256": "d3f88cf8cf93c083ee799fe66ce9209fd3ac4a3d7e27360298cc16f7e700fc69",
+        "dir": "captures/microsoft__phi-4-mini-instruct/aial-eval-f2606084/20260913T124323Z"
+      }
+    ],
+    "last_sha256": "d3f88cf8cf93c083ee799fe66ce9209fd3ac4a3d7e27360298cc16f7e700fc69",
+    "last_text_sha256": "dc0f9d365faf4a5c09b81de0ff730510d6892499f40837784f20e8efff0884c4",
+    "last_capture": "captures/microsoft__phi-4-mini-instruct/aial-eval-f2606084/20260913T124323Z"
+  },
+  "microsoft/phi-4-mini-instruct::aial-eval-page-e45df178": {
+    "versions": [
+      {
+        "sha256": "3cf6cecdd3524a1d85882e8cb8da04cdd65cf1fbca542598558364522df95afa",
+        "dir": "captures/microsoft__phi-4-mini-instruct/aial-eval-page-e45df178/20260913T124334Z"
+      }
+    ],
+    "last_sha256": "3cf6cecdd3524a1d85882e8cb8da04cdd65cf1fbca542598558364522df95afa",
+    "last_text_sha256": "39c092c665faa95e5eabc101cfaa6c78f6264a7935201db388edb04aa5197ed4",
+    "last_capture": "captures/microsoft__phi-4-mini-instruct/aial-eval-page-e45df178/20260913T124334Z"
+  },
+  "microsoft/phi-4-multimodal-instruct::provider-live-9f76c236": {
+    "versions": [
+      {
+        "sha256": "30da70419cb793a917e73c89dc585c802bc8a5cb6c54249ddf138329bff0f2c1",
+        "dir": "captures/microsoft__phi-4-multimodal-instruct/provider-live-9f76c236/20260913T124340Z"
+      }
+    ],
+    "last_sha256": "30da70419cb793a917e73c89dc585c802bc8a5cb6c54249ddf138329bff0f2c1",
+    "last_text_sha256": "f28e456ae75abcbbc7127782e731738a83ff949a06188882aab9030f54180dd9",
+    "last_capture": "captures/microsoft__phi-4-multimodal-instruct/provider-live-9f76c236/20260913T124340Z"
+  },
+  "microsoft/phi-4-multimodal-instruct::aial-eval-d5ee3c5b": {
+    "versions": [
+      {
+        "sha256": "bfd288ca1edd8f338aebf1930e40530df6a7610e858040173ba621f67663cee9",
+        "dir": "captures/microsoft__phi-4-multimodal-instruct/aial-eval-d5ee3c5b/20260913T124357Z"
+      }
+    ],
+    "last_sha256": "bfd288ca1edd8f338aebf1930e40530df6a7610e858040173ba621f67663cee9",
+    "last_text_sha256": "86f4dcbcbb68318aa80d4714f117b92d0260e4041d6284fd532e0aebdfc71021",
+    "last_capture": "captures/microsoft__phi-4-multimodal-instruct/aial-eval-d5ee3c5b/20260913T124357Z"
+  },
+  "microsoft/phi-4-multimodal-instruct::aial-eval-page-0fa0a0f5": {
+    "versions": [
+      {
+        "sha256": "299001022f71c8ffd7f1f770ab5a425f1ba9957305f3e66ca8d3bd136bcf6039",
+        "dir": "captures/microsoft__phi-4-multimodal-instruct/aial-eval-page-0fa0a0f5/20260913T124406Z"
+      }
+    ],
+    "last_sha256": "299001022f71c8ffd7f1f770ab5a425f1ba9957305f3e66ca8d3bd136bcf6039",
+    "last_text_sha256": "0e50a2f872249b51cbd484b394bfc766a6630c03be6bc3da6f12c8c5f1772d12",
+    "last_capture": "captures/microsoft__phi-4-multimodal-instruct/aial-eval-page-0fa0a0f5/20260913T124406Z"
+  },
+  "microsoft/phi-4-reasoning::provider-live-36de6ad3": {
+    "versions": [
+      {
+        "sha256": "6c59a8cab7f9fa27ce9be09aa2c13c523faa863f8fca8a723bce4cdef029cfc2",
+        "dir": "captures/microsoft__phi-4-reasoning/provider-live-36de6ad3/20260913T124411Z"
+      }
+    ],
+    "last_sha256": "6c59a8cab7f9fa27ce9be09aa2c13c523faa863f8fca8a723bce4cdef029cfc2",
+    "last_text_sha256": "808e37d07c5cb4435c13832a482343b0d59165a72e67a455505cc684052a2b39",
+    "last_capture": "captures/microsoft__phi-4-reasoning/provider-live-36de6ad3/20260913T124411Z"
+  },
+  "microsoft/phi-4-reasoning::aial-archive-cfe59f0e": {
+    "versions": [
+      {
+        "sha256": "ff2d9002c4e3dccb0b548b987fe3bd9cc6b4462595f35860e0418c58c9422905",
+        "dir": "captures/microsoft__phi-4-reasoning/aial-archive-cfe59f0e/20260913T124432Z"
+      }
+    ],
+    "last_sha256": "ff2d9002c4e3dccb0b548b987fe3bd9cc6b4462595f35860e0418c58c9422905",
+    "last_text_sha256": "284814472a0bad9f16cc0733d60b43ccf26726f128955515bb5476a703b6a510",
+    "last_capture": "captures/microsoft__phi-4-reasoning/aial-archive-cfe59f0e/20260913T124432Z"
+  },
+  "microsoft/phi-4-reasoning::aial-eval-5ac4626b": {
+    "versions": [
+      {
+        "sha256": "e45e47c01b71e4002a12208e05452e15426b7d1189c884bf99e5de873bb036ee",
+        "dir": "captures/microsoft__phi-4-reasoning/aial-eval-5ac4626b/20260913T124437Z"
+      }
+    ],
+    "last_sha256": "e45e47c01b71e4002a12208e05452e15426b7d1189c884bf99e5de873bb036ee",
+    "last_text_sha256": "b31b29ac68d62c9197225632f56b924349e2793a0ec0cd4c8036777e10c00e4c",
+    "last_capture": "captures/microsoft__phi-4-reasoning/aial-eval-5ac4626b/20260913T124437Z"
+  },
+  "microsoft/phi-4-reasoning::aial-eval-page-5edefa30": {
+    "versions": [
+      {
+        "sha256": "cffc28b4c2d4124e06e107b592e1913b4f086ed171753fd617f9534f02074083",
+        "dir": "captures/microsoft__phi-4-reasoning/aial-eval-page-5edefa30/20260913T124448Z"
+      }
+    ],
+    "last_sha256": "cffc28b4c2d4124e06e107b592e1913b4f086ed171753fd617f9534f02074083",
+    "last_text_sha256": "856c4bec5b90886365ea51c6a76b32bc3a605c18011302083ac340934252a46c",
+    "last_capture": "captures/microsoft__phi-4-reasoning/aial-eval-page-5edefa30/20260913T124448Z"
+  },
+  "microsoft/phi-moe::provider-live-d0711f07": {
+    "versions": [
+      {
+        "sha256": "dcc9cad772ef4e56bee0035536df7297afa1277d8d48d5c96575eea956b58ba0",
+        "dir": "captures/microsoft__phi-moe/provider-live-d0711f07/20260913T124505Z"
+      }
+    ],
+    "last_sha256": "dcc9cad772ef4e56bee0035536df7297afa1277d8d48d5c96575eea956b58ba0",
+    "last_text_sha256": "0111588fb2065a44c8e947d85da5a1803314f8af9f55b72f5fdd07e7acff6a4a",
+    "last_capture": "captures/microsoft__phi-moe/provider-live-d0711f07/20260913T124505Z"
+  },
+  "microsoft/phi-moe::aial-archive-3392d11c": {
+    "versions": [
+      {
+        "sha256": "fa0f62be9fd9134497225b7b73c967d5750bf759dc41d59e6e3054542edeea99",
+        "dir": "captures/microsoft__phi-moe/aial-archive-3392d11c/20260913T124908Z"
+      }
+    ],
+    "last_sha256": "fa0f62be9fd9134497225b7b73c967d5750bf759dc41d59e6e3054542edeea99",
+    "last_text_sha256": "90d90e288e102358176f9edc616c0c5cc3bc2a27e6eac9a2415922968e9cf3ec",
+    "last_capture": "captures/microsoft__phi-moe/aial-archive-3392d11c/20260913T124908Z"
+  },
+  "microsoft/phi-moe::aial-eval-58477fdc": {
+    "versions": [
+      {
+        "sha256": "7965b287129b0a96e9ddfb7638a49cb11c34b2b160d7432e86358db4aa55bd14",
+        "dir": "captures/microsoft__phi-moe/aial-eval-58477fdc/20260913T124913Z"
+      }
+    ],
+    "last_sha256": "7965b287129b0a96e9ddfb7638a49cb11c34b2b160d7432e86358db4aa55bd14",
+    "last_text_sha256": "e0d2f28aa5f915c84094d0801c78b802c5e420d90b3c1c3229fccf5f1a51d43c",
+    "last_capture": "captures/microsoft__phi-moe/aial-eval-58477fdc/20260913T124913Z"
+  },
+  "microsoft/phi-moe::aial-eval-page-cd4dc466": {
+    "versions": [
+      {
+        "sha256": "73c637b7fd9439cb9a086e3c3dad5823f1a09f2bcf9ef2ce468a93a3162e897a",
+        "dir": "captures/microsoft__phi-moe/aial-eval-page-cd4dc466/20260913T124923Z"
+      }
+    ],
+    "last_sha256": "73c637b7fd9439cb9a086e3c3dad5823f1a09f2bcf9ef2ce468a93a3162e897a",
+    "last_text_sha256": "2c996ffb19abf8065e2f4a282901bc23e8af6529f0fed7f49fb4c583de7ff70e",
+    "last_capture": "captures/microsoft__phi-moe/aial-eval-page-cd4dc466/20260913T124923Z"
+  },
+  "pleias/baguettotron::provider-live-b118efc2": {
+    "versions": [
+      {
+        "sha256": "97b0bdbfd78b51a299ec30d37e59938c891d9ee7922133e861ed715b55d96583",
+        "dir": "captures/pleias__baguettotron/provider-live-b118efc2/20260913T124928Z"
+      }
+    ],
+    "last_sha256": "97b0bdbfd78b51a299ec30d37e59938c891d9ee7922133e861ed715b55d96583",
+    "last_text_sha256": "e8fcae9dee2e603994a6a33b8d5da231f13660bede25e19a645d82c63115138e",
+    "last_capture": "captures/pleias__baguettotron/provider-live-b118efc2/20260913T124928Z"
+  },
+  "pleias/baguettotron::aial-archive-6d8ff52c": {
+    "versions": [
+      {
+        "sha256": "74c5db3df4962d252f5a6cc8735eabc1cf1e3bed570b1178bc05265f82a573e5",
+        "dir": "captures/pleias__baguettotron/aial-archive-6d8ff52c/20260913T125009Z"
+      }
+    ],
+    "last_sha256": "74c5db3df4962d252f5a6cc8735eabc1cf1e3bed570b1178bc05265f82a573e5",
+    "last_text_sha256": "8e53ce8da3632dc70d922503e53b1637fe205c644bb78392cf3eaab51da8673d",
+    "last_capture": "captures/pleias__baguettotron/aial-archive-6d8ff52c/20260913T125009Z"
+  },
+  "pleias/baguettotron::aial-eval-82a693ba": {
+    "versions": [
+      {
+        "sha256": "ef7777409014528ee463c413faeb6866a1b14f7fa7e094ffdf03cf38c0b584fd",
+        "dir": "captures/pleias__baguettotron/aial-eval-82a693ba/20260913T125014Z"
+      }
+    ],
+    "last_sha256": "ef7777409014528ee463c413faeb6866a1b14f7fa7e094ffdf03cf38c0b584fd",
+    "last_text_sha256": "b5d21b269455fd87419546cb4ab132958c45b7616d54c1e69eb1ab5fc22904aa",
+    "last_capture": "captures/pleias__baguettotron/aial-eval-82a693ba/20260913T125014Z"
+  },
+  "pleias/baguettotron::aial-eval-page-5450fec2": {
+    "versions": [
+      {
+        "sha256": "eaa7c26e0d143d879500938ee5c93bd4aa5e74aab723d63f4fee3b33831140d8",
+        "dir": "captures/pleias__baguettotron/aial-eval-page-5450fec2/20260913T125025Z"
+      }
+    ],
+    "last_sha256": "eaa7c26e0d143d879500938ee5c93bd4aa5e74aab723d63f4fee3b33831140d8",
+    "last_text_sha256": "fd0387446883dc823bca0c0ee4500b15c65052040611254ea816666058317244",
+    "last_capture": "captures/pleias__baguettotron/aial-eval-page-5450fec2/20260913T125025Z"
+  },
+  "pleias/pleias::provider-live-ab7e758d": {
+    "versions": [
+      {
+        "sha256": "0a8729c80456027228950647b5ef863dc4372627e5de01e06675b068fd51dda3",
+        "dir": "captures/pleias__pleias/provider-live-ab7e758d/20260913T125030Z"
+      }
+    ],
+    "last_sha256": "0a8729c80456027228950647b5ef863dc4372627e5de01e06675b068fd51dda3",
+    "last_text_sha256": "56b986dc650e7411f55bd7bed74d310ce48d38e9d13c0d0ac59b77f91416d006",
+    "last_capture": "captures/pleias__pleias/provider-live-ab7e758d/20260913T125030Z"
+  },
+  "pleias/pleias::aial-archive-067b8fcd": {
+    "versions": [
+      {
+        "sha256": "ee4fb375f0c0d491185ba824300ecf5b5572e5a20c611567d6bb2e2e93965a19",
+        "dir": "captures/pleias__pleias/aial-archive-067b8fcd/20260913T125147Z"
+      }
+    ],
+    "last_sha256": "ee4fb375f0c0d491185ba824300ecf5b5572e5a20c611567d6bb2e2e93965a19",
+    "last_text_sha256": "1b89be26b341b2f8b15874cc145519de6447fe6f96a6bde9ef3eaf621ff51766",
+    "last_capture": "captures/pleias__pleias/aial-archive-067b8fcd/20260913T125147Z"
+  },
+  "pleias/pleias::aial-eval-045b7d15": {
+    "versions": [
+      {
+        "sha256": "7d5bc6d132c598a127d55f82e1e469d4b147925c60cbe92e0e71163a814f8621",
+        "dir": "captures/pleias__pleias/aial-eval-045b7d15/20260913T125153Z"
+      }
+    ],
+    "last_sha256": "7d5bc6d132c598a127d55f82e1e469d4b147925c60cbe92e0e71163a814f8621",
+    "last_text_sha256": "796b4e9e964e6f9f54da1ab562ed748a8a65b36b0130b10ac354af857a2044e9",
+    "last_capture": "captures/pleias__pleias/aial-eval-045b7d15/20260913T125153Z"
+  },
+  "pleias/pleias::aial-eval-page-89ffb225": {
+    "versions": [
+      {
+        "sha256": "2b3b4aaa5fb14c3fb3d4807557a71fb2123e6712c58511a2a612fbeeb533cf47",
+        "dir": "captures/pleias__pleias/aial-eval-page-89ffb225/20260913T125202Z"
+      }
+    ],
+    "last_sha256": "2b3b4aaa5fb14c3fb3d4807557a71fb2123e6712c58511a2a612fbeeb533cf47",
+    "last_text_sha256": "a0f58313b4f8c8dc1623ac93fb28f4e344effdcfe7a09742ff47b89ecf436565",
+    "last_capture": "captures/pleias__pleias/aial-eval-page-89ffb225/20260913T125202Z"
+  },
+  "tencent/hy3::aial-archive-fdc09d58": {
+    "versions": [
+      {
+        "sha256": "69b2f79f14c734a318678fc531812ecf55b8228005964f611aead61aa3a58bdb",
+        "dir": "captures/tencent__hy3/aial-archive-fdc09d58/20260913T125253Z"
+      }
+    ],
+    "last_sha256": "69b2f79f14c734a318678fc531812ecf55b8228005964f611aead61aa3a58bdb",
+    "last_text_sha256": "6333742ab8868e17a9d3bdb75d1c859dcf4fc72c26e68a4d6a3de3cfb244fa80",
+    "last_capture": "captures/tencent__hy3/aial-archive-fdc09d58/20260913T125253Z"
+  },
+  "tencent/hy3::aial-eval-a0e0c298": {
+    "versions": [
+      {
+        "sha256": "a2b89e17b6673aa0085d069f952bae3a45bdf246e63d9b3a8b42da78341709ce",
+        "dir": "captures/tencent__hy3/aial-eval-a0e0c298/20260913T125258Z"
+      }
+    ],
+    "last_sha256": "a2b89e17b6673aa0085d069f952bae3a45bdf246e63d9b3a8b42da78341709ce",
+    "last_text_sha256": "220373de66cca4e43aa8166e0b94e2c8bb3b7e18efe578686b7da9999c06286c",
+    "last_capture": "captures/tencent__hy3/aial-eval-a0e0c298/20260913T125258Z"
+  },
+  "tencent/hy3::aial-eval-page-f31e4b66": {
+    "versions": [
+      {
+        "sha256": "d4b516f3a5ef04c376849456ff593ff46cf8cd4ff3e99fe4439bef0ae9f248c8",
+        "dir": "captures/tencent__hy3/aial-eval-page-f31e4b66/20260913T125307Z"
+      }
+    ],
+    "last_sha256": "d4b516f3a5ef04c376849456ff593ff46cf8cd4ff3e99fe4439bef0ae9f248c8",
+    "last_text_sha256": "365dcaac2eb74c1acba19776236296fc0f46fd947be8b0b4d544ba4f93b08806",
+    "last_capture": "captures/tencent__hy3/aial-eval-page-f31e4b66/20260913T125307Z"
+  },
+  "cohere/tiny-aya-base::aial-eval-a04b172d": {
+    "versions": [
+      {
+        "sha256": "c0399daa8dcdeb485d950bf542f72c3b82e59f2d58649cfcf8ffdf3012fbb17a",
+        "dir": "captures/cohere__tiny-aya-base/aial-eval-a04b172d/20260913T125313Z"
+      }
+    ],
+    "last_sha256": "c0399daa8dcdeb485d950bf542f72c3b82e59f2d58649cfcf8ffdf3012fbb17a",
+    "last_text_sha256": "8b3e507dd05bfbba01349eea8947ef107f67d8514b64e9929597ada6db3d300a",
+    "last_capture": "captures/cohere__tiny-aya-base/aial-eval-a04b172d/20260913T125313Z"
+  },
+  "cohere/tiny-aya-base::aial-eval-page-096911a6": {
+    "versions": [
+      {
+        "sha256": "54ba9fcf64ef350bea0a5d916ec575bdcf7e330b5f96380af6267d8ef512aa69",
+        "dir": "captures/cohere__tiny-aya-base/aial-eval-page-096911a6/20260913T125324Z"
+      }
+    ],
+    "last_sha256": "54ba9fcf64ef350bea0a5d916ec575bdcf7e330b5f96380af6267d8ef512aa69",
+    "last_text_sha256": "470ce6530aa9287260b77c19a817fa8bb6b436da5b709ee81f25d3ec552a0114",
+    "last_capture": "captures/cohere__tiny-aya-base/aial-eval-page-096911a6/20260913T125324Z"
+  },
+  "almawave/velvet-25b::aial-eval-cedd4de3": {
+    "versions": [
+      {
+        "sha256": "1f2b5b6cccf362ca227c48b0db79c0d3efba3dd2ecc36b466097691ac5265382",
+        "dir": "captures/almawave__velvet-25b/aial-eval-cedd4de3/20260913T125331Z"
+      }
+    ],
+    "last_sha256": "1f2b5b6cccf362ca227c48b0db79c0d3efba3dd2ecc36b466097691ac5265382",
+    "last_text_sha256": "d640b753fd5f01f3845547898b53266524c5be9e737401dd2e74608f41553c66",
+    "last_capture": "captures/almawave__velvet-25b/aial-eval-cedd4de3/20260913T125331Z"
+  },
+  "almawave/velvet-25b::aial-eval-page-bf7f73cb": {
+    "versions": [
+      {
+        "sha256": "23c71df9452cb184adeeacd5c1635774d25a7c255877b63a9d24fdadcab51a23",
+        "dir": "captures/almawave__velvet-25b/aial-eval-page-bf7f73cb/20260913T125343Z"
+      }
+    ],
+    "last_sha256": "23c71df9452cb184adeeacd5c1635774d25a7c255877b63a9d24fdadcab51a23",
+    "last_text_sha256": "d53ac868893fe1b009ee9f8860814827fffb2bebfb261c5d6b6090ba9bc2291c",
+    "last_capture": "captures/almawave__velvet-25b/aial-eval-page-bf7f73cb/20260913T125343Z"
+  },
+  "almawave/velvet-2b-1-5::aial-eval-e5201117": {
+    "versions": [
+      {
+        "sha256": "b029b9c0928405930ab678e01c8e9fc13ea8c55eeece0118459875e21c50e63f",
+        "dir": "captures/almawave__velvet-2b-1-5/aial-eval-e5201117/20260913T125350Z"
+      }
+    ],
+    "last_sha256": "b029b9c0928405930ab678e01c8e9fc13ea8c55eeece0118459875e21c50e63f",
+    "last_text_sha256": "756e1c556a595f818f9165bcff37735e4b90a816b48bfce1ff507783bd91f0c6",
+    "last_capture": "captures/almawave__velvet-2b-1-5/aial-eval-e5201117/20260913T125350Z"
+  },
+  "almawave/velvet-2b-1-5::aial-eval-page-a2a51846": {
+    "versions": [
+      {
+        "sha256": "dbf7a19b147d8083ed4246ecf40e1fb97c8c2f59a870d11288f8747de9c8b96c",
+        "dir": "captures/almawave__velvet-2b-1-5/aial-eval-page-a2a51846/20260913T125357Z"
+      }
+    ],
+    "last_sha256": "dbf7a19b147d8083ed4246ecf40e1fb97c8c2f59a870d11288f8747de9c8b96c",
+    "last_text_sha256": "4268fa5fbc8ca9ccdb517a9b77244968f72970fa978fa0e51eb52891ff28e5e5",
+    "last_capture": "captures/almawave__velvet-2b-1-5/aial-eval-page-a2a51846/20260913T125357Z"
+  },
+  "almawave/velvet-2b-speech::aial-eval-c83b39c7": {
+    "versions": [
+      {
+        "sha256": "e8dbb07ec7ac71df67a9d1b11a5114ba8407c7df5c40ea11c624cc8d8235dcda",
+        "dir": "captures/almawave__velvet-2b-speech/aial-eval-c83b39c7/20260913T125405Z"
+      }
+    ],
+    "last_sha256": "e8dbb07ec7ac71df67a9d1b11a5114ba8407c7df5c40ea11c624cc8d8235dcda",
+    "last_text_sha256": "acb2083c6b2d4c89e6c81175f9e153f6f515c9af13931712ad9e880c3441a0eb",
+    "last_capture": "captures/almawave__velvet-2b-speech/aial-eval-c83b39c7/20260913T125405Z"
+  },
+  "almawave/velvet-2b-speech::aial-eval-page-6b9d1775": {
+    "versions": [
+      {
+        "sha256": "9b8d85a19ce0adee33f17447f28e927310946756b02229f291e72549fe20bf67",
+        "dir": "captures/almawave__velvet-2b-speech/aial-eval-page-6b9d1775/20260913T125416Z"
+      }
+    ],
+    "last_sha256": "9b8d85a19ce0adee33f17447f28e927310946756b02229f291e72549fe20bf67",
+    "last_text_sha256": "c5d41a3bdc4578a4f58515fcc284b3fe9e320b04b7133b34f1a31939c092a9e4",
+    "last_capture": "captures/almawave__velvet-2b-speech/aial-eval-page-6b9d1775/20260913T125416Z"
+  },
+  "microsoft/vitra::aial-eval-8720c43d": {
+    "versions": [
+      {
+        "sha256": "9857612b31291987b9b879c8ac5b3c1107f6162183db2b6d93340afd3e4125e0",
+        "dir": "captures/microsoft__vitra/aial-eval-8720c43d/20260913T125426Z"
+      }
+    ],
+    "last_sha256": "9857612b31291987b9b879c8ac5b3c1107f6162183db2b6d93340afd3e4125e0",
+    "last_text_sha256": "4b05b0dd4088aa032bf92719c537dee4af807666fd1a36d3845c38f920bbddbc",
+    "last_capture": "captures/microsoft__vitra/aial-eval-8720c43d/20260913T125426Z"
+  },
+  "microsoft/vitra::aial-eval-page-50123580": {
+    "versions": [
+      {
+        "sha256": "45b90b493c5099e2ec9129613e0c112c2d8de312748a3c2607acdb5cf642a648",
+        "dir": "captures/microsoft__vitra/aial-eval-page-50123580/20260913T125439Z"
+      }
+    ],
+    "last_sha256": "45b90b493c5099e2ec9129613e0c112c2d8de312748a3c2607acdb5cf642a648",
+    "last_text_sha256": "5721542606df9838645b36b0bcd477268314dcd1d9342049c5d56d4cfebe0408",
+    "last_capture": "captures/microsoft__vitra/aial-eval-page-50123580/20260913T125439Z"
+  },
+  "anthropic/mythos5-1::aial-eval-history-038ecb30": {
+    "versions": [
+      {
+        "sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20260913T125648Z"
+      }
+    ],
+    "last_sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+    "last_text_sha256": "f66bb8fb7fc3b736fac82b7af570f2db29a43a5c8a403e2cf2379bab52fdcf98",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20260913T125648Z"
+  },
+  "microsoft/mai-image-2-6::aial-eval-history-bb9a8c63": {
+    "versions": [
+      {
+        "sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
+        "dir": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20260913T125651Z"
+      }
+    ],
+    "last_sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
+    "last_text_sha256": "2fbd0f7976b735258f349ee538edfc0d88c8e2b9cdfcdc31ef466bef65397720",
+    "last_capture": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20260913T125651Z"
   }
 }

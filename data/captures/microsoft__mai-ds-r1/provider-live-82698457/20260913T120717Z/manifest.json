@@ -1,0 +1,44 @@
+{
+  "source_id": "microsoft/mai-ds-r1",
+  "provider": "Microsoft",
+  "model": "MAI-DS-R1",
+  "target_kind": "provider-live",
+  "sha256": "94a7156e8af399651e2624d50a72f8db33595ceaa122c1a85e76c6bff2b0eaa9",
+  "size_bytes": 4061,
+  "stored_as": "raw.md",
+  "text_sha256": "163a773327891256c6fee1305a4f5dd5aa6290045d3cd5b07440292a0af9013f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/MAI-DS-R1/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/MAI-DS-R1/a96d011a7111dcde61096468ebeeda8068735809/data_summary_card.md?%2Fmicrosoft%2FMAI-DS-R1%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%228d02d4e159fe59224f67499573b4f3edfae39c8b%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8d02d4e159fe59224f67499573b4f3edfae39c8b\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:07:17Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:not-found",
+    "answered": true,
+    "job_id": "spn2-3ec74a14d964de9c242a5e5264bb1145e358aead",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:07:17Z",
+    "at": "2026-09-13T12:07:55Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:08:00Z"
+  }
+}

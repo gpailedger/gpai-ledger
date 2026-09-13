@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/magma-8b",
+  "provider": "Microsoft",
+  "model": "Magma-8B",
+  "target_kind": "aial-archive",
+  "sha256": "9798aad2315fd02224140def006c6d7b66d48d9a50a038ffd874612c08572fad",
+  "size_bytes": 101285,
+  "stored_as": "raw.pdf",
+  "text_sha256": "f61dbddf38f4ee9a63ce5615dbe3733e8f8388a5189a1f3aa8d416a6cd4a5017",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Magma_8B_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Magma_8B_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7kut265h\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": "101285",
+    "fetched_at": "2026-09-13T12:06:42Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:06:45Z"
+  }
+}

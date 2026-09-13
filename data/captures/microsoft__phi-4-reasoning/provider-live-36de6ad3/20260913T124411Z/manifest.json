@@ -1,0 +1,44 @@
+{
+  "source_id": "microsoft/phi-4-reasoning",
+  "provider": "Microsoft",
+  "model": "Phi-4 Reasoning",
+  "target_kind": "provider-live",
+  "sha256": "6c59a8cab7f9fa27ce9be09aa2c13c523faa863f8fca8a723bce4cdef029cfc2",
+  "size_bytes": 4292,
+  "stored_as": "raw.md",
+  "text_sha256": "808e37d07c5cb4435c13832a482343b0d59165a72e67a455505cc684052a2b39",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-4-reasoning/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-reasoning/1de18ec97600877ce63dbf60c73b998da99f0195/data_summary_card.md?%2Fmicrosoft%2FPhi-4-reasoning%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%225e76a447b745401d3ec6068893ed8eadd03e88ca%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5e76a447b745401d3ec6068893ed8eadd03e88ca\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:44:11Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:not-found",
+    "answered": true,
+    "job_id": "spn2-4336c4485c0e7bcb5bd06f390c479b9b284b8dec",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:44:11Z",
+    "at": "2026-09-13T12:44:17Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:44:21Z"
+  }
+}

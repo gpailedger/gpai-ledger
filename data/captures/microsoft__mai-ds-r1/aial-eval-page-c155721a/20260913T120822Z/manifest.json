@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/mai-ds-r1",
+  "provider": "Microsoft",
+  "model": "MAI-DS-R1",
+  "target_kind": "aial-eval-page",
+  "sha256": "fd36e982d57708f2ef33921089ee28bdb1a30405b9ab1ced24ab725ada621018",
+  "size_bytes": 13184,
+  "stored_as": "raw.html",
+  "text_sha256": "394905172e18719f988b21f8c080bdab80aa2bc4f13369f13973de329744cd2f",
+  "doc_links_sha256": "ae663b6a687246d2191c5b427137fad35575a2a328fda279b66db604c5357013",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/mai-ds-r1/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/mai-ds-r1/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7lw2a68\"",
+    "last_modified": "Fri, 11 Sep 2026 17:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:08:22Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:08:25Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-1",
+  "provider": "Microsoft",
+  "model": "Phi-1",
+  "target_kind": "aial-archive",
+  "sha256": "dec291766ae33b1ba5fd9e9da584d58db1193c1145b68f32b171cc845333b3b6",
+  "size_bytes": 98805,
+  "stored_as": "raw.pdf",
+  "text_sha256": "c2661eaba40ce937119b42e80284870e755851a14307ee189bd947fd590d3558",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Phi1_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Phi1_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7kut248l\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": "98805",
+    "fetched_at": "2026-09-13T12:35:55Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:36:00Z"
+  }
+}

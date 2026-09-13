@@ -1,0 +1,33 @@
+{
+  "source_id": "bytedance/seedance2-0",
+  "provider": "ByteDance",
+  "model": "Seedance 2.0",
+  "target_kind": "aial-archive",
+  "sha256": "ae9aebb04101dab496b15addb920ff2725ade15ad96efbce5733b78274f1da07",
+  "size_bytes": 246255,
+  "stored_as": "raw.pdf",
+  "text_sha256": "91ef7f4b57fa106ffb0df71122275b804485285b146812486fa57720d583ee31",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedance_2_0_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/ByteDance_Seedance_2_0_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv35a0f\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "246255",
+    "fetched_at": "2026-09-13T11:52:43Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:52:48Z"
+  }
+}

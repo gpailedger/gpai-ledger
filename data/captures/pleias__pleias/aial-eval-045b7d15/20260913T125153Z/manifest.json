@@ -1,0 +1,33 @@
+{
+  "source_id": "pleias/pleias",
+  "provider": "Pleias",
+  "model": "Pleias 1.0",
+  "target_kind": "aial-eval",
+  "sha256": "7d5bc6d132c598a127d55f82e1e469d4b147925c60cbe92e0e71163a814f8621",
+  "size_bytes": 3140,
+  "stored_as": "raw.yaml",
+  "text_sha256": "796b4e9e964e6f9f54da1ab562ed748a8a65b36b0130b10ac354af857a2044e9",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-pleias.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-pleias.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ce29756ad5e91d9cbefc5dca29adb2bee54005215666a35d3bb2836b6a9db9db\"",
+    "last_modified": null,
+    "content_length": "565",
+    "fetched_at": "2026-09-13T12:51:53Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:51:58Z"
+  }
+}

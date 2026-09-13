@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemini-3-5-flash-lite",
+  "provider": "Google",
+  "model": "Gemini 3.5 Flash Lite",
+  "target_kind": "aial-eval",
+  "sha256": "70ca93366867810a7619551caea9accd3ddd67ad130b35c608877788660c68b8",
+  "size_bytes": 3823,
+  "stored_as": "raw.yaml",
+  "text_sha256": "73c50deb03e1a412e200bb6f9cfce7f129cae930007a6b06c034fff108e679ec",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.5-flash-lite.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-3.5-flash-lite.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"3e10e8955b2eca780d900a416ac03cf8e013f15162e99769e24b3e7afbb6d6dc\"",
+    "last_modified": null,
+    "content_length": "568",
+    "fetched_at": "2026-09-13T12:01:37Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:01:40Z"
+  }
+}

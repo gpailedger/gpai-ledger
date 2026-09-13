@@ -1,0 +1,41 @@
+{
+  "source_id": "midjourney/midjourney",
+  "provider": "Midjourney",
+  "model": "Midjourney Image and Video family of models",
+  "target_kind": "provider-live",
+  "sha256": "4727620f263f6ca1200ae8769346fdd452f3af4dd4dd4182139dda73f6a9fe9f",
+  "size_bytes": 79800,
+  "stored_as": "raw.html",
+  "text_sha256": "5d1e51bce3f446fc8cfcc56bc12241a5ca276e520ea51d579b6e48826dc2111b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.midjourney.com/hc/en-us/articles/48067080311309-Public-Summary-of-Training-Content",
+    "final_url": "https://docs.midjourney.com/hc/en-us/articles/48067080311309-Public-Summary-of-Training-Content",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:16:50Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:16:50Z",
+    "at": "2026-09-13T12:18:50Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:18:55Z"
+  }
+}

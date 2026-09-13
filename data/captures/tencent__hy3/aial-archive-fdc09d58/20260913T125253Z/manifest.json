@@ -1,0 +1,33 @@
+{
+  "source_id": "tencent/hy3",
+  "provider": "Tencent",
+  "model": "Hy3",
+  "target_kind": "aial-archive",
+  "sha256": "69b2f79f14c734a318678fc531812ecf55b8228005964f611aead61aa3a58bdb",
+  "size_bytes": 310890,
+  "stored_as": "raw.pdf",
+  "text_sha256": "6333742ab8868e17a9d3bdb75d1c859dcf4fc72c26e68a4d6a3de3cfb244fa80",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/Tencent_Hy3_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/Tencent_Hy3_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv36nvu\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "310890",
+    "fetched_at": "2026-09-13T12:52:52Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:52:57Z"
+  }
+}

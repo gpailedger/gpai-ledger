@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/phi-moe",
+  "provider": "Microsoft",
+  "model": "Phi-MoE",
+  "target_kind": "provider-live",
+  "sha256": "dcc9cad772ef4e56bee0035536df7297afa1277d8d48d5c96575eea956b58ba0",
+  "size_bytes": 4348,
+  "stored_as": "raw.md",
+  "text_sha256": "0111588fb2065a44c8e947d85da5a1803314f8af9f55b72f5fdd07e7acff6a4a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-tiny-MoE-instruct/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Phi-tiny-MoE-instruct/2fe50e88d0e2a5a132563815686ea0dcc8e252b5/data_summary_card.md?%2Fmicrosoft%2FPhi-tiny-MoE-instruct%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%2275645b76a1200ef7cb0bfe05f79f74381a0a5612%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"75645b76a1200ef7cb0bfe05f79f74381a0a5612\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:45:05Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "job_id": "spn2-56a365c0d473a5b8cf7afe3bb456ff07eea72a7e",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:45:05Z",
+    "at": "2026-09-13T12:48:53Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:48:57Z"
+  }
+}

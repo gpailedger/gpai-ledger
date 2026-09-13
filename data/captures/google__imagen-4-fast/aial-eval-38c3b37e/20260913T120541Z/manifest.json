@@ -1,0 +1,33 @@
+{
+  "source_id": "google/imagen-4-fast",
+  "provider": "Google",
+  "model": "Imagen 4 Fast",
+  "target_kind": "aial-eval",
+  "sha256": "fa82247482c5aff6c2f3c344bd39c8b2d5491aff55256c8f4b959033de9c41e9",
+  "size_bytes": 3788,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d4aa78c60ff833e44bbce09387a393836bf6eadbc61e7580308da8abab6ebb11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/imagen-4-fast.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/imagen-4-fast.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"917227789bc222825bd6bd52b874d53c44297c571de4472ff40164ea556c982d\"",
+    "last_modified": null,
+    "content_length": "550",
+    "fetched_at": "2026-09-13T12:05:41Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:05:45Z"
+  }
+}

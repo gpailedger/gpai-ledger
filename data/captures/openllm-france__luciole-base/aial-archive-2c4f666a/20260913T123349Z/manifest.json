@@ -1,0 +1,33 @@
+{
+  "source_id": "openllm-france/luciole-base",
+  "provider": "OpenLLM France",
+  "model": "Luciole Base",
+  "target_kind": "aial-archive",
+  "sha256": "b1dac9dc75c128f1a4c837bb648961452c50cd815822fc512a3e394b07dc016e",
+  "size_bytes": 168891,
+  "stored_as": "raw.pdf",
+  "text_sha256": "b15d2476e377af7b52c83e1d87b2b423d21aaadc69a4e393bdd3cbd808e957d5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/OpenLLM_France_Luciole_2026_09_08.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/OpenLLM_France_Luciole_2026_09_08.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv33mbf\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "168891",
+    "fetched_at": "2026-09-13T12:33:47Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:33:52Z"
+  }
+}

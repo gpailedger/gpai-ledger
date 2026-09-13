@@ -1,0 +1,47 @@
+{
+  "source_id": "pleias/pleias",
+  "provider": "Pleias",
+  "model": "Pleias 1.0",
+  "target_kind": "provider-live",
+  "sha256": "0a8729c80456027228950647b5ef863dc4372627e5de01e06675b068fd51dda3",
+  "size_bytes": 19255,
+  "stored_as": "raw.html",
+  "text_sha256": "56b986dc650e7411f55bd7bed74d310ce48d38e9d13c0d0ac59b77f91416d006",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://pleias.ai/training-content/pleias-1",
+    "final_url": "https://pleias.ai/training-content/pleias-1",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:50:30Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913125105/https://pleias.ai/training-content/pleias-1",
+    "snapshot_ts": "20260913125105",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-335db5325e150fe40fdb21711acb04bbecdac0e8",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:50:30Z",
+    "at": "2026-09-13T12:51:24Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:51:28Z"
+  }
+}

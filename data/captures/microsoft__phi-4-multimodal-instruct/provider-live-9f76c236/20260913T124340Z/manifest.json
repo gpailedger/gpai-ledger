@@ -1,0 +1,44 @@
+{
+  "source_id": "microsoft/phi-4-multimodal-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-4 Multimodal Instruct",
+  "target_kind": "provider-live",
+  "sha256": "30da70419cb793a917e73c89dc585c802bc8a5cb6c54249ddf138329bff0f2c1",
+  "size_bytes": 4619,
+  "stored_as": "raw.md",
+  "text_sha256": "f28e456ae75abcbbc7127782e731738a83ff949a06188882aab9030f54180dd9",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-multimodal-instruct/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/data_summary_card.md?%2Fmicrosoft%2FPhi-4-multimodal-instruct%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%228b691d0fc283dfd39dc4161d5551d59d469ac10a%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8b691d0fc283dfd39dc4161d5551d59d469ac10a\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:43:40Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:gateway-timeout",
+    "answered": true,
+    "job_id": "spn2-9a2d1c355c2be0503305c131299ad5bc2658b8cb",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:43:40Z",
+    "at": "2026-09-13T12:43:46Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:43:49Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/mai-thinking-1",
+  "provider": "Microsoft",
+  "model": "MAI-Thinking-1",
+  "target_kind": "aial-archive",
+  "sha256": "1d8241363c5e427dbcd9325e64bdd03863654bf5b13a05fb3d369b8cd0dfd20e",
+  "size_bytes": 271872,
+  "stored_as": "raw.pdf",
+  "text_sha256": "84868bc5c745d6cf62d3a061fc2864dae4de2184534e8f728c3bb877000d4ad3",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Thinking_1_2026_09_11.pdf",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/archive/MAI_Thinking_1_2026_09_11.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"tl7cv35ts0\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": "271872",
+    "fetched_at": "2026-09-13T12:12:56Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:13:01Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "deepseek/deepseek-v4",
+  "provider": "DeepSeek",
+  "model": "DeepSeek-V4",
+  "target_kind": "aial-eval-page",
+  "sha256": "e4c617305bacfa3a55ed96e5050f100f5f4eba213c9d80152fb9fccc99911d50",
+  "size_bytes": 20158,
+  "stored_as": "raw.html",
+  "text_sha256": "4afb00607243fe1aa069c66336625eb64d8fb4d60d2c0b0ea6d0c9fd030882fd",
+  "doc_links_sha256": "b30abde33aa4a327d4de352502503866543d30afbb7ccdba1b074933cecf15be",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/deepseek-deepseek-v4/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/deepseek-deepseek-v4/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kutfjy\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T11:57:33Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:57:37Z"
+  }
+}

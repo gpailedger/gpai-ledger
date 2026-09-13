@@ -1,0 +1,33 @@
+{
+  "source_id": "tencent/hy3",
+  "provider": "Tencent",
+  "model": "Hy3",
+  "target_kind": "aial-eval",
+  "sha256": "a2b89e17b6673aa0085d069f952bae3a45bdf246e63d9b3a8b42da78341709ce",
+  "size_bytes": 3169,
+  "stored_as": "raw.yaml",
+  "text_sha256": "220373de66cca4e43aa8166e0b94e2c8bb3b7e18efe578686b7da9999c06286c",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tencent-hy3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tencent-hy3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"937c2256e39c27854ec5d13524bab46b177ac598fd6ccf9145d8b924a4dbe377\"",
+    "last_modified": null,
+    "content_length": "542",
+    "fetched_at": "2026-09-13T12:52:58Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:53:03Z"
+  }
+}

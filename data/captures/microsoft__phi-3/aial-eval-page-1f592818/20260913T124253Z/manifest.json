@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/phi-3",
+  "provider": "Microsoft",
+  "model": "Phi-3",
+  "target_kind": "aial-eval-page",
+  "sha256": "de5b4913ef2d83d4c2f31cc660b4f9fd342c8cb044bdf687bab1aef5777fd409",
+  "size_bytes": 13235,
+  "stored_as": "raw.html",
+  "text_sha256": "910c999430f8a5abb29f3d73d3dcc9a404a7cabd6428c408cc98f47be01158e0",
+  "doc_links_sha256": "5ae39cdd20bfbfa89860148b1d60175369db80694cb50129d32666186ebe4cef",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-3/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/phi-3/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7lw2a7n\"",
+    "last_modified": "Fri, 11 Sep 2026 17:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:42:53Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:42:56Z"
+  }
+}

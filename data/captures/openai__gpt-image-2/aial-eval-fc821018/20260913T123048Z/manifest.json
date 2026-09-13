@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-image-2",
+  "provider": "OpenAI",
+  "model": "GPT Image 2.0",
+  "target_kind": "aial-eval",
+  "sha256": "baa60be09b2efd9e1e3c21b29103350e491e711ba8996da75d5d11eb0e5f4fc3",
+  "size_bytes": 3246,
+  "stored_as": "raw.yaml",
+  "text_sha256": "1de51d420ccf417b2e28011597657a17d51ba48ac3ccf6c8438f2d1b69119113",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-image2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-image2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"262e2480f5c1fa2f81b780999c5c9de0d60d32acd4cecba3e8461995e17286a4\"",
+    "last_modified": null,
+    "content_length": "641",
+    "fetched_at": "2026-09-13T12:30:48Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:30:53Z"
+  }
+}

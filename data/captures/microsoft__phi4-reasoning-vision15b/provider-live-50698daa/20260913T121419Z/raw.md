@@ -1,0 +1,383 @@
+# Phi-4-Reasoning-Vision-15B
+
+**Version of the Summary:**
+
+*1.0*
+
+**Last update:** 31 Aug 2026
+
+## 1. General information 
+
+### 1.1 Model developer identification 
+
+**1.1.1 Model developer name and contact details:** Microsoft Ireland
+Operations Limited (MIOL) 70 Sir John Rogerson’s Quay, Dublin 2, D02
+R296, Ireland
+
+**1.1.2 Authorized representative name and contact details:**
+<MSFTAIActRequest@microsoft.com>
+
+### 1.2: Model identification 
+
+**1.2.1 Versioned model name(s):** Phi-4-Reasoning-Vision-15B
+
+**1.2.2 Model dependencies:** Phi-4-Reasoning
+
+**1.2.3 Model release date:** 4-March-2026
+
+**1.2.4 Date of placement of the model on the Union market:**
+4-March-2026
+
+### 1.3 Modalities, overall training data size and other characteristics
+
+**1.3.1 Size of dataset and characteristics**
+
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 32%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><blockquote>
+<p><strong>Modality</strong></p>
+</blockquote></th>
+<th><strong>Training data size</strong></th>
+<th><strong>Types of content</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>☒Text</p>
+</blockquote></td>
+<td><p>☐Less than 1 billion tokens</p>
+<p>☒1billion to10 trillions tokens</p>
+<p>☐More than 10 trillions tokens</p>
+<blockquote>
+<p>Alternatively, specify the approximate size in
+a different measurement unit:</p>
+</blockquote></td>
+<td><blockquote>
+<p><em>Image captions of varying detail, question-answer pairs,
+step-by-step math solutions with LaTeX, OCR transcriptions, safety
+refusals, multi-turn tutoring dialogues, document QA, UI action
+instructions, HTML/code, diagram and chart interpretations, and
+chain-of-thought reasoning traces.</em></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>☒Image</p>
+</blockquote></td>
+<td><p>☐Less than 1 million images</p>
+<p>☒1Million to1 billion images</p>
+<ul>
+<li><blockquote>
+<p>More than 1 billion image</p>
+</blockquote></li>
+</ul></td>
+<td><blockquote>
+<p><em>Natural photographs, web and mobile UI screenshots, scientific
+diagrams and charts, scanned documents and receipts, handwritten text
+and math formulas, infographics, rendered LaTeX equations, synthetic
+geometric shapes, abstract reasoning puzzles, desktop application
+interfaces, map visualizations, hateful meme images, icons, tables,
+arxiv paper figures, and annotated images with bounding boxes and point
+labels.</em></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><ul>
+<li><blockquote>
+<p>Audio (<em>Excluding audio that is part of video, as this should be
+reported under the “video” modality instead. Furthermore, the Commission
+understands the modality of ‘audio’ to include ‘speech’)</em></p>
+</blockquote></li>
+</ul></td>
+<td><ul>
+<li><blockquote>
+<p>Less than 10 000 hours</p>
+</blockquote></li>
+<li><blockquote>
+<p>10 000 to1 million hours</p>
+</blockquote></li>
+<li><blockquote>
+<p>More than 1 million hours</p>
+</blockquote></li>
+</ul></td>
+<td><blockquote>
+<p><em>N/A</em></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><ul>
+<li><blockquote>
+<p>Video</p>
+</blockquote></li>
+</ul></td>
+<td><ul>
+<li><blockquote>
+<p>Less than 10 000 hours</p>
+</blockquote></li>
+<li><blockquote>
+<p>10 000 to1 million hours</p>
+</blockquote></li>
+<li><blockquote>
+<p>More than 1 million hours</p>
+</blockquote></li>
+</ul></td>
+<td><blockquote>
+<p><em>N/A</em></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><ul>
+<li><blockquote>
+<p>Other</p>
+</blockquote></li>
+</ul></td>
+<td><blockquote>
+<p><em>Specify the modality and for each one indicate approximate size
+and unit of measurement</em></p>
+</blockquote></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+**1.3.2 Latest date of data (acquisition/collection for model
+training):**
+
+<span class="mark">Feb 2026</span>
+
+**1.3.3 Is data collection ongoing to update the model with new data
+collection after deployment?**
+
+No
+
+**1.3.4 Date the training dataset was first used to train the model:**
+
+Feb 2025
+
+**1.3.5 Description of the linguistic characteristics of the overall
+training data:**
+
+The vision-language data used in the fine-tuning of this model is
+primarily English.
+
+**1.3.6 Other relevant characteristics of the overall training data:**
+
+*N/A*
+
+**1.3.7 Rationale or purpose of data selection:** High-quality
+open-source datasets were selected to teach the model broad general
+visual perception (caption, vqa, perception, OCR, logic, diagramqa) as
+well as high-quality open-source datasets with math, STEM, and
+computer-use for intended specialties in these domains.
+
+## 2. List of data sources 
+
+### 2.1 Publicly available datasets 
+
+**2.1.1 Have you used publicly available datasets to train the model?**
+
+Yes
+
+**2.1.2 If yes, specify the modality(ies) of the content covered by the
+datasets concerned:**
+
+Text and Image
+
+**2.1.3 List of large publicly available datasets:**
+
+We used a variety of large, publicly available datasets including
+Hugging Face and GitHub public repositories. More information on open
+source training datasets is available in the associated [Technical
+Report](https://www.microsoft.com/en-us/research/wp-content/uploads/2026/03/Phi-4-reasoning-vision-15B-Tech-Report.pdf?msockid=0261ed514fe0696c13f6fb8e4e6b68a3).
+
+**2.1.4 General description of other publicly available datasets not
+listed above:**
+
+Additional vision-language datasets chosen to teach general vision
+(caption, vqa, perception, OCR, logic, diagramqa) as well as math, STEM,
+and computer-use capabilities.
+
+### 2.2 Private non-publicly available datasets obtained from third parties 
+
+#### 2.2.1 Datasets commercially licensed by rightsholders or their representatives 
+
+**2.2.1.A Have you concluded transactional commercial licensing
+agreement(s) with rightsholder(s) or with their representatives?** Yes
+
+**2.2.1.B If yes, specify the modality(ies) of the content covered by
+the datasets concerned:**
+
+Text and Image
+
+#### 2.2.2 Private datasets obtained from other third parties 
+
+**2.2.2.A Have you obtained private datasets from third parties that are
+not licensed as described in Section 2.2.1, such as data obtained from
+providers of private databases, or data intermediaries?** No
+
+**2.2.2.B If yes, specify the modality(ies) of the content covered by
+the datasets concerned:** N/A
+
+**2.2.2.C If publicly known, list private datasets obtained from other
+third parties:**
+
+*N/A*
+
+**2.2.2.D General description of non-publicly known private datasets
+obtained from third parties:**
+
+*N/A*
+
+### 2.3 Data crawled and scraped from online sources 
+
+**2.3.1 Were crawlers used by the provider or on behalf of?**
+
+*No*
+
+**2.3.2 If yes, specify crawler name(s)/identifier(s):**
+
+*N/A*
+
+**2.3.3 Purposes of the crawler(s):**
+
+*N/A*
+
+**2.3.4 General description of crawler behavior:**
+
+*N/A*
+
+**2.3.5 Period of data collection:** MM/YYYY to MM/YYYY
+
+*N/A*
+
+**2.3.6 Comprehensive description of the type of content and online
+sources crawled:** *N/A*
+
+**2.3.7 Type of modality(ies) covered:**
+
+*N/A*
+
+**2.3.8 Summary of the most relevant domain names crawled:**
+
+*N/A*
+
+### 2.4 User data 
+
+**2.4.1 Was data from user interactions with the AI model (e.g. user
+input and prompts) used to train the model?**
+
+No
+
+**2.4.2 Was data collected from user interactions with the provider’s
+other services or products used to train the model?**
+
+No
+
+**2.4.3 If yes, provide a general description of the provider’s services
+or products that were used to collect the user data:**
+
+N/A
+
+**2.4.4 Type of modality covered:**
+
+N/A
+
+### 2.5 Synthetic data 
+
+**2.5.1 Was synthetic AI-generated data created by the provider or on
+their behalf to train the model?**
+
+Yes
+
+**2.5.2 If yes, modality of the synthetic data:**
+
+Text
+
+**2.5.3 If yes, specify the general-purpose AI model(s) used to generate
+the synthetic data if available on the market:**
+
+Open AI GPT-4o and o4-mini
+
+**2.5.4 Information about other AI models, including model developer’s
+own AI model(s) not available on the market, used to generate synthetic
+data to train the model to which this Summary applies:**
+
+N/A
+
+<u>**2.5.5 Provide a description of the need or desired purpose for
+using synthetic data for a model or system’s intended purpose:**</u>
+
+Synthetic data consisted of high-quality captions and descriptions of
+web images.
+
+### 2.6 Other sources of data 
+
+**2.6.1 Was personal data used to train the model?** Microsoft follows
+applicable laws and best practices pertaining to personal data. 
+
+**2.6.2 Have data sources other than those described in Sections 2.1 to
+2.5 been used to train the model?**
+
+Yes
+
+**2.6.3 If yes, provide a narrative description of these data sources
+and the data:**
+
+Recordings of UI sessions capturing sequential screen states of desktop
+navigation, web, or mobile interfaces, performing tasks such as
+clicking, typing, scrolling, dragging, and switching between
+applications, with each frame annotated with the corresponding action,
+cursor position, and target element. This data was collected
+specifically for model training.
+
+## 3. Data processing aspects 
+
+### 3.1 Respect of reservation of rights from text and data mining exception or limitation 
+
+**3.1.1 Are you a Signatory to the Code of Practice for general- purpose
+AI models that includes commitments to respect reservations of rights
+from the TDM exception or limitation?**
+
+Yes
+
+**3.1.2 Describe the measures implemented before model training to
+respect reservations of rights from the TDM exception or limitation
+before and during data collection, including the opt-out protocols and
+solutions honoured by the model developer or, as applicable, by third
+parties from which datasets have been obtained:**
+
+N/A
+
+**<u>3.1.3 Does this dataset include any data protected by copyright,
+trademark, or patent?</u>**
+
+Microsoft follows applicable laws and best practices for processing data
+protected by copyright, trademark, or patent.
+
+### 3.2 Removal of illegal content 
+
+**3.2.1 General description of measures taken to avoid or remove illegal
+content:**
+
+Microsoft follows applicable laws and best practices to avoid or remove
+illegal content.
+
+### 3.3 Other information 
+
+**<u>3.3.1 Does the dataset include information about consumer groups
+without revealing individual consumer identities?</u>**
+
+Microsoft follows applicable laws and best practices for protecting
+consumer identities.
+
+<u>**3.3.2 Was the dataset cleaned or modified before model
+training?**</u>
+
+Yes

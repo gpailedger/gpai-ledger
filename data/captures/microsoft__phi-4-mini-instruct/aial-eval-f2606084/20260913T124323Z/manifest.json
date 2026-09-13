@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-4-mini-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-4 Mini Instruct",
+  "target_kind": "aial-eval",
+  "sha256": "d3f88cf8cf93c083ee799fe66ce9209fd3ac4a3d7e27360298cc16f7e700fc69",
+  "size_bytes": 3990,
+  "stored_as": "raw.yaml",
+  "text_sha256": "dc0f9d365faf4a5c09b81de0ff730510d6892499f40837784f20e8efff0884c4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-mini-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/phi-4-mini-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c8c46dac4766fd282a4700323276a7590da25e13d0cd96a0a030c087302f3195\"",
+    "last_modified": null,
+    "content_length": "607",
+    "fetched_at": "2026-09-13T12:43:23Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:43:26Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "nvidia/nemotron-nano",
+  "provider": "NVIDIA",
+  "model": "Nemotron Nano",
+  "target_kind": "aial-eval-page",
+  "sha256": "dc6fc6f896ab72af5e0d216b1aed275cf799857bc00162e1b66dcfadddcb031b",
+  "size_bytes": 19667,
+  "stored_as": "raw.html",
+  "text_sha256": "4e1bbbc548568b6d10cfc451ef4e3acef12cb71e8686691fee37499769020d23",
+  "doc_links_sha256": "80f117a126770d16f63af53421feee1bc622135ace02e38520afeb41917c14ed",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/nvidia-nemotron-nano/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/nvidia-nemotron-nano/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kutf6b\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:30:25Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:30:29Z"
+  }
+}

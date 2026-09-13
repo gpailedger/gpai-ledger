@@ -1,0 +1,34 @@
+{
+  "source_id": "amazon/nova-2-sonic",
+  "provider": "Amazon",
+  "model": "Nova 2 Sonic",
+  "target_kind": "aial-eval-page",
+  "sha256": "f90d249ade062df8c39992bf5b1e108c0f4ed1135f2ea5968eeb1e0ff67b10cd",
+  "size_bytes": 11953,
+  "stored_as": "raw.html",
+  "text_sha256": "8025fc193fc8ab393d2844cb94a5a166bd01c9c9c73b9a664783af80074c9a5a",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-sonic/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/nova-2-sonic/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut981\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:28:36Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:28:40Z"
+  }
+}

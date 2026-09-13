@@ -1,0 +1,34 @@
+{
+  "source_id": "tencent/hy3",
+  "provider": "Tencent",
+  "model": "Hy3",
+  "target_kind": "aial-eval-page",
+  "sha256": "d4b516f3a5ef04c376849456ff593ff46cf8cd4ff3e99fe4439bef0ae9f248c8",
+  "size_bytes": 19639,
+  "stored_as": "raw.html",
+  "text_sha256": "365dcaac2eb74c1acba19776236296fc0f46fd947be8b0b4d544ba4f93b08806",
+  "doc_links_sha256": "9f0f184c4396af69c7dcb27450f45458a0645c7bbaad4e1d6581c8c9ab5eb820",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/tencent-hy3/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/tencent-hy3/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7cv3f5j\"",
+    "last_modified": "Fri, 11 Sep 2026 13:45:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:53:07Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:53:11Z"
+  }
+}

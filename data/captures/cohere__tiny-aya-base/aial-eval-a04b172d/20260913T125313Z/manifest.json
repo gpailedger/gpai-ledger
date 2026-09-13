@@ -1,0 +1,33 @@
+{
+  "source_id": "cohere/tiny-aya-base",
+  "provider": "Cohere",
+  "model": "Tiny Aya Base",
+  "target_kind": "aial-eval",
+  "sha256": "c0399daa8dcdeb485d950bf542f72c3b82e59f2d58649cfcf8ffdf3012fbb17a",
+  "size_bytes": 3795,
+  "stored_as": "raw.yaml",
+  "text_sha256": "8b3e507dd05bfbba01349eea8947ef107f67d8514b64e9929597ada6db3d300a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tiny-aya-base.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/tiny-aya-base.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d9fa5d601bb2e1367f4eff5ecf2facf4460190fee5552bc7055c7d9b16e752ca\"",
+    "last_modified": null,
+    "content_length": "555",
+    "fetched_at": "2026-09-13T12:53:13Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:53:17Z"
+  }
+}

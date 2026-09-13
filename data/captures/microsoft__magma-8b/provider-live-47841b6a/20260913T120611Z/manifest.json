@@ -1,0 +1,44 @@
+{
+  "source_id": "microsoft/magma-8b",
+  "provider": "Microsoft",
+  "model": "Magma-8B",
+  "target_kind": "provider-live",
+  "sha256": "887e4e132f74bd5e865a3e5c169db0cb7e09b0b2081bc7ed75b125832136d6ed",
+  "size_bytes": 4766,
+  "stored_as": "raw.md",
+  "text_sha256": "30e9b0d0ab05005aea500ecda935c62034bf3e2740c93c5dedceff24bd08bf17",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Magma-8B/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Magma-8B/4159b1dedade8f88b5bbaaae7810299dee5228f5/data_summary_card.md?%2Fmicrosoft%2FMagma-8B%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%228fc0938546d684fd3d759ca99ab938c6e833ace2%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8fc0938546d684fd3d759ca99ab938c6e833ace2\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:06:11Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:not-found",
+    "answered": true,
+    "job_id": "spn2-83c3432616cb923d308c57e4e46860cd9b81a44a",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:06:11Z",
+    "at": "2026-09-13T12:06:23Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:06:27Z"
+  }
+}

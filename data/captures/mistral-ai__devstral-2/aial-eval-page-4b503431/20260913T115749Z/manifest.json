@@ -1,0 +1,34 @@
+{
+  "source_id": "mistral-ai/devstral-2",
+  "provider": "Mistral AI",
+  "model": "Devstral 2",
+  "target_kind": "aial-eval-page",
+  "sha256": "1239e2e3a8d1fcc75e038fd69840ce231b05ad0109ba1bda5f1efad47e2c62d8",
+  "size_bytes": 11818,
+  "stored_as": "raw.html",
+  "text_sha256": "a465d17783ff9edce737c1043c42aa11e607af805a3d0deb322c93a7c7c6409b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/devstral-2/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/devstral-2/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut94a\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T11:57:49Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:57:52Z"
+  }
+}

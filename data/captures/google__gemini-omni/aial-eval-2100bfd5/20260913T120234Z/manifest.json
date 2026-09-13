@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemini-omni",
+  "provider": "Google",
+  "model": "Gemini Omni",
+  "target_kind": "aial-eval",
+  "sha256": "987353a39b84430cc1ff846f4ad425571802112ff53ebdd22bad173e0ce78a8f",
+  "size_bytes": 3796,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b9d587914ec545718979190607fdf9d45d1895b2c0dc972772e3cb92f3b853cd",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-omni.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/gemini-omni.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4c0c03f336e197f0d77ab6f73bb23311a82c94a4db8cee64eec4ea38536ff05f\"",
+    "last_modified": null,
+    "content_length": "549",
+    "fetched_at": "2026-09-13T12:02:34Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:02:38Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "google/diffusiongemma",
+  "provider": "Google",
+  "model": "DiffusionGemma 26B A4B IT",
+  "target_kind": "aial-eval-page",
+  "sha256": "77fd5e1f595b1f6c39fc326ccf4235e5ca870dd9f790ca46c373778908d091b1",
+  "size_bytes": 11843,
+  "stored_as": "raw.html",
+  "text_sha256": "ef2608750a5883814ba6665d77d82db698c5d2aae0bf3dcbd2da5ace9121dad8",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/diffusiongemma/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/diffusiongemma/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut94z\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T11:58:12Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:58:15Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source_id": "microsoft/phi-3-5-vision-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-3.5 Vision Instruct",
+  "target_kind": "provider-live",
+  "sha256": "032ef6f50fd7bc98b696a4778a46ea8ba09773031a7a5f591fd7280b0c476701",
+  "size_bytes": 4419,
+  "stored_as": "raw.md",
+  "text_sha256": "e3e1c9a5c4962c6a924b680d5a34a06b834cc9692b9fa8f568393354f47d5e62",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/microsoft/Phi-3.5-vision-instruct/resolve/main/data_summary_card.md",
+    "final_url": "https://huggingface.co/api/resolve-cache/models/microsoft/Phi-3.5-vision-instruct/12b77fb40b63a2c73c68243d3f767aab688a1b2a/data_summary_card.md?%2Fmicrosoft%2FPhi-3.5-vision-instruct%2Fresolve%2Fmain%2Fdata_summary_card.md=&etag=%22e4a09b73c45f9994f7a69d9d53c5f814a904386a%22",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e4a09b73c45f9994f7a69d9d53c5f814a904386a\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:39:45Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:39:45Z",
+    "at": "2026-09-13T12:41:45Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:41:48Z"
+  }
+}

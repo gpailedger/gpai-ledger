@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/phi-4-multimodal-instruct",
+  "provider": "Microsoft",
+  "model": "Phi-4 Multimodal Instruct",
+  "target_kind": "aial-eval-page",
+  "sha256": "299001022f71c8ffd7f1f770ab5a425f1ba9957305f3e66ca8d3bd136bcf6039",
+  "size_bytes": 13295,
+  "stored_as": "raw.html",
+  "text_sha256": "0e50a2f872249b51cbd484b394bfc766a6630c03be6bc3da6f12c8c5f1772d12",
+  "doc_links_sha256": "8ff267b03a8552ac8072fba7e4956ba2a1a23d594d2307739abfce8e22bf4683",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-multimodal-instruct/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/phi-4-multimodal-instruct/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7lw2a9b\"",
+    "last_modified": "Fri, 11 Sep 2026 17:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:44:06Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:44:10Z"
+  }
+}

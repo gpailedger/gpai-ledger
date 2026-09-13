@@ -1,0 +1,34 @@
+{
+  "source_id": "google/gemini-robotics-1-5",
+  "provider": "Google",
+  "model": "Gemini Robotics 1.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "e211af23c7c6a54b1025d2bd59099fd595c30c80683733ae4f7f28885ab5125c",
+  "size_bytes": 11891,
+  "stored_as": "raw.html",
+  "text_sha256": "effb6e9ba7a4e18036edeb7a8e63ff54c7e68bec1bf9a9c02e21cc262b26b962",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-1.5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/gemini-robotics-1.5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut96b\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:03:09Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:03:13Z"
+  }
+}

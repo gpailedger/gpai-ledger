@@ -1,0 +1,47 @@
+{
+  "source_id": "pleias/baguettotron",
+  "provider": "Pleias",
+  "model": "Baguettotron and Monad",
+  "target_kind": "provider-live",
+  "sha256": "97b0bdbfd78b51a299ec30d37e59938c891d9ee7922133e861ed715b55d96583",
+  "size_bytes": 19349,
+  "stored_as": "raw.html",
+  "text_sha256": "e8fcae9dee2e603994a6a33b8d5da231f13660bede25e19a645d82c63115138e",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://pleias.ai/training-content/baguettotron-monad",
+    "final_url": "https://pleias.ai/training-content/baguettotron-monad",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:49:28Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913124933/https://pleias.ai/training-content/baguettotron-monad",
+    "snapshot_ts": "20260913124933",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-fd05681fd5f031736a3ec80b2e67505943b284e6",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:49:28Z",
+    "at": "2026-09-13T12:49:50Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:49:54Z"
+  }
+}

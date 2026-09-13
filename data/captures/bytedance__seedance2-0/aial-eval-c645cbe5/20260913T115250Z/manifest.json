@@ -1,0 +1,33 @@
+{
+  "source_id": "bytedance/seedance2-0",
+  "provider": "ByteDance",
+  "model": "Seedance 2.0",
+  "target_kind": "aial-eval",
+  "sha256": "6b27617e7666df5042e971be9384e3e5038c2dc297580e8f3a9bde4c4a408f16",
+  "size_bytes": 3300,
+  "stored_as": "raw.yaml",
+  "text_sha256": "06abbfe6d908298be879a7a2212a0fc8b5257bb1dbec2b535f71030148226d88",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seedance2.0.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seedance2.0.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"974cc06940c72c2644efd874cd5bb5a07bb3fb4ca2f4045f3b5f63e1bc0a8f33\"",
+    "last_modified": null,
+    "content_length": "653",
+    "fetched_at": "2026-09-13T11:52:50Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:52:54Z"
+  }
+}

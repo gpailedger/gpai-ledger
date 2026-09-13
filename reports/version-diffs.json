@@ -16350,6 +16350,39 @@
       }
     ]
   },
+  "microsoft/magma-8b::live-vs-archive::captures/microsoft__magma-8b/aial-archive-635d14df/20260913T120642Z>captures/microsoft__magma-8b/provider-live-47841b6a/20260913T120611Z": {
+    "verdict": "changed",
+    "similarity": 0.9996,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.J Other",
+        "new": "mixtures 1.3.1.J Other"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information. 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/magma-8b",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__magma-8b/aial-archive-635d14df/20260913T120642Z",
+    "to_dir": "captures/microsoft__magma-8b/provider-live-47841b6a/20260913T120611Z",
+    "from_sha256": "9798aad2315fd02224140def006c6d7b66d48d9a50a038ffd874612c08572fad",
+    "to_sha256": "887e4e132f74bd5e865a3e5c169db0cb7e09b0b2081bc7ed75b125832136d6ed",
+    "computed_at": "2026-09-13T13:04:11Z"
+  },
   "microsoft/mai-code-1-flash::aial-eval-history-300d8734::captures/microsoft__mai-code-1-flash/aial-eval-history-300d8734/20260829T184050Z>captures/microsoft__mai-code-1-flash/aial-eval-history-300d8734/20260829T184431Z": {
     "verdict": "changed",
     "similarity": 0.9938,
@@ -17051,6 +17084,39 @@
     "computed_at": "2026-08-31T12:28:27Z",
     "changes": [],
     "changes_withheld": true
+  },
+  "microsoft/mai-ds-r1::live-vs-archive::captures/microsoft__mai-ds-r1/aial-archive-7c2d4e5a/20260913T120811Z>captures/microsoft__mai-ds-r1/provider-live-82698457/20260913T120717Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.2 Latest",
+        "new": "biases 1.3.2 Latest"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/mai-ds-r1",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__mai-ds-r1/aial-archive-7c2d4e5a/20260913T120811Z",
+    "to_dir": "captures/microsoft__mai-ds-r1/provider-live-82698457/20260913T120717Z",
+    "from_sha256": "30287de14e130953cdd1c139e683002dfa6a61d68f026f9ca130bb5a447b2caa",
+    "to_sha256": "94a7156e8af399651e2624d50a72f8db33595ceaa122c1a85e76c6bff2b0eaa9",
+    "computed_at": "2026-09-13T13:04:12Z"
   },
   "microsoft/mai-image-2-5::aial-eval-history-5a010531::captures/microsoft__mai-image-2-5/aial-eval-history-5a010531/20260829T184447Z>captures/microsoft__mai-image-2-5/aial-eval-history-5a010531/20260829T185330Z": {
     "verdict": "changed",
@@ -18164,6 +18230,237 @@
     "to_sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
     "computed_at": "2026-09-05T06:25:59Z"
   },
+  "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "No 1 1.3.4",
+        "new": "deployment No 1.3.4 Date"
+      },
+      {
+        "op": "delete",
+        "old": "patent 2 3.2",
+        "new": "or patent 3.2 Other"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-1-5",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z",
+    "to_dir": "captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z",
+    "from_sha256": "93e4e78152f59b58ea8e379b8de64470d3c6aeae8e9fd7797365b03b329e0d7e",
+    "to_sha256": "741d9aa6f11c3cc5aa0c097731133f5055e919a5bac3e014a764ba9b93e05fcb",
+    "computed_at": "2026-09-13T13:04:12Z"
+  },
+  "microsoft/phi-1::live-vs-archive::captures/microsoft__phi-1/aial-archive-028efc10/20260913T123555Z>captures/microsoft__phi-1/provider-live-c42e88a5/20260913T123535Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.3 Is",
+        "new": "31-Aug-2023 1.3.3 Is"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-1",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-1/aial-archive-028efc10/20260913T123555Z",
+    "to_dir": "captures/microsoft__phi-1/provider-live-c42e88a5/20260913T123535Z",
+    "from_sha256": "dec291766ae33b1ba5fd9e9da584d58db1193c1145b68f32b171cc845333b3b6",
+    "to_sha256": "54127d2839a297b9f51ec96442f0decb42b0d26510f243bcf831c72f6228df3a",
+    "computed_at": "2026-09-13T13:04:12Z"
+  },
+  "microsoft/phi-2::live-vs-archive::captures/microsoft__phi-2/aial-archive-11aa7a8c/20260913T123925Z>captures/microsoft__phi-2/provider-live-fe435287/20260913T123615Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "No 1 1.3.4",
+        "new": "deployment No 1.3.4 Date"
+      },
+      {
+        "op": "delete",
+        "old": "for 2 processing",
+        "new": "laws for processing data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-2",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-2/aial-archive-11aa7a8c/20260913T123925Z",
+    "to_dir": "captures/microsoft__phi-2/provider-live-fe435287/20260913T123615Z",
+    "from_sha256": "5e8edd3132ad5377616198725f9de3b8653c2ffb55afbc48bcdf37d80fb9c455",
+    "to_sha256": "a12a5d701ee9e71bc1dde42e53c0e82842f38a6ecbebd595e3c72048c9fb499f",
+    "computed_at": "2026-09-13T13:04:13Z"
+  },
+  "microsoft/phi-3-5-vision-instruct::live-vs-archive::captures/microsoft__phi-3-5-vision-instruct/aial-archive-4263bcc7/20260913T124156Z>captures/microsoft__phi-3-5-vision-instruct/provider-live-6204aaf7/20260913T123945Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.J Other",
+        "new": "applicable 1.3.1.J Other"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-3-5-vision-instruct",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-3-5-vision-instruct/aial-archive-4263bcc7/20260913T124156Z",
+    "to_dir": "captures/microsoft__phi-3-5-vision-instruct/provider-live-6204aaf7/20260913T123945Z",
+    "from_sha256": "87d84c4c1978dc1e6807e6e3983df8cba6e3890ea4e39195c8da4ba013ac6dbe",
+    "to_sha256": "032ef6f50fd7bc98b696a4778a46ea8ba09773031a7a5f591fd7280b0c476701",
+    "computed_at": "2026-09-13T13:04:13Z"
+  },
+  "microsoft/phi-3::live-vs-archive::captures/microsoft__phi-3/aial-archive-759d1675/20260913T124242Z>captures/microsoft__phi-3/provider-live-8587171e/20260913T124217Z": {
+    "verdict": "changed",
+    "similarity": 0.9996,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.G Video",
+        "new": "applicable 1.3.1.G Video"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-3",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-3/aial-archive-759d1675/20260913T124242Z",
+    "to_dir": "captures/microsoft__phi-3/provider-live-8587171e/20260913T124217Z",
+    "from_sha256": "efd4825c44868ebd35171257aac6e5cfb3a87f11585d062cfbd7ba27efa7a583",
+    "to_sha256": "7d7a019ce5fe4953e2ea99dc094b4eda9c2e07ce3fb10e82b0a57aa4bce2e348",
+    "computed_at": "2026-09-13T13:04:13Z"
+  },
+  "microsoft/phi-4-mini-instruct::live-vs-archive::captures/microsoft__phi-4-mini-instruct/aial-archive-6949521e/20260913T124316Z>captures/microsoft__phi-4-mini-instruct/provider-live-c568ab97/20260913T124258Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "data 1 1.3.1.H",
+        "new": "training data 1.3.1.H Video"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-4-mini-instruct",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-4-mini-instruct/aial-archive-6949521e/20260913T124316Z",
+    "to_dir": "captures/microsoft__phi-4-mini-instruct/provider-live-c568ab97/20260913T124258Z",
+    "from_sha256": "981988d89a5e1802d88d86a268a986c5e034050ba819a273b2f25c85d8b4daaa",
+    "to_sha256": "470514f8d8408e1254c9487401dc4d7d2edb4e08f0453f7bbfb5e01dbb976456",
+    "computed_at": "2026-09-13T13:04:13Z"
+  },
+  "microsoft/phi-4-reasoning::live-vs-archive::captures/microsoft__phi-4-reasoning/aial-archive-cfe59f0e/20260913T124432Z>captures/microsoft__phi-4-reasoning/provider-live-36de6ad3/20260913T124411Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.3 Is",
+        "new": "31-Mar-2025 1.3.3 Is"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-4-reasoning",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-4-reasoning/aial-archive-cfe59f0e/20260913T124432Z",
+    "to_dir": "captures/microsoft__phi-4-reasoning/provider-live-36de6ad3/20260913T124411Z",
+    "from_sha256": "ff2d9002c4e3dccb0b548b987fe3bd9cc6b4462595f35860e0418c58c9422905",
+    "to_sha256": "6c59a8cab7f9fa27ce9be09aa2c13c523faa863f8fca8a723bce4cdef029cfc2",
+    "computed_at": "2026-09-13T13:04:14Z"
+  },
   "microsoft/phi-4::aial-eval-history-142fd02d::captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183348Z>captures/microsoft__phi-4/aial-eval-history-142fd02d/20260829T183430Z": {
     "verdict": "changed",
     "similarity": 0.9967,
@@ -18458,6 +18755,39 @@
         "computed_at": "2026-08-22T23:26:14Z"
       }
     ]
+  },
+  "microsoft/phi-moe::live-vs-archive::captures/microsoft__phi-moe/aial-archive-3392d11c/20260913T124908Z>captures/microsoft__phi-moe/provider-live-d0711f07/20260913T124505Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.2 Latest",
+        "new": "applicable 1.3.2 Latest"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ],
+    "source": "microsoft/phi-moe",
+    "target": "live-vs-archive",
+    "from_dir": "captures/microsoft__phi-moe/aial-archive-3392d11c/20260913T124908Z",
+    "to_dir": "captures/microsoft__phi-moe/provider-live-d0711f07/20260913T124505Z",
+    "from_sha256": "fa0f62be9fd9134497225b7b73c967d5750bf759dc41d59e6e3054542edeea99",
+    "to_sha256": "dcc9cad772ef4e56bee0035536df7297afa1277d8d48d5c96575eea956b58ba0",
+    "computed_at": "2026-09-13T13:04:14Z"
   },
   "minimax/minimax-m3::aial-eval-history-cd728555::captures/minimax__minimax-m3/aial-eval-history-cd728555/20260829T185419Z>captures/minimax__minimax-m3/aial-eval-history-cd728555/20260829T185426Z": {
     "verdict": "changed",

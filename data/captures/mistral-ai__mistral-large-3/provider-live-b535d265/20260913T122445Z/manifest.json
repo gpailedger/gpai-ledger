@@ -1,0 +1,44 @@
+{
+  "source_id": "mistral-ai/mistral-large-3",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3",
+  "target_kind": "provider-live",
+  "sha256": "22c6cae662df2b80486a79eeb30c8f99959bd0cf78d52950290141ec52c824bc",
+  "size_bytes": 218727,
+  "stored_as": "raw.pdf",
+  "text_sha256": "af4567f17ccc13335848dc948e4ae2228bee3ad4fe41af26002cc5c970318249",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/documents/Mistral%20Large%203%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "final_url": "https://legal.mistral.ai/documents/Mistral%20Large%203%20-%20Public%20Summary%20of%20Training%20Content.docx.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"3b9b12284268737ce2a825a533eb2d1c-ssl-df\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-13T12:24:45Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:gateway-timeout",
+    "answered": true,
+    "job_id": "spn2-1053759edf4f10125228523f6ba72e44e86c5138",
+    "via": "spn2",
+    "requested_at": "2026-09-13T12:24:45Z",
+    "at": "2026-09-13T12:24:54Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T12:24:57Z"
+  }
+}

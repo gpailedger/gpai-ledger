@@ -1,0 +1,46 @@
+{
+  "source_id": "deepseek/deepseek-v4",
+  "provider": "DeepSeek",
+  "model": "DeepSeek-V4",
+  "target_kind": "provider-live",
+  "sha256": "0c630aa2165c1a4a8048c669d6e38e650ad055ca8aa5c95f7bc66546f8a96efc",
+  "size_bytes": 253321,
+  "stored_as": "raw.pdf",
+  "text_sha256": "47accbf49046c9d573a88d187da155388f3d75d9091c32677c5d306e73d069b5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://cdn.deepseek.com/policies/DeepSeek_Template_for_the_Public_Summary_of_Training_Content_for_GeneralPurpose_AI_model.pdf",
+    "final_url": "https://cdn.deepseek.com/policies/DeepSeek_Template_for_the_Public_Summary_of_Training_Content_for_GeneralPurpose_AI_model.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"a91991777c05f4da2c03579c307adf0f\"",
+    "last_modified": "Thu, 13 Aug 2026 10:55:35 GMT",
+    "content_length": "253321",
+    "fetched_at": "2026-09-13T11:57:01Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913115707/https://cdn.deepseek.com/policies/DeepSeek_Template_for_the_Public_Summary_of_Training_Content_for_GeneralPurpose_AI_model.pdf",
+    "snapshot_ts": "20260913115707",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-3d21c290bdf95953496fc56cc15f578cb76e6c62",
+    "via": "spn2",
+    "requested_at": "2026-09-13T11:57:01Z",
+    "at": "2026-09-13T11:57:08Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:57:13Z"
+  }
+}

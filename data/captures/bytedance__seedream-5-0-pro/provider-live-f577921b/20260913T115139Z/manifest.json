@@ -1,0 +1,46 @@
+{
+  "source_id": "bytedance/seedream-5-0-pro",
+  "provider": "ByteDance",
+  "model": "Seedream 5.0 Pro",
+  "target_kind": "provider-live",
+  "sha256": "bbfe07316d3bfeb78f67e43c8280e887102aa2cb4926db18e1a3c9fa25fa1e7e",
+  "size_bytes": 251620,
+  "stored_as": "raw.pdf",
+  "text_sha256": "04034d2e92f0bd9bedf2749353e4cc801567ea7582e68b7dd934b1529f73f925",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedream%205.0%20Pro%20.pdf",
+    "final_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedream%205.0%20Pro%20.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "\"8d51ca910b7d1213fa420b446238ec1a\"",
+    "last_modified": "Mon, 03 Aug 2026 06:55:59 GMT",
+    "content_length": "251620",
+    "fetched_at": "2026-09-13T11:51:38Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260913115145/https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/transparency/20260803/Public%20Summary%20of%20Training%20Data%20Content%20for%20Seedream%205.0%20Pro%20.pdf",
+    "snapshot_ts": "20260913115145",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-dc4a191a00a4747757924b501dd0de65d01644a1",
+    "via": "spn2",
+    "requested_at": "2026-09-13T11:51:39Z",
+    "at": "2026-09-13T11:51:46Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:51:50Z"
+  }
+}

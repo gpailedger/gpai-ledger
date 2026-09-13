@@ -1,0 +1,34 @@
+{
+  "source_id": "black-forest-labs/flux-2-pro",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.2 [pro]",
+  "target_kind": "aial-eval-page",
+  "sha256": "c83bc2e590271823b705aa3523fd76beee1da947984423a1a12d6af91aea2bda",
+  "size_bytes": 11760,
+  "stored_as": "raw.html",
+  "text_sha256": "09519f70e178e98f396a37b712c464720c66dd32d614c49f069045ed3103fdc5",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-pro/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/flux-2-pro/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tl7kut92o\"",
+    "last_modified": "Fri, 11 Sep 2026 16:37:41 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-13T11:59:52Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-13T11:59:57Z"
+  }
+}
