@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-09-13
+# Live-vs-archive drift — 2026-09-14
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|

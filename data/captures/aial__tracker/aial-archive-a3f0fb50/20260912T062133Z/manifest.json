@@ -36,10 +36,25 @@
     "at": "2026-09-12T06:21:35Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260914062426/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/Claude_Fable_Mythos_5_1_2026_09_08.pdf",
+    "snapshot_ts": "20260914062426",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-295e57c62f1feecf78f26bfd7b18697c045904e0",
     "via": "spn2",
-    "requested_at": "2026-09-13T13:02:05Z",
-    "at": "2026-09-13T13:04:05Z"
-  }
+    "requested_at": "2026-09-14T06:24:26Z",
+    "at": "2026-09-14T06:24:32Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-13T13:02:05Z",
+      "at": "2026-09-13T13:04:05Z"
+    }
+  ]
 }

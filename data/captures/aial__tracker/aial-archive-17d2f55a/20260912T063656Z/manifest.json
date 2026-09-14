@@ -36,14 +36,17 @@
     "at": "2026-09-12T06:36:59Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "This URL has been already captured 1 times today, which is a daily limit we have set for that Resource type. Please try again tomorrow. Please email us at \"info@archive.org\" if you would like to discuss this more.",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260914062315/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi3_2026_09_11.pdf",
+    "snapshot_ts": "20260914062315",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a4591c6f9c2b97f9cefbcbff04320933fa25c8d3",
     "via": "spn2",
-    "requested_at": "2026-09-13T12:57:11Z",
-    "at": "2026-09-13T12:57:12Z"
+    "requested_at": "2026-09-14T06:22:07Z",
+    "at": "2026-09-14T06:23:20Z"
   },
   "wayback_attempts": [
     {
@@ -64,6 +67,16 @@
       "via": "spn2",
       "requested_at": "2026-09-13T06:30:59Z",
       "at": "2026-09-13T06:31:26Z"
+    },
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "This URL has been already captured 1 times today, which is a daily limit we have set for that Resource type. Please try again tomorrow. Please email us at \"info@archive.org\" if you would like to discuss this more.",
+      "answered": true,
+      "via": "spn2",
+      "requested_at": "2026-09-13T12:57:11Z",
+      "at": "2026-09-13T12:57:12Z"
     }
   ]
 }

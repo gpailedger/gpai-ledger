@@ -26356,5 +26356,28 @@
     "from_sha256": "66dc2b0f212b15076dd13bdec3ddad2e685ed4b3cd73a6f0513d53962255adf4",
     "to_sha256": "881cf7ad9c74cdd3eb47d33e579910e900c0f8a3ac8b246d75a776c607c1f457",
     "computed_at": "2026-09-13T06:47:58Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260913T062450Z>captures/xai__model-catalog/watch-page-905d5d7a/20260914T061841Z": {
+    "verdict": "changed",
+    "similarity": 0.9987,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Agent Starting at 0.08",
+        "new": "text-to-speech. Agent 0.08 /"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260913T062450Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260914T061841Z",
+    "from_sha256": "881cf7ad9c74cdd3eb47d33e579910e900c0f8a3ac8b246d75a776c607c1f457",
+    "to_sha256": "2f0164cceb5471071cbf04e00c890e4812ab2c645eab048d629dd6418b5fbaa5",
+    "computed_at": "2026-09-14T06:32:29Z"
   }
 }
