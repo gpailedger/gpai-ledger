@@ -37,13 +37,25 @@
   },
   "wayback": {
     "ok": false,
-    "status_code": 200,
-    "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
-    "job_id": "spn2-e1a9ad709259adca0f7b211378f07968b8e7ddda",
+    "status_code": 429,
+    "spn_status": 429,
+    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+    "answered": false,
     "via": "spn2",
-    "requested_at": "2026-09-14T06:28:46Z",
-    "at": "2026-09-14T06:28:52Z"
-  }
+    "requested_at": "2026-09-15T07:59:56Z",
+    "at": "2026-09-15T07:59:56Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-e1a9ad709259adca0f7b211378f07968b8e7ddda",
+      "via": "spn2",
+      "requested_at": "2026-09-14T06:28:46Z",
+      "at": "2026-09-14T06:28:52Z"
+    }
+  ]
 }

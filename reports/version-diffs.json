@@ -3513,6 +3513,24 @@
     "computed_at": "2026-09-12T06:44:01Z",
     "changes_withheld": true
   },
+  "aial/tracker::aial-method-cbb39bff::captures/aial__tracker/aial-method-cbb39bff/20260912T063949Z>captures/aial__tracker/aial-method-cbb39bff/20260915T075818Z": {
+    "verdict": "changed",
+    "similarity": 0.8874,
+    "word_delta": 410,
+    "moved_words": 431,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-cbb39bff",
+    "from_dir": "captures/aial__tracker/aial-method-cbb39bff/20260912T063949Z",
+    "to_dir": "captures/aial__tracker/aial-method-cbb39bff/20260915T075818Z",
+    "from_sha256": "a3b551c3fd52e1a7b8a6878e92012797908d3909cd806895c8f06c8eccde72f1",
+    "to_sha256": "be0982a3754a579effe0d1d9ebffb9ec8b16d99012485deb9b94cf5859c209b8",
+    "computed_at": "2026-09-15T08:16:20Z",
+    "changes_withheld": true
+  },
   "aial/tracker::aial-method-d00ffdc2::captures/aial__tracker/aial-method-d00ffdc2/20260831T095040Z>captures/aial__tracker/aial-method-d00ffdc2/20260831T095226Z": {
     "verdict": "changed",
     "similarity": 0.9447,
@@ -4375,6 +4393,24 @@
     "from_sha256": "371a6a16063d68f9dcbadc8c0a9225b42eeb8a07be7d07783b5d62be934085fe",
     "to_sha256": "d90e89578de797c350e7d055da69d410841da1ecd6c044b9b62dc683afd852a7",
     "computed_at": "2026-09-12T06:43:59Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-d00ffdc2::captures/aial__tracker/aial-method-d00ffdc2/20260912T063157Z>captures/aial__tracker/aial-method-d00ffdc2/20260915T074726Z": {
+    "verdict": "changed",
+    "similarity": 0.9924,
+    "word_delta": 28,
+    "moved_words": 12,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-d00ffdc2",
+    "from_dir": "captures/aial__tracker/aial-method-d00ffdc2/20260912T063157Z",
+    "to_dir": "captures/aial__tracker/aial-method-d00ffdc2/20260915T074726Z",
+    "from_sha256": "d90e89578de797c350e7d055da69d410841da1ecd6c044b9b62dc683afd852a7",
+    "to_sha256": "eeac357ac5d6494a57c3984b9f0ae6d6b1c402527304a50d9e3a62c97ebddab7",
+    "computed_at": "2026-09-15T08:16:20Z",
     "changes_withheld": true
   },
   "aial/tracker::aial-method-fdbefa3b::captures/aial__tracker/aial-method-fdbefa3b/20260831T095109Z>captures/aial__tracker/aial-method-fdbefa3b/20260831T095251Z": {
@@ -5383,6 +5419,24 @@
     "from_sha256": "87f1e202667ae732048329a0540210378bf8fb6a70a8f95f2f0d7c012416eab5",
     "to_sha256": "6930a5f6520ed86e304f37715909c7a7d65f1ff635ec1710f13b352429f0a416",
     "computed_at": "2026-09-12T06:44:00Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-fdbefa3b::captures/aial__tracker/aial-method-fdbefa3b/20260912T063945Z>captures/aial__tracker/aial-method-fdbefa3b/20260915T075813Z": {
+    "verdict": "changed",
+    "similarity": 0.9174,
+    "word_delta": 223,
+    "moved_words": 133,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-fdbefa3b",
+    "from_dir": "captures/aial__tracker/aial-method-fdbefa3b/20260912T063945Z",
+    "to_dir": "captures/aial__tracker/aial-method-fdbefa3b/20260915T075813Z",
+    "from_sha256": "6930a5f6520ed86e304f37715909c7a7d65f1ff635ec1710f13b352429f0a416",
+    "to_sha256": "87c089a9dba27122c63be37b57356f7bc01d405b05b166c560937bb8a36cc1a1",
+    "computed_at": "2026-09-15T08:16:20Z",
     "changes_withheld": true
   },
   "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260811T110511Z>captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z": {
@@ -11538,6 +11592,22 @@
     "from_sha256": "3a520cb3ca6cd6979975747c84e96aa18839fcdfe00c62d96422d31c2833fe47",
     "to_sha256": "e7a38cdc133699b899b42b8c43a86aa1f02fabd80dd9f7d86c834c32e6d3fe0d",
     "computed_at": "2026-09-13T06:47:58Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260913T060001Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260915T062548Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260913T060001Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260915T062548Z",
+    "from_sha256": "e7a38cdc133699b899b42b8c43a86aa1f02fabd80dd9f7d86c834c32e6d3fe0d",
+    "to_sha256": "7b2309ade28ef5e84439e7d1f6e477849c2b0bd793d6d3958c01cf9b853c2e6a",
+    "computed_at": "2026-09-15T08:16:20Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",

@@ -36,14 +36,29 @@
     "at": "2026-09-12T06:37:10Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260915075921/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi4_Multimodal_Instruct_2026_09_11.pdf.pdf",
+    "snapshot_ts": "20260915075921",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-8bd9ff1137f08bdf9827cf6c663f916a849fd66b",
     "via": "spn2",
-    "requested_at": "2026-09-14T06:27:49Z",
-    "at": "2026-09-14T06:27:58Z"
-  }
+    "requested_at": "2026-09-15T07:59:20Z",
+    "at": "2026-09-15T07:59:26Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-8bd9ff1137f08bdf9827cf6c663f916a849fd66b",
+      "via": "spn2",
+      "requested_at": "2026-09-14T06:27:49Z",
+      "at": "2026-09-14T06:27:58Z"
+    }
+  ]
 }
