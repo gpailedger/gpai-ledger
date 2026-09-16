@@ -36,10 +36,25 @@
     "at": "2026-09-12T06:23:01Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260916102538/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/evals/midjourney-midjourney.yaml",
+    "snapshot_ts": "20260916102538",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-70a548dbd17632031f7c5ddd74c535a2f4a1c372",
     "via": "spn2",
-    "requested_at": "2026-09-16T09:48:25Z",
-    "at": "2026-09-16T09:50:25Z"
-  }
+    "requested_at": "2026-09-16T10:25:38Z",
+    "at": "2026-09-16T10:25:43Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-16T09:48:25Z",
+      "at": "2026-09-16T09:50:25Z"
+    }
+  ]
 }
