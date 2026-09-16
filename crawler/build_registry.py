@@ -380,7 +380,8 @@ EVAL_FILE_SLUGS = {
     "cyfragolvpl_pllum": "pllum",                    # was pllum.yaml
     "cyfragolvpl_pllum-instruct": "pllum-instruct",  # new; named like its sibling
     # model name, summary link and archived copy all say Phi-3.5 Vision Instruct
-    "phi-3.5-reasoning": "phi-3-5-vision-instruct",
+    # (AIAL's 14 Sep 2026 rename put the organisation in front of the same stem)
+    "microsoft-phi-3.5-reasoning": "phi-3-5-vision-instruct",
     # model name and summary title say Seedream 5.0 Pro, ByteDance's image model,
     # not Seedance, its video model
     "bytedance-seedance-5.0pro": "seedream-5-0-pro",
@@ -389,17 +390,10 @@ EVAL_FILE_SLUGS = {
 # A second AIAL evaluation file of a model already built from another file. It is
 # skipped while that source is still built from its own file; if that ever stops,
 # the refresh fails, so which file carries the model is decided, not inherited.
-DUPLICATE_EVAL_FILES = {
-    "veo-3.1.yaml": (
-        "google/veo-3-1",
-        "the same Veo 3.1 evaluation as veo-3-1.yaml, differing only in the model "
-        "publication date (2025-10-14 against 2025-10-15) and a trailing slash"),
-    "xai-grok-voice-think-fast2.0.yaml": (
-        "xai/grok-voice-think-fast-2",
-        "grades the same xAI document and archived copy as "
-        "grok-voice-think-fast-2.yaml, under a header that reads Muse Glimmer / "
-        "Meta AI, copied from meta-muse-glimmer.yaml"),
-}
+# Empty since 16 Sep 2026: AIAL's rename pass deleted veo-3.1.yaml outright, and
+# deleted grok-voice-think-fast-2.yaml while keeping the twin whose header is
+# wrong, which now carries the model on its own (see MISLABELLED_EVAL_HEADERS).
+DUPLICATE_EVAL_FILES = {}
 
 # AIAL evaluation files whose link this project has read and found to be ANOTHER
 # model's document: (the link as read, why). Left out while that link stands, as
@@ -412,6 +406,21 @@ MISATTRIBUTED_EVAL_FILES = {
         "Nano v2 12B VL, the document nvidia-nemotron-nano.yaml links; AIAL's archived "
         "copy under this entry is the same file, and neither names a Nemotron 3 or "
         "3.5 model (read 13 Sep 2026)"),
+}
+
+# AIAL evaluation files whose header names another model, where every other field -
+# model_link, org_link, public_summary_link, archive_file_name - belongs to the model
+# named second: (the header as read, what the file is really about, why). The rewrite
+# stands only while the header still reads that way; once AIAL corrects it the file is
+# taken at its word again, with a note to drop the entry.
+MISLABELLED_EVAL_HEADERS = {
+    "xai-grok-voice-think-fast2.0.yaml": (
+        ("Meta AI", "Muse Glimmer"),
+        ("xAI", "Grok Voice Think Fast 2.0"),
+        "its header is meta-muse-glimmer.yaml's, while model_link, org_link, "
+        "public_summary_link and archive_file_name are all xAI's Grok Voice Think "
+        "Fast 2.0; AIAL's 14 Sep 2026 rename deleted grok-voice-think-fast-2.yaml, "
+        "the file that carried the model, leaving only this one (read 16 Sep 2026)"),
 }
 
 
@@ -495,6 +504,12 @@ def main(aial_repo: str, out_path=None) -> None:
                      .get("sources", [])} if out.exists() else {})
     prev_targets = {(s["id"], t["url"]) for s in prev_sources.values()
                     for t in s.get("targets", [])}
+    # what each tracked AIAL-derived source SAYS it is, for the rename rule below
+    prev_by_identity = {}
+    for s in prev_sources.values():
+        if s.get("aial"):
+            key = (_alnum(s.get("provider", "")), _alnum(s.get("model", "")))
+            prev_by_identity.setdefault(key, []).append(s["id"])
 
     sources = []
     seen_ids = {}          # source id -> the eval filename that claimed it
@@ -513,8 +528,17 @@ def main(aial_repo: str, out_path=None) -> None:
             print(f"  WARNING: {path.name} holds no metadata mapping, skipped")
             continue
         model = _text(raw.get("model_name")) or path.stem
-        model = MODEL_NAME_OVERRIDES.get(model, model)
         org = _text(raw.get("organization")) or "unknown"
+        mislabelled = MISLABELLED_EVAL_HEADERS.get(path.name)
+        if mislabelled:
+            header, correct, why = mislabelled
+            if (org, model) == header:
+                print(f"  read {path.name} as {correct[0]} / {correct[1]}: {why}")
+                org, model = correct
+            else:
+                print(f"  NOTE: {path.name} no longer reads {header[0]} / "
+                      f"{header[1]}; drop it from MISLABELLED_EVAL_HEADERS")
+        model = MODEL_NAME_OVERRIDES.get(model, model)
         org = ORG_ALIASES.get(org, org)
         summary_link = _text(raw.get("public_summary_link"))
         held = MISATTRIBUTED_EVAL_FILES.get(path.name)
@@ -528,6 +552,20 @@ def main(aial_repo: str, out_path=None) -> None:
         slug = eval_slug(path.stem, org, model)
         archive_file = ARCHIVE_FILE_OVERRIDES.get(slug, archive_file)
         sid = f"{org_slug(org)}/{slug}"
+        # AIAL renames eval files in waves (5 files on 10 Sep 2026, 100 on 14 Sep),
+        # and the filename is what the id is derived from. A renamed file is
+        # recognised by what it SAYS - organisation and model name, the identity the
+        # history harvest places evaluations by - and keeps the id its captures live
+        # under. Only an unambiguous match counts: exactly one tracked AIAL source
+        # with that identity, not already claimed this run. Anything else leaves the
+        # id dropped, and the fail-closed check at the end refuses the write.
+        if sid not in prev_sources:
+            same = prev_by_identity.get((_alnum(org), _alnum(model)), [])
+            if len(same) == 1 and same[0] not in seen_ids:
+                print(f"  NOTE: {path.name} builds {sid}, which is not tracked; "
+                      f"{org} / {model} is tracked as {same[0]}, which keeps the id")
+                sid = same[0]
+                slug = sid.split("/", 1)[1]
         # An archived copy AIAL names but its archive does not hold fails on every
         # sweep. A name differing only in case is corrected to the file that exists;
         # an absent one is left out - unless it is already tracked, when its
@@ -636,6 +674,22 @@ def main(aial_repo: str, out_path=None) -> None:
                 "archive_file_name": archive_file,
             },
         })
+
+    # A hand-pin no upstream file answers to is dead config, and dead config is what
+    # turned AIAL's 14 Sep 2026 rename into three red sweeps: DUPLICATE_EVAL_FILES
+    # still named a file they had deleted, so the refresh refused to build and every
+    # sweep ran on a registry addressing files that were gone.
+    stems = {p.stem for p in evals}
+    names = {p.name for p in evals}
+    for stem in EVAL_FILE_SLUGS:
+        if stem not in stems:
+            print(f"  NOTE: no upstream file is named {stem}.yaml; drop it from "
+                  f"EVAL_FILE_SLUGS")
+    for pinned, label in ((MISATTRIBUTED_EVAL_FILES, "MISATTRIBUTED_EVAL_FILES"),
+                          (MISLABELLED_EVAL_HEADERS, "MISLABELLED_EVAL_HEADERS")):
+        for name in pinned:
+            if name not in names:
+                print(f"  NOTE: {name} is no longer upstream; drop it from {label}")
 
     # a declared duplicate may only be skipped while its model is still built from
     # its own file; otherwise the model would vanish with nobody having decided it

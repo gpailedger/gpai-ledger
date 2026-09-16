@@ -618,3 +618,96 @@ def test_version_links_match_the_bare_relative_hrefs_aial_actually_emits():
 def test_version_links_stay_on_aial():
     html = '<a href="https://evil.example/version-2026-03-30">x</a>'
     assert H.version_links(html, "https://aial.ie/a/") == []
+
+
+# --- an upstream rename must not mint a second chain --------------------------
+
+def _run_harvest(monkeypatch, tree, raw, fetches=None):
+    monkeypatch.setattr(H, "commits", lambda tok: [
+        {"sha": "c9", "commit": {"author": {"date": "2026-09-14T00:00:00Z"}}}])
+    monkeypatch.setattr(H, "tree_at", lambda sha, tok: tree)
+    monkeypatch.setattr(H, "token", lambda: "")
+    monkeypatch.setattr(H, "PAUSE_S", 0)
+    monkeypatch.setattr(cap, "ots_stamp", lambda d: (None, {"ok": False}))
+
+    def _fetch(url, **k):
+        if fetches is not None:
+            fetches.append(url)
+        return raw, {"url": url, "final_url": url, "status_code": 200,
+                     "content_type": "text/plain", "etag": None, "last_modified": None,
+                     "content_length": str(len(raw)),
+                     "fetched_at": "2026-09-16T10:00:00Z"}
+    monkeypatch.setattr(cap, "fetch", _fetch)
+    H.main()
+
+
+def _phi_chain(corpus, blob="blobA", raw=None):
+    text = NL.join(['model_name: "Phi-4"', 'organization: "Microsoft"', ""])
+    raw = raw if raw is not None else text.encode("utf-8")
+    corpus.add_capture(source_id="microsoft/phi-4", tslug="aial-eval-history-11112222",
+                       raw=raw, ext=".yaml", text=text, kind="aial-eval-history",
+                       provider="Microsoft", model="Phi-4",
+                       url="https://raw.githubusercontent.com/x/evals/phi-4.yaml",
+                       extra_manifest={"git_path": "evals/phi-4.yaml",
+                                       "git_blob_sha": blob,
+                                       "git_commit_date": "2026-08-06T00:00:00Z"})
+    return raw
+
+
+def test_a_renamed_file_continues_the_chain_it_already_has(_data_in_tmp, corpus,
+                                                           monkeypatch):
+    # AIAL renamed 100 eval files on 14 Sep 2026 and their tooling wrote the new
+    # names as fresh files, so git shows additions, not renames. Keyed on the path
+    # alone the harvest stored the blob it already held a second time, 57 times over.
+    raw = _phi_chain(corpus)
+    root = corpus.finish()
+    _registry(_data_in_tmp, [{"id": "microsoft/phi-4", "provider": "Microsoft",
+                              "model": "Phi-4", "targets": []}])
+    fetches = []
+    _run_harvest(monkeypatch, {"evals/microsoft-phi-4.yaml": "blobA"}, raw, fetches)
+    chains = {m.parent.parent.name
+              for m in (root / "captures").glob("*/*/*/manifest.json")}
+    assert chains == {"aial-eval-history-11112222"}, chains
+    entry = json.loads((root / "state.json").read_text(encoding="utf-8"))[
+        "microsoft/phi-4::aial-eval-history-11112222"]
+    assert entry["upstream_aliases"] == {"evals/microsoft-phi-4.yaml": "blobA"}
+    assert len(entry["versions"]) == 1, "the same state was stored twice"
+    fetches.clear()
+    _run_harvest(monkeypatch, {"evals/microsoft-phi-4.yaml": "blobA"}, raw, fetches)
+    assert fetches == [], "the bound path was fetched again"
+
+
+def test_a_rename_that_rewrites_the_content_opens_its_own_chain(_data_in_tmp, corpus,
+                                                                monkeypatch):
+    # the blob is the proof two paths are one file; without it nothing is assumed
+    _phi_chain(corpus)
+    root = corpus.finish()
+    _registry(_data_in_tmp, [{"id": "microsoft/phi-4", "provider": "Microsoft",
+                              "model": "Phi-4", "targets": []}])
+    changed = NL.join(['model_name: "Phi-4"', 'organization: "Microsoft"',
+                       "S1: {D1: {score: 7}}", ""]).encode("utf-8")
+    _run_harvest(monkeypatch, {"evals/microsoft-phi-4.yaml": "blobB"}, changed)
+    chains = {m.parent.parent.name
+              for m in (root / "captures").glob("*/*/*/manifest.json")}
+    assert len(chains) == 2 and "aial-eval-history-11112222" in chains, chains
+
+
+def test_two_files_under_the_tracker_sharing_a_blob_keep_their_own_histories(
+        _data_in_tmp, corpus, monkeypatch):
+    # the fallback holds what could not be attributed, so a shared blob there says
+    # nothing: a freshly added eval is often a byte-identical copy of the template
+    text = NL.join(['model_name: "Unplaceable"', 'organization: "Nobody"', ""])
+    raw = text.encode("utf-8")
+    corpus.add_capture(source_id="aial/tracker", tslug="aial-eval-history-33334444",
+                       raw=raw, ext=".yaml", text=text, kind="aial-eval-history",
+                       provider="AI Accountability Lab (AIAL)", model="one.yaml",
+                       url="https://raw.githubusercontent.com/x/evals/one.yaml",
+                       extra_manifest={"git_path": "evals/one.yaml",
+                                       "git_blob_sha": "shared",
+                                       "git_commit_date": "2026-08-06T00:00:00Z"})
+    root = corpus.finish()
+    _registry(_data_in_tmp, [])
+    _run_harvest(monkeypatch, {"evals/two.yaml": "shared"}, raw)
+    chains = {m.parent.parent.name
+              for m in (root / "captures").glob("*/*/*/manifest.json")}
+    assert len(chains) == 2, chains

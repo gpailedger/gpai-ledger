@@ -533,3 +533,79 @@ def test_a_hub_page_several_models_link_is_not_a_document_claim(tmp_path):
             "public_summary_link: https://trust.anthropic.com/resources\n",
             encoding="utf-8")
     br.main(str(repo), out_path=tmp_path / "sources.json")      # does not refuse
+
+
+# --- AIAL renames files in waves; an id is a permanent address -----------------
+
+NL = chr(10)
+
+
+def test_a_renamed_eval_file_keeps_the_id_its_captures_live_under(tmp_path):
+    # AIAL renamed 100 eval files on 14 Sep 2026. A filename is theirs to change;
+    # the id is where this project's captures, permalinks and hashes live.
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    br.main(str(repo), out_path=out)
+    (repo / "evals" / "alpha.yaml").rename(repo / "evals" / "testorg-alpha-v2.yaml")
+    br.main(str(repo), out_path=out)
+    by_id = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert "testorg/alpha" in by_id, "the rename moved the model to a new id"
+    assert "testorg/alpha-v2" not in by_id
+    assert by_id["testorg/alpha"]["aial"]["eval_yaml"] == "evals/testorg-alpha-v2.yaml"
+
+
+def test_a_rename_that_also_renames_the_model_still_fails_closed(tmp_path):
+    # the identity is what the file says; when that changes too, nothing proves the
+    # two files are one model, and a human decides rather than the builder guessing
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    br.main(str(repo), out_path=out)
+    before = out.read_bytes()
+    (repo / "evals" / "alpha.yaml").unlink()
+    (repo / "evals" / "testorg-alpha-v2.yaml").write_text(
+        NL.join(["model_name: Alpha Two", "organization: Testorg",
+                 "public_summary_link: https://example.org/alpha.pdf", ""]),
+        encoding="utf-8")
+    with pytest.raises(SystemExit, match="testorg/alpha"):
+        br.main(str(repo), out_path=out)
+    assert out.read_bytes() == before
+
+
+def test_a_mislabelled_header_is_read_as_the_model_the_file_is_about(
+        tmp_path, monkeypatch):
+    # AIAL deleted grok-voice-think-fast-2.yaml on 14 Sep 2026 and kept its twin,
+    # whose header reads Muse Glimmer / Meta AI while every link in it is xAI's
+    out = tmp_path / "sources.json"
+    repo = _fake_aial(tmp_path, ["alpha"])
+    br.main(str(repo), out_path=out)
+    (repo / "evals" / "alpha.yaml").unlink()
+    (repo / "evals" / "testorg-alpha2.0.yaml").write_text(
+        NL.join(["model_name: Wrong Model", "organization: Otherorg",
+                 "public_summary_link: https://example.org/alpha.pdf", ""]),
+        encoding="utf-8")
+    monkeypatch.setattr(br, "MISLABELLED_EVAL_HEADERS", {
+        "testorg-alpha2.0.yaml": (("Otherorg", "Wrong Model"), ("Testorg", "alpha"),
+                                  "every link in it is alpha's")})
+    br.main(str(repo), out_path=out)
+    by_id = {s["id"]: s for s in json.loads(out.read_text(encoding="utf-8"))["sources"]}
+    assert "testorg/alpha" in by_id
+    assert by_id["testorg/alpha"]["model"] == "alpha"
+    assert not [s for s in by_id.values() if s["provider"] == "Otherorg"]
+
+
+def test_a_header_aial_has_corrected_ends_its_own_override(tmp_path, monkeypatch, capsys):
+    repo = _fake_aial(tmp_path, ["alpha"])
+    monkeypatch.setattr(br, "MISLABELLED_EVAL_HEADERS", {
+        "alpha.yaml": (("Otherorg", "Wrong Model"), ("Testorg", "alpha"), "why")})
+    br.main(str(repo), out_path=tmp_path / "sources.json")
+    out = capsys.readouterr().out
+    assert "drop it from MISLABELLED_EVAL_HEADERS" in out
+    assert "no longer reads Otherorg / Wrong Model" in out
+
+
+def test_a_hand_pin_no_upstream_file_answers_to_is_reported(tmp_path, monkeypatch, capsys):
+    # dead config is what turned AIAL's rename into three red sweeps: a duplicate
+    # entry still named a file they had deleted
+    monkeypatch.setattr(br, "EVAL_FILE_SLUGS", dict(br.EVAL_FILE_SLUGS, ghost="alpha"))
+    br.main(str(_fake_aial(tmp_path, ["alpha"])), out_path=tmp_path / "sources.json")
+    assert "no upstream file is named ghost.yaml" in capsys.readouterr().out

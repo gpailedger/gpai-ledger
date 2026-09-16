@@ -258,6 +258,56 @@ def held(store: cap.Store) -> set:
     return done
 
 
+def rename_index(store: cap.Store) -> tuple:
+    """Which stored chain a renamed upstream file continues: (aliases, head blobs).
+
+    AIAL renames in waves - 5 eval files on 10 Sep 2026, then 100 of them and every
+    public/evals/ directory on 14 Sep - and their tooling writes the new names as
+    fresh files, so git reports additions and deletions, not renames (0 renames and
+    829 additions in that commit). A path is what a chain is keyed on, so a rename
+    that leaves the content alone opens a second chain holding one state: the blob
+    the ledger already held, stored a second time, 57 times over on 15 Sep 2026.
+
+    A blob sha is git's hash of the content, so a new path arriving with the blob a
+    chain already ends on IS that chain's file under a new name. That is proof, and
+    it is the only case adopted here: a rename that also rewrites the content opens
+    its own chain, as it has since 29 Aug 2026, because nothing then shows the two
+    are one file. `aliases` binds an adopted path to its chain in state, so the file
+    keeps landing there once its content does start to change.
+    """
+    heads, newest, aliases = {}, {}, {}
+    retired = retired_keys()
+    for m in (DATA / "captures").glob("*/*/*/manifest.json"):
+        try:
+            j = json.loads(m.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        blob = j.get("git_blob_sha")
+        if j.get("target_kind") not in HARVEST_KINDS or not blob:
+            continue
+        if _filed_key(m, j) in retired:
+            continue
+        # the fallback holds whatever could not be attributed, so two of its files
+        # sharing a blob says nothing about either; a model's own source is where
+        # one evaluation file means one evaluation
+        if j.get("source_id") == FALLBACK_SOURCE:
+            continue
+        chain = (j.get("source_id"), j["target_kind"], m.parent.parent.name)
+        if newest.get(chain, "") < m.parent.name:
+            newest[chain] = m.parent.name
+            heads[chain] = blob
+    head_blobs = {}
+    for (sid, kind, tslug), blob in heads.items():
+        head_blobs.setdefault((sid, kind, blob), tslug)
+    for key, entry in store.state.items():
+        if entry.get("retired"):
+            continue
+        sid, _, tslug = key.partition("::")
+        for path in entry.get("upstream_aliases", {}):
+            aliases[(sid, path)] = tslug
+    return aliases, head_blobs
+
+
 def _norm(s: str) -> str:
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
@@ -714,6 +764,11 @@ def main() -> int:
              (json.loads(REGISTRY.read_text(encoding="utf-8"))["sources"]
               if REGISTRY.exists() else [])}
     done = held(store)
+    aliases, head_blobs = rename_index(store)
+    # a path bound to the chain it continues is held, though it wrote no manifest
+    for entry in store.state.values():
+        if not entry.get("retired"):
+            done |= set(entry.get("upstream_aliases", {}).items())
     newest_by_path = newest_upstream_dates()
     archive_owners = named_archives()
     for key in list(archive_owners):
@@ -758,8 +813,23 @@ def main() -> int:
         sid, provider, model = place(state, text, idx, by_id, archive_owners,
                                      raw=raw, by_hash=by_hash)
         tslug = cap.target_slug(kind, identity_url(state["path"]))
+        if store.key(sid, tslug) not in store.state and sid != FALLBACK_SOURCE:
+            twin = (aliases.get((sid, state["path"]))
+                    or head_blobs.get((sid, kind, state["blob"])))
+            if twin:
+                print(f"  renamed: {state['path']} continues {sid} :: {twin}",
+                      flush=True)
+                tslug = twin
         if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
-            continue          # unchanged from the state already stored for it
+            # Unchanged from the state already stored for it. A file adopted above
+            # lands here, and would again on every run after this one: held() reads
+            # the paths it knows out of manifests, and an unchanged state writes no
+            # manifest. Bind the new path to the chain it continues instead.
+            entry = store.state.get(store.key(sid, tslug))
+            if entry is not None and state.get("blob") and                     entry.get("upstream_aliases", {}).get(state["path"]) != state["blob"]:
+                entry.setdefault("upstream_aliases", {})[state["path"]] = state["blob"]
+                store.save_state()
+            continue
         # States are harvested oldest-first, so a state OLDER than the newest one
         # already stored means an earlier run skipped it (a transient failure).
         # Appending it now would record it as following a state it preceded, and

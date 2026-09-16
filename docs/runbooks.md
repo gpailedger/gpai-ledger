@@ -419,9 +419,15 @@ so upstream renames surface a day later as absences on the old addresses.
 2. A rename or re-labelling keeps the existing id — and its permalinks. AIAL's
    newer files carry the organisation in the filename (`openai-gpt-5.2.yaml`
    replaced `gpt-5-2.yaml`); `eval_slug()` drops that prefix, so most renames
-   map back without help. When one does not, pin the file stem to its old slug
-   in `EVAL_FILE_SLUGS`. A second spelling of an organisation goes in
-   `ORG_ALIASES`, a display name in `MODEL_NAME_OVERRIDES`.
+   map back without help. When the filename gives a slug nothing tracks, the
+   file is matched on what it SAYS — organisation and model name — against the
+   sources already tracked, and an unambiguous match keeps that id, with a NOTE
+   naming both. That covers a whole rename wave (100 files on 14 Sep 2026)
+   without a human touching anything. It does not fire when the model name
+   changed too, which is the case where nothing proves the two files are one
+   model: pin the file stem to its old slug in `EVAL_FILE_SLUGS`. A second
+   spelling of an organisation goes in `ORG_ALIASES`, a display name in
+   `MODEL_NAME_OVERRIDES`.
 3. A genuine removal: add the id to `RETIRED_SOURCE_IDS` (id → dated reason).
    The refresh then carries the source's last committed entry forward flagged
    `retired`, the sweep stops fetching it, and the site keeps its pages and
@@ -438,6 +444,19 @@ is skipped only while another file still builds that id; if that file goes, the
 refresh fails again, so which file carries the model is decided, not inherited.
 If they are different models, pin one of them in `EVAL_FILE_SLUGS`.
 
+**The file a duplicate was declared against is gone** (AIAL deleted
+`grok-voice-think-fast-2.yaml` on 14 Sep 2026 and kept the twin, whose header
+reads another model's name). Read the surviving file: when its `model_link`,
+`org_link`, `public_summary_link` and `archive_file_name` all belong to one
+model and only the header disagrees, the header is the error — record it in
+`MISLABELLED_EVAL_HEADERS` (file → the header as read, the organisation and
+model it is really about, and why) and drop the `DUPLICATE_EVAL_FILES` entry.
+The rewrite lapses on its own once AIAL corrects the header, with a note saying
+so. Every hand-pin is checked against the files upstream on each refresh, and
+one that no file answers to is reported as dead config: that is what this
+outage was — a duplicate entry naming a file AIAL had deleted, refusing to
+build for three days.
+
 **One document is claimed by more than one model** (a `provider-live` or
 `aial-archive` address; rendered hub pages such as a trust centre are exempt).
 Read the document before anything else. If it names only one of the models, the
@@ -451,6 +470,17 @@ other claim is presenting that model's filing as its own:
   entry from `crawler/relocations.json` (the file stays, as `{}` if empty: the
   sweep's commit step names it). Retire the captures it produced with the
   reason, and relabel their manifests with the model each is about.
+
+**The harvest and upstream renames.** AIAL's tooling writes renamed files as new
+ones, so git reports additions and deletions rather than renames. The history
+harvest keys a chain on the file's path, so a rename would open a second chain
+holding a state the ledger already has (57 of those on 15 Sep 2026, now
+retired). A new path arriving with the git blob a chain already ends on is that
+chain's file under a new name — proof, not inference — so the harvest continues
+that chain and binds the new path to it in `upstream_aliases`. A rename that
+also rewrites the content opens its own chain, as before, and the fallback
+`aial/tracker` is excluded: two of its files sharing a blob says nothing about
+either.
 
 An eval file that is not readable YAML is skipped with a warning rather than
 holding back every other model; if it carried a tracked model, the first check
