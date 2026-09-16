@@ -12365,6 +12365,29 @@
     "to_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
     "computed_at": "2026-09-16T08:27:05Z"
   },
+  "eu-commission/explanatory-notice-and-template::regulatory-93550183::captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T080439Z>captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T093654Z": {
+    "verdict": "changed",
+    "similarity": 0.0312,
+    "word_delta": 7308,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: beautifulsoup4 4.12.3 (html.parser) (previous) vs pypdf 6.16.1 (newest)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Server temporarily unavailable Server inaccessibility bg български Сървърът е временно недостъпен Извиняваме се за неудобството. Моля, опитайте пак по-късно. cs čeština Server je dočasně nedostupný Omlouváme se za způsobené nepříjemnosti. Zkuste to prosím znovu později. da dansk Serveren er midlerti",
+        "new": "EN EN EUROPEAN COMMISSION Brussels, 5.12.2025 C 2025 8311 final COMMUNICATION FROM THE COMMISSION Explanatory Notice and Template for the Public Summary of Training Content for general-purpose AI models required by Article 53 1 d of Regulation EU 2024/1689 AI Act 1 1. Background 1 Regulation EU 2024"
+      }
+    ],
+    "source": "eu-commission/explanatory-notice-and-template",
+    "target": "regulatory-93550183",
+    "from_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T080439Z",
+    "to_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T093654Z",
+    "from_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
+    "to_sha256": "be6cdf10131c3fd9eb9265e592b23609fd7df2d2c9692517017f739188d408be",
+    "computed_at": "2026-09-16T09:55:12Z"
+  },
   "eu-commission/explanatory-notice-and-template::regulatory-a770d738::captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260811T110122Z>captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T080507Z": {
     "verdict": "changed",
     "similarity": 0.0301,
@@ -12392,6 +12415,29 @@
     "from_sha256": "ec803008a5263a485146b24497a3445e2ea32f8b73f818e67652ad70de40f09b",
     "to_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
     "computed_at": "2026-09-16T08:27:05Z"
+  },
+  "eu-commission/explanatory-notice-and-template::regulatory-a770d738::captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T080507Z>captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T093714Z": {
+    "verdict": "changed",
+    "similarity": 0.0655,
+    "word_delta": 3026,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: beautifulsoup4 4.12.3 (html.parser) (previous) vs no extractor for .docx (newest)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Server temporarily unavailable Server inaccessibility bg български Сървърът е временно недостъпен Извиняваме се за неудобството. Моля, опитайте пак по-късно. cs čeština Server je dočasně nedostupný Omlouváme se za způsobené nepříjemnosti. Zkuste to prosím znovu později. da dansk Serveren er midlerti",
+        "new": "Template for the Public Summary of Training Content for General-Purpose AI models This template is provided by the European Commission and required to be filled in by providers of general-purpose AI models prior to their placing on the Union market in order to comply with their obligation under Arti"
+      }
+    ],
+    "source": "eu-commission/explanatory-notice-and-template",
+    "target": "regulatory-a770d738",
+    "from_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T080507Z",
+    "to_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T093714Z",
+    "from_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
+    "to_sha256": "ec803008a5263a485146b24497a3445e2ea32f8b73f818e67652ad70de40f09b",
+    "computed_at": "2026-09-16T09:55:12Z"
   },
   "fastweb/fastwebmiia::aial-eval-history-aabc5d4a::captures/fastweb__fastwebmiia/aial-eval-history-aabc5d4a/20260829T183813Z>captures/fastweb__fastwebmiia/aial-eval-history-aabc5d4a/20260829T183836Z": {
     "verdict": "changed",
