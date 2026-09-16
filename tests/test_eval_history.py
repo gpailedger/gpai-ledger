@@ -711,3 +711,28 @@ def test_two_files_under_the_tracker_sharing_a_blob_keep_their_own_histories(
     chains = {m.parent.parent.name
               for m in (root / "captures").glob("*/*/*/manifest.json")}
     assert len(chains) == 2, chains
+
+
+def test_a_retired_chain_is_never_reopened_by_the_harvest(_data_in_tmp, corpus,
+                                                          monkeypatch):
+    # pruning a duplicate chain leaves its entry retired and empty. The next harvest
+    # must not put the state back there - it did on 16 Sep 2026, undoing 57 prunes -
+    # because the bytes live in the chain this model's history continues in.
+    raw = _phi_chain(corpus)
+    root = corpus.finish()
+    slug = cap.target_slug("aial-eval-history",
+                           H.identity_url("evals/microsoft-phi-4.yaml"))
+    key = "microsoft/phi-4::" + slug
+    state = json.loads((root / "state.json").read_text(encoding="utf-8"))
+    state[key] = {"retired": "a second chain from AIAL's rename; pruned as a duplicate",
+                  "versions": []}
+    (root / "state.json").write_text(json.dumps(state), encoding="utf-8")
+    _registry(_data_in_tmp, [{"id": "microsoft/phi-4", "provider": "Microsoft",
+                              "model": "Phi-4", "targets": []}])
+    _run_harvest(monkeypatch, {"evals/microsoft-phi-4.yaml": "blobA"}, raw)
+    state = json.loads((root / "state.json").read_text(encoding="utf-8"))
+    assert state[key]["versions"] == [], "the retired chain was reopened"
+    assert not (root / "captures" / "microsoft__phi-4" / slug).exists()
+    kept = state["microsoft/phi-4::aial-eval-history-11112222"]
+    assert len(kept["versions"]) == 1, "the state was stored a second time"
+    assert kept["upstream_aliases"] == {"evals/microsoft-phi-4.yaml": "blobA"}

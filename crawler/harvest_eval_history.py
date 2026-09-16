@@ -813,20 +813,35 @@ def main() -> int:
         sid, provider, model = place(state, text, idx, by_id, archive_owners,
                                      raw=raw, by_hash=by_hash)
         tslug = cap.target_slug(kind, identity_url(state["path"]))
-        if store.key(sid, tslug) not in store.state and sid != FALLBACK_SOURCE:
+        chain = store.state.get(store.key(sid, tslug))
+        # Nowhere to append: the chain does not exist, or an operator retired it -
+        # which says this address is not tracked here any more, and whose captures
+        # may since have been pruned. Either way the file's history continues in the
+        # chain that holds the same bytes, never in the retired entry (appending
+        # there put 57 pruned duplicates straight back on 16 Sep 2026).
+        homeless = chain is None or chain.get("retired") or not chain.get("versions")
+        if homeless and sid != FALLBACK_SOURCE:
             twin = (aliases.get((sid, state["path"]))
                     or head_blobs.get((sid, kind, state["blob"])))
             if twin:
                 print(f"  renamed: {state['path']} continues {sid} :: {twin}",
                       flush=True)
                 tslug = twin
+            elif chain is not None and chain.get("retired"):
+                print(f"  SKIP   {state['path']} @{state['commit'][:8]}: "
+                      f"{sid} :: {tslug} is retired and no chain holds these bytes "
+                      f"- decide where this state belongs, rather than reopening a "
+                      f"retired address", flush=True)
+                errors += 1
+                continue
         if cap.sha256_hex(raw) == store.last_sha(sid, tslug):
             # Unchanged from the state already stored for it. A file adopted above
             # lands here, and would again on every run after this one: held() reads
             # the paths it knows out of manifests, and an unchanged state writes no
             # manifest. Bind the new path to the chain it continues instead.
             entry = store.state.get(store.key(sid, tslug))
-            if entry is not None and state.get("blob") and                     entry.get("upstream_aliases", {}).get(state["path"]) != state["blob"]:
+            bound = (entry or {}).get("upstream_aliases", {}).get(state["path"])
+            if entry is not None and state.get("blob") and bound != state["blob"]:
                 entry.setdefault("upstream_aliases", {})[state["path"]] = state["blob"]
                 store.save_state()
             continue
