@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/vitra",
+  "provider": "Microsoft",
+  "model": "VITRA",
+  "target_kind": "aial-eval",
+  "sha256": "9857612b31291987b9b879c8ac5b3c1107f6162183db2b6d93340afd3e4125e0",
+  "size_bytes": 3795,
+  "stored_as": "raw.yaml",
+  "text_sha256": "4b05b0dd4088aa032bf92719c537dee4af807666fd1a36d3845c38f920bbddbc",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-vitra.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-vitra.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d5e9520b9047637724a11fa81edd6b878e44cb4554581fdfc5322bbc425dca6c\"",
+    "last_modified": null,
+    "content_length": "558",
+    "fetched_at": "2026-09-16T07:52:08Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:52:12Z"
+  }
+}

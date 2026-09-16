@@ -36,14 +36,17 @@
     "at": "2026-09-12T06:37:05Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260916081530/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/archive/Phi4_Mini_Instruct_2026_09_11.pdf",
+    "snapshot_ts": "20260916081530",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-e1a9ad709259adca0f7b211378f07968b8e7ddda",
     "via": "spn2",
-    "requested_at": "2026-09-15T07:59:56Z",
-    "at": "2026-09-15T07:59:56Z"
+    "requested_at": "2026-09-16T08:15:29Z",
+    "at": "2026-09-16T08:15:35Z"
   },
   "wayback_attempts": [
     {
@@ -56,6 +59,16 @@
       "via": "spn2",
       "requested_at": "2026-09-14T06:28:46Z",
       "at": "2026-09-14T06:28:52Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-09-15T07:59:56Z",
+      "at": "2026-09-15T07:59:56Z"
     }
   ]
 }

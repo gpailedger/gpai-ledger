@@ -1,0 +1,34 @@
+{
+  "source_id": "google/gemini-3-5-flash-cyber",
+  "provider": "Google",
+  "model": "Gemini 3.5 Flash Cyber",
+  "target_kind": "aial-eval-page",
+  "sha256": "bb849082b1108f683ae215f46c97289f7bdc9c78c45505ed63c7a4f7adb62d9e",
+  "size_bytes": 11847,
+  "stored_as": "raw.html",
+  "text_sha256": "9b7308064578c692d43a8ef39cae4e5c07ab866273b7449fbe922b42c5b7f5d9",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/google-gemini-3.5-flash-cyber/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/google-gemini-3.5-flash-cyber/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tlcw63953\"",
+    "last_modified": "Mon, 14 Sep 2026 13:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T07:40:35Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:40:40Z"
+  }
+}

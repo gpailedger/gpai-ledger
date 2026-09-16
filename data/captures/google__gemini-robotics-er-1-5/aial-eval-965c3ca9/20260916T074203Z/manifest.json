@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemini-robotics-er-1-5",
+  "provider": "Google",
+  "model": "Gemini Robotics ER 1.5",
+  "target_kind": "aial-eval",
+  "sha256": "df074e33f7daee7f4f5457da016f1c154709a47d18cc2e3e3c3fe4ff3aa6d309",
+  "size_bytes": 3811,
+  "stored_as": "raw.yaml",
+  "text_sha256": "e48ea3b2d901de875ead2f7b857e0a0037ae1740e8785da488bae86eeb89f06d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-robotics-er-1.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-robotics-er-1.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"74913a319d6754122a3c8596687691a4f0743be12465eb90c0b2cab4b2e03a76\"",
+    "last_modified": null,
+    "content_length": "562",
+    "fetched_at": "2026-09-16T07:42:03Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:42:08Z"
+  }
+}

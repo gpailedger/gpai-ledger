@@ -1,0 +1,33 @@
+{
+  "source_id": "cohere/north-micro-vision-instruct",
+  "provider": "Cohere",
+  "model": "North Micro Vision Instruct",
+  "target_kind": "aial-eval",
+  "sha256": "e205c96b4a7cbafecf3cd7a691ac79ad6b6d8c102088082c97fc02650447c5bd",
+  "size_bytes": 3823,
+  "stored_as": "raw.yaml",
+  "text_sha256": "73d92cd25820d3c4e5ad5eba2df724a25014e006c68e9e73dfab39d47f7daa4d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cohere-north-micro-vision-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cohere-north-micro-vision-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d2af1d2d26fd6006ea565cdaf6fd99bc99672a031db6d2617f22ccc0e9cf7f40\"",
+    "last_modified": null,
+    "content_length": "566",
+    "fetched_at": "2026-09-16T07:33:13Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:33:17Z"
+  }
+}

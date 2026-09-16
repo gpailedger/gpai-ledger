@@ -1,0 +1,33 @@
+{
+  "source_id": "almawave/velvet-2b-speech",
+  "provider": "Almawave",
+  "model": "Velvet 2B Speech",
+  "target_kind": "aial-eval",
+  "sha256": "e8dbb07ec7ac71df67a9d1b11a5114ba8407c7df5c40ea11c624cc8d8235dcda",
+  "size_bytes": 3808,
+  "stored_as": "raw.yaml",
+  "text_sha256": "acb2083c6b2d4c89e6c81175f9e153f6f515c9af13931712ad9e880c3441a0eb",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/almawave-velvet-2b-speech.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/almawave-velvet-2b-speech.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"830b0feb0879995422ebf889639a9ccbe96b850d20f765eaaaa0ad006dea65de\"",
+    "last_modified": null,
+    "content_length": "551",
+    "fetched_at": "2026-09-16T07:24:42Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:24:47Z"
+  }
+}

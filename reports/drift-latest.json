@@ -65,30 +65,62 @@
     ]
   },
   {
+    "id": "amazon/nova-2-lite",
+    "model": "Nova 2 Lite",
+    "similarity": 1.0,
+    "compared_via": "stored extracts",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "same-content"
+  },
+  {
+    "id": "anthropic/claude-mythos-5-fable-5",
+    "model": "Claude Mythos 5 / Claude Fable 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-mythos-preview",
+    "model": "Claude Mythos Preview",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-4-7",
+    "model": "Claude Opus 4.7",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-4-8",
+    "model": "Claude Opus 4.8",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-opus-5",
+    "model": "Claude Opus 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
+    "id": "anthropic/claude-sonnet-5",
+    "model": "Claude Sonnet 5",
+    "verdict": "bundle-covered",
+    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
+  },
+  {
     "id": "anthropic/mythos5-1",
     "model": "Mythos 5.1 / Fable 5.1",
     "verdict": "format-mismatch",
     "note": "live captures are hub/portal HTML only — document URL needed"
   },
   {
-    "id": "swiss-ai-initiative/apertus-1-5",
-    "model": "Apertus v1.5",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "swiss-ai-initiative/apertus",
-    "model": "Apertus",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "speakleash/bielik",
-    "model": "Bielik v3 11B Instruct",
+    "id": "black-forest-labs/flux-3",
+    "model": "FLUX.3",
     "verdict": "identical-bytes",
     "self_history": {
       "verdict": "single-version"
@@ -141,6 +173,14 @@
     ]
   },
   {
+    "id": "bria-ai/fibo",
+    "model": "FIBO",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
     "id": "bytedance/seed-2-0pro",
     "model": "Seed 2.0 Pro",
     "verdict": "identical-bytes",
@@ -171,42 +211,6 @@
     "self_history": {
       "verdict": "single-version"
     }
-  },
-  {
-    "id": "anthropic/claude-mythos-5-fable-5",
-    "model": "Claude Mythos 5 / Claude Fable 5",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
-  },
-  {
-    "id": "anthropic/claude-mythos-preview",
-    "model": "Claude Mythos Preview",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
-  },
-  {
-    "id": "anthropic/claude-opus-4-7",
-    "model": "Claude Opus 4.7",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
-  },
-  {
-    "id": "anthropic/claude-opus-4-8",
-    "model": "Claude Opus 4.8",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
-  },
-  {
-    "id": "anthropic/claude-opus-5",
-    "model": "Claude Opus 5",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
-  },
-  {
-    "id": "anthropic/claude-sonnet-5",
-    "model": "Claude Sonnet 5",
-    "verdict": "bundle-covered",
-    "note": "document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes"
   },
   {
     "id": "cohere/command-a-plus",
@@ -484,22 +488,6 @@
     ]
   },
   {
-    "id": "bria-ai/fibo",
-    "model": "FIBO",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "black-forest-labs/flux-3",
-    "model": "FLUX.3",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
     "id": "google/gemini-3-pro",
     "model": "Gemini 3 Pro",
     "verdict": "identical-bytes",
@@ -516,163 +504,30 @@
     }
   },
   {
-    "id": "openai/gpt-5-5",
-    "model": "GPT-5.5",
-    "verdict": "identical-bytes",
+    "id": "huggingface/smollm3",
+    "model": "SmolLM3-3B",
+    "verdict": "capture-method-change",
+    "similarity": 0.9991,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "same_tool": true,
+    "basis": "self-history",
+    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
     "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "openai/gpt-5-6-luna",
-    "model": "GPT-5.6 Luna",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "xai/grok-4-5",
-    "model": "Grok 4.5",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "xai/grok-voice-think-fast-2",
-    "model": "Grok Voice Think Fast 2.0",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "thinking-machines/inkling-small",
-    "model": "Inkling Small",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "thinking-machines/inkling",
-    "model": "Inkling",
-    "similarity": 1.0,
-    "compared_via": "stored extracts",
-    "same_tool": false,
-    "self_history": {
-      "verdict": "single-version"
-    },
-    "basis": "live-vs-archive",
-    "verdict": "same-content"
-  },
-  {
-    "id": "microsoft/magma-8b",
-    "model": "Magma-8B",
-    "similarity": 0.9996,
-    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
-    "same_tool": false,
-    "self_history": {
-      "verdict": "single-version"
-    },
-    "basis": "live-vs-archive",
-    "verdict": "near-identical",
-    "word_delta": 3,
-    "moved_words": 0,
-    "changes": [
-      {
-        "op": "delete",
-        "old": "1 1.3.1.J Other",
-        "new": "mixtures 1.3.1.J Other"
-      },
-      {
-        "op": "delete",
-        "old": "2 2.4 Synthetic",
-        "new": "information. 2.4 Synthetic"
-      },
-      {
-        "op": "delete",
-        "old": "Yes 3",
-        "new": "training Yes"
-      }
-    ]
-  },
-  {
-    "id": "microsoft/mai-code-1-flash",
-    "model": "MAI-Code-1-Flash",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "microsoft/mai-cyber-1-flash",
-    "model": "MAI-Cyber-1-Flash",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
-  },
-  {
-    "id": "microsoft/mai-ds-r1",
-    "model": "MAI-DS-R1",
-    "similarity": 0.9995,
-    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
-    "same_tool": false,
-    "self_history": {
-      "verdict": "single-version"
-    },
-    "basis": "live-vs-archive",
-    "verdict": "near-identical",
-    "word_delta": 3,
-    "moved_words": 0,
-    "changes": [
-      {
-        "op": "delete",
-        "old": "1 1.3.2 Latest",
-        "new": "biases 1.3.2 Latest"
-      },
-      {
-        "op": "delete",
-        "old": "Yes 2 3.",
-        "new": "model Yes 3. Data"
-      },
-      {
-        "op": "delete",
-        "old": "Yes 3",
-        "new": "training Yes"
-      }
-    ]
-  },
-  {
-    "id": "microsoft/mai-image-2",
-    "model": "MAI-Image-2",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "microsoft/mai-image-2-5",
-    "model": "MAI-Image-2.5",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "microsoft/mai-image-2-6",
-    "model": "MAI-Image-2.6",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "microsoft/mai-thinking-1",
-    "model": "MAI-Thinking-1",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
+      "verdict": "method-changed",
+      "similarity": 0.9991,
+      "word_delta": 1,
+      "moved_words": 0,
+      "changes": [
+        {
+          "op": "replace",
+          "old": "smollm3-eu-data-transparency like 8",
+          "new": "smollm3-eu-data-transparency Like 8"
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+      "same_tool": true,
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z"
     }
   },
   {
@@ -749,80 +604,6 @@
         "new": "training datasets.3.3 Other"
       }
     ]
-  },
-  {
-    "id": "microsoft/mai-code-1-1-flash",
-    "model": "MAI-Code-1.1-Flash",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
-  },
-  {
-    "id": "microsoft/phi4-reasoning-vision15b",
-    "model": "Phi 4 Reasoning Vision 15B",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
-  },
-  {
-    "id": "midjourney/midjourney",
-    "model": "Midjourney Image and Video family of models",
-    "verdict": "format-mismatch",
-    "note": "live captures are hub/portal HTML only — document URL needed"
-  },
-  {
-    "id": "minimax/minimax-h3",
-    "model": "Minimax H3",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "minimax/minimax-m3",
-    "model": "Minimax M3",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/ministral-3-14b",
-    "model": "Ministral 3 14B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/ministral-3-3b",
-    "model": "Ministral 3 3B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/ministral-3-8b",
-    "model": "Ministral 3 8B",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/mistral-large-3",
-    "model": "Mistral Large 3",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
-  },
-  {
-    "id": "mistral-ai/mistral-small-4",
-    "model": "Mistral Small 4",
-    "verdict": "identical-bytes",
-    "self_history": {
-      "verdict": "single-version"
-    }
   },
   {
     "id": "meta/muse-image",
@@ -975,60 +756,118 @@
     ]
   },
   {
-    "id": "amazon/nova-2-lite",
-    "model": "Nova 2 Lite",
-    "similarity": 1.0,
-    "compared_via": "stored extracts",
+    "id": "microsoft/magma-8b",
+    "model": "Magma-8B",
+    "similarity": 0.9996,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
     "same_tool": false,
     "self_history": {
       "verdict": "single-version"
     },
     "basis": "live-vs-archive",
-    "verdict": "same-content"
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.1.J Other",
+        "new": "mixtures 1.3.1.J Other"
+      },
+      {
+        "op": "delete",
+        "old": "2 2.4 Synthetic",
+        "new": "information. 2.4 Synthetic"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
   },
   {
-    "id": "nvidia/nemotron-nano",
-    "model": "Nemotron Nano",
+    "id": "microsoft/mai-code-1-flash",
+    "model": "MAI-Code-1-Flash",
     "verdict": "identical-bytes",
     "self_history": {
       "verdict": "single-version"
     }
   },
   {
-    "id": "openai/gpt-5-2",
-    "model": "GPT-5.2",
+    "id": "microsoft/mai-code-1-1-flash",
+    "model": "MAI-Code-1.1-Flash",
     "verdict": "incomplete",
     "note": "live=1 archive=n"
   },
   {
-    "id": "openai/gpt-image-2",
-    "model": "GPT Image 2.0",
+    "id": "microsoft/mai-cyber-1-flash",
+    "model": "MAI-Cyber-1-Flash",
     "verdict": "incomplete",
     "note": "live=1 archive=n"
   },
   {
-    "id": "openai/gpt-5-4-nano",
-    "model": "GPT-5.4 Nano",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
+    "id": "microsoft/mai-ds-r1",
+    "model": "MAI-DS-R1",
+    "similarity": 0.9995,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (archive) vs utf-8 decode (live)",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "near-identical",
+    "word_delta": 3,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "delete",
+        "old": "1 1.3.2 Latest",
+        "new": "biases 1.3.2 Latest"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 2 3.",
+        "new": "model Yes 3. Data"
+      },
+      {
+        "op": "delete",
+        "old": "Yes 3",
+        "new": "training Yes"
+      }
+    ]
   },
   {
-    "id": "openai/gpt6",
-    "model": "GPT-6 Astra",
-    "verdict": "incomplete",
-    "note": "live=1 archive=n"
+    "id": "microsoft/mai-image-2",
+    "model": "MAI-Image-2",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
-    "id": "openllm-france/luciole-base",
-    "model": "Luciole Base",
-    "verdict": "incomplete",
-    "note": "live=0 archive=y"
+    "id": "microsoft/mai-image-2-5",
+    "model": "MAI-Image-2.5",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
-    "id": "openllm-france/luciole-instruct1-1",
-    "model": "Luciole Instruct 1.1",
-    "verdict": "incomplete",
-    "note": "live=0 archive=y"
+    "id": "microsoft/mai-image-2-6",
+    "model": "MAI-Image-2.6",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "microsoft/mai-thinking-1",
+    "model": "MAI-Thinking-1",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   },
   {
     "id": "microsoft/phi-1-5",
@@ -1316,6 +1155,134 @@
     ]
   },
   {
+    "id": "microsoft/phi4-reasoning-vision15b",
+    "model": "Phi 4 Reasoning Vision 15B",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "midjourney/midjourney",
+    "model": "Midjourney Image and Video family of models",
+    "verdict": "format-mismatch",
+    "note": "live captures are hub/portal HTML only — document URL needed"
+  },
+  {
+    "id": "minimax/minimax-h3",
+    "model": "Minimax H3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "model": "Minimax M3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-14b",
+    "model": "Ministral 3 14B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-3b",
+    "model": "Ministral 3 3B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/ministral-3-8b",
+    "model": "Ministral 3 8B",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/mistral-large-3",
+    "model": "Mistral Large 3",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "mistral-ai/mistral-small-4",
+    "model": "Mistral Small 4",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "nvidia/nemotron-nano",
+    "model": "Nemotron Nano",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "openai/gpt-5-5",
+    "model": "GPT-5.5",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "openai/gpt-5-6-luna",
+    "model": "GPT-5.6 Luna",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "openai/gpt-5-2",
+    "model": "GPT-5.2",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt-image-2",
+    "model": "GPT Image 2.0",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt-5-4-nano",
+    "model": "GPT-5.4 Nano",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openai/gpt6",
+    "model": "GPT-6 Astra",
+    "verdict": "incomplete",
+    "note": "live=1 archive=n"
+  },
+  {
+    "id": "openllm-france/luciole-base",
+    "model": "Luciole Base",
+    "verdict": "incomplete",
+    "note": "live=0 archive=y"
+  },
+  {
+    "id": "openllm-france/luciole-instruct1-1",
+    "model": "Luciole Instruct 1.1",
+    "verdict": "incomplete",
+    "note": "live=0 archive=y"
+  },
+  {
     "id": "pleias/baguettotron",
     "model": "Baguettotron and Monad",
     "verdict": "format-mismatch",
@@ -1328,30 +1295,27 @@
     "note": "live captures are hub/portal HTML only — document URL needed"
   },
   {
-    "id": "huggingface/smollm3",
-    "model": "SmolLM3-3B",
-    "verdict": "capture-method-change",
-    "similarity": 0.9991,
-    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-    "same_tool": true,
-    "basis": "self-history",
-    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
+    "id": "speakleash/bielik",
+    "model": "Bielik v3 11B Instruct",
+    "verdict": "identical-bytes",
     "self_history": {
-      "verdict": "method-changed",
-      "similarity": 0.9991,
-      "word_delta": 1,
-      "moved_words": 0,
-      "changes": [
-        {
-          "op": "replace",
-          "old": "smollm3-eu-data-transparency like 8",
-          "new": "smollm3-eu-data-transparency Like 8"
-        }
-      ],
-      "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
-      "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z"
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "swiss-ai-initiative/apertus-1-5",
+    "model": "Apertus v1.5",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "swiss-ai-initiative/apertus",
+    "model": "Apertus",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
     }
   },
   {
@@ -1359,5 +1323,41 @@
     "model": "Hy3",
     "verdict": "incomplete",
     "note": "live=0 archive=y"
+  },
+  {
+    "id": "thinking-machines/inkling-small",
+    "model": "Inkling Small",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "thinking-machines/inkling",
+    "model": "Inkling",
+    "similarity": 1.0,
+    "compared_via": "stored extracts",
+    "same_tool": false,
+    "self_history": {
+      "verdict": "single-version"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "same-content"
+  },
+  {
+    "id": "xai/grok-4-5",
+    "model": "Grok 4.5",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
+  },
+  {
+    "id": "xai/grok-voice-think-fast-2",
+    "model": "Grok Voice Think Fast 2.0",
+    "verdict": "identical-bytes",
+    "self_history": {
+      "verdict": "single-version"
+    }
   }
 ]

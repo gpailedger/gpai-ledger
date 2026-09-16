@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/magma-8b",
+  "provider": "Microsoft",
+  "model": "Magma-8B",
+  "target_kind": "aial-eval",
+  "sha256": "6dffd0b2073d96848c9c066fd2f62c0cf58ea7f45496ca3dc7b86bd6a7bfed84",
+  "size_bytes": 3936,
+  "stored_as": "raw.yaml",
+  "text_sha256": "c7dcd34670d0cf8ed99dee6183d5383ae124a6c1b6eb41de328948b84ca62aad",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-magma-8b.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-magma-8b.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"668081a4413f690cccc663d1ea1b61fb3b8770b057e49c764eb40374f12e9385\"",
+    "last_modified": null,
+    "content_length": "589",
+    "fetched_at": "2026-09-16T07:45:28Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:45:30Z"
+  }
+}

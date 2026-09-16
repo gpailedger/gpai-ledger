@@ -2919,6 +2919,24 @@
     "computed_at": "2026-09-12T06:44:01Z",
     "changes_withheld": true
   },
+  "aial/tracker::aial-method-20d67167::captures/aial__tracker/aial-method-20d67167/20260912T061956Z>captures/aial__tracker/aial-method-20d67167/20260916T080759Z": {
+    "verdict": "changed",
+    "similarity": 0.9924,
+    "word_delta": 28,
+    "moved_words": 12,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-20d67167",
+    "from_dir": "captures/aial__tracker/aial-method-20d67167/20260912T061956Z",
+    "to_dir": "captures/aial__tracker/aial-method-20d67167/20260916T080759Z",
+    "from_sha256": "d90e89578de797c350e7d055da69d410841da1ecd6c044b9b62dc683afd852a7",
+    "to_sha256": "eeac357ac5d6494a57c3984b9f0ae6d6b1c402527304a50d9e3a62c97ebddab7",
+    "computed_at": "2026-09-16T08:27:06Z",
+    "changes_withheld": true
+  },
   "aial/tracker::aial-method-9a435cf4::captures/aial__tracker/aial-method-9a435cf4/20260831T095003Z>captures/aial__tracker/aial-method-9a435cf4/20260831T095153Z": {
     "verdict": "changed",
     "similarity": 0.9991,
@@ -5521,6 +5539,24 @@
     "computed_at": "2026-09-12T06:43:58Z",
     "changes_withheld": true
   },
+  "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260912T061927Z>captures/aial__tracker/watch-page-465bd4ee/20260916T080729Z": {
+    "verdict": "changed",
+    "similarity": 0.9174,
+    "word_delta": 223,
+    "moved_words": 133,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "watch-page-465bd4ee",
+    "from_dir": "captures/aial__tracker/watch-page-465bd4ee/20260912T061927Z",
+    "to_dir": "captures/aial__tracker/watch-page-465bd4ee/20260916T080729Z",
+    "from_sha256": "6930a5f6520ed86e304f37715909c7a7d65f1ff635ec1710f13b352429f0a416",
+    "to_sha256": "87c089a9dba27122c63be37b57356f7bc01d405b05b166c560937bb8a36cc1a1",
+    "computed_at": "2026-09-16T08:27:06Z",
+    "changes_withheld": true
+  },
   "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260811T110417Z>captures/aial__tracker/watch-page-c82134bd/20260818T164825Z": {
     "verdict": "changed",
     "similarity": 0.9473,
@@ -5583,6 +5619,24 @@
     "from_sha256": "9635e3f3130b2217aa9d612bb0ae14a959aee07b7bc7e71f8a5223a1afa34dea",
     "to_sha256": "a3b551c3fd52e1a7b8a6878e92012797908d3909cd806895c8f06c8eccde72f1",
     "computed_at": "2026-09-12T06:43:58Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260912T061849Z>captures/aial__tracker/watch-page-c82134bd/20260916T080647Z": {
+    "verdict": "changed",
+    "similarity": 0.8874,
+    "word_delta": 410,
+    "moved_words": 431,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "watch-page-c82134bd",
+    "from_dir": "captures/aial__tracker/watch-page-c82134bd/20260912T061849Z",
+    "to_dir": "captures/aial__tracker/watch-page-c82134bd/20260916T080647Z",
+    "from_sha256": "a3b551c3fd52e1a7b8a6878e92012797908d3909cd806895c8f06c8eccde72f1",
+    "to_sha256": "be0982a3754a579effe0d1d9ebffb9ec8b16d99012485deb9b94cf5859c209b8",
+    "computed_at": "2026-09-16T08:27:06Z",
     "changes_withheld": true
   },
   "amazon/nova-2-lite::aial-eval-history-c7e8147a::captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20260829T184529Z>captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20260829T185135Z": {
@@ -11609,6 +11663,22 @@
     "to_sha256": "7b2309ade28ef5e84439e7d1f6e477849c2b0bd793d6d3958c01cf9b853c2e6a",
     "computed_at": "2026-09-15T08:16:20Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260915T062548Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260916T073231Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260915T062548Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260916T073231Z",
+    "from_sha256": "7b2309ade28ef5e84439e7d1f6e477849c2b0bd793d6d3958c01cf9b853c2e6a",
+    "to_sha256": "9083db091ee65a54f9316ee89aff86242ce3330cfebad4ff6c7416869fdf2f87",
+    "computed_at": "2026-09-16T08:27:06Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -12271,6 +12341,57 @@
         "computed_at": "2026-08-22T23:24:10Z"
       }
     ]
+  },
+  "eu-commission/explanatory-notice-and-template::regulatory-93550183::captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260811T110100Z>captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T080439Z": {
+    "verdict": "changed",
+    "similarity": 0.0204,
+    "word_delta": 7307,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: pypdf 6.16.1 (previous) vs beautifulsoup4 4.12.3 (html.parser) (newest)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "EN EN EUROPEAN COMMISSION Brussels, 5.12.2025 C 2025 8311 final COMMUNICATION FROM THE COMMISSION Explanatory Notice and Template for the Public Summary of Training Content for general-purpose AI models required by Article 53 1 d of Regulation EU 2024/1689 AI Act 1 1. Background 1 Regulation EU 2024",
+        "new": "Server temporarily unavailable Server inaccessibility bg български Сървърът е временно недостъпен Извиняваме се за неудобството. Моля, опитайте пак по-късно. cs čeština Server je dočasně nedostupný Omlouváme se za způsobené nepříjemnosti. Zkuste to prosím znovu později. da dansk Serveren er midlerti"
+      }
+    ],
+    "source": "eu-commission/explanatory-notice-and-template",
+    "target": "regulatory-93550183",
+    "from_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260811T110100Z",
+    "to_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-93550183/20260916T080439Z",
+    "from_sha256": "be6cdf10131c3fd9eb9265e592b23609fd7df2d2c9692517017f739188d408be",
+    "to_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
+    "computed_at": "2026-09-16T08:27:05Z"
+  },
+  "eu-commission/explanatory-notice-and-template::regulatory-a770d738::captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260811T110122Z>captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T080507Z": {
+    "verdict": "changed",
+    "similarity": 0.0301,
+    "word_delta": 3029,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "re-extracted from the stored bytes: no extractor for .docx (previous) vs beautifulsoup4 4.12.3 (html.parser) (newest)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Template for the Public Summary of Training Content for General-Purpose AI models This template is provided by the European Commission and required to be filled in by providers of general-purpose AI models prior to their placing on the Union market in order to comply with their obligation under Arti",
+        "new": "Server temporarily unavailable Server inaccessibility bg български Сървърът е временно недостъпен Извиняваме се за неудобството. Моля, опитайте пак по-късно. cs čeština Server je dočasně nedostupný Omlouváme se za způsobené nepříjemnosti. Zkuste to prosím znovu později. da dansk Serveren er midlerti"
+      },
+      {
+        "op": "replace",
+        "old": "any one of the modalities contained in the dataset exceeds 3% of the size of all publicly available datasets for that modality used for training. The size of the dataset should be based on its size after pre-processing for example filtering , and without splitting the dataset to prevent reporting ci",
+        "new": "any inconvenience. Please try again later. es español El servidor no está disponible temporalmente Le rogamos disculpe las molestias. Vuelva a intentarlo más tarde. et eesti Server ei ole ajutiselt kättesaadav Palume vabandust tekkinud ebamugavuste pärast. Palun proovige hiljem uuesti. fi suomi Palv"
+      }
+    ],
+    "source": "eu-commission/explanatory-notice-and-template",
+    "target": "regulatory-a770d738",
+    "from_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260811T110122Z",
+    "to_dir": "captures/eu-commission__explanatory-notice-and-template/regulatory-a770d738/20260916T080507Z",
+    "from_sha256": "ec803008a5263a485146b24497a3445e2ea32f8b73f818e67652ad70de40f09b",
+    "to_sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
+    "computed_at": "2026-09-16T08:27:05Z"
   },
   "fastweb/fastwebmiia::aial-eval-history-aabc5d4a::captures/fastweb__fastwebmiia/aial-eval-history-aabc5d4a/20260829T183813Z>captures/fastweb__fastwebmiia/aial-eval-history-aabc5d4a/20260829T183836Z": {
     "verdict": "changed",
@@ -13942,6 +14063,19 @@
     "from_sha256": "e93848951ade5ba5be871d2acd48efb4779d990f097e01f00b7204a0db085b1d",
     "to_sha256": "bdb559d0f3255f0bf838d412aa4812fedbbf6e36dfdd194e414d1d81e857b80a",
     "computed_at": "2026-09-04T06:14:14Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260904T061006Z>captures/google__transparency-bucket/watch-page-81cd3682/20260916T080605Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260904T061006Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260916T080605Z",
+    "from_sha256": "bdb559d0f3255f0bf838d412aa4812fedbbf6e36dfdd194e414d1d81e857b80a",
+    "to_sha256": "7a3cd622f3549a88dfc99acfd172e8ee844b0f8c030136b710e9e4713b7497be",
+    "computed_at": "2026-09-16T08:27:06Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -18299,6 +18433,39 @@
     "from_sha256": "873257b9ab59cbe427c2c28ae99f1f4e5903b7fcf6c5b86e07807435aa6dd128",
     "to_sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
     "computed_at": "2026-09-05T06:25:59Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260905T061204Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260916T080222Z": {
+    "verdict": "changed",
+    "similarity": 0.9846,
+    "word_delta": 33,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "our team Pushing the",
+        "new": "team Humanist AI in practice: A public consultation on our Code of Conduct for MAI Models 6 min read Pushing"
+      },
+      {
+        "op": "delete",
+        "old": "min read MAI-Code-1.1-Flash: Better, faster, at a quarter of the cost 2 min read",
+        "new": "min read All"
+      },
+      {
+        "op": "insert",
+        "old": "stories Careers THE HUMANIST",
+        "new": "Careers Code of Conduct THE"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260905T061204Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260916T080222Z",
+    "from_sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
+    "to_sha256": "489c3d13569efcc55b31422589c73e2dd2f3bd77fdc37a8960a1d845b2b568e3",
+    "computed_at": "2026-09-16T08:27:06Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -22911,6 +23078,29 @@
     "to_sha256": "d38712419748f36e52fedaca6729c8d7c360e26d3370d9e614412caa071e312a",
     "computed_at": "2026-09-12T06:43:58Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260912T061747Z>captures/openai__model-catalog/watch-page-0e5ba652/20260916T075958Z": {
+    "verdict": "changed",
+    "similarity": 0.9998,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "organizations gpt-rosalind-research Image",
+        "new": "approved organizations Image Models"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260912T061747Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260916T075958Z",
+    "from_sha256": "d38712419748f36e52fedaca6729c8d7c360e26d3370d9e614412caa071e312a",
+    "to_sha256": "46bfdbc3f9f06a5c3b5476677a3280e2b8d3b78599cdc784bf6cc8a211f582ca",
+    "computed_at": "2026-09-16T08:27:06Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -26449,5 +26639,38 @@
     "from_sha256": "881cf7ad9c74cdd3eb47d33e579910e900c0f8a3ac8b246d75a776c607c1f457",
     "to_sha256": "2f0164cceb5471071cbf04e00c890e4812ab2c645eab048d629dd6418b5fbaa5",
     "computed_at": "2026-09-14T06:32:29Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260914T061841Z>captures/xai__model-catalog/watch-page-905d5d7a/20260916T080209Z": {
+    "verdict": "changed",
+    "similarity": 0.9954,
+    "word_delta": 6,
+    "moved_words": 5,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "View model Try in playground",
+        "new": "View model Try in playground"
+      },
+      {
+        "op": "insert",
+        "old": "mTLS Authentication Cost Tracking",
+        "new": "Authentication Regional Endpoints New Cost"
+      },
+      {
+        "op": "insert",
+        "old": "mTLS Authentication Cost Tracking",
+        "new": "Authentication Regional Endpoints New Cost"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260914T061841Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260916T080209Z",
+    "from_sha256": "2f0164cceb5471071cbf04e00c890e4812ab2c645eab048d629dd6418b5fbaa5",
+    "to_sha256": "00bb46f296f2cf9eaf03fe2b672f15d145968cdbf46aea87f928bafbbbc67309",
+    "computed_at": "2026-09-16T08:27:06Z"
   }
 }

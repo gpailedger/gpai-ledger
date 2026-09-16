@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemini-2-5-flash-image",
+  "provider": "Google",
+  "model": "Gemini 2.5 Flash Image",
+  "target_kind": "aial-eval",
+  "sha256": "4993782ac1c754a9ed99f6a6ebff6e300e1d4983adb925267c0e5151063d813b",
+  "size_bytes": 3805,
+  "stored_as": "raw.yaml",
+  "text_sha256": "c07fd3d33aa2111cd38c3671f4bbe228197ba8fed52d2522ebabd6bf404a7ced",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-2.5-flash-image.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-2.5-flash-image.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8b10087debeb2d9c8d90fb7c73bf50e1e4e4d2685b88586761b378b7e06f46b3\"",
+    "last_modified": null,
+    "content_length": "561",
+    "fetched_at": "2026-09-16T07:40:00Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:40:04Z"
+  }
+}

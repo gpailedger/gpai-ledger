@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/phi-4-reasoning",
+  "provider": "Microsoft",
+  "model": "Phi-4 Reasoning",
+  "target_kind": "aial-eval-page",
+  "sha256": "cffc28b4c2d4124e06e107b592e1913b4f086ed171753fd617f9534f02074083",
+  "size_bytes": 13225,
+  "stored_as": "raw.html",
+  "text_sha256": "856c4bec5b90886365ea51c6a76b32bc3a605c18011302083ac340934252a46c",
+  "doc_links_sha256": "1c3a9ddd918df9333d3e7934482cab4dbc920257a4795a09a65c575e9dea25ae",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi-4-reasoning/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi-4-reasoning/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tlcw63a7d\"",
+    "last_modified": "Mon, 14 Sep 2026 13:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T07:51:27Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:51:29Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "xai/grok-voice-think-fast-2",
+  "provider": "xAI",
+  "model": "Grok Voice Think Fast 2.0",
+  "target_kind": "aial-eval",
+  "sha256": "7f7c44c07dce4a6226cae422c840180926db68d99a19b613ee430023c6b9d56d",
+  "size_bytes": 3213,
+  "stored_as": "raw.yaml",
+  "text_sha256": "9e8527c4d4585b2468716bbb9083809d43c3821e29d5ec1e291b6185b33d43f4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/xai-grok-voice-think-fast2.0.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/xai-grok-voice-think-fast2.0.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0fa0f788525b00fc91400c5d3c83f949112a3925ee29834552a26a2bfb6f6492\"",
+    "last_modified": null,
+    "content_length": "618",
+    "fetched_at": "2026-09-16T07:59:43Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:59:48Z"
+  }
+}

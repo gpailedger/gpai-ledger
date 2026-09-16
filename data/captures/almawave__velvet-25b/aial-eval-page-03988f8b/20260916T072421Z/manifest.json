@@ -1,0 +1,34 @@
+{
+  "source_id": "almawave/velvet-25b",
+  "provider": "Almawave",
+  "model": "Velvet 25B",
+  "target_kind": "aial-eval-page",
+  "sha256": "23c71df9452cb184adeeacd5c1635774d25a7c255877b63a9d24fdadcab51a23",
+  "size_bytes": 11785,
+  "stored_as": "raw.html",
+  "text_sha256": "d53ac868893fe1b009ee9f8860814827fffb2bebfb261c5d6b6090ba9bc2291c",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/almawave-velvet-25b/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/almawave-velvet-25b/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tlcw6393d\"",
+    "last_modified": "Mon, 14 Sep 2026 13:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T07:24:21Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:24:26Z"
+  }
+}

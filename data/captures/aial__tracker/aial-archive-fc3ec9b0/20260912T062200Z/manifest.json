@@ -36,15 +36,17 @@
     "at": "2026-09-12T06:22:02Z"
   },
   "wayback": {
-    "ok": false,
+    "ok": true,
     "status_code": 200,
     "spn_status": 200,
-    "error": "error:gateway-timeout",
-    "answered": true,
+    "snapshot": "https://web.archive.org/web/20260916081548/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c878ebbe5a3d7585857ed203f59f34551d7e72f7/public/archive/OpenLLM_France_Luciole_2026_09_08.pdf",
+    "snapshot_ts": "20260916081548",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-d777c025701c2dc2efd23742efbdeebf1805dd0c",
     "via": "spn2",
-    "requested_at": "2026-09-15T08:00:08Z",
-    "at": "2026-09-15T08:00:14Z"
+    "requested_at": "2026-09-16T08:15:47Z",
+    "at": "2026-09-16T08:15:53Z"
   },
   "wayback_attempts": [
     {
@@ -57,6 +59,17 @@
       "via": "spn2",
       "requested_at": "2026-09-14T06:29:04Z",
       "at": "2026-09-14T06:29:10Z"
+    },
+    {
+      "ok": false,
+      "status_code": 200,
+      "spn_status": 200,
+      "error": "error:gateway-timeout",
+      "answered": true,
+      "job_id": "spn2-d777c025701c2dc2efd23742efbdeebf1805dd0c",
+      "via": "spn2",
+      "requested_at": "2026-09-15T08:00:08Z",
+      "at": "2026-09-15T08:00:14Z"
     }
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/claude-haiku-4-5",
+  "provider": "Anthropic",
+  "model": "Claude Haiku 4.5",
+  "target_kind": "aial-eval",
+  "sha256": "bce2b1df0361c89baef6a13ed51e6fa84bf1e423132bc3307bc2afc9201274dc",
+  "size_bytes": 3799,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d7951c93dec8ab98e46d7f45483c9c53910fe798af73b90276d2aa0397e8a1a1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-haiku-4-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-haiku-4-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"45df4f437873b261bc2dbaafc1ecb7a91ea591f060043d3b51bcb6225ff3811e\"",
+    "last_modified": null,
+    "content_length": "547",
+    "fetched_at": "2026-09-16T07:25:25Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:25:30Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "watch-page",
+  "sha256": "87c089a9dba27122c63be37b57356f7bc01d405b05b166c560937bb8a36cc1a1",
+  "size_bytes": 74121,
+  "stored_as": "raw.html",
+  "text_sha256": "e6bcaa3f812a4ea37dc47953b9d628522dbee822665731b7370c9ea2ed565f16",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tlcw631l6x\"",
+    "last_modified": "Mon, 14 Sep 2026 13:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T08:07:29Z"
+  },
+  "prior_sha256": "6930a5f6520ed86e304f37715909c7a7d65f1ff635ec1710f13b352429f0a416",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-09-16T08:07:29Z",
+    "at": "2026-09-16T08:07:45Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T08:07:49Z"
+  }
+}

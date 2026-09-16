@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-1-5",
+  "provider": "Microsoft",
+  "model": "Phi-1.5",
+  "target_kind": "aial-eval",
+  "sha256": "6b0189ed3952f389b150f399fdca88239fa2ddf71d559758dbd01bdce53fb626",
+  "size_bytes": 3930,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ec211a867b8e3ac58042eee58c7c6bad4bf489c8fede5d8cef9521d13482db11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi-1.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi-1.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8bca740ea7b79a173fade822d1efdbdd4cf332d20d666f41a81101ce15baf4ab\"",
+    "last_modified": null,
+    "content_length": "592",
+    "fetched_at": "2026-09-16T07:49:24Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:49:30Z"
+  }
+}

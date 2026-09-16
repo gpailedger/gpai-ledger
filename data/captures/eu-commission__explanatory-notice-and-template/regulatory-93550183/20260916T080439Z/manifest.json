@@ -1,0 +1,45 @@
+{
+  "source_id": "eu-commission/explanatory-notice-and-template",
+  "provider": "European Commission",
+  "model": "Explanatory Notice + Template C(2025) 8311 final",
+  "target_kind": "regulatory",
+  "sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290",
+  "size_bytes": 40691,
+  "stored_as": "raw.html",
+  "text_sha256": "1613145625e2d6ac1c67ee012c596d291ba1f8e66acb8cc593b6257135da1744",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+    "final_url": "https://sorry.ec.europa.eu/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"d64ece86a7a5f3f27c357ec741ebf9dc\"",
+    "last_modified": "Mon, 03 Mar 2025 11:34:45 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T08:04:39Z"
+  },
+  "prior_sha256": "be6cdf10131c3fd9eb9265e592b23609fd7df2d2c9692517017f739188d408be",
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:not-found",
+    "answered": true,
+    "job_id": "spn2-8abdfd8321093920ed76483ac24b182551b1a613",
+    "via": "spn2",
+    "requested_at": "2026-09-16T08:04:39Z",
+    "at": "2026-09-16T08:04:56Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T08:04:59Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "aial-method",
+  "sha256": "eeac357ac5d6494a57c3984b9f0ae6d6b1c402527304a50d9e3a62c97ebddab7",
+  "size_bytes": 71133,
+  "stored_as": "raw.html",
+  "text_sha256": "01833813f308eb3e7c557a27cae20a29716a9d46b80031acfc8841ce2f6103cf",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/detailed-overview",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/detailed-overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tlcw631ivx\"",
+    "last_modified": "Mon, 14 Sep 2026 13:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-16T08:07:59Z"
+  },
+  "prior_sha256": "d90e89578de797c350e7d055da69d410841da1ecd6c044b9b62dc683afd852a7",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T08:08:04Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "amazon/nova-2-sonic",
+  "provider": "Amazon",
+  "model": "Nova 2 Sonic",
+  "target_kind": "aial-eval",
+  "sha256": "fb3f1f30e553e9299f8b783ee463002ba481f849b24e4fc73bc3dc74c65f6b14",
+  "size_bytes": 3876,
+  "stored_as": "raw.yaml",
+  "text_sha256": "f353be2c1fb99c0244a579b010aedc19cdfab2f177bc5c9bb7fe8336d0db8e24",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/amazon-nova-2-sonic.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/amazon-nova-2-sonic.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"316a158af076046d16c138892783ffe4f9d168d913e539092276f4567e18fe18\"",
+    "last_modified": null,
+    "content_length": "596",
+    "fetched_at": "2026-09-16T07:25:15Z"
+  },
+  "prior_sha256": null,
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-16T07:25:18Z"
+  }
+}

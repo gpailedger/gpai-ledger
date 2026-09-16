@@ -36,12 +36,17 @@
     "at": "2026-09-12T06:38:52Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-3cdb20f45e2b3a50203e23f30364aa3e32fe24e5 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f451799ef30>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260916081607/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/phi-3.yaml",
+    "snapshot_ts": "20260916081607",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-3cdb20f45e2b3a50203e23f30364aa3e32fe24e5",
     "via": "spn2",
-    "requested_at": "2026-09-15T08:00:44Z",
-    "at": "2026-09-15T08:03:00Z"
+    "requested_at": "2026-09-16T08:16:05Z",
+    "at": "2026-09-16T08:16:11Z"
   },
   "wayback_attempts": [
     {
@@ -50,6 +55,14 @@
       "via": "spn2",
       "requested_at": "2026-09-14T06:30:10Z",
       "at": "2026-09-14T06:32:10Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-3cdb20f45e2b3a50203e23f30364aa3e32fe24e5 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f451799ef30>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "job_id": "spn2-3cdb20f45e2b3a50203e23f30364aa3e32fe24e5",
+      "via": "spn2",
+      "requested_at": "2026-09-15T08:00:44Z",
+      "at": "2026-09-15T08:03:00Z"
     }
   ]
 }
