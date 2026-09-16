@@ -277,14 +277,14 @@ def verify(data_root: Path) -> int:
         if e.get("outcome") == "log-correction":
             past_correction = True
         # events were written on both Windows and Linux — normalize separators
-        if e.get("outcome") == "pruned-noise" and e.get("dir"):
+        if e.get("outcome") in PRUNE_OUTCOMES and e.get("dir"):
             pruned_dirs.add(e["dir"].replace("\\", "/"))
             # prunes after the 20 Aug 2026 log-correction event must carry full
             # provenance (crawler/prune_capture.py writes them); earlier manual
             # lines are grandfathered by that event
             if past_correction and not (e.get("ts") and e.get("sha256")
                                         and e.get("reason")):
-                fail("C4", e["dir"], "pruned-noise event missing ts/sha256/reason "
+                fail("C4", e["dir"], "prune event missing ts/sha256/reason "
                                      "(use crawler/prune_capture.py)")
         if e.get("outcome") == "new" and e.get("dir"):
             new_dirs.append((e["dir"].replace("\\", "/"), e.get("sha256")))
@@ -339,6 +339,12 @@ def _ots_matches(ots_p: Path, raw: bytes) -> bool:
     except Exception as exc:  # noqa: BLE001
         fail("C2", ots_p, f"unparseable: {exc!r}")
         return True  # already recorded as a fail; don't double-count
+
+
+# a capture leaves the corpus as byte churn whose content is identical to the
+# previous version (pruned-noise), or as bytes a retained capture still holds
+# (pruned-duplicate, named in the event); both carry full provenance
+PRUNE_OUTCOMES = ("pruned-noise", "pruned-duplicate")
 
 
 def main() -> int:

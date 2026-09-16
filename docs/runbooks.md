@@ -3,24 +3,34 @@
 Procedures for the corpus operations that are not part of the automated sweep.
 Everything here preserves the ledger's core invariant: **nothing is ever silently
 removed or altered** — every operation leaves an event in `data/events.jsonl` and
-the prune rule (content-identity with a retained neighbor) means no content
+the prune rule (content-identity with a retained capture) means no content
 is ever lost.
 
-## Pruning a noise capture
+## Pruning a capture (noise, or a duplicate of one kept elsewhere)
 
-A capture qualifies as noise only if its canonical text is identical to a
-neighboring version of the same target (byte churn without content change:
-banners, re-serialization). Never prune a content-bearing version.
+A capture qualifies in two cases and no other. **Noise**: its canonical text is
+identical to the version before it on the same target (byte churn without content
+change: banners, re-serialization). **Duplicate**: another capture the ledger still
+stands behind holds the same bytes, sha256 for sha256 — what an upstream rename
+produces when the same file arrives under a new name. Never prune a
+content-bearing version.
 
 ```
 python crawler/prune_capture.py <source_id> <target_slug> <capture_ts> --reason "..."
+python crawler/prune_capture.py --batch <file.tsv> --reason "..."
 ```
 
-The tool refuses anything that fails the text-identity test, repairs
-`state.json`, and appends a `pruned-noise` event carrying the pruned file's
-sha256, a precise timestamp, and the reason. `verify_corpus.py` (C4) fails the
-build if a prune appears without those fields. Do not delete capture
-directories by hand.
+The batch file is one capture per line: source id, target slug, capture timestamp,
+tab-separated. A capture listed in the batch never counts as the survivor of
+another, so a batch cannot remove both copies of the same bytes, and neither does
+a capture under a retired entry.
+
+The tool refuses anything that fails both tests, repairs `state.json` (dropping the
+tail pointers when a chain empties), and appends a `pruned-noise` or
+`pruned-duplicate` event carrying the pruned file's sha256, a precise timestamp,
+the reason, and — for a duplicate — the capture its content survives in.
+`verify_corpus.py` (C4) fails the build if a prune appears without those fields. Do
+not delete capture directories by hand.
 
 ## Provider objection / dispute
 

@@ -372,7 +372,7 @@ def write(path: Path, title: str, body: str, desc: str = "",
 # hashes of full bundles replaced by an Art. 53 scope repack (scope-repack
 # events); filled by main() before any version page renders
 REPACKED_SHAS = set()
-# sha256 of a pruned capture -> its pruned-noise event (tool-made events carry
+# sha256 of a pruned capture -> its prune event (tool-made events carry
 # the hash; curation-time events carry only the dir, whose hash is in the
 # matching 'new' event)
 PRUNED_EVENTS = {}
@@ -451,7 +451,7 @@ def last_checked_map():
         d = str(e.get("dir") or "").replace("\\", "/")
         if e.get("outcome") == "new" and d and e.get("sha256"):
             new_sha[d] = e["sha256"]
-        if e.get("outcome") == "pruned-noise":
+        if e.get("outcome") in ("pruned-noise", "pruned-duplicate"):
             sha = e.get("sha256") or new_sha.get(d)
             if sha:
                 PRUNED_EVENTS[sha] = e
@@ -612,6 +612,11 @@ def prior_cell(prior_sha, corpus_shas, prior_ref=None, repacked_shas=frozenset()
                 f"replacement is a scope-repack event in the log)</span>")
     ev = (pruned if pruned is not None else PRUNED_EVENTS).get(prior_sha)
     if ev and ev.get("via") == "prune_capture":
+        twin = (ev.get("survives_in") or {}).get("dir")
+        if twin:
+            return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture "
+                    f"was pruned as a duplicate — the same bytes are retained at "
+                    f"<code>{esc(twin)}</code>; its hash is in the event log)</span>")
         return (f"<code>{esc(prior_sha)}</code> <span class='muted'>(that capture was "
                 f"pruned as content-identical noise — by the prune rule its content is "
                 f"identical to a retained version of this target; its hash is in the "
@@ -1537,13 +1542,16 @@ the whole archive can be re-verified from source.</p>
 <h2>Permalink stability</h2>
 <p>Version URLs (<code>/ledger/&lt;provider&gt;/&lt;model&gt;/v/&lt;capture&gt;/</code>)
 are stable and safe to cite; content-bearing versions are never removed. Model
-slugs are never renamed. The one exception is narrow: a re-capture whose bytes
-changed but whose content is identical to a neighboring version (banner churn,
-re-rendering) may be pruned as noise — every prune is logged in the append-only
-event log (tool-made prunes carry the pruned file's hash and reason; the
-curation-time prunes of August 2026 carry the capture directory, whose hash is in
-the matching capture event) — and the prune tool's rule guarantees the pruned
-capture's content survives in a neighboring retained version.
+slugs are never renamed. Two narrow exceptions exist, and every prune is logged in
+the append-only event log (tool-made prunes carry the pruned file's hash and
+reason; the curation-time prunes of August 2026 carry the capture directory, whose
+hash is in the matching capture event). A re-capture whose bytes changed but whose
+content is identical to the version before it (banner churn, re-rendering) may be
+pruned as noise. A capture whose bytes are identical to another capture this
+archive keeps — which upstream renaming produces, the same file arriving under a
+new name — may be pruned as a duplicate, and its event names the capture the
+content survives in. In both cases the prune tool's rule guarantees the removed
+capture's content survives in a retained version.
 Capture ids are minting timestamps and can trail the fetch
 time by seconds; the manifest's <code>fetched_at</code> is authoritative.</p>
 <h2>Work this project does not republish</h2>

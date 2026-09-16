@@ -154,3 +154,107 @@ def test_pruned_corpus_still_passes_verify_corpus(corpus, monkeypatch):
     VC.WARNS.clear()
     VC.STATS.clear()
     assert VC.verify(root) == 0, VC.FAILS
+
+
+# --- the duplicate route: the same bytes are retained somewhere else -----------
+
+NL = chr(10)
+DUP_K = "prov/model::aial-eval-history-bbbb2222"
+OTHER_K = "other/model::aial-eval-history-cccc3333"
+SAME = b"model_name: Phi-4"
+
+
+def run_batch(monkeypatch, root, lines, reason="duplicate of a capture kept elsewhere"):
+    batch = root / "batch.tsv"
+    batch.write_text(NL.join(lines) + NL, encoding="utf-8")
+    monkeypatch.setattr(PC, "DATA", root)
+    monkeypatch.setattr(sys, "argv", ["prune_capture.py", "--batch", str(batch),
+                                      "--reason", reason])
+    return PC.main()
+
+
+def test_prunes_a_duplicate_of_a_capture_kept_elsewhere(corpus, monkeypatch):
+    # AIAL renamed 100 eval files on 14 Sep 2026 and the harvest stored states it
+    # already held under the new paths: the same bytes, filed twice
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-aaaa9999",
+                       ts=TS1, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    dup, _ = corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-bbbb2222",
+                                ts=TS2, raw=SAME, ext=".yaml", text="Phi-4",
+                                kind="aial-eval-history")
+    root = corpus.finish()
+    assert run_prune(monkeypatch, root, TS2, tslug="aial-eval-history-bbbb2222",
+                     reason="second chain from an upstream rename") == 0
+    assert not dup.exists()
+    assert read_state(root)[DUP_K]["versions"] == []
+    e = read_events(root)[-1]
+    assert e["outcome"] == "pruned-duplicate"
+    assert e["sha256"] == sha(SAME)
+    assert e["survives_in"]["dir"].endswith("/" + TS1)
+    assert e["survives_in"]["source"] == "prov/model"
+    assert e["via"] == "prune_capture" and e["reason"]
+
+
+def test_an_emptied_chain_keeps_no_pointer_into_a_removed_directory(corpus, monkeypatch):
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-aaaa9999",
+                       ts=TS1, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-bbbb2222",
+                       ts=TS2, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    root = corpus.finish()
+    assert run_prune(monkeypatch, root, TS2, tslug="aial-eval-history-bbbb2222") == 0
+    entry = read_state(root)[DUP_K]
+    assert "last_capture" not in entry and "last_sha256" not in entry
+    VC.FAILS.clear(); VC.WARNS.clear(); VC.STATS.clear()
+    assert VC.verify(root) == 0, VC.FAILS
+
+
+def test_the_survivor_may_be_another_models_capture_and_is_named(corpus, monkeypatch):
+    # AIAL's regenerated pages were filed under the tracker while the registry was
+    # stale; the content now lives under the model it belongs to
+    corpus.add_capture(source_id="other/model", tslug="aial-eval-history-cccc3333",
+                       ts=TS1, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history", provider="Other", model="Model")
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-bbbb2222",
+                       ts=TS2, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    root = corpus.finish()
+    assert run_prune(monkeypatch, root, TS2, tslug="aial-eval-history-bbbb2222") == 0
+    e = read_events(root)[-1]
+    assert e["survives_in"]["source"] == "other/model"
+    assert e["survives_in"]["target"] == "aial-eval-history-cccc3333"
+
+
+def test_a_batch_never_removes_both_copies_of_the_same_bytes(corpus, monkeypatch):
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-aaaa9999",
+                       ts=TS1, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-bbbb2222",
+                       ts=TS2, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history")
+    root = corpus.finish()
+    rc = run_batch(monkeypatch, root, [
+        "prov/model" + chr(9) + "aial-eval-history-aaaa9999" + chr(9) + TS1,
+        "prov/model" + chr(9) + "aial-eval-history-bbbb2222" + chr(9) + TS2])
+    assert rc == 1, "a batch that would empty the corpus of these bytes must not pass"
+    left = [v for k in (K, DUP_K, "prov/model::aial-eval-history-aaaa9999")
+            for v in read_state(root).get(k, {}).get("versions", [])]
+    # neither is removed: with both listed, neither has a survivor, so the tool
+    # refuses both rather than quietly picking one to keep
+    assert len(left) == 2, "a capture was removed although its twin was also queued"
+
+
+def test_refuses_a_duplicate_whose_only_twin_is_under_a_retired_entry(corpus, monkeypatch):
+    corpus.add_capture(source_id="other/model", tslug="aial-eval-history-cccc3333",
+                       ts=TS1, raw=SAME, ext=".yaml", text="Phi-4",
+                       kind="aial-eval-history", provider="Other", model="Model")
+    dup, _ = corpus.add_capture(source_id="prov/model", tslug="aial-eval-history-bbbb2222",
+                                ts=TS2, raw=SAME, ext=".yaml", text="Phi-4",
+                                kind="aial-eval-history")
+    root = corpus.finish()
+    state = read_state(root)
+    state[OTHER_K]["retired"] = "superseded upstream"
+    (root / "state.json").write_text(json.dumps(state, indent=2), encoding="utf-8")
+    assert run_prune(monkeypatch, root, TS2, tslug="aial-eval-history-bbbb2222") == 1
+    assert dup.exists(), "the capture was removed although nothing retained holds its bytes"
