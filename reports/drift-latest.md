@@ -1,8 +1,9 @@
-# Live-vs-archive drift — 2026-09-16
+# Live-vs-archive drift — 2026-09-17
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
 | Adobe Firefly | DRIFT-CANDIDATE | 0.9604 | changed (67 word(s)) |
+| C4AI Command A Plus | DRIFT-CANDIDATE | 0.9581 | single version |
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
@@ -50,7 +51,6 @@
 | Seedance 2.0 | identical-bytes |  | single version |
 | Seedance 2.5 | identical-bytes |  | single version |
 | Seedream 5.0 Pro | identical-bytes |  | single version |
-| C4AI Command A Plus | identical-bytes |  | single version |
 | DeepSeek-V4 | identical-bytes |  | single version |
 | Gemini 3 Pro | identical-bytes |  | single version |
 | Gemma 4 | identical-bytes |  | single version |

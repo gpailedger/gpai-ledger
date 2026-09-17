@@ -215,10 +215,168 @@
   {
     "id": "cohere/command-a-plus",
     "model": "C4AI Command A Plus",
-    "verdict": "identical-bytes",
+    "similarity": 0.9581,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
     "self_history": {
       "verdict": "single-version"
-    }
+    },
+    "basis": "live-vs-archive",
+    "verdict": "DRIFT-CANDIDATE",
+    "word_delta": 116,
+    "moved_words": 2,
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Command A",
+        "new": "Command A"
+      },
+      {
+        "op": "insert",
+        "old": "Command A Version of",
+        "new": "A and family Version"
+      },
+      {
+        "op": "replace",
+        "old": "Summary: v1 Last update: 31 July 2026",
+        "new": "Summary: v1.1 Last update: 10 September 2026"
+      },
+      {
+        "op": "insert",
+        "old": "Command A Public documentation",
+        "new": "A and North Small Translate Public"
+      },
+      {
+        "op": "replace",
+        "old": "/docs.cohere.com/ docs/command-a-plus Model dependencies: n/a Date of",
+        "new": "https:/ /docs.cohere.com/ Model dependencies: North Small T ranslate is based on the same base model as Date"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 1 1.3",
+        "new": "A AND FAMILY 1"
+      },
+      {
+        "op": "insert",
+        "old": "trillion tokens was trained",
+        "new": "tokens The model was"
+      },
+      {
+        "op": "insert",
+        "old": "and infographics. Audio n/a",
+        "new": "infographics. North Small T ranslate was not trained with image content.1 Audio"
+      },
+      {
+        "op": "replace",
+        "old": "to April 2026",
+        "new": "to June 2026"
+      },
+      {
+        "op": "insert",
+        "old": "Multilingual, covering 48 languages,",
+        "new": "covering at least 48"
+      },
+      {
+        "op": "replace",
+        "old": "data: Command A is",
+        "new": "data: The model is"
+      },
+      {
+        "op": "delete",
+        "old": "as enterprise reasoning, coding,",
+        "new": "such as coding, tool"
+      },
+      {
+        "op": "replace",
+        "old": "tool use, multilingual tasks, and multimodal document understanding. Additional comments",
+        "new": "use, agentic capabilities, multilingual tasks, document understanding, instruction- following tasks, and long-context tasks. Additional"
+      },
+      {
+        "op": "insert",
+        "old": ": PUBLIC SUMMARY",
+        "new": ": 1Any references to image content as a modality in this Public Summary of T raining Content do not apply to North Small T ranslate. PUBLIC"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 2 2.",
+        "new": "A AND FAMILY 2"
+      },
+      {
+        "op": "replace",
+        "old": "for Command A includes",
+        "new": "for the model includes"
+      },
+      {
+        "op": "delete",
+        "old": "to enterprise reasoning, coding,",
+        "new": "relevant to coding, tool"
+      },
+      {
+        "op": "replace",
+        "old": "tasks, and multimodal document understanding. See the",
+        "new": "multilingual tasks, document understanding, instruction- following tasks, and long-context tasks. See"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 3 2.2.2",
+        "new": "A AND FAMILY 3"
+      },
+      {
+        "op": "delete",
+        "old": "to enterprise reasoning, coding,",
+        "new": "relevant to coding, tool"
+      },
+      {
+        "op": "replace",
+        "old": "tasks, and multimodal document understanding. See the",
+        "new": "multilingual tasks, document understanding, instruction-following tasks, and long-context tasks. See"
+      },
+      {
+        "op": "replace",
+        "old": "to April 2026",
+        "new": "to June 2026"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 4 Comprehensive",
+        "new": "A AND FAMILY 4"
+      },
+      {
+        "op": "delete",
+        "old": "to enterprise reasoning, coding,",
+        "new": "relevant to coding, tool"
+      },
+      {
+        "op": "replace",
+        "old": "tasks, and multimodal document understanding. See the",
+        "new": "multilingual tasks, document understanding, instruction-following tasks, and long-context tasks. See"
+      },
+      {
+        "op": "replace",
+        "old": "train Command A include",
+        "new": "train the model include"
+      },
+      {
+        "op": "delete",
+        "old": "of media types and languages,",
+        "new": "variety of languages, including"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 5 2.5",
+        "new": "A AND FAMILY 5"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 6 3.",
+        "new": "A AND FAMILY 6"
+      },
+      {
+        "op": "insert",
+        "old": "COMMAND A 7",
+        "new": "A AND FAMILY 7"
+      }
+    ]
   },
   {
     "id": "ministry-of-digital-affairs-of-poland/pllum-instruct",
