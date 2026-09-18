@@ -1,0 +1,53 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "provider-live",
+  "sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
+  "size_bytes": 848784,
+  "stored_as": "raw.html",
+  "text_sha256": "9e04572abba1b344afacd60761bcfaba9cb9861c7ae053bde22651399b9d63fe",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "final_url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "848784",
+    "fetched_at": "2026-09-18T06:11:06Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 7,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260918061206/https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "snapshot_ts": "20260918061206",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-4c5afdfe9f7afed85fb34dbab7ab36451e7bae15",
+    "via": "spn2",
+    "requested_at": "2026-09-18T06:11:06Z",
+    "at": "2026-09-18T06:12:19Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-18T06:12:23Z"
+  }
+}

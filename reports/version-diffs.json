@@ -6378,6 +6378,29 @@
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:52Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260910T055859Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260918T055724Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260910T055859Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20260918T055724Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:46Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-history-941c4fb5::captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184254Z>captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T184536Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -6838,6 +6861,29 @@
     "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:52Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260910T055938Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260918T055803Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260910T055938Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20260918T055803Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:47Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -7408,6 +7454,29 @@
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:52Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260910T060029Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260918T055847Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260910T060029Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20260918T055847Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:47Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-history-1346dfa5::captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184309Z>captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20260829T184549Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -7869,6 +7938,29 @@
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:53Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260910T060058Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260918T055910Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260910T060058Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20260918T055910Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:47Z"
+  },
   "anthropic/claude-opus-5::aial-eval-history-e94ba648::captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184317Z>captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20260829T184556Z": {
     "verdict": "changed",
     "similarity": 0.9984,
@@ -8329,6 +8421,29 @@
     "from_sha256": "d74e825b8c395d9e95cfe6985f3264145405ba916387dc394f090db639e8f7a2",
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:53Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20260910T060123Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20260918T055935Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260910T060123Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20260918T055935Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:47Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -8863,6 +8978,29 @@
     "to_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
     "computed_at": "2026-09-10T06:30:53Z"
   },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260910T060355Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260918T060212Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260910T060355Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20260918T060212Z",
+    "from_sha256": "704469fdc3784d7b6a31539a715b244a1774931640f70ad2dfed8954839db5a3",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:48Z"
+  },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
     "similarity": 0.9823,
@@ -9299,6 +9437,29 @@
     "from_sha256": "cc823394d2f9915fba7956604cde0bcdd04c4327db9394bc506abde60f35d66e",
     "to_sha256": "094890eb1de535fc0348fd4806865bbe604245bb05461358d125a1ed1aad90a9",
     "computed_at": "2026-09-03T06:23:36Z"
+  },
+  "anthropic/mythos5-1::provider-live-e8cea877::captures/anthropic__mythos5-1/provider-live-e8cea877/20260913T114644Z>captures/anthropic__mythos5-1/provider-live-e8cea877/20260918T060237Z": {
+    "verdict": "changed",
+    "similarity": 0.9907,
+    "word_delta": 32,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "party platforms Anthropic",
+        "new": "party platforms Microsoft 365 connector for Claude: architecture and data flows Copy link for Microsoft 365 connector for Claude: architecture and data flows View Microsoft 365 connector for Claude: architecture and data flows Anthropic"
+      }
+    ],
+    "source": "anthropic/mythos5-1",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20260913T114644Z",
+    "to_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20260918T060237Z",
+    "from_sha256": "f41756d3de9092e24c3219378d1545fe8c177d177be89279a0fe9386ef435733",
+    "to_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+    "computed_at": "2026-09-18T06:49:50Z"
   },
   "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
     "verdict": "changed",
@@ -11863,6 +12024,29 @@
     "to_sha256": "79e2b37da0d691a6e4dec1ce0d529e380608d73a07aaeee577bc680c00cb7736",
     "computed_at": "2026-09-17T06:30:29Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260917T060211Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260918T060539Z": {
+    "verdict": "changed",
+    "similarity": 0.9968,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "A Technical Report",
+        "new": "Technical Report Command A Translate Technical Report North Small Translate Technical Report"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260917T060211Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260918T060539Z",
+    "from_sha256": "79e2b37da0d691a6e4dec1ce0d529e380608d73a07aaeee577bc680c00cb7736",
+    "to_sha256": "e77c96c48b3050c3b7186ea3b2dfc1e51753cec3ab0425b518d3546a2883940a",
+    "computed_at": "2026-09-18T06:49:48Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -12014,6 +12198,29 @@
     "from_sha256": "66ef3dc40d89e4a93b904f8a2b51129857c09fdd551ddd718c5b7e4abf7913ed",
     "to_sha256": "d4755c6958cd8fd8cc92e5ed3ec3e934a3f334ba5ab9292089c0c07fc4f424ce",
     "computed_at": "2026-09-17T06:30:29Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260917T061722Z>captures/cohere__model-catalog/watch-page-e9526454/20260918T062205Z": {
+    "verdict": "changed",
+    "similarity": 0.9984,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "A Technical Report",
+        "new": "Technical Report Command A Translate Technical Report North Small Translate Technical Report"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260917T061722Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20260918T062205Z",
+    "from_sha256": "d4755c6958cd8fd8cc92e5ed3ec3e934a3f334ba5ab9292089c0c07fc4f424ce",
+    "to_sha256": "3ec9287ef60c069bd0b0ecc4628d80637c3cf192e9c065948446f5805eaadbc1",
+    "computed_at": "2026-09-18T06:49:49Z"
   },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
@@ -14335,6 +14542,19 @@
     "to_sha256": "7a3cd622f3549a88dfc99acfd172e8ee844b0f8c030136b710e9e4713b7497be",
     "computed_at": "2026-09-16T08:27:06Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260916T080605Z>captures/google__transparency-bucket/watch-page-81cd3682/20260918T062406Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260916T080605Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260918T062406Z",
+    "from_sha256": "7a3cd622f3549a88dfc99acfd172e8ee844b0f8c030136b710e9e4713b7497be",
+    "to_sha256": "b61518503098b6f8584ade511e26329f5e3f4952d37d765ae38226077e734cbc",
+    "computed_at": "2026-09-18T06:49:48Z"
+  },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -14913,6 +15133,29 @@
         "computed_at": "2026-08-22T23:24:55Z"
       }
     ]
+  },
+  "meta/muse-glimmer::provider-live-595d1bcb::captures/meta__muse-glimmer/provider-live-595d1bcb/20260821T110825Z>captures/meta__muse-glimmer/provider-live-595d1bcb/20260918T061106Z": {
+    "verdict": "changed",
+    "similarity": 0.9909,
+    "word_delta": 43,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "threats. Time Period",
+        "new": "Time Period Download report Brazil ECA Digital Transparency Report This report is published in accordance with Article 31 of Brazil s Digital Statute for Children and Adolescents Law No. 15,211/2025 and Article 45 of Decree No. 12,880/2026, and the Despacho Decisório No. 122/2026. Time Period"
+      }
+    ],
+    "source": "meta/muse-glimmer",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-glimmer/provider-live-595d1bcb/20260821T110825Z",
+    "to_dir": "captures/meta__muse-glimmer/provider-live-595d1bcb/20260918T061106Z",
+    "from_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
+    "to_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
+    "computed_at": "2026-09-18T06:49:49Z"
   },
   "meta/muse-glimmer::provider-live-7d5a5ed8::captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z>captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z": {
     "verdict": "changed",
@@ -15729,6 +15972,29 @@
         "computed_at": "2026-08-22T23:24:17Z"
       }
     ]
+  },
+  "meta/muse-image::provider-live-595d1bcb::captures/meta__muse-image/provider-live-595d1bcb/20260821T110856Z>captures/meta__muse-image/provider-live-595d1bcb/20260918T061237Z": {
+    "verdict": "changed",
+    "similarity": 0.9909,
+    "word_delta": 43,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "threats. Time Period",
+        "new": "Time Period Download report Brazil ECA Digital Transparency Report This report is published in accordance with Article 31 of Brazil s Digital Statute for Children and Adolescents Law No. 15,211/2025 and Article 45 of Decree No. 12,880/2026, and the Despacho Decisório No. 122/2026. Time Period"
+      }
+    ],
+    "source": "meta/muse-image",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-image/provider-live-595d1bcb/20260821T110856Z",
+    "to_dir": "captures/meta__muse-image/provider-live-595d1bcb/20260918T061237Z",
+    "from_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
+    "to_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
+    "computed_at": "2026-09-18T06:49:48Z"
   },
   "meta/muse-image::provider-live-e520ba83::captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z>captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z": {
     "verdict": "changed",
@@ -16710,6 +16976,29 @@
         "computed_at": "2026-08-22T23:24:23Z"
       }
     ]
+  },
+  "meta/muse-spark::provider-live-595d1bcb::captures/meta__muse-spark/provider-live-595d1bcb/20260821T110926Z>captures/meta__muse-spark/provider-live-595d1bcb/20260918T061302Z": {
+    "verdict": "changed",
+    "similarity": 0.9909,
+    "word_delta": 43,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "threats. Time Period",
+        "new": "Time Period Download report Brazil ECA Digital Transparency Report This report is published in accordance with Article 31 of Brazil s Digital Statute for Children and Adolescents Law No. 15,211/2025 and Article 45 of Decree No. 12,880/2026, and the Despacho Decisório No. 122/2026. Time Period"
+      }
+    ],
+    "source": "meta/muse-spark",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20260821T110926Z",
+    "to_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20260918T061302Z",
+    "from_sha256": "d45e518728b3cbf7caaf88a55d0cb85c4dd3db834def838c26e8f1fd5b538b4e",
+    "to_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
+    "computed_at": "2026-09-18T06:49:48Z"
   },
   "meta/muse-spark::provider-live-df0a7357::captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z>captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z": {
     "verdict": "changed",
@@ -23382,6 +23671,29 @@
     "to_sha256": "5b947231c8c807f1b3abc7f6104384d9905b64e2695615a7f5f3892d295a8752",
     "computed_at": "2026-09-17T06:30:29Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260917T061659Z>captures/openai__model-catalog/watch-page-0e5ba652/20260918T062127Z": {
+    "verdict": "changed",
+    "similarity": 0.9993,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "MCP and Connectors Secure",
+        "new": "MCP servers Secure"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260917T061659Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260918T062127Z",
+    "from_sha256": "5b947231c8c807f1b3abc7f6104384d9905b64e2695615a7f5f3892d295a8752",
+    "to_sha256": "4a21ec3594ecf25a858dd451f4ecafc583f02942a7c86b832451c206ed0e6b90",
+    "computed_at": "2026-09-18T06:49:49Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -26953,5 +27265,33 @@
     "from_sha256": "2f0164cceb5471071cbf04e00c890e4812ab2c645eab048d629dd6418b5fbaa5",
     "to_sha256": "00bb46f296f2cf9eaf03fe2b672f15d145968cdbf46aea87f928bafbbbc67309",
     "computed_at": "2026-09-16T08:27:06Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260916T080209Z>captures/xai__model-catalog/watch-page-905d5d7a/20260918T062336Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "to Text Custom Voices New Ephemeral",
+        "new": "Text New Custom Voices Ephemeral Tokens"
+      },
+      {
+        "op": "replace",
+        "old": "to Text Custom Voices New Ephemeral",
+        "new": "Text New Custom Voices Ephemeral Tokens"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260916T080209Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260918T062336Z",
+    "from_sha256": "00bb46f296f2cf9eaf03fe2b672f15d145968cdbf46aea87f928bafbbbc67309",
+    "to_sha256": "25fc49e9bcc8dbdc7b9a895e16dcf5f77f8b61e0df98e1603d249d7947257843",
+    "computed_at": "2026-09-18T06:49:49Z"
   }
 }

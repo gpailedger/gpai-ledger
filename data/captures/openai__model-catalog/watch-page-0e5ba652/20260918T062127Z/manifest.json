@@ -1,0 +1,47 @@
+{
+  "source_id": "openai/model-catalog",
+  "provider": "OpenAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "4a21ec3594ecf25a858dd451f4ecafc583f02942a7c86b832451c206ed0e6b90",
+  "size_bytes": 382853,
+  "stored_as": "raw.html",
+  "text_sha256": "6f1f2d4b69e96a8dd09511ee374b06d319a2c0c9004b999d609127425e7e53e3",
+  "doc_links_sha256": "eb1119ab46acbbe2ac257ea98091c12f07d8e27df4b37206292850dc5d301fda",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://developers.openai.com/api/docs/models",
+    "final_url": "https://developers.openai.com/api/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-09-18T06:21:27Z"
+  },
+  "prior_sha256": "5b947231c8c807f1b3abc7f6104384d9905b64e2695615a7f5f3892d295a8752",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260918062130/https://developers.openai.com/api/docs/models",
+    "snapshot_ts": "20260918062130",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-1d7e8a5ad8f31418fe6dcefa60d872f262db8271",
+    "via": "spn2",
+    "requested_at": "2026-09-18T06:21:27Z",
+    "at": "2026-09-18T06:21:48Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-18T06:21:53Z"
+  }
+}
