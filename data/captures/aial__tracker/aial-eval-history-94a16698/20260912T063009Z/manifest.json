@@ -36,10 +36,25 @@
     "at": "2026-09-12T06:30:13Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260919062025/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/gemini-3.5-flash-cyber.yaml",
+    "snapshot_ts": "20260919062025",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-adf03e1b389022e57fea80b3f7c2653ef4669f25",
     "via": "spn2",
-    "requested_at": "2026-09-18T06:37:12Z",
-    "at": "2026-09-18T06:37:12Z"
-  }
+    "requested_at": "2026-09-19T06:20:05Z",
+    "at": "2026-09-19T06:20:30Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-09-18T06:37:12Z",
+      "at": "2026-09-18T06:37:12Z"
+    }
+  ]
 }

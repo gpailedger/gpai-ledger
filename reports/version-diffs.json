@@ -12047,6 +12047,29 @@
     "to_sha256": "e77c96c48b3050c3b7186ea3b2dfc1e51753cec3ab0425b518d3546a2883940a",
     "computed_at": "2026-09-18T06:49:48Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260918T060539Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260919T060111Z": {
+    "verdict": "changed",
+    "similarity": 0.9836,
+    "word_delta": 62,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "/ Copy page Copy this page as Markdown for LLMs Ask a question Chat with an AI assistant View as Markdown View this page as plain text Open in Claude Ask questions about this page Open in ChatGPT Ask questions about this page Cursor Connect to Cursor Install MCP server on Cursor Connect to Claude Co",
+        "new": "/ Light Dark System"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260918T060539Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260919T060111Z",
+    "from_sha256": "e77c96c48b3050c3b7186ea3b2dfc1e51753cec3ab0425b518d3546a2883940a",
+    "to_sha256": "5583c90c550365bde8f09c13a6ada3bcfdae33b8bf6f3109c8c82252cebeb496",
+    "computed_at": "2026-09-19T06:29:14Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -14554,6 +14577,19 @@
     "from_sha256": "7a3cd622f3549a88dfc99acfd172e8ee844b0f8c030136b710e9e4713b7497be",
     "to_sha256": "b61518503098b6f8584ade511e26329f5e3f4952d37d765ae38226077e734cbc",
     "computed_at": "2026-09-18T06:49:48Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260918T062406Z>captures/google__transparency-bucket/watch-page-81cd3682/20260919T061552Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260918T062406Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260919T061552Z",
+    "from_sha256": "b61518503098b6f8584ade511e26329f5e3f4952d37d765ae38226077e734cbc",
+    "to_sha256": "35c1e6740ac854cd4e3607d4b05736ed037dab64cb8b9b65232ac53cea0a5dc7",
+    "computed_at": "2026-09-19T06:29:14Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -23693,6 +23729,34 @@
     "from_sha256": "5b947231c8c807f1b3abc7f6104384d9905b64e2695615a7f5f3892d295a8752",
     "to_sha256": "4a21ec3594ecf25a858dd451f4ecafc583f02942a7c86b832451c206ed0e6b90",
     "computed_at": "2026-09-18T06:49:49Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260918T062127Z>captures/openai__model-catalog/watch-page-0e5ba652/20260919T061451Z": {
+    "verdict": "changed",
+    "similarity": 0.9985,
+    "word_delta": 6,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "federation Codex setup Federation rules Admin API X.509",
+        "new": "identity federation Federation rules X.509 certificates"
+      },
+      {
+        "op": "delete",
+        "old": "overview Workload identity Personal",
+        "new": "Authentication overview Personal Access"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260918T062127Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260919T061451Z",
+    "from_sha256": "4a21ec3594ecf25a858dd451f4ecafc583f02942a7c86b832451c206ed0e6b90",
+    "to_sha256": "97228ff237087271766e83678e189f202b55ebb87a5eb5de9b87231adcb1d6c3",
+    "computed_at": "2026-09-19T06:29:14Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

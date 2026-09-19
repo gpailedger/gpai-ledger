@@ -1,0 +1,48 @@
+{
+  "source_id": "google/transparency-bucket",
+  "provider": "Google",
+  "model": "Transparency-report file store (watched for summary drops)",
+  "target_kind": "watch-page",
+  "sha256": "35c1e6740ac854cd4e3607d4b05736ed037dab64cb8b9b65232ac53cea0a5dc7",
+  "size_bytes": 74151,
+  "stored_as": "raw.bin",
+  "text_sha256": null,
+  "extraction_notes": [
+    "no extractor for .bin"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "final_url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "status_code": 200,
+    "content_type": "application/xml",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "74151",
+    "fetched_at": "2026-09-19T06:15:52Z"
+  },
+  "prior_sha256": "b61518503098b6f8584ade511e26329f5e3f4952d37d765ae38226077e734cbc",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260919061552/https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "snapshot_ts": "20260919061552",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-3edf062d5a2417e99a1b86b421a77cd6aea69d33",
+    "via": "spn2",
+    "requested_at": "2026-09-19T06:15:52Z",
+    "at": "2026-09-19T06:15:58Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-19T06:16:01Z"
+  }
+}

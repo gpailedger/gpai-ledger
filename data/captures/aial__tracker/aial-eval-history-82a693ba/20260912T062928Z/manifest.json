@@ -36,10 +36,25 @@
     "at": "2026-09-12T06:29:32Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2383a91d00>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260919061931/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/c51789900b4ca296dfd0c9f95d17c0df9f53a521/evals/pleias-baguettotron.yaml",
+    "snapshot_ts": "20260919061931",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-9fb35dcdeffad965d15a1dd2ff2e9df23e4929f2",
     "via": "spn2",
-    "requested_at": "2026-09-18T06:30:36Z",
-    "at": "2026-09-18T06:32:36Z"
-  }
+    "requested_at": "2026-09-19T06:18:17Z",
+    "at": "2026-09-19T06:19:36Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f2383a91d00>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-18T06:30:36Z",
+      "at": "2026-09-18T06:32:36Z"
+    }
+  ]
 }

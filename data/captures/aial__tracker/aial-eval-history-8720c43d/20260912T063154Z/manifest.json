@@ -36,10 +36,25 @@
     "at": "2026-09-12T06:31:57Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260919061948/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/vitra.yaml",
+    "snapshot_ts": "20260919061948",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-eb13751d11e7a2920a96f34de0567f77c10b7ff0",
     "via": "spn2",
-    "requested_at": "2026-09-18T06:32:48Z",
-    "at": "2026-09-18T06:34:48Z"
-  }
+    "requested_at": "2026-09-19T06:19:48Z",
+    "at": "2026-09-19T06:19:53Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-18T06:32:48Z",
+      "at": "2026-09-18T06:34:48Z"
+    }
+  ]
 }
