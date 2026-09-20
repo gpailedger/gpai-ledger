@@ -23758,6 +23758,39 @@
     "to_sha256": "97228ff237087271766e83678e189f202b55ebb87a5eb5de9b87231adcb1d6c3",
     "computed_at": "2026-09-19T06:29:14Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260919T061451Z>captures/openai__model-catalog/watch-page-0e5ba652/20260920T061427Z": {
+    "verdict": "changed",
+    "similarity": 0.9983,
+    "word_delta": 5,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Source Meetups Blog",
+        "new": "Source Events Blog"
+      },
+      {
+        "op": "replace",
+        "old": "Source Meetups Blog",
+        "new": "Source Events Blog"
+      },
+      {
+        "op": "replace",
+        "old": "for Startups Events Meetups Spaces Developer",
+        "new": "Startups Spaces Events Developer"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260919T061451Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260920T061427Z",
+    "from_sha256": "97228ff237087271766e83678e189f202b55ebb87a5eb5de9b87231adcb1d6c3",
+    "to_sha256": "f34e4348b2c639dc3e83d7d3993a6de65d9e83563c2c032e792c3d4740de2dae",
+    "computed_at": "2026-09-20T06:18:51Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
