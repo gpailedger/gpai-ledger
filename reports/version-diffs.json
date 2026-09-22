@@ -23840,6 +23840,29 @@
     "to_sha256": "d363dcca39ef9206c0c7af614e8ddb1029ed520665bf74ffb170d41e24683547",
     "computed_at": "2026-09-21T06:20:29Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260921T061631Z>captures/openai__model-catalog/watch-page-0e5ba652/20260922T103947Z": {
+    "verdict": "changed",
+    "similarity": 0.9993,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Connections WebRTC WebSockets Telephony",
+        "new": "WebRTC WebRTC with WARP WebSockets"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260921T061631Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260922T103947Z",
+    "from_sha256": "d363dcca39ef9206c0c7af614e8ddb1029ed520665bf74ffb170d41e24683547",
+    "to_sha256": "8e6d4444925f9e184b91d4b5ab1a56dfe9abe14c727022c0cd85c9f8f15cf06e",
+    "computed_at": "2026-09-22T10:46:59Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -27439,5 +27462,73 @@
     "from_sha256": "00bb46f296f2cf9eaf03fe2b672f15d145968cdbf46aea87f928bafbbbc67309",
     "to_sha256": "25fc49e9bcc8dbdc7b9a895e16dcf5f77f8b61e0df98e1603d249d7947257843",
     "computed_at": "2026-09-18T06:49:49Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260918T062336Z>captures/xai__model-catalog/watch-page-905d5d7a/20260922T104031Z": {
+    "verdict": "changed",
+    "similarity": 0.9771,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Grok 4.6 Latest",
+        "new": "Grok 4.7 Latest"
+      },
+      {
+        "op": "replace",
+        "old": "Grok 4.6 Latest",
+        "new": "Grok 4.7 Latest"
+      },
+      {
+        "op": "replace",
+        "old": "Meet grok-4.6 Grok 4.6 New grok-4.6 Our",
+        "new": "Meet grok-4.7 Grok 4.7 New grok-4.7 Our"
+      },
+      {
+        "op": "replace",
+        "old": "Grok 4.6. It",
+        "new": "Grok 4.7. It"
+      },
+      {
+        "op": "replace",
+        "old": "most intelligent and fastest model",
+        "new": "most capable model we"
+      },
+      {
+        "op": "replace",
+        "old": "Grok 4.6 Chat",
+        "new": "Grok 4.7 Chat"
+      },
+      {
+        "op": "replace",
+        "old": "Grok 4.6 Images",
+        "new": "Grok 4.7 Images"
+      },
+      {
+        "op": "insert",
+        "old": "model page. The knowledge",
+        "new": "page. Encrypted reasoning On the Responses API , grok-4.7 always returns reasoning.encrypted_content , even when include does not list it. See Encrypted reasoning content ."
+      },
+      {
+        "op": "replace",
+        "old": "Grok 4.6 is February 1, 2026.",
+        "new": "Grok 4.7 is May 2026. Model"
+      },
+      {
+        "op": "replace",
+        "old": "updated: August 21, 2026",
+        "new": "updated: September 21,"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260918T062336Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260922T104031Z",
+    "from_sha256": "25fc49e9bcc8dbdc7b9a895e16dcf5f77f8b61e0df98e1603d249d7947257843",
+    "to_sha256": "c559324c725f23cff7832e5a57c95e251035bbadb3f773e6243afd439918e46e",
+    "computed_at": "2026-09-22T10:46:59Z"
   }
 }
