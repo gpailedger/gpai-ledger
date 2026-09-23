@@ -1,0 +1,53 @@
+{
+  "source_id": "anthropic/claude-mythos-5-fable-5",
+  "provider": "Anthropic",
+  "model": "Claude Mythos 5 / Claude Fable 5",
+  "target_kind": "provider-live",
+  "sha256": "ce514a80ab7ca363fca5fede5a4f908bd67bfbd90576cfd019f72e7f2bdfa04e",
+  "size_bytes": 248586,
+  "stored_as": "raw.html",
+  "text_sha256": "a78c4e436c2ce03f7bc8e00ffeea9e02853997aaad64ed428218abdb905cd9d5",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Wed, 23 Sep 2026 00:04:13 GMT",
+    "content_length": "248586",
+    "fetched_at": "2026-09-23T10:20:06Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "239bb4b36921aa97e5f2ffc4f42604eec4443f6ad0de00c7024183863521bc86",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260923101812/https://trust.anthropic.com/resources",
+    "snapshot_ts": "20260923101812",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-860dce7cff4f5e89188c16a41828ee4f2ff40665",
+    "via": "spn2",
+    "requested_at": "2026-09-23T10:20:07Z",
+    "at": "2026-09-23T10:20:12Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-23T10:20:16Z"
+  }
+}
