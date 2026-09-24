@@ -36,13 +36,28 @@
     "at": "2026-09-12T06:22:33Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260924110158/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/evals/bytedance-seedance2.0.yaml",
+    "snapshot_ts": "20260924110158",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-036ffb9bdffea796c5465f98fea1fae696febe71",
     "via": "spn2",
-    "requested_at": "2026-09-23T10:52:53Z",
-    "at": "2026-09-23T10:52:53Z"
-  }
+    "requested_at": "2026-09-24T11:01:58Z",
+    "at": "2026-09-24T11:02:03Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-09-23T10:52:53Z",
+      "at": "2026-09-23T10:52:53Z"
+    }
+  ]
 }

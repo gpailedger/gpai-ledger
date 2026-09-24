@@ -36,11 +36,17 @@
     "at": "2026-09-12T06:38:32Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260924110141/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cfa144b5ccc179cd806a31dd036745164b1d2c0c/evals/mai-ds-r1.yaml",
+    "snapshot_ts": "20260924110141",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-31f6ed93755595080abab1057fa1a4b73e4a140b",
     "via": "spn2",
-    "requested_at": "2026-09-23T10:49:13Z",
-    "at": "2026-09-23T10:51:13Z"
+    "requested_at": "2026-09-24T11:00:32Z",
+    "at": "2026-09-24T11:01:46Z"
   },
   "wayback_attempts": [
     {
@@ -70,6 +76,13 @@
       "via": "spn2",
       "requested_at": "2026-09-22T10:43:06Z",
       "at": "2026-09-22T10:43:21Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-09-23T10:49:13Z",
+      "at": "2026-09-23T10:51:13Z"
     }
   ]
 }
