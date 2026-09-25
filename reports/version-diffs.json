@@ -12632,6 +12632,22 @@
     "to_sha256": "0cb9bfa4d162a48670e25e44023591ef9bf95df89bcfa4d8b661b7412f58591c",
     "computed_at": "2026-09-24T11:11:11Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260924T104353Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260925T104139Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260924T104353Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260925T104139Z",
+    "from_sha256": "0cb9bfa4d162a48670e25e44023591ef9bf95df89bcfa4d8b661b7412f58591c",
+    "to_sha256": "7b213676da45a7828aa253cdefddd7cee3a1491fcf8a348fcd04435f87043fd8",
+    "computed_at": "2026-09-25T11:10:17Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -15175,6 +15191,19 @@
     "from_sha256": "b61518503098b6f8584ade511e26329f5e3f4952d37d765ae38226077e734cbc",
     "to_sha256": "35c1e6740ac854cd4e3607d4b05736ed037dab64cb8b9b65232ac53cea0a5dc7",
     "computed_at": "2026-09-19T06:29:14Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260919T061552Z>captures/google__transparency-bucket/watch-page-81cd3682/20260925T105555Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260919T061552Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260925T105555Z",
+    "from_sha256": "35c1e6740ac854cd4e3607d4b05736ed037dab64cb8b9b65232ac53cea0a5dc7",
+    "to_sha256": "8c0a25f41d6fd29ca47009d46d98493a681214d56850af0958982b53eda67349",
+    "computed_at": "2026-09-25T11:10:17Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -19634,6 +19663,34 @@
     "from_sha256": "d32986f15387d32b8046813e31d5f0284dac542794b6a896142dc6d6962fa3c8",
     "to_sha256": "489c3d13569efcc55b31422589c73e2dd2f3bd77fdc37a8960a1d845b2b568e3",
     "computed_at": "2026-09-16T08:27:06Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260916T080222Z>captures/microsoft__model-catalog/watch-page-72b310dd/20260925T105512Z": {
+    "verdict": "changed",
+    "similarity": 0.995,
+    "word_delta": 7,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Dev Box Copilot for organizations Copilot for personal use Explore",
+        "new": "Box Explore Copilot Explore Microsoft"
+      },
+      {
+        "op": "delete",
+        "old": "Microsoft 365 Copilot",
+        "new": "Teams Microsoft Copilot Small"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260916T080222Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260925T105512Z",
+    "from_sha256": "489c3d13569efcc55b31422589c73e2dd2f3bd77fdc37a8960a1d845b2b568e3",
+    "to_sha256": "eac2a650c8f3faee0f9544b88dff5deb59a41e9ecec5ca786e77835df1155d32",
+    "computed_at": "2026-09-25T11:10:17Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -24557,6 +24614,54 @@
     "from_sha256": "2c12cb35e2c27a72b4a8db160f659c6e4b8386bf840759b9c58435bbfc49e50c",
     "to_sha256": "116946b59a6e43f16614875f2ccba6f8d9750f864b88192056b7c2cb3cb7ee72",
     "computed_at": "2026-09-24T11:11:11Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260924T105711Z>captures/openai__model-catalog/watch-page-0e5ba652/20260925T105416Z": {
+    "verdict": "changed",
+    "similarity": 0.9962,
+    "word_delta": 16,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Images and video Images",
+        "new": "practices Images Images and"
+      },
+      {
+        "op": "delete",
+        "old": "prompting Video generation Realtime",
+        "new": "Image prompting Realtime and"
+      },
+      {
+        "op": "insert",
+        "old": "IP allowlist Mutual TLS",
+        "new": "allowlist Organization blocking Mutual"
+      },
+      {
+        "op": "insert",
+        "old": "Sharing Managed configuration",
+        "new": "Sharing Migrate custom GPTs to plugins Managed configuration"
+      },
+      {
+        "op": "delete",
+        "old": "Images and video Images",
+        "new": "practices Images Images and"
+      },
+      {
+        "op": "delete",
+        "old": "prompting Video generation Realtime",
+        "new": "Image prompting Realtime and"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260924T105711Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260925T105416Z",
+    "from_sha256": "116946b59a6e43f16614875f2ccba6f8d9750f864b88192056b7c2cb3cb7ee72",
+    "to_sha256": "a794350d2bfb0f6799ca1dde66021ed9d1754379003feb7fe14f87b0c2e8402b",
+    "computed_at": "2026-09-25T11:10:17Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

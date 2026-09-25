@@ -36,11 +36,26 @@
     "at": "2026-09-12T06:31:00Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-851a32764cf7f042a46c07c3ae71d851a01375f9 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f8f5d699c10>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260925105843/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/evals/gemini-robotics-er-2.yaml",
+    "snapshot_ts": "20260925105843",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-851a32764cf7f042a46c07c3ae71d851a01375f9",
     "via": "spn2",
-    "requested_at": "2026-09-24T11:03:51Z",
-    "at": "2026-09-24T11:05:57Z"
-  }
+    "requested_at": "2026-09-25T10:58:41Z",
+    "at": "2026-09-25T10:58:48Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-851a32764cf7f042a46c07c3ae71d851a01375f9 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f8f5d699c10>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "job_id": "spn2-851a32764cf7f042a46c07c3ae71d851a01375f9",
+      "via": "spn2",
+      "requested_at": "2026-09-24T11:03:51Z",
+      "at": "2026-09-24T11:05:57Z"
+    }
+  ]
 }
