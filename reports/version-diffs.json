@@ -12648,6 +12648,22 @@
     "to_sha256": "7b213676da45a7828aa253cdefddd7cee3a1491fcf8a348fcd04435f87043fd8",
     "computed_at": "2026-09-25T11:10:17Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260925T104139Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20260926T102356Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260925T104139Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260926T102356Z",
+    "from_sha256": "7b213676da45a7828aa253cdefddd7cee3a1491fcf8a348fcd04435f87043fd8",
+    "to_sha256": "801e46b040f334214cb11a37123c6a109c4406cf227e1cc726bd00d12b0f79f3",
+    "computed_at": "2026-09-26T10:39:53Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -15204,6 +15220,19 @@
     "from_sha256": "35c1e6740ac854cd4e3607d4b05736ed037dab64cb8b9b65232ac53cea0a5dc7",
     "to_sha256": "8c0a25f41d6fd29ca47009d46d98493a681214d56850af0958982b53eda67349",
     "computed_at": "2026-09-25T11:10:17Z"
+  },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260925T105555Z>captures/google__transparency-bucket/watch-page-81cd3682/20260926T103645Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260925T105555Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260926T103645Z",
+    "from_sha256": "8c0a25f41d6fd29ca47009d46d98493a681214d56850af0958982b53eda67349",
+    "to_sha256": "f9acffaa9c8bdbf7836e0feebe8439bb637a7d7dd31c07f141cc78c5adf0a736",
+    "computed_at": "2026-09-26T10:39:53Z"
   },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
@@ -24662,6 +24691,29 @@
     "from_sha256": "116946b59a6e43f16614875f2ccba6f8d9750f864b88192056b7c2cb3cb7ee72",
     "to_sha256": "a794350d2bfb0f6799ca1dde66021ed9d1754379003feb7fe14f87b0c2e8402b",
     "computed_at": "2026-09-25T11:10:17Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260925T105416Z>captures/openai__model-catalog/watch-page-0e5ba652/20260926T103548Z": {
+    "verdict": "changed",
+    "similarity": 0.999,
+    "word_delta": 0,
+    "moved_words": 2,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Build plugins",
+        "new": "Build plugins"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260925T105416Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260926T103548Z",
+    "from_sha256": "a794350d2bfb0f6799ca1dde66021ed9d1754379003feb7fe14f87b0c2e8402b",
+    "to_sha256": "880e5240d4dc2be0d38f22d722e0a1ddf39e8a85a780dc9ab153e29f41b1d837",
+    "computed_at": "2026-09-26T10:39:53Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
