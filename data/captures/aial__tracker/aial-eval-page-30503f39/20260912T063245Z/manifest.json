@@ -37,13 +37,28 @@
     "at": "2026-09-12T06:32:49Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260928122057/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/gemini-3.5-flash-cyber/index.html",
+    "snapshot_ts": "20260928122057",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-f2a84b5373ac7cc094af6e54d7eafb2d0c0adca3",
     "via": "spn2",
-    "requested_at": "2026-09-27T11:10:57Z",
-    "at": "2026-09-27T11:10:57Z"
-  }
+    "requested_at": "2026-09-28T12:20:56Z",
+    "at": "2026-09-28T12:21:02Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-09-27T11:10:57Z",
+      "at": "2026-09-27T11:10:57Z"
+    }
+  ]
 }
