@@ -38,11 +38,10 @@
   },
   "wayback": {
     "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e61a3dfd7ea82eb0290eecbbd298ac7e8f321ab6 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
-    "job_id": "spn2-e61a3dfd7ea82eb0290eecbbd298ac7e8f321ab6",
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
     "via": "spn2",
-    "requested_at": "2026-09-28T12:23:06Z",
-    "at": "2026-09-28T12:23:26Z"
+    "requested_at": "2026-09-29T12:02:07Z",
+    "at": "2026-09-29T12:02:23Z"
   },
   "wayback_attempts": [
     {
@@ -58,6 +57,14 @@
       "via": "spn2",
       "requested_at": "2026-09-11T06:21:34Z",
       "at": "2026-09-11T06:21:50Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e61a3dfd7ea82eb0290eecbbd298ac7e8f321ab6 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "job_id": "spn2-e61a3dfd7ea82eb0290eecbbd298ac7e8f321ab6",
+      "via": "spn2",
+      "requested_at": "2026-09-28T12:23:06Z",
+      "at": "2026-09-28T12:23:26Z"
     }
   ]
 }

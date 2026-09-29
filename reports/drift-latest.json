@@ -664,29 +664,38 @@
   {
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
-    "verdict": "capture-method-change",
-    "similarity": 0.9991,
+    "verdict": "DRIFT-CANDIDATE",
+    "similarity": 0.9503,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
-    "note": "compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit",
+    "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
-      "verdict": "method-changed",
-      "similarity": 0.9991,
-      "word_delta": 1,
+      "verdict": "changed",
+      "similarity": 0.9503,
+      "word_delta": 121,
       "moved_words": 0,
       "changes": [
         {
-          "op": "replace",
-          "old": "smollm3-eu-data-transparency like 8",
-          "new": "smollm3-eu-data-transparency Like 8"
+          "op": "insert",
+          "old": "Files Community Fetching metadata",
+          "new": "Community Run locally Clone repository Add to collection Report this Space Watch Activity Embed this Space Duplicate this Space Linked models 4 Qwen/Qwen3-Embedding-0.6B Feature Extraction 0.6B Updated Apr 20 9.65M 1.25k Qwen/Qwen3-32B Text Generation 33B Updated Jul 26, 2025 4.13M 751 meta-llama/Ll"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260817T090413Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z"
-    }
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260929T114900Z"
+    },
+    "word_delta": 121,
+    "moved_words": 0,
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Files Community Fetching metadata",
+        "new": "Community Run locally Clone repository Add to collection Report this Space Watch Activity Embed this Space Duplicate this Space Linked models 4 Qwen/Qwen3-Embedding-0.6B Feature Extraction 0.6B Updated Apr 20 9.65M 1.25k Qwen/Qwen3-32B Text Generation 33B Updated Jul 26, 2025 4.13M 751 meta-llama/Ll"
+      }
+    ]
   },
   {
     "id": "meta/muse-glimmer",

@@ -1,10 +1,11 @@
-# Live-vs-archive drift — 2026-09-28
+# Live-vs-archive drift — 2026-09-29
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
 | Adobe Firefly | DRIFT-CANDIDATE | 0.9604 | changed (67 word(s)) |
 | C4AI Command A Plus | DRIFT-CANDIDATE | 0.9581 | single version |
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
+| SmolLM3-3B | DRIFT-CANDIDATE | in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy) | changed (121 word(s)) |
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
@@ -38,7 +39,6 @@
 | Nova 2 Lite | same-content | 1.0 | single version |
 | Inkling | same-content | 1.0 | single version |
 | Domyn Large | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
-| SmolLM3-3B | capture-method-change | compared captures were made with different capture methods (rendering/frame/consent handling changed between them) — not evidence of a provider edit | capture method changed (not comparable) |
 | Claude Mythos 5 / Claude Fable 5 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Mythos Preview | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
 | Claude Opus 4.7 | bundle-covered | document tracked at file level inside the anthropic/trust-center-bundle capture (inner per-file SHA-256s); the portal watch covers listing changes | — |
