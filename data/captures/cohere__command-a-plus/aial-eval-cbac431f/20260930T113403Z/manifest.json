@@ -1,0 +1,33 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "aial-eval",
+  "sha256": "d69f4d0e017c0f7b83096056b9ccdba68ad82508db2e86e1016ba081b5b9aedd",
+  "size_bytes": 5172,
+  "stored_as": "raw.yaml",
+  "text_sha256": "14fab75dec25685cb0d46a793b0959c63e746a5b63c710fd9e4192a2abdf432b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cohere-command-a-plus.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cohere-command-a-plus.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"811d5083d6a87f1632b8f29d4e56f4710f90ac265ac5fe4808e9beec6501db9d\"",
+    "last_modified": null,
+    "content_length": "1490",
+    "fetched_at": "2026-09-30T11:34:03Z"
+  },
+  "prior_sha256": "31d41fa2c60dcf087e5672dd8ba83f2c7d6fe35249d7fee77e2afc8891aff916",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:34:08Z"
+  }
+}

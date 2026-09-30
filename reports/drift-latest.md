@@ -1,14 +1,14 @@
-# Live-vs-archive drift — 2026-09-29
+# Live-vs-archive drift — 2026-09-30
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
 | Adobe Firefly | DRIFT-CANDIDATE | 0.9604 | changed (67 word(s)) |
 | C4AI Command A Plus | DRIFT-CANDIDATE | 0.9581 | single version |
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
-| SmolLM3-3B | DRIFT-CANDIDATE | in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy) | changed (121 word(s)) |
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
+| SmolLM3-3B | near-identical | 0.9965 — 17 word(s) differ, 7 moved | changed (17 word(s), 7 moved) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Magma-8B | near-identical | 0.9996 — 3 word(s) differ | single version |
 | MAI-DS-R1 | near-identical | 0.9995 — 3 word(s) differ | single version |

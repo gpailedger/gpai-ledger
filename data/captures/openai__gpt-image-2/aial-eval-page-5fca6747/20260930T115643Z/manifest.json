@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt-image-2",
+  "provider": "OpenAI",
+  "model": "GPT Image 2.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "236e444b4376c386ec311dbdaab48ce9f13813c185ec0ba4fc6be4189e60fb86",
+  "size_bytes": 20027,
+  "stored_as": "raw.html",
+  "text_sha256": "f40c82b5536a56805ffba3ad7a87b20c629a7dbef29981a2b4e9104782670f93",
+  "doc_links_sha256": "ad7df3d656bb0218fdc65b3223305f225e7037987f67580c19414e35c2a96a53",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/919ee13931672bd9c64f9155d2fc76911b76f4d4/public/evals/openai-gpt-image2/version-2026-08-18%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/919ee13931672bd9c64f9155d2fc76911b76f4d4/public/evals/openai-gpt-image2/version-2026-08-18%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d282bbbacd0039af9830d50fbba75c26f69db11314fb4842fcef0f5d37f3d8d8\"",
+    "last_modified": null,
+    "content_length": "3630",
+    "fetched_at": "2026-09-30T11:56:43Z"
+  },
+  "prior_sha256": "93d9382386bfa294149d950b9ff01e3fa7fe19e403b7fe58236ece19ddb9d41b",
+  "git_commit": "919ee13931672bd9c64f9155d2fc76911b76f4d4",
+  "git_commit_date": "2026-09-29T12:42:53Z",
+  "git_blob_sha": "7738bb611754ca92655139a258eb874bd71f4497",
+  "git_path": "public/evals/openai-gpt-image2/version-2026-08-18 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:56:47Z"
+  }
+}

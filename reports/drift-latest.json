@@ -664,36 +664,136 @@
   {
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
-    "verdict": "DRIFT-CANDIDATE",
-    "similarity": 0.9503,
+    "verdict": "near-identical",
+    "similarity": 0.9965,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9503,
-      "word_delta": 121,
-      "moved_words": 0,
+      "similarity": 0.9965,
+      "word_delta": 17,
+      "moved_words": 7,
       "changes": [
         {
-          "op": "insert",
-          "old": "Files Community Fetching metadata",
-          "new": "Community Run locally Clone repository Add to collection Report this Space Watch Activity Embed this Space Duplicate this Space Linked models 4 Qwen/Qwen3-Embedding-0.6B Feature Extraction 0.6B Updated Apr 20 9.65M 1.25k Qwen/Qwen3-32B Text Generation 33B Updated Jul 26, 2025 4.13M 751 meta-llama/Ll"
+          "op": "moved",
+          "old": "HuggingFaceTB/smoltalk2 Viewer Updated Oct 31, 2025 8.61M",
+          "new": "HuggingFaceTB/smoltalk2 Viewer Updated Oct 31, 2025 8.61M"
+        },
+        {
+          "op": "replace",
+          "old": "20 9.65M 1.25k Qwen/Qwen3-32B",
+          "new": "20 9.74M 1.26k Qwen/Qwen3-32B"
+        },
+        {
+          "op": "replace",
+          "old": "2025 4.13M 751 meta-llama/Llama-3.2-1B",
+          "new": "2025 4.16M 753 meta-llama/Llama-3.2-1B"
+        },
+        {
+          "op": "replace",
+          "old": "2024 797k 2.64k HuggingFaceTB/SmolLM3-3B",
+          "new": "2024 800k 2.65k HuggingFaceTB/SmolLM3-3B"
+        },
+        {
+          "op": "replace",
+          "old": "2025 613k 1.04k",
+          "new": "2025 615k 1.04k"
+        },
+        {
+          "op": "replace",
+          "old": "3.02B 675k 316",
+          "new": "3.02B 668k 316"
+        },
+        {
+          "op": "replace",
+          "old": "3.5B 432k 1.31k",
+          "new": "3.5B 430k 1.31k"
+        },
+        {
+          "op": "replace",
+          "old": "48.3M 40.3k 383 epfml/FineWeb2-HQ Viewer",
+          "new": "48.3M 40.6k 383 30.4k 172 epfml/FineWeb2-HQ"
+        },
+        {
+          "op": "replace",
+          "old": "380M 30.9k 81 29.5k 172 allenai/peS2o",
+          "new": "380M 30.2k 81 allenai/peS2o Updated"
+        },
+        {
+          "op": "replace",
+          "old": "2024 20.8k 207",
+          "new": "2024 20.5k 207"
+        },
+        {
+          "op": "replace",
+          "old": "3 6.24k 637",
+          "new": "3 6.18k 637"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260911T061721Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260929T114900Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260929T114900Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260930T113705Z"
     },
-    "word_delta": 121,
-    "moved_words": 0,
+    "word_delta": 17,
+    "moved_words": 7,
     "changes": [
       {
-        "op": "insert",
-        "old": "Files Community Fetching metadata",
-        "new": "Community Run locally Clone repository Add to collection Report this Space Watch Activity Embed this Space Duplicate this Space Linked models 4 Qwen/Qwen3-Embedding-0.6B Feature Extraction 0.6B Updated Apr 20 9.65M 1.25k Qwen/Qwen3-32B Text Generation 33B Updated Jul 26, 2025 4.13M 751 meta-llama/Ll"
+        "op": "moved",
+        "old": "HuggingFaceTB/smoltalk2 Viewer Updated Oct 31, 2025 8.61M",
+        "new": "HuggingFaceTB/smoltalk2 Viewer Updated Oct 31, 2025 8.61M"
+      },
+      {
+        "op": "replace",
+        "old": "20 9.65M 1.25k Qwen/Qwen3-32B",
+        "new": "20 9.74M 1.26k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 4.13M 751 meta-llama/Llama-3.2-1B",
+        "new": "2025 4.16M 753 meta-llama/Llama-3.2-1B"
+      },
+      {
+        "op": "replace",
+        "old": "2024 797k 2.64k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 800k 2.65k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 613k 1.04k",
+        "new": "2025 615k 1.04k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 675k 316",
+        "new": "3.02B 668k 316"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 432k 1.31k",
+        "new": "3.5B 430k 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 40.3k 383 epfml/FineWeb2-HQ Viewer",
+        "new": "48.3M 40.6k 383 30.4k 172 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 30.9k 81 29.5k 172 allenai/peS2o",
+        "new": "380M 30.2k 81 allenai/peS2o Updated"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.8k 207",
+        "new": "2024 20.5k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.24k 637",
+        "new": "3 6.18k 637"
       }
     ]
   },

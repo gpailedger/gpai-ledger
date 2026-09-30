@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "OpenAI",
+  "model": "ChatGPT Images 2.5 Flare",
+  "target_kind": "aial-eval-history",
+  "sha256": "cf3e6f325aba6f5589589b5d0b12ad2e1da4d484d16e0cce80a626a627a46229",
+  "size_bytes": 4059,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ea811c93cef7331bc8376ac9ca639229bd4fa31e6bd00724b5e65fd68dd660a4",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/0dfc588871b6ec577aa7abd3f34f699b145658c7/evals/openai-gpt-images-2-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/0dfc588871b6ec577aa7abd3f34f699b145658c7/evals/openai-gpt-images-2-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b246c211629212c4394e770d88960ab3f9e48623c92f8631f51d4f75ea7f73c0\"",
+    "last_modified": null,
+    "content_length": "680",
+    "fetched_at": "2026-09-30T11:53:05Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "0dfc588871b6ec577aa7abd3f34f699b145658c7",
+  "git_commit_date": "2026-09-18T13:47:00Z",
+  "git_blob_sha": "b74c73301de9fb317a4b5433da116ca2eaa8511f",
+  "git_path": "evals/openai-gpt-images-2-5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:53:10Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20260930115804/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/0dfc588871b6ec577aa7abd3f34f699b145658c7/evals/openai-gpt-images-2-5.yaml",
+    "snapshot_ts": "20260930115804",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-1ec598482443ea896898f35bc6506e24799091bc",
+    "via": "spn2",
+    "requested_at": "2026-09-30T11:58:03Z",
+    "at": "2026-09-30T11:58:09Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt6",
+  "provider": "OpenAI",
+  "model": "GPT-6 Astra",
+  "target_kind": "aial-eval-page",
+  "sha256": "664f92d053cf4f0ce5107c674905aa028176337ade1834c7e2538c6d1e55dd41",
+  "size_bytes": 20358,
+  "stored_as": "raw.html",
+  "text_sha256": "5b52096f6f7d706e2d726b35b8f9fe93013dcd8b6a1338895b27adf102685e77",
+  "doc_links_sha256": "b32be224cf847938d6b7d00ad3568c019b099cc15cad7a0a59799d241ebe9d56",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ab4c43acb2a25df7d70e0e92d64bb0bd626724a1/public/evals/openai-gpt6/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/ab4c43acb2a25df7d70e0e92d64bb0bd626724a1/public/evals/openai-gpt6/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"408144fee6b40d9374943a59aa5569ef93edc22c8d009eb0b5cf03fd237a41be\"",
+    "last_modified": null,
+    "content_length": "3626",
+    "fetched_at": "2026-09-30T11:55:35Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "ab4c43acb2a25df7d70e0e92d64bb0bd626724a1",
+  "git_commit_date": "2026-09-18T14:09:27Z",
+  "git_blob_sha": "031c135bba9e9d8ecf6aa178ca2722fbe1bb2cac",
+  "git_path": "public/evals/openai-gpt6/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:55:39Z"
+  }
+}

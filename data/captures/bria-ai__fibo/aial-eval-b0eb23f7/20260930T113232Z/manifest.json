@@ -1,0 +1,33 @@
+{
+  "source_id": "bria-ai/fibo",
+  "provider": "Bria AI",
+  "model": "FIBO",
+  "target_kind": "aial-eval",
+  "sha256": "67bf4ffb052e9c4b529729a2f939b44fe88a5f70768f8631b81023fa77cdd428",
+  "size_bytes": 4688,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b78a7f695c2c67d6d37eba52a915c7e803d436c777c664c7819442205a0901e7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bria-fibo.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bria-fibo.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"5835589249ef5f2ac592fe99dccc991f8ada96eeb3a357d5aa5e4539bfd492dc\"",
+    "last_modified": null,
+    "content_length": "1119",
+    "fetched_at": "2026-09-30T11:32:32Z"
+  },
+  "prior_sha256": "7af56f11fe00a6d8d92b76445d43b369511555b634b8e0d446c4a552fe19e605",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:32:36Z"
+  }
+}

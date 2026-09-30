@@ -1,0 +1,34 @@
+{
+  "source_id": "openai/gpt-image-2",
+  "provider": "OpenAI",
+  "model": "GPT Image 2.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "236e444b4376c386ec311dbdaab48ce9f13813c185ec0ba4fc6be4189e60fb86",
+  "size_bytes": 20027,
+  "stored_as": "raw.html",
+  "text_sha256": "f40c82b5536a56805ffba3ad7a87b20c629a7dbef29981a2b4e9104782670f93",
+  "doc_links_sha256": "ad7df3d656bb0218fdc65b3223305f225e7037987f67580c19414e35c2a96a53",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-image2/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/openai-gpt-image2/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tm4m33fgb\"",
+    "last_modified": "Tue, 29 Sep 2026 12:45:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-09-30T11:45:19Z"
+  },
+  "prior_sha256": "15cf2d728371d25aa79af149075e68abc3a160a9badc4d5582e94e19b4f0631d",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:45:23Z"
+  }
+}

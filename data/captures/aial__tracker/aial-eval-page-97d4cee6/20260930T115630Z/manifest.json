@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "anthropic-claude-opus-5-5",
+  "target_kind": "aial-eval-page",
+  "sha256": "796a8b569b689fa1053255368ebad63a9415111809a9cfbccde4cf37ba702cbb",
+  "size_bytes": 13155,
+  "stored_as": "raw.html",
+  "text_sha256": "2a3eb754863fa9c8e8203fb841449e70dc91e3aac76db9fd46470fd839aaa61f",
+  "doc_links_sha256": "ef6f8837a0223ed6635915b94a06445e8bbb484764dffbc497b80a0e81134072",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/919ee13931672bd9c64f9155d2fc76911b76f4d4/public/evals/anthropic-claude-opus-5-5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/919ee13931672bd9c64f9155d2fc76911b76f4d4/public/evals/anthropic-claude-opus-5-5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d81bc17d6fb560d478c0b9108f06abae2908a4fcc8792eb097c775731cd0d987\"",
+    "last_modified": null,
+    "content_length": "2907",
+    "fetched_at": "2026-09-30T11:56:30Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "919ee13931672bd9c64f9155d2fc76911b76f4d4",
+  "git_commit_date": "2026-09-29T12:42:53Z",
+  "git_blob_sha": "4d1e1757a59d491f85801fd21d9737b760b4bf80",
+  "git_path": "public/evals/anthropic-claude-opus-5-5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-09-30T11:56:34Z"
+  }
+}
