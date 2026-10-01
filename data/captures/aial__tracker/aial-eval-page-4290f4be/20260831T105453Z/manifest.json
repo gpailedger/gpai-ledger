@@ -37,10 +37,25 @@
     "at": "2026-08-31T10:54:59Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261001121632/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/06ddb124fa2483d962c846bc0ea88b030295607a/public/evals/inkling%20small/version-2026-07-20.html",
+    "snapshot_ts": "20261001121632",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a16fa4236a49fcc8f07f6695e7689f94343a8c9c",
     "via": "spn2",
-    "requested_at": "2026-09-30T11:59:43Z",
-    "at": "2026-09-30T12:00:07Z"
-  }
+    "requested_at": "2026-10-01T12:16:31Z",
+    "at": "2026-10-01T12:16:37Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-09-30T11:59:43Z",
+      "at": "2026-09-30T12:00:07Z"
+    }
+  ]
 }

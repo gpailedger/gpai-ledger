@@ -11442,6 +11442,29 @@
     "to_sha256": "63a4bd608268175045728d41dc5fe8948282f73420d92270ee79350710fe03ac",
     "computed_at": "2026-09-24T11:11:11Z"
   },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20260924T104131Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261001T115537Z": {
+    "verdict": "changed",
+    "similarity": 0.9943,
+    "word_delta": 5,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Video FLUX.2 Max FLUX.2 FLUX.2 Klein FLUX Tools",
+        "new": "Video FLUX.2 FLUX Tools"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20260924T104131Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261001T115537Z",
+    "from_sha256": "63a4bd608268175045728d41dc5fe8948282f73420d92270ee79350710fe03ac",
+    "to_sha256": "e7664e90abca2bb9282ef2aee9fb1090ded6a7277add9ee853b73068d5efc22c",
+    "computed_at": "2026-10-01T12:22:22Z"
+  },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
     "similarity": 0.9986,
@@ -11782,6 +11805,24 @@
     "from_sha256": "5e8462d65ee87ef1b2e386ffa29045fdc0c1bfc3ee4f509a20ed5b604cbf5618",
     "to_sha256": "13b7bc1170766acb20e94c0a4acfc2c82812ae3a4b96e67f36adecaa819b5342",
     "computed_at": "2026-09-30T12:01:32Z",
+    "changes_withheld": true
+  },
+  "bria-ai/bria::aial-eval-page-bccfcdf4::captures/bria-ai__bria/aial-eval-page-bccfcdf4/20260930T115324Z>captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261001T121527Z": {
+    "verdict": "changed",
+    "similarity": 0.9892,
+    "word_delta": 16,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "bria-ai/bria",
+    "target": "aial-eval-page-bccfcdf4",
+    "from_dir": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20260930T115324Z",
+    "to_dir": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261001T121527Z",
+    "from_sha256": "13b7bc1170766acb20e94c0a4acfc2c82812ae3a4b96e67f36adecaa819b5342",
+    "to_sha256": "5e8462d65ee87ef1b2e386ffa29045fdc0c1bfc3ee4f509a20ed5b604cbf5618",
+    "computed_at": "2026-10-01T12:22:22Z",
     "changes_withheld": true
   },
   "bria-ai/bria::aial-eval-page-e4676c1e::captures/bria-ai__bria/aial-eval-page-e4676c1e/20260831T095453Z>captures/bria-ai__bria/aial-eval-page-e4676c1e/20260831T095746Z": {
@@ -12326,6 +12367,24 @@
     "computed_at": "2026-09-30T12:01:33Z",
     "changes_withheld": true
   },
+  "bria-ai/fibo::aial-eval-page-b1f4e090::captures/bria-ai__fibo/aial-eval-page-b1f4e090/20260930T115330Z>captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261001T121529Z": {
+    "verdict": "changed",
+    "similarity": 0.9877,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "bria-ai/fibo",
+    "target": "aial-eval-page-b1f4e090",
+    "from_dir": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20260930T115330Z",
+    "to_dir": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261001T121529Z",
+    "from_sha256": "ea220cd5eae2d29fee60fcfd2b46af17648dc3a6b8bc3a760d64a447c2b7ea69",
+    "to_sha256": "55762803c6ddf26cc8934b12d428f984abc1519fea20b6eb2321efdbc0f9891a",
+    "computed_at": "2026-10-01T12:22:22Z",
+    "changes_withheld": true
+  },
   "bria-ai/fibo::provider-live-037b2259::captures/bria-ai__fibo/provider-live-037b2259/20260811T103249Z>captures/bria-ai__fibo/provider-live-037b2259/20260821T110527Z": {
     "verdict": "changed",
     "similarity": 0.8387,
@@ -12794,6 +12853,24 @@
     "from_sha256": "08e449f9961cdcc6f9174f1f1e759c7aa42a89cb4fdd457c5fa18612ea3d7000",
     "to_sha256": "bfeafdba0e09da583ab752ba46cb69618ba83916a1ebf5397b5d18886dfc7026",
     "computed_at": "2026-09-30T12:01:33Z",
+    "changes_withheld": true
+  },
+  "cohere/command-a-plus::aial-eval-page-ddf8ab1a::captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20260930T115635Z>captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261001T121532Z": {
+    "verdict": "changed",
+    "similarity": 0.9972,
+    "word_delta": 5,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "cohere/command-a-plus",
+    "target": "aial-eval-page-ddf8ab1a",
+    "from_dir": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20260930T115635Z",
+    "to_dir": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261001T121532Z",
+    "from_sha256": "bfeafdba0e09da583ab752ba46cb69618ba83916a1ebf5397b5d18886dfc7026",
+    "to_sha256": "08e449f9961cdcc6f9174f1f1e759c7aa42a89cb4fdd457c5fa18612ea3d7000",
+    "computed_at": "2026-10-01T12:22:22Z",
     "changes_withheld": true
   },
   "cohere/command-a-plus::live-vs-archive::captures/cohere__command-a-plus/aial-archive-50cebf15/20260811T102926Z>captures/cohere__command-a-plus/provider-live-87fc425e/20260917T061850Z": {
@@ -13801,6 +13878,22 @@
     "from_sha256": "2188bfd2925bcf46febf05a0f0fdf86436057a648ec40e0932165775fd62f074",
     "to_sha256": "f5e8ecbb5bdc9083ac03758d5fe2346708ffed12e516c71e489000fd0e32169a",
     "computed_at": "2026-09-30T12:01:31Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20260930T113330Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20261001T115846Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20260930T113330Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261001T115846Z",
+    "from_sha256": "f5e8ecbb5bdc9083ac03758d5fe2346708ffed12e516c71e489000fd0e32169a",
+    "to_sha256": "276c215b9c3ec8662fc2c787bae9ba9fc3798d7bc7552679f3691f40dfd1a8c9",
+    "computed_at": "2026-10-01T12:22:22Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
@@ -16852,6 +16945,79 @@
     "from_sha256": "938c0336bbe947b671b0fccb6e8fb4732641755096e3bbd126ea36072626ff9d",
     "to_sha256": "fec40cd6ba033b1c226b6bdd70890312739565b47871ed4ad832968e43ac2a6e",
     "computed_at": "2026-09-30T12:01:30Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20260930T113705Z>captures/huggingface__smollm3/provider-live-c6d71781/20261001T120215Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.74M 1.26k",
+        "new": "20 9.73M 1.26k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 4.16M 753 meta-llama/Llama-3.2-1B",
+        "new": "2025 4.14M 754 meta-llama/Llama-3.2-1B"
+      },
+      {
+        "op": "replace",
+        "old": "24, 2024 800k 2.65k",
+        "new": "2024 781k 2.65k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 615k 1.04k",
+        "new": "2025 617k 1.04k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 668k 316",
+        "new": "3.02B 665k 316"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 430k 1.31k",
+        "new": "3.5B 426k 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 40.6k 383",
+        "new": "48.3M 41k 383"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 30.4k 172",
+        "new": "8.61M 32.1k 172"
+      },
+      {
+        "op": "replace",
+        "old": "380M 30.2k 81",
+        "new": "380M 27.6k 81"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.5k 207",
+        "new": "2024 20.4k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.18k 637 Fetching",
+        "new": "3 6.14k 638 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20260930T113705Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261001T120215Z",
+    "from_sha256": "fec40cd6ba033b1c226b6bdd70890312739565b47871ed4ad832968e43ac2a6e",
+    "to_sha256": "37e64e088599b257ad05c22e73a86666e4f22061f9140ecd4f2ca128d576730d",
+    "computed_at": "2026-10-01T12:22:22Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -24455,6 +24621,24 @@
     "computed_at": "2026-09-30T12:01:32Z",
     "changes_withheld": true
   },
+  "openai/gpt-5-5::aial-eval-page-d179ab92::captures/openai__gpt-5-5/aial-eval-page-d179ab92/20260930T115413Z>captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261001T121535Z": {
+    "verdict": "changed",
+    "similarity": 0.9972,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "openai/gpt-5-5",
+    "target": "aial-eval-page-d179ab92",
+    "from_dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20260930T115413Z",
+    "to_dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261001T121535Z",
+    "from_sha256": "a6c44e3c0e05cf41c6b3d56f52e03bf1706076171bf662fd2879128f9f0ad1d0",
+    "to_sha256": "08d5f5a7e254c0e1efa9bb525101f10c801b1f9cf333234a8dff6d92a5ff1dfe",
+    "computed_at": "2026-10-01T12:22:22Z",
+    "changes_withheld": true
+  },
   "openai/gpt-5-6-luna::aial-eval-2b650963::captures/openai__gpt-5-6-luna/aial-eval-2b650963/20260916T075515Z>captures/openai__gpt-5-6-luna/aial-eval-2b650963/20260930T114432Z": {
     "verdict": "changed",
     "similarity": 0.9981,
@@ -24777,6 +24961,24 @@
     "from_sha256": "a3a25ae1f5038feb7fc3c66c661df2bddac932823a18e0959ae6993af9eb84ea",
     "to_sha256": "9ca95df35e3999918834a6ef08e8b08322241beb6eca2c9bb143573951996ec6",
     "computed_at": "2026-09-30T12:01:33Z",
+    "changes_withheld": true
+  },
+  "openai/gpt-5-6-luna::aial-eval-page-387dd6a3::captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20260930T115500Z>captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261001T121539Z": {
+    "verdict": "changed",
+    "similarity": 0.9983,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "openai/gpt-5-6-luna",
+    "target": "aial-eval-page-387dd6a3",
+    "from_dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20260930T115500Z",
+    "to_dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261001T121539Z",
+    "from_sha256": "9ca95df35e3999918834a6ef08e8b08322241beb6eca2c9bb143573951996ec6",
+    "to_sha256": "a3a25ae1f5038feb7fc3c66c661df2bddac932823a18e0959ae6993af9eb84ea",
+    "computed_at": "2026-10-01T12:22:22Z",
     "changes_withheld": true
   },
   "openai/gpt-5-6-luna::aial-eval-page-4beab397::captures/openai__gpt-5-6-luna/aial-eval-page-4beab397/20260916T075521Z>captures/openai__gpt-5-6-luna/aial-eval-page-4beab397/20260930T114439Z": {
@@ -26629,6 +26831,39 @@
     "from_sha256": "880e5240d4dc2be0d38f22d722e0a1ddf39e8a85a780dc9ab153e29f41b1d837",
     "to_sha256": "fa82d464ea616fb8ad6265c7d265eff2aab2a0842f7373e31622fc1ddf5dadf0",
     "computed_at": "2026-09-30T12:01:31Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20260930T114815Z>captures/openai__model-catalog/watch-page-0e5ba652/20261001T121152Z": {
+    "verdict": "changed",
+    "similarity": 0.9954,
+    "word_delta": 17,
+    "moved_words": 2,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "API reference",
+        "new": "API reference"
+      },
+      {
+        "op": "insert",
+        "old": "Ad Account Campaigns Ad",
+        "new": "Account Audit Logs Campaigns"
+      },
+      {
+        "op": "insert",
+        "old": "Bedrock ChatGPT Work",
+        "new": "Bedrock Connect to a gateway Deploy Codex through a gateway Gateway compatibility Bedrock through LiteLLM ChatGPT Work"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20260930T114815Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261001T121152Z",
+    "from_sha256": "fa82d464ea616fb8ad6265c7d265eff2aab2a0842f7373e31622fc1ddf5dadf0",
+    "to_sha256": "261b06687e479e56f3f6bf39bfd16a8f17361af4082964acda2371c575b9ac22",
+    "computed_at": "2026-10-01T12:22:22Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

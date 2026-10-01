@@ -37,14 +37,17 @@
     "at": "2026-09-12T06:25:09Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 429,
-    "spn_status": 429,
-    "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261001121609/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/midjourney-midjourney/index.html",
+    "snapshot_ts": "20261001121609",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-ac223c64d1641b18b0bfc5730075d460f1ae5ce2",
     "via": "spn2",
-    "requested_at": "2026-09-30T11:58:56Z",
-    "at": "2026-09-30T11:58:56Z"
+    "requested_at": "2026-10-01T12:16:09Z",
+    "at": "2026-10-01T12:16:19Z"
   },
   "wayback_attempts": [
     {
@@ -60,6 +63,16 @@
       "via": "spn2",
       "requested_at": "2026-09-29T12:02:35Z",
       "at": "2026-09-29T12:02:50Z"
+    },
+    {
+      "ok": false,
+      "status_code": 429,
+      "spn_status": 429,
+      "error": "You have already reached the limit of active Save Page Now sessions. Please wait for a minute and then try again.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-09-30T11:58:56Z",
+      "at": "2026-09-30T11:58:56Z"
     }
   ]
 }
