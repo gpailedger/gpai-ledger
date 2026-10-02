@@ -1,0 +1,55 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "provider-live",
+  "sha256": "e55967a212296f5ca81c8c0b036026cbd3e4745679afc39a81e3ac718101fa23",
+  "size_bytes": 203434,
+  "stored_as": "raw.html",
+  "text_sha256": "973db30486a880130767f58dff609aec71ef16aef04525f7133d59c9ce2a6baa",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "final_url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "203434",
+    "fetched_at": "2026-10-02T11:34:19Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 1,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": [
+      "https://hfmlsoc-smollm3-eu-data-transparency.hf.space/?__theme=system"
+    ]
+  },
+  "prior_sha256": "37e64e088599b257ad05c22e73a86666e4f22061f9140ecd4f2ca128d576730d",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261002113422/https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "snapshot_ts": "20261002113422",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-e4e3b9960914ff45f84fcf9fa29b9b3f84f8be35",
+    "via": "spn2",
+    "requested_at": "2026-10-02T11:34:19Z",
+    "at": "2026-10-02T11:34:40Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-02T11:34:44Z"
+  }
+}

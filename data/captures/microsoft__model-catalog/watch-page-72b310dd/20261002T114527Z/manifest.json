@@ -1,0 +1,45 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "2b22e250e812f6e72eb16be113bcd1511d1abe2793abf630c4063d02add30902",
+  "size_bytes": 230965,
+  "stored_as": "raw.html",
+  "text_sha256": "12b5324e0ce587823e8dad16a72ed211e2933feb78219d7aa93e7ec228d9315f",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Fri, 02 Oct 2026 11:37:39 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-02T11:45:27Z"
+  },
+  "prior_sha256": "eac2a650c8f3faee0f9544b88dff5deb59a41e9ecec5ca786e77835df1155d32",
+  "wayback": {
+    "ok": false,
+    "status_code": 200,
+    "spn_status": 200,
+    "error": "error:job-failed",
+    "answered": true,
+    "job_id": "spn2-8121800ef7d96a2a01c53946b60122ec6f9ffda9",
+    "via": "spn2",
+    "requested_at": "2026-10-02T11:45:27Z",
+    "at": "2026-10-02T11:45:33Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-02T11:45:38Z"
+  }
+}

@@ -11465,6 +11465,34 @@
     "to_sha256": "e7664e90abca2bb9282ef2aee9fb1090ded6a7277add9ee853b73068d5efc22c",
     "computed_at": "2026-10-01T12:22:22Z"
   },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261001T115537Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261002T112736Z": {
+    "verdict": "changed",
+    "similarity": 0.994,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "3 Action FLUX",
+        "new": "3 Image FLUX"
+      },
+      {
+        "op": "replace",
+        "old": "Video FLUX.2 FLUX",
+        "new": "FLUX 3 Action FLUX"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261001T115537Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261002T112736Z",
+    "from_sha256": "e7664e90abca2bb9282ef2aee9fb1090ded6a7277add9ee853b73068d5efc22c",
+    "to_sha256": "ddf0ef8b145b49398ccba3cb3ea32d2dc74ecd2a3c533fe6f4c26827698cecfe",
+    "computed_at": "2026-10-02T11:52:25Z"
+  },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
     "similarity": 0.9986,
@@ -13894,6 +13922,22 @@
     "from_sha256": "f5e8ecbb5bdc9083ac03758d5fe2346708ffed12e516c71e489000fd0e32169a",
     "to_sha256": "276c215b9c3ec8662fc2c787bae9ba9fc3798d7bc7552679f3691f40dfd1a8c9",
     "computed_at": "2026-10-01T12:22:22Z"
+  },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20261001T115846Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20261002T113046Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261001T115846Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261002T113046Z",
+    "from_sha256": "276c215b9c3ec8662fc2c787bae9ba9fc3798d7bc7552679f3691f40dfd1a8c9",
+    "to_sha256": "d0d3a275d5bc972adcfca9d06591f083f80a70e442423a076098cb92ecfe6ffe",
+    "computed_at": "2026-10-02T11:52:25Z"
   },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
@@ -17018,6 +17062,74 @@
     "from_sha256": "fec40cd6ba033b1c226b6bdd70890312739565b47871ed4ad832968e43ac2a6e",
     "to_sha256": "37e64e088599b257ad05c22e73a86666e4f22061f9140ecd4f2ca128d576730d",
     "computed_at": "2026-10-01T12:22:22Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261001T120215Z>captures/huggingface__smollm3/provider-live-c6d71781/20261002T113419Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 14,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.73M 1.26k",
+        "new": "20 9.69M 1.26k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 4.14M 754",
+        "new": "2025 4.05M 754"
+      },
+      {
+        "op": "replace",
+        "old": "2024 781k 2.65k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 756k 2.66k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 665k 316 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 654k 317 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 426k 1.31k",
+        "new": "3.5B 423k 1.31k"
+      },
+      {
+        "op": "insert",
+        "old": "48.3M 41k 383",
+        "new": "48.3M 41.1k 383"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 32.1k 172 epfml/FineWeb2-HQ",
+        "new": "8.61M 32.9k 173 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 27.6k 81 allenai/peS2o",
+        "new": "380M 27.1k 82 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.4k 207",
+        "new": "2024 20.6k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.14k 638",
+        "new": "3 6.04k 638"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261001T120215Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261002T113419Z",
+    "from_sha256": "37e64e088599b257ad05c22e73a86666e4f22061f9140ecd4f2ca128d576730d",
+    "to_sha256": "e55967a212296f5ca81c8c0b036026cbd3e4745679afc39a81e3ac718101fa23",
+    "computed_at": "2026-10-02T11:52:25Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -21161,6 +21273,69 @@
     "from_sha256": "489c3d13569efcc55b31422589c73e2dd2f3bd77fdc37a8960a1d845b2b568e3",
     "to_sha256": "eac2a650c8f3faee0f9544b88dff5deb59a41e9ecec5ca786e77835df1155d32",
     "computed_at": "2026-09-25T11:10:17Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20260925T105512Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261002T114527Z": {
+    "verdict": "changed",
+    "similarity": 0.9686,
+    "word_delta": 50,
+    "moved_words": 22,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Delivers expressive, low-latency speech that holds up across long generations.",
+        "new": "Delivers expressive, low-latency speech that holds up across long generations."
+      },
+      {
+        "op": "moved",
+        "old": "Learn more Delivers expressive, low-latency speech that holds up across long generations.",
+        "new": "Learn more Delivers expressive, low-latency speech that holds up across long generations."
+      },
+      {
+        "op": "insert",
+        "old": "intelligence MAI-Transcribe-2 MAI-Thinking-1",
+        "new": "intelligence MAI-Voice-2.1 MAI-Transcribe-2 MAI-Thinking-1"
+      },
+      {
+        "op": "replace",
+        "old": "MAI-Image-2.6 MAI-Voice-2 All models MAI-Transcribe-2 Turn",
+        "new": "MAI-Code-1.1-Flash MAI-Image-2.6 All models MAI-Voice-2.1 MAI-Transcribe-2"
+      },
+      {
+        "op": "delete",
+        "old": "price. MAI-Voice-2 Blog",
+        "new": "lower price. Blog Featured"
+      },
+      {
+        "op": "insert",
+        "old": "our team Humanist AI",
+        "new": "team Our first streaming transcription model debuts at no. 1 on Artificial Analysis 5 min read Humanist"
+      },
+      {
+        "op": "delete",
+        "old": "min read MAI-Transcribe-2 is the fastest, most accurate and cheapest speech recognition model in the world 4 min read",
+        "new": "3 min read"
+      },
+      {
+        "op": "insert",
+        "old": "it. Foundational model",
+        "new": "Foundational model MAI-Voice-2.1 Learn more Learn more Foundational model"
+      },
+      {
+        "op": "delete",
+        "old": "Learn more Learn more Foundational model MAI-Voice-2 Learn more",
+        "new": "price. Learn more"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20260925T105512Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261002T114527Z",
+    "from_sha256": "eac2a650c8f3faee0f9544b88dff5deb59a41e9ecec5ca786e77835df1155d32",
+    "to_sha256": "2b22e250e812f6e72eb16be113bcd1511d1abe2793abf630c4063d02add30902",
+    "computed_at": "2026-10-02T11:52:26Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -26865,6 +27040,34 @@
     "to_sha256": "261b06687e479e56f3f6bf39bfd16a8f17361af4082964acda2371c575b9ac22",
     "computed_at": "2026-10-01T12:22:22Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261001T121152Z>captures/openai__model-catalog/watch-page-0e5ba652/20261002T114436Z": {
+    "verdict": "changed",
+    "similarity": 0.9986,
+    "word_delta": 6,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Misalignment monitoring Under-18 guidance",
+        "new": "monitoring Enforcement notifications Under-18"
+      },
+      {
+        "op": "insert",
+        "old": "Product Feeds Conversion Tracking",
+        "new": "Feeds Hotel Feeds limited beta Conversion"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261001T121152Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261002T114436Z",
+    "from_sha256": "261b06687e479e56f3f6bf39bfd16a8f17361af4082964acda2371c575b9ac22",
+    "to_sha256": "cad9bdf5c6d5f458bc05ed879bf490310ea562afbb5e95ca4be9ee73436c901f",
+    "computed_at": "2026-10-02T11:52:25Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -30586,5 +30789,28 @@
     "from_sha256": "25fc49e9bcc8dbdc7b9a895e16dcf5f77f8b61e0df98e1603d249d7947257843",
     "to_sha256": "c559324c725f23cff7832e5a57c95e251035bbadb3f773e6243afd439918e46e",
     "computed_at": "2026-09-22T10:46:59Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20260922T104031Z>captures/xai__model-catalog/watch-page-905d5d7a/20261002T114509Z": {
+    "verdict": "changed",
+    "similarity": 0.9988,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "at 0.05 /",
+        "new": "at 0.02 /"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20260922T104031Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261002T114509Z",
+    "from_sha256": "c559324c725f23cff7832e5a57c95e251035bbadb3f773e6243afd439918e46e",
+    "to_sha256": "05a02ae316d9ba183307ca48f3a2fb9159b8fcbe1e50a3eb5a9f46cfa5e4511d",
+    "computed_at": "2026-10-02T11:52:26Z"
   }
 }
