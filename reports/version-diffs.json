@@ -17131,6 +17131,74 @@
     "to_sha256": "e55967a212296f5ca81c8c0b036026cbd3e4745679afc39a81e3ac718101fa23",
     "computed_at": "2026-10-02T11:52:25Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261002T113419Z>captures/huggingface__smollm3/provider-live-c6d71781/20261003T105054Z": {
+    "verdict": "changed",
+    "similarity": 0.998,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.69M 1.26k",
+        "new": "20 9.56M 1.26k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 4.05M 754",
+        "new": "2025 3.99M 754"
+      },
+      {
+        "op": "replace",
+        "old": "2024 756k 2.66k",
+        "new": "2024 735k 2.66k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 654k 317 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 631k 318 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 423k 1.31k",
+        "new": "3.5B 420k 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 41.1k 383 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 41.3k 384 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 32.9k 173",
+        "new": "8.61M 33.9k 173"
+      },
+      {
+        "op": "replace",
+        "old": "380M 27.1k 82",
+        "new": "380M 27.8k 82"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.6k 207",
+        "new": "2024 20.7k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.04k 638",
+        "new": "3 6.03k 638"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261002T113419Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261003T105054Z",
+    "from_sha256": "e55967a212296f5ca81c8c0b036026cbd3e4745679afc39a81e3ac718101fa23",
+    "to_sha256": "d843b11f1dc60f5deafd7cdbb1fc4825cbbdd741d82f3e3e90b1972374d8c844",
+    "computed_at": "2026-10-03T11:15:44Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -27067,6 +27135,29 @@
     "from_sha256": "261b06687e479e56f3f6bf39bfd16a8f17361af4082964acda2371c575b9ac22",
     "to_sha256": "cad9bdf5c6d5f458bc05ed879bf490310ea562afbb5e95ca4be9ee73436c901f",
     "computed_at": "2026-10-02T11:52:25Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261002T114436Z>captures/openai__model-catalog/watch-page-0e5ba652/20261003T110224Z": {
+    "verdict": "changed",
+    "similarity": 0.9993,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Amazon Bedrock Connect to",
+        "new": "Bedrock Bedrock GovCloud configuration Connect"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261002T114436Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261003T110224Z",
+    "from_sha256": "cad9bdf5c6d5f458bc05ed879bf490310ea562afbb5e95ca4be9ee73436c901f",
+    "to_sha256": "f67d25aba18df1639fa04c9f56d4c06a22bc374a1b2251b5a7d6506ee4197edc",
+    "computed_at": "2026-10-03T11:15:44Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
