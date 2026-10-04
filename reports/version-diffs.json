@@ -17199,6 +17199,79 @@
     "to_sha256": "d843b11f1dc60f5deafd7cdbb1fc4825cbbdd741d82f3e3e90b1972374d8c844",
     "computed_at": "2026-10-03T11:15:44Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261003T105054Z>captures/huggingface__smollm3/provider-live-c6d71781/20261004T113034Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.56M 1.26k",
+        "new": "20 9.44M 1.26k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.99M 754",
+        "new": "2025 3.85M 754"
+      },
+      {
+        "op": "replace",
+        "old": "2024 735k 2.66k",
+        "new": "2024 725k 2.66k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 617k 1.04k",
+        "new": "2025 623k 1.04k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 631k 318",
+        "new": "3.02B 617k 318"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 420k 1.31k",
+        "new": "3.5B 407k 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 41.3k 384",
+        "new": "48.3M 41.9k 384"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 33.9k 173",
+        "new": "8.61M 33.1k 173"
+      },
+      {
+        "op": "replace",
+        "old": "380M 27.8k 82",
+        "new": "380M 27.9k 82"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.7k 207",
+        "new": "2024 17.8k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.03k 638",
+        "new": "3 5.9k 638"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261003T105054Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261004T113034Z",
+    "from_sha256": "d843b11f1dc60f5deafd7cdbb1fc4825cbbdd741d82f3e3e90b1972374d8c844",
+    "to_sha256": "1967489d02bc6a678f4be0319f3d393786be21c1af68ba095c734f49b1431640",
+    "computed_at": "2026-10-04T11:56:37Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -30903,5 +30976,28 @@
     "from_sha256": "c559324c725f23cff7832e5a57c95e251035bbadb3f773e6243afd439918e46e",
     "to_sha256": "05a02ae316d9ba183307ca48f3a2fb9159b8fcbe1e50a3eb5a9f46cfa5e4511d",
     "computed_at": "2026-10-02T11:52:26Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261002T114509Z>captures/xai__model-catalog/watch-page-905d5d7a/20261004T114227Z": {
+    "verdict": "changed",
+    "similarity": 0.9988,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "text-to-speech. Agent 0.08",
+        "new": "text-to-speech. STS 0.08"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261002T114509Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261004T114227Z",
+    "from_sha256": "05a02ae316d9ba183307ca48f3a2fb9159b8fcbe1e50a3eb5a9f46cfa5e4511d",
+    "to_sha256": "f3cad1de829c7c4162a0a7db1b4e1de819b5591c713f887368fdd60c816b1ca2",
+    "computed_at": "2026-10-04T11:56:37Z"
   }
 }
