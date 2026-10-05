@@ -37,10 +37,25 @@
     "at": "2026-09-12T06:27:42Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f1b68357830>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261005130456/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/baa1c2faa8e5e05fe677f399f0bc95e9a9ffd407/public/evals/bytedance-seed-2.0pro/index.html",
+    "snapshot_ts": "20261005130456",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a12812e684d2266c665399611c42a14dcf80d3e9",
     "via": "spn2",
-    "requested_at": "2026-10-04T11:49:24Z",
-    "at": "2026-10-04T11:51:24Z"
-  }
+    "requested_at": "2026-10-05T13:04:39Z",
+    "at": "2026-10-05T13:05:01Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f1b68357830>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-10-04T11:49:24Z",
+      "at": "2026-10-04T11:51:24Z"
+    }
+  ]
 }

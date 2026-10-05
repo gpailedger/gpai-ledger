@@ -37,11 +37,26 @@
     "at": "2026-08-31T10:57:39Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-47bd6c921cff7a083429e4d022802fec20ad792f (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f1b68356480>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261005130514/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e23043c1a1254414a190531d23dca9b8b3da3415/public/evals/apertus%20copy/version-2026-03-30.html",
+    "snapshot_ts": "20261005130514",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-47bd6c921cff7a083429e4d022802fec20ad792f",
     "via": "spn2",
-    "requested_at": "2026-10-04T11:53:00Z",
-    "at": "2026-10-04T11:55:53Z"
-  }
+    "requested_at": "2026-10-05T13:05:13Z",
+    "at": "2026-10-05T13:05:19Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-47bd6c921cff7a083429e4d022802fec20ad792f (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f1b68356480>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "job_id": "spn2-47bd6c921cff7a083429e4d022802fec20ad792f",
+      "via": "spn2",
+      "requested_at": "2026-10-04T11:53:00Z",
+      "at": "2026-10-04T11:55:53Z"
+    }
+  ]
 }
