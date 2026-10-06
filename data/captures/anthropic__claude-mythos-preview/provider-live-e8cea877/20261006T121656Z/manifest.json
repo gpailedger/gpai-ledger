@@ -1,0 +1,53 @@
+{
+  "source_id": "anthropic/claude-mythos-preview",
+  "provider": "Anthropic",
+  "model": "Claude Mythos Preview",
+  "target_kind": "provider-live",
+  "sha256": "d1383f12f8d5299fefe9c6af966473f0fe4338ca66ad35e1a2490ec6cb6d602c",
+  "size_bytes": 261968,
+  "stored_as": "raw.html",
+  "text_sha256": "eeb5dfd31768ee7352f65c6d1f149851cd0d39fa094c0681af64b1783594f3ba",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Tue, 06 Oct 2026 00:11:08 GMT",
+    "content_length": "261968",
+    "fetched_at": "2026-10-06T12:16:23Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "2d0cb0f33301a748bd213afe73c3ae2b22f68380858b1df870ea52f130bbe653",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261006121628/https://trust.anthropic.com/resources",
+    "snapshot_ts": "20261006121628",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-860dce7cff4f5e89188c16a41828ee4f2ff40665",
+    "via": "spn2",
+    "requested_at": "2026-10-06T12:16:56Z",
+    "at": "2026-10-06T12:17:02Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-06T12:17:06Z"
+  }
+}
