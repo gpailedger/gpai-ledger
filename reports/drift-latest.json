@@ -1562,10 +1562,427 @@
   {
     "id": "swiss-ai-initiative/apertus-1-5",
     "model": "Apertus v1.5",
-    "verdict": "identical-bytes",
+    "similarity": 0.704,
+    "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+    "same_tool": true,
     "self_history": {
-      "verdict": "single-version"
-    }
+      "verdict": "changed",
+      "similarity": 0.704,
+      "word_delta": 1813,
+      "moved_words": 20,
+      "changes": [
+        {
+          "op": "moved",
+          "old": "2 Public version accessible at:",
+          "new": "2 Public version accessible at:"
+        },
+        {
+          "op": "moved",
+          "old": "1 The following datasets are concerned: dclm-edu, fineweb-2, finetranslations, finemath, MegaMath, stack-edu. 3",
+          "new": "1 The following datasets are concerned: dclm-edu, fineweb-2, finetranslations, finemath, MegaMath, stack-edu. 3"
+        },
+        {
+          "op": "moved",
+          "old": "datasets are",
+          "new": "datasets are:"
+        },
+        {
+          "op": "replace",
+          "old": "Last update: 17.7.2026 General",
+          "new": "update: 6.10.2026 General"
+        },
+        {
+          "op": "replace",
+          "old": "AI Institute https://www.swiss-ai.org/ llm-requests@swiss-ai.org Authorised",
+          "new": "Institute EPFL AI Center ELE 136, Station 11 CH-1015 Lausanne, Switzerland Website: https://apertus-ai.org General contact: llm-requests@swiss-ai.org"
+        },
+        {
+          "op": "replace",
+          "old": "details: Only applicable if the provider is established outside the Union see Article 54 AI Act .",
+          "new": "details: Not applicable pursuant to Article 54 6 of Regulation EU 2024/1689. The models covered by this Summary are released under a free and open-source licence permitting access, use, modification and distribution. Their weights, architecture information and usage information are publicly availabl"
+        },
+        {
+          "op": "replace",
+          "old": ": Apertus-1.5-8B Apertus-1.5-70B Apertus-1.5-8B-Instruct Apertus-1.5-70B-Instruct https://huggingface.co/collections/swiss-ai/apertus-1.5 Model dependencies: N/A Date of",
+          "new": ": Apertus-v1.5-8B Apertus-v1.5-70B https://huggingface.co/collections/swiss-ai/apertus-v15 This Summary covers two model versions, whose training content is similar. They are reported together in accordance with point 30 of the Commission Explanatory Notice to the Template. Model dependencies: Apert"
+        },
+        {
+          "op": "replace",
+          "old": "Union market: July 14, 2026 1.3 Modalities,",
+          "new": "market: Both models were publicly announced on July 24, 2026. Neither has been further trained since its release, and no new version has been placed on the market. Any revision to tokenizer files will not alter the model weights or the training data. 1.3"
+        },
+        {
+          "op": "insert",
+          "old": "the model. Modality Training",
+          "new": "model. 1 Modality"
+        },
+        {
+          "op": "insert",
+          "old": "trillion tokens Public text-only",
+          "new": "tokens 70B 19 trillion tokens 8B Public"
+        },
+        {
+          "op": "replace",
+          "old": "while making significant efforts were made to respect consent by right",
+          "new": "languages, while respecting the consent of right"
+        },
+        {
+          "op": "delete",
+          "old": "for robots.txt compliance",
+          "new": "filtered for compliance and"
+        },
+        {
+          "op": "delete",
+          "old": "applicable. 1 ☒",
+          "new": "when applicable. ☒ Image"
+        },
+        {
+          "op": "replace",
+          "old": "images ☒ 1Million",
+          "new": "images ☐ 1Million"
+        },
+        {
+          "op": "replace",
+          "old": "images ☐ More",
+          "new": "images ☒ More"
+        },
+        {
+          "op": "delete",
+          "old": "for robots compliance",
+          "new": "filtered for compliance and"
+        },
+        {
+          "op": "insert",
+          "old": ". 2. List",
+          "new": ". 2 2."
+        },
+        {
+          "op": "replace",
+          "old": "datasets 2 Have",
+          "new": "datasets This Section requires information about datasets that were used to train the model and which have been compiled by a third party, are made available publicly for free, and are readily downloadable as a whole or in predefined chunks, such as datasets and collections available on public repos"
+        },
+        {
+          "op": "replace",
+          "old": "deduplication, quality filtering",
+          "new": "deduplication, educational filtering and"
+        },
+        {
+          "op": "insert",
+          "old": "AI development. Text Datasets",
+          "new": "development. github.com/swiss-ai/pretrain-data Text"
+        },
+        {
+          "op": "replace",
+          "old": ". HuggingFaceFW/finePDFs-edu: High-quality",
+          "new": ". HuggingFaceFW/finepdfs-edu: High-quality"
+        },
+        {
+          "op": "delete",
+          "old": "this https://github.com/swiss-ai/pretrain-data compound",
+          "new": "of this compound dataset"
+        },
+        {
+          "op": "insert",
+          "old": ". Audio Datasets",
+          "new": ". Apertus v1.5 Preference data: the alignment mixture used for the offline DPO stage of Apertus v1.5 training, applied to the 70B model, with prompts from Ai2 s Olmo 3 Dolci-Instruct-DPO dataset. Apertus v1.5 SFT mixture: The dataset mixture used for the final Supervised Finetuning Stage run of Aper"
+        },
+        {
+          "op": "insert",
+          "old": "/ CC-BY. facebookresearch/voxpopuli: Large",
+          "new": "CC-BY. 4 facebookresearch/voxpopuli:"
+        },
+        {
+          "op": "insert",
+          "old": "BY 4.0. Image Datasets",
+          "new": "4.0. nvidia/Granary: a large-scale, open-source multilingual speech dataset covering 25 European languages for Automatic Speech Recognition ASR and Automatic Speech Translation AST tasks. Image"
+        },
+        {
+          "op": "delete",
+          "old": "License: Apache-2.0. 4 DeepGlint-AI/DanQing100M: Large-scale Chinese image-text pretraining dataset 100M pairs supporting enhanced multilingual and culturally relevant visual-language capabilities. License: CC-BY-4.0. UCSC-VLAA/MedTrinity-25M:",
+          "new": "License: Apache-2.0. UCSC-VLAA/MedTrinity-25M:"
+        },
+        {
+          "op": "insert",
+          "old": ". General description",
+          "new": ". common-canvas/commoncatalog-cc-by:a large collection of high-resolution up to 4k Creative Common images collected in 2014 from Yahoo and Flickr, captioned by users. Spawning/pd12m-full: a large public domain image-text dataset, with sufficient size to train foundation models while minimizing copyr"
+        },
+        {
+          "op": "insert",
+          "old": "is accessible on our GitHub. Generally, all",
+          "new": "accessible as a versioned csv on our dedicated GitHub Repository. Supervised fine-tuning and alignment data are publicly accessible here and here respectively. Generally,"
+        },
+        {
+          "op": "replace",
+          "old": "the dedicated collection",
+          "new": "the swiss-ai collection"
+        },
+        {
+          "op": "insert",
+          "old": "Hugging Face. Additional comments",
+          "new": "Face. 5 Additional"
+        },
+        {
+          "op": "insert",
+          "old": "Version 1 text pretraining",
+          "new": "Version 1.0 text"
+        },
+        {
+          "op": "delete",
+          "old": "pipelines v1.5 soon to come -",
+          "new": "preparation pipelines -"
+        },
+        {
+          "op": "insert",
+          "old": "Version 1 text posttraining",
+          "new": "Version 1.5 text"
+        },
+        {
+          "op": "delete",
+          "old": "pipelines v1.5 soon to come -",
+          "new": "preparation pipelines -"
+        },
+        {
+          "op": "insert",
+          "old": "preparation pipelines 2.2 Private",
+          "new": "pipelines Most vision datasets include image bytes directly, but some provide only URLs requiring redownload. Successful retrieval rates varied. For wild URLs: dclure/laion-aesthetics-12m-umap 52.82% mlfoundations/MINT-1T-HTML 64.10% UCSC-VLAA/Recap-DataComp-1B 72.49% Salesforce/blip3-grounding-50m "
+        },
+        {
+          "op": "insert",
+          "old": "third parties 2.2.1. Datasets",
+          "new": "parties This Section requires information about private non-publicly available datasets of third parties that are not publicly available and not disclosed under Section 2.1. These include: 1 datasets for which transactional commercial licensing agreements were concluded between the provider and the "
+        },
+        {
+          "op": "insert",
+          "old": "☒ No 2.2.2. Private",
+          "new": "No If yes, specify the modality ies of the content covered by the datasets concerned: ☐ Text ☐ Image ☐ Video ☐ Audio ☐ Other If so, please specify 6 2.2.2."
+        },
+        {
+          "op": "insert",
+          "old": "☒ No Additional comments",
+          "new": "No If yes, specify the modality ies of the content covered by the datasets concerned: ☐ Text ☐ Image ☐ Video ☐ Audio ☐ Other If publicly known, list private datasets obtained from other third parties: N/A General description of non-publicly known private datasets obtained from third parties N/A Addi"
+        },
+        {
+          "op": "insert",
+          "old": "- 2.3 Data",
+          "new": ": N/A 2.3"
+        },
+        {
+          "op": "insert",
+          "old": "online sources Were crawlers",
+          "new": "sources This Section requires information about crawled, scraped data, or otherwise compiled from online sources directly by the provider of the model or on their behalf i.e. excluding publicly available datasets already compiled by third parties and made available on platforms such as common crawl "
+        }
+      ],
+      "compared_via": "re-extracted from the stored bytes with pypdf 6.16.1",
+      "same_tool": true,
+      "from_dir": "captures/swiss-ai-initiative__apertus-1-5/provider-live-9323d027/20260817T080512Z",
+      "to_dir": "captures/swiss-ai-initiative__apertus-1-5/provider-live-9323d027/20261007T122731Z"
+    },
+    "basis": "live-vs-archive",
+    "verdict": "DRIFT-CANDIDATE",
+    "word_delta": 1813,
+    "moved_words": 20,
+    "changes": [
+      {
+        "op": "moved",
+        "old": "2 Public version accessible at:",
+        "new": "2 Public version accessible at:"
+      },
+      {
+        "op": "moved",
+        "old": "1 The following datasets are concerned: dclm-edu, fineweb-2, finetranslations, finemath, MegaMath, stack-edu. 3",
+        "new": "1 The following datasets are concerned: dclm-edu, fineweb-2, finetranslations, finemath, MegaMath, stack-edu. 3"
+      },
+      {
+        "op": "moved",
+        "old": "datasets are",
+        "new": "datasets are:"
+      },
+      {
+        "op": "replace",
+        "old": "Last update: 17.7.2026 General",
+        "new": "update: 6.10.2026 General"
+      },
+      {
+        "op": "replace",
+        "old": "AI Institute https://www.swiss-ai.org/ llm-requests@swiss-ai.org Authorised",
+        "new": "Institute EPFL AI Center ELE 136, Station 11 CH-1015 Lausanne, Switzerland Website: https://apertus-ai.org General contact: llm-requests@swiss-ai.org"
+      },
+      {
+        "op": "replace",
+        "old": "details: Only applicable if the provider is established outside the Union see Article 54 AI Act .",
+        "new": "details: Not applicable pursuant to Article 54 6 of Regulation EU 2024/1689. The models covered by this Summary are released under a free and open-source licence permitting access, use, modification and distribution. Their weights, architecture information and usage information are publicly availabl"
+      },
+      {
+        "op": "replace",
+        "old": ": Apertus-1.5-8B Apertus-1.5-70B Apertus-1.5-8B-Instruct Apertus-1.5-70B-Instruct https://huggingface.co/collections/swiss-ai/apertus-1.5 Model dependencies: N/A Date of",
+        "new": ": Apertus-v1.5-8B Apertus-v1.5-70B https://huggingface.co/collections/swiss-ai/apertus-v15 This Summary covers two model versions, whose training content is similar. They are reported together in accordance with point 30 of the Commission Explanatory Notice to the Template. Model dependencies: Apert"
+      },
+      {
+        "op": "replace",
+        "old": "Union market: July 14, 2026 1.3 Modalities,",
+        "new": "market: Both models were publicly announced on July 24, 2026. Neither has been further trained since its release, and no new version has been placed on the market. Any revision to tokenizer files will not alter the model weights or the training data. 1.3"
+      },
+      {
+        "op": "insert",
+        "old": "the model. Modality Training",
+        "new": "model. 1 Modality"
+      },
+      {
+        "op": "insert",
+        "old": "trillion tokens Public text-only",
+        "new": "tokens 70B 19 trillion tokens 8B Public"
+      },
+      {
+        "op": "replace",
+        "old": "while making significant efforts were made to respect consent by right",
+        "new": "languages, while respecting the consent of right"
+      },
+      {
+        "op": "delete",
+        "old": "for robots.txt compliance",
+        "new": "filtered for compliance and"
+      },
+      {
+        "op": "delete",
+        "old": "applicable. 1 ☒",
+        "new": "when applicable. ☒ Image"
+      },
+      {
+        "op": "replace",
+        "old": "images ☒ 1Million",
+        "new": "images ☐ 1Million"
+      },
+      {
+        "op": "replace",
+        "old": "images ☐ More",
+        "new": "images ☒ More"
+      },
+      {
+        "op": "delete",
+        "old": "for robots compliance",
+        "new": "filtered for compliance and"
+      },
+      {
+        "op": "insert",
+        "old": ". 2. List",
+        "new": ". 2 2."
+      },
+      {
+        "op": "replace",
+        "old": "datasets 2 Have",
+        "new": "datasets This Section requires information about datasets that were used to train the model and which have been compiled by a third party, are made available publicly for free, and are readily downloadable as a whole or in predefined chunks, such as datasets and collections available on public repos"
+      },
+      {
+        "op": "replace",
+        "old": "deduplication, quality filtering",
+        "new": "deduplication, educational filtering and"
+      },
+      {
+        "op": "insert",
+        "old": "AI development. Text Datasets",
+        "new": "development. github.com/swiss-ai/pretrain-data Text"
+      },
+      {
+        "op": "replace",
+        "old": ". HuggingFaceFW/finePDFs-edu: High-quality",
+        "new": ". HuggingFaceFW/finepdfs-edu: High-quality"
+      },
+      {
+        "op": "delete",
+        "old": "this https://github.com/swiss-ai/pretrain-data compound",
+        "new": "of this compound dataset"
+      },
+      {
+        "op": "insert",
+        "old": ". Audio Datasets",
+        "new": ". Apertus v1.5 Preference data: the alignment mixture used for the offline DPO stage of Apertus v1.5 training, applied to the 70B model, with prompts from Ai2 s Olmo 3 Dolci-Instruct-DPO dataset. Apertus v1.5 SFT mixture: The dataset mixture used for the final Supervised Finetuning Stage run of Aper"
+      },
+      {
+        "op": "insert",
+        "old": "/ CC-BY. facebookresearch/voxpopuli: Large",
+        "new": "CC-BY. 4 facebookresearch/voxpopuli:"
+      },
+      {
+        "op": "insert",
+        "old": "BY 4.0. Image Datasets",
+        "new": "4.0. nvidia/Granary: a large-scale, open-source multilingual speech dataset covering 25 European languages for Automatic Speech Recognition ASR and Automatic Speech Translation AST tasks. Image"
+      },
+      {
+        "op": "delete",
+        "old": "License: Apache-2.0. 4 DeepGlint-AI/DanQing100M: Large-scale Chinese image-text pretraining dataset 100M pairs supporting enhanced multilingual and culturally relevant visual-language capabilities. License: CC-BY-4.0. UCSC-VLAA/MedTrinity-25M:",
+        "new": "License: Apache-2.0. UCSC-VLAA/MedTrinity-25M:"
+      },
+      {
+        "op": "insert",
+        "old": ". General description",
+        "new": ". common-canvas/commoncatalog-cc-by:a large collection of high-resolution up to 4k Creative Common images collected in 2014 from Yahoo and Flickr, captioned by users. Spawning/pd12m-full: a large public domain image-text dataset, with sufficient size to train foundation models while minimizing copyr"
+      },
+      {
+        "op": "insert",
+        "old": "is accessible on our GitHub. Generally, all",
+        "new": "accessible as a versioned csv on our dedicated GitHub Repository. Supervised fine-tuning and alignment data are publicly accessible here and here respectively. Generally,"
+      },
+      {
+        "op": "replace",
+        "old": "the dedicated collection",
+        "new": "the swiss-ai collection"
+      },
+      {
+        "op": "insert",
+        "old": "Hugging Face. Additional comments",
+        "new": "Face. 5 Additional"
+      },
+      {
+        "op": "insert",
+        "old": "Version 1 text pretraining",
+        "new": "Version 1.0 text"
+      },
+      {
+        "op": "delete",
+        "old": "pipelines v1.5 soon to come -",
+        "new": "preparation pipelines -"
+      },
+      {
+        "op": "insert",
+        "old": "Version 1 text posttraining",
+        "new": "Version 1.5 text"
+      },
+      {
+        "op": "delete",
+        "old": "pipelines v1.5 soon to come -",
+        "new": "preparation pipelines -"
+      },
+      {
+        "op": "insert",
+        "old": "preparation pipelines 2.2 Private",
+        "new": "pipelines Most vision datasets include image bytes directly, but some provide only URLs requiring redownload. Successful retrieval rates varied. For wild URLs: dclure/laion-aesthetics-12m-umap 52.82% mlfoundations/MINT-1T-HTML 64.10% UCSC-VLAA/Recap-DataComp-1B 72.49% Salesforce/blip3-grounding-50m "
+      },
+      {
+        "op": "insert",
+        "old": "third parties 2.2.1. Datasets",
+        "new": "parties This Section requires information about private non-publicly available datasets of third parties that are not publicly available and not disclosed under Section 2.1. These include: 1 datasets for which transactional commercial licensing agreements were concluded between the provider and the "
+      },
+      {
+        "op": "insert",
+        "old": "☒ No 2.2.2. Private",
+        "new": "No If yes, specify the modality ies of the content covered by the datasets concerned: ☐ Text ☐ Image ☐ Video ☐ Audio ☐ Other If so, please specify 6 2.2.2."
+      },
+      {
+        "op": "insert",
+        "old": "☒ No Additional comments",
+        "new": "No If yes, specify the modality ies of the content covered by the datasets concerned: ☐ Text ☐ Image ☐ Video ☐ Audio ☐ Other If publicly known, list private datasets obtained from other third parties: N/A General description of non-publicly known private datasets obtained from third parties N/A Addi"
+      },
+      {
+        "op": "insert",
+        "old": "- 2.3 Data",
+        "new": ": N/A 2.3"
+      },
+      {
+        "op": "insert",
+        "old": "online sources Were crawlers",
+        "new": "sources This Section requires information about crawled, scraped data, or otherwise compiled from online sources directly by the provider of the model or on their behalf i.e. excluding publicly available datasets already compiled by third parties and made available on platforms such as common crawl "
+      }
+    ]
   },
   {
     "id": "swiss-ai-initiative/apertus",

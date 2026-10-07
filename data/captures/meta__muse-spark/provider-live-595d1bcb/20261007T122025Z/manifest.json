@@ -1,0 +1,53 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "provider-live",
+  "sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
+  "size_bytes": 826378,
+  "stored_as": "raw.html",
+  "text_sha256": "b4cc99e0e04354b36d27b7508fefe6395cedf319f3387de90457e5043f4274a9",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "final_url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "826378",
+    "fetched_at": "2026-10-07T12:19:26Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 7,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261007121929/https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "snapshot_ts": "20261007121929",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-4c5afdfe9f7afed85fb34dbab7ab36451e7bae15",
+    "via": "spn2",
+    "requested_at": "2026-10-07T12:20:25Z",
+    "at": "2026-10-07T12:20:31Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-07T12:20:34Z"
+  }
+}

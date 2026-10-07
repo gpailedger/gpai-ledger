@@ -1,0 +1,47 @@
+{
+  "source_id": "anthropic/mythos5-1",
+  "provider": "Anthropic",
+  "model": "Mythos 5.1 / Fable 5.1",
+  "target_kind": "provider-live",
+  "sha256": "e783e8dc0cf7d121fce4a851d75cfbefb44b6a4cee6f3996ad91a63663e17a61",
+  "size_bytes": 268334,
+  "stored_as": "raw.html",
+  "text_sha256": "8fd75fb9dc3515b8fce0ff74c826ec4fc7f46b29c66648b882a1f9f75a875e5e",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Tue, 06 Oct 2026 15:26:03 GMT",
+    "content_length": "268334",
+    "fetched_at": "2026-10-07T12:05:18Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "d1383f12f8d5299fefe9c6af966473f0fe4338ca66ad35e1a2490ec6cb6d602c",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-10-07T12:09:44Z",
+    "at": "2026-10-07T12:11:44Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-07T12:11:49Z"
+  }
+}

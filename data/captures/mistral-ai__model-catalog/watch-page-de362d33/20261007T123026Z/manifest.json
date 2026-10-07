@@ -1,0 +1,41 @@
+{
+  "source_id": "mistral-ai/model-catalog",
+  "provider": "Mistral AI",
+  "model": "AI-governance model list",
+  "target_kind": "watch-page",
+  "sha256": "e2d684832e931136338c97532ad53373d2e67556fbeeca1a8ecc083a0033c234",
+  "size_bytes": 662884,
+  "stored_as": "raw.html",
+  "text_sha256": "daf2229cd6dc42e43ef48ce6909bcc3a1e7212e847107003ea286623bec5d312",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/ai-governance/models",
+    "final_url": "https://legal.mistral.ai/ai-governance/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"83a1417df8145ee6b7bb71cbb21920ea-ssl-df\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-10-07T12:30:26Z"
+  },
+  "prior_sha256": "1fca5b088c4137eac67e9b1d22a4cefaa770a0f6b1a259cd589b303228cb034c",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-10-07T12:30:26Z",
+    "at": "2026-10-07T12:30:43Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-07T12:30:47Z"
+  }
+}

@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-10-06
+# Live-vs-archive drift — 2026-10-07
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -7,6 +7,7 @@
 | FastwebMIIA | DRIFT-CANDIDATE | 0.6103 | single version |
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
+| Apertus v1.5 | DRIFT-CANDIDATE | 0.704 | changed (1813 word(s), 20 moved) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
 | SmolLM3-3B | near-identical | 0.9973 — 16 word(s) differ | changed (16 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
@@ -73,7 +74,6 @@
 | GPT-5.6 Luna | identical-bytes |  | single version |
 | Bielik v3 11B Instruct | identical-bytes |  | single version |
 | Apertus | identical-bytes |  | single version |
-| Apertus v1.5 | identical-bytes |  | single version |
 | Inkling Small | identical-bytes |  | single version |
 | Grok 4.5 | identical-bytes |  | single version |
 | Grok Voice Think Fast 2.0 | identical-bytes |  | single version |

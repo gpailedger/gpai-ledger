@@ -1,0 +1,46 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "cop-doc",
+  "sha256": "ab4e3beb30ff569c192d75f71a6e01a65cee0f8cb70ebb398d1ada8c1842eaad",
+  "size_bytes": 172159,
+  "stored_as": "raw.pdf",
+  "text_sha256": "b5328e428ac1b5052a0e43f003fe7370ee0842056179e0bcbe8aa91667e9d61e",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "final_url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"86beeb7055d85d1b95687f2de247b2726ad5ade34fc67cbe224f6ed02dc31b49\"",
+    "last_modified": null,
+    "content_length": "172159",
+    "fetched_at": "2026-10-07T12:27:49Z"
+  },
+  "prior_sha256": "2e4b304b04e445632f074ae10481386a72e97945c8a6b8ae8788a73f2b3c72e5",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261007122750/https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf",
+    "snapshot_ts": "20261007122750",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-becbf09e8b5c2c5f90e616303121077d70107994",
+    "via": "spn2",
+    "requested_at": "2026-10-07T12:27:49Z",
+    "at": "2026-10-07T12:27:55Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-07T12:27:59Z"
+  }
+}

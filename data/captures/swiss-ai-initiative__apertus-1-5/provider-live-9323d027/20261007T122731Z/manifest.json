@@ -1,0 +1,46 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "provider-live",
+  "sha256": "72bb3a0f0f2ba92a8e47a090c36a3e2a788eccc4d4c0abf97ae94323ad584c41",
+  "size_bytes": 428180,
+  "stored_as": "raw.pdf",
+  "text_sha256": "2201d481d0d94eda42e5f741e0e126b31f0b28c5926e508297f6e451943bebaa",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "final_url": "https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"cb0ba36a59090361d3ccb1727c8c9a9e8b051cd7d591402fa0a46474b7c09d11\"",
+    "last_modified": null,
+    "content_length": "428180",
+    "fetched_at": "2026-10-07T12:27:30Z"
+  },
+  "prior_sha256": "09275f31dffa639f993c8727ccc10f950e1e4fa6c6a15be9d9c44989577e9fd4",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261007122732/https://raw.githubusercontent.com/swiss-ai/apertus-legal/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf",
+    "snapshot_ts": "20261007122732",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-7be3d888d89818761061a7eb7cc2dd98e256cce3",
+    "via": "spn2",
+    "requested_at": "2026-10-07T12:27:31Z",
+    "at": "2026-10-07T12:27:37Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-07T12:27:41Z"
+  }
+}
