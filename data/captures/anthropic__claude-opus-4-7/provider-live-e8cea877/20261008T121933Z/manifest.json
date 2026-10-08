@@ -1,0 +1,47 @@
+{
+  "source_id": "anthropic/claude-opus-4-7",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.7",
+  "target_kind": "provider-live",
+  "sha256": "611908435061a2d313f7c221da295e9cc60c5851b06fa0ade299804965266602",
+  "size_bytes": 271496,
+  "stored_as": "raw.html",
+  "text_sha256": "a9448a463c984fa5a0967b734cb70798e81273caaf29d7fa435ad3cddbe4325e",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Thu, 08 Oct 2026 00:05:54 GMT",
+    "content_length": "271496",
+    "fetched_at": "2026-10-08T12:17:09Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "e783e8dc0cf7d121fce4a851d75cfbefb44b6a4cee6f3996ad91a63663e17a61",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fa1bd27be60>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-10-08T12:19:33Z",
+    "at": "2026-10-08T12:21:33Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-08T12:21:37Z"
+  }
+}

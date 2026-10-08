@@ -37,11 +37,26 @@
     "at": "2026-09-12T06:35:19Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e5da6d3d128278c1d1a6ed6f216c8ff50bb842ab (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261008125523/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/velvet-2b-speech/index.html",
+    "snapshot_ts": "20261008125523",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-e5da6d3d128278c1d1a6ed6f216c8ff50bb842ab",
     "via": "spn2",
-    "requested_at": "2026-10-07T12:35:26Z",
-    "at": "2026-10-07T12:36:09Z"
-  }
+    "requested_at": "2026-10-08T12:55:23Z",
+    "at": "2026-10-08T12:55:28Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e5da6d3d128278c1d1a6ed6f216c8ff50bb842ab (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "job_id": "spn2-e5da6d3d128278c1d1a6ed6f216c8ff50bb842ab",
+      "via": "spn2",
+      "requested_at": "2026-10-07T12:35:26Z",
+      "at": "2026-10-07T12:36:09Z"
+    }
+  ]
 }

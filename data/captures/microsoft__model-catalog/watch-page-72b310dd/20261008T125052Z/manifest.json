@@ -1,0 +1,41 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "38626d63a0d16f0c6aaca937f0c72836cb00a988df9e42baa7d8b127adc96d0f",
+  "size_bytes": 230965,
+  "stored_as": "raw.html",
+  "text_sha256": "11dcc33e4def05a07d8d0c2e413c1840e00bf950512da32d55d942784ca0e82a",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Thu, 08 Oct 2026 12:50:52 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-08T12:50:52Z"
+  },
+  "prior_sha256": "2b22e250e812f6e72eb16be113bcd1511d1abe2793abf630c4063d02add30902",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fa1bc7da900>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-10-08T12:50:52Z",
+    "at": "2026-10-08T12:52:52Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-08T12:52:55Z"
+  }
+}
