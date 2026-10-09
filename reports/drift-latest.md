@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-10-08
+# Live-vs-archive drift — 2026-10-09
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -9,7 +9,7 @@
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
 | Apertus v1.5 | DRIFT-CANDIDATE | 0.704 | changed (1813 word(s), 20 moved) |
 | Bria 3.2 | near-identical | 0.9971 — 10 word(s) differ | changed (10 word(s)) |
-| SmolLM3-3B | near-identical | 0.9966 — 15 word(s) differ | changed (15 word(s)) |
+| SmolLM3-3B | near-identical | 0.9975 — 12 word(s) differ | changed (12 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Magma-8B | near-identical | 0.9996 — 3 word(s) differ | single version |
 | MAI-DS-R1 | near-identical | 0.9995 — 3 word(s) differ | single version |

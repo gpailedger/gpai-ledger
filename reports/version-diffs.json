@@ -14788,6 +14788,74 @@
     "to_sha256": "7ddaa89fe2e6e97d416d715bec4751848d8d8cc520aff59457f85b953b764fca",
     "computed_at": "2026-10-08T13:06:11Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20261008T123319Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20261009T121829Z": {
+    "verdict": "changed",
+    "similarity": 0.9262,
+    "word_delta": 239,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Quickstart RAG Reranking Semantic Search Text Generation Tool Use Agents Transcribing Audio Document Parsing Best Practices Playground",
+        "new": "client Quickstart Playground FAQs"
+      },
+      {
+        "op": "delete",
+        "old": "manage Home Page Creating a Vault Managing Vaults Operate observe Monitoring Standard Vault Overview Supported Models Calling the API Pricing Encrypted Vault Overview Supported Models Calling the API Security Confidential Computing Primer Security Model Remote Attestation Verifying Your Deployment E",
+        "new": "Deploy manage Operate observe Standard Vault Encrypted Vault Model Vault"
+      },
+      {
+        "op": "delete",
+        "old": "Audio Cohere Transcribe Cohere Transcribe Arabic Aya Aya Vision Aya Expanse Tiny Aya Command",
+        "new": "Models Audio Aya Command"
+      },
+      {
+        "op": "delete",
+        "old": "North North Small Translate North Mini Code Rerank",
+        "new": "Embed North Rerank Parse"
+      },
+      {
+        "op": "delete",
+        "old": "Outputs Structured Outputs Parameter Types in Structured Outputs JSON Predictable",
+        "new": "Structured Outputs Predictable Outputs"
+      },
+      {
+        "op": "delete",
+        "old": "RAG Basic usage End-to-end example Streaming Citations Tool Use Basic usage Usage patterns Parameter types Streaming Citations Tokens",
+        "new": "Generation RAG Tool Use Tokens and"
+      },
+      {
+        "op": "delete",
+        "old": "Reranking Rerank Overview Rerank Best Practices Going",
+        "new": "Jobs Reranking Going to"
+      },
+      {
+        "op": "delete",
+        "old": "Tools Elasticsearch and Cohere MongoDB and Cohere Redis and Cohere Haystack and Cohere Pinecone and Cohere Weaviate and Cohere Open Search and Cohere Vespa and Cohere Qdrant and Cohere Milvus and Cohere Zilliz and Cohere Chroma and Cohere Cohere and LangChain Chat on LangChain Embed on LangChain Rer",
+        "new": "Other Tools Cohere and LangChain LlamaIndex"
+      },
+      {
+        "op": "delete",
+        "old": "Deployment Overview Setting Up Model Deployment Model Deployment - AWS Usage Cloud AI Services Cohere on AWS Amazon Bedrock Amazon SageMaker Deploy Your Own Finetuned Command-R-0824 Model from AWS Marketplace Cohere on Azure Cohere on Oracle Cloud Infrastructure OCI Tutorials",
+        "new": "Private Deployment Cloud AI Services Tutorials Cookbooks"
+      },
+      {
+        "op": "delete",
+        "old": "with Cohere Cohere Text Generation Tutorial Building a Chatbot with Cohere Semantic Search with Cohere Reranking with Cohere RAG with Cohere Building an Agent with Cohere Agentic RAG Routing Queries to Data Sources Generating Parallel Queries Performing Tasks Sequentially Generating Multi-Faceted Qu",
+        "new": "with Cohere Agentic RAG Cohere on Azure Responsible Use"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261008T123319Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261009T121829Z",
+    "from_sha256": "7ddaa89fe2e6e97d416d715bec4751848d8d8cc520aff59457f85b953b764fca",
+    "to_sha256": "d25a1635ff763fab246f54377a091374779f5ede6384dfa651edde6584f7667f",
+    "computed_at": "2026-10-09T12:42:09Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -17493,6 +17561,19 @@
     "to_sha256": "7bc1691587c856f4451e9a6473c7c1df7a48e2c4601b0824d579b13749dde744",
     "computed_at": "2026-09-30T12:01:31Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20260930T114944Z>captures/google__transparency-bucket/watch-page-81cd3682/20261009T123828Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20260930T114944Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261009T123828Z",
+    "from_sha256": "7bc1691587c856f4451e9a6473c7c1df7a48e2c4601b0824d579b13749dde744",
+    "to_sha256": "3803a81dd73116080d26b0f79f1bc1b4c2d0e294065af04bbf99c8a180f883bd",
+    "computed_at": "2026-10-09T12:42:09Z"
+  },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -18428,6 +18509,79 @@
     "from_sha256": "16007aad3ed040034da5b323bab475f063eaa5760e19283e3b85326861358bc6",
     "to_sha256": "5284ddbba4563707bd7be214fdd83ef2f85d30da889fa01740394de6cee915ac",
     "computed_at": "2026-10-08T13:06:11Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261008T123645Z>captures/huggingface__smollm3/provider-live-c6d71781/20261009T122639Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.98M 1.26k Qwen/Qwen3-32B",
+        "new": "20 8.83M 1.27k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.66M 754",
+        "new": "2025 3.59M 754"
+      },
+      {
+        "op": "replace",
+        "old": "2024 709k 2.68k",
+        "new": "2024 689k 2.68k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 640k 1.05k",
+        "new": "2025 655k 1.05k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 522k 319",
+        "new": "3.02B 501k 319"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 405k 1.32k",
+        "new": "3.5B 397k 1.32k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 43.6k 385",
+        "new": "48.3M 43.1k 385"
+      },
+      {
+        "op": "delete",
+        "old": "8.61M 35.1k 175",
+        "new": "8.61M 35k 175"
+      },
+      {
+        "op": "replace",
+        "old": "380M 31.2k 84",
+        "new": "380M 31.3k 84"
+      },
+      {
+        "op": "replace",
+        "old": "2024 13.9k 207",
+        "new": "2024 13.7k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 4.91k 641",
+        "new": "3 4.74k 641"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261008T123645Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261009T122639Z",
+    "from_sha256": "5284ddbba4563707bd7be214fdd83ef2f85d30da889fa01740394de6cee915ac",
+    "to_sha256": "ea0dc314a23bae879a35a193b3d6ad13ecf0e1ab5d5ff22328330708b95bcb6f",
+    "computed_at": "2026-10-09T12:42:09Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -28627,6 +28781,29 @@
     "from_sha256": "2c66b192dad71c7cffbb7465d65952a6d294cf60b6e1166b0c7f3282af221314",
     "to_sha256": "6a6ffbf105f5347227e48d978caf1fb8f5796988d557ed3d8b67e907b615a06b",
     "computed_at": "2026-10-08T13:06:12Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261008T124824Z>captures/openai__model-catalog/watch-page-0e5ba652/20261009T123734Z": {
+    "verdict": "changed",
+    "similarity": 0.9995,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "and provisioning User lifecycle",
+        "new": "provisioning Dynamic groups User"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261008T124824Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261009T123734Z",
+    "from_sha256": "6a6ffbf105f5347227e48d978caf1fb8f5796988d557ed3d8b67e907b615a06b",
+    "to_sha256": "663fb2608af39f9a130d31a6455a9b212b67d983012ca21c66ec1655c7748ff0",
+    "computed_at": "2026-10-09T12:42:09Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
