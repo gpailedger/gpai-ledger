@@ -14856,6 +14856,44 @@
     "to_sha256": "d25a1635ff763fab246f54377a091374779f5ede6384dfa651edde6584f7667f",
     "computed_at": "2026-10-09T12:42:09Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20261009T121829Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20261010T113143Z": {
+    "verdict": "changed",
+    "similarity": 0.9612,
+    "word_delta": 121,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Audio Aya Command",
+        "new": "Audio Aya Aya Vision Aya Expanse Tiny Aya"
+      },
+      {
+        "op": "insert",
+        "old": "Tool Use Tokens and",
+        "new": "Use Basic usage Usage patterns Parameter types Streaming Citations Tokens"
+      },
+      {
+        "op": "insert",
+        "old": "Other Tools Cohere and LangChain LlamaIndex",
+        "new": "Tools Elasticsearch and Cohere MongoDB and Cohere Redis and Cohere Haystack and Cohere Pinecone and Cohere Weaviate and Cohere Open Search and Cohere Vespa and Cohere Qdrant and Cohere Milvus and Cohere Zilliz and Cohere Chroma and Cohere Cohere and LangChain Chat on LangChain Embed on LangChain Rer"
+      },
+      {
+        "op": "insert",
+        "old": "with Cohere Agentic RAG Cohere on Azure Responsible Use",
+        "new": "with Cohere Cohere Text Generation Tutorial Building a Chatbot with Cohere Semantic Search with Cohere Reranking with Cohere RAG with Cohere Building an Agent with Cohere Agentic RAG Routing Queries to Data Sources Generating Parallel Queries Performing Tasks Sequentially Generating Multi-Faceted Qu"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261009T121829Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261010T113143Z",
+    "from_sha256": "d25a1635ff763fab246f54377a091374779f5ede6384dfa651edde6584f7667f",
+    "to_sha256": "2671b9ca61bd14ee6605a907f64365de01cecb6302044fa5ccdfc19d3c680aa9",
+    "computed_at": "2026-10-10T11:52:52Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -18582,6 +18620,74 @@
     "from_sha256": "5284ddbba4563707bd7be214fdd83ef2f85d30da889fa01740394de6cee915ac",
     "to_sha256": "ea0dc314a23bae879a35a193b3d6ad13ecf0e1ab5d5ff22328330708b95bcb6f",
     "computed_at": "2026-10-09T12:42:09Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261009T122639Z>captures/huggingface__smollm3/provider-live-c6d71781/20261010T113459Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.83M 1.27k",
+        "new": "20 8.75M 1.27k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.59M 754",
+        "new": "2025 3.47M 754"
+      },
+      {
+        "op": "replace",
+        "old": "2024 689k 2.68k",
+        "new": "2024 697k 2.68k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 655k 1.05k",
+        "new": "2025 685k 1.05k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 501k 319 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 482k 320 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 397k 1.32k",
+        "new": "3.5B 393k 1.32k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 43.1k 385",
+        "new": "48.3M 43.2k 385"
+      },
+      {
+        "op": "replace",
+        "old": "380M 31.3k 84",
+        "new": "380M 32.6k 84"
+      },
+      {
+        "op": "replace",
+        "old": "2024 13.7k 207",
+        "new": "2024 14.2k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 4.74k 641 Fetching",
+        "new": "3 4.61k 643 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261009T122639Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261010T113459Z",
+    "from_sha256": "ea0dc314a23bae879a35a193b3d6ad13ecf0e1ab5d5ff22328330708b95bcb6f",
+    "to_sha256": "3100af85c8cb6eb166e3eb2441b3ae55e55034130309763842348d847076755a",
+    "computed_at": "2026-10-10T11:52:52Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -22915,6 +23021,29 @@
     "from_sha256": "2b22e250e812f6e72eb16be113bcd1511d1abe2793abf630c4063d02add30902",
     "to_sha256": "38626d63a0d16f0c6aaca937f0c72836cb00a988df9e42baa7d8b127adc96d0f",
     "computed_at": "2026-10-08T13:06:12Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261008T125052Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261010T114708Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Certified Refurbished Microsoft Store Promise Flexible",
+        "new": "Refurbished Why buy from Microsoft Store Flexible"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261008T125052Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261010T114708Z",
+    "from_sha256": "38626d63a0d16f0c6aaca937f0c72836cb00a988df9e42baa7d8b127adc96d0f",
+    "to_sha256": "d97e0d30e9b83f06880029f8cd68f24132b4a3e7f46e8d6027e782556dc48d0f",
+    "computed_at": "2026-10-10T11:52:52Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -28804,6 +28933,49 @@
     "from_sha256": "6a6ffbf105f5347227e48d978caf1fb8f5796988d557ed3d8b67e907b615a06b",
     "to_sha256": "663fb2608af39f9a130d31a6455a9b212b67d983012ca21c66ec1655c7748ff0",
     "computed_at": "2026-10-09T12:42:09Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261009T123734Z>captures/openai__model-catalog/watch-page-0e5ba652/20261010T114522Z": {
+    "verdict": "changed",
+    "similarity": 0.9906,
+    "word_delta": 41,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "API reference Overview Models Agents Tools Audio voice Production API reference",
+        "new": "API reference Docs"
+      },
+      {
+        "op": "insert",
+        "old": "Sandbox lifecycle Sandbox security",
+        "new": "lifecycle Pre-warm sandboxes Sandbox"
+      },
+      {
+        "op": "delete",
+        "old": "Use cases Overview Sign in with ChatGPT Plugins Workspace Agents Commerce Ads ChatGPT Codex user docs Use cases",
+        "new": "Use cases Docs"
+      },
+      {
+        "op": "delete",
+        "old": "Overview Features Configuration Developers Security Administration Use Cases Resources Overview Features",
+        "new": "Setup Overview Features"
+      },
+      {
+        "op": "delete",
+        "old": "Showcase Blog Cookbook Learn Community Showcase Blog",
+        "new": "blog Showcase Blog"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261009T123734Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261010T114522Z",
+    "from_sha256": "663fb2608af39f9a130d31a6455a9b212b67d983012ca21c66ec1655c7748ff0",
+    "to_sha256": "791e00c5d62e1ed2bed7fa7f7f53356113f1a8c8f23754baa27dad186a3531e1",
+    "computed_at": "2026-10-10T11:52:52Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

@@ -1,0 +1,42 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "d97e0d30e9b83f06880029f8cd68f24132b4a3e7f46e8d6027e782556dc48d0f",
+  "size_bytes": 230901,
+  "stored_as": "raw.html",
+  "text_sha256": "c30faaa2c5519f8ed81e699f5c878ba2b81179fba11d62e758bb0c2bf5b56214",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": "Sat, 10 Oct 2026 11:47:08 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-10T11:47:08Z"
+  },
+  "prior_sha256": "38626d63a0d16f0c6aaca937f0c72836cb00a988df9e42baa7d8b127adc96d0f",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-8121800ef7d96a2a01c53946b60122ec6f9ffda9 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-8121800ef7d96a2a01c53946b60122ec6f9ffda9",
+    "via": "spn2",
+    "requested_at": "2026-10-10T11:47:08Z",
+    "at": "2026-10-10T11:47:25Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-10T11:47:28Z"
+  }
+}
