@@ -18689,6 +18689,74 @@
     "to_sha256": "3100af85c8cb6eb166e3eb2441b3ae55e55034130309763842348d847076755a",
     "computed_at": "2026-10-10T11:52:52Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261010T113459Z>captures/huggingface__smollm3/provider-live-c6d71781/20261011T114732Z": {
+    "verdict": "changed",
+    "similarity": 0.9965,
+    "word_delta": 16,
+    "moved_words": 8,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "HuggingFaceTB/SmolLM3-3B Text Generation 3B Updated Sep 10, 2025",
+        "new": "HuggingFaceTB/SmolLM3-3B Text Generation 3B Updated Sep 10, 2025"
+      },
+      {
+        "op": "replace",
+        "old": "20 8.75M 1.27k",
+        "new": "20 8.52M 1.27k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.47M 754 meta-llama/Llama-3.2-1B",
+        "new": "2025 3.36M 755 712k 1.05k meta-llama/Llama-3.2-1B"
+      },
+      {
+        "op": "replace",
+        "old": "2024 697k 2.68k 685k 1.05k Linked",
+        "new": "2024 682k 2.68k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 482k 320",
+        "new": "3.02B 467k 320"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 393k 1.32k HuggingFaceTB/finemath",
+        "new": "3.5B 390k 1.33k HuggingFaceTB/finemath"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 35k 175",
+        "new": "8.61M 36.3k 175"
+      },
+      {
+        "op": "replace",
+        "old": "380M 32.6k 84",
+        "new": "380M 33.4k 84"
+      },
+      {
+        "op": "replace",
+        "old": "2024 14.2k 207",
+        "new": "2024 14.6k 207"
+      },
+      {
+        "op": "replace",
+        "old": "3 4.61k 643",
+        "new": "3 6.36k 643"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261010T113459Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261011T114732Z",
+    "from_sha256": "3100af85c8cb6eb166e3eb2441b3ae55e55034130309763842348d847076755a",
+    "to_sha256": "5e4877ea2bf6cfa5274a0353cedfda8c96c5340505ee943bdfee94fbce368952",
+    "computed_at": "2026-10-11T12:04:48Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -28977,6 +29045,69 @@
     "to_sha256": "791e00c5d62e1ed2bed7fa7f7f53356113f1a8c8f23754baa27dad186a3531e1",
     "computed_at": "2026-10-10T11:52:52Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261010T114522Z>captures/openai__model-catalog/watch-page-0e5ba652/20261011T115734Z": {
+    "verdict": "changed",
+    "similarity": 0.9992,
+    "word_delta": 4,
+    "moved_words": 65,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Plugins Extend ChatGPT and Codex",
+        "new": "Plugins Extend ChatGPT and Codex"
+      },
+      {
+        "op": "moved",
+        "old": "Workspace Agents Trigger published ChatGPT workspace agents",
+        "new": "Workspace Agents Trigger published ChatGPT workspace agents"
+      },
+      {
+        "op": "moved",
+        "old": "Commerce Ads",
+        "new": "Commerce Ads"
+      },
+      {
+        "op": "moved",
+        "old": "Quickstart Request a client ID Identity On your website In your ChatGPT plugin ChatGPT plan usage Overview UI/UX guidelines Registration and sign-in Accounts and sessions Models and inference Codex app-server Self-hosted VMs Token reference Errors and recovery Preview limitations",
+        "new": "Quickstart Request a client ID Identity On your website In your ChatGPT plugin ChatGPT plan usage Overview UI/UX guidelines Registration and sign-in Accounts and sessions Models and inference Codex app-server Self-hosted VMs Token reference Errors and recovery Preview limitations"
+      },
+      {
+        "op": "moved",
+        "old": "Get started Trigger workspace agent runs Authenticate with Workspace Agent access tokens",
+        "new": "Get started Trigger workspace agent runs Authenticate with Workspace Agent access tokens"
+      },
+      {
+        "op": "insert",
+        "old": "codes Overview Sign in",
+        "new": "Overview Plugins Sign"
+      },
+      {
+        "op": "delete",
+        "old": "ChatGPT Plugins Workspace",
+        "new": "with ChatGPT Workspace Agents"
+      },
+      {
+        "op": "delete",
+        "old": "Home Home Quickstart",
+        "new": "Overview Home Quickstart"
+      },
+      {
+        "op": "insert",
+        "old": "Conversion Setup Overview Features",
+        "new": "Setup Home Overview"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261010T114522Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261011T115734Z",
+    "from_sha256": "791e00c5d62e1ed2bed7fa7f7f53356113f1a8c8f23754baa27dad186a3531e1",
+    "to_sha256": "87c2998996926a5624a05deacd396ea7fe517c2dd1f00df03e4c5c871d92ef0a",
+    "computed_at": "2026-10-11T12:04:48Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -33384,5 +33515,28 @@
     "from_sha256": "f3cad1de829c7c4162a0a7db1b4e1de819b5591c713f887368fdd60c816b1ca2",
     "to_sha256": "e5f7c1f890beeb49802d38ce52513ea70d6d49903cc4661a7fe0dcc0a60cda8e",
     "computed_at": "2026-10-08T13:06:12Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261008T125040Z>captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z": {
+    "verdict": "changed",
+    "similarity": 0.9988,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Pricing SpaceXAI Docs",
+        "new": "Pricing SpaceXSI Docs"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261008T125040Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z",
+    "from_sha256": "e5f7c1f890beeb49802d38ce52513ea70d6d49903cc4661a7fe0dcc0a60cda8e",
+    "to_sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
+    "computed_at": "2026-10-11T12:04:48Z"
   }
 }
