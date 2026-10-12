@@ -1,10 +1,11 @@
-# HF org watch — 2026-10-05 15:11 UTC
+# HF org watch — 2026-10-12 15:58 UTC
 
 New models created in the last 14 days by tracked orgs (candidates for the summary hunt; not yet tracked sources).
 
+- **mistralai/LIDstral-Arabic** (created 2026-10-08, 56 downloads)
+- **mistralai/Voxtral-Mini-4B-Realtime-Arabic** (created 2026-10-08, 387 downloads)
 - **ibm-granite/ensemble-forecasting-with-ibm-granite-time-series** (created 2026-10-01, 0 downloads)
-- **microsoft/rho-roboeval** (created 2026-09-21, 0 downloads)
-- **google/DiarizationLM-Gemma-4-E4B-v1** (created 2026-10-04, 880 downloads)
-- **black-forest-labs/flux-3-action-droid** (created 2026-09-22, 993 downloads)
-- **black-forest-labs/flux-3-action-so101** (created 2026-09-22, 1,174 downloads)
-- **black-forest-labs/flux-3-action-base** (created 2026-09-22, 313 downloads)
+- **microsoft/AesCode-32B** (created 2026-09-29, 150 downloads)
+- **microsoft/AesCode-8B** (created 2026-09-29, 140 downloads)
+- **Qwen/Qwen-Image-2.1-Turbo** (created 2026-10-09, 6,787 downloads)
+- **briaai/fibo-scene-analyzer-gguf** (created 2026-10-07, 231 downloads)
