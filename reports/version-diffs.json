@@ -19044,6 +19044,79 @@
     "to_sha256": "7e2be5c11021a953c982dd2e736297e011015d45285ccf36632fccb00d8d75dc",
     "computed_at": "2026-10-12T14:14:17Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261012T135315Z>captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z": {
+    "verdict": "changed",
+    "similarity": 0.9964,
+    "word_delta": 21,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.52M 1.27k Qwen/Qwen3-32B",
+        "new": "20 8.55M 1.29k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.31M 758 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 3.29M 766 HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 741k 1.06k",
+        "new": "2025 766k 1.06k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 674k 2.68k Linked",
+        "new": "2024 667k 2.69k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 447k 322 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 475k 325 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 387k 1.33k HuggingFaceTB/finemath",
+        "new": "3.5B 381k 1.35k HuggingFaceTB/finemath"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 43.6k 387 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 42.7k 388 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 37.4k 176 epfml/FineWeb2-HQ",
+        "new": "8.61M 37.8k 177 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 34.5k 84 allenai/peS2o",
+        "new": "380M 35.8k 85 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 15.1k 209 bigcode/the-stack-v2",
+        "new": "2024 16.1k 212 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.39k 644 Fetching",
+        "new": "3 6.33k 645 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261012T135315Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z",
+    "from_sha256": "7e2be5c11021a953c982dd2e736297e011015d45285ccf36632fccb00d8d75dc",
+    "to_sha256": "a5faa28ac3901668b368198f455beee78030230d554e091f52438a8365954068",
+    "computed_at": "2026-10-13T13:27:03Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -33825,5 +33898,53 @@
     "from_sha256": "e5f7c1f890beeb49802d38ce52513ea70d6d49903cc4661a7fe0dcc0a60cda8e",
     "to_sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
     "computed_at": "2026-10-11T12:04:48Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z>captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z": {
+    "verdict": "changed",
+    "similarity": 0.9904,
+    "word_delta": 16,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Bot Grok Search K",
+        "new": "Grok X Subscription Search"
+      },
+      {
+        "op": "insert",
+        "old": "Multi Agent Imagine Overview",
+        "new": "Agent Best Practices Guide Imagine"
+      },
+      {
+        "op": "insert",
+        "old": "Multi-Image Editing Video Generation",
+        "new": "Editing Image Prompting Guide Video"
+      },
+      {
+        "op": "insert",
+        "old": "Bot Grok Get Started",
+        "new": "Grok X Subscription Get"
+      },
+      {
+        "op": "insert",
+        "old": "Multi Agent Imagine Overview",
+        "new": "Agent Best Practices Guide Imagine"
+      },
+      {
+        "op": "insert",
+        "old": "Multi-Image Editing Video Generation",
+        "new": "Editing Image Prompting Guide Video"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z",
+    "from_sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
+    "to_sha256": "62dbcc14a36097a20d05aa6919b19f191d4b7eba03efe7fe77b426f4c6fd54a4",
+    "computed_at": "2026-10-13T13:27:03Z"
   }
 }

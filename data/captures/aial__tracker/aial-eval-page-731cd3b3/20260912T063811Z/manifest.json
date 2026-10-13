@@ -38,12 +38,21 @@
   },
   "wayback": {
     "ok": false,
-    "status_code": 401,
-    "spn_status": 401,
-    "error": "You need to be logged in to use Save Page Now.",
-    "answered": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
     "via": "spn2",
-    "requested_at": "2026-10-12T14:14:03Z",
-    "at": "2026-10-12T14:14:05Z"
-  }
+    "requested_at": "2026-10-13T13:26:42Z",
+    "at": "2026-10-13T13:26:57Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 401,
+      "spn_status": 401,
+      "error": "You need to be logged in to use Save Page Now.",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-10-12T14:14:03Z",
+      "at": "2026-10-12T14:14:05Z"
+    }
+  ]
 }

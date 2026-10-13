@@ -1274,11 +1274,15 @@
       {
         "sha256": "7e2be5c11021a953c982dd2e736297e011015d45285ccf36632fccb00d8d75dc",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261012T135315Z"
+      },
+      {
+        "sha256": "a5faa28ac3901668b368198f455beee78030230d554e091f52438a8365954068",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z"
       }
     ],
-    "last_sha256": "7e2be5c11021a953c982dd2e736297e011015d45285ccf36632fccb00d8d75dc",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261012T135315Z",
-    "last_text_sha256": "912f2384bf262a82af9edfe57f27dec4024c2176993d790a00ba954542e61460"
+    "last_sha256": "a5faa28ac3901668b368198f455beee78030230d554e091f52438a8365954068",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z",
+    "last_text_sha256": "1b7a9895d673ee6868d7026fadb293f041780b539a3bf7fe9f9c532488b5af0d"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -2339,11 +2343,15 @@
       {
         "sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
         "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z"
+      },
+      {
+        "sha256": "62dbcc14a36097a20d05aa6919b19f191d4b7eba03efe7fe77b426f4c6fd54a4",
+        "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z"
       }
     ],
-    "last_sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
-    "last_text_sha256": "30897b5b77bd238184882f4b66ef6d10a0df51297fd855fe10c89798a9e76275",
-    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20261011T115806Z"
+    "last_sha256": "62dbcc14a36097a20d05aa6919b19f191d4b7eba03efe7fe77b426f4c6fd54a4",
+    "last_text_sha256": "39d51fcc91779b5c751260bb5eb071394ffe8a9882b4d3ee435ff242d41a8ef7",
+    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z"
   },
   "microsoft/model-catalog::watch-page-72b310dd": {
     "versions": [
@@ -20569,5 +20577,17 @@
     "last_sha256": "796a8b569b689fa1053255368ebad63a9415111809a9cfbccde4cf37ba702cbb",
     "last_text_sha256": "2a3eb754863fa9c8e8203fb841449e70dc91e3aac76db9fd46470fd839aaa61f",
     "last_capture": "captures/aial__tracker/aial-eval-page-97d4cee6/20260930T115630Z"
+  },
+  "meta/muse-wonder::provider-live-9927df54": {
+    "versions": [
+      {
+        "sha256": "0c7d3e4f7c33695b8d42fed596be56a8622ce86bb844414634eeb4dd6bf6186c",
+        "dir": "captures/meta__muse-wonder/provider-live-9927df54/20261013T132231Z"
+      }
+    ],
+    "last_sha256": "0c7d3e4f7c33695b8d42fed596be56a8622ce86bb844414634eeb4dd6bf6186c",
+    "last_text_sha256": "e11c537d154416e18595658d348a4aa8c16d910187af7d0b7506c114752ae768",
+    "managed": "meta_hub",
+    "last_capture": "captures/meta__muse-wonder/provider-live-9927df54/20261013T132231Z"
   }
 }

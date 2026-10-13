@@ -1,0 +1,51 @@
+{
+  "source_id": "meta/muse-wonder",
+  "provider": "Meta",
+  "model": "Muse Wonder",
+  "target_kind": "provider-live",
+  "sha256": "0c7d3e4f7c33695b8d42fed596be56a8622ce86bb844414634eeb4dd6bf6186c",
+  "size_bytes": 257727,
+  "stored_as": "raw.pdf",
+  "text_sha256": "e11c537d154416e18595658d348a4aa8c16d910187af7d0b7506c114752ae768",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = hub edition label (CDN path rotates per re-issue)",
+    {
+      "stable_base": "/m1/v/t0.84174-6/AQN2Tr2zz1VsroYFd-2OMAjYP1-Rh2jLfnJLpR7-GnuSmTHz-yvFp1ra8dGNOopKmfeBkskv-CeX7CqcbfvgjQMowRZrICCGXfzCBE3_VM0NA5rOm5D52PnS-TtdOIBfNLrzR1g2Eb-SIEAFxxVthUHzYvN4xeqamcOUxbTMwA",
+      "hub_period": "2026 - Muse Wonder",
+      "edition_key": "meta-hub:2026 - Muse Wonder"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-atl3-2.xx.fbcdn.net/m1/v/t0.84174-6/AQN2Tr2zz1VsroYFd-2OMAjYP1-Rh2jLfnJLpR7-GnuSmTHz-yvFp1ra8dGNOopKmfeBkskv-CeX7CqcbfvgjQMowRZrICCGXfzCBE3_VM0NA5rOm5D52PnS-TtdOIBfNLrzR1g2Eb-SIEAFxxVthUHzYvN4xeqamcOUxbTMwA?_nc_gid=RsZ_rzYjMrLU2CFCeYJU0Q&_nc_oc=AdrD04-xXQMvbX6gO13hRak-BFXr5RxrjPlc02Lnu3FtBeEJVDSonzPwF2pnZ9sRqw4&ccb=10-5&oh=00_AQOFpDGWKDl9cLX7Kgf-k_ZZbxE3AZtmZUk3AS-v2ZPi2g&oe=6AD00FC1&_nc_sid=68f2c3",
+    "final_url": "https://scontent-atl3-2.xx.fbcdn.net/m1/v/t0.84174-6/AQN2Tr2zz1VsroYFd-2OMAjYP1-Rh2jLfnJLpR7-GnuSmTHz-yvFp1ra8dGNOopKmfeBkskv-CeX7CqcbfvgjQMowRZrICCGXfzCBE3_VM0NA5rOm5D52PnS-TtdOIBfNLrzR1g2Eb-SIEAFxxVthUHzYvN4xeqamcOUxbTMwA?_nc_gid=RsZ_rzYjMrLU2CFCeYJU0Q&_nc_oc=AdrD04-xXQMvbX6gO13hRak-BFXr5RxrjPlc02Lnu3FtBeEJVDSonzPwF2pnZ9sRqw4&ccb=10-5&oh=00_AQOFpDGWKDl9cLX7Kgf-k_ZZbxE3AZtmZUk3AS-v2ZPi2g&oe=6AD00FC1&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "-2963991738515234620",
+    "last_modified": null,
+    "content_length": "257727",
+    "fetched_at": "2026-10-13T13:22:30Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20261013132319/https://scontent-atl3-2.xx.fbcdn.net/m1/v/t0.84174-6/AQN2Tr2zz1VsroYFd-2OMAjYP1-Rh2jLfnJLpR7-GnuSmTHz-yvFp1ra8dGNOopKmfeBkskv-CeX7CqcbfvgjQMowRZrICCGXfzCBE3_VM0NA5rOm5D52PnS-TtdOIBfNLrzR1g2Eb-SIEAFxxVthUHzYvN4xeqamcOUxbTMwA?_nc_gid=RsZ_rzYjMrLU2CFCeYJU0Q&_nc_oc=AdrD04-xXQMvbX6gO13hRak-BFXr5RxrjPlc02Lnu3FtBeEJVDSonzPwF2pnZ9sRqw4&ccb=10-5&oh=00_AQOFpDGWKDl9cLX7Kgf-k_ZZbxE3AZtmZUk3AS-v2ZPi2g&oe=6AD00FC1&_nc_sid=68f2c3",
+    "requested_at": "2026-10-13T13:22:31Z",
+    "at": "2026-10-13T13:23:26Z",
+    "fresh": true,
+    "snapshot_ts": "20261013132319",
+    "same_url": true
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-13T13:23:31Z"
+  }
+}
