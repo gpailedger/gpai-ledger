@@ -1278,11 +1278,15 @@
       {
         "sha256": "a5faa28ac3901668b368198f455beee78030230d554e091f52438a8365954068",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z"
+      },
+      {
+        "sha256": "3c549da754170711ad3774efa3089402a7d9b1a83b25a0c74fed7f139e169741",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261014T104943Z"
       }
     ],
-    "last_sha256": "a5faa28ac3901668b368198f455beee78030230d554e091f52438a8365954068",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261013T130936Z",
-    "last_text_sha256": "1b7a9895d673ee6868d7026fadb293f041780b539a3bf7fe9f9c532488b5af0d"
+    "last_sha256": "3c549da754170711ad3774efa3089402a7d9b1a83b25a0c74fed7f139e169741",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261014T104943Z",
+    "last_text_sha256": "5676f70454c9c271a6f86d7ea1eaa232f29b1c9c542fe938d898feca5f49729d"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -1391,10 +1395,14 @@
       {
         "sha256": "cf0fbd241061346f9edbfa563ff983524d0d7bb0aeafed35ee1d24cd8f643d4b",
         "dir": "captures/aial__tracker/watch-page-c82134bd/20260930T115006Z"
+      },
+      {
+        "sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+        "dir": "captures/aial__tracker/watch-page-c82134bd/20261014T110529Z"
       }
     ],
-    "last_sha256": "cf0fbd241061346f9edbfa563ff983524d0d7bb0aeafed35ee1d24cd8f643d4b",
-    "last_capture": "captures/aial__tracker/watch-page-c82134bd/20260930T115006Z",
+    "last_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+    "last_capture": "captures/aial__tracker/watch-page-c82134bd/20261014T110529Z",
     "last_text_sha256": "867e84979c43e525a89910f099248ca0e3343d26260dd145c0265677278b5ba5"
   },
   "aial/tracker::watch-page-465bd4ee": {
@@ -1878,10 +1886,14 @@
       {
         "sha256": "3803a81dd73116080d26b0f79f1bc1b4c2d0e294065af04bbf99c8a180f883bd",
         "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261009T123828Z"
+      },
+      {
+        "sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
+        "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z"
       }
     ],
-    "last_sha256": "3803a81dd73116080d26b0f79f1bc1b4c2d0e294065af04bbf99c8a180f883bd",
-    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261009T123828Z",
+    "last_sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
+    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z",
     "last_text_sha256": null
   },
   "openai/gpt-5-2::provider-live-e7ad6bc8": {
@@ -2147,11 +2159,15 @@
       {
         "sha256": "87c2998996926a5624a05deacd396ea7fe517c2dd1f00df03e4c5c871d92ef0a",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261011T115734Z"
+      },
+      {
+        "sha256": "2040f03b7df3e3753f26522e3de49b4c1c57b1bd993b5518e68433b4d0269510",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261014T110052Z"
       }
     ],
-    "last_sha256": "87c2998996926a5624a05deacd396ea7fe517c2dd1f00df03e4c5c871d92ef0a",
-    "last_text_sha256": "5f4fec2e6a78eedd94563d789091c246b34d023cb8505620a4a7ee641ccc99a1",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261011T115734Z"
+    "last_sha256": "2040f03b7df3e3753f26522e3de49b4c1c57b1bd993b5518e68433b4d0269510",
+    "last_text_sha256": "92d3fad5fe217e9709041612c370ca174325f915ab8289bd9f95ae7be0d84258",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261014T110052Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -6211,7 +6227,10 @@
     ],
     "last_sha256": "2c014a5820e5a9c65538ee918957349d622a200547f7bf7b7a01c3cf19fd480b",
     "last_text_sha256": "fd50a08c9848f53ab114ae22721cc8b577beeb3e741f4415cf8ae1ddff4a9022",
-    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-page-c24b6683/20260831T095851Z"
+    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-page-c24b6683/20260831T095851Z",
+    "upstream_aliases": {
+      "public/evals/swissai-apertus/version-2026-01-12.html": "b9b034d3c26a893a5c9bd5032a6bef78fac09508"
+    }
   },
   "speakleash/bielik::aial-eval-page-345c296a": {
     "versions": [
@@ -10340,11 +10359,15 @@
       {
         "sha256": "cf0fbd241061346f9edbfa563ff983524d0d7bb0aeafed35ee1d24cd8f643d4b",
         "dir": "captures/aial__tracker/aial-method-cbb39bff/20260930T115652Z"
+      },
+      {
+        "sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+        "dir": "captures/aial__tracker/aial-method-cbb39bff/20261014T110912Z"
       }
     ],
-    "last_sha256": "cf0fbd241061346f9edbfa563ff983524d0d7bb0aeafed35ee1d24cd8f643d4b",
+    "last_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
     "last_text_sha256": "867e84979c43e525a89910f099248ca0e3343d26260dd145c0265677278b5ba5",
-    "last_capture": "captures/aial__tracker/aial-method-cbb39bff/20260930T115652Z"
+    "last_capture": "captures/aial__tracker/aial-method-cbb39bff/20261014T110912Z"
   },
   "anthropic/claude-mythos-5-fable-5::aial-eval-page-d9b9a3d3": {
     "versions": [
@@ -20589,5 +20612,16 @@
     "last_text_sha256": "e11c537d154416e18595658d348a4aa8c16d910187af7d0b7506c114752ae768",
     "managed": "meta_hub",
     "last_capture": "captures/meta__muse-wonder/provider-live-9927df54/20261013T132231Z"
+  },
+  "swiss-ai-initiative/apertus::aial-eval-page-40ba0aa6": {
+    "versions": [
+      {
+        "sha256": "2c014a5820e5a9c65538ee918957349d622a200547f7bf7b7a01c3cf19fd480b",
+        "dir": "captures/swiss-ai-initiative__apertus/aial-eval-page-40ba0aa6/20261014T110927Z"
+      }
+    ],
+    "last_sha256": "2c014a5820e5a9c65538ee918957349d622a200547f7bf7b7a01c3cf19fd480b",
+    "last_text_sha256": "fd50a08c9848f53ab114ae22721cc8b577beeb3e741f4415cf8ae1ddff4a9022",
+    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-page-40ba0aa6/20261014T110927Z"
   }
 }
