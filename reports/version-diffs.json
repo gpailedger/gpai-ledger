@@ -19239,6 +19239,79 @@
     "to_sha256": "3c549da754170711ad3774efa3089402a7d9b1a83b25a0c74fed7f139e169741",
     "computed_at": "2026-10-14T11:12:21Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261014T104943Z>captures/huggingface__smollm3/provider-live-c6d71781/20261015T103127Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "20 8.6M 1.29k",
+        "new": "20 8.61M 1.29k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.24M 768",
+        "new": "2025 3.17M 768"
+      },
+      {
+        "op": "replace",
+        "old": "2025 765k 1.06k",
+        "new": "2025 762k 1.06k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 650k 2.69k",
+        "new": "2024 628k 2.69k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 502k 327 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 493k 328 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 393k 1.35k",
+        "new": "3.5B 401k 1.35k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 43.3k 390",
+        "new": "48.3M 43.7k 390"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 37.4k 179",
+        "new": "8.61M 37.8k 179"
+      },
+      {
+        "op": "insert",
+        "old": "380M 37k 85",
+        "new": "380M 37.8k 85"
+      },
+      {
+        "op": "replace",
+        "old": "2024 18.9k 213",
+        "new": "2024 19.5k 213"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.5k 646",
+        "new": "3 6.41k 646"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261014T104943Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261015T103127Z",
+    "from_sha256": "3c549da754170711ad3774efa3089402a7d9b1a83b25a0c74fed7f139e169741",
+    "to_sha256": "cfb29f9d518b03455dbfa315baaf12d99bcb4d6575005acc40b1ee4a67a3901a",
+    "computed_at": "2026-10-15T10:45:55Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -29622,6 +29695,39 @@
     "from_sha256": "87c2998996926a5624a05deacd396ea7fe517c2dd1f00df03e4c5c871d92ef0a",
     "to_sha256": "2040f03b7df3e3753f26522e3de49b4c1c57b1bd993b5518e68433b4d0269510",
     "computed_at": "2026-10-14T11:12:21Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261014T110052Z>captures/openai__model-catalog/watch-page-0e5ba652/20261015T104132Z": {
+    "verdict": "changed",
+    "similarity": 0.9954,
+    "word_delta": 20,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "use Voice Plugins Sign",
+        "new": "Voice Composer Predictions Plugins"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Bringing my",
+        "new": "Recent Maintaining software with the GPT-6 family Bringing"
+      },
+      {
+        "op": "delete",
+        "old": "Astra Meet Rosalind Workbench: Empowering every scientist to be their own research team Topics",
+        "new": "with Astra Topics General"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261014T110052Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261015T104132Z",
+    "from_sha256": "2040f03b7df3e3753f26522e3de49b4c1c57b1bd993b5518e68433b4d0269510",
+    "to_sha256": "ecdd0803490f172f5d3cc733853e4a60a25d446428f357a68adf641cf463f816",
+    "computed_at": "2026-10-15T10:45:55Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
