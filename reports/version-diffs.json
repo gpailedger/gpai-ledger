@@ -12440,6 +12440,34 @@
     "to_sha256": "ddf0ef8b145b49398ccba3cb3ea32d2dc74ecd2a3c533fe6f4c26827698cecfe",
     "computed_at": "2026-10-02T11:52:25Z"
   },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261002T112736Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261016T101329Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 5,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FLUX 3 Image",
+        "new": "FLUX 3 Video FLUX 3"
+      },
+      {
+        "op": "replace",
+        "old": "3 Video FLUX",
+        "new": "3 Image Klein FLUX"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261002T112736Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261016T101329Z",
+    "from_sha256": "ddf0ef8b145b49398ccba3cb3ea32d2dc74ecd2a3c533fe6f4c26827698cecfe",
+    "to_sha256": "a1441459d4578ac15d729ff02bcc2520e3e4817323307a407b8cd9a56a9b1d21",
+    "computed_at": "2026-10-16T10:45:53Z"
+  },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
     "similarity": 0.9986,
@@ -19312,6 +19340,49 @@
     "to_sha256": "cfb29f9d518b03455dbfa315baaf12d99bcb4d6575005acc40b1ee4a67a3901a",
     "computed_at": "2026-10-15T10:45:55Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261015T103127Z>captures/huggingface__smollm3/provider-live-c6d71781/20261016T102004Z": {
+    "verdict": "changed",
+    "similarity": 0.9953,
+    "word_delta": 6,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.61M 1.29k",
+        "new": "20 8.59M 1.29k"
+      },
+      {
+        "op": "delete",
+        "old": "2025 3.17M 768",
+        "new": "2025 3.1M 768"
+      },
+      {
+        "op": "replace",
+        "old": "2025 762k 1.06k",
+        "new": "2025 756k 1.06k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 628k 2.69k Linked",
+        "new": "2024 604k 2.7k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "6.41k 646 Fetching",
+        "new": "6.41k 649 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261015T103127Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261016T102004Z",
+    "from_sha256": "cfb29f9d518b03455dbfa315baaf12d99bcb4d6575005acc40b1ee4a67a3901a",
+    "to_sha256": "59257c6cf82171360021b0a383d3ad1408b5d8999e7ea6be0c6f7a75531f0b98",
+    "computed_at": "2026-10-16T10:45:53Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -23668,6 +23739,34 @@
     "to_sha256": "d97e0d30e9b83f06880029f8cd68f24132b4a3e7f46e8d6027e782556dc48d0f",
     "computed_at": "2026-10-10T11:52:52Z"
   },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261010T114708Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261016T103148Z": {
+    "verdict": "changed",
+    "similarity": 0.99,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "our team Our first",
+        "new": "team Frontier Pre-training at Microsoft AI 15 min read Our"
+      },
+      {
+        "op": "delete",
+        "old": "min read Pushing the quality-cost frontier with MAI-Image-2.6 3 min read",
+        "new": "6 min read"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261010T114708Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261016T103148Z",
+    "from_sha256": "d97e0d30e9b83f06880029f8cd68f24132b4a3e7f46e8d6027e782556dc48d0f",
+    "to_sha256": "a9cc70f67106d76e2583563d148847e423442865abf71445591f0fd3c25f9000",
+    "computed_at": "2026-10-16T10:45:54Z"
+  },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
     "similarity": 0.9995,
@@ -26254,6 +26353,34 @@
     "from_sha256": "1fca5b088c4137eac67e9b1d22a4cefaa770a0f6b1a259cd589b303228cb034c",
     "to_sha256": "e2d684832e931136338c97532ad53373d2e67556fbeeca1a8ecc083a0033c234",
     "computed_at": "2026-10-07T12:37:28Z"
+  },
+  "mistral-ai/model-catalog::watch-page-de362d33::captures/mistral-ai__model-catalog/watch-page-de362d33/20261007T123026Z>captures/mistral-ai__model-catalog/watch-page-de362d33/20261016T103013Z": {
+    "verdict": "changed",
+    "similarity": 0.991,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "documentation. 42 models",
+        "new": "documentation. 43 models"
+      },
+      {
+        "op": "insert",
+        "old": "4, 2026 Voxtral",
+        "new": "4, 2026 Timestral Includes Timestral and subsequent versions. October 15, 2026"
+      }
+    ],
+    "source": "mistral-ai/model-catalog",
+    "target": "watch-page-de362d33",
+    "from_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261007T123026Z",
+    "to_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261016T103013Z",
+    "from_sha256": "e2d684832e931136338c97532ad53373d2e67556fbeeca1a8ecc083a0033c234",
+    "to_sha256": "4181d15fc505689672d01bdfae35852b0d2a6abc22701f87d4399672bc4c1c2b",
+    "computed_at": "2026-10-16T10:45:53Z"
   },
   "nvidia/nemotron-nano::aial-eval-a337bf3b::captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260913T123014Z>captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260930T114400Z": {
     "verdict": "changed",
@@ -29728,6 +29855,69 @@
     "from_sha256": "2040f03b7df3e3753f26522e3de49b4c1c57b1bd993b5518e68433b4d0269510",
     "to_sha256": "ecdd0803490f172f5d3cc733853e4a60a25d446428f357a68adf641cf463f816",
     "computed_at": "2026-10-15T10:45:55Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261015T104132Z>captures/openai__model-catalog/watch-page-0e5ba652/20261016T102935Z": {
+    "verdict": "changed",
+    "similarity": 0.9947,
+    "word_delta": 27,
+    "moved_words": 9,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Cloud Setup Security Review Improving the threat model FAQ",
+        "new": "Cloud Setup Security Review Improving the threat model FAQ"
+      },
+      {
+        "op": "insert",
+        "old": "SPIFFE IP egress",
+        "new": "SPIFFE Idira IP egress"
+      },
+      {
+        "op": "delete",
+        "old": "and chats Sites Build",
+        "new": "and chats Build"
+      },
+      {
+        "op": "insert",
+        "old": "with files dots Meet",
+        "new": "files Sites Overview Create a site Data and connections Publish and share Manage a site dots"
+      },
+      {
+        "op": "insert",
+        "old": "Codex Security plugin",
+        "new": "Codex Security Codex Security"
+      },
+      {
+        "op": "replace",
+        "old": "FAQ TypeScript SDK Codex Security Cyber safety",
+        "new": "Reference FAQ Codex Security SDK Cyber"
+      },
+      {
+        "op": "replace",
+        "old": "Feature setup Dots Space Teams and",
+        "new": "Feature Configuration Dots Space Sites Teams"
+      },
+      {
+        "op": "delete",
+        "old": "and dots Sites Identity",
+        "new": "and dots Identity"
+      },
+      {
+        "op": "replace",
+        "old": "Docs Select... All",
+        "new": "Docs Showcase All posts"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261015T104132Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261016T102935Z",
+    "from_sha256": "ecdd0803490f172f5d3cc733853e4a60a25d446428f357a68adf641cf463f816",
+    "to_sha256": "5d8f606bd20ded7f54ffa46c3dfa13af1533e196453358a336a0496879c5f9b3",
+    "computed_at": "2026-10-16T10:45:53Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

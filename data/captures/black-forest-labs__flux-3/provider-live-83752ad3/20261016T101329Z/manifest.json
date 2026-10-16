@@ -1,0 +1,53 @@
+{
+  "source_id": "black-forest-labs/flux-3",
+  "provider": "Black Forest Labs",
+  "model": "FLUX.3",
+  "target_kind": "provider-live",
+  "sha256": "a1441459d4578ac15d729ff02bcc2520e3e4817323307a407b8cd9a56a9b1d21",
+  "size_bytes": 204540,
+  "stored_as": "raw.html",
+  "text_sha256": "3cde3cd620494aef28247c3fb44828a6c1609227586c0de6298c3fd7b3e2d01d",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://bfl.ai/transparency?tab=training-data-summaries",
+    "final_url": "https://bfl.ai/transparency?tab=training-data-summaries",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "204540",
+    "fetched_at": "2026-10-16T10:13:29Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 5,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "ddf0ef8b145b49398ccba3cb3ea32d2dc74ecd2a3c533fe6f4c26827698cecfe",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261016101332/https://bfl.ai/transparency?tab=training-data-summaries",
+    "snapshot_ts": "20261016101332",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-96cf87e2e51ebbb7a6e33454e511da03ff0690ed",
+    "via": "spn2",
+    "requested_at": "2026-10-16T10:13:29Z",
+    "at": "2026-10-16T10:13:45Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-16T10:13:53Z"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "source_id": "mistral-ai/model-catalog",
+  "provider": "Mistral AI",
+  "model": "AI-governance model list",
+  "target_kind": "watch-page",
+  "sha256": "4181d15fc505689672d01bdfae35852b0d2a6abc22701f87d4399672bc4c1c2b",
+  "size_bytes": 677799,
+  "stored_as": "raw.html",
+  "text_sha256": "4bea514205a16fe17b01ce331275e78539946093769f0d5bd49ac1bb742b9476",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://legal.mistral.ai/ai-governance/models",
+    "final_url": "https://legal.mistral.ai/ai-governance/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"cef2d2729b99eb40f7549704e1834ca5-ssl-df\"",
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-10-16T10:30:13Z"
+  },
+  "prior_sha256": "e2d684832e931136338c97532ad53373d2e67556fbeeca1a8ecc083a0033c234",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261016103119/https://legal.mistral.ai/ai-governance/models/",
+    "snapshot_ts": "20261016103119",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-3a5f32200379a7b658edd6e9350aab2b2e69862f",
+    "via": "spn2",
+    "requested_at": "2026-10-16T10:30:13Z",
+    "at": "2026-10-16T10:31:33Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-16T10:31:37Z"
+  }
+}
