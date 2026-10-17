@@ -1,0 +1,47 @@
+{
+  "source_id": "cohere/model-catalog",
+  "provider": "Cohere",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "2d5b384ac8c7cf88fa0d987d9a50d2abefb5711f16992623388f5d9216848336",
+  "size_bytes": 256392,
+  "stored_as": "raw.html",
+  "text_sha256": "438413203835a2e76d962b9c31c4761813e8c36f24aa5e87e8a8e5d5e6310eef",
+  "doc_links_sha256": "715146191a49cbc4c7a0e2aec3ccb2376e0705b141b668bb444277e511f1cef7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/models",
+    "final_url": "https://docs.cohere.com/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"a11o7jsuz96j\"",
+    "last_modified": "Fri, 16 Oct 2026 22:53:33 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-17T10:07:21Z"
+  },
+  "prior_sha256": "980d85dc039df25e333cb31a0e665f90a21d4c52bfb0bd336da77f0a7ca1fa27",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261017100736/https://docs.cohere.com/docs/models",
+    "snapshot_ts": "20261017100736",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-b921c6ed4ac694cff40718b75a0aaee66ec2d7fa",
+    "via": "spn2",
+    "requested_at": "2026-10-17T10:07:22Z",
+    "at": "2026-10-17T10:07:52Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-17T10:07:55Z"
+  }
+}

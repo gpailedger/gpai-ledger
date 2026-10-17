@@ -15469,6 +15469,29 @@
     "to_sha256": "980d85dc039df25e333cb31a0e665f90a21d4c52bfb0bd336da77f0a7ca1fa27",
     "computed_at": "2026-10-08T13:06:12Z"
   },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20261008T125024Z>captures/cohere__model-catalog/watch-page-e9526454/20261017T100721Z": {
+    "verdict": "changed",
+    "similarity": 0.9997,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Endpoints north-small-translate-1-0 Live North",
+        "new": "Endpoints north-small-translate-09-2026 Live"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261008T125024Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261017T100721Z",
+    "from_sha256": "980d85dc039df25e333cb31a0e665f90a21d4c52bfb0bd336da77f0a7ca1fa27",
+    "to_sha256": "2d5b384ac8c7cf88fa0d987d9a50d2abefb5711f16992623388f5d9216848336",
+    "computed_at": "2026-10-17T10:15:43Z"
+  },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
     "similarity": 0.9566,
@@ -19382,6 +19405,79 @@
     "from_sha256": "cfb29f9d518b03455dbfa315baaf12d99bcb4d6575005acc40b1ee4a67a3901a",
     "to_sha256": "59257c6cf82171360021b0a383d3ad1408b5d8999e7ea6be0c6f7a75531f0b98",
     "computed_at": "2026-10-16T10:45:53Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261016T102004Z>captures/huggingface__smollm3/provider-live-c6d71781/20261017T095458Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.59M 1.29k",
+        "new": "20 8.66M 1.29k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.1M 768",
+        "new": "2025 3.04M 768"
+      },
+      {
+        "op": "replace",
+        "old": "2025 756k 1.06k",
+        "new": "2025 754k 1.06k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 604k 2.7k",
+        "new": "2024 595k 2.7k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 493k 328",
+        "new": "3.02B 452k 328"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 401k 1.35k",
+        "new": "3.5B 424k 1.35k"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 43.7k 390",
+        "new": "48.3M 44.3k 390"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 37.8k 179",
+        "new": "8.61M 38.9k 179"
+      },
+      {
+        "op": "replace",
+        "old": "380M 37.8k 85",
+        "new": "380M 37.6k 85"
+      },
+      {
+        "op": "replace",
+        "old": "2024 19.5k 213",
+        "new": "2024 19.8k 213"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.41k 649 Fetching",
+        "new": "3 6.11k 652 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261016T102004Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261017T095458Z",
+    "from_sha256": "59257c6cf82171360021b0a383d3ad1408b5d8999e7ea6be0c6f7a75531f0b98",
+    "to_sha256": "238088f86f2e3fa4e1f25a0050f1fa7622369581cf324e87e08c3f48d8993347",
+    "computed_at": "2026-10-17T10:15:43Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -23766,6 +23862,29 @@
     "from_sha256": "d97e0d30e9b83f06880029f8cd68f24132b4a3e7f46e8d6027e782556dc48d0f",
     "to_sha256": "a9cc70f67106d76e2583563d148847e423442865abf71445591f0fd3c25f9000",
     "computed_at": "2026-10-16T10:45:54Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261016T103148Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Skip to main content Skip to",
+        "new": "AI Skip to"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261016T103148Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z",
+    "from_sha256": "a9cc70f67106d76e2583563d148847e423442865abf71445591f0fd3c25f9000",
+    "to_sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
+    "computed_at": "2026-10-17T10:15:43Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -29918,6 +30037,49 @@
     "from_sha256": "ecdd0803490f172f5d3cc733853e4a60a25d446428f357a68adf641cf463f816",
     "to_sha256": "5d8f606bd20ded7f54ffa46c3dfa13af1533e196453358a336a0496879c5f9b3",
     "computed_at": "2026-10-16T10:45:53Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261016T102935Z>captures/openai__model-catalog/watch-page-0e5ba652/20261017T100624Z": {
+    "verdict": "changed",
+    "similarity": 0.9956,
+    "word_delta": 20,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Computer use Apply",
+        "new": "Computer use Integration recipes Driver reference Apply"
+      },
+      {
+        "op": "insert",
+        "old": "Windows app deployment Manage",
+        "new": "app and CLI deployment"
+      },
+      {
+        "op": "insert",
+        "old": "Managed configuration Remote connections",
+        "new": "configuration Codex security cookbook Remote"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Maintaining software",
+        "new": "Recent Designing failover across OpenAI model providers Maintaining"
+      },
+      {
+        "op": "delete",
+        "old": "with Astra Building games with Astra",
+        "new": "visualization with Astra"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261016T102935Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261017T100624Z",
+    "from_sha256": "5d8f606bd20ded7f54ffa46c3dfa13af1533e196453358a336a0496879c5f9b3",
+    "to_sha256": "db7cb2fc9334d503b9d2c9c734c2de5bceea2d78ed885cf3ddcda1bf5c00cc10",
+    "computed_at": "2026-10-17T10:15:43Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
