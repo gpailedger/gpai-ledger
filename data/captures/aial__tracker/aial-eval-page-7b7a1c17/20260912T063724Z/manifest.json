@@ -37,10 +37,25 @@
     "at": "2026-09-12T06:37:29Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f9f603f6720>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261018102028/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/215145044dd56ed879b4c56d87d0bd7b3f94e787/public/evals/magma-8b/index.html",
+    "snapshot_ts": "20261018102028",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-832e0116aeccaa61b40ad25d91207bb2f48dcd98",
     "via": "spn2",
-    "requested_at": "2026-10-17T10:13:33Z",
-    "at": "2026-10-17T10:15:33Z"
-  }
+    "requested_at": "2026-10-18T10:19:37Z",
+    "at": "2026-10-18T10:20:31Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f9f603f6720>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-10-17T10:13:33Z",
+      "at": "2026-10-17T10:15:33Z"
+    }
+  ]
 }
