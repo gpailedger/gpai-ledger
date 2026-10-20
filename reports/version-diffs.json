@@ -2955,6 +2955,24 @@
     "computed_at": "2026-09-30T12:01:34Z",
     "changes_withheld": true
   },
+  "aial/tracker::aial-method-20d67167::captures/aial__tracker/aial-method-20d67167/20260930T115113Z>captures/aial__tracker/aial-method-20d67167/20261020T105159Z": {
+    "verdict": "changed",
+    "similarity": 0.988,
+    "word_delta": 41,
+    "moved_words": 13,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-20d67167",
+    "from_dir": "captures/aial__tracker/aial-method-20d67167/20260930T115113Z",
+    "to_dir": "captures/aial__tracker/aial-method-20d67167/20261020T105159Z",
+    "from_sha256": "c044c0d80bba173efc8a10d032feea7d224b8c82522a09fc5326e6344eb45b74",
+    "to_sha256": "24ee4f8a59c7fb7381d74d387c47aac2862336613b3c4875c237d74a060e31e2",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
   "aial/tracker::aial-method-9a435cf4::captures/aial__tracker/aial-method-9a435cf4/20260831T095003Z>captures/aial__tracker/aial-method-9a435cf4/20260831T095153Z": {
     "verdict": "changed",
     "similarity": 0.9991,
@@ -3637,6 +3655,42 @@
     "to_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
     "computed_at": "2026-10-14T11:12:22Z",
     "changes": [],
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-cbb39bff::captures/aial__tracker/aial-method-cbb39bff/20261014T110912Z>captures/aial__tracker/aial-method-cbb39bff/20261020T105408Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "aial/tracker",
+    "target": "aial-method-cbb39bff",
+    "from_dir": "captures/aial__tracker/aial-method-cbb39bff/20261014T110912Z",
+    "to_dir": "captures/aial__tracker/aial-method-cbb39bff/20261020T105408Z",
+    "from_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+    "to_sha256": "31fc182a0597b3add98d0501ee5617a0be028646070092f0bbb5888d5eef4216",
+    "computed_at": "2026-10-20T10:58:39Z",
+    "changes": [],
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-cbb39bff::captures/aial__tracker/aial-method-cbb39bff/20261020T105408Z>captures/aial__tracker/aial-method-cbb39bff/20261020T105449Z": {
+    "verdict": "changed",
+    "similarity": 0.9937,
+    "word_delta": 25,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-cbb39bff",
+    "from_dir": "captures/aial__tracker/aial-method-cbb39bff/20261020T105408Z",
+    "to_dir": "captures/aial__tracker/aial-method-cbb39bff/20261020T105449Z",
+    "from_sha256": "31fc182a0597b3add98d0501ee5617a0be028646070092f0bbb5888d5eef4216",
+    "to_sha256": "b7246a70545398bf08bad42c4cc8b52637bc5409b39b491291daee94b7bbb2f3",
+    "computed_at": "2026-10-20T10:58:40Z",
     "changes_withheld": true
   },
   "aial/tracker::aial-method-d00ffdc2::captures/aial__tracker/aial-method-d00ffdc2/20260831T095040Z>captures/aial__tracker/aial-method-d00ffdc2/20260831T095226Z": {
@@ -4573,6 +4627,42 @@
     "from_sha256": "fb26192268676a3b4cabe2c841d47d16e739cc8e9c481bdf55fe63c684984b53",
     "to_sha256": "c044c0d80bba173efc8a10d032feea7d224b8c82522a09fc5326e6344eb45b74",
     "computed_at": "2026-09-30T12:01:32Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-d00ffdc2::captures/aial__tracker/aial-method-d00ffdc2/20260930T115626Z>captures/aial__tracker/aial-method-d00ffdc2/20261020T105351Z": {
+    "verdict": "changed",
+    "similarity": 0.9949,
+    "word_delta": 18,
+    "moved_words": 13,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-d00ffdc2",
+    "from_dir": "captures/aial__tracker/aial-method-d00ffdc2/20260930T115626Z",
+    "to_dir": "captures/aial__tracker/aial-method-d00ffdc2/20261020T105351Z",
+    "from_sha256": "c044c0d80bba173efc8a10d032feea7d224b8c82522a09fc5326e6344eb45b74",
+    "to_sha256": "6feade6739603d577a9549688e9f77a6a6615c153867be223a1529d9304d3829",
+    "computed_at": "2026-10-20T10:58:39Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-d00ffdc2::captures/aial__tracker/aial-method-d00ffdc2/20261020T105351Z>captures/aial__tracker/aial-method-d00ffdc2/20261020T105424Z": {
+    "verdict": "changed",
+    "similarity": 0.9931,
+    "word_delta": 23,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-d00ffdc2",
+    "from_dir": "captures/aial__tracker/aial-method-d00ffdc2/20261020T105351Z",
+    "to_dir": "captures/aial__tracker/aial-method-d00ffdc2/20261020T105424Z",
+    "from_sha256": "6feade6739603d577a9549688e9f77a6a6615c153867be223a1529d9304d3829",
+    "to_sha256": "24ee4f8a59c7fb7381d74d387c47aac2862336613b3c4875c237d74a060e31e2",
+    "computed_at": "2026-10-20T10:58:39Z",
     "changes_withheld": true
   },
   "aial/tracker::aial-method-fdbefa3b::captures/aial__tracker/aial-method-fdbefa3b/20260831T095109Z>captures/aial__tracker/aial-method-fdbefa3b/20260831T095251Z": {
@@ -5673,6 +5763,42 @@
     "computed_at": "2026-09-30T12:01:32Z",
     "changes_withheld": true
   },
+  "aial/tracker::aial-method-fdbefa3b::captures/aial__tracker/aial-method-fdbefa3b/20260930T115647Z>captures/aial__tracker/aial-method-fdbefa3b/20261020T105404Z": {
+    "verdict": "changed",
+    "similarity": 0.9997,
+    "word_delta": 4,
+    "moved_words": 8,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-fdbefa3b",
+    "from_dir": "captures/aial__tracker/aial-method-fdbefa3b/20260930T115647Z",
+    "to_dir": "captures/aial__tracker/aial-method-fdbefa3b/20261020T105404Z",
+    "from_sha256": "1c427e433b23b03473b058fbf32b84035f629584d538c99bc2ced125a6069ca5",
+    "to_sha256": "f670941e012641e5ace914953ef3d6a0e4482472ea14d8b784a06bcd260ce7be",
+    "computed_at": "2026-10-20T10:58:39Z",
+    "changes_withheld": true
+  },
+  "aial/tracker::aial-method-fdbefa3b::captures/aial__tracker/aial-method-fdbefa3b/20261020T105404Z>captures/aial__tracker/aial-method-fdbefa3b/20261020T105445Z": {
+    "verdict": "changed",
+    "similarity": 0.9966,
+    "word_delta": 9,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "aial-method-fdbefa3b",
+    "from_dir": "captures/aial__tracker/aial-method-fdbefa3b/20261020T105404Z",
+    "to_dir": "captures/aial__tracker/aial-method-fdbefa3b/20261020T105445Z",
+    "from_sha256": "f670941e012641e5ace914953ef3d6a0e4482472ea14d8b784a06bcd260ce7be",
+    "to_sha256": "b157c6bb6eb763ebd7ebaa8ee77be7ad53af7eaef7d0e2afc38ed8c620425cea",
+    "computed_at": "2026-10-20T10:58:39Z",
+    "changes_withheld": true
+  },
   "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260811T110511Z>captures/aial__tracker/watch-page-465bd4ee/20260818T164910Z": {
     "verdict": "changed",
     "similarity": 0.9669,
@@ -5791,6 +5917,24 @@
     "computed_at": "2026-09-30T12:01:31Z",
     "changes_withheld": true
   },
+  "aial/tracker::watch-page-465bd4ee::captures/aial__tracker/watch-page-465bd4ee/20260930T115043Z>captures/aial__tracker/watch-page-465bd4ee/20261020T105122Z": {
+    "verdict": "changed",
+    "similarity": 0.9972,
+    "word_delta": 13,
+    "moved_words": 8,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "watch-page-465bd4ee",
+    "from_dir": "captures/aial__tracker/watch-page-465bd4ee/20260930T115043Z",
+    "to_dir": "captures/aial__tracker/watch-page-465bd4ee/20261020T105122Z",
+    "from_sha256": "1c427e433b23b03473b058fbf32b84035f629584d538c99bc2ced125a6069ca5",
+    "to_sha256": "b157c6bb6eb763ebd7ebaa8ee77be7ad53af7eaef7d0e2afc38ed8c620425cea",
+    "computed_at": "2026-10-20T10:58:38Z",
+    "changes_withheld": true
+  },
   "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20260811T110417Z>captures/aial__tracker/watch-page-c82134bd/20260818T164825Z": {
     "verdict": "changed",
     "similarity": 0.9473,
@@ -5907,6 +6051,24 @@
     "to_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
     "computed_at": "2026-10-14T11:12:21Z",
     "changes": [],
+    "changes_withheld": true
+  },
+  "aial/tracker::watch-page-c82134bd::captures/aial__tracker/watch-page-c82134bd/20261014T110529Z>captures/aial__tracker/watch-page-c82134bd/20261020T105050Z": {
+    "verdict": "changed",
+    "similarity": 0.9937,
+    "word_delta": 25,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "aial/tracker",
+    "target": "watch-page-c82134bd",
+    "from_dir": "captures/aial__tracker/watch-page-c82134bd/20261014T110529Z",
+    "to_dir": "captures/aial__tracker/watch-page-c82134bd/20261020T105050Z",
+    "from_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+    "to_sha256": "b7246a70545398bf08bad42c4cc8b52637bc5409b39b491291daee94b7bbb2f3",
+    "computed_at": "2026-10-20T10:58:38Z",
     "changes_withheld": true
   },
   "amazon/nova-2-lite::aial-eval-history-c7e8147a::captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20260829T184529Z>captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20260829T185135Z": {
@@ -11445,6 +11607,83 @@
     "to_sha256": "c58a3d06920a8935f56be72f56b35088c35bae07bfce7aa1eb1118df56d19601",
     "computed_at": "2026-10-08T13:06:12Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261008T124945Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261020T104955Z": {
+    "verdict": "changed",
+    "similarity": 0.9633,
+    "word_delta": 82,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "also includes server_tools",
+        "new": "also includes thinking.types.between_tools , which reports whether the model accepts thinking: type: between_tools , the setting that turns off up-front thinking . supported is false when the model rejects between_tools with a 400 error. Even when supported is true , the API can still reject a betwe"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261008T124945Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261020T104955Z",
+    "from_sha256": "c58a3d06920a8935f56be72f56b35088c35bae07bfce7aa1eb1118df56d19601",
+    "to_sha256": "8e9a826bb73c94f278ecbe2d6090470c8fcbe11591a445e260fc11d00594c5c6",
+    "computed_at": "2026-10-20T10:58:39Z"
+  },
+  "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
+    "verdict": "changed",
+    "similarity": 0.9985,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "anthropic/mythos5-1",
+    "target": "aial-eval-038ecb30",
+    "from_dir": "captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z",
+    "to_dir": "captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z",
+    "from_sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+    "to_sha256": "6fbb8a8c1e2ed267646fa064ca658e978f8c3b8d7033bdd86e850893bbc513bb",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
+  "anthropic/mythos5-1::aial-eval-history-038ecb30::captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20260913T125648Z>captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261020T105416Z": {
+    "verdict": "changed",
+    "similarity": 0.9985,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "anthropic/mythos5-1",
+    "target": "aial-eval-history-038ecb30",
+    "from_dir": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20260913T125648Z",
+    "to_dir": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261020T105416Z",
+    "from_sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+    "to_sha256": "6fbb8a8c1e2ed267646fa064ca658e978f8c3b8d7033bdd86e850893bbc513bb",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
+  "anthropic/mythos5-1::aial-eval-page-ad1a3f50::captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20260913T114735Z>captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20261020T103017Z": {
+    "verdict": "changed",
+    "similarity": 0.9985,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "anthropic/mythos5-1",
+    "target": "aial-eval-page-ad1a3f50",
+    "from_dir": "captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20260913T114735Z",
+    "to_dir": "captures/anthropic__mythos5-1/aial-eval-page-ad1a3f50/20261020T103017Z",
+    "from_sha256": "abdb14d358b9c095db9b4fcb73a630f3aa08781ef6ed65402fd64d5d85112e97",
+    "to_sha256": "2a7118713e47e9819240b02d2e6c867e13278c86c8014850d96f339d5ae7add2",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
   "anthropic/mythos5-1::provider-live-e8cea877::captures/anthropic__mythos5-1/provider-live-e8cea877/20260913T114644Z>captures/anthropic__mythos5-1/provider-live-e8cea877/20260918T060237Z": {
     "verdict": "changed",
     "similarity": 0.9907,
@@ -12467,6 +12706,29 @@
     "from_sha256": "ddf0ef8b145b49398ccba3cb3ea32d2dc74ecd2a3c533fe6f4c26827698cecfe",
     "to_sha256": "a1441459d4578ac15d729ff02bcc2520e3e4817323307a407b8cd9a56a9b1d21",
     "computed_at": "2026-10-16T10:45:53Z"
+  },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261016T101329Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z": {
+    "verdict": "changed",
+    "similarity": 0.9951,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "FLUX 3 Video",
+        "new": "FLUX 3 Max FLUX 3"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261016T101329Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z",
+    "from_sha256": "a1441459d4578ac15d729ff02bcc2520e3e4817323307a407b8cd9a56a9b1d21",
+    "to_sha256": "c91350024d521392a4cc082f0ef3ad3f4380318c58c418332c9cda996d6e1411",
+    "computed_at": "2026-10-20T10:58:38Z"
   },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
@@ -19619,6 +19881,79 @@
     "from_sha256": "c1a3084961e544fd1bd33fe952707c0cf1206d7ae8d9730bba89499384e284eb",
     "to_sha256": "d4975e9750ec930771d81f9c704c6c912edfafa5f71dd69a57598f79f69115ec",
     "computed_at": "2026-10-19T13:03:53Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261019T123936Z>captures/huggingface__smollm3/provider-live-c6d71781/20261020T103854Z": {
+    "verdict": "changed",
+    "similarity": 0.9971,
+    "word_delta": 18,
+    "moved_words": 7,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "epfml/FineWeb2-HQ Viewer Updated Feb 19, 2025 380M",
+        "new": "epfml/FineWeb2-HQ Viewer Updated Feb 19, 2025 380M"
+      },
+      {
+        "op": "replace",
+        "old": "20 8.56M 1.3k",
+        "new": "20 8.57M 1.3k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.91M 769",
+        "new": "2025 2.89M 769"
+      },
+      {
+        "op": "replace",
+        "old": "2025 749k 1.07k",
+        "new": "2025 748k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 579k 2.7k Linked",
+        "new": "2024 584k 2.71k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 439k 328 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 446k 326 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 430k 1.36k HuggingFaceTB/finemath Viewer",
+        "new": "3.5B 436k 1.36k 52.4k 85 HuggingFaceTB/finemath"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 46.8k 391 40.2k 85 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 46.7k 392 HuggingFaceTB/smoltalk2 Viewer"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 38.3k 181",
+        "new": "8.61M 39.3k 181"
+      },
+      {
+        "op": "replace",
+        "old": "2024 20.2k 213",
+        "new": "2024 23.2k 213"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.6k 655 Fetching",
+        "new": "3 6.57k 656 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261019T123936Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261020T103854Z",
+    "from_sha256": "d4975e9750ec930771d81f9c704c6c912edfafa5f71dd69a57598f79f69115ec",
+    "to_sha256": "110acfde87e017cfa8a72977635d1f0c07f3d93612f4ee0471e0dedd6fff5434",
+    "computed_at": "2026-10-20T10:58:38Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -30222,6 +30557,29 @@
     "to_sha256": "db7cb2fc9334d503b9d2c9c734c2de5bceea2d78ed885cf3ddcda1bf5c00cc10",
     "computed_at": "2026-10-17T10:15:43Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261017T100624Z>captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z": {
+    "verdict": "changed",
+    "similarity": 0.9982,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "scans Run scans in CI GitLab",
+        "new": "scans CI/CD Overview GitHub Actions GitLab CI/CD"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261017T100624Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z",
+    "from_sha256": "db7cb2fc9334d503b9d2c9c734c2de5bceea2d78ed885cf3ddcda1bf5c00cc10",
+    "to_sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
+    "computed_at": "2026-10-20T10:58:39Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -31129,6 +31487,24 @@
     "computed_at": "2026-08-31T12:27:42Z",
     "changes_withheld": true
   },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-f0661242::captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20260916T075741Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261020T104710Z": {
+    "verdict": "changed",
+    "similarity": 0.9801,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-f0661242",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20260916T075741Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261020T104710Z",
+    "from_sha256": "5ff4215efaf00562aa9363ba5de33d958a0d59a52e3f397165c32fc47add9a48",
+    "to_sha256": "1e1e885924f3474118539b20709ffc8e82805059009824032721c1d00b87004f",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
   "swiss-ai-initiative/apertus-1-5::aial-eval-history-c62d0ee4::captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T185726Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T190527Z": {
     "verdict": "changed",
     "similarity": 0.8485,
@@ -31145,6 +31521,24 @@
     "from_sha256": "25209313cd955b341bf1aeafd9fbb68d897c06e8ce951a90acc33b054fbe0d68",
     "to_sha256": "5ff4215efaf00562aa9363ba5de33d958a0d59a52e3f397165c32fc47add9a48",
     "computed_at": "2026-08-29T19:18:05Z",
+    "changes_withheld": true
+  },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-history-c62d0ee4::captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T190527Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261020T105341Z": {
+    "verdict": "changed",
+    "similarity": 0.9801,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-history-c62d0ee4",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T190527Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261020T105341Z",
+    "from_sha256": "5ff4215efaf00562aa9363ba5de33d958a0d59a52e3f397165c32fc47add9a48",
+    "to_sha256": "1e1e885924f3474118539b20709ffc8e82805059009824032721c1d00b87004f",
+    "computed_at": "2026-10-20T10:58:39Z",
     "changes_withheld": true
   },
   "swiss-ai-initiative/apertus-1-5::aial-eval-page-208c3242::captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-208c3242/20260831T105747Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-208c3242/20260831T110911Z": {
@@ -31201,6 +31595,24 @@
     "changes": [],
     "changes_withheld": true
   },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-page-7c1f2b16::captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-7c1f2b16/20260916T075746Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-7c1f2b16/20261020T104717Z": {
+    "verdict": "changed",
+    "similarity": 0.9509,
+    "word_delta": 74,
+    "moved_words": 10,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-page-7c1f2b16",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-7c1f2b16/20260916T075746Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-7c1f2b16/20261020T104717Z",
+    "from_sha256": "0a54a066ae3ebd6e503dce127238c7845fbee61959f59fb4aa3acb8fb5819263",
+    "to_sha256": "6823435a451459b13e646e213622b33082d891449c2796963e5f40166b65a6a0",
+    "computed_at": "2026-10-20T10:58:40Z",
+    "changes_withheld": true
+  },
   "swiss-ai-initiative/apertus-1-5::aial-eval-page-ec7531be::captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20260831T105740Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20260831T110904Z": {
     "verdict": "changed",
     "similarity": 0.9083,
@@ -31253,6 +31665,24 @@
     "to_sha256": "0a54a066ae3ebd6e503dce127238c7845fbee61959f59fb4aa3acb8fb5819263",
     "computed_at": "2026-08-31T12:28:30Z",
     "changes": [],
+    "changes_withheld": true
+  },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-page-ec7531be::captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20260831T113148Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261020T105356Z": {
+    "verdict": "changed",
+    "similarity": 0.9509,
+    "word_delta": 74,
+    "moved_words": 10,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-page-ec7531be",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20260831T113148Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261020T105356Z",
+    "from_sha256": "0a54a066ae3ebd6e503dce127238c7845fbee61959f59fb4aa3acb8fb5819263",
+    "to_sha256": "6823435a451459b13e646e213622b33082d891449c2796963e5f40166b65a6a0",
+    "computed_at": "2026-10-20T10:58:39Z",
     "changes_withheld": true
   },
   "swiss-ai-initiative/apertus-1-5::cop-doc-e3c6e2a8::captures/swiss-ai-initiative__apertus-1-5/cop-doc-e3c6e2a8/20260817T080527Z>captures/swiss-ai-initiative__apertus-1-5/cop-doc-e3c6e2a8/20261007T122749Z": {

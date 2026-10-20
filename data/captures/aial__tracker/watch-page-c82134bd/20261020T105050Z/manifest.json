@@ -1,0 +1,41 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "GPAI Training Transparency tracker",
+  "target_kind": "watch-page",
+  "sha256": "b7246a70545398bf08bad42c4cc8b52637bc5409b39b491291daee94b7bbb2f3",
+  "size_bytes": 53877,
+  "stored_as": "raw.html",
+  "text_sha256": "0f1ed765cf7c9462972ab7e3954cd55010135278392f0088107872ef60aaaeef",
+  "doc_links_sha256": "194ab5a8ab5f7898b2e2bfce76e943ddca4e33517c8d729194f89662bd35508e",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/list_summaries",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/list_summaries",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tn77o215kl\"",
+    "last_modified": "Tue, 20 Oct 2026 09:00:02 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-20T10:50:50Z"
+  },
+  "prior_sha256": "6ba02361524a70b306ec8dac2e426178c4874209679122e5d29125ae1c53e781",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-10-20T10:50:50Z",
+    "at": "2026-10-20T10:51:05Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-20T10:51:10Z"
+  }
+}

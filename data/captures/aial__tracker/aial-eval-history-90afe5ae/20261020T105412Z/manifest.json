@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Aleph Alpha",
+  "model": "Kolibri-1",
+  "target_kind": "aial-eval-history",
+  "sha256": "622517763ed90244297a5adef3e27ce83d0bc323359320e9c93b3f84f8297487",
+  "size_bytes": 4061,
+  "stored_as": "raw.yaml",
+  "text_sha256": "658291700b40fd032a819393bcb295e56bb6deecb09e0b594ae18e9d7d3b46c5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/evals/aleph-alpha-kolibri.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/evals/aleph-alpha-kolibri.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"186396c4dee30286670ddbc3c85c42c8ffe90d4d44facfa5ce7be976982ae89d\"",
+    "last_modified": null,
+    "content_length": "782",
+    "fetched_at": "2026-10-20T10:54:12Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "6d3aac49b4e8e354f221b2f93533080848ade33f",
+  "git_commit_date": "2026-10-20T08:39:10Z",
+  "git_blob_sha": "4ec94c602b4fbbe60729e90df66aa41bea865bd4",
+  "git_path": "evals/aleph-alpha-kolibri.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-20T10:54:16Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261020105537/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/evals/aleph-alpha-kolibri.yaml",
+    "snapshot_ts": "20261020105537",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-e95fd72aba237eb75dc11e5ba197f0c1e28c963e",
+    "via": "spn2",
+    "requested_at": "2026-10-20T10:55:37Z",
+    "at": "2026-10-20T10:55:42Z"
+  }
+}

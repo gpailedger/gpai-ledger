@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/mythos5-1",
+  "provider": "Anthropic",
+  "model": "Mythos 5.1 / Fable 5.1",
+  "target_kind": "aial-eval",
+  "sha256": "6fbb8a8c1e2ed267646fa064ca658e978f8c3b8d7033bdd86e850893bbc513bb",
+  "size_bytes": 3195,
+  "stored_as": "raw.yaml",
+  "text_sha256": "5db0d552be61972125df17f6f4025a18315290986523eabe3448b5136eaea8a9",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-mythos5.1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-mythos5.1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0ae7de1227b03ce746286bc0b837e65eb8aba49bef3711aed60c372c73a40dd8\"",
+    "last_modified": null,
+    "content_length": "587",
+    "fetched_at": "2026-10-20T10:30:11Z"
+  },
+  "prior_sha256": "cbdb426c25f4ec5e9655db3c183ca00fd4c2d897bde650b8fdc3f014b7f5dc5f",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-20T10:30:15Z"
+  }
+}

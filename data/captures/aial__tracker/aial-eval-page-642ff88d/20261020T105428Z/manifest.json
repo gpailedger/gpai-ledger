@@ -1,0 +1,52 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "aleph-alpha-kolibri",
+  "target_kind": "aial-eval-page",
+  "sha256": "51baf268506bf5c2472c6c207e6b1263947aa9f5f40a44f87b9907ededa7a807",
+  "size_bytes": 15746,
+  "stored_as": "raw.html",
+  "text_sha256": "6863885dd2d0c1ef54a6a3e76b3c3360617afc4cfea3d57c12dc64ec2709e213",
+  "doc_links_sha256": "eb0401d686f2689549f0bd0089f296af3e5361f489b04e815485edb3f8e29198",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/public/evals/aleph-alpha-kolibri/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/public/evals/aleph-alpha-kolibri/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8a973f535e9257a7ae5d320617bd2d1d4f33fb59ec181e03b6aac5f2f3e270f2\"",
+    "last_modified": null,
+    "content_length": "3305",
+    "fetched_at": "2026-10-20T10:54:28Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "6d3aac49b4e8e354f221b2f93533080848ade33f",
+  "git_commit_date": "2026-10-20T08:39:10Z",
+  "git_blob_sha": "89f5d469e73ecedb0302a6bc59ae96c04690114e",
+  "git_path": "public/evals/aleph-alpha-kolibri/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-20T10:54:32Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261020105723/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/public/evals/aleph-alpha-kolibri/index.html",
+    "snapshot_ts": "20261020105723",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-258105b548ab143ef3704a4d87012aa9d89ab116",
+    "via": "spn2",
+    "requested_at": "2026-10-20T10:56:12Z",
+    "at": "2026-10-20T10:57:25Z"
+  }
+}

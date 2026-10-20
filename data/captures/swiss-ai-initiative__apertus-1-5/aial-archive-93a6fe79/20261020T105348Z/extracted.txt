@@ -1,0 +1,1067 @@
+Public  Summary  of  Training  Content  for  General-Purpose
+AI
+
+models
+
+ This  template  is  provided  by  the  European  Commission  and  required  to  be  filled  in  by  providers  of  general-purpose  AI  models  prior  to  their  placing  on  the  Union  market  in  order  to  comply  with  their  obligation  under  Article  53  (1)(d)  of  Regulation  (EU)  2024/1689  (AI  Act).   For  more  information  and  guidance  see  Commission’s  Explanatory  Notice  and  Template  for  the  Public  Summary  of  Training  Content  for  general-purpose  AI  models  |  Shaping  Europe’s  digital  future.
+ Version  of  the  Summary:   v1.5  Last  update:   6.10.2026   General  information
+1.  General  information  1.1.  Provider  identification
+Provider  name  and  contact  details:
+Swiss  National  AI  Institute   ℅  EPFL  AI  Center  ELE  136,  Station  11  CH-1015  Lausanne,  Switzerland  Website:  https://apertus-ai.org  General  contact:  llm-requests@swiss-ai.org
+Authorised  representative  name  and  contact  details:
+Not  applicable  pursuant  to  Article  54(6)  of  Regulation  (EU)  2024/1689.  The  models  covered  by  this  Summary  are  released  under  a  free  and  open-source  licence  permitting  access,  use,  modification  and  distribution.  Their  weights,  architecture  information  and  usage  information  are  publicly  available,  and  they  are  not  general-purpose  AI  models  with  systemic  risk.
+ 1.2.  Model  identification
+Versioned  model  name(s):
+Apertus-v1.5-8B  Apertus-v1.5-70B  https://huggingface.co/collections/swiss-ai/apertus-v15   This  Summary  covers  two  model  versions,  whose  training  content  is  similar.  They  are  reported  together  in  accordance  with  point  (30)  of  the  Commission  Explanatory  Notice  to  the  Template.
+Model  dependencies:
+Apertus-8B-2509  Apertus-70B-2509  https://huggingface.co/collections/swiss-ai/apertus-v1   Apertus  1.5  is  a  continued  pre-training  on  top  of  the  previous  generation  of  the  same  model.  These  are  all  decoder-only  transformer  text-generation  models  released  under  the  Apache  2.0  license.  The  model  card  for  each  is  published  at  the  URLs  above.  Date  of  placement  of  the  model  on  the  Union  market:
+Both  models  were  publicly  announced  on  July  24,  2026.  Neither  has  been  further  trained  since  its  release,  and  no  new  version  has  been  placed  on  the  market.  Any  revision  to  tokenizer  files  will  not  alter  the  model  weights  or  the  training  data.
+1.3  Modalities,  overall  training  data  size  and  other  characteristics  This  Section  requires  general  information  about  the  overall  training  data  after  pre-processing  and  before  the  training  of  the  model.
+1
+
+ Modality  Training  data  size  Types  of  content
+ ☒  Text
+☐  Less  than  1  billion  tokens  ☐  1billion  to  10  trillions  tokens  ☒  More  than  10  trillions  tokens   Alternatively,  specify  the  approximate  size  in  a  different  measurement  unit:   17  trillion  tokens  (70B)  19  trillion  tokens  (8B)
+ Public  text-only  datasets  derived  mainly  from  web  documents  written  in  over  1000  languages,  while  respecting  the  consent  of  right  holders.  We  ensure  training  data  is  fully  transparent  and  reproducible,  so  as  to  make  Apertus  an  open-data  and  open-weights  model.  Data  is  filtered  for  compliance  and  personal  identification  information  when  applicable.   ☒  Image  ☐  Less  than  1  million  images  ☐  1Million  to1  billion  images  ☒  More  than  1  billion  images
+Public  image-only  and  image-text-pairs,  gathered  from  permissive  datasets,  themselves  derived  mainly  from  open  image  repositories  and  web  data.  Data  is  filtered  for  compliance  and  personal  identification  information  when  applicable.
+☒  Audio  ☐  Less  than  10  000  hours  ☒  10  000  to  1  million  hours  ☐  More  than  1  million  hours
+Public  audio-only  and  audio-transcripts-pairs,  gathered  from  permissive  datasets,  themselves  derived  mainly  from  open  initiatives  (such  as  commonvoice)  and  web  data.   ☐  Video  ☐  Less  than  10  000  hours  ☐  10  000  to1  million  hours  ☐  More  than  1  million  hours
+
+☐  Other
+Specify  the  modality  and  for  each  one  indicate  approximate  size  and  unit  of  measurement
+
+  Latest  date  of  data  acquisition/collection  for  model  training:
+Pre-training  dataset  knowledge  cutoff  is  April  28th,  2026.
+Description  of  the  linguistic  characteristics  of  the  overall  training  data:
+Languages .  The  pretraining  dataset  includes  more  than  1000  languages  (1782  language-script  pairs),  as  provided  by  the  FineWeb-2 and  FineWeb-2-HQ datasets  respectively.  The  amount  of  data  per  language  reflects  the  natural  frequency  of  web  data  in  each  language,  thus  improving  representation  of  many  communities  with  languages  not  present  in  most  leading  LLMs  yet.   Domain-specificity.  Emphasis  has  been  placed  on  legal  (with  datasets  such  as  Multi-Legal-Pile or  Swiss-caselaw),  medical  (with  datasets  such  as  MedTrinity),  as  well  as  science-related  (finemath)  contents  for  this  release.
+
+Other  relevant  characteristics  of  the  overall  training  data:
+Selected  datasets  (or  dataset  subsets)  adhere  to  our  strict  policy  of  full  license  permissiveness  (excluding  sharealike,  non-commercial  and  any  other  restrictive  licenses).  Data  has  been  rigorously  filtered  for  respecting  consent  by  website  owners  (opt-out  for  AI  crawlers,  also  retroactively),  remove  PII,  remove  toxic  content,  and  avoid  verbatim  memorization  during  model  training  (see  below).  Additional  comments  (optional):
+The  Apertus  tokenizer  builds  upon  the  Mistral  v3  (tekken),  and  is  used  for  data  size  statistics  (see  also  the  Apertus  technical  report).
+
+2
+
+2.  List  of  data  sources
+2.  List  of  data  sou rc es  This  Section  requires  information  about  specific  sources  of  data  used  to  train  the  general-purpose  AI  model.  In  this  section  “dataset”  should  be  understood  as  a  single,  pre-packaged  collection  of  data.  The  filtering  and  pre-processing  of  data  collected  from  the  same  pre-packaged  collection  should  not  be  considered  a  new  dataset  to  be  disclosed  separately  in  the  sections  below .  If  a  particular  dataset  can  be  assigned  to  more  than  one  of  the  categories  below,  providers  should  select  the  most  relevant  category  and  only  report  the  dataset  in
+that
+
+category,
+
+except
+
+in
+
+the
+
+case
+
+of
+
+synthetic
+
+data
+
+(see
+
+Section
+
+2.5).
+
+  2.1.  Publicly  available  datasets      This  Section  requires  information  about  datasets  that  were  used  to  train  the  model  and  which  have  been
+compiled
+
+by
+
+a
+
+third
+
+party,
+
+are
+
+made
+
+available
+
+publicly
+
+for
+
+free,
+
+and
+
+are
+
+readily
+
+downloadable
+
+as
+
+a
+
+whole
+
+or
+
+in
+
+predefined
+
+chunks,
+
+such
+
+as
+
+datasets
+
+and
+
+collections
+
+available
+
+on
+
+public
+
+repositories
+
+and
+
+online
+
+platforms,
+
+specialised
+
+websites,
+
+or
+
+snapshots
+
+of
+
+common
+
+crawl.
+
+The
+
+public
+
+availability
+
+of
+
+the
+
+datasets
+
+for
+
+free
+
+does
+
+not
+
+mean
+
+that
+
+the
+
+content
+
+at
+
+issue
+
+is
+
+necessarily
+
+free
+
+of
+
+rights
+
+since
+
+it
+
+may
+
+be
+
+subject
+
+to
+
+licensing
+
+arrangements
+
+or
+
+conditions
+
+of
+
+use
+
+(e.g.,
+
+certain
+
+free
+
+and/or
+
+open
+
+licenses
+
+may
+
+determine
+
+the
+
+scope
+
+of
+
+the
+
+uses,
+
+including
+
+prohibiting
+
+uses
+
+relating
+
+to
+
+model
+
+training).
+
+A  dataset  is  considered  to  be  “large”  if  the  total  data  size  for  any  one  of  the  modalities  contained  in  the  dataset
+exceeds
+
+3%
+
+of
+
+the
+
+size
+
+of
+
+all
+
+publicly
+
+available
+
+datasets
+
+for
+
+that
+
+modality
+
+used
+
+for
+
+training.
+
+The
+
+size
+
+of
+
+the
+
+dataset
+
+should
+
+be
+
+based
+
+on
+
+its
+
+size
+
+after
+
+pre-processing
+
+(for
+
+example
+
+filtering),
+
+and
+
+without
+
+splitting
+
+the
+
+dataset
+
+to
+
+prevent
+
+reporting
+
+circumvention.
+
+ Have  you  used  publicly  available  datasets  to  train  the  model?    ☒  Yes      ☐  No If  yes,  specify  the  modality(ies)  of  the  content  covered  by  the  datasets  concerned:
+☒  Text    ☒  Image    ☐  Video   ☒  Audio  ☐  Other
+If
+
+so,
+
+please
+
+specify…
+
+List  of  large  publicly  available  datasets:
+The  following  large  pretraining  datasets  were  not  used  as  is,  but  were  additionally  filtered  for  opt-out  retrospectively,  for  toxicity,  high  quality,  and  other  preprocessing  as  detailed  below.   The  same  versions  and  filtering  techniques  were  used  for  the  datasets  used  both  in  Apertus  v1  and  v1.5
+ 1
+ and  are  detailed  in  our  first  technical  report.  For  datasets  used  only  in  v1.5,  filtering  and  pre-processing  was  very  similar  to  v1.  We  used  the  same  codebase
+ 2
+ and  the  same  list  of  robots.txt.  The  same  PII-removal  filter  was  used.  Slight  overhauls  mainly  concerned  technical  implementation  details.  For  robots-filtered  image  datasets  (MINT-1T,  pixmo-cap),  we  only  excluded  the  sources  that  were  within  our  list  and  had  robots.txt  indications  (i.e.  not  excluding  sources  that  were  not  gathered  by  our  list).    With  respect  to  training  from  a  purely  technical  perspective,  the  most  important  change  is  naturally  the  addition  of  multimodal  data.   In  addition  to  scale,  we  focused  on  data  quality  through  curation,  deduplication,  educational  filtering  and  domain  relevance.  Our  resulting  data-mixture  supports  robust,  general-purpose,  and  specialised  capabilities  while  advancing  open  and  responsible  AI  development.
+2
+ Public  version  accessible  at:  github.com/swiss-ai/pretrain-data
+
+1
+ The  following  datasets  are  concerned:  dclm-edu,  fineweb-2,  finetranslations,  finemath,  MegaMath,  stack-edu.
+3
+
+Text  Datasets   HuggingFaceFW/fineweb-2:  Large-scale,  high-quality  multilingual  web  text  corpus  derived  from  filtered  Common  Crawl  data.  Serves  as  a  primary  general-purpose  pretraining  source  for  LLMs,  with  strong  emphasis  on  diversity  and  reduced  noise.  License:  ODC-BY.  (Subject  to  PII  removal  and  robots.txt  filtering.)
+HuggingFaceTB/dclm-edu:  Curated  educational  web  dataset  from  the  DataComp-LM  project.  Provides  high-signal,  knowledge-rich  text  optimised  for  reasoning  and  factual  learning  in  language  models.  License:  CC-BY-4.0.  (PII  removal  and  robots.txt  filtering  applied.)
+nvidia/Nemotron-CC-v2.1:  NVIDIA-curated  Common  Crawl  dataset  (v2.1)  featuring  quality  scoring  and  filtering  for  large-scale  LLM  pre-training.  License:  Nvidia’s  custom  data  and  model  license  (permissive,  see  dataset  page  for  terms).
+HuggingFaceFW/finepdfs-edu:  High-quality  collection  of  educational,  scientific,  and  technical  PDF  documents  with  extracted  clean  text.  Enhances  long-context  and  domain  knowledge  capabilities.  License:  ODC-BY.  (Filtered  for  quality  and  compliance.)
+joelniklaus/Multi_Legal_Pile:  Specialized  multilingual  legal  corpus  aggregating  statutes,  case  law,  contracts,  and  regulatory  texts  from  multiple  jurisdictions.  Strengthens  legal  reasoning  and  domain  adaptation.  License:  only  compliant  (non-SA,  non-NC)  subsets  of  this  compound  dataset  were  used.  (PII  removal  and  robots.txt  filtering  applied.)
+nvidia/Nemotron-Pretraining-Code-v1:  Large-scale,  curated  code  corpus  from  NVIDIA  designed  to  boost  programming,  software  engineering,  and  logical  reasoning  abilities.License:  Nvidia’s  custom  data  and  model  license  (permissive,  see  dataset  page  for  terms).
+Apertus  v1.5  Preference  data:  the  alignment  mixture  used  for  the  offline  DPO  stage  of  Apertus  v1.5  training,  applied  to  the  70B  model,  with  prompts  from  Ai2's  Olmo  3  Dolci-Instruct-DPO  dataset.
+Apertus  v1.5  SFT  mixture:  The  dataset  mixture  used  for  the  final  Supervised  Finetuning  Stage  run  of  Apertus  v1.5  models  (data  sources  and  distribution  are  stated  in  the  Technical  Report  and  dataset  card)
+Audio  Datasets  mozilla/CommonVoice24:  Mozilla’s  crowdsourced  multilingual  speech  corpus  with  validated  transcriptions  across  many  languages  and  accents.  A  cornerstone  dataset  for  inclusive,  robust  automatic  speech  recognition  (ASR)  and  text-to-speech  (TTS).  License:  CC-BY-1.0.
+speechcolab/gigaspeech:  Large-scale  English  speech  recognition  corpus  (~10k  hours)  sourced  from  audiobooks,  podcasts,  and  YouTube  with  high-quality  transcriptions.  Supports  general-domain  ASR  and  audio  understanding.  License:  Apache-2.0.
+MLCommons/peoples_speech:  One  of  the  largest  publicly  available  multilingual  speech  datasets,  containing  tens  of  thousands  of  hours  of  diverse,  real-world  speech.  License:  CC-BY-SA  /  CC-BY.
+4
+
+facebookresearch/voxpopuli:  Large  multilingual  speech  corpus  extracted  from  European  Parliament  sessions,  covering  numerous  EU  languages  with  aligned  transcripts.  Excellent  for  cross-lingual  and  parliamentary-domain  speech  tasks.  License:  CC-BY-1.0.
+k2-fsa/libriheavy:  Massive  clean  English  read-speech  corpus  (tens  of  thousands  of  hours)  built  on  LibriSpeech  audiobooks  with  precise  alignments.  Known  for  high  acoustic  quality  and  utility  in  ASR/TTS  research.  License:  Apache-2.0.
+facebook/omnilingual-asr-corpus:  Massive  multilingual  speech  corpus  spanning  a  wide  range  of  languages  and  dialects,  created  to  advance  open  ASR  systems  globally.  License:  CC  BY  4.0.
+nvidia/Granary:  a  large-scale,  open-source  multilingual  speech  dataset  covering  25  European  languages  for  Automatic  Speech  Recognition  (ASR)  and  Automatic  Speech  Translation  (AST)  tasks.
+Image  Datasets  mlfoundations/MINT-1T:  Landmark  large-scale  image-text  dataset  scaled  to  trillions  of  tokens,  specifically  designed  to  dramatically  expand  open-source  multimodal  pretraining  data.  License:  CC-BY-4.0.  (Includes  PII  removal  and  robots.txt  filtering.)
+UCSC-VLAA/Recap-DataComp-1B:  Billion-scale  image-text  dataset  featuring  high-quality  recaptions  of  the  original  DataComp-1B  collection.  Optimized  for  vision-language  pretraining  and  detailed  visual  understanding.  License:  CC-BY-4.0.
+dclure/laion-aesthetics-12m-umap:  Curated  12-million-image  subset  of  LAION  focused  on  high  aesthetic  quality  (via  CLIP  and  aesthetic  scoring).  Popular  for  training  visually  pleasing  image  understanding  and  generation  models.  License:  MIT.
+mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M:  Large-scale  (85M  samples)  mid-training  dataset  for  vision-language  models,  emphasizing  instruction  tuning  and  multimodal  alignment.  License:  Apache-2.0.
+UCSC-VLAA/MedTrinity-25M:  Large  medical  image-text  dataset  (25M  samples)  with  rich  annotations  and  captions.  Key  resource  for  building  specialized  medical  vision-language  understanding  and  diagnostic  assistance  features.  License:  only  compliant  (non-SA,  non-NC)  subsets  of  this  compound  dataset  were  used  (see  full  list  on  the  dataset’s  page).
+common-canvas/commoncatalog-cc-by:a  large  collection  of  high-resolution  (up  to  4k)  Creative  Common  images  collected  in  2014  from  Yahoo  and  Flickr,  captioned  by  users.
+Spawning/pd12m-full:  a  large  public  domain  image-text  dataset,  with  sufficient  size  to  train  foundation  models  while  minimizing  copyright  concerns  and  community-driven  dataset  governance  mechanisms  that  reduce  harm  and  support  reproducibility  over  time.
+General  description  of  other  publicly  available  datasets  not  listed  above:
+Other  smaller  publicly  available  and  permissively  licensed  datasets  were  used  for  the  purposes  described  above.  The  exhaustive  list  of  pre-training  datasets  is  accessible  as  a  versioned  csv  on  our  dedicated  GitHub  Repository.  Supervised  fine-tuning  and  alignment  data  are  publicly  accessible  here and  here respectively.  Generally,  all  republished  datasets  used  for  Apertus  v1.5  will  be  made  publicly  available  in  the  swiss-ai  collection  on  Hugging  Face.
+5
+
+Additional  comments  (optional):
+Training  data  preparation  code  (for  pre-  and  post-training)  is  entirely  reproducible  and  is  or  will  be  made  publicly  available  in  the  following  repositories:  -  Version  1.0  text  pretraining  data  preparation  pipelines -  Version  1.5  text  posttraining  data  preparation  pipelines -  Version  1.5  multimodal  data  preparation  pipelines  Most  vision  datasets  include  image  bytes  directly,  but  some  provide  only  URLs  requiring  redownload.  Successful  retrieval  rates  varied.  For  wild  URLs:  ●  dclure/laion-aesthetics-12m-umap (52.82%)  ●  mlfoundations/MINT-1T-HTML (64.10%)  ●  UCSC-VLAA/Recap-DataComp-1B (72.49%)  ●  Salesforce/blip3-grounding-50m (64.43%)  ●  OpenFace-CQUPT/FaceCaption-15M (72.50%)  ●  YangQiee/HQ-50K (72.02%)  ●  allenai/pixmo-point-explanations (77.36%)  ●  allenai/pixmo-ask-model-anything (81.74%)  ●  allenai/Molmo2-MultiImageQA (81.63%)  ●  allenai/pixmo-cap-qa (89.23%)   For  CDN/concentrated-host  sources:  ●  bitmind/open-images-v7 (100.00%)  ●  madebyollin/megalith-10m (97.82%)  ●  allenai/pixmo-cap (98.53%)
+2.2  Private  non-publicly  available  datasets  obtained  from  third  parties   This  Section  requires  information  about  private  non-publicly  available  datasets  of  third  parties  that  are  not
+publicly
+
+available
+
+and
+
+not
+
+disclosed
+
+under
+
+Section
+
+2.1.
+
+These
+
+include:
+
+1)
+
+datasets  for  which  transactional  commercial  licensing  agreements  were  concluded  between  the  provider  and
+the
+
+rightsholders
+
+or
+
+their
+
+representatives,
+
+including
+
+by
+
+collective
+
+management
+
+organisations
+
+and
+
+legitimate
+
+content
+
+aggregators
+
+who
+
+have
+
+the
+
+right
+
+to
+
+collectively
+
+license
+
+works
+
+on
+
+behalf
+
+of
+
+rightsholders
+
+(Section
+
+2.2.1);
+
+2)  other  private  datasets  obtained  through  data  intermediaries,  non-publicly  available  databases  and  datasets  of
+third
+
+parties
+
+for
+
+which
+
+transactional
+
+commercial
+
+licenses
+
+have
+
+not
+
+been
+
+concluded
+
+with
+
+rightsholders
+
+or
+
+their
+
+representatives
+
+(Section
+
+2.2.2).
+
+  2.2.1.  Datasets  commercially  licensed  by  rightsholders  or  their  representatives  Have  you  concluded  transactional  commercial  licensing  agreement(s)  with  rightsholder(s)  or  with  their  representatives?
+☐  Yes      ☒  No
+ If  yes,  specify  the  modality(ies)  of  the  content  covered  by  the  datasets  concerned:
+☐  Text    ☐  Image    ☐  Video
+☐  Audio  ☐  Other
+If
+
+so,
+
+please
+
+specify…
+
+6
+
+2.2.2.  Private  datasets  obtained  from  other  third  parties
+Have  you  obtained  private  datasets  from  third  parties  that  are  not  licensed  as  described  in  Section  2.2.1,  such  as  data  obtained  from  providers  of  private  databases,  or  data  intermediaries?
+☐  Yes   ☒  No
+If  yes,  specify  the  modality(ies)  of  the  content  covered  by  the  datasets  concerned:
+☐  Text    ☐  Image    ☐  Video   ☐  Audio  ☐  Other
+If  publicly  known,  list  private  datasets  obtained  from  other  third  parties:
+N/A
+General  description  of  non-publicly  known  private  datasets  obtained  from  third  parties
+N/A
+Additional  comments  (optional):  N/A
+
+2.3  Data  crawled  and  scraped  from  online  sources
+This  Section  requires  information  about  crawled,  scraped  data,  or  otherwise  compiled  from  online  sources  directly  by  the  provider  of  the  model  or  on  their  behalf  (i.e.  excluding  publicly  available  datasets  already  compiled  by  third  parties  and  made  available  on  platforms  such  as  common  crawl  that  are  covered  under  Section  2.1).            Were  crawlers  used  by  the  provider  or  on  behalf  of?
+☒  Yes   ☐  No
+If  yes,  specify  crawler  name(s)/identifier(s):
+Custom  crawlers:  especially  for  multimodal  content,  such  as  is  often  truncated  by  Common  Crawl.  Purposes  of  the  crawler(s):  Retrieve  data  in  a  responsible,  opt-out  compliant  way.  General  description  of  crawler  behaviour:
+Crawlers  include  respect  of  Captchas,  password  protected  websites,  paywalls,  and  robots.txt  rules.
+Period  of  data  collection:  From  01/2026  to  04/2026
+7
+
+Comprehensive  description  of  the  type  of  content  and  online  sources  crawled:
+While  the  vast  majority  of  the  Apertus  training  data  is  from  pre-existing  public  datasets  (such  as  from  Common  Crawl),  additional  Image-text  content  was  scraped  from  public  institutional  sources:  NASA  science  and  aeronautics  imagery,  Smithsonian  cultural-heritage  collections,  Swiss  federal  cartographic  and  geospatial  data,  and  Our  World  in  Data  articles.  Sources  were  US/Swiss  government  data  and  educational/research  services,  accessed  through  public  APIs,  bulk  release  or  web  services.  Swiss  maps  contain  German,  French  and  Italian  labels;  other  content  is  predominantly  English.  The  collections  are  topic-based,  although  cultural-heritage  material  may  depict  people  and  historical  communities.  The  resulting  datasets  are:    https://huggingface.co/datasets/swiss-ai/nasa A  public-domain  subset  of  the  NASA  Image  and  Video  Library,  filtered  and  captioned  with  a  Qwen  vision-language  model.   https://huggingface.co/datasets/swiss-ai/owid Chart  images,  short  data-insight  posts,  and  narrative  articles  from  Our  World  in  Data,  prepared  as  image-text  data.
+https://huggingface.co/datasets/swiss-ai/smithsonian Museum  objects  from  Smithsonian  with  captions  grounded  in  the  museum's  catalogue  record.
+https://huggingface.co/datasets/swiss-ai/swisstopo Map  tiles  rendered  from  the  Swiss  Federal  Geoportal's  public  WMS  service  with  captions.
+ Type  of  modality  covered:   ☒  Text    ☒  Image    ☐  Video   ☒  Audio   ☐  Other
+If
+
+so,
+
+please
+
+specify…
+
+Summary  of  the  most  relevant  domain  names  crawled:
+Content  was  extracted  from  identified  public  institutional  collections  and  services,  rather  than  through  general-purpose  web  crawling.  Primary  content-source  domains  were:  -  si.edu,  -  nasa.gov,  -  geo.admin.ch,  -  ourworldindata.org.  Smithsonian  bulk  content  was  obtained  through  its  official  AWS  Open  Data  delivery  channel  (amazonaws.com).
+Additional  comments  (optional):  Providers  may  also  disclose  other  relevant  information  on  a  voluntary  basis,  for  instance  more  domain  names  than  those  required  in  the  list  above  and/or  URLs  and  the  sources  of  individual  works.
+
+8
+
+2.4  User  data   This  Section  requires  information  about  user  data  collected  by  all  services  and  products  of  the  provider,
+including
+
+through
+
+mail
+
+services,
+
+social
+
+media
+
+platforms,
+
+content
+
+platforms
+
+or
+
+interaction
+
+with
+
+the
+
+providers’
+
+AI
+
+models
+
+and/or
+
+systems.
+
+This
+
+does
+
+not
+
+cover
+
+data
+
+licensed
+
+by
+
+users
+
+based
+
+on
+
+commercial
+
+transactional
+
+agreements
+
+described
+
+in
+
+Section
+
+2.2.1.,
+
+or
+
+customer
+
+data
+
+to
+
+fine-tune
+
+models
+
+for
+
+specific
+
+purposes.
+
+  Was  data  from  user  interactions  with  the  AI  model  (e.g.  user  input  and  prompts)  used  to  train  the  model?
+ ☐  Yes      ☒  No
+Was  data  collected  from  user  interactions  with  the  provider’s  other  services  or  products  used  to  train  the  model?
+ ☐  Yes      ☒  No
+
+If  yes,  provide  a  general  description  of  the  provider’s  services  or  products  that  were  used  to  collect  the  user  data:
+  N/A
+Type  of  modality  covered:  N/A
+Additional  comments  (optional):  N/A
+
+2.5  Synthetic  data   This  Section  requires  information  about  synthetic  data  created  by  or  on  behalf  of  the  provider  for  training  the
+model
+
+directly
+
+on
+
+the
+
+outputs
+
+of
+
+another
+
+AI
+
+model,
+
+in
+
+particular
+
+through
+
+model
+
+distillation
+
+or
+
+model
+
+alignment
+
+(e.g.
+
+AI
+
+feedback
+
+through
+
+reinforcement
+
+learning).
+
+This
+
+does
+
+not
+
+include
+
+the
+
+use
+
+of
+
+AI
+
+models
+
+to
+
+clean
+
+or
+
+enrich
+
+data
+
+(e.g.
+
+AI-generated
+
+metadata
+
+to
+
+enrich
+
+or
+
+modify
+
+a
+
+dataset,
+
+such
+
+as
+
+creating
+
+depth
+
+maps
+
+or
+
+text
+
+descriptions
+
+of
+
+images).
+
+In
+
+case
+
+this
+
+concerns
+
+publicly
+
+available
+
+datasets
+
+as
+
+described
+
+in
+
+Section
+
+2.1,
+
+these
+
+should
+
+be
+
+reported
+
+in
+
+that
+
+Section
+
+of
+
+the
+
+Template.
+
+In
+
+case
+
+this
+
+concerns
+
+synthetic
+
+datasets
+
+created
+
+by
+
+third
+
+parties
+
+on
+
+behalf
+
+of
+
+the
+
+provider,
+
+these
+
+should
+
+be
+
+reported
+
+in
+
+this
+
+Section
+
+of
+
+the
+
+Template
+
+instead
+
+of
+
+in
+
+Section
+
+2.2.2.
+
+  Was  synthetic  AI-generated  data  created  by  the  provider  or  on  their  behalf  to  train  the  model?
+ ☒  Yes      ☐ No
+ If  yes,  modality  of  the  synthetic  data:  ☒  Text    ☐  Image    ☐  Video   ☐  Audio    ☐  Other
+
+If
+
+so,
+
+please
+
+specify…
+
+If  yes,  specify  the  general-purpose  AI  model(s)  used  to  generate  the  synthetic  data  if  available  on  the  market:
+Qwen3.6-27B and  Qwen3.5-397B-A17B were  used  across  multiple  vision  datasets  to  generate  synthetic  instruction,  question-answer  and  grounded  response  text  paired  with  existing,  non-synthetic  images.   The  following  models  were  used  to  generate  synthetic  post-training  data:  Qwen3-235B,  Kimi-K2.5,  MiniMax-M2.7,  Qwen3.5-397B,  GPT-OSS-120B-Safeguard.
+9
+
+  Information  about  other  AI  models,  including  provider’s  own  AI  model(s)  not  available  on  the  market,  used  to  generate  synthetic  data  to  train  the  model  to  which  this  Summary  applies:
+   N/A.  No  other  non-market  AI  model  was  used  to  generate  synthetic  data.
+Additional  comments  (optional):  In  addition  to  the  models  listed  above,  publicly  available  models  were  also  used  for  data  processing  and  enrichment.  These  included  -  Qwen3.5-9B,  -  Qwen2.5-VL-72B-Instruct,  -  Gemma4-31B-IT,  -  Gemma4-26B-A4B-IT,  -  MedGemma1.5-4B-IT,  -  Kimi-VL-A3B-Instruct,  -  Kimi-VL-A3B-Thinking-2506,  -  and  EuroLLM-22B-Instruct-2512.  Their  uses  included  recaptioning,  caption  cleaning,  OCR,  translation  and  quality  assessment  of  existing  source  material.   All  models  used  in  data  generation  were  hosted  on  our  own  research  infrastructure.
+   2.6  Other  sources  of  data   This  Section  requires  information  about  data  that  does  not  fall  under  any  of  the  categories  in  the  previous
+Sections,
+
+for
+
+example
+
+data
+
+collected
+
+from
+
+offline
+
+sources,
+
+self-digitised
+
+media
+
+(e.g.,
+
+digitised
+
+analog
+
+text
+
+context,
+
+images),
+
+datasets
+
+labelled
+
+by
+
+humans
+
+commissioned
+
+by
+
+the
+
+provider,
+
+or
+
+human
+
+generated
+
+data
+
+through
+
+reinforcement
+
+learning.
+
+  Have  data  sources  other  than  those  described  in  Sections  2.1  to  2.5  been  used  to  train  the  model?   ☐  Yes      ☒  No
+ If  yes,  provide  a  narrative  description  of  these  data  sources  and  the  data:
+ N/A
+Additional  comments  (optional):  N/A
+
+10
+
+1.  Data  processing  aspects  3.  Data  processing  aspects  3.1.  Respect  of  reservation  of  rights  from  text  and  data  mining  exception  or
+limitation
+  This  Section  concerns  measures  implemented  by  the  provider  to  identify  and  comply  with  the  reservation  of
+rights
+
+from
+
+the
+
+text
+
+and
+
+data
+
+mining
+
+(TDM)
+
+exception
+
+or
+
+limitation
+
+expressed
+
+pursuant
+
+to
+
+Article
+
+4(3)
+
+of
+
+Directive
+
+(EU)
+
+2019/790,
+
+as
+
+outlined
+
+in
+
+the
+
+copyright
+
+policy
+
+put
+
+in
+
+place
+
+by
+
+the
+
+provider
+
+in
+
+accordance
+
+with
+
+Article
+
+53(1)(c)
+
+AI
+
+Act.
+
+ Are  you  a  Signatory  to  the  Code  of  Practice  for  general-purpose  AI  models  that  includes  commitments  to  respect  reservations  of  rights  from  the  TDM  exception  or  limitation?
+ ☐  Yes      ☒  No
+Describe  the  measures  implemented  before  model  training  to  respect  reservations  of  rights  from  the  TDM  exception  or  limitation  before  and  during  data  collection,  including  the  opt-out  protocols  and  solutions  honoured  by  the  provider  or,  as  applicable,  by  third  parties  from  which  datasets  have  been  obtained:
+ We  respect  standard  machine-readable  opt-out  by  all  websites.  In  addition,  we  remove  data  from  websites  which  have  recently  opted  out  by  specifying  at  least  one  of  the  common  AI  crawlers,  at  the  time  of  January  2025.  Crucially,  we  have  applied  such  removals  also  retroactively  in  all  earlier  crawls  since  2013,  of  each  corresponding  website  present  in  our  datasets.  Pretraining  and  posttraining  datasets  were  additionally  filtered  for  licence  compliance,  and  text  data  was  processed  with  PII  removal.
+Additional  comments  (optional):
+ Our  Acceptable  Use  Policy  of  Apertus  LLM  is  a  documented  Usage  Policy  statement.  A  summary  of  our  copyright  policy  can  be  found  on  the  model  card  (Legal  aspects),  on  our  website,  and  in  our  Code  of  Practice.
+
+11
+
+ 3.2  Removal  of  illegal  content This  Section  concerns  measures  taken  to  avoid  or  remove  illegal  content  under  Union  law  from  the  training  data  (such  as  blacklists,  keywords,  and  model-based  classifiers),  without  requiring  disclosure  of  specific  details  about  the  provider’s  internal  business  practices  or  trade  secrets.  Such  measures  are  advisable  if  the  training  data  is  likely  to  include  illegal  or  unlawful  content  under  Union  law,  in  particular  child  sexual  abuse  material  and  terrorist  content  and  the  non-authorised  use  of  material  protected  by  intellectual  property  rights.  Such  measures  do  not  include  data  selection  practices,  for  example  to  increase  the  capability  of  the  model.
+General  description  of  measures  taken:
+Before  training,  we  remove  toxic  documents  from  the  pretraining  corpora,  following  the  same  approach  as  Apertus  v1.  We  do  so  by  employing  a  deep  learning  classifier  trained  on  top  of  XLM-Roberta  multilingual  embeddings.  The  classifiers  were  trained  using  the  multilingual  datasets  provided  by  Pleias/toxic-commons   In  addition  to  toxicity  filtering,  most  datasets  also  were  filtered  by  additional  quality  classifiers,  which  we  make  transparently  available,  and  which  further  help  to  reduce  problematic  content.  Image  dataset  are  deduplicated  and  converted  to  appropriate  formats  and  dimensions,  among  other  common  preprocessing  practices.
+3.3.  Other  information  (optional)
+Other  relevant  information  about  data  processing  (optional):
+In  addition  to  the  full  transparency  of  ensuring  all  training  data  of  our  models  is  openly  available  and  reproducible  (Apertus  models  being  open-data  and  open-weights),  we  also  employed  techniques  to  minimize  memorization  or  potentially  remaining  copyrighted  content:  During  training,  we  employ  the  Goldfish  loss  technique ,  which  disables  verbatim  memorization  of  text  sequences  longer  than  50  tokens.   More  precisely,  every  50th  token  (on  average)  of  our  pretraining  data  is  not  provided  a  prediction  target,  i.e.  has  no  loss  function,  and  thus  breaks  verbatim  memorization  beyond  that  sequence  length.  We  provide  more  detailed  results  on  the  success  of  this  mitigation  technique  in  the  model’s  technical  report.
+12
