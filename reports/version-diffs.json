@@ -15439,6 +15439,29 @@
     "to_sha256": "2671b9ca61bd14ee6605a907f64365de01cecb6302044fa5ccdfc19d3c680aa9",
     "computed_at": "2026-10-10T11:52:52Z"
   },
+  "cohere/command-a-plus::provider-page-4b5fc50d::captures/cohere__command-a-plus/provider-page-4b5fc50d/20261010T113143Z>captures/cohere__command-a-plus/provider-page-4b5fc50d/20261021T104342Z": {
+    "verdict": "changed",
+    "similarity": 0.9951,
+    "word_delta": 14,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "page. Meet Embed 5: Cohere s most powerful embeddings models yet, now available in Pro and Fast. Learn",
+        "new": "page. Rerank 5 is here: sharper search, fewer tokens. Now with Context Focus. Learn more"
+      }
+    ],
+    "source": "cohere/command-a-plus",
+    "target": "provider-page-4b5fc50d",
+    "from_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261010T113143Z",
+    "to_dir": "captures/cohere__command-a-plus/provider-page-4b5fc50d/20261021T104342Z",
+    "from_sha256": "2671b9ca61bd14ee6605a907f64365de01cecb6302044fa5ccdfc19d3c680aa9",
+    "to_sha256": "ad961605ad1d76285a2ad2b630e840af70aac8f23e2eded16a305a3c1ec201df",
+    "computed_at": "2026-10-21T11:07:15Z"
+  },
   "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20260819T150449Z>captures/cohere__model-catalog/watch-page-e9526454/20260828T083325Z": {
     "verdict": "changed",
     "similarity": 0.9791,
@@ -15753,6 +15776,114 @@
     "from_sha256": "980d85dc039df25e333cb31a0e665f90a21d4c52bfb0bd336da77f0a7ca1fa27",
     "to_sha256": "2d5b384ac8c7cf88fa0d987d9a50d2abefb5711f16992623388f5d9216848336",
     "computed_at": "2026-10-17T10:15:43Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20261017T100721Z>captures/cohere__model-catalog/watch-page-e9526454/20261021T105918Z": {
+    "verdict": "changed",
+    "similarity": 0.9496,
+    "word_delta": 312,
+    "moved_words": 5,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "documents and semi-structured data JSON",
+        "new": "documents and semi-structured data JSON"
+      },
+      {
+        "op": "insert",
+        "old": "search system. It can",
+        "new": "system. Rerank 5, available in Pro and Fast, is our latest generation and adds Context Focus, which returns the most relevant passages within each document. It"
+      },
+      {
+        "op": "replace",
+        "old": "Rerank The Rerank model can improve created models by re-organizing their results based on certain parameters. This can be used to improve search algorithms. Model",
+        "new": "N/A Rerank Rerank models sort documents by their relevance to a query. They sit on top of an existing keyword, vector, or hybrid search system and reorder its results so the most relevant come first, with no re-indexing required. Rerank 5 is our latest generation, available in two tiers: Pro for the"
+      },
+      {
+        "op": "replace",
+        "old": "Endpoints rerank-v4.0-pro A multilingual",
+        "new": "Endpoints rerank-v5.0-pro Our highest-quality reranker. A"
+      },
+      {
+        "op": "replace",
+        "old": "and non-english documents",
+        "new": "and non-English documents"
+      },
+      {
+        "op": "delete",
+        "old": "This model is",
+        "new": ". This is better"
+      },
+      {
+        "op": "replace",
+        "old": "suited for state-of-the-art quality and complex use-cases than",
+        "new": "for complex, reasoning-heavy queries and long or domain-specific documents than"
+      },
+      {
+        "op": "insert",
+        "old": "fast variant. Text 32k",
+        "new": "variant. Supports Context Focus and calibrated relevance scores. Text"
+      },
+      {
+        "op": "replace",
+        "old": "Rerank rerank-v4.0-fast A",
+        "new": "Rerank rerank-v5.0-fast A"
+      },
+      {
+        "op": "replace",
+        "old": "of rerank-v4.0-pro ,",
+        "new": "of rerank-v5.0-pro ,"
+      },
+      {
+        "op": "replace",
+        "old": "and non-english documents",
+        "new": "and non-English documents"
+      },
+      {
+        "op": "insert",
+        "old": "pro variant. Text 32k",
+        "new": "variant. Supports Context Focus and calibrated relevance scores. Text 32k Rerank rerank-v4.0-pro Previous generation. A highly performant multilingual model for English and non-English . For new projects, we recommend using rerank-v5.0-pro . Text 32k Rerank rerank-v4.0-fast A lighter version of rera"
+      },
+      {
+        "op": "replace",
+        "old": "A model that allows for re-ranking English Language documents and semi-structured data JSON . This model has a context length of 4096 tokens. Text",
+        "new": "A performance upgrade to Rerank v3 series. Supports English and the same non-English languages as embed-multilingual-v3.0 . Text 4k"
+      },
+      {
+        "op": "replace",
+        "old": "rerank-english-v3.0 A model that allows for re-ranking English Language . This model has a context length of 4096 tokens. Text",
+        "new": "rerank-english-v3.0 Our third-generation flagship model. English only. Text"
+      },
+      {
+        "op": "replace",
+        "old": "rerank-multilingual-v3.0 A model for documents and semi-structure data JSON that are not in English. Supports the",
+        "new": "rerank-multilingual-v3.0 For non-English documents supports the"
+      },
+      {
+        "op": "delete",
+        "old": ". This model has a context length of 4096 tokens. Text",
+        "new": ". Text 4k"
+      },
+      {
+        "op": "insert",
+        "old": "Service rerank-v4.0-pro N/A",
+        "new": "Service rerank-v5.0-pro N/A Unique per deployment Cohere-rerank-v5-pro N/A rerank-v5.0-fast N/A Unique per deployment Cohere-rerank-v5-fast N/A rerank-v4.0-pro N/A"
+      },
+      {
+        "op": "replace",
+        "old": "Cohere-rerank-v3-multilingual N/A Rerank accepts full strings rather than tokens, so the token limit works a little differently. Rerank will automatically chunk documents longer than 510 tokens, and there is therefore no explicit limit to how long a document can be when using rerank. See",
+        "new": "N/A For each document included in a request, Rerank combines the tokens from the query with the tokens from the document and the combined total counts toward the context limit for a single document. If the combined number of tokens from the query and a given document exceeds the model s context leng"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261017T100721Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261021T105918Z",
+    "from_sha256": "2d5b384ac8c7cf88fa0d987d9a50d2abefb5711f16992623388f5d9216848336",
+    "to_sha256": "c25db5746a5b4f53b8ecddf4c9e3ec2e0f024bb56bfa39ebf6879a2492f9771b",
+    "computed_at": "2026-10-21T11:07:16Z"
   },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
@@ -19954,6 +20085,79 @@
     "from_sha256": "d4975e9750ec930771d81f9c704c6c912edfafa5f71dd69a57598f79f69115ec",
     "to_sha256": "110acfde87e017cfa8a72977635d1f0c07f3d93612f4ee0471e0dedd6fff5434",
     "computed_at": "2026-10-20T10:58:38Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261020T103854Z>captures/huggingface__smollm3/provider-live-c6d71781/20261021T104758Z": {
+    "verdict": "changed",
+    "similarity": 0.9978,
+    "word_delta": 14,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "20 8.57M 1.3k",
+        "new": "20 8.5M 1.3k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.89M 769",
+        "new": "2025 2.84M 769"
+      },
+      {
+        "op": "replace",
+        "old": "2025 748k 1.07k",
+        "new": "2025 743k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 584k 2.71k",
+        "new": "2024 574k 2.71k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 446k 326 HuggingFaceFW/fineweb-edu",
+        "new": "3.02B 437k 328 HuggingFaceFW/fineweb-edu"
+      },
+      {
+        "op": "replace",
+        "old": "436k 1.36k epfml/FineWeb2-HQ",
+        "new": "436k 1.37k epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 52.4k 85 HuggingFaceTB/finemath",
+        "new": "380M 52.8k 86 HuggingFaceTB/finemath"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 46.7k 392",
+        "new": "48.3M 46.2k 392"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 39.3k 181",
+        "new": "8.61M 38.8k 181"
+      },
+      {
+        "op": "replace",
+        "old": "2024 23.2k 213",
+        "new": "2024 26.7k 213"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.57k 656 Fetching",
+        "new": "3 6.73k 657 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261020T103854Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261021T104758Z",
+    "from_sha256": "110acfde87e017cfa8a72977635d1f0c07f3d93612f4ee0471e0dedd6fff5434",
+    "to_sha256": "5eeb2fa5a2f8e06570b772baf4ed7f74f6add093983ae398fad4f72ff541e0f8",
+    "computed_at": "2026-10-21T11:07:15Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -26976,6 +27180,34 @@
     "from_sha256": "e2d684832e931136338c97532ad53373d2e67556fbeeca1a8ecc083a0033c234",
     "to_sha256": "4181d15fc505689672d01bdfae35852b0d2a6abc22701f87d4399672bc4c1c2b",
     "computed_at": "2026-10-16T10:45:53Z"
+  },
+  "mistral-ai/model-catalog::watch-page-de362d33::captures/mistral-ai__model-catalog/watch-page-de362d33/20261016T103013Z>captures/mistral-ai__model-catalog/watch-page-de362d33/20261021T105751Z": {
+    "verdict": "changed",
+    "similarity": 0.9911,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "documentation. 43 models",
+        "new": "documentation. 44 models"
+      },
+      {
+        "op": "insert",
+        "old": "2026 Voxtral Mini",
+        "new": "2026 Voxtral 3 Includes Voxtral 3 and subsequent versions. October 20, 2026 Voxtral"
+      }
+    ],
+    "source": "mistral-ai/model-catalog",
+    "target": "watch-page-de362d33",
+    "from_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261016T103013Z",
+    "to_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261021T105751Z",
+    "from_sha256": "4181d15fc505689672d01bdfae35852b0d2a6abc22701f87d4399672bc4c1c2b",
+    "to_sha256": "538b33c6319f81abe894fa08ebf465d96d5585db7a3ebec76084d1cef4a6a059",
+    "computed_at": "2026-10-21T11:07:15Z"
   },
   "nvidia/nemotron-nano::aial-eval-a337bf3b::captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260913T123014Z>captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260930T114400Z": {
     "verdict": "changed",

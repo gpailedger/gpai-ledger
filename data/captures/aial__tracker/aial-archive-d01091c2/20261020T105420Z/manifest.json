@@ -36,13 +36,28 @@
     "at": "2026-10-20T10:54:24Z"
   },
   "wayback": {
-    "ok": false,
-    "status_code": 404,
-    "spn_status": 404,
-    "error": "HTTP 404",
-    "answered": false,
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261021110207/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6d3aac49b4e8e354f221b2f93533080848ade33f/public/archive/Aleph_Alpha_Kolibri-1_2026_10_20.pdf",
+    "snapshot_ts": "20261021110207",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-3a44fc865e7e4a9786f2d3df479203a8fe534c82",
     "via": "spn2",
-    "requested_at": "2026-10-20T10:55:25Z",
-    "at": "2026-10-20T10:55:25Z"
-  }
+    "requested_at": "2026-10-21T11:02:05Z",
+    "at": "2026-10-21T11:02:12Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "status_code": 404,
+      "spn_status": 404,
+      "error": "HTTP 404",
+      "answered": false,
+      "via": "spn2",
+      "requested_at": "2026-10-20T10:55:25Z",
+      "at": "2026-10-20T10:55:25Z"
+    }
+  ]
 }
