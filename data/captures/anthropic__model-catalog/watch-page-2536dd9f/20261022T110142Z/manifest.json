@@ -1,0 +1,47 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
+  "size_bytes": 400901,
+  "stored_as": "raw.html",
+  "text_sha256": "904b802e6dbd13f9fb55d406bd731b2bd72e6cde07c0b3d46f2cb3ce9609b057",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-10-22T11:01:42Z"
+  },
+  "prior_sha256": "8e9a826bb73c94f278ecbe2d6090470c8fcbe11591a445e260fc11d00594c5c6",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261022110146/https://platform.claude.com/docs/en/models/overview",
+    "snapshot_ts": "20261022110146",
+    "fresh": true,
+    "same_url": false,
+    "job_id": "spn2-1779fb13f4a2c9ab84229e7a3aa9cba1b1b11340",
+    "via": "spn2",
+    "requested_at": "2026-10-22T11:01:42Z",
+    "at": "2026-10-22T11:01:59Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-22T11:02:02Z"
+  }
+}

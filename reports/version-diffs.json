@@ -11630,6 +11630,44 @@
     "to_sha256": "8e9a826bb73c94f278ecbe2d6090470c8fcbe11591a445e260fc11d00594c5c6",
     "computed_at": "2026-10-20T10:58:39Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261020T104955Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z": {
+    "verdict": "changed",
+    "similarity": 0.9936,
+    "word_delta": 21,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "the desired output length. Refer to",
+        "new": "toward the output length you want. Refer"
+      },
+      {
+        "op": "replace",
+        "old": "you may notice",
+        "new": "you might notice"
+      },
+      {
+        "op": "delete",
+        "old": "Claude If you re ready to start exploring what Claude can do for you, dive in Whether",
+        "new": "with Claude Whether you"
+      },
+      {
+        "op": "replace",
+        "old": "questions, reach out to the",
+        "new": "questions, contact the support"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261020T104955Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z",
+    "from_sha256": "8e9a826bb73c94f278ecbe2d6090470c8fcbe11591a445e260fc11d00594c5c6",
+    "to_sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
+    "computed_at": "2026-10-22T11:16:07Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -20158,6 +20196,84 @@
     "from_sha256": "110acfde87e017cfa8a72977635d1f0c07f3d93612f4ee0471e0dedd6fff5434",
     "to_sha256": "5eeb2fa5a2f8e06570b772baf4ed7f74f6add093983ae398fad4f72ff541e0f8",
     "computed_at": "2026-10-21T11:07:15Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261021T104758Z>captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z": {
+    "verdict": "changed",
+    "similarity": 0.9963,
+    "word_delta": 19,
+    "moved_words": 7,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "HuggingFaceFW/fineweb-edu Viewer Updated Jul 11, 2025 3.5B",
+        "new": "HuggingFaceFW/fineweb-edu Viewer Updated Jul 11, 2025 3.5B"
+      },
+      {
+        "op": "replace",
+        "old": "20 8.5M 1.3k Qwen/Qwen3-32B",
+        "new": "20 8.34M 1.31k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.84M 769 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.75M 771 HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 743k 1.07k",
+        "new": "2025 731k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 574k 2.71k",
+        "new": "2024 564k 2.71k"
+      },
+      {
+        "op": "insert",
+        "old": "datasets 7 mlfoundations/dclm-baseline-1.0 Viewer",
+        "new": "7 435k 1.37k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 437k 328 436k 1.37k epfml/FineWeb2-HQ",
+        "new": "3.02B 430k 329 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 52.8k 86",
+        "new": "380M 53.2k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 46.2k 392 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 46k 393 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 38.8k 181 allenai/peS2o",
+        "new": "8.61M 38.7k 182 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "26.7k 213 bigcode/the-stack-v2",
+        "new": "26.7k 215 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.73k 657",
+        "new": "3 6.69k 657"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261021T104758Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z",
+    "from_sha256": "5eeb2fa5a2f8e06570b772baf4ed7f74f6add093983ae398fad4f72ff541e0f8",
+    "to_sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
+    "computed_at": "2026-10-22T11:16:06Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
