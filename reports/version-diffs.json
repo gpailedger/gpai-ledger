@@ -11668,6 +11668,34 @@
     "to_sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
     "computed_at": "2026-10-22T11:16:07Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z": {
+    "verdict": "changed",
+    "similarity": 0.9931,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "anthropic.claude-sonnet-5-5 anthropic.claude-haiku-5-5 Google Cloud ID claude-fable-5-1",
+        "new": "anthropic.claude-haiku-5-5 Claude Models on Google Cloud Google managed ID"
+      },
+      {
+        "op": "insert",
+        "old": "AWS ID claude-fable-5-1",
+        "new": "ID claude-fable-5-1 claude-opus-5-5 claude-sonnet-5-5 claude-haiku-5-5 Claude Models on Google Cloud Anthropic managed ID claude-fable-5-1"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z",
+    "from_sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
+    "to_sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
+    "computed_at": "2026-10-23T11:10:47Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -12767,6 +12795,29 @@
     "from_sha256": "a1441459d4578ac15d729ff02bcc2520e3e4817323307a407b8cd9a56a9b1d21",
     "to_sha256": "c91350024d521392a4cc082f0ef3ad3f4380318c58c418332c9cda996d6e1411",
     "computed_at": "2026-10-20T10:58:38Z"
+  },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z": {
+    "verdict": "changed",
+    "similarity": 0.9984,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Pricing Enterprise Resources",
+        "new": "Weights Pricing Resources Contact"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z",
+    "from_sha256": "c91350024d521392a4cc082f0ef3ad3f4380318c58c418332c9cda996d6e1411",
+    "to_sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
+    "computed_at": "2026-10-23T11:10:47Z"
   },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
@@ -20275,6 +20326,79 @@
     "to_sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
     "computed_at": "2026-10-22T11:16:06Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z>captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 16,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.34M 1.31k",
+        "new": "20 8.13M 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "2.75M 771 HuggingFaceTB/SmolLM3-3B",
+        "new": "2.75M 772 HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 731k 1.07k",
+        "new": "2025 719k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 564k 2.71k",
+        "new": "2024 547k 2.71k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 435k 1.37k",
+        "new": "3.5B 433k 1.37k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 430k 329 epfml/FineWeb2-HQ",
+        "new": "3.02B 416k 330 epfml/FineWeb2-HQ Viewer"
+      },
+      {
+        "op": "replace",
+        "old": "380M 53.2k 86",
+        "new": "380M 53.5k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 46k 393 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 46.5k 394 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 38.7k 182 allenai/peS2o",
+        "new": "8.61M 38.9k 183 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 26.7k 215 bigcode/the-stack-v2",
+        "new": "2024 26.8k 216 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.69k 657 Fetching",
+        "new": "3 6.87k 658 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z",
+    "from_sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
+    "to_sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
+    "computed_at": "2026-10-23T11:10:47Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -24681,6 +24805,34 @@
     "from_sha256": "a9cc70f67106d76e2583563d148847e423442865abf71445591f0fd3c25f9000",
     "to_sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
     "computed_at": "2026-10-17T10:15:43Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z": {
+    "verdict": "changed",
+    "similarity": 0.9873,
+    "word_delta": 24,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "our team Frontier Pre-training",
+        "new": "team Building Medical Superintelligence 6 min read Frontier"
+      },
+      {
+        "op": "delete",
+        "old": "min read Humanist AI in practice: A public consultation on our Code of Conduct for MAI Models 6 min read",
+        "new": "5 min read"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z",
+    "from_sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
+    "to_sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
+    "computed_at": "2026-10-23T11:10:48Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -30927,6 +31079,29 @@
     "from_sha256": "db7cb2fc9334d503b9d2c9c734c2de5bceea2d78ed885cf3ddcda1bf5c00cc10",
     "to_sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
     "computed_at": "2026-10-20T10:58:39Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z>captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z": {
+    "verdict": "changed",
+    "similarity": 0.9984,
+    "word_delta": 7,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "LiteLLM ChatGPT Work",
+        "new": "LiteLLM ChatGPT EDU Education plans Higher education setup ChatGPT"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z",
+    "from_sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
+    "to_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
+    "computed_at": "2026-10-23T11:10:47Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

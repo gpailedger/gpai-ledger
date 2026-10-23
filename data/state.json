@@ -687,11 +687,15 @@
       {
         "sha256": "c91350024d521392a4cc082f0ef3ad3f4380318c58c418332c9cda996d6e1411",
         "dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z"
+      },
+      {
+        "sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
+        "dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z"
       }
     ],
-    "last_sha256": "c91350024d521392a4cc082f0ef3ad3f4380318c58c418332c9cda996d6e1411",
-    "last_capture": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261020T103200Z",
-    "last_text_sha256": "39c375440abb85f2d5d325732f48bddcf469bbb23d30e7939f1441c774088b16"
+    "last_sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
+    "last_capture": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z",
+    "last_text_sha256": "ec4f7a37776c3ce8299b36bdb2b4522f04104349d61d71a074b3f8b11a37b2c5"
   },
   "black-forest-labs/flux-3::aial-archive-f5f612cf": {
     "versions": [
@@ -1322,11 +1326,15 @@
       {
         "sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z"
+      },
+      {
+        "sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z"
       }
     ],
-    "last_sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261022T105122Z",
-    "last_text_sha256": "0ea2d2f8f58f9034b756d943ad6143dfa7d425b4693a2ae6679d88e4302046cc"
+    "last_sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z",
+    "last_text_sha256": "fd6dda108d0932e4f3145aeeeb52101d7308d6428c853e3579ba0526cb216b0c"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -2231,11 +2239,15 @@
       {
         "sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z"
+      },
+      {
+        "sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z"
       }
     ],
-    "last_sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
-    "last_text_sha256": "89d90d4a69f19cdc787b226ec6c12d67c65f0c52c968aac127378b97c36c663f",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261020T104828Z"
+    "last_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
+    "last_text_sha256": "4ee596dd17bdc9439eeb322990e80feefd459073525376cc2bc52bdf7ca9f315",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -2306,11 +2318,15 @@
       {
         "sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
         "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z"
+      },
+      {
+        "sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
+        "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z"
       }
     ],
-    "last_sha256": "8ef02e6c6b744ce5dad76c8990f2d40d713c56dd1ca788473dc97ad87c2f5a0b",
-    "last_text_sha256": "904b802e6dbd13f9fb55d406bd731b2bd72e6cde07c0b3d46f2cb3ce9609b057",
-    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261022T110142Z"
+    "last_sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
+    "last_text_sha256": "91f6c52a785917b3d233c08511c3bd9d36dbf57867209fb231463f90af52d811",
+    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z"
   },
   "mistral-ai/model-catalog::watch-page-de362d33": {
     "versions": [
@@ -2506,11 +2522,15 @@
       {
         "sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
         "dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z"
+      },
+      {
+        "sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
+        "dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z"
       }
     ],
-    "last_sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
-    "last_text_sha256": "fdd995b37f97d8c27b2f6b013d446fd1baacbb925955718fcb682a6386a27e08",
-    "last_capture": "captures/microsoft__model-catalog/watch-page-72b310dd/20261017T100804Z"
+    "last_sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
+    "last_text_sha256": "362cbe8a8875614644a6205673e3f0926e273e0c1a805ca3c555873468580e74",
+    "last_capture": "captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z"
   },
   "eu-commission/gpai-code-of-practice::watch-page-d5c1e904": {
     "versions": [
