@@ -11696,6 +11696,29 @@
     "to_sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
     "computed_at": "2026-10-23T11:10:47Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z": {
+    "verdict": "changed",
+    "similarity": 0.9808,
+    "word_delta": 54,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Platform Docs Claude",
+        "new": "Platform Docs Cookie settings We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. You can read our Cookie Policy here opens in new tab . Customize Customize cookie settings Reject Reject"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z",
+    "from_sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
+    "to_sha256": "57265aed878502f585d40528bcf3b2e16d6ed479cc87ca7fc3448e712c64f921",
+    "computed_at": "2026-10-24T10:21:55Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -18413,6 +18436,19 @@
     "to_sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
     "computed_at": "2026-10-14T11:12:21Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z>captures/google__transparency-bucket/watch-page-81cd3682/20261024T101304Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261024T101304Z",
+    "from_sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
+    "to_sha256": "121e9b8def7b8229520f5dcc296e9f8ccf4fc90af2aacd2622aa03342d530a99",
+    "computed_at": "2026-10-24T10:21:54Z"
+  },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -20398,6 +20434,79 @@
     "from_sha256": "4c2f6f8732bf1b4d9d473dcce3c29e05910e7e8e7195aaf572484cb530e14de1",
     "to_sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
     "computed_at": "2026-10-23T11:10:47Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z>captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.13M 1.31k",
+        "new": "20 8.21M 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.75M 772",
+        "new": "2025 2.88M 772"
+      },
+      {
+        "op": "replace",
+        "old": "2025 719k 1.07k",
+        "new": "2025 724k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 547k 2.71k Linked",
+        "new": "2024 545k 2.72k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 433k 1.37k",
+        "new": "3.5B 432k 1.37k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 416k 330",
+        "new": "3.02B 406k 330"
+      },
+      {
+        "op": "replace",
+        "old": "380M 53.5k 86",
+        "new": "380M 54.3k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 46.5k 394",
+        "new": "48.3M 47.4k 394"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 38.9k 183",
+        "new": "8.61M 39.5k 183"
+      },
+      {
+        "op": "replace",
+        "old": "2024 26.8k 216",
+        "new": "2024 27.1k 216"
+      },
+      {
+        "op": "replace",
+        "old": "3 6.87k 658",
+        "new": "3 7.93k 658"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z",
+    "from_sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
+    "to_sha256": "dc6e7e7b2a47a14c81b7c313f239dbd398979c04460e3a4b0285b6d2f4e3168a",
+    "computed_at": "2026-10-24T10:21:54Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -31102,6 +31211,49 @@
     "from_sha256": "fa6a7f9e1f829b032fdc1994efa7821e3dc8665b6699a298d43e09306062f479",
     "to_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
     "computed_at": "2026-10-23T11:10:47Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z>captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z": {
+    "verdict": "changed",
+    "similarity": 0.9984,
+    "word_delta": 8,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Manage sessions Webhooks",
+        "new": "Manage sessions Scheduled automations Webhooks"
+      },
+      {
+        "op": "insert",
+        "old": "App Server GitHub Action",
+        "new": "Server Model catalogs GitHub"
+      },
+      {
+        "op": "insert",
+        "old": "Mini TTS Text-to-speech model",
+        "new": "TTS Deprecated Text-to-speech"
+      },
+      {
+        "op": "insert",
+        "old": "GPT-4o Transcribe Speech-to-text model",
+        "new": "Transcribe Deprecated Speech-to-text"
+      },
+      {
+        "op": "insert",
+        "old": "Mini Transcribe Speech-to-text model",
+        "new": "Transcribe Deprecated Speech-to-text"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z",
+    "from_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
+    "to_sha256": "dfc32a30459861a1c7e87618254f730a5f4cfdf786f24fa36828d4db413ab71a",
+    "computed_at": "2026-10-24T10:21:55Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

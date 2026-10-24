@@ -37,10 +37,25 @@
     "at": "2026-09-30T11:56:34Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6aede74980>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261024101829/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/919ee13931672bd9c64f9155d2fc76911b76f4d4/public/evals/anthropic-claude-opus-5-5/index.html",
+    "snapshot_ts": "20261024101829",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-93f9b8c3f8a5e9a66ea84c5671a0f37ff0b94622",
     "via": "spn2",
-    "requested_at": "2026-10-23T11:01:46Z",
-    "at": "2026-10-23T11:03:46Z"
-  }
+    "requested_at": "2026-10-24T10:17:20Z",
+    "at": "2026-10-24T10:18:30Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6aede74980>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-10-23T11:01:46Z",
+      "at": "2026-10-23T11:03:46Z"
+    }
+  ]
 }

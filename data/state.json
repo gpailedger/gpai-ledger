@@ -1330,11 +1330,15 @@
       {
         "sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z"
+      },
+      {
+        "sha256": "dc6e7e7b2a47a14c81b7c313f239dbd398979c04460e3a4b0285b6d2f4e3168a",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z"
       }
     ],
-    "last_sha256": "97e1a849ec29e0f567d719adb0c82919560e9afa450d219ecc477c9244d130cb",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261023T104500Z",
-    "last_text_sha256": "fd6dda108d0932e4f3145aeeeb52101d7308d6428c853e3579ba0526cb216b0c"
+    "last_sha256": "dc6e7e7b2a47a14c81b7c313f239dbd398979c04460e3a4b0285b6d2f4e3168a",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z",
+    "last_text_sha256": "f3ef4ca6da3da3285d7d0d9f2a273d2850c21181323e5eedc5db33552c996ad5"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -1950,10 +1954,14 @@
       {
         "sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
         "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z"
+      },
+      {
+        "sha256": "121e9b8def7b8229520f5dcc296e9f8ccf4fc90af2aacd2622aa03342d530a99",
+        "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261024T101304Z"
       }
     ],
-    "last_sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
-    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261014T110314Z",
+    "last_sha256": "121e9b8def7b8229520f5dcc296e9f8ccf4fc90af2aacd2622aa03342d530a99",
+    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261024T101304Z",
     "last_text_sha256": null
   },
   "openai/gpt-5-2::provider-live-e7ad6bc8": {
@@ -2243,11 +2251,15 @@
       {
         "sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z"
+      },
+      {
+        "sha256": "dfc32a30459861a1c7e87618254f730a5f4cfdf786f24fa36828d4db413ab71a",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z"
       }
     ],
-    "last_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
-    "last_text_sha256": "4ee596dd17bdc9439eeb322990e80feefd459073525376cc2bc52bdf7ca9f315",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261023T105415Z"
+    "last_sha256": "dfc32a30459861a1c7e87618254f730a5f4cfdf786f24fa36828d4db413ab71a",
+    "last_text_sha256": "5644e28b00132f7a8e5bb6d39f6ab015e8e30a8ab8c84569a2e41255b03c59b3",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -2322,11 +2334,15 @@
       {
         "sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
         "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z"
+      },
+      {
+        "sha256": "57265aed878502f585d40528bcf3b2e16d6ed479cc87ca7fc3448e712c64f921",
+        "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z"
       }
     ],
-    "last_sha256": "8fc69901a0567a691043299a1f9fc7060f819ff3adef4098a3aee33ec260ecfd",
-    "last_text_sha256": "91f6c52a785917b3d233c08511c3bd9d36dbf57867209fb231463f90af52d811",
-    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261023T105606Z"
+    "last_sha256": "57265aed878502f585d40528bcf3b2e16d6ed479cc87ca7fc3448e712c64f921",
+    "last_text_sha256": "75f8e4223d61b46569264487334484dfd00d88ea14a1fe79704f286a4dd315a2",
+    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z"
   },
   "mistral-ai/model-catalog::watch-page-de362d33": {
     "versions": [

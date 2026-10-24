@@ -1,0 +1,43 @@
+{
+  "source_id": "google/transparency-bucket",
+  "provider": "Google",
+  "model": "Transparency-report file store (watched for summary drops)",
+  "target_kind": "watch-page",
+  "sha256": "121e9b8def7b8229520f5dcc296e9f8ccf4fc90af2aacd2622aa03342d530a99",
+  "size_bytes": 77328,
+  "stored_as": "raw.bin",
+  "text_sha256": null,
+  "extraction_notes": [
+    "no extractor for .bin"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "final_url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "status_code": 200,
+    "content_type": "application/xml",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "77328",
+    "fetched_at": "2026-10-24T10:13:04Z"
+  },
+  "prior_sha256": "66ea0e3acfeba81453bf86be176c39e5ad0e52f3e0bece09b92654efdd763e5e",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-3edf062d5a2417e99a1b86b421a77cd6aea69d33 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f53d8804860>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "job_id": "spn2-3edf062d5a2417e99a1b86b421a77cd6aea69d33",
+    "via": "spn2",
+    "requested_at": "2026-10-24T10:13:04Z",
+    "at": "2026-10-24T10:15:10Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-24T10:15:12Z"
+  }
+}
