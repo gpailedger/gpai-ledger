@@ -20508,6 +20508,74 @@
     "to_sha256": "dc6e7e7b2a47a14c81b7c313f239dbd398979c04460e3a4b0285b6d2f4e3168a",
     "computed_at": "2026-10-24T10:21:54Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z>captures/huggingface__smollm3/provider-live-c6d71781/20261025T102203Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.21M 1.31k",
+        "new": "20 8.19M 1.31k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.88M 772",
+        "new": "2025 2.9M 772"
+      },
+      {
+        "op": "replace",
+        "old": "2025 724k 1.07k",
+        "new": "2025 719k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 545k 2.72k",
+        "new": "2024 535k 2.72k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 432k 1.37k",
+        "new": "3.5B 433k 1.37k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 406k 330",
+        "new": "3.02B 393k 330"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54.3k 86",
+        "new": "380M 54.7k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 47.4k 394",
+        "new": "48.3M 48.3k 394"
+      },
+      {
+        "op": "replace",
+        "old": "2025 8.61M 39.5k 183",
+        "new": "8.61M 40.3k 183"
+      },
+      {
+        "op": "replace",
+        "old": "Aug 3 7.93k 658 Fetching",
+        "new": "3 9.07k 660 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261024T095952Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261025T102203Z",
+    "from_sha256": "dc6e7e7b2a47a14c81b7c313f239dbd398979c04460e3a4b0285b6d2f4e3168a",
+    "to_sha256": "255cdebd814da904598409d2134bff153bea656e73f3791613d290f702274667",
+    "computed_at": "2026-10-25T10:45:29Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
