@@ -1,0 +1,47 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "provider-live",
+  "sha256": "008297d15361924ea44b15bb30d0d6a70ec58aa708295eebb1f531280f776645",
+  "size_bytes": 804695,
+  "stored_as": "raw.html",
+  "text_sha256": "59e8df8d9bf84c41d8197c94d084bc4003d5f9f7f73d320f6dbf64390b6e4255",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "final_url": "https://transparency.meta.com/reports/regulatory-transparency-reports/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "804695",
+    "fetched_at": "2026-10-27T11:15:18Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 7,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-10-27T11:16:48Z",
+    "at": "2026-10-27T11:18:48Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-27T11:18:51Z"
+  }
+}

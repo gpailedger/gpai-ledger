@@ -37,12 +37,17 @@
     "at": "2026-09-12T06:25:35Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-b8a77a673fac25266ef4db46dc4aa4c8760e7b71 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261027113050/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/openai-gpt-5.2/index.html",
+    "snapshot_ts": "20261027113050",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-b8a77a673fac25266ef4db46dc4aa4c8760e7b71",
     "via": "spn2",
-    "requested_at": "2026-10-26T12:02:11Z",
-    "at": "2026-10-26T12:02:33Z"
+    "requested_at": "2026-10-27T11:30:50Z",
+    "at": "2026-10-27T11:30:55Z"
   },
   "wayback_attempts": [
     {
@@ -51,6 +56,14 @@
       "via": "spn2",
       "requested_at": "2026-10-25T10:41:41Z",
       "at": "2026-10-25T10:43:41Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-b8a77a673fac25266ef4db46dc4aa4c8760e7b71 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "job_id": "spn2-b8a77a673fac25266ef4db46dc4aa4c8760e7b71",
+      "via": "spn2",
+      "requested_at": "2026-10-26T12:02:11Z",
+      "at": "2026-10-26T12:02:33Z"
     }
   ]
 }

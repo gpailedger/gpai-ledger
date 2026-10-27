@@ -20644,6 +20644,79 @@
     "to_sha256": "b051609ad0022789a36676c605eba294aa6017db50362fd9392c3c55150c5d72",
     "computed_at": "2026-10-26T12:03:06Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261026T114504Z>captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z": {
+    "verdict": "changed",
+    "similarity": 0.9971,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.21M 1.31k Qwen/Qwen3-32B",
+        "new": "20 8.27M 1.32k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.89M 772 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 703k 1.07k",
+        "new": "2025 694k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 533k 2.73k",
+        "new": "2024 537k 2.73k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 434k 1.38k",
+        "new": "3.5B 435k 1.38k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 378k 330 epfml/FineWeb2-HQ",
+        "new": "3.02B 350k 331 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54.7k 86",
+        "new": "380M 54.1k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 48.9k 394 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 49.4k 395 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 40.5k 183 allenai/peS2o",
+        "new": "8.61M 40.2k 184 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 27.7k 216 bigcode/the-stack-v2",
+        "new": "2024 28k 217 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 10.3k 661",
+        "new": "3 10.9k 661"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261026T114504Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z",
+    "from_sha256": "b051609ad0022789a36676c605eba294aa6017db50362fd9392c3c55150c5d72",
+    "to_sha256": "3208ca5710e785829f813527859fefae0f1b1bd9bf97bbc3dfdbd16bcd90655e",
+    "computed_at": "2026-10-27T11:34:54Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -20924,6 +20997,59 @@
     "from_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
     "to_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
     "computed_at": "2026-10-07T12:37:27Z"
+  },
+  "meta/muse-glimmer::provider-live-595d1bcb::captures/meta__muse-glimmer/provider-live-595d1bcb/20261007T121926Z>captures/meta__muse-glimmer/provider-live-595d1bcb/20261027T111518Z": {
+    "verdict": "changed",
+    "similarity": 0.953,
+    "word_delta": 181,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "report Policies Community",
+        "new": "report Policies Policies"
+      },
+      {
+        "op": "insert",
+        "old": "Content Features Our",
+        "new": "Features Features Our"
+      },
+      {
+        "op": "delete",
+        "old": "tools Content Library and Content Library API Ad Library Tools Other research tools and data catalogue Enforcement Detecting violations Taking action Governance Governance innovation Oversight Board overview How to appeal to the Oversight Board Oversight Board cases Oversight Board recommendations C",
+        "new": "Research tools Research tools"
+      },
+      {
+        "op": "insert",
+        "old": "catalogue Security Threat",
+        "new": "catalogue Security Security"
+      },
+      {
+        "op": "insert",
+        "old": "reporting Reports Community",
+        "new": "Reports Reports Community"
+      },
+      {
+        "op": "insert",
+        "old": "Reports Enforcement Detecting",
+        "new": "Reports Enforcement Enforcement"
+      },
+      {
+        "op": "insert",
+        "old": "action Governance Governance",
+        "new": "Governance Governance Governance"
+      }
+    ],
+    "source": "meta/muse-glimmer",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-glimmer/provider-live-595d1bcb/20261007T121926Z",
+    "to_dir": "captures/meta__muse-glimmer/provider-live-595d1bcb/20261027T111518Z",
+    "from_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
+    "to_sha256": "008297d15361924ea44b15bb30d0d6a70ec58aa708295eebb1f531280f776645",
+    "computed_at": "2026-10-27T11:34:54Z"
   },
   "meta/muse-glimmer::provider-live-7d5a5ed8::captures/meta__muse-glimmer/provider-live-a5a127ab/20260817T085543Z>captures/meta__muse-glimmer/provider-live-4d91704b/20260822T072953Z": {
     "verdict": "changed",
@@ -21786,6 +21912,59 @@
     "from_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
     "to_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
     "computed_at": "2026-10-07T12:37:24Z"
+  },
+  "meta/muse-image::provider-live-595d1bcb::captures/meta__muse-image/provider-live-595d1bcb/20261007T122002Z>captures/meta__muse-image/provider-live-595d1bcb/20261027T111606Z": {
+    "verdict": "changed",
+    "similarity": 0.953,
+    "word_delta": 181,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "report Policies Community",
+        "new": "report Policies Policies"
+      },
+      {
+        "op": "insert",
+        "old": "Content Features Our",
+        "new": "Features Features Our"
+      },
+      {
+        "op": "delete",
+        "old": "tools Content Library and Content Library API Ad Library Tools Other research tools and data catalogue Enforcement Detecting violations Taking action Governance Governance innovation Oversight Board overview How to appeal to the Oversight Board Oversight Board cases Oversight Board recommendations C",
+        "new": "Research tools Research tools"
+      },
+      {
+        "op": "insert",
+        "old": "catalogue Security Threat",
+        "new": "catalogue Security Security"
+      },
+      {
+        "op": "insert",
+        "old": "reporting Reports Community",
+        "new": "Reports Reports Community"
+      },
+      {
+        "op": "insert",
+        "old": "Reports Enforcement Detecting",
+        "new": "Reports Enforcement Enforcement"
+      },
+      {
+        "op": "insert",
+        "old": "action Governance Governance",
+        "new": "Governance Governance Governance"
+      }
+    ],
+    "source": "meta/muse-image",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-image/provider-live-595d1bcb/20261007T122002Z",
+    "to_dir": "captures/meta__muse-image/provider-live-595d1bcb/20261027T111606Z",
+    "from_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
+    "to_sha256": "008297d15361924ea44b15bb30d0d6a70ec58aa708295eebb1f531280f776645",
+    "computed_at": "2026-10-27T11:34:54Z"
   },
   "meta/muse-image::provider-live-e520ba83::captures/meta__muse-image/provider-live-4dc1e607/20260817T085614Z>captures/meta__muse-image/provider-live-a63bf5b9/20260822T073106Z": {
     "verdict": "changed",
@@ -22813,6 +22992,59 @@
     "from_sha256": "92e532a049697e3b511a6f6d41249f8400bf00d7973937b8c20ccdfe833338d8",
     "to_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
     "computed_at": "2026-10-07T12:37:25Z"
+  },
+  "meta/muse-spark::provider-live-595d1bcb::captures/meta__muse-spark/provider-live-595d1bcb/20261007T122025Z>captures/meta__muse-spark/provider-live-595d1bcb/20261027T111648Z": {
+    "verdict": "changed",
+    "similarity": 0.953,
+    "word_delta": 181,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "report Policies Community",
+        "new": "report Policies Policies"
+      },
+      {
+        "op": "insert",
+        "old": "Content Features Our",
+        "new": "Features Features Our"
+      },
+      {
+        "op": "delete",
+        "old": "tools Content Library and Content Library API Ad Library Tools Other research tools and data catalogue Enforcement Detecting violations Taking action Governance Governance innovation Oversight Board overview How to appeal to the Oversight Board Oversight Board cases Oversight Board recommendations C",
+        "new": "Research tools Research tools"
+      },
+      {
+        "op": "insert",
+        "old": "catalogue Security Threat",
+        "new": "catalogue Security Security"
+      },
+      {
+        "op": "insert",
+        "old": "reporting Reports Community",
+        "new": "Reports Reports Community"
+      },
+      {
+        "op": "insert",
+        "old": "Reports Enforcement Detecting",
+        "new": "Reports Enforcement Enforcement"
+      },
+      {
+        "op": "insert",
+        "old": "action Governance Governance",
+        "new": "Governance Governance Governance"
+      }
+    ],
+    "source": "meta/muse-spark",
+    "target": "provider-live-595d1bcb",
+    "from_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20261007T122025Z",
+    "to_dir": "captures/meta__muse-spark/provider-live-595d1bcb/20261027T111648Z",
+    "from_sha256": "9238dabc76458a4bebe2e7016d8b6d714c033c4784b8b2a17d232a0e6efd72d5",
+    "to_sha256": "008297d15361924ea44b15bb30d0d6a70ec58aa708295eebb1f531280f776645",
+    "computed_at": "2026-10-27T11:34:54Z"
   },
   "meta/muse-spark::provider-live-df0a7357::captures/meta__muse-spark/provider-live-10891b9c/20260822T073238Z>captures/meta__muse-spark/provider-live-df0a7357/20260903T061956Z": {
     "verdict": "changed",
@@ -25078,6 +25310,29 @@
     "from_sha256": "103afdf21fbd701d50b27c768c9681089a3bd041f077530965dc70196f8f6d0c",
     "to_sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
     "computed_at": "2026-10-23T11:10:48Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261027T112705Z": {
+    "verdict": "changed",
+    "similarity": 0.9849,
+    "word_delta": 23,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Learn more Foundational model MAI-Cyber-1-Flash Learn more A new cybersecurity model built into MDASH, our multi-agent vulnerability identification and remediation harness. Learn more Learn more",
+        "new": "Learn more Try"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261023T105625Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261027T112705Z",
+    "from_sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
+    "to_sha256": "ff0d9f068ee6952c323d046d06f4c47570d62f8f4502e24985148c0164a00a23",
+    "computed_at": "2026-10-27T11:34:55Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -31390,6 +31645,34 @@
     "from_sha256": "1df997e020e836f2916c55ce26f8820669dabbb22de11c398ab4d483757536d7",
     "to_sha256": "dfc32a30459861a1c7e87618254f730a5f4cfdf786f24fa36828d4db413ab71a",
     "computed_at": "2026-10-24T10:21:55Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z>captures/openai__model-catalog/watch-page-0e5ba652/20261027T112624Z": {
+    "verdict": "changed",
+    "similarity": 0.9843,
+    "word_delta": 81,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "models Start with GPT-6 Astra for complex reasoning and coding, choose GPT-6.1 Sol to balance intelligence and cost, or use GPT-6 Luna for cost-sensitive, high-volume workloads. View",
+        "new": "models Compare model capabilities and specifications. View"
+      },
+      {
+        "op": "insert",
+        "old": "30, 2026 Tools",
+        "new": "2026 Tools Functions, Web search, File search, Computer use Terra GPT-6.1 Terra A fast, efficient model for visual reasoning, precise computer use, and clear, natural writing. Model ID gpt-6.1-terra Reasoning none low medium high xhigh max Input price 1 / Input MTok Output price 5 / Output MTok Max "
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261024T101052Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261027T112624Z",
+    "from_sha256": "dfc32a30459861a1c7e87618254f730a5f4cfdf786f24fa36828d4db413ab71a",
+    "to_sha256": "870ab6a7d959e2ad3d9bf0edbd7ffebb19d3d4f8f5eaaf823cb11dc39a1937f5",
+    "computed_at": "2026-10-27T11:34:55Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
