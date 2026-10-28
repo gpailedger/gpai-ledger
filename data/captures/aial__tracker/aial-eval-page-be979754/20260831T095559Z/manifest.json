@@ -35,5 +35,12 @@
     ],
     "errors": [],
     "at": "2026-08-31T09:56:05Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7348e3af5be0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "via": "spn2",
+    "requested_at": "2026-10-28T12:13:32Z",
+    "at": "2026-10-28T12:15:32Z"
   }
 }

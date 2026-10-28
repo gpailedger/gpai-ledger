@@ -11719,6 +11719,74 @@
     "to_sha256": "57265aed878502f585d40528bcf3b2e16d6ed479cc87ca7fc3448e712c64f921",
     "computed_at": "2026-10-24T10:21:55Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261028T120103Z": {
+    "verdict": "changed",
+    "similarity": 0.7587,
+    "word_delta": 852,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Platform Docs Cookie settings We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. You can read our Cookie Policy here opens in new tab . Customize Customize cookie settings Reject Reject",
+        "new": "Platform Docs Claude"
+      },
+      {
+        "op": "insert",
+        "old": "Models API .",
+        "new": "API Preview with links to the API reference available press Tab until focus enters the card, Escape to return. ."
+      },
+      {
+        "op": "insert",
+        "old": "includes max_input_tokens , max_tokens ,",
+        "new": "max_input_tokens Preview with links to the API reference available press Tab until focus enters the card, Escape to return. , max_tokens Preview with links to the API reference available press Tab until focus enters the card, Escape to return. ,"
+      },
+      {
+        "op": "insert",
+        "old": "a capabilities object for",
+        "new": "capabilities Preview with links to the API reference available press Tab until focus enters the card, Escape to return. object"
+      },
+      {
+        "op": "insert",
+        "old": "a line field, which",
+        "new": "line Preview with links to the API reference available press Tab until focus enters the card, Escape to return. field,"
+      },
+      {
+        "op": "insert",
+        "old": "includes thinking.types.disabled ,",
+        "new": "thinking.types.disabled Preview with links to the API reference available press Tab until focus enters the card, Escape to return. ,"
+      },
+      {
+        "op": "insert",
+        "old": "includes thinking.types.between_tools ,",
+        "new": "thinking.types.between_tools Preview with links to the API reference available press Tab until focus enters the card, Escape to return. ,"
+      },
+      {
+        "op": "insert",
+        "old": "includes server_tools ,",
+        "new": "server_tools Preview with links to the API reference available press Tab until focus enters the card, Escape to return. ,"
+      },
+      {
+        "op": "insert",
+        "old": "top-level code_execution capability is",
+        "new": "code_execution Preview with links to the API reference available press Tab until focus enters the card, Escape to return. capability"
+      },
+      {
+        "op": "insert",
+        "old": ". Prompt and",
+        "new": ". The API reference lists the List Models endpoint s parameters and full response. List Models GET /v1/models List available models. Query parameters after_id before_id lifecycle limit after_id : optional string ID of the object to use as a cursor for pagination. When provided, returns the page of r"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261024T101223Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261028T120103Z",
+    "from_sha256": "57265aed878502f585d40528bcf3b2e16d6ed479cc87ca7fc3448e712c64f921",
+    "to_sha256": "893d904fafa1593e0b646fc2e5c0cc13e85a2ba02e5b1c7084cf0bf83b4e6115",
+    "computed_at": "2026-10-28T12:15:50Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -15996,6 +16064,34 @@
     "from_sha256": "2d5b384ac8c7cf88fa0d987d9a50d2abefb5711f16992623388f5d9216848336",
     "to_sha256": "c25db5746a5b4f53b8ecddf4c9e3ec2e0f024bb56bfa39ebf6879a2492f9771b",
     "computed_at": "2026-10-21T11:07:16Z"
+  },
+  "cohere/model-catalog::watch-page-e9526454::captures/cohere__model-catalog/watch-page-e9526454/20261021T105918Z>captures/cohere__model-catalog/watch-page-e9526454/20261028T120139Z": {
+    "verdict": "changed",
+    "similarity": 0.9994,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Endpoints north-small-translate-09-2026 Live",
+        "new": "Endpoints north-small-translate-1.0 Live North"
+      },
+      {
+        "op": "insert",
+        "old": "Chat north-mini-code-1-0 Live",
+        "new": "Chat north-mini-code-1.0 Live"
+      }
+    ],
+    "source": "cohere/model-catalog",
+    "target": "watch-page-e9526454",
+    "from_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261021T105918Z",
+    "to_dir": "captures/cohere__model-catalog/watch-page-e9526454/20261028T120139Z",
+    "from_sha256": "c25db5746a5b4f53b8ecddf4c9e3ec2e0f024bb56bfa39ebf6879a2492f9771b",
+    "to_sha256": "5ae89c410359a5d54e0898654caadb610c9311d4ad4bdfd73085fbc6dde868c4",
+    "computed_at": "2026-10-28T12:15:50Z"
   },
   "cohere/north-mini-code::aial-eval-page-4cd6b811::captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T102735Z>captures/cohere__north-mini-code/aial-eval-page-4cd6b811/20260831T104639Z": {
     "verdict": "changed",
@@ -20717,6 +20813,69 @@
     "to_sha256": "3208ca5710e785829f813527859fefae0f1b1bd9bf97bbc3dfdbd16bcd90655e",
     "computed_at": "2026-10-27T11:34:54Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z>captures/huggingface__smollm3/provider-live-c6d71781/20261028T115044Z": {
+    "verdict": "changed",
+    "similarity": 0.9983,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.87M 787 HuggingFaceTB/SmolLM3-3B Text"
+      },
+      {
+        "op": "replace",
+        "old": "2025 694k 1.07k",
+        "new": "2025 681k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 537k 2.73k",
+        "new": "2024 534k 2.73k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 435k 1.38k",
+        "new": "3.5B 436k 1.38k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 350k 331",
+        "new": "3.02B 330k 331"
+      },
+      {
+        "op": "delete",
+        "old": "380M 54.1k 86",
+        "new": "380M 54k 86"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 40.2k 184",
+        "new": "8.61M 39.9k 184"
+      },
+      {
+        "op": "insert",
+        "old": "2024 28k 217",
+        "new": "2024 28.3k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 10.9k 661",
+        "new": "3 10.8k 661"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261028T115044Z",
+    "from_sha256": "3208ca5710e785829f813527859fefae0f1b1bd9bf97bbc3dfdbd16bcd90655e",
+    "to_sha256": "daf6166d1f607411829f721d7c1befad92fa76a0c4bfacff23a29d1c2a4aa598",
+    "computed_at": "2026-10-28T12:15:50Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -25333,6 +25492,54 @@
     "from_sha256": "87c68e94d5b26de35837404ab4c3054c8058a415ded2351cc29376087419bc33",
     "to_sha256": "ff0d9f068ee6952c323d046d06f4c47570d62f8f4502e24985148c0164a00a23",
     "computed_at": "2026-10-27T11:34:55Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261027T112705Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261028T120202Z": {
+    "verdict": "changed",
+    "similarity": 0.9272,
+    "word_delta": 117,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "intelligence MAI-Code-1.1-Flash MAI-Voice-2.1",
+        "new": "intelligence MAI-Cyber-1.1-Flash MAI-Code-1.1-Flash MAI-Voice-2.1"
+      },
+      {
+        "op": "replace",
+        "old": "MAI-Thinking-1 MAI-Image-2.6 All models MAI-Code-1.1-Flash",
+        "new": "MAI-Transcribe-2 MAI-Thinking-1 All models MAI-Cyber-1.1-Flash A new cybersecurity model built into MDASH, our multi-agent vulnerability identification and remediation harness. MAI-Code-1.1-Flash"
+      },
+      {
+        "op": "delete",
+        "old": "mid-weight price. MAI-Image-2.6 Create stunning, design-ready images from any text or photo prompt, with best-in-class Arena ELO scores at a lower price.",
+        "new": "mid-weight price. Blog"
+      },
+      {
+        "op": "insert",
+        "old": "our team Building Medical",
+        "new": "team MAI Image 2.7 debuts above GPT Image 2.5 Flare on Artificial Analysis and 3 on Arena 2 min read MAI Cyber 1.1 Flash: Sharper findings and fewer tokens inside MDASH 2 min read Building"
+      },
+      {
+        "op": "delete",
+        "old": "min read Frontier Pre-training at Microsoft AI 15 min read Our first streaming transcription model debuts at no. 1 on Artificial Analysis 5 min read",
+        "new": "6 min read"
+      },
+      {
+        "op": "insert",
+        "old": "it. Foundational model",
+        "new": "Foundational model MAI-Cyber-1.1-Flash Learn more A new cybersecurity model built into MDASH, our multi-agent vulnerability identification and remediation harness. Learn more Learn more Foundational model"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261027T112705Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261028T120202Z",
+    "from_sha256": "ff0d9f068ee6952c323d046d06f4c47570d62f8f4502e24985148c0164a00a23",
+    "to_sha256": "2c32723fee5f41e654b6a7ecf3d5188d1003e45013b68567def48c5f53179772",
+    "computed_at": "2026-10-28T12:15:51Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -31674,6 +31881,34 @@
     "to_sha256": "870ab6a7d959e2ad3d9bf0edbd7ffebb19d3d4f8f5eaaf823cb11dc39a1937f5",
     "computed_at": "2026-10-27T11:34:55Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261027T112624Z>captures/openai__model-catalog/watch-page-0e5ba652/20261028T115939Z": {
+    "verdict": "changed",
+    "similarity": 0.9978,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "ChatGPT plugin ChatGPT",
+        "new": "ChatGPT plugin Account security notification ChatGPT"
+      },
+      {
+        "op": "delete",
+        "old": "gateway Sign in with ChatGPT Use API/provider credentials Roll",
+        "new": "a gateway Roll out"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261027T112624Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261028T115939Z",
+    "from_sha256": "870ab6a7d959e2ad3d9bf0edbd7ffebb19d3d4f8f5eaaf823cb11dc39a1937f5",
+    "to_sha256": "4d7093e6947246cfe5d5b70cdd790772905e2087c16d05de08ff7d60b9e055ab",
+    "computed_at": "2026-10-28T12:15:50Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -36224,5 +36459,43 @@
     "from_sha256": "6844a0b2af46b6088abe7567e43195463df8754c5df494a80b003ac6540979e5",
     "to_sha256": "62dbcc14a36097a20d05aa6919b19f191d4b7eba03efe7fe77b426f4c6fd54a4",
     "computed_at": "2026-10-13T13:27:03Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z>captures/xai__model-catalog/watch-page-905d5d7a/20261028T120151Z": {
+    "verdict": "changed",
+    "similarity": 0.9941,
+    "word_delta": 10,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Priority Processing Batch API",
+        "new": "Processing Custom Moderation Controls New Batch"
+      },
+      {
+        "op": "insert",
+        "old": "Debugging Errors Platforms Community",
+        "new": "Errors Cookbook Platforms"
+      },
+      {
+        "op": "insert",
+        "old": "Priority Processing Batch API",
+        "new": "Processing Custom Moderation Controls New Batch"
+      },
+      {
+        "op": "insert",
+        "old": "Debugging Errors Platforms Community",
+        "new": "Errors Cookbook Platforms"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261013T132120Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261028T120151Z",
+    "from_sha256": "62dbcc14a36097a20d05aa6919b19f191d4b7eba03efe7fe77b426f4c6fd54a4",
+    "to_sha256": "50c42256fa2da4d3dddf5ba0c045084ca1f1b1bc6b2613497f28640b20767102",
+    "computed_at": "2026-10-28T12:15:51Z"
   }
 }

@@ -665,135 +665,115 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "near-identical",
-    "similarity": 0.9971,
+    "similarity": 0.9983,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9971,
-      "word_delta": 17,
+      "similarity": 0.9983,
+      "word_delta": 10,
       "moved_words": 0,
       "changes": [
         {
           "op": "replace",
-          "old": "20 8.21M 1.31k Qwen/Qwen3-32B",
-          "new": "20 8.27M 1.32k Qwen/Qwen3-32B"
+          "old": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B",
+          "new": "2025 2.87M 787 HuggingFaceTB/SmolLM3-3B Text"
         },
         {
           "op": "replace",
-          "old": "2025 2.89M 772 HuggingFaceTB/SmolLM3-3B",
-          "new": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B"
+          "old": "2025 694k 1.07k",
+          "new": "2025 681k 1.07k"
         },
         {
           "op": "replace",
-          "old": "2025 703k 1.07k",
-          "new": "2025 694k 1.07k"
+          "old": "2024 537k 2.73k",
+          "new": "2024 534k 2.73k"
         },
         {
           "op": "replace",
-          "old": "2024 533k 2.73k",
-          "new": "2024 537k 2.73k"
+          "old": "3.5B 435k 1.38k",
+          "new": "3.5B 436k 1.38k"
         },
         {
           "op": "replace",
-          "old": "3.5B 434k 1.38k",
-          "new": "3.5B 435k 1.38k"
+          "old": "3.02B 350k 331",
+          "new": "3.02B 330k 331"
+        },
+        {
+          "op": "delete",
+          "old": "380M 54.1k 86",
+          "new": "380M 54k 86"
         },
         {
           "op": "replace",
-          "old": "3.02B 378k 330 epfml/FineWeb2-HQ",
-          "new": "3.02B 350k 331 epfml/FineWeb2-HQ"
+          "old": "8.61M 40.2k 184",
+          "new": "8.61M 39.9k 184"
+        },
+        {
+          "op": "insert",
+          "old": "2024 28k 217",
+          "new": "2024 28.3k 217"
         },
         {
           "op": "replace",
-          "old": "380M 54.7k 86",
-          "new": "380M 54.1k 86"
-        },
-        {
-          "op": "replace",
-          "old": "48.3M 48.9k 394 HuggingFaceTB/smoltalk2",
-          "new": "48.3M 49.4k 395 HuggingFaceTB/smoltalk2"
-        },
-        {
-          "op": "replace",
-          "old": "8.61M 40.5k 183 allenai/peS2o",
-          "new": "8.61M 40.2k 184 allenai/peS2o"
-        },
-        {
-          "op": "replace",
-          "old": "2024 27.7k 216 bigcode/the-stack-v2",
-          "new": "2024 28k 217 bigcode/the-stack-v2"
-        },
-        {
-          "op": "replace",
-          "old": "3 10.3k 661",
-          "new": "3 10.9k 661"
+          "old": "3 10.9k 661",
+          "new": "3 10.8k 661"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261026T114504Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261027T111404Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261028T115044Z"
     },
-    "word_delta": 17,
+    "word_delta": 10,
     "moved_words": 0,
     "changes": [
       {
         "op": "replace",
-        "old": "20 8.21M 1.31k Qwen/Qwen3-32B",
-        "new": "20 8.27M 1.32k Qwen/Qwen3-32B"
+        "old": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.87M 787 HuggingFaceTB/SmolLM3-3B Text"
       },
       {
         "op": "replace",
-        "old": "2025 2.89M 772 HuggingFaceTB/SmolLM3-3B",
-        "new": "2025 2.88M 775 HuggingFaceTB/SmolLM3-3B"
+        "old": "2025 694k 1.07k",
+        "new": "2025 681k 1.07k"
       },
       {
         "op": "replace",
-        "old": "2025 703k 1.07k",
-        "new": "2025 694k 1.07k"
+        "old": "2024 537k 2.73k",
+        "new": "2024 534k 2.73k"
       },
       {
         "op": "replace",
-        "old": "2024 533k 2.73k",
-        "new": "2024 537k 2.73k"
+        "old": "3.5B 435k 1.38k",
+        "new": "3.5B 436k 1.38k"
       },
       {
         "op": "replace",
-        "old": "3.5B 434k 1.38k",
-        "new": "3.5B 435k 1.38k"
+        "old": "3.02B 350k 331",
+        "new": "3.02B 330k 331"
+      },
+      {
+        "op": "delete",
+        "old": "380M 54.1k 86",
+        "new": "380M 54k 86"
       },
       {
         "op": "replace",
-        "old": "3.02B 378k 330 epfml/FineWeb2-HQ",
-        "new": "3.02B 350k 331 epfml/FineWeb2-HQ"
+        "old": "8.61M 40.2k 184",
+        "new": "8.61M 39.9k 184"
+      },
+      {
+        "op": "insert",
+        "old": "2024 28k 217",
+        "new": "2024 28.3k 217"
       },
       {
         "op": "replace",
-        "old": "380M 54.7k 86",
-        "new": "380M 54.1k 86"
-      },
-      {
-        "op": "replace",
-        "old": "48.3M 48.9k 394 HuggingFaceTB/smoltalk2",
-        "new": "48.3M 49.4k 395 HuggingFaceTB/smoltalk2"
-      },
-      {
-        "op": "replace",
-        "old": "8.61M 40.5k 183 allenai/peS2o",
-        "new": "8.61M 40.2k 184 allenai/peS2o"
-      },
-      {
-        "op": "replace",
-        "old": "2024 27.7k 216 bigcode/the-stack-v2",
-        "new": "2024 28k 217 bigcode/the-stack-v2"
-      },
-      {
-        "op": "replace",
-        "old": "3 10.3k 661",
-        "new": "3 10.9k 661"
+        "old": "3 10.9k 661",
+        "new": "3 10.8k 661"
       }
     ]
   },

@@ -1,0 +1,41 @@
+{
+  "source_id": "cohere/model-catalog",
+  "provider": "Cohere",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "5ae89c410359a5d54e0898654caadb610c9311d4ad4bdfd73085fbc6dde868c4",
+  "size_bytes": 261539,
+  "stored_as": "raw.html",
+  "text_sha256": "351b33d3bbbff4604748b2d9d2d7d8a666249cfeabf357a414e24de9aed9a785",
+  "doc_links_sha256": "715146191a49cbc4c7a0e2aec3ccb2376e0705b141b668bb444277e511f1cef7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.cohere.com/docs/models",
+    "final_url": "https://docs.cohere.com/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "W/\"a12aqbsw3bsf50\"",
+    "last_modified": "Wed, 28 Oct 2026 02:00:08 GMT",
+    "content_length": null,
+    "fetched_at": "2026-10-28T12:01:39Z"
+  },
+  "prior_sha256": "c25db5746a5b4f53b8ecddf4c9e3ec2e0f024bb56bfa39ebf6879a2492f9771b",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-10-28T12:01:39Z",
+    "at": "2026-10-28T12:01:39Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-10-28T12:01:43Z"
+  }
+}
