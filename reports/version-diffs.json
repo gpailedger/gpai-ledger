@@ -20876,6 +20876,74 @@
     "to_sha256": "daf6166d1f607411829f721d7c1befad92fa76a0c4bfacff23a29d1c2a4aa598",
     "computed_at": "2026-10-28T12:15:50Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261028T115044Z>captures/huggingface__smollm3/provider-live-c6d71781/20261029T115929Z": {
+    "verdict": "changed",
+    "similarity": 0.9981,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.27M 1.32k",
+        "new": "20 8.32M 1.32k"
+      },
+      {
+        "op": "replace",
+        "old": "2.87M 787 HuggingFaceTB/SmolLM3-3B",
+        "new": "2.87M 791 HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 681k 1.07k",
+        "new": "2025 665k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 534k 2.73k",
+        "new": "2024 518k 2.73k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 436k 1.38k",
+        "new": "3.5B 437k 1.38k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 330k 331",
+        "new": "3.02B 323k 331"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 49.4k 395",
+        "new": "48.3M 49.5k 395"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 39.9k 184 allenai/peS2o",
+        "new": "8.61M 39.6k 186 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 28.3k 217",
+        "new": "2024 28.4k 217"
+      },
+      {
+        "op": "replace",
+        "old": "10.8k 661 Fetching",
+        "new": "10.8k 662 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261028T115044Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261029T115929Z",
+    "from_sha256": "daf6166d1f607411829f721d7c1befad92fa76a0c4bfacff23a29d1c2a4aa598",
+    "to_sha256": "c09aab9f1060fb875e59b7e3a60c2605a175f188b336c3aafc7d65aa130c6948",
+    "computed_at": "2026-10-29T12:24:03Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -31908,6 +31976,29 @@
     "from_sha256": "870ab6a7d959e2ad3d9bf0edbd7ffebb19d3d4f8f5eaaf823cb11dc39a1937f5",
     "to_sha256": "4d7093e6947246cfe5d5b70cdd790772905e2087c16d05de08ff7d60b9e055ab",
     "computed_at": "2026-10-28T12:15:50Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261028T115939Z>captures/openai__model-catalog/watch-page-0e5ba652/20261029T121022Z": {
+    "verdict": "changed",
+    "similarity": 0.9989,
+    "word_delta": 5,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Key concepts Core concepts",
+        "new": "concepts API credits for ChatGPT subscribers Core"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261028T115939Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261029T121022Z",
+    "from_sha256": "4d7093e6947246cfe5d5b70cdd790772905e2087c16d05de08ff7d60b9e055ab",
+    "to_sha256": "9759bf2e3cfead69b5da753daf2dd65b2156b74dc0a2b66b5b27d049c244ce91",
+    "computed_at": "2026-10-29T12:24:03Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
