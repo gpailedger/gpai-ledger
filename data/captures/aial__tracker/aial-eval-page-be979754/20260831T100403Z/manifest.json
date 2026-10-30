@@ -40,7 +40,16 @@
     "ok": false,
     "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
     "via": "spn2",
-    "requested_at": "2026-10-29T12:19:23Z",
-    "at": "2026-10-29T12:21:23Z"
-  }
+    "requested_at": "2026-10-30T12:07:35Z",
+    "at": "2026-10-30T12:09:35Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-10-29T12:19:23Z",
+      "at": "2026-10-29T12:21:23Z"
+    }
+  ]
 }

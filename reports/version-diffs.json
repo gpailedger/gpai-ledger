@@ -12910,6 +12910,34 @@
     "to_sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
     "computed_at": "2026-10-23T11:10:47Z"
   },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261030T114707Z": {
+    "verdict": "changed",
+    "similarity": 0.9789,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "API Open Weights Pricing",
+        "new": "API Customize our models Pricing"
+      },
+      {
+        "op": "replace",
+        "old": "Dashboard Status Open Weights Licensing Hugging",
+        "new": "Status Customize our models Customize frontier models Open weights licensing Hugging"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261023T103747Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261030T114707Z",
+    "from_sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
+    "to_sha256": "739f241f1dc9b102fc1cca66cac05c8fbf621a8d2b9e76de08ccc465db183d64",
+    "computed_at": "2026-10-30T12:10:08Z"
+  },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
     "similarity": 0.9986,
@@ -20944,6 +20972,79 @@
     "to_sha256": "c09aab9f1060fb875e59b7e3a60c2605a175f188b336c3aafc7d65aa130c6948",
     "computed_at": "2026-10-29T12:24:03Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261029T115929Z>captures/huggingface__smollm3/provider-live-c6d71781/20261030T115255Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.32M 1.32k",
+        "new": "20 8.49M 1.32k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.87M 791",
+        "new": "2025 2.94M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 665k 1.07k",
+        "new": "2025 646k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 518k 2.73k Linked",
+        "new": "2024 502k 2.74k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 437k 1.38k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 436k 1.39k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 323k 331",
+        "new": "3.02B 338k 331"
+      },
+      {
+        "op": "insert",
+        "old": "380M 54k 86",
+        "new": "380M 54.5k 86"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 49.5k 395",
+        "new": "2025 48.3M 50k 395"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 39.6k 186",
+        "new": "8.61M 39.3k 186"
+      },
+      {
+        "op": "replace",
+        "old": "2024 28.4k 217",
+        "new": "2024 28.2k 217"
+      },
+      {
+        "op": "replace",
+        "old": "10.8k 662 Fetching",
+        "new": "10.8k 663 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261029T115929Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261030T115255Z",
+    "from_sha256": "c09aab9f1060fb875e59b7e3a60c2605a175f188b336c3aafc7d65aa130c6948",
+    "to_sha256": "a39fe3c5849c3c7a7fab8e450bb2c3e9b038cb20f76de7140827ca9db43500e7",
+    "computed_at": "2026-10-30T12:10:09Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -28252,6 +28353,34 @@
     "to_sha256": "538b33c6319f81abe894fa08ebf465d96d5585db7a3ebec76084d1cef4a6a059",
     "computed_at": "2026-10-21T11:07:15Z"
   },
+  "mistral-ai/model-catalog::watch-page-de362d33::captures/mistral-ai__model-catalog/watch-page-de362d33/20261021T105751Z>captures/mistral-ai__model-catalog/watch-page-de362d33/20261030T120424Z": {
+    "verdict": "changed",
+    "similarity": 0.9898,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "documentation. 44 models",
+        "new": "documentation. 45 models"
+      },
+      {
+        "op": "insert",
+        "old": "16, 2026 Magistral",
+        "new": "2026 LIDstral Arabic Includes LIDstral Arabic and subsequent versions October 9, 2026 Magistral"
+      }
+    ],
+    "source": "mistral-ai/model-catalog",
+    "target": "watch-page-de362d33",
+    "from_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261021T105751Z",
+    "to_dir": "captures/mistral-ai__model-catalog/watch-page-de362d33/20261030T120424Z",
+    "from_sha256": "538b33c6319f81abe894fa08ebf465d96d5585db7a3ebec76084d1cef4a6a059",
+    "to_sha256": "94f169126d29c4e065116fdd8055c8d76afb38f43d5de7ef068ab42cf7b29095",
+    "computed_at": "2026-10-30T12:10:09Z"
+  },
   "nvidia/nemotron-nano::aial-eval-a337bf3b::captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260913T123014Z>captures/nvidia__nemotron-nano/aial-eval-a337bf3b/20260930T114400Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -31999,6 +32128,29 @@
     "from_sha256": "4d7093e6947246cfe5d5b70cdd790772905e2087c16d05de08ff7d60b9e055ab",
     "to_sha256": "9759bf2e3cfead69b5da753daf2dd65b2156b74dc0a2b66b5b27d049c244ce91",
     "computed_at": "2026-10-29T12:24:03Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261029T121022Z>captures/openai__model-catalog/watch-page-0e5ba652/20261030T120224Z": {
+    "verdict": "changed",
+    "similarity": 0.9982,
+    "word_delta": 6,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "controls Plugin management Skill controls",
+        "new": "controls Import and sync plugins from GitHub Skill"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261029T121022Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261030T120224Z",
+    "from_sha256": "9759bf2e3cfead69b5da753daf2dd65b2156b74dc0a2b66b5b27d049c244ce91",
+    "to_sha256": "29a71637907f8b945ee4c6ef4e46f6bb2eb37ae2bab4ea90e9571d66e4e81078",
+    "computed_at": "2026-10-30T12:10:09Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
