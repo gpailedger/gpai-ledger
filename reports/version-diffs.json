@@ -11787,6 +11787,22 @@
     "to_sha256": "893d904fafa1593e0b646fc2e5c0cc13e85a2ba02e5b1c7084cf0bf83b4e6115",
     "computed_at": "2026-10-28T12:15:50Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261028T120103Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261031T113929Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261028T120103Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261031T113929Z",
+    "from_sha256": "893d904fafa1593e0b646fc2e5c0cc13e85a2ba02e5b1c7084cf0bf83b4e6115",
+    "to_sha256": "286013b4ae11f3d6d081a6437e0238a8beb441ba2fef435a35ea6d35fd1b7e4a",
+    "computed_at": "2026-10-31T11:44:17Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -21044,6 +21060,69 @@
     "from_sha256": "c09aab9f1060fb875e59b7e3a60c2605a175f188b336c3aafc7d65aa130c6948",
     "to_sha256": "a39fe3c5849c3c7a7fab8e450bb2c3e9b038cb20f76de7140827ca9db43500e7",
     "computed_at": "2026-10-30T12:10:09Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261030T115255Z>captures/huggingface__smollm3/provider-live-c6d71781/20261031T112708Z": {
+    "verdict": "changed",
+    "similarity": 0.998,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.49M 1.32k",
+        "new": "20 8.69M 1.32k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.94M 791",
+        "new": "2025 2.95M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 646k 1.07k",
+        "new": "2025 630k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 502k 2.74k",
+        "new": "2024 496k 2.74k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 436k 1.39k",
+        "new": "3.5B 437k 1.39k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 338k 331",
+        "new": "3.02B 342k 331"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54.5k 86 HuggingFaceTB/finemath",
+        "new": "380M 54.4k 87 HuggingFaceTB/finemath"
+      },
+      {
+        "op": "insert",
+        "old": "48.3M 50k 395",
+        "new": "48.3M 50.5k 395"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 39.3k 186 allenai/peS2o",
+        "new": "8.61M 39.2k 187 allenai/peS2o"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261030T115255Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261031T112708Z",
+    "from_sha256": "a39fe3c5849c3c7a7fab8e450bb2c3e9b038cb20f76de7140827ca9db43500e7",
+    "to_sha256": "31923aafb8b915c445acae8109cc5b5b27467927e98111340e98d5acdf718ffc",
+    "computed_at": "2026-10-31T11:44:17Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -32151,6 +32230,29 @@
     "from_sha256": "9759bf2e3cfead69b5da753daf2dd65b2156b74dc0a2b66b5b27d049c244ce91",
     "to_sha256": "29a71637907f8b945ee4c6ef4e46f6bb2eb37ae2bab4ea90e9571d66e4e81078",
     "computed_at": "2026-10-30T12:10:09Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261030T120224Z>captures/openai__model-catalog/watch-page-0e5ba652/20261031T113724Z": {
+    "verdict": "changed",
+    "similarity": 0.9996,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Managed configuration Codex",
+        "new": "Managed configuration Self-host configuration"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261030T120224Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261031T113724Z",
+    "from_sha256": "29a71637907f8b945ee4c6ef4e46f6bb2eb37ae2bab4ea90e9571d66e4e81078",
+    "to_sha256": "75663757ee457b713dadf411f1d69114d643be26bbc66ea946499728608f1ad7",
+    "computed_at": "2026-10-31T11:44:17Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
