@@ -1,0 +1,33 @@
+{
+  "source_id": "midjourney/midjourney",
+  "provider": "Midjourney",
+  "model": "Midjourney Image and Video family of models",
+  "target_kind": "aial-eval",
+  "sha256": "d9e16c60dac952977739d811ce6090b374428670fc449180ffdd139799a826f2",
+  "size_bytes": 3962,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d55d4f08f9aed449ccc30bf0d5931521580c76e43193606338f1771c74556cee",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/midjourney-midjourney.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/midjourney-midjourney.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"fabc4a9914ffb1cdf80c6b2d276b6d1fe8d4fcb9bb61609f449432f6949148dd\"",
+    "last_modified": null,
+    "content_length": "679",
+    "fetched_at": "2026-11-02T14:17:00Z"
+  },
+  "prior_sha256": "23b8bcb6f67d2a5fdff9d0db87ebc2fa6c9ea801e1d173935034c4a7e9d6aa8d",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:17:04Z"
+  }
+}

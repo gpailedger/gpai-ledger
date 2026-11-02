@@ -1,0 +1,33 @@
+{
+  "source_id": "pleias/baguettotron",
+  "provider": "Pleias",
+  "model": "Baguettotron and Monad",
+  "target_kind": "aial-eval",
+  "sha256": "3366a2627fcec7c11d1067b8347aabfb16df9263a3713d32d7c07249600aba56",
+  "size_bytes": 3830,
+  "stored_as": "raw.yaml",
+  "text_sha256": "2180a99087a2f45c6a2b3bce17f334c6cdd77705b5e81a80368e619c8a689a66",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-baguettotron.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-baguettotron.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b5825976659423aec2bfa8d52a9185a39ce6aa6c03064dc0129b0a8066315264\"",
+    "last_modified": null,
+    "content_length": "618",
+    "fetched_at": "2026-11-02T14:21:39Z"
+  },
+  "prior_sha256": "ef7777409014528ee463c413faeb6866a1b14f7fa7e094ffdf03cf38c0b584fd",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:21:42Z"
+  }
+}

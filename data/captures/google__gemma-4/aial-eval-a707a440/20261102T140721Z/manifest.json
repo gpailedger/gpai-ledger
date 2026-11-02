@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemma-4",
+  "provider": "Google",
+  "model": "Gemma 4",
+  "target_kind": "aial-eval",
+  "sha256": "fd1a6c42e5ba01a662e5cbfadba7951b73cb9b89b42f5b9680384a1602bc12bc",
+  "size_bytes": 5327,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a84248aa00216fc99bdb084d50bbc905e085dc61a565db9cbc7f02ac77f3f621",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemma-4.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemma-4.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"98a44f482e815c90c165334413775100388968b1a52598a21bff67c0cccfc9b2\"",
+    "last_modified": null,
+    "content_length": "1387",
+    "fetched_at": "2026-11-02T14:07:21Z"
+  },
+  "prior_sha256": "79adc1be13488979feeaacfd2fe93c6f3a1af43b1eb6d13f923abb254d5de5fc",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:07:25Z"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Aleph Alpha",
+  "model": "Kolibri-1",
+  "target_kind": "aial-eval-history",
+  "sha256": "ecadffbcc89e0161b90ec06ad7854a77ac11ca4d6fd08be429b499b5529a411b",
+  "size_bytes": 4064,
+  "stored_as": "raw.yaml",
+  "text_sha256": "16c19b0ca233d5af568afec188eaf15497e35f91445a031fe8a40f9599ea720f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/aleph-alpha-kolibri.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/aleph-alpha-kolibri.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ed7ebf97803f930f1b211fcd7f9924f1b46acb041ac57d7061023471e68bf913\"",
+    "last_modified": null,
+    "content_length": "782",
+    "fetched_at": "2026-11-02T14:44:23Z"
+  },
+  "prior_sha256": "6220ab80dfb4f8e00103ae67a73e3d6d3ecddd1d6fc5f0ba07e9a1fcc6729702",
+  "git_commit": "e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8",
+  "git_commit_date": "2026-10-23T20:41:17Z",
+  "git_blob_sha": "1d565386c5d14e976440f33ecf40d43b8e5fffab",
+  "git_path": "evals/aleph-alpha-kolibri.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:44:29Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261102145108/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/aleph-alpha-kolibri.yaml",
+    "snapshot_ts": "20261102145108",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-c6f62d30af3a9c85bde666dea9156857aec09742",
+    "via": "spn2",
+    "requested_at": "2026-11-02T14:51:02Z",
+    "at": "2026-11-02T14:51:13Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "microsoft/phi-4",
+  "provider": "Microsoft",
+  "model": "Phi-4",
+  "target_kind": "aial-eval-page",
+  "sha256": "06b75f9990b14d24f02c4b9084d4e3ccc9d050fd82cdebefe0688a8be5b97b58",
+  "size_bytes": 24673,
+  "stored_as": "raw.html",
+  "text_sha256": "debbd63f911a0a5a8e3885e13886c73fb1f6e52669159aa9af3b3407123bd608",
+  "doc_links_sha256": "0fc696b7a90d7391714c8fe07d94485176d9385125003e92ca395a44dca84b11",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi-4/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/microsoft-phi-4/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3j1d\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:16:16Z"
+  },
+  "prior_sha256": "4e6d5ecb4bb6448ba23c8bc30d3b70a30901326b980bae2865fb1fea1824a316",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:16:20Z"
+  }
+}

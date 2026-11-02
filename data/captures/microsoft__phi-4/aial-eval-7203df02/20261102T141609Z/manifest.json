@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/phi-4",
+  "provider": "Microsoft",
+  "model": "Phi-4",
+  "target_kind": "aial-eval",
+  "sha256": "7d62ae5365ae358064597cce8f59cfad883f54d43f1eca5525b34f30d7271aa0",
+  "size_bytes": 8285,
+  "stored_as": "raw.yaml",
+  "text_sha256": "7c71b320f7f543d3ccb5d338f5adf10a9695c1742382d6c9d852e77e45c4138b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi-4.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-phi-4.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"53189eb5780fd7d9ad3359a04b31c6d51f6981bbac4ec9b4c806a09860639da4\"",
+    "last_modified": null,
+    "content_length": "2207",
+    "fetched_at": "2026-11-02T14:16:09Z"
+  },
+  "prior_sha256": "6751cf0bb0080e36622a5124322396d689904f39528bc60c7f109075ad187aa2",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:16:14Z"
+  }
+}

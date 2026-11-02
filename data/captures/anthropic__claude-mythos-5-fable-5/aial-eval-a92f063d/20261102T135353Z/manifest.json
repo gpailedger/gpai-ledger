@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/claude-mythos-5-fable-5",
+  "provider": "Anthropic",
+  "model": "Claude Mythos 5 / Claude Fable 5",
+  "target_kind": "aial-eval",
+  "sha256": "14d084c9318af98c3aaba62e2947aff1b45ba5848807caa87bab435e4881ce7e",
+  "size_bytes": 4988,
+  "stored_as": "raw.yaml",
+  "text_sha256": "9ba7049f91e6c064879809ed38aa518a5cb5be1c372dff537f7385802b289ab7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-mythos-5-fable-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-mythos-5-fable-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1205865c775b92d8e9fb8ec7e52fe6edf44f0fa768ef6051a03b80b5e992eb30\"",
+    "last_modified": null,
+    "content_length": "1276",
+    "fetched_at": "2026-11-02T13:53:53Z"
+  },
+  "prior_sha256": "60a67dd418b3922e14bb46b45e3f23c826408bb1582b21f8b122df8f3a33c804",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:54:00Z"
+  }
+}

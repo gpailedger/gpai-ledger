@@ -1,0 +1,33 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "aial-eval",
+  "sha256": "08419b86f868a4e6a2e42cc5eecaf73e554acebd76631def324c56997d0792f4",
+  "size_bytes": 7420,
+  "stored_as": "raw.yaml",
+  "text_sha256": "38f916f177f5e556f927af3a464465eaeb5dff03416e654ec441580950f3d1ac",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/huggingface-smollm3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/huggingface-smollm3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9c5e74ef0c39a1831afcc594e1135f1a74debc9a3fde97a0f39dfbfc8059f859\"",
+    "last_modified": null,
+    "content_length": "2059",
+    "fetched_at": "2026-11-02T14:09:03Z"
+  },
+  "prior_sha256": "d162e036d720e1381f16e2b70165fc7342368a6ededac8f8dcbc344fac0a6300",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:09:10Z"
+  }
+}

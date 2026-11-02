@@ -1,0 +1,34 @@
+{
+  "source_id": "bytedance/seedream-5-0-pro",
+  "provider": "ByteDance",
+  "model": "Seedream 5.0 Pro",
+  "target_kind": "aial-eval-page",
+  "sha256": "a5c5504b40cc8c780066c443632b656fc5e467747a11ed09c12b603508ca3288",
+  "size_bytes": 20563,
+  "stored_as": "raw.html",
+  "text_sha256": "b52131713bda21aa4c83289a59a1959bdc2e201e9c56518f932c248cf05cee30",
+  "doc_links_sha256": "2c9c0ec95d1a9893db7d9740cea7be07ef5cdd6210281201824df977ba4be6b6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance-5.0pro/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance-5.0pro/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fv7\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:02:20Z"
+  },
+  "prior_sha256": "68ccf0d1facbd08cb1cbd98d4e18a4267ccc6b24895cfe4c13c26eb063dfbffc",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:02:24Z"
+  }
+}

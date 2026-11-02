@@ -1,0 +1,33 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "aial-eval",
+  "sha256": "5942cf1991dfa2051890ee5ed64e970aa20134a6784ded43a4ee8ce987878f5e",
+  "size_bytes": 4791,
+  "stored_as": "raw.yaml",
+  "text_sha256": "5e6caf10f785834e6f26f538a614e267f479788091edb809ae9fc46ccb80dc57",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/domyn-domyn-large.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/domyn-domyn-large.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e5d862f9e241ad31fac9046e3db9545466015e46ea6f2681301e1396e6cf89a5\"",
+    "last_modified": null,
+    "content_length": "1130",
+    "fetched_at": "2026-11-02T14:04:45Z"
+  },
+  "prior_sha256": "bde5f50ca6eec2f958fad3eac949f10d64ab8f5956530373828314bc68ae262e",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:04:50Z"
+  }
+}

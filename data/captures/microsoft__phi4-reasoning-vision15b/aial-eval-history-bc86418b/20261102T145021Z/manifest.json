@@ -1,0 +1,38 @@
+{
+  "source_id": "microsoft/phi4-reasoning-vision15b",
+  "provider": "Microsoft",
+  "model": "Phi 4 Reasoning Vision 15B",
+  "target_kind": "aial-eval-history",
+  "sha256": "bfe7866c69740b8e4d9c27db5d44ebb167a3730ed5ef606cc445b9c2bed0d63d",
+  "size_bytes": 3909,
+  "stored_as": "raw.yaml",
+  "text_sha256": "48e54fc942c62e0ecd73cb8bcdae28b1e1242e9e252acb8f3ac57079f87d84be",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d2cbbb775b6b32575a8afd13f81426487c6f76ef/evals/microsoft-phi4-reasoning-vision15b.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d2cbbb775b6b32575a8afd13f81426487c6f76ef/evals/microsoft-phi4-reasoning-vision15b.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"2d6cf17e6d1bd082c2194af7c481fe97080f3db28fab1b8e833982630f78ebdd\"",
+    "last_modified": null,
+    "content_length": "609",
+    "fetched_at": "2026-11-02T14:50:21Z"
+  },
+  "prior_sha256": "b55a06357065cecee8087c4b50c4487515ba086d4d106aead94cf82f7e4bd719",
+  "git_commit": "d2cbbb775b6b32575a8afd13f81426487c6f76ef",
+  "git_commit_date": "2026-10-26T16:32:16Z",
+  "git_blob_sha": "c67ef1d8c38816c6d6aa09b88a91880def4aab03",
+  "git_path": "evals/microsoft-phi4-reasoning-vision15b.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:50:28Z"
+  }
+}

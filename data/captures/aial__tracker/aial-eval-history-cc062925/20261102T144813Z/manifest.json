@@ -1,0 +1,46 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "NVIDIA",
+  "model": "Nemotron 3 and 3.5 Family",
+  "target_kind": "aial-eval-history",
+  "sha256": "720485c30f5b59809f5870e9342b15f2e4f9cd63c5539a959194aaf8448c9bcd",
+  "size_bytes": 3996,
+  "stored_as": "raw.yaml",
+  "text_sha256": "bf335b8b39801ecc2332a94fb389ff3dde409d7ca63604b8ca74c34f4e6b8174",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/nvidia-nemotron3.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/nvidia-nemotron3.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0633665cabdc98a09dbbf81dc23a71f7e42cbeca06733736541a3f5c7158718d\"",
+    "last_modified": null,
+    "content_length": "727",
+    "fetched_at": "2026-11-02T14:48:13Z"
+  },
+  "prior_sha256": "4a715443e3397ca1dca66d50e2e0c0bbe3303b421f4c10f04710f46bc63299f9",
+  "git_commit": "14e02034aa44a396274b58f6116940656831ba44",
+  "git_commit_date": "2026-10-26T14:58:39Z",
+  "git_blob_sha": "418ad8f35f551234ff40026b1416b176a672b933",
+  "git_path": "evals/nvidia-nemotron3.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:48:18Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-52f2215f3385a674106e7135d6dcbc0f4f886b62 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-52f2215f3385a674106e7135d6dcbc0f4f886b62",
+    "via": "spn2",
+    "requested_at": "2026-11-02T14:52:00Z",
+    "at": "2026-11-02T14:53:08Z"
+  }
+}

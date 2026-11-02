@@ -1,0 +1,39 @@
+{
+  "source_id": "openllm-france/luciole-instruct1-1",
+  "provider": "OpenLLM France",
+  "model": "Luciole Instruct 1.1",
+  "target_kind": "aial-eval-page",
+  "sha256": "c5b792e1635434c95cd229005c995f3744e67ab3529c27af48f8945b4501b0e9",
+  "size_bytes": 16838,
+  "stored_as": "raw.html",
+  "text_sha256": "e9eaf632a3b329abf0557b99f5729c825bac037e4fdb5e8f52008377aa46d3be",
+  "doc_links_sha256": "924e47bb5a9465bab5b7cbdd59a69370d22d439eb19a217136baae563b99bf43",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/openllm-france-luciole-instruct1.1/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/openllm-france-luciole-instruct1.1/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0c4c3c42201b5defdd7ae94fc8ad4a7d85a29fe757b18ff09a295783183ef170\"",
+    "last_modified": null,
+    "content_length": "3429",
+    "fetched_at": "2026-11-02T14:43:18Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "d30599ff40e67784f5abf886d1a420dbf0e7a24a",
+  "git_commit_date": "2026-10-23T15:10:33Z",
+  "git_blob_sha": "db090b4e5a013637fe76631af571f20da24b90e9",
+  "git_path": "public/evals/openllm-france-luciole-instruct1.1/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:43:22Z"
+  }
+}

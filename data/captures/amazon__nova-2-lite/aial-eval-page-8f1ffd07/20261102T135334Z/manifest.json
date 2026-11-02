@@ -1,0 +1,34 @@
+{
+  "source_id": "amazon/nova-2-lite",
+  "provider": "Amazon",
+  "model": "Nova 2 Lite",
+  "target_kind": "aial-eval-page",
+  "sha256": "eb9c517b83999585e9169206f03637a61d8d16740bebe162a0eb9964586c505a",
+  "size_bytes": 19962,
+  "stored_as": "raw.html",
+  "text_sha256": "694cb524593a8f954ca22ce2b283612058e2c02a68500dc9b64eb1741193b05f",
+  "doc_links_sha256": "307dc12960bbed9fa7a5d98810e55186d94642a78afc8ee734b9835364ef02e5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/amazon-nova-2-lite/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/amazon-nova-2-lite/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fei\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T13:53:34Z"
+  },
+  "prior_sha256": "86ab614d20bc5df6926e1236878bc7f7b790f36fbbbdf432d7867ccd95830a68",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:53:37Z"
+  }
+}

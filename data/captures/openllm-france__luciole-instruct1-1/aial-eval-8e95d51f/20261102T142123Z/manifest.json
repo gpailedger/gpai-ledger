@@ -1,0 +1,33 @@
+{
+  "source_id": "openllm-france/luciole-instruct1-1",
+  "provider": "OpenLLM France",
+  "model": "Luciole Instruct 1.1",
+  "target_kind": "aial-eval",
+  "sha256": "70756214c938e62bd799ade3a69245ba3d63d357f174a14436254125c19254de",
+  "size_bytes": 3987,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d91164985c9f12f3e4cea8c4dd54c5e7fe0d4fc005da3b7577351feb84beaeb5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openllm-france-luciole-instruct1.1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openllm-france-luciole-instruct1.1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"291ee911fd4857fac006ef2c79ca3eec9d252d1acc288243069279ecfc980bc7\"",
+    "last_modified": null,
+    "content_length": "672",
+    "fetched_at": "2026-11-02T14:21:23Z"
+  },
+  "prior_sha256": "5adcbfbc48000b09574e65bc72a4f5dc9e1696da6e9ad7eb77eee774b5a0cf34",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:21:27Z"
+  }
+}

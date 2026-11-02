@@ -1,0 +1,33 @@
+{
+  "source_id": "thinking-machines/inkling",
+  "provider": "Thinking Machines",
+  "model": "Inkling",
+  "target_kind": "aial-eval",
+  "sha256": "59b5d4f485c1922b004ab1b1814c1efc241e6e9e40a5ba013004dd47d7cfbe56",
+  "size_bytes": 4858,
+  "stored_as": "raw.yaml",
+  "text_sha256": "82252aa273ee36250a877f2b96d46ffeb21c11715e83e2a9dd1df50dd60f7afd",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/thinking-machines-inkling.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/thinking-machines-inkling.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"9e1e6b1172115b752388786c98a31a6c53024969a88b9571fefc3cd6094f4be5\"",
+    "last_modified": null,
+    "content_length": "1157",
+    "fetched_at": "2026-11-02T14:24:51Z"
+  },
+  "prior_sha256": "f2dc928901985357338d694ca6d8a02a9342c01f40c70234367af3608925a8f6",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:24:56Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "minimax/minimax-m3",
+  "provider": "Minimax",
+  "model": "Minimax M3",
+  "target_kind": "aial-eval-page",
+  "sha256": "0df8120c701fdd74ca56f87c39774b656b6bd525f32fe32659e8897befa8b5a2",
+  "size_bytes": 20254,
+  "stored_as": "raw.html",
+  "text_sha256": "5c2a9ee7e9cbe8a5eab632a488091187115226e31ff59fdbfeb56d27aba4e0d9",
+  "doc_links_sha256": "ee704176a52e80dab2d4e851a0d18a98046df95d43dc3fe9646ad3408cfd0e7b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/minimax-minimax-m3/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/minimax-minimax-m3/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fmm\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:17:37Z"
+  },
+  "prior_sha256": "f298c7a42ee3924de82f427ceca40c283725b495af453abc1d4437ee8b951e59",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:17:41Z"
+  }
+}

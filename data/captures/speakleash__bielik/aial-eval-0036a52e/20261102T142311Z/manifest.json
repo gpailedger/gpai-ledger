@@ -1,0 +1,33 @@
+{
+  "source_id": "speakleash/bielik",
+  "provider": "SpeakLeash",
+  "model": "Bielik v3 11B Instruct",
+  "target_kind": "aial-eval",
+  "sha256": "71a365c1135f387be14d3c6fdc8ffc13b4c713d45adbd87e94a2fa0693393d0b",
+  "size_bytes": 7028,
+  "stored_as": "raw.yaml",
+  "text_sha256": "7a819666fde7e91819598203764067ed8bdd1a00ede5189c86cd360f9f8163e5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/speakleash-bielik.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/speakleash-bielik.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"db2a758bf73bfe93edcbe9c0d3a7917d01e3e01d43329322531d65083fa5e024\"",
+    "last_modified": null,
+    "content_length": "2029",
+    "fetched_at": "2026-11-02T14:23:11Z"
+  },
+  "prior_sha256": "eb6051ee7fd7fb63c1c19a6d9ca31f37c3c5c7c8f7470e349cfb44ec2b38e2e8",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:23:17Z"
+  }
+}

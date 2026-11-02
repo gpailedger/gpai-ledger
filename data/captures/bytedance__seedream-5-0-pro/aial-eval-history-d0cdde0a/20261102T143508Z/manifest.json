@@ -1,0 +1,38 @@
+{
+  "source_id": "bytedance/seedream-5-0-pro",
+  "provider": "ByteDance",
+  "model": "Seedream 5.0 Pro",
+  "target_kind": "aial-eval-history",
+  "sha256": "a020f0a0e9bcf3a547fcf44f0c57e0274e1ce7755dc9e15c7a1b0fafdbbc316c",
+  "size_bytes": 3316,
+  "stored_as": "raw.yaml",
+  "text_sha256": "7b032f2a43da9d2ea580dd6a4c2b10fd7662bff5d43593e776edfba1adc7f47d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/evals/bytedance-seedance-5.0pro.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/evals/bytedance-seedance-5.0pro.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1a41b1d37440fcd2adf1ab012092b201846156cb54d5be88965c7307c0a852aa\"",
+    "last_modified": null,
+    "content_length": "670",
+    "fetched_at": "2026-11-02T14:35:08Z"
+  },
+  "prior_sha256": "9d256ef77d4c11bb165f0ea7a5856271799e09de6d3235f2afc1d4796ae96623",
+  "git_commit": "d30599ff40e67784f5abf886d1a420dbf0e7a24a",
+  "git_commit_date": "2026-10-23T15:10:33Z",
+  "git_blob_sha": "fd9cd99fc714463d67e559159d97bdbbdb91e452",
+  "git_path": "evals/bytedance-seedance-5.0pro.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:35:11Z"
+  }
+}

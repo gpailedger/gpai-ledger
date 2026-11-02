@@ -129,46 +129,136 @@
   {
     "id": "bria-ai/bria",
     "model": "Bria 3.2",
-    "verdict": "near-identical",
-    "similarity": 0.9971,
+    "verdict": "DRIFT-CANDIDATE",
+    "similarity": 0.9596,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9971,
-      "word_delta": 10,
-      "moved_words": 0,
+      "similarity": 0.9596,
+      "word_delta": 241,
+      "moved_words": 9,
       "changes": [
         {
-          "op": "replace",
-          "old": "Best Practices Book a demo Learn more Open",
-          "new": "Practices Start Building Explore Bria Create Open"
+          "op": "moved",
+          "old": "Responsible AI",
+          "new": "Responsible AI"
+        },
+        {
+          "op": "moved",
+          "old": "Bria Create",
+          "new": "Bria Create"
+        },
+        {
+          "op": "moved",
+          "old": "Hugging Face GitHub Status Page",
+          "new": "Hugging Face GitHub Status Page"
         },
         {
           "op": "replace",
-          "old": "Resources Book a demo Learn more EU AI",
-          "new": "Resources Start Building Explore Bria Create EU"
+          "old": "AI Act Solutions By Industry Solution for Tech Companies Marketing Teams and Advertising Agencies Ecommerce Retail Media, Entertainment and Gaming By Product Bria Create Product Shots Tailored Generation Artfair by Bria Technology Technology Visual PaaS Fibo Hyper-Controllability Architecture The VG",
+          "new": "AI Act Bria Create Bria Create Bria Create Technology Technology Fibo Model Family Visual Generative Language Licensed AI Licensed AI Licensed Training"
+        },
+        {
+          "op": "replace",
+          "old": "Certificate Copyrightability Report Partner with Bria Video/Image Partnerships Text Partnerships Artfair- Artist Program Company Enterprise Security",
+          "new": "Certificate Company Company About Bria Security Compliance"
+        },
+        {
+          "op": "replace",
+          "old": "Lobby About Bria About Us Contact Us Careers Pricing Resources",
+          "new": "Lobby Careers Contact Us Resources Assets"
+        },
+        {
+          "op": "replace",
+          "old": "Blog Bria Best Practices Start Building Explore Bria",
+          "new": "Blog API Documentation Explore APIs Explore Bria"
+        },
+        {
+          "op": "delete",
+          "old": "navigation Solutions Technology",
+          "new": "Open navigation Technology Licensed"
+        },
+        {
+          "op": "replace",
+          "old": "Resources Start Building Explore Bria",
+          "new": "Company Resources Explore APIs Explore Bria"
+        },
+        {
+          "op": "delete",
+          "old": "creation Solutions By Industry Platform and Tech Companies Marketing Advertising Ecommerce Retail Media and Entertainment By Product Product Shots Tailored Generation Artfair by Bria Technology Visual PaaS Fibo Hyper-Controllability Architecture API Documentation Model - Licensed AI How does it work",
+          "new": "visual creation 2026 Bria"
+        },
+        {
+          "op": "delete",
+          "old": "10018 Solutions By Industry Platform and Tech Companies Marketing Advertising Ecommerce Retail Media and Entertainment By Product Bria Create Product Shots Tailored Generation Artfair by Bria Technology Visual PaaS Fibo Hyper-Controllability Architecture API Documentation Model - Hugging Face GitHub",
+          "new": "NY, 10018 The engine"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260825T080544Z",
-      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260826T080810Z"
+      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20260826T080810Z",
+      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261102T135836Z"
     },
-    "word_delta": 10,
-    "moved_words": 0,
+    "word_delta": 241,
+    "moved_words": 9,
     "changes": [
       {
-        "op": "replace",
-        "old": "Best Practices Book a demo Learn more Open",
-        "new": "Practices Start Building Explore Bria Create Open"
+        "op": "moved",
+        "old": "Responsible AI",
+        "new": "Responsible AI"
+      },
+      {
+        "op": "moved",
+        "old": "Bria Create",
+        "new": "Bria Create"
+      },
+      {
+        "op": "moved",
+        "old": "Hugging Face GitHub Status Page",
+        "new": "Hugging Face GitHub Status Page"
       },
       {
         "op": "replace",
-        "old": "Resources Book a demo Learn more EU AI",
-        "new": "Resources Start Building Explore Bria Create EU"
+        "old": "AI Act Solutions By Industry Solution for Tech Companies Marketing Teams and Advertising Agencies Ecommerce Retail Media, Entertainment and Gaming By Product Bria Create Product Shots Tailored Generation Artfair by Bria Technology Technology Visual PaaS Fibo Hyper-Controllability Architecture The VG",
+        "new": "AI Act Bria Create Bria Create Bria Create Technology Technology Fibo Model Family Visual Generative Language Licensed AI Licensed AI Licensed Training"
+      },
+      {
+        "op": "replace",
+        "old": "Certificate Copyrightability Report Partner with Bria Video/Image Partnerships Text Partnerships Artfair- Artist Program Company Enterprise Security",
+        "new": "Certificate Company Company About Bria Security Compliance"
+      },
+      {
+        "op": "replace",
+        "old": "Lobby About Bria About Us Contact Us Careers Pricing Resources",
+        "new": "Lobby Careers Contact Us Resources Assets"
+      },
+      {
+        "op": "replace",
+        "old": "Blog Bria Best Practices Start Building Explore Bria",
+        "new": "Blog API Documentation Explore APIs Explore Bria"
+      },
+      {
+        "op": "delete",
+        "old": "navigation Solutions Technology",
+        "new": "Open navigation Technology Licensed"
+      },
+      {
+        "op": "replace",
+        "old": "Resources Start Building Explore Bria",
+        "new": "Company Resources Explore APIs Explore Bria"
+      },
+      {
+        "op": "delete",
+        "old": "creation Solutions By Industry Platform and Tech Companies Marketing Advertising Ecommerce Retail Media and Entertainment By Product Product Shots Tailored Generation Artfair by Bria Technology Visual PaaS Fibo Hyper-Controllability Architecture API Documentation Model - Licensed AI How does it work",
+        "new": "visual creation 2026 Bria"
+      },
+      {
+        "op": "delete",
+        "old": "10018 Solutions By Industry Platform and Tech Companies Marketing Advertising Ecommerce Retail Media and Entertainment By Product Bria Create Product Shots Tailored Generation Artfair by Bria Technology Visual PaaS Fibo Hyper-Controllability Architecture API Documentation Model - Hugging Face GitHub",
+        "new": "NY, 10018 The engine"
       }
     ]
   },
@@ -665,135 +755,135 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "near-identical",
-    "similarity": 0.9975,
+    "similarity": 0.9973,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9975,
-      "word_delta": 12,
+      "similarity": 0.9973,
+      "word_delta": 14,
       "moved_words": 0,
       "changes": [
         {
-          "op": "replace",
-          "old": "20 8.69M 1.32k",
-          "new": "20 8.8M 1.32k"
+          "op": "insert",
+          "old": "20 8.8M 1.32k",
+          "new": "20 8.87M 1.32k"
         },
         {
           "op": "replace",
-          "old": "2025 2.95M 791",
-          "new": "2025 2.93M 791"
+          "old": "2025 2.93M 791 HuggingFaceTB/SmolLM3-3B",
+          "new": "2025 2.95M 792 HuggingFaceTB/SmolLM3-3B"
         },
         {
           "op": "replace",
-          "old": "2025 630k 1.07k",
-          "new": "2025 612k 1.07k"
+          "old": "2025 612k 1.07k",
+          "new": "2025 587k 1.07k"
         },
         {
           "op": "replace",
-          "old": "2024 496k 2.74k",
-          "new": "2024 484k 2.74k"
+          "old": "2024 484k 2.74k",
+          "new": "2024 480k 2.74k"
         },
         {
           "op": "replace",
-          "old": "3.5B 437k 1.39k",
-          "new": "3.5B 436k 1.39k"
+          "old": "3.5B 436k 1.39k",
+          "new": "3.5B 437k 1.39k"
         },
         {
           "op": "replace",
-          "old": "3.02B 342k 331",
-          "new": "3.02B 335k 331"
+          "old": "3.02B 335k 331",
+          "new": "3.02B 326k 331"
         },
         {
           "op": "replace",
-          "old": "380M 54.4k 87",
-          "new": "380M 53.9k 87"
+          "old": "380M 53.9k 87",
+          "new": "380M 54.5k 87"
         },
         {
           "op": "replace",
-          "old": "48.3M 50.5k 395",
-          "new": "48.3M 50.7k 395"
+          "old": "48.3M 50.7k 395 HuggingFaceTB/smoltalk2",
+          "new": "48.3M 50.1k 396 HuggingFaceTB/smoltalk2"
         },
         {
           "op": "replace",
-          "old": "8.61M 39.2k 187",
-          "new": "8.61M 39.1k 187"
+          "old": "8.61M 39.1k 187",
+          "new": "8.61M 38.8k 187"
         },
         {
           "op": "replace",
-          "old": "2024 28.2k 217",
-          "new": "2024 27.9k 217"
+          "old": "2024 27.9k 217",
+          "new": "2024 28k 217"
         },
         {
           "op": "replace",
-          "old": "3 10.8k 663 Fetching",
-          "new": "3 11.1k 666 Fetching"
+          "old": "3 11.1k 666 Fetching",
+          "new": "3 11.5k 670 Fetching"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261031T112708Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261101T121347Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261101T121347Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261102T140807Z"
     },
-    "word_delta": 12,
+    "word_delta": 14,
     "moved_words": 0,
     "changes": [
       {
-        "op": "replace",
-        "old": "20 8.69M 1.32k",
-        "new": "20 8.8M 1.32k"
+        "op": "insert",
+        "old": "20 8.8M 1.32k",
+        "new": "20 8.87M 1.32k"
       },
       {
         "op": "replace",
-        "old": "2025 2.95M 791",
-        "new": "2025 2.93M 791"
+        "old": "2025 2.93M 791 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.95M 792 HuggingFaceTB/SmolLM3-3B"
       },
       {
         "op": "replace",
-        "old": "2025 630k 1.07k",
-        "new": "2025 612k 1.07k"
+        "old": "2025 612k 1.07k",
+        "new": "2025 587k 1.07k"
       },
       {
         "op": "replace",
-        "old": "2024 496k 2.74k",
-        "new": "2024 484k 2.74k"
+        "old": "2024 484k 2.74k",
+        "new": "2024 480k 2.74k"
       },
       {
         "op": "replace",
-        "old": "3.5B 437k 1.39k",
-        "new": "3.5B 436k 1.39k"
+        "old": "3.5B 436k 1.39k",
+        "new": "3.5B 437k 1.39k"
       },
       {
         "op": "replace",
-        "old": "3.02B 342k 331",
-        "new": "3.02B 335k 331"
+        "old": "3.02B 335k 331",
+        "new": "3.02B 326k 331"
       },
       {
         "op": "replace",
-        "old": "380M 54.4k 87",
-        "new": "380M 53.9k 87"
+        "old": "380M 53.9k 87",
+        "new": "380M 54.5k 87"
       },
       {
         "op": "replace",
-        "old": "48.3M 50.5k 395",
-        "new": "48.3M 50.7k 395"
+        "old": "48.3M 50.7k 395 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 50.1k 396 HuggingFaceTB/smoltalk2"
       },
       {
         "op": "replace",
-        "old": "8.61M 39.2k 187",
-        "new": "8.61M 39.1k 187"
+        "old": "8.61M 39.1k 187",
+        "new": "8.61M 38.8k 187"
       },
       {
         "op": "replace",
-        "old": "2024 28.2k 217",
-        "new": "2024 27.9k 217"
+        "old": "2024 27.9k 217",
+        "new": "2024 28k 217"
       },
       {
         "op": "replace",
-        "old": "3 10.8k 663 Fetching",
-        "new": "3 11.1k 666 Fetching"
+        "old": "3 11.1k 666 Fetching",
+        "new": "3 11.5k 670 Fetching"
       }
     ]
   },

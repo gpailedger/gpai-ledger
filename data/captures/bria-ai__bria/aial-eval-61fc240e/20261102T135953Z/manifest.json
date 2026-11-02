@@ -1,0 +1,33 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "aial-eval",
+  "sha256": "dc1e26bb9005501b971066836f54a685c93eb0b58eff89b1a443745e6b67c518",
+  "size_bytes": 6055,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b662b8713283d19bc3a4ef636729468410a09e7f17809f5ad7eca0bbf95eb921",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bria-bria.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bria-bria.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"747637bc6905e49f5f8e10d995d1211452a8d1a734ec09fe2487256dbd161dec\"",
+    "last_modified": null,
+    "content_length": "1699",
+    "fetched_at": "2026-11-02T13:59:53Z"
+  },
+  "prior_sha256": "b068b882a3d7abd6af2c098134143ffafddfe046b0a9e177817863ea62b06b86",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:59:57Z"
+  }
+}

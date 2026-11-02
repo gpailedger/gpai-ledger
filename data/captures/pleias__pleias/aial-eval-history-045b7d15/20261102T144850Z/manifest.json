@@ -1,0 +1,38 @@
+{
+  "source_id": "pleias/pleias",
+  "provider": "Pleias",
+  "model": "Pleias 1.0",
+  "target_kind": "aial-eval-history",
+  "sha256": "a54650e013fc1b765a6c3709ab3c100cf00e037d34d45fe026f07f92bdd41dea",
+  "size_bytes": 3821,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d66cce12a377d57c11a9be1870ea73787c51df66b5de28536685a375bb4405d1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/pleias-pleias.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/pleias-pleias.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e86e745993d2dc959e32a92c08cf120c3a994dffa367e4cf7ddb5302a9342f39\"",
+    "last_modified": null,
+    "content_length": "636",
+    "fetched_at": "2026-11-02T14:48:50Z"
+  },
+  "prior_sha256": "07bf84fb6ac406e12e742ebc74955595ee324053bc60844022900cf6035f99e8",
+  "git_commit": "14e02034aa44a396274b58f6116940656831ba44",
+  "git_commit_date": "2026-10-26T14:58:39Z",
+  "git_blob_sha": "3a42c5ea1dcfb9fe92d4b06e6985161f73391fb2",
+  "git_path": "evals/pleias-pleias.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:48:53Z"
+  }
+}

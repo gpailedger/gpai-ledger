@@ -1,0 +1,46 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "aleph-alpha-kolibri",
+  "target_kind": "aial-eval-page",
+  "sha256": "a9c592af8b842a7a3d125f21fabd644028ba9c7dd2b1cedb09bbea469e118faa",
+  "size_bytes": 15741,
+  "stored_as": "raw.html",
+  "text_sha256": "a0c6dfba88cb1283d5360fe157e9849ff37e8ab7f488bbe4d06ae9d9eaef924e",
+  "doc_links_sha256": "eb0401d686f2689549f0bd0089f296af3e5361f489b04e815485edb3f8e29198",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/aleph-alpha-kolibri/version-2026-10-19.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/aleph-alpha-kolibri/version-2026-10-19.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"926a78ff95c4abeb0f13c4896e2f143941bfa89d6aea76e1c682ccd735120dbb\"",
+    "last_modified": null,
+    "content_length": "3298",
+    "fetched_at": "2026-11-02T14:38:16Z"
+  },
+  "prior_sha256": "51baf268506bf5c2472c6c207e6b1263947aa9f5f40a44f87b9907ededa7a807",
+  "git_commit": "d30599ff40e67784f5abf886d1a420dbf0e7a24a",
+  "git_commit_date": "2026-10-23T15:10:33Z",
+  "git_blob_sha": "3ec964a706b7f03a30a939b094e0027300e96921",
+  "git_path": "public/evals/aleph-alpha-kolibri/version-2026-10-19.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:38:19Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-11-02T14:53:20Z",
+    "at": "2026-11-02T14:53:36Z"
+  }
+}

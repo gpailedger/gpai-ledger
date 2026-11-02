@@ -1,0 +1,33 @@
+{
+  "source_id": "pleias/pleias",
+  "provider": "Pleias",
+  "model": "Pleias 1.0",
+  "target_kind": "aial-eval",
+  "sha256": "a54650e013fc1b765a6c3709ab3c100cf00e037d34d45fe026f07f92bdd41dea",
+  "size_bytes": 3821,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d66cce12a377d57c11a9be1870ea73787c51df66b5de28536685a375bb4405d1",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-pleias.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/pleias-pleias.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e86e745993d2dc959e32a92c08cf120c3a994dffa367e4cf7ddb5302a9342f39\"",
+    "last_modified": null,
+    "content_length": "636",
+    "fetched_at": "2026-11-02T14:21:52Z"
+  },
+  "prior_sha256": "7d5bc6d132c598a127d55f82e1e469d4b147925c60cbe92e0e71163a814f8621",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:21:56Z"
+  }
+}

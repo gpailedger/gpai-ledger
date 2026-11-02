@@ -1,0 +1,34 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "aial-eval-page",
+  "sha256": "f0a7b9acad19390dd2b39467193689e9bdeb451079d67d6348f2cad1882f5d91",
+  "size_bytes": 20744,
+  "stored_as": "raw.html",
+  "text_sha256": "7c28af4143b12651eeffaf20992fdc28387cf2f7d263a56a32e3dc44e3e62ba6",
+  "doc_links_sha256": "f1424ddb54d308163d2a0bd3a3850b5ac45ec004c1b71db54b90c5bed97883b0",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-image/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-image/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3g08\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:10:39Z"
+  },
+  "prior_sha256": "8650661563a685eaded0edbaa115587f9c5b7101f542bb73008b8799eb002899",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:10:41Z"
+  }
+}

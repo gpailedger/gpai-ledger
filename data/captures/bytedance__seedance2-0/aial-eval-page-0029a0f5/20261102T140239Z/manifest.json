@@ -1,0 +1,34 @@
+{
+  "source_id": "bytedance/seedance2-0",
+  "provider": "ByteDance",
+  "model": "Seedance 2.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "e32bd4549bfd83ff981726dd0307009d778c1e35c41072150c79e67ef9f160e1",
+  "size_bytes": 19950,
+  "stored_as": "raw.html",
+  "text_sha256": "b8ad7d16125e234f727ad1cc6460655be5dcee9d55b058c644d21227463a898a",
+  "doc_links_sha256": "e9a4623c0cef1fc464ce6e8c030e8de21bd780407a8382b50af6c6d8f3e499e3",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.0/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/bytedance-seedance2.0/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fe6\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:02:39Z"
+  },
+  "prior_sha256": "5defca125b237079da707277832c7cd4209ac7a875130ce44a9c24f3b15326e3",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:02:42Z"
+  }
+}

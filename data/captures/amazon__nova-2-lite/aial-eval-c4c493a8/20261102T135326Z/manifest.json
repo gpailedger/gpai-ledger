@@ -1,0 +1,33 @@
+{
+  "source_id": "amazon/nova-2-lite",
+  "provider": "Amazon",
+  "model": "Nova 2 Lite",
+  "target_kind": "aial-eval",
+  "sha256": "38765262f49c231d5b23f9f04913d8c50d3653e66aa65af0f6f85469516c0385",
+  "size_bytes": 4920,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a080fac39b2dfbf79d2e3d24f3ea87669218c74f867495c17293d234e4ffcc07",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/amazon-nova-2-lite.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/amazon-nova-2-lite.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"32c43e27ed78bd79ba8bd11b5b372cfc7254f55baf75029ff01f404ee41a453c\"",
+    "last_modified": null,
+    "content_length": "1227",
+    "fetched_at": "2026-11-02T13:53:26Z"
+  },
+  "prior_sha256": "948e272c0421f5fb3607f1a4f97c1e6ddcfd60e872d3da7be2fdfafca599ade4",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:53:29Z"
+  }
+}

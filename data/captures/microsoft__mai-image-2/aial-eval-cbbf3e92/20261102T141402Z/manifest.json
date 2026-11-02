@@ -1,0 +1,33 @@
+{
+  "source_id": "microsoft/mai-image-2",
+  "provider": "Microsoft",
+  "model": "MAI-Image-2",
+  "target_kind": "aial-eval",
+  "sha256": "1b5cbb80526bf76958227d385c598dc7c02f0c57927aa9d5b0e1801eb12c2f18",
+  "size_bytes": 4749,
+  "stored_as": "raw.yaml",
+  "text_sha256": "370d18a5d9bf6838da94dfeb9dbe128cbdf19d58f227e2d23c5035dd074f93e6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-mai-image-2.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/microsoft-mai-image-2.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"65d29bd13ec96f44ef5a35824b9033b883fb33efe6a730256d8747c22c204a7b\"",
+    "last_modified": null,
+    "content_length": "1159",
+    "fetched_at": "2026-11-02T14:14:02Z"
+  },
+  "prior_sha256": "a3a47f74cab1d6e09c3d9d83fabfcde14e45394ef59170195fa85cfd598382b1",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:14:05Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "openai/gpt-5-5",
+  "provider": "OpenAI",
+  "model": "GPT-5.5",
+  "target_kind": "aial-eval",
+  "sha256": "536b645b6ba245c6dea21d75dae28b335c5e20c307b84d440db30b98d1461243",
+  "size_bytes": 8180,
+  "stored_as": "raw.yaml",
+  "text_sha256": "54951a274657befd52fa6d2142e09636d86e1f6ef950ac31b57609946f45b0be",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-5-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/openai-gpt-5-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"911ee7855310611495aeec3da9942f08f2ca37bf57a1c362404c57afb0464297\"",
+    "last_modified": null,
+    "content_length": "2351",
+    "fetched_at": "2026-11-02T14:19:23Z"
+  },
+  "prior_sha256": "c2ff5428de975a977f09d07c146215234ad49877ae2df547ccd313a061fedb0e",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:19:26Z"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "NVIDIA",
+  "model": "Nemotron 3 and 3.5 Family",
+  "target_kind": "aial-eval-history",
+  "sha256": "e2c73060cc2348e616362d1c3770ea07294ec5c3d74b2307f4849c576f58ee1d",
+  "size_bytes": 3315,
+  "stored_as": "raw.yaml",
+  "text_sha256": "48f86ebc43cce56cbddada0b699f70445591a407c55472280454b52cb8854f94",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4e65fd4cc04b1de27c882897b044484ec7ac6c06/evals/nvidia-nemotron3.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4e65fd4cc04b1de27c882897b044484ec7ac6c06/evals/nvidia-nemotron3.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6c63fc612479b93cc0e53340ede9c0286c1c9e24aa78203ba35f3304c96e1325\"",
+    "last_modified": null,
+    "content_length": "655",
+    "fetched_at": "2026-11-02T14:31:26Z"
+  },
+  "prior_sha256": "a201900cf9d8ca4200c97a19b71d19c17f1e64d8b4f686d866e576e04c83c8b4",
+  "git_commit": "4e65fd4cc04b1de27c882897b044484ec7ac6c06",
+  "git_commit_date": "2026-10-23T11:12:04Z",
+  "git_blob_sha": "7a69a6668f8984e4b24f7767cdedea35e096dfa8",
+  "git_path": "evals/nvidia-nemotron3.5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:31:31Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261102145126/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/4e65fd4cc04b1de27c882897b044484ec7ac6c06/evals/nvidia-nemotron3.5.yaml",
+    "snapshot_ts": "20261102145126",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-83c82bcd3e616c880552ba9e814b761b927894cb",
+    "via": "spn2",
+    "requested_at": "2026-11-02T14:51:25Z",
+    "at": "2026-11-02T14:51:30Z"
+  }
+}

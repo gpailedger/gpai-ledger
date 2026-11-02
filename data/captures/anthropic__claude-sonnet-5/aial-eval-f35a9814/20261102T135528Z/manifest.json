@@ -1,0 +1,33 @@
+{
+  "source_id": "anthropic/claude-sonnet-5",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 5",
+  "target_kind": "aial-eval",
+  "sha256": "6c333dafd574ca5172cb7685c27ccc6350ec5222304d6eacc2e41a4969273751",
+  "size_bytes": 4962,
+  "stored_as": "raw.yaml",
+  "text_sha256": "778708cbe587fff148ba7d6149c629cd64f6fd3758bead97661044e9b9312eeb",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-sonnet-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/anthropic-claude-sonnet-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"70af3fabbb78fadc1051de67cbfc565a4934530c1ecd022ffa7de0cb68f3ee94\"",
+    "last_modified": null,
+    "content_length": "1262",
+    "fetched_at": "2026-11-02T13:55:28Z"
+  },
+  "prior_sha256": "661bb163281183d87a9405fda147398c2dde0cb6935e1e377c07316ffeade357",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:55:32Z"
+  }
+}

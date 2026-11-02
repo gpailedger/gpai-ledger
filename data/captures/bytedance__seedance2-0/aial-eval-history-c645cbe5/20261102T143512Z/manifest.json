@@ -1,0 +1,38 @@
+{
+  "source_id": "bytedance/seedance2-0",
+  "provider": "ByteDance",
+  "model": "Seedance 2.0",
+  "target_kind": "aial-eval-history",
+  "sha256": "8f47a5b3a3fcb968133436084ab4ede55128290341e2ab3868d8dcf3219155c7",
+  "size_bytes": 3301,
+  "stored_as": "raw.yaml",
+  "text_sha256": "86a619f690f1b50361524477d7c78ad315f62c1bf5af8c5178d576b4bb2a81a5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/evals/bytedance-seedance2.0.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/evals/bytedance-seedance2.0.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"0ce96ffa101d33688bad8208f700071697034e0f3995877cd0a24264917505e8\"",
+    "last_modified": null,
+    "content_length": "662",
+    "fetched_at": "2026-11-02T14:35:12Z"
+  },
+  "prior_sha256": "3c73ba3511612d662e42e73131247986c5f0a37c7a1038552ecaba8be073959f",
+  "git_commit": "d30599ff40e67784f5abf886d1a420dbf0e7a24a",
+  "git_commit_date": "2026-10-23T15:10:33Z",
+  "git_blob_sha": "591aec4b45e2e0132073eacc337f6fc7f9803ced",
+  "git_path": "evals/bytedance-seedance2.0.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:35:16Z"
+  }
+}

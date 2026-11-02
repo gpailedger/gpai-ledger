@@ -1,0 +1,38 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "aial-eval-history",
+  "sha256": "362af45112dab2b1f3b6b0bb149411efb4c7b87cc214e95add1c79977ad514da",
+  "size_bytes": 7420,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d3327860c47c8ee838a163f92cc1246ede6cde2e7544392c86cea694998b3d76",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/huggingface-smollm3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/huggingface-smollm3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"034bb11cb122cd55d5e99ab5f13886485f7ef555d2d96902c03e8c6af1a3026f\"",
+    "last_modified": null,
+    "content_length": "2056",
+    "fetched_at": "2026-11-02T14:44:57Z"
+  },
+  "prior_sha256": "92ff922327c692236a50f90a201a3b6cf7f9ec94378dd944bbec8f7c10a146f4",
+  "git_commit": "e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8",
+  "git_commit_date": "2026-10-23T20:41:17Z",
+  "git_blob_sha": "b49455eacacc8b38f0693c75213b750fcb49a9d2",
+  "git_path": "evals/huggingface-smollm3.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:45:00Z"
+  }
+}

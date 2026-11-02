@@ -1,0 +1,39 @@
+{
+  "source_id": "deepseek/deepseek-v4",
+  "provider": "DeepSeek",
+  "model": "DeepSeek-V4",
+  "target_kind": "aial-eval-page",
+  "sha256": "ee1f1d37c3b8759aef68010ebad4b9a3a7c215f9c6dd2ad9a2e0e594046225bf",
+  "size_bytes": 19980,
+  "stored_as": "raw.html",
+  "text_sha256": "4dec42e69f1ce636e00ad32ac665bcc51fe424e52a88acf6187f401936302b4d",
+  "doc_links_sha256": "b30abde33aa4a327d4de352502503866543d30afbb7ccdba1b074933cecf15be",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/public/evals/deepseek-deepseek-v4/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/public/evals/deepseek-deepseek-v4/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"35e9437b34ec50d2aa75065b6e1ab11df72c8dcd72d6240587fb182a470748d5\"",
+    "last_modified": null,
+    "content_length": "3611",
+    "fetched_at": "2026-11-02T14:49:05Z"
+  },
+  "prior_sha256": "a10c26ffbb91f2591ace69f72a26caca485a7ccbe6c4a60019341237c52d6d1b",
+  "git_commit": "14e02034aa44a396274b58f6116940656831ba44",
+  "git_commit_date": "2026-10-26T14:58:39Z",
+  "git_blob_sha": "92a7682dbea98aaa2a5c5b5a6935370bbd458092",
+  "git_path": "public/evals/deepseek-deepseek-v4/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:49:09Z"
+  }
+}

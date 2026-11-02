@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-mythos-preview",
+  "provider": "Anthropic",
+  "model": "Claude Mythos Preview",
+  "target_kind": "aial-eval-page",
+  "sha256": "2a18d1c526edce9a8fa0c810e389ff075ef7bbe5e79525d548ab327676dfeba0",
+  "size_bytes": 20873,
+  "stored_as": "raw.html",
+  "text_sha256": "9776cacb9c8f1ef24929f04914e937fc72b250685c8a7eda2b000694e23cd877",
+  "doc_links_sha256": "dc08fbe8cbe43980849e19a749c841164c9b55e7a6c2acf1b08fc150b74b9f35",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-claude-mythos-preview/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-claude-mythos-preview/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3g3t\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T13:54:16Z"
+  },
+  "prior_sha256": "9561a8249573bc89bc58a462185bdb04ff4088e1bd2fb782f591f5d1b92d3b59",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:54:19Z"
+  }
+}

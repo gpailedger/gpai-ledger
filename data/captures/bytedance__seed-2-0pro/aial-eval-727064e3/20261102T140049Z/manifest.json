@@ -1,0 +1,33 @@
+{
+  "source_id": "bytedance/seed-2-0pro",
+  "provider": "ByteDance",
+  "model": "Seed 2.0 Pro",
+  "target_kind": "aial-eval",
+  "sha256": "98dd6cc1101c001774c1d712c0e0a186fd726acb8186a983bd996432df564cfa",
+  "size_bytes": 3983,
+  "stored_as": "raw.yaml",
+  "text_sha256": "d09485a1d8df16e533a4614d000fbfd80a9db43bb8a6020a178ccc259d276950",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seed-2.0pro.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/bytedance-seed-2.0pro.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"4a44bfb7be95ef59f6033be950fbf82ff4dee62edcf1844c083a50dcb15ecaa5\"",
+    "last_modified": null,
+    "content_length": "743",
+    "fetched_at": "2026-11-02T14:00:49Z"
+  },
+  "prior_sha256": "c9c4513765f15add78cd02717b98e71721ee6e9a179eff08cea08d3e6af92460",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:00:52Z"
+  }
+}

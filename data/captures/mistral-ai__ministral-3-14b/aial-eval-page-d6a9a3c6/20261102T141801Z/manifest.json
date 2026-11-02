@@ -1,0 +1,34 @@
+{
+  "source_id": "mistral-ai/ministral-3-14b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 14B",
+  "target_kind": "aial-eval-page",
+  "sha256": "1d23c91ac53c0cb2ec7e1872f4bc10e4c9595fd3be537411abb53040acb5a396",
+  "size_bytes": 20141,
+  "stored_as": "raw.html",
+  "text_sha256": "57dce2b388dd0b3d1e3375900ec56390bfccf2740a133d0b51bb09989a7b3c21",
+  "doc_links_sha256": "656100fa890104b4da92d89a3ec8e02a18180a06159cf813f435af595decd807",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-ministral-3-14B/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/mistral-ministral-3-14B/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fjh\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:18:01Z"
+  },
+  "prior_sha256": "69b8e0333aeed36ffe281e20be2bb51bac61a84319856b8bde2807d95b551404",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:18:06Z"
+  }
+}

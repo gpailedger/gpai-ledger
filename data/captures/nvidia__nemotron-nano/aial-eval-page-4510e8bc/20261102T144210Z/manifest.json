@@ -1,0 +1,39 @@
+{
+  "source_id": "nvidia/nemotron-nano",
+  "provider": "NVIDIA",
+  "model": "Nemotron Nano",
+  "target_kind": "aial-eval-page",
+  "sha256": "4b8d50dadfd6cba2264e95c64f16e562560dffc8fd0cb317bdb35d45569ac00e",
+  "size_bytes": 19507,
+  "stored_as": "raw.html",
+  "text_sha256": "edc9d9ae9cb463ff03fe8bb75b040a6fb339c681452f43a6c5b357421890003c",
+  "doc_links_sha256": "80f117a126770d16f63af53421feee1bc622135ace02e38520afeb41917c14ed",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/nvidia-nemotron-nano/version-2026-09-08%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/d30599ff40e67784f5abf886d1a420dbf0e7a24a/public/evals/nvidia-nemotron-nano/version-2026-09-08%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6039a34c574f116ab8da0b6f75b94d15d8809ec455cceb5c686fbd9d0d13f478\"",
+    "last_modified": null,
+    "content_length": "3605",
+    "fetched_at": "2026-11-02T14:42:10Z"
+  },
+  "prior_sha256": "63b5f5bf3b44314ccf131d8903d7e4a6d51800da1601a072938c6465d4ca2dda",
+  "git_commit": "d30599ff40e67784f5abf886d1a420dbf0e7a24a",
+  "git_commit_date": "2026-10-23T15:10:33Z",
+  "git_blob_sha": "fc109cfa46a76453257ed114869a5b4dc749e2cb",
+  "git_path": "public/evals/nvidia-nemotron-nano/version-2026-09-08 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:42:15Z"
+  }
+}

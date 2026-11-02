@@ -1,0 +1,38 @@
+{
+  "source_id": "microsoft/mai-code-1-1-flash",
+  "provider": "Microsoft",
+  "model": "MAI-Code-1.1-Flash",
+  "target_kind": "aial-eval-history",
+  "sha256": "3be43119201d14044f7021879669332f18a9a0bad2458710baf34a9acbc0cf67",
+  "size_bytes": 3217,
+  "stored_as": "raw.yaml",
+  "text_sha256": "f0faac86e440c3fcc2759958f750e815c67f0a1e4c7b58fc75b04f43d71a2fc6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/microsoft-mai-code-1.1-flash.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/evals/microsoft-mai-code-1.1-flash.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"3214b5c5e423c57a0c5a47c05ce297c3b924ae39db2374b0c45d835ee99f2732\"",
+    "last_modified": null,
+    "content_length": "607",
+    "fetched_at": "2026-11-02T14:45:05Z"
+  },
+  "prior_sha256": "f8d5e2e085f498faa3f25266299256e5976dac6b293dcd2ae5913a389fdf3a6f",
+  "git_commit": "e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8",
+  "git_commit_date": "2026-10-23T20:41:17Z",
+  "git_blob_sha": "c957ffdd19b16a8d0ee202b9e43a321efa5b19ca",
+  "git_path": "evals/microsoft-mai-code-1.1-flash.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:45:06Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "anthropic/claude-opus-4-7",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.7",
+  "target_kind": "aial-eval-page",
+  "sha256": "6758e3decb0ee48520b4a45f43eb6dfc070b553c28e9e5dc72d303e81aa3bb0e",
+  "size_bytes": 20862,
+  "stored_as": "raw.html",
+  "text_sha256": "b2105b60122990151a6e9bedf589dd90c3d042b24dacd172fbef18cd064d7e00",
+  "doc_links_sha256": "e17a48d83464593fbc5952d060e90674aa34a68d468ccccd00b0f5dd9e3ce360",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-claude-opus-4-7/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/anthropic-claude-opus-4-7/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3g3i\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T13:54:40Z"
+  },
+  "prior_sha256": "46972dbcd78484914107d70fe182d2c7f098b95e761402b3d0f07f98a4e969fd",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:54:44Z"
+  }
+}

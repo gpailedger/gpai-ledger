@@ -1,0 +1,48 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "provider-live",
+  "sha256": "c723564465b8a4825d806429221e8d5aefd1d659345d73dbcec5350a8ee9d9b7",
+  "size_bytes": 242937,
+  "stored_as": "raw.html",
+  "text_sha256": "3210e59bd27f358d04d014a0ddfb939685cc98a5a1c349390806a6143e5c880b",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://bria.ai/eu-policy",
+    "final_url": "https://bria.ai/eu-policy",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "242937",
+    "fetched_at": "2026-11-02T13:58:36Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "0fefc72bf89128a5f0cab8e84dcaa6c55db2c254ca31c9e835f5901c121c2425",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-a8f0862e90c2041aea478f5ca35d70778ea3fb96 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-a8f0862e90c2041aea478f5ca35d70778ea3fb96",
+    "via": "spn2",
+    "requested_at": "2026-11-02T13:58:36Z",
+    "at": "2026-11-02T13:59:35Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T13:59:40Z"
+  }
+}

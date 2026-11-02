@@ -1,0 +1,38 @@
+{
+  "source_id": "bytedance/seedream-5-0-pro",
+  "provider": "ByteDance",
+  "model": "Seedream 5.0 Pro",
+  "target_kind": "aial-eval-history",
+  "sha256": "7a76d959326869be44da19309ff4f47c10da2ff17c5712ac920bb64559ef2932",
+  "size_bytes": 3996,
+  "stored_as": "raw.yaml",
+  "text_sha256": "b711fcc2850564f3b838b08af68aa3af2d0be079fc8ad812a82fd6ff93acb889",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/bytedance-seedance-5.0pro.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/bytedance-seedance-5.0pro.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"39586638f6761e3ade148f4d787dc77bd745dbd417c3573cb2a685dfbe996aab\"",
+    "last_modified": null,
+    "content_length": "734",
+    "fetched_at": "2026-11-02T14:47:20Z"
+  },
+  "prior_sha256": "3370e7eb62498c56b77ba2106979f0c0296ca4384d676f24447260e5fab59639",
+  "git_commit": "14e02034aa44a396274b58f6116940656831ba44",
+  "git_commit_date": "2026-10-26T14:58:39Z",
+  "git_blob_sha": "a70e165fab877b0807b9b4fe13ca3cf51dd96aa1",
+  "git_path": "evals/bytedance-seedance-5.0pro.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:47:24Z"
+  }
+}

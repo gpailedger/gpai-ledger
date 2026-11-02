@@ -1,0 +1,34 @@
+{
+  "source_id": "cohere/command-a-plus",
+  "provider": "Cohere",
+  "model": "C4AI Command A Plus",
+  "target_kind": "aial-eval-page",
+  "sha256": "b8a48a9f1e269d688c6c2a06218acf61065cd6e1cfaf5a7c971e8792cf9007ca",
+  "size_bytes": 20204,
+  "stored_as": "raw.html",
+  "text_sha256": "9b7313cc24fd54af9ad8c5afe10969195146d4a684a7414ef37e528a32cb0c60",
+  "doc_links_sha256": "32d7d0b11a58c3dc2dedb90a4dd34e8be6bdcdbf4c5f95963df0154438c50153",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/cohere-command-a-plus/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/cohere-command-a-plus/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fl8\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:03:20Z"
+  },
+  "prior_sha256": "bfeafdba0e09da583ab752ba46cb69618ba83916a1ebf5397b5d18886dfc7026",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:03:24Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "meta/muse-image",
+  "provider": "Meta",
+  "model": "Muse Image",
+  "target_kind": "aial-eval",
+  "sha256": "4af8ab481e70cb80db6cd8554e178469e29eee22653d79b6529136c777a3c0bf",
+  "size_bytes": 4851,
+  "stored_as": "raw.yaml",
+  "text_sha256": "6efcc1884d466fdf7029bfb15fac2bf6d7817bd69958fb46f8fe7c22385f15fc",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/meta-muse-image.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/meta-muse-image.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"c29fa2eb7233e5cb8328a78f21fc861f8745a6f7701a06c09583ee4ea8a012ee\"",
+    "last_modified": null,
+    "content_length": "1168",
+    "fetched_at": "2026-11-02T14:10:34Z"
+  },
+  "prior_sha256": "bcdbd7a614f8fab0cc907fc81998c55275439f489d1201b42ea217766369e958",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:10:37Z"
+  }
+}

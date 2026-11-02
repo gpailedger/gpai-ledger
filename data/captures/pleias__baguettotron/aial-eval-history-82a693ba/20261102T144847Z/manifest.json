@@ -1,0 +1,38 @@
+{
+  "source_id": "pleias/baguettotron",
+  "provider": "Pleias",
+  "model": "Baguettotron and Monad",
+  "target_kind": "aial-eval-history",
+  "sha256": "6b7d2966e370e4f4f6010e6ba2340991d5f4a49743b6250351d52150947af21f",
+  "size_bytes": 3830,
+  "stored_as": "raw.yaml",
+  "text_sha256": "05500d0266a9da7d7411b16ea708e24687c828120d85cdfd28882dde5e1101da",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/pleias-baguettotron.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/14e02034aa44a396274b58f6116940656831ba44/evals/pleias-baguettotron.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"06d58ee22feae9a2b51b04268ca42737b4033a30d6718a3b3c8245662dcd9417\"",
+    "last_modified": null,
+    "content_length": "618",
+    "fetched_at": "2026-11-02T14:48:47Z"
+  },
+  "prior_sha256": "180ddfcfaa19f0cc752f622c470b675e840cc813423f7a03ce4e22fb2ada222b",
+  "git_commit": "14e02034aa44a396274b58f6116940656831ba44",
+  "git_commit_date": "2026-10-26T14:58:39Z",
+  "git_blob_sha": "caac2e7754792c19b14ca1caa377ee41cb23d2b4",
+  "git_path": "evals/pleias-baguettotron.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:48:49Z"
+  }
+}

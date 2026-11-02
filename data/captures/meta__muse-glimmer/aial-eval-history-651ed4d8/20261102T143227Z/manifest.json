@@ -1,0 +1,38 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "aial-eval-history",
+  "sha256": "8d08d06652c7aca027922a66556aa9aeb8268d27796e593871580093c1448e19",
+  "size_bytes": 3206,
+  "stored_as": "raw.yaml",
+  "text_sha256": "c549ec7b5b6ecc5aaa04b36046402840e075ba8a5da328f4b5c95a27b92b908f",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/28fc4c9347bf9eb21f686be92da2461e05e6624d/evals/meta-muse-glimmer.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/28fc4c9347bf9eb21f686be92da2461e05e6624d/evals/meta-muse-glimmer.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"1482819b4ba2a941ab48fab6a445247a6440afd8943b11be2c349288479306ef\"",
+    "last_modified": null,
+    "content_length": "571",
+    "fetched_at": "2026-11-02T14:32:27Z"
+  },
+  "prior_sha256": "6dd2d8b03b966957dcb3c62c0450e8ef3661ad2a241cceb90fc491cecf36bd07",
+  "git_commit": "28fc4c9347bf9eb21f686be92da2461e05e6624d",
+  "git_commit_date": "2026-10-23T12:48:49Z",
+  "git_blob_sha": "b02e2959c426c9662efd64d16bc5c3ec9d85f464",
+  "git_path": "evals/meta-muse-glimmer.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:32:32Z"
+  }
+}

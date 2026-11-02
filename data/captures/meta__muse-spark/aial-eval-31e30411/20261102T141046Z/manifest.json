@@ -1,0 +1,33 @@
+{
+  "source_id": "meta/muse-spark",
+  "provider": "Meta",
+  "model": "Muse Spark",
+  "target_kind": "aial-eval",
+  "sha256": "27428e4c0913c779f930632a2d148ce5fe5f04c290f64f16b18321f5aac44442",
+  "size_bytes": 4833,
+  "stored_as": "raw.yaml",
+  "text_sha256": "3d57f601bcdb555eefbe552a055d30c4e0340940c1842be58c59d637bb03a28e",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/meta-muse-spark.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/meta-muse-spark.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"17e61b2b8ff43cdc9ab4c38f7be46110df54e4ede7577f2ec55db105e0b034e8\"",
+    "last_modified": null,
+    "content_length": "1159",
+    "fetched_at": "2026-11-02T14:10:46Z"
+  },
+  "prior_sha256": "df4530ce622c7a31712d797114178c0a318732a5d4398fadfa3fe5f7cc7ac5b4",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:10:50Z"
+  }
+}

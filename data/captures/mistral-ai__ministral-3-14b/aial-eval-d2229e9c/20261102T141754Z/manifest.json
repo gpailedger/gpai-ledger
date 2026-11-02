@@ -1,0 +1,33 @@
+{
+  "source_id": "mistral-ai/ministral-3-14b",
+  "provider": "Mistral AI",
+  "model": "Ministral 3 14B",
+  "target_kind": "aial-eval",
+  "sha256": "a24607daab9f5bb5183deeeb2e5acb850ca669f29cb2470e9c385ff0ac51139b",
+  "size_bytes": 4961,
+  "stored_as": "raw.yaml",
+  "text_sha256": "002dc93b5b32beae7d90ecc28f00212039941862570b37a05835990992da2e97",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-ministral-3-14B.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/mistral-ministral-3-14B.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f63103c043fdff495424f29f277a73714a0109870ac5d477a8f7a001da4533eb\"",
+    "last_modified": null,
+    "content_length": "1196",
+    "fetched_at": "2026-11-02T14:17:54Z"
+  },
+  "prior_sha256": "7d150933cc8cbbdc3d59253f087044fdec00624f90b5424946247362b24ddd6c",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:17:59Z"
+  }
+}

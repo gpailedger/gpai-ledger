@@ -1,0 +1,34 @@
+{
+  "source_id": "domyn/domyn",
+  "provider": "Domyn",
+  "model": "Domyn Large",
+  "target_kind": "aial-eval-page",
+  "sha256": "ee0a6f4387ad5c977068aa9475754ef8ee14c5037f1c203b7b17e17ac94143e3",
+  "size_bytes": 18903,
+  "stored_as": "raw.html",
+  "text_sha256": "3d98410bf8a1a7e37499b59742fcda5dca85034da4f4e6abff5e3d24183cd3a7",
+  "doc_links_sha256": "b1bc1438561b688ac0a6ed918337bb714b5f3f3f2c67b2e5822facb57550ad55",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/domyn-domyn-large/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/domyn-domyn-large/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3el3\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:04:55Z"
+  },
+  "prior_sha256": "3ff1ed1ed829f4eca9a9741e7fea107033d7ef9b27ee7d7fc2ffb455e16cc0ff",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:05:00Z"
+  }
+}

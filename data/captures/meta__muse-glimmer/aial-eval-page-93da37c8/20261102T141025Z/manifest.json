@@ -1,0 +1,34 @@
+{
+  "source_id": "meta/muse-glimmer",
+  "provider": "Meta",
+  "model": "Muse Glimmer",
+  "target_kind": "aial-eval-page",
+  "sha256": "6dd76c986f3d9f2bc37eeb86afea04028dea9ecc3bbe3b7523612480c1cb0daa",
+  "size_bytes": 19979,
+  "stored_as": "raw.html",
+  "text_sha256": "a0782ee77512baa2b605ee2f80945ecedf0bf9caab5b80f6eeade96de9463bcb",
+  "doc_links_sha256": "dcb1cc968891324c188d0bff6ba7972bb58f3a90f36e235cec359cb4e968adbd",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-glimmer/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/meta-muse-glimmer/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"tnvdt3fez\"",
+    "last_modified": "Mon, 02 Nov 2026 10:15:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-02T14:10:25Z"
+  },
+  "prior_sha256": "3ad03664dbd3247958864921a621d04e594ef53b7c06e5a71d61647d5fda3139",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:10:29Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "xai/grok-4-5",
+  "provider": "xAI",
+  "model": "Grok 4.5",
+  "target_kind": "aial-eval",
+  "sha256": "ce230b8e94c74fba8cd9743e9c069930ef61d7925ced9f57595dcb03b0ab52a6",
+  "size_bytes": 4735,
+  "stored_as": "raw.yaml",
+  "text_sha256": "2a2c0827105d791a322a6f557f5595f7cab43c68709702bee003a5e0aecd5ea6",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/xai-grok-4.5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/xai-grok-4.5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b28267c31565660a63c8cc5def826158dc2303821cefae3fb6fc81c2e5dbd92c\"",
+    "last_modified": null,
+    "content_length": "1142",
+    "fetched_at": "2026-11-02T14:25:30Z"
+  },
+  "prior_sha256": "4d757450f2f2c94e5f723a652adb2820221924880bf7f0ba3a16ac4af89c73f6",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:25:35Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "aial-eval",
+  "sha256": "2846a8f24ed2300a6234e25b722e4a217665ea52d9bed47c518e549e90102471",
+  "size_bytes": 5312,
+  "stored_as": "raw.yaml",
+  "text_sha256": "ce4a7066165f5d943c53158b35d0e4624013f9b3bbb50259ce194121bc0af489",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/swissai-apertus-1-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/swissai-apertus-1-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"6513ed9094a6f7b4bbb359348d51be8ca96b4891baf5a6a28c82aed79b318bb4\"",
+    "last_modified": null,
+    "content_length": "1339",
+    "fetched_at": "2026-11-02T14:23:29Z"
+  },
+  "prior_sha256": "1e1e885924f3474118539b20709ffc8e82805059009824032721c1d00b87004f",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-02T14:23:33Z"
+  }
+}
