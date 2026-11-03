@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "provider not identified by this project",
+  "model": "Claude_Haiku_5_5_2026_10_07",
+  "target_kind": "aial-archive",
+  "sha256": "a157f9b8db80443687b6f03ad41393b48ed67646cbb7fb3a684c22f2e613f8db",
+  "size_bytes": 254424,
+  "stored_as": "raw.pdf",
+  "text_sha256": "2cb4ff2349b84ce144f3c61e12eae14d2e6e168fd4695065b3fe558d6b08e14d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bcfe12438ea3a9e900876c323cfff13a5c5f8d1c/public/archive/Claude_Haiku_5_5_2026_10_07.pdf",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bcfe12438ea3a9e900876c323cfff13a5c5f8d1c/public/archive/Claude_Haiku_5_5_2026_10_07.pdf",
+    "status_code": 200,
+    "content_type": "application/octet-stream",
+    "etag": "W/\"82ed5d0113c244709c77ea54f329563353f16a4faa57c37c67677165c1258fd7\"",
+    "last_modified": null,
+    "content_length": "254424",
+    "fetched_at": "2026-11-03T13:53:05Z"
+  },
+  "prior_sha256": null,
+  "git_commit": "bcfe12438ea3a9e900876c323cfff13a5c5f8d1c",
+  "git_commit_date": "2026-11-01T14:34:05Z",
+  "git_blob_sha": "2db26276f78bf24d813b1ca8d496a219e0025302",
+  "git_path": "public/archive/Claude_Haiku_5_5_2026_10_07.pdf",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:53:09Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261103135312/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bcfe12438ea3a9e900876c323cfff13a5c5f8d1c/public/archive/Claude_Haiku_5_5_2026_10_07.pdf",
+    "snapshot_ts": "20261103135312",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-366b549cf3419c8def373b8dcb385fd99d9ab56a",
+    "via": "spn2",
+    "requested_at": "2026-11-03T13:53:11Z",
+    "at": "2026-11-03T13:53:17Z"
+  }
+}

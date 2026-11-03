@@ -1,0 +1,39 @@
+{
+  "source_id": "xai/grok-voice-think-fast-2",
+  "provider": "xAI",
+  "model": "Grok Voice Think Fast 2.0",
+  "target_kind": "aial-eval-page",
+  "sha256": "22bc823746466fc5f900b6d10f84222b4ae2797b35f18d8c7bee18933397530c",
+  "size_bytes": 18987,
+  "stored_as": "raw.html",
+  "text_sha256": "9557c8d242351cd16202b2b75a1de7ee05e79cf45beef94ef333ed9e0c0fdfca",
+  "doc_links_sha256": "75f4f94c025091d7b2c0572dc1beda1896ab6a8fcc4a6475086cbff3a02c9ed7",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/284536384028359cfc86ffbb17e6520c2ad76abf/public/evals/xai-grok-voice-think-fast2.0/version-2026-08-18%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/284536384028359cfc86ffbb17e6520c2ad76abf/public/evals/xai-grok-voice-think-fast2.0/version-2026-08-18%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"223c6a79c5850da6c9d00fcb672ca037b91ad951996efa8189c7351390e6e658\"",
+    "last_modified": null,
+    "content_length": "3557",
+    "fetched_at": "2026-11-03T13:47:21Z"
+  },
+  "prior_sha256": "8d94668513bec5d699e79202636828fa258899c0d450623c162bb925d257fdac",
+  "git_commit": "284536384028359cfc86ffbb17e6520c2ad76abf",
+  "git_commit_date": "2026-10-26T20:41:58Z",
+  "git_blob_sha": "859bb7d1c6a762c4c314c4550287b8945d4a08b7",
+  "git_path": "public/evals/xai-grok-voice-think-fast2.0/version-2026-08-18 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:47:24Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source_id": "anthropic/mythos5-1",
+  "provider": "Anthropic",
+  "model": "Mythos 5.1 / Fable 5.1",
+  "target_kind": "aial-eval-history",
+  "sha256": "68a9fc98456cfa1a06140a59c058d36aa2407655e69cd12215330014abe6f101",
+  "size_bytes": 3873,
+  "stored_as": "raw.yaml",
+  "text_sha256": "cb1ec4927b2f359badcd8d054642cadb5ed7c7759f07969f77e71718c83e73bb",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/anthropic-mythos5.1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/anthropic-mythos5.1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"a29804018df493699446f4fcf7bd657035100c2a87f1e00c9d3792bd9150efc4\"",
+    "last_modified": null,
+    "content_length": "649",
+    "fetched_at": "2026-11-03T13:48:08Z"
+  },
+  "prior_sha256": "dcec6d7d77bb1b133a0f002d601cd3f2de8e0fb6eab1a9988e45f1c24449db40",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "e95c230226c3dfefeb0600c14e07e70ea2f595c5",
+  "git_path": "evals/anthropic-mythos5.1.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:48:14Z"
+  }
+}

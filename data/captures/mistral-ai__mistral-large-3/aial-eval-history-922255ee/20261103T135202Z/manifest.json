@@ -1,0 +1,38 @@
+{
+  "source_id": "mistral-ai/mistral-large-3",
+  "provider": "Mistral AI",
+  "model": "Mistral Large 3",
+  "target_kind": "aial-eval-history",
+  "sha256": "ba999e844f822829e7af28edef5600e6e94813897aa4cb7e7af1e375868bea27",
+  "size_bytes": 4947,
+  "stored_as": "raw.yaml",
+  "text_sha256": "68ebb9d2340eebc63bc140d49dfa35e72a5a7e31920c928620d3bc80e062267d",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6fbf6dfa9eb769a8ab20611ea5cb3d7d6b167b44/evals/mistral-mistral-large-3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/6fbf6dfa9eb769a8ab20611ea5cb3d7d6b167b44/evals/mistral-mistral-large-3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"dfa8dfebe0b8ef421cfc6e1bca0f79656bf43a52b4d138e7fdf90297dce90c33\"",
+    "last_modified": null,
+    "content_length": "1215",
+    "fetched_at": "2026-11-03T13:52:02Z"
+  },
+  "prior_sha256": "cf32c9b806a5e241e0bcbed0b2697e13f01b7e5f3962c61909dc9005fa665262",
+  "git_commit": "6fbf6dfa9eb769a8ab20611ea5cb3d7d6b167b44",
+  "git_commit_date": "2026-10-28T15:14:29Z",
+  "git_blob_sha": "47d9e2fd8ca043952c89a8dd8be57936805b4f19",
+  "git_path": "evals/mistral-mistral-large-3.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:52:06Z"
+  }
+}

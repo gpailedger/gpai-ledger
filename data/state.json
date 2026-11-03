@@ -1382,11 +1382,15 @@
       {
         "sha256": "19a392184856f78249be8a4eb89b25355573a73d5a89e2a14125ec701f3e7493",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261102T140807Z"
+      },
+      {
+        "sha256": "1036f9ee17764e97a36fe3e9a78b99830b5add0678d523f66ed168b9d099c2a5",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261103T131524Z"
       }
     ],
-    "last_sha256": "19a392184856f78249be8a4eb89b25355573a73d5a89e2a14125ec701f3e7493",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261102T140807Z",
-    "last_text_sha256": "60d094ea494fc992965d19cdb3caf7e3467b8ed970b2a4a5c01232e7d8389d83"
+    "last_sha256": "1036f9ee17764e97a36fe3e9a78b99830b5add0678d523f66ed168b9d099c2a5",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261103T131524Z",
+    "last_text_sha256": "dc7f030d26030070b84db09f3df2c37998cb771b2a097532db6b403617410386"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -2022,10 +2026,14 @@
       {
         "sha256": "f1bdf2c7b38c99ecba2f0c37853081627f7f0e3a24b78c3bf1dc7ec0941549aa",
         "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261102T142626Z"
+      },
+      {
+        "sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
+        "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z"
       }
     ],
-    "last_sha256": "f1bdf2c7b38c99ecba2f0c37853081627f7f0e3a24b78c3bf1dc7ec0941549aa",
-    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261102T142626Z",
+    "last_sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
+    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z",
     "last_text_sha256": null
   },
   "openai/gpt-5-2::provider-live-e7ad6bc8": {
@@ -2343,11 +2351,15 @@
       {
         "sha256": "75663757ee457b713dadf411f1d69114d643be26bbc66ea946499728608f1ad7",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261031T113724Z"
+      },
+      {
+        "sha256": "6eec5dfe6149ee78dea34b4826a9b8c9dc82b90aec76570d22e9d6d66c045956",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261103T132804Z"
       }
     ],
-    "last_sha256": "75663757ee457b713dadf411f1d69114d643be26bbc66ea946499728608f1ad7",
-    "last_text_sha256": "d6d63a7290ba727e46235ce1b8ef31fcce5af076506ac5a965fe7942ac099049",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261031T113724Z"
+    "last_sha256": "6eec5dfe6149ee78dea34b4826a9b8c9dc82b90aec76570d22e9d6d66c045956",
+    "last_text_sha256": "d92b3e8fef7c1c85137acbc554ff716915093112a8533e28ca57f02e6555dcff",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261103T132804Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -3599,11 +3611,15 @@
       {
         "sha256": "041b92da52e16010d3ef31a71c5f1a86be882802b4dbb7015798339b8478e512",
         "dir": "captures/swiss-ai-initiative__apertus/aial-eval-history-18746780/20261102T143738Z"
+      },
+      {
+        "sha256": "a9191b9416ac1b391a6cc3dd48f23b73c02e2b494b68b56b03d6332082d40697",
+        "dir": "captures/swiss-ai-initiative__apertus/aial-eval-history-18746780/20261103T133727Z"
       }
     ],
-    "last_sha256": "041b92da52e16010d3ef31a71c5f1a86be882802b4dbb7015798339b8478e512",
-    "last_text_sha256": "f83e6e9be66ecb97caaa685461486eb016c7524279a02773ef008ba5d269be58",
-    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-history-18746780/20261102T143738Z",
+    "last_sha256": "a9191b9416ac1b391a6cc3dd48f23b73c02e2b494b68b56b03d6332082d40697",
+    "last_text_sha256": "217ee4aa6a9820607b280b303ec4776c2929080c2a9b3544f33cd7b4b0091ea9",
+    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-history-18746780/20261103T133727Z",
     "upstream_aliases": {
       "evals/swissai-apertus.yaml": "04c1b16fd228c82f9794d97646da7363afbbfcbd"
     }
@@ -3629,11 +3645,19 @@
       {
         "sha256": "eb6051ee7fd7fb63c1c19a6d9ca31f37c3c5c7c8f7470e349cfb44ec2b38e2e8",
         "dir": "captures/speakleash__bielik/aial-eval-history-81de47d8/20260829T190142Z"
+      },
+      {
+        "sha256": "d308e43617d24b7fa19c616c959bc5f16451a6a6590a8efc86c811565a3efadf",
+        "dir": "captures/speakleash__bielik/aial-eval-history-81de47d8/20261103T133717Z"
+      },
+      {
+        "sha256": "71a365c1135f387be14d3c6fdc8ffc13b4c713d45adbd87e94a2fa0693393d0b",
+        "dir": "captures/speakleash__bielik/aial-eval-history-81de47d8/20261103T134856Z"
       }
     ],
-    "last_sha256": "eb6051ee7fd7fb63c1c19a6d9ca31f37c3c5c7c8f7470e349cfb44ec2b38e2e8",
-    "last_text_sha256": "18e922770a3c03e06ac2cd498234bc9490bff9775f601ce9c0bf122b3bad1afd",
-    "last_capture": "captures/speakleash__bielik/aial-eval-history-81de47d8/20260829T190142Z",
+    "last_sha256": "71a365c1135f387be14d3c6fdc8ffc13b4c713d45adbd87e94a2fa0693393d0b",
+    "last_text_sha256": "7a819666fde7e91819598203764067ed8bdd1a00ede5189c86cd360f9f8163e5",
+    "last_capture": "captures/speakleash__bielik/aial-eval-history-81de47d8/20261103T134856Z",
     "upstream_aliases": {
       "evals/speakleash-bielik.yaml": "313ae22abb152302e91b533106bc61222b260fcb"
     }
@@ -3828,11 +3852,19 @@
       {
         "sha256": "e53cdecfd8dc2db3fc0a428678f764ce2ea4a5e181730cb0796b0d2bdcaa29c5",
         "dir": "captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20261102T143656Z"
+      },
+      {
+        "sha256": "b1a4367b03c702e3f6fc765e61e9d7bf9366a7ed02cf864e2dd9bfe9b1012eb2",
+        "dir": "captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20261103T133645Z"
+      },
+      {
+        "sha256": "536b645b6ba245c6dea21d75dae28b335c5e20c307b84d440db30b98d1461243",
+        "dir": "captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20261103T134249Z"
       }
     ],
-    "last_sha256": "e53cdecfd8dc2db3fc0a428678f764ce2ea4a5e181730cb0796b0d2bdcaa29c5",
-    "last_text_sha256": "30ad7d5ca069645f3ac07e3013ceaccb77282e857a8b604674da5519518f558d",
-    "last_capture": "captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20261102T143656Z",
+    "last_sha256": "536b645b6ba245c6dea21d75dae28b335c5e20c307b84d440db30b98d1461243",
+    "last_text_sha256": "54951a274657befd52fa6d2142e09636d86e1f6ef950ac31b57609946f45b0be",
+    "last_capture": "captures/openai__gpt-5-5/aial-eval-history-0ed16cc0/20261103T134249Z",
     "upstream_aliases": {
       "evals/openai-gpt-5-5.yaml": "facc6181d99f08303736d9f1a2b696668add2ba2"
     }
@@ -4016,11 +4048,15 @@
       {
         "sha256": "7624c38b253fc4e21db6731d5f4503dafe87f31a7697c4827dc3f59d14aca12c",
         "dir": "captures/google__gemini-3-pro/aial-eval-history-e231b23f/20261102T143534Z"
+      },
+      {
+        "sha256": "f95b86fadf4c4864fd19ffb4874620c3efe436ed03c87b2751b6536dbcc4ddb4",
+        "dir": "captures/google__gemini-3-pro/aial-eval-history-e231b23f/20261103T134840Z"
       }
     ],
-    "last_sha256": "7624c38b253fc4e21db6731d5f4503dafe87f31a7697c4827dc3f59d14aca12c",
-    "last_text_sha256": "15210cf6a0bfebcf482f6514278f5c71a45f2004a2b7f235de2f2575bf345a8b",
-    "last_capture": "captures/google__gemini-3-pro/aial-eval-history-e231b23f/20261102T143534Z",
+    "last_sha256": "f95b86fadf4c4864fd19ffb4874620c3efe436ed03c87b2751b6536dbcc4ddb4",
+    "last_text_sha256": "92df411b86f6e07ef85550f847f83b15d2abe8f76fb87702d57cd8432f56440a",
+    "last_capture": "captures/google__gemini-3-pro/aial-eval-history-e231b23f/20261103T134840Z",
     "upstream_aliases": {
       "evals/google-gemini-3-pro.yaml": "7a0c724ee2245b66976601ee1beb1d033ded8d5b"
     }
@@ -4439,11 +4475,15 @@
       {
         "sha256": "07b63246359e29db3455f1b2e10c980e97011dc40d6625409c401ef003205c08",
         "dir": "captures/google__gemma-4/aial-eval-history-a3366a4e/20261102T143537Z"
+      },
+      {
+        "sha256": "fd1a6c42e5ba01a662e5cbfadba7951b73cb9b89b42f5b9680384a1602bc12bc",
+        "dir": "captures/google__gemma-4/aial-eval-history-a3366a4e/20261103T134844Z"
       }
     ],
-    "last_sha256": "07b63246359e29db3455f1b2e10c980e97011dc40d6625409c401ef003205c08",
-    "last_text_sha256": "5b99e466f9a1542148dab293280a58d27a1ce4bad1f2fd6b416686fc896d1d39",
-    "last_capture": "captures/google__gemma-4/aial-eval-history-a3366a4e/20261102T143537Z",
+    "last_sha256": "fd1a6c42e5ba01a662e5cbfadba7951b73cb9b89b42f5b9680384a1602bc12bc",
+    "last_text_sha256": "a84248aa00216fc99bdb084d50bbc905e085dc61a565db9cbc7f02ac77f3f621",
+    "last_capture": "captures/google__gemma-4/aial-eval-history-a3366a4e/20261103T134844Z",
     "upstream_aliases": {
       "evals/google-gemma-4.yaml": "639307512243edcda99f248ec2ee87cee4f54436"
     }
@@ -4648,11 +4688,15 @@
       {
         "sha256": "60a67dd418b3922e14bb46b45e3f23c826408bb1582b21f8b122df8f3a33c804",
         "dir": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-history-de843743/20260829T190616Z"
+      },
+      {
+        "sha256": "14d084c9318af98c3aaba62e2947aff1b45ba5848807caa87bab435e4881ce7e",
+        "dir": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-history-de843743/20261103T134741Z"
       }
     ],
-    "last_sha256": "60a67dd418b3922e14bb46b45e3f23c826408bb1582b21f8b122df8f3a33c804",
-    "last_text_sha256": "7b613f97fe2bb72f8e04ba739fdc74a818d721ebf78570a9d231d5fbff9e7503",
-    "last_capture": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-history-de843743/20260829T190616Z",
+    "last_sha256": "14d084c9318af98c3aaba62e2947aff1b45ba5848807caa87bab435e4881ce7e",
+    "last_text_sha256": "9ba7049f91e6c064879809ed38aa518a5cb5be1c372dff537f7385802b289ab7",
+    "last_capture": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-history-de843743/20261103T134741Z",
     "upstream_aliases": {
       "evals/anthropic-claude-mythos-5-fable-5.yaml": "fc6ddf6bae71b271c06f5ac49143ac5dfc84a751"
     }
@@ -4694,11 +4738,15 @@
       {
         "sha256": "695ae15fd187551eeae7519a102e37c55c6eff610efd893728ecb66eb3de18e4",
         "dir": "captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T190624Z"
+      },
+      {
+        "sha256": "9ff40274d61a6d09aafc5fec4345c88c5b65e9db9ad70376af78467f8204fce2",
+        "dir": "captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20261103T134745Z"
       }
     ],
-    "last_sha256": "695ae15fd187551eeae7519a102e37c55c6eff610efd893728ecb66eb3de18e4",
-    "last_text_sha256": "edcc04d5d6db22cf7ad0830a3880d1a8ec544a689c8a8d2b98c08f07144977c0",
-    "last_capture": "captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20260829T190624Z",
+    "last_sha256": "9ff40274d61a6d09aafc5fec4345c88c5b65e9db9ad70376af78467f8204fce2",
+    "last_text_sha256": "7b9c6b1823c6dede34d86d15d65f3c8f16947038eeb5816e7f5be7d323d01500",
+    "last_capture": "captures/anthropic__claude-mythos-preview/aial-eval-history-941c4fb5/20261103T134745Z",
     "upstream_aliases": {
       "evals/anthropic-claude-mythos-preview.yaml": "a5ac1e9c674fe02b47ba15241ca3e40ff8a37c6d"
     }
@@ -4744,11 +4792,15 @@
       {
         "sha256": "013ea7c020f69bc9dafe202a82cfd2256aba474251010c6388e32a37beed7fd5",
         "dir": "captures/anthropic__claude-opus-4-7/aial-eval-history-6f6796db/20261102T143435Z"
+      },
+      {
+        "sha256": "8a963be8510d75c4eb5c61fc4a1b7f0f6aa98bdbefb547e7bcf1ed933d35b02f",
+        "dir": "captures/anthropic__claude-opus-4-7/aial-eval-history-6f6796db/20261103T134749Z"
       }
     ],
-    "last_sha256": "013ea7c020f69bc9dafe202a82cfd2256aba474251010c6388e32a37beed7fd5",
-    "last_text_sha256": "41616525d9d7d0385cf1c65f0887d1d89e5816f81a7535b988cc488493ba4590",
-    "last_capture": "captures/anthropic__claude-opus-4-7/aial-eval-history-6f6796db/20261102T143435Z",
+    "last_sha256": "8a963be8510d75c4eb5c61fc4a1b7f0f6aa98bdbefb547e7bcf1ed933d35b02f",
+    "last_text_sha256": "14de6febc4f2657214d3fbb060facdecc073c50659bb170068a71f87b2ae53df",
+    "last_capture": "captures/anthropic__claude-opus-4-7/aial-eval-history-6f6796db/20261103T134749Z",
     "upstream_aliases": {
       "evals/anthropic-claude-opus-4-7.yaml": "134ce78920112d2574b10db97650039bdbe04bce"
     }
@@ -4794,11 +4846,15 @@
       {
         "sha256": "cbbe82b053070bf180a1f7862eb18f74b3b6482fb79f6c3c036cb606c07db632",
         "dir": "captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20261102T143438Z"
+      },
+      {
+        "sha256": "9a5b4808cc29a10e4920d5ea66f12f9364599752417ffb0d5f392c729707e58e",
+        "dir": "captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20261103T134753Z"
       }
     ],
-    "last_sha256": "cbbe82b053070bf180a1f7862eb18f74b3b6482fb79f6c3c036cb606c07db632",
-    "last_text_sha256": "6f0c541928edda9822434b4ff5167b77d9055e1ab25fa929f8d6b04f51ad518a",
-    "last_capture": "captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20261102T143438Z",
+    "last_sha256": "9a5b4808cc29a10e4920d5ea66f12f9364599752417ffb0d5f392c729707e58e",
+    "last_text_sha256": "2b1533a1a7adeba7ee4baeed4827071ff66f097dfa80c73437ea9f27007cf2c4",
+    "last_capture": "captures/anthropic__claude-opus-4-8/aial-eval-history-1346dfa5/20261103T134753Z",
     "upstream_aliases": {
       "evals/anthropic-claude-opus-4-8.yaml": "a6ec8dac52161e062a94a20557a8e0a6513628e6"
     }
@@ -4844,11 +4900,15 @@
       {
         "sha256": "71d2a48c233324b7794e96a27cdbac189d8db59e8a0a39c5fdd273c8b604ae70",
         "dir": "captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20261102T143441Z"
+      },
+      {
+        "sha256": "d5a9dd285caf3b06bd5f6ff77369b12f4ab114410134db3870600d93349ce72b",
+        "dir": "captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20261103T134757Z"
       }
     ],
-    "last_sha256": "71d2a48c233324b7794e96a27cdbac189d8db59e8a0a39c5fdd273c8b604ae70",
-    "last_text_sha256": "282578ff0089f61fc45aabe29050213dbdce6623cfd4594ec722eb04e7ab7e45",
-    "last_capture": "captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20261102T143441Z",
+    "last_sha256": "d5a9dd285caf3b06bd5f6ff77369b12f4ab114410134db3870600d93349ce72b",
+    "last_text_sha256": "fea961468bf857e9444ca2d3b896c296fac08c8846625dcaa1db5c1b0504288f",
+    "last_capture": "captures/anthropic__claude-opus-5/aial-eval-history-e94ba648/20261103T134757Z",
     "upstream_aliases": {
       "evals/anthropic-claude-opus-5.yaml": "698da63fb809d970dba97ec94b22e55476edf22d"
     }
@@ -4894,11 +4954,15 @@
       {
         "sha256": "53a2f4c3e7acb01e3796a97c612e5cf670e433283fd525340e998b6355d836a4",
         "dir": "captures/anthropic__claude-sonnet-5/aial-eval-history-b242195b/20261102T143444Z"
+      },
+      {
+        "sha256": "6c333dafd574ca5172cb7685c27ccc6350ec5222304d6eacc2e41a4969273751",
+        "dir": "captures/anthropic__claude-sonnet-5/aial-eval-history-b242195b/20261103T134801Z"
       }
     ],
-    "last_sha256": "53a2f4c3e7acb01e3796a97c612e5cf670e433283fd525340e998b6355d836a4",
-    "last_text_sha256": "2dc7ee82422c7083b8169d665f984c9328ddfd10af12d1ab5e2d1848670a4790",
-    "last_capture": "captures/anthropic__claude-sonnet-5/aial-eval-history-b242195b/20261102T143444Z",
+    "last_sha256": "6c333dafd574ca5172cb7685c27ccc6350ec5222304d6eacc2e41a4969273751",
+    "last_text_sha256": "778708cbe587fff148ba7d6149c629cd64f6fd3758bead97661044e9b9312eeb",
+    "last_capture": "captures/anthropic__claude-sonnet-5/aial-eval-history-b242195b/20261103T134801Z",
     "upstream_aliases": {
       "evals/anthropic-claude-sonnet-5.yaml": "d333efb9375076f3b6c6d4fbe0c2cf03257cc9a0"
     }
@@ -4944,11 +5008,15 @@
       {
         "sha256": "d69f4d0e017c0f7b83096056b9ccdba68ad82508db2e86e1016ba081b5b9aedd",
         "dir": "captures/cohere__command-a-plus/aial-eval-history-9fbd0635/20260930T115613Z"
+      },
+      {
+        "sha256": "56e97b0ee18346cf2d4e60ceeed880450117ec71b7383ee393cd430cd17643a9",
+        "dir": "captures/cohere__command-a-plus/aial-eval-history-9fbd0635/20261103T134155Z"
       }
     ],
-    "last_sha256": "d69f4d0e017c0f7b83096056b9ccdba68ad82508db2e86e1016ba081b5b9aedd",
-    "last_text_sha256": "14fab75dec25685cb0d46a793b0959c63e746a5b63c710fd9e4192a2abdf432b",
-    "last_capture": "captures/cohere__command-a-plus/aial-eval-history-9fbd0635/20260930T115613Z",
+    "last_sha256": "56e97b0ee18346cf2d4e60ceeed880450117ec71b7383ee393cd430cd17643a9",
+    "last_text_sha256": "90940d181a56c294363a7f323c0f92fe03c5a611803d2293cf24b27dae7d0db7",
+    "last_capture": "captures/cohere__command-a-plus/aial-eval-history-9fbd0635/20261103T134155Z",
     "upstream_aliases": {
       "evals/cohere-command-a-plus.yaml": "5cad4a570257fc2917374cc2519852a85184fd8a"
     }
@@ -5066,11 +5134,15 @@
       {
         "sha256": "1c98510b30580979cf046e27b0fbede107b04a81a9f95a26cb1cbaebb7694128",
         "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-history-2d6102f4/20261102T145001Z"
+      },
+      {
+        "sha256": "9012997c19eedc1ff409cc0516425722c817083d77b9bc2ac7cdd5aadfb8fa96",
+        "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-history-2d6102f4/20261103T134208Z"
       }
     ],
-    "last_sha256": "1c98510b30580979cf046e27b0fbede107b04a81a9f95a26cb1cbaebb7694128",
-    "last_text_sha256": "b034bb5e47c055378fb738d6d6d7d1dd572b9c1e1a67de2f261620bf22a50b9b",
-    "last_capture": "captures/microsoft__mai-cyber-1-flash/aial-eval-history-2d6102f4/20261102T145001Z",
+    "last_sha256": "9012997c19eedc1ff409cc0516425722c817083d77b9bc2ac7cdd5aadfb8fa96",
+    "last_text_sha256": "9f4b07d9b7f874674821bde8d029058cc6cef0cf9bd326323ee7641d757266f4",
+    "last_capture": "captures/microsoft__mai-cyber-1-flash/aial-eval-history-2d6102f4/20261103T134208Z",
     "upstream_aliases": {
       "evals/microsoft-mai-cyber-1-flash.yaml": "3ab4e818a82b666814954e254c309e35e92dcd22"
     }
@@ -5158,11 +5230,19 @@
       {
         "sha256": "8b6dd5426420ee71a9e9bf3ff44a83a3a08785a11951578dba75bbb6b7994814",
         "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-history-212dd799/20261102T145029Z"
+      },
+      {
+        "sha256": "dd31ba34e2762f59822102d6607c1c545161dd4222d0c585f0f31b1223a5f77e",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-history-212dd799/20261103T134226Z"
+      },
+      {
+        "sha256": "a24607daab9f5bb5183deeeb2e5acb850ca669f29cb2470e9c385ff0ac51139b",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-history-212dd799/20261103T135148Z"
       }
     ],
-    "last_sha256": "8b6dd5426420ee71a9e9bf3ff44a83a3a08785a11951578dba75bbb6b7994814",
-    "last_text_sha256": "72eb507e83e46e0e912266c97374269a7deecde615ae994cb973c722be75bf0b",
-    "last_capture": "captures/mistral-ai__ministral-3-14b/aial-eval-history-212dd799/20261102T145029Z",
+    "last_sha256": "a24607daab9f5bb5183deeeb2e5acb850ca669f29cb2470e9c385ff0ac51139b",
+    "last_text_sha256": "002dc93b5b32beae7d90ecc28f00212039941862570b37a05835990992da2e97",
+    "last_capture": "captures/mistral-ai__ministral-3-14b/aial-eval-history-212dd799/20261103T135148Z",
     "upstream_aliases": {
       "evals/mistral-ministral-3-14B.yaml": "6522142a2e8e2801b973f3a986b75e0709c79abd"
     }
@@ -5200,11 +5280,23 @@
       {
         "sha256": "d9508ba7b99ea7af894e580a08969d3f356373a4a0675243cb348f7e3f11bf16",
         "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261102T143632Z"
+      },
+      {
+        "sha256": "b0b5e309680528545d07ce356cae635f0e3a9118ac3146e262d9cefd214dcb46",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261103T133620Z"
+      },
+      {
+        "sha256": "a5a5bc898f6c99bd5f937ddbbf05a7b63911a6e238b99f36a066e3e4b4c5d562",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261103T134231Z"
+      },
+      {
+        "sha256": "25b3efd7dd3c86673f01513888592978c7f31e5a1086b36334aa001db5b0a2a5",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261103T135153Z"
       }
     ],
-    "last_sha256": "d9508ba7b99ea7af894e580a08969d3f356373a4a0675243cb348f7e3f11bf16",
-    "last_text_sha256": "0634983a72ccf71c4c6581b19f69ab866a158a602c4a4676851693a4566c99eb",
-    "last_capture": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261102T143632Z",
+    "last_sha256": "25b3efd7dd3c86673f01513888592978c7f31e5a1086b36334aa001db5b0a2a5",
+    "last_text_sha256": "e66a61092609a94668f65fe8f273bb40aa63fb79b1d2cf995f58958a879be6e9",
+    "last_capture": "captures/mistral-ai__ministral-3-3b/aial-eval-history-2519a2b1/20261103T135153Z",
     "upstream_aliases": {
       "evals/mistral-ministral-3-3B.yaml": "e533ffd74359457f2ce6c3f6d6562d583332bf84"
     }
@@ -5242,11 +5334,23 @@
       {
         "sha256": "8f5dbd6c8c8d1f20ecab26d1b4ca3ee60afe45712512114d15b3a31f6bb27bc2",
         "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261102T143636Z"
+      },
+      {
+        "sha256": "6288870bea693238038e888f6a9d8f84821c1186eacfd9d1ac08a7c4c05f8b93",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261103T133624Z"
+      },
+      {
+        "sha256": "70a75b6b5fee2a13225ef85468e92226a851091f92b1c9c066cf48b8331beddb",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261103T134235Z"
+      },
+      {
+        "sha256": "3460ab0aededa11d319c7a1fcd87e0cc8ed0a5b1a32a66d885a55d9888ba3acc",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261103T135157Z"
       }
     ],
-    "last_sha256": "8f5dbd6c8c8d1f20ecab26d1b4ca3ee60afe45712512114d15b3a31f6bb27bc2",
-    "last_text_sha256": "92234566df807b14f8feb2eda7cd4811f711ebe4e983ede3c0f9e86c09397e40",
-    "last_capture": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261102T143636Z",
+    "last_sha256": "3460ab0aededa11d319c7a1fcd87e0cc8ed0a5b1a32a66d885a55d9888ba3acc",
+    "last_text_sha256": "c98e07a4e494d4ed018617010cd38fae86c45dbdb6f3920621bae1d40aff768a",
+    "last_capture": "captures/mistral-ai__ministral-3-8b/aial-eval-history-c491e501/20261103T135157Z",
     "upstream_aliases": {
       "evals/mistral-ministral-3-8B.yaml": "05b77733e9c627492506bc39b16d964e8ef59beb"
     }
@@ -5288,11 +5392,23 @@
       {
         "sha256": "f3cfdeac226b19375c5e648fe633891fb1c23055cb2bca3774ce3106926dd1e4",
         "dir": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261102T143640Z"
+      },
+      {
+        "sha256": "a64bb7ed1ac351c2670279987fa5dd2bbeb3b1d47caa914d64f6b940c18ba504",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261103T133629Z"
+      },
+      {
+        "sha256": "cf32c9b806a5e241e0bcbed0b2697e13f01b7e5f3962c61909dc9005fa665262",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261103T134239Z"
+      },
+      {
+        "sha256": "ba999e844f822829e7af28edef5600e6e94813897aa4cb7e7af1e375868bea27",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261103T135202Z"
       }
     ],
-    "last_sha256": "f3cfdeac226b19375c5e648fe633891fb1c23055cb2bca3774ce3106926dd1e4",
-    "last_text_sha256": "1f2b002457fad662c3cae72494cdde4694418b5b42c2106f85e7c68fd463b549",
-    "last_capture": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261102T143640Z",
+    "last_sha256": "ba999e844f822829e7af28edef5600e6e94813897aa4cb7e7af1e375868bea27",
+    "last_text_sha256": "68ebb9d2340eebc63bc140d49dfa35e72a5a7e31920c928620d3bc80e062267d",
+    "last_capture": "captures/mistral-ai__mistral-large-3/aial-eval-history-922255ee/20261103T135202Z",
     "upstream_aliases": {
       "evals/mistral-mistral-large-3.yaml": "6bdb5b6c42b40acd0d6d06b948fb0df817c458e0"
     }
@@ -5338,11 +5454,23 @@
       {
         "sha256": "f493e31e7f1cb4395eb0aa281db352f822f43bb1d50dfa14485f9c2e1c64f214",
         "dir": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261102T143643Z"
+      },
+      {
+        "sha256": "7515eea5cf356283e181f009bced88ba63902f8a9762ca2711a56a07c4e69c48",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261103T133634Z"
+      },
+      {
+        "sha256": "914b28393f8431f90b73c22cafc00b563ab327ce139acfae9a00c9b1f358f6bd",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261103T134244Z"
+      },
+      {
+        "sha256": "2917754a9a66a662e45c7a377cf3693476a37440a60a2b2cd6c2a6d812e87358",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261103T135207Z"
       }
     ],
-    "last_sha256": "f493e31e7f1cb4395eb0aa281db352f822f43bb1d50dfa14485f9c2e1c64f214",
-    "last_text_sha256": "706a58d8fdcea370b290c7c3e3bcb07e87fc09454a513d9b69984019eecf6a11",
-    "last_capture": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261102T143643Z",
+    "last_sha256": "2917754a9a66a662e45c7a377cf3693476a37440a60a2b2cd6c2a6d812e87358",
+    "last_text_sha256": "fed7ddfd6718d9dac43698860d6e068e34a20034b819ab3ad095f91c6203272b",
+    "last_capture": "captures/mistral-ai__mistral-small-4/aial-eval-history-f7dedbed/20261103T135207Z",
     "upstream_aliases": {
       "evals/mistral-mistral-small-4.yaml": "5d09606e905f83a154a21933ab8d3182e2d02e30"
     }
@@ -5376,11 +5504,15 @@
       {
         "sha256": "765d14cece4c6f43f7f83a42cf61e27702215dc046fed3a7cb97ad216987e645",
         "dir": "captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20261102T143433Z"
+      },
+      {
+        "sha256": "38765262f49c231d5b23f9f04913d8c50d3653e66aa65af0f6f85469516c0385",
+        "dir": "captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20261103T134737Z"
       }
     ],
-    "last_sha256": "765d14cece4c6f43f7f83a42cf61e27702215dc046fed3a7cb97ad216987e645",
-    "last_text_sha256": "8204336ff1a8bf4b9fba1fd24d6796859a5a5358d3876937c6d633ebe15d0c3f",
-    "last_capture": "captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20261102T143433Z",
+    "last_sha256": "38765262f49c231d5b23f9f04913d8c50d3653e66aa65af0f6f85469516c0385",
+    "last_text_sha256": "a080fac39b2dfbf79d2e3d24f3ea87669218c74f867495c17293d234e4ffcc07",
+    "last_capture": "captures/amazon__nova-2-lite/aial-eval-history-c7e8147a/20261103T134737Z",
     "upstream_aliases": {
       "evals/amazon-nova-2-lite.yaml": "e5bc255572e3dceed536a50e5949b76bbd822d77"
     }
@@ -5622,11 +5754,19 @@
       {
         "sha256": "59145e45cdb00806233494c3155711306c619d75d529fadd44967be2d99228aa",
         "dir": "captures/thinking-machines__inkling-small/aial-eval-history-9a411f00/20261102T143748Z"
+      },
+      {
+        "sha256": "c4593b5773b0af6ad8673bd6428819155248ad6f81ef1fcf802733823b3d5399",
+        "dir": "captures/thinking-machines__inkling-small/aial-eval-history-9a411f00/20261103T134323Z"
+      },
+      {
+        "sha256": "e0614d633d9aba6e12895c68b2b58bdcef379615e55323682a2be0c700397b5e",
+        "dir": "captures/thinking-machines__inkling-small/aial-eval-history-9a411f00/20261103T134904Z"
       }
     ],
-    "last_sha256": "59145e45cdb00806233494c3155711306c619d75d529fadd44967be2d99228aa",
-    "last_text_sha256": "b86d29082ac2a9d75f9274a0205f67e69ddfac8d2dd9817c9e6c7cb5fbb3bcef",
-    "last_capture": "captures/thinking-machines__inkling-small/aial-eval-history-9a411f00/20261102T143748Z",
+    "last_sha256": "e0614d633d9aba6e12895c68b2b58bdcef379615e55323682a2be0c700397b5e",
+    "last_text_sha256": "60a2584d354903c300ca5960e45b4ef6b4a28b866915476a324ea6deb8522696",
+    "last_capture": "captures/thinking-machines__inkling-small/aial-eval-history-9a411f00/20261103T134904Z",
     "upstream_aliases": {
       "evals/inkling-small.yaml": "b242fa606f6215447d4102a268f707820cb77c19",
       "evals/thinking-machines-inkling-small.yaml": "b242fa606f6215447d4102a268f707820cb77c19"
@@ -5661,11 +5801,15 @@
       {
         "sha256": "a5850383bdd80dfed7171ef73c999baac0a45b3583855947ace45fa48ed92ca5",
         "dir": "captures/minimax__minimax-m3/aial-eval-history-cd728555/20261102T143623Z"
+      },
+      {
+        "sha256": "521f0fe638aa49eb73cd126ec2b64bf45fac8e40b2013c0754a1c11bbea722c1",
+        "dir": "captures/minimax__minimax-m3/aial-eval-history-cd728555/20261103T134852Z"
       }
     ],
-    "last_sha256": "a5850383bdd80dfed7171ef73c999baac0a45b3583855947ace45fa48ed92ca5",
-    "last_text_sha256": "bda48e5a4595f9da7f85fdf54a467d7390d0e4b4890b2d25a285cf8c8ed5b7fb",
-    "last_capture": "captures/minimax__minimax-m3/aial-eval-history-cd728555/20261102T143623Z",
+    "last_sha256": "521f0fe638aa49eb73cd126ec2b64bf45fac8e40b2013c0754a1c11bbea722c1",
+    "last_text_sha256": "6fd96fdd17e669a530e9846bec926e69bb728d764d79a6beb8d2488e93c0787a",
+    "last_capture": "captures/minimax__minimax-m3/aial-eval-history-cd728555/20261103T134852Z",
     "upstream_aliases": {
       "evals/minimax-minimax-m3.yaml": "5e70f63dab4c8d891ca469ae63cd8a6bd8df319c"
     }
@@ -5687,11 +5831,15 @@
       {
         "sha256": "b0d8b2e8f91c54d39e082d55df8eca8806f6379eaad26dfc500cd95f89af7235",
         "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261102T143032Z"
+      },
+      {
+        "sha256": "2846a8f24ed2300a6234e25b722e4a217665ea52d9bed47c518e549e90102471",
+        "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261103T133722Z"
       }
     ],
-    "last_sha256": "b0d8b2e8f91c54d39e082d55df8eca8806f6379eaad26dfc500cd95f89af7235",
-    "last_text_sha256": "c7f20c4ad56c1185a67cd622a1bc6ddb44089bbe430afcd12bcb8bee713a9b41",
-    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261102T143032Z",
+    "last_sha256": "2846a8f24ed2300a6234e25b722e4a217665ea52d9bed47c518e549e90102471",
+    "last_text_sha256": "ce4a7066165f5d943c53158b35d0e4624013f9b3bbb50259ce194121bc0af489",
+    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261103T133722Z",
     "upstream_aliases": {
       "evals/swissai-apertus-1-5.yaml": "97b8598889e3ee03cf67af2d43c2baecc3377102"
     }
@@ -6122,11 +6270,23 @@
       {
         "sha256": "2b272acae6d5c7f510604b7bdaabc184a37b4f8a5f11ae12a669f1826d6b978f",
         "dir": "captures/aial__tracker/aial-method-d00ffdc2/20261102T144901Z"
+      },
+      {
+        "sha256": "0efd2890ef0109aa22cc66a2b89fe1bde4bd368041009a363cebdc39ac3a38b6",
+        "dir": "captures/aial__tracker/aial-method-d00ffdc2/20261103T133738Z"
+      },
+      {
+        "sha256": "3ca724cf2a28203b95eca7279d9256c7871322dac5f7f2a93192375ec2278dfd",
+        "dir": "captures/aial__tracker/aial-method-d00ffdc2/20261103T134346Z"
+      },
+      {
+        "sha256": "f3bf8b13ef5e610a7345e4535daa4073bca78b991116545b114c2d9e32d5e534",
+        "dir": "captures/aial__tracker/aial-method-d00ffdc2/20261103T134909Z"
       }
     ],
-    "last_sha256": "2b272acae6d5c7f510604b7bdaabc184a37b4f8a5f11ae12a669f1826d6b978f",
-    "last_text_sha256": "52741c734956f571358437fb73fafe80c987ba8563d154d3db875d0499771ad4",
-    "last_capture": "captures/aial__tracker/aial-method-d00ffdc2/20261102T144901Z"
+    "last_sha256": "f3bf8b13ef5e610a7345e4535daa4073bca78b991116545b114c2d9e32d5e534",
+    "last_text_sha256": "1b361a01fcda45ce68b636c154148a010836337f7a199d69d84681cf55c14de4",
+    "last_capture": "captures/aial__tracker/aial-method-d00ffdc2/20261103T134909Z"
   },
   "aial/tracker::aial-eval-page-f90c8946": {
     "versions": [
@@ -6450,11 +6610,27 @@
       {
         "sha256": "69d0ab5b704f7f88f653db1d989734a3f9a59e4a441b94d1eb9110f30e390c8f",
         "dir": "captures/aial__tracker/aial-method-fdbefa3b/20261102T144931Z"
+      },
+      {
+        "sha256": "625750cd87bd5adc2346a55b635fbd164cbf3bb843b4aab1238b36fa5bcefa81",
+        "dir": "captures/aial__tracker/aial-method-fdbefa3b/20261103T134116Z"
+      },
+      {
+        "sha256": "3c8cbd9bcbd5c54b6e9f3a4e23059cb886103602f73a76fadeffddc3e653728b",
+        "dir": "captures/aial__tracker/aial-method-fdbefa3b/20261103T134725Z"
+      },
+      {
+        "sha256": "b33c7c69662ecbb5d99a220fddce47ac947ce50c44638cbfdc4c667a1e3a1e73",
+        "dir": "captures/aial__tracker/aial-method-fdbefa3b/20261103T135141Z"
+      },
+      {
+        "sha256": "9ceca94390750e0cd8bcdaddc7eed8e49d16a4efd8bd41c9df58ad38bf37d697",
+        "dir": "captures/aial__tracker/aial-method-fdbefa3b/20261103T135247Z"
       }
     ],
-    "last_sha256": "69d0ab5b704f7f88f653db1d989734a3f9a59e4a441b94d1eb9110f30e390c8f",
-    "last_text_sha256": "451c1dd5607021c2f7aa2274cdc252379807801c8b1cba8de744ff54dd1782dc",
-    "last_capture": "captures/aial__tracker/aial-method-fdbefa3b/20261102T144931Z"
+    "last_sha256": "9ceca94390750e0cd8bcdaddc7eed8e49d16a4efd8bd41c9df58ad38bf37d697",
+    "last_text_sha256": "403d81e6544f46665980a66fec45d98fce70999ad5af133be697410a475b2586",
+    "last_capture": "captures/aial__tracker/aial-method-fdbefa3b/20261103T135247Z"
   },
   "aial/tracker::aial-method-0fa64b1d": {
     "versions": [
@@ -6692,14 +6868,22 @@
       {
         "sha256": "8509a7d38c9bae1fc2514dd5de625f2e634d04870654172c42dbc30a17555db3",
         "dir": "captures/swiss-ai-initiative__apertus/aial-eval-page-300e0d06/20261102T144343Z"
+      },
+      {
+        "sha256": "551b8794363d2fd7252dde0081fd1583b9f45710242719bcb7946a0f81c7341b",
+        "dir": "captures/swiss-ai-initiative__apertus/aial-eval-page-300e0d06/20261103T133451Z"
+      },
+      {
+        "sha256": "f8444d6c712725573ce579fdb08eb7c7af8b51c9c3741efa6ae69301616b05d0",
+        "dir": "captures/swiss-ai-initiative__apertus/aial-eval-page-300e0d06/20261103T134100Z"
       }
     ],
-    "last_sha256": "8509a7d38c9bae1fc2514dd5de625f2e634d04870654172c42dbc30a17555db3",
-    "last_text_sha256": "8a4d2a9335572baa337c05ec9dc434e559522b46157450d522b77991fc1dbcb8",
-    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-page-300e0d06/20261102T144343Z",
+    "last_sha256": "f8444d6c712725573ce579fdb08eb7c7af8b51c9c3741efa6ae69301616b05d0",
+    "last_text_sha256": "995532f35b1a213cdf80345e1121398131952fa836544c3cfd3956307f3e17ee",
+    "last_capture": "captures/swiss-ai-initiative__apertus/aial-eval-page-300e0d06/20261103T134100Z",
     "upstream_aliases": {
       "public/evals/swissai-apertus/index.html": "ba99be4b19f578ee2ae6b666902442c59e8d99e6",
-      "public/evals/swissai-apertus/version-2026-03-30.html": "f19bea8721754dbf441c65085bbdad0894f6caec"
+      "public/evals/swissai-apertus/version-2026-03-30.html": "51b3299a093f2cf7751acb10b3a4d73c8bd61c51"
     }
   },
   "swiss-ai-initiative/apertus::aial-eval-page-c24b6683": {
@@ -6879,11 +7063,15 @@
       {
         "sha256": "cf94ff46f994d9a8fa94eacb5e9ea0e36672f3622296287a0215c262e9f315be",
         "dir": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261102T143859Z"
+      },
+      {
+        "sha256": "13b7bc1170766acb20e94c0a4acfc2c82812ae3a4b96e67f36adecaa819b5342",
+        "dir": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261103T133511Z"
       }
     ],
-    "last_sha256": "cf94ff46f994d9a8fa94eacb5e9ea0e36672f3622296287a0215c262e9f315be",
-    "last_text_sha256": "323dd655134450efb7d6a1e77202c5c096aad6b43b912bd1abdce5338e1df4f5",
-    "last_capture": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261102T143859Z",
+    "last_sha256": "13b7bc1170766acb20e94c0a4acfc2c82812ae3a4b96e67f36adecaa819b5342",
+    "last_text_sha256": "432117045043bc14b0ce36f1dcdad00e10cf5f0dc7e7783fca185e8204de4ea2",
+    "last_capture": "captures/bria-ai__bria/aial-eval-page-bccfcdf4/20261103T133511Z",
     "upstream_aliases": {
       "public/evals/bria-bria/index.html": "1929622dab21b99af6d3ff9a79e45be2833a64c8",
       "public/evals/bria-bria/version-2026-03-31.html": "e38a0c8589c4ae670cc88c91e099286d50739958"
@@ -7309,14 +7497,22 @@
       {
         "sha256": "711cd4d0b3558c97ae97951847cc757019fca511502422691c71d1e063debe98",
         "dir": "captures/speakleash__bielik/aial-eval-page-8d052499/20260831T113231Z"
+      },
+      {
+        "sha256": "3585b8e960668dbcbe16fbc51b341db02d8fd7b8a182389ff79e3f0a568c32aa",
+        "dir": "captures/speakleash__bielik/aial-eval-page-8d052499/20261103T134041Z"
+      },
+      {
+        "sha256": "5f537f93f46b9f7542dac0db2b42393eefde598efde1147051c25ce89d3c4c2d",
+        "dir": "captures/speakleash__bielik/aial-eval-page-8d052499/20261103T135120Z"
       }
     ],
-    "last_sha256": "711cd4d0b3558c97ae97951847cc757019fca511502422691c71d1e063debe98",
-    "last_text_sha256": "073a5f7aa305a387413bc9a309b724b3ffa7cd717209787c98ba5c43606f53e9",
-    "last_capture": "captures/speakleash__bielik/aial-eval-page-8d052499/20260831T113231Z",
+    "last_sha256": "5f537f93f46b9f7542dac0db2b42393eefde598efde1147051c25ce89d3c4c2d",
+    "last_text_sha256": "8d11678f8ee53280cbee801536341a5ff099093f83e642e9cce9bf1dbf65ad72",
+    "last_capture": "captures/speakleash__bielik/aial-eval-page-8d052499/20261103T135120Z",
     "upstream_aliases": {
       "public/evals/speakleash-bielik/index.html": "ad9e2dd785d9365367102ba9fd4598bb3604e8ae",
-      "public/evals/speakleash-bielik/version-2026-03-30.html": "ad9e2dd785d9365367102ba9fd4598bb3604e8ae"
+      "public/evals/speakleash-bielik/version-2026-03-30.html": "aaec656e041875b1b723b65dbd30bae867b63417"
     }
   },
   "bria-ai/bria::aial-eval-page-f6385c5e": {
@@ -7497,14 +7693,26 @@
       {
         "sha256": "befad413df6231794e9548f8125f98c466df272c135348b27e399fb7ba37c7bf",
         "dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261102T144224Z"
+      },
+      {
+        "sha256": "a6c44e3c0e05cf41c6b3d56f52e03bf1706076171bf662fd2879128f9f0ad1d0",
+        "dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261103T133521Z"
+      },
+      {
+        "sha256": "75bcf0e282682984f382f115112756fad432f512b8637aaa3e802013630b19c4",
+        "dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261103T133939Z"
+      },
+      {
+        "sha256": "623cc72d8327dba77f0eda056e4b7e31a06616f5d8bf0bd382b4af1546f7cb4f",
+        "dir": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261103T134606Z"
       }
     ],
-    "last_sha256": "befad413df6231794e9548f8125f98c466df272c135348b27e399fb7ba37c7bf",
-    "last_text_sha256": "32a252d560ad1e3e8e68d23a437c0686735c084b1607f22b929367ab0abde752",
-    "last_capture": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261102T144224Z",
+    "last_sha256": "623cc72d8327dba77f0eda056e4b7e31a06616f5d8bf0bd382b4af1546f7cb4f",
+    "last_text_sha256": "0acd5b38bff1ff7e0ce86ece3df1a30b359f603d973ea7c43fc2be851003b0f6",
+    "last_capture": "captures/openai__gpt-5-5/aial-eval-page-d179ab92/20261103T134606Z",
     "upstream_aliases": {
       "public/evals/openai-gpt-5-5/index.html": "eaf2488fa455a6b0033e9b294cc80ef45faf77f8",
-      "public/evals/openai-gpt-5-5/version-2026-07-09.html": "da842fdac95aea9b7bf1f403a7948db97fc8b2a7"
+      "public/evals/openai-gpt-5-5/version-2026-07-09.html": "85955c3cf5d865db20c105080ae83c9c1d9a8d91"
     }
   },
   "openai/gpt-5-5::aial-eval-page-222d0a92": {
@@ -8074,14 +8282,22 @@
       {
         "sha256": "5c8e8b9488b12dc94fc60fd722a83fccf49db296b2972717c3e0d385359b5035",
         "dir": "captures/google__gemini-3-pro/aial-eval-page-525c55a8/20261102T144017Z"
+      },
+      {
+        "sha256": "1c5d8cb504e2fdc90073b8e307077cef32ba5e7ebac10a3a531bd0e36dbef773",
+        "dir": "captures/google__gemini-3-pro/aial-eval-page-525c55a8/20261103T133337Z"
+      },
+      {
+        "sha256": "da102758fd81bb955bfeb060e2734b604126b7f6c427a509fca013e47bce107f",
+        "dir": "captures/google__gemini-3-pro/aial-eval-page-525c55a8/20261103T135057Z"
       }
     ],
-    "last_sha256": "5c8e8b9488b12dc94fc60fd722a83fccf49db296b2972717c3e0d385359b5035",
-    "last_text_sha256": "adc90f24fb2bc704b37ce2139a83ea10c4bc5514defbde9ea3ce96d88aa6a44c",
-    "last_capture": "captures/google__gemini-3-pro/aial-eval-page-525c55a8/20261102T144017Z",
+    "last_sha256": "da102758fd81bb955bfeb060e2734b604126b7f6c427a509fca013e47bce107f",
+    "last_text_sha256": "3ee1ebde44f3d305a2898e948301a9c1f59873c5241a83ee5add89da7e26167f",
+    "last_capture": "captures/google__gemini-3-pro/aial-eval-page-525c55a8/20261103T135057Z",
     "upstream_aliases": {
       "public/evals/google-gemini-3-pro/index.html": "f7139905923a8baf5b1f4752d9978b5de6b1d0ed",
-      "public/evals/google-gemini-3-pro/version-2026-07-21.html": "c5258aca95b5d79e19c76f4fb67fbff4f76d3247"
+      "public/evals/google-gemini-3-pro/version-2026-07-21.html": "bade18ec4cb9f9d16946fbc79248265361dd209a"
     }
   },
   "xai/grok-4-5::aial-eval-page-59c5e1d3": {
@@ -8153,11 +8369,19 @@
       {
         "sha256": "043ff1e6191bdcc184c5284f487981771e02a0a003db5e643ded7c812697d163",
         "dir": "captures/xai__grok-4-5/aial-eval-page-59c5e1d3/20261102T144409Z"
+      },
+      {
+        "sha256": "c44adb58a251b8e78b94d1ac1dc1f0e0993c654a33cb61356cdfde60e97e63ad",
+        "dir": "captures/xai__grok-4-5/aial-eval-page-59c5e1d3/20261103T133506Z"
+      },
+      {
+        "sha256": "3d987bc914731a611340de7170d838cf5b5a720ef6cc93492aaa984412e9d0ba",
+        "dir": "captures/xai__grok-4-5/aial-eval-page-59c5e1d3/20261103T133547Z"
       }
     ],
-    "last_sha256": "043ff1e6191bdcc184c5284f487981771e02a0a003db5e643ded7c812697d163",
-    "last_text_sha256": "36d5582df8a62bf320af1ce34996172a7b77ddedbaf131b9e4cd6b7129ce8ec9",
-    "last_capture": "captures/xai__grok-4-5/aial-eval-page-59c5e1d3/20261102T144409Z",
+    "last_sha256": "3d987bc914731a611340de7170d838cf5b5a720ef6cc93492aaa984412e9d0ba",
+    "last_text_sha256": "d677d0101619dc2746bd054bd71c7fdf2e0d537e0915740e8f4758ca92f22de6",
+    "last_capture": "captures/xai__grok-4-5/aial-eval-page-59c5e1d3/20261103T133547Z",
     "upstream_aliases": {
       "public/evals/xai-grok-4.5/index.html": "5f383d8ce0930502d297bfa512b13b725f273908",
       "public/evals/xai-grok-4.5/version-2026-07-20.html": "fef812257b61e06f28cef070d9f46df4bc2566ea"
@@ -8224,11 +8448,15 @@
       {
         "sha256": "ba5b7bea4394cf790995407c444d2dc0aebc1b9c96ffec0e3fdc3d4bd46f2eea",
         "dir": "captures/thinking-machines__inkling/aial-eval-page-bf9bd3a4/20261102T144404Z"
+      },
+      {
+        "sha256": "918f9c1e30773e69f249675c7bb6e5b6a0dd6a86b03fec4f582f1724399496fe",
+        "dir": "captures/thinking-machines__inkling/aial-eval-page-bf9bd3a4/20261103T133501Z"
       }
     ],
-    "last_sha256": "ba5b7bea4394cf790995407c444d2dc0aebc1b9c96ffec0e3fdc3d4bd46f2eea",
-    "last_text_sha256": "e8958046be21de3d848fc8384ee2e98e5a1469a5397f316ccaf048899afc91db",
-    "last_capture": "captures/thinking-machines__inkling/aial-eval-page-bf9bd3a4/20261102T144404Z",
+    "last_sha256": "918f9c1e30773e69f249675c7bb6e5b6a0dd6a86b03fec4f582f1724399496fe",
+    "last_text_sha256": "76008c38f42b8bca56afc8c4ff00a979e1f435e6056f37bc207fe2ea966f0006",
+    "last_capture": "captures/thinking-machines__inkling/aial-eval-page-bf9bd3a4/20261103T133501Z",
     "upstream_aliases": {
       "public/evals/thinking-machines-inkling/index.html": "e177cf47f5327fe9a26e198ef574da01c10a1225",
       "public/evals/thinking-machines-inkling/version-2026-07-20.html": "4c5c64f8b4b30f8eb098d960de24d1a92d0b5f25"
@@ -8362,14 +8590,26 @@
       {
         "sha256": "504559ed6ad35d1f9adf008a0107c210f02ac18007fb499d4a414990eaac3485",
         "dir": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261102T144647Z"
+      },
+      {
+        "sha256": "40f242cad78bdd55e77d34a53938f01359eb9a6c3976a4d8f1792b91469b7c4d",
+        "dir": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261103T133406Z"
+      },
+      {
+        "sha256": "2a1d7324e0bb015c9fdeac751fc6ab183820fe6c06e69acd77bfe1abaefaf916",
+        "dir": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261103T133612Z"
+      },
+      {
+        "sha256": "1c9cf10895fc89601b1df4d3c49ac64be53b2f5b668e191e4fc1d0e7e3461439",
+        "dir": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261103T133835Z"
       }
     ],
-    "last_sha256": "504559ed6ad35d1f9adf008a0107c210f02ac18007fb499d4a414990eaac3485",
-    "last_text_sha256": "4bef09b15facfad838a20f7788337e247831c4582facf32c383fd8f3cddecb95",
-    "last_capture": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261102T144647Z",
+    "last_sha256": "1c9cf10895fc89601b1df4d3c49ac64be53b2f5b668e191e4fc1d0e7e3461439",
+    "last_text_sha256": "f9c6ddbc69ab7a2ff2decde3d3c1bc35ef45dc3c9e171e8876c310da3f587f04",
+    "last_capture": "captures/microsoft__mai-image-2/aial-eval-page-828a7c8a/20261103T133835Z",
     "upstream_aliases": {
       "public/evals/microsoft-mai-image-2/index.html": "857bce0b19467dd11656d824d0302eec4b244c33",
-      "public/evals/microsoft-mai-image-2/version-2026-07-21.html": "aea81990da14a569987059a6e5237a4051e80dc8"
+      "public/evals/microsoft-mai-image-2/version-2026-07-21.html": "13ca59adbec1f4017f46277fd97ef01ff13431c5"
     }
   },
   "meta/muse-image::aial-eval-page-efeeaada": {
@@ -8437,11 +8677,19 @@
       {
         "sha256": "f0a7b9acad19390dd2b39467193689e9bdeb451079d67d6348f2cad1882f5d91",
         "dir": "captures/meta__muse-image/aial-eval-page-efeeaada/20261102T144032Z"
+      },
+      {
+        "sha256": "8650661563a685eaded0edbaa115587f9c5b7101f542bb73008b8799eb002899",
+        "dir": "captures/meta__muse-image/aial-eval-page-efeeaada/20261103T133351Z"
+      },
+      {
+        "sha256": "d8aaa17b51c14c100a9c4d2ef218b251147792ed3be5941607e985688e9d3303",
+        "dir": "captures/meta__muse-image/aial-eval-page-efeeaada/20261103T133536Z"
       }
     ],
-    "last_sha256": "f0a7b9acad19390dd2b39467193689e9bdeb451079d67d6348f2cad1882f5d91",
-    "last_text_sha256": "7c28af4143b12651eeffaf20992fdc28387cf2f7d263a56a32e3dc44e3e62ba6",
-    "last_capture": "captures/meta__muse-image/aial-eval-page-efeeaada/20261102T144032Z",
+    "last_sha256": "d8aaa17b51c14c100a9c4d2ef218b251147792ed3be5941607e985688e9d3303",
+    "last_text_sha256": "b47e91939b1b300daa058a57bf2cb111ae527aa2e5c6365d00116812d83b8cc0",
+    "last_capture": "captures/meta__muse-image/aial-eval-page-efeeaada/20261103T133536Z",
     "upstream_aliases": {
       "public/evals/meta-muse-image/index.html": "6185783adc7b6308b382cdd8f68f7ea24f75673c",
       "public/evals/meta-muse-image/version-2026-07-21.html": "1cfca9820d19e98bba8eee96b41699c9c4f84ad4"
@@ -8646,11 +8894,19 @@
       {
         "sha256": "50b04907781150a0e4626b1c5eab67c551d256a9f9c37c888fe8d64b6eeccbe5",
         "dir": "captures/meta__muse-spark/aial-eval-page-27695d88/20261102T144037Z"
+      },
+      {
+        "sha256": "b02c12d1560717448ba75fd1c106706bad372a83dfd69617a67438d140803e16",
+        "dir": "captures/meta__muse-spark/aial-eval-page-27695d88/20261103T133355Z"
+      },
+      {
+        "sha256": "8e050cff086714a33a7e3a5e7dba9ee2db42eb7e28b1cbea1f87287cb63d0f56",
+        "dir": "captures/meta__muse-spark/aial-eval-page-27695d88/20261103T133541Z"
       }
     ],
-    "last_sha256": "50b04907781150a0e4626b1c5eab67c551d256a9f9c37c888fe8d64b6eeccbe5",
-    "last_text_sha256": "3e22c01eed57ef572844bf40edc8b0f046d0fd24a61be8d60ae5e43f2de02f8f",
-    "last_capture": "captures/meta__muse-spark/aial-eval-page-27695d88/20261102T144037Z",
+    "last_sha256": "8e050cff086714a33a7e3a5e7dba9ee2db42eb7e28b1cbea1f87287cb63d0f56",
+    "last_text_sha256": "d0a8aad4ad4f165131410bf5821bf29f272b8f8b4c0ffbe6092291837816c8d6",
+    "last_capture": "captures/meta__muse-spark/aial-eval-page-27695d88/20261103T133541Z",
     "upstream_aliases": {
       "public/evals/meta-muse-spark/index.html": "c16af973c5abe4e3012a80b0eed02133cdba3938",
       "public/evals/meta-muse-spark/version-2026-07-21.html": "735a5f8fb171048cf41c887556dda6ecd6c5fb36"
@@ -8778,11 +9034,15 @@
       {
         "sha256": "ee0a6f4387ad5c977068aa9475754ef8ee14c5037f1c203b7b17e17ac94143e3",
         "dir": "captures/domyn__domyn/aial-eval-page-d1730eb2/20261102T144011Z"
+      },
+      {
+        "sha256": "3ff1ed1ed829f4eca9a9741e7fea107033d7ef9b27ee7d7fc2ffb455e16cc0ff",
+        "dir": "captures/domyn__domyn/aial-eval-page-d1730eb2/20261103T133333Z"
       }
     ],
-    "last_sha256": "ee0a6f4387ad5c977068aa9475754ef8ee14c5037f1c203b7b17e17ac94143e3",
-    "last_text_sha256": "3d98410bf8a1a7e37499b59742fcda5dca85034da4f4e6abff5e3d24183cd3a7",
-    "last_capture": "captures/domyn__domyn/aial-eval-page-d1730eb2/20261102T144011Z",
+    "last_sha256": "3ff1ed1ed829f4eca9a9741e7fea107033d7ef9b27ee7d7fc2ffb455e16cc0ff",
+    "last_text_sha256": "a87366d2cd49522fdd8dc6a385de511ebf66d699b1d6203570e7ca62798b0a3a",
+    "last_capture": "captures/domyn__domyn/aial-eval-page-d1730eb2/20261103T133333Z",
     "upstream_aliases": {
       "public/evals/domyn-domyn-large/index.html": "e7068f55e1f6406379f8f673dc130982fa57b4ab",
       "public/evals/domyn-domyn-large/version-2026-07-21.html": "008e8a365d4c0a7bc3c8e2d6b4d463af339acb11"
@@ -8837,14 +9097,18 @@
       {
         "sha256": "9dc69f03007b054bc05e1d3497ae118428190f81fd8eb2387131890531081716",
         "dir": "captures/fastweb__fastwebmiia/aial-eval-page-63dae27f/20260831T113525Z"
+      },
+      {
+        "sha256": "f0b3100cda68d7c3dd5fdaf2ec0c321e54668011987b5da14bef6df5f7783922",
+        "dir": "captures/fastweb__fastwebmiia/aial-eval-page-63dae27f/20261103T133803Z"
       }
     ],
-    "last_sha256": "9dc69f03007b054bc05e1d3497ae118428190f81fd8eb2387131890531081716",
-    "last_text_sha256": "1143474117ea50f458388e5792ce4a7baae627863365f94afaba160b10f0d014",
-    "last_capture": "captures/fastweb__fastwebmiia/aial-eval-page-63dae27f/20260831T113525Z",
+    "last_sha256": "f0b3100cda68d7c3dd5fdaf2ec0c321e54668011987b5da14bef6df5f7783922",
+    "last_text_sha256": "cb9ad4b0f28df0baa6a1a6bed1c2ddebc7f46e1f56cc7796f0d2a66c52b213e2",
+    "last_capture": "captures/fastweb__fastwebmiia/aial-eval-page-63dae27f/20261103T133803Z",
     "upstream_aliases": {
       "public/evals/fastweb-fastwebmiia/index.html": "503cf6f0bae3407cf2a9513931575090a2b1ff24",
-      "public/evals/fastweb-fastwebmiia/version-2026-07-22.html": "503cf6f0bae3407cf2a9513931575090a2b1ff24"
+      "public/evals/fastweb-fastwebmiia/version-2026-07-22.html": "a1e790845724dba4d1e1b27c49df8c470ccfa4c0"
     }
   },
   "fastweb/fastwebmiia::aial-eval-page-7ef3ba5d": {
@@ -9038,11 +9302,19 @@
       {
         "sha256": "81b8c43da92e4784ccf3742da6a2756e0a60304b82ab4fd7910b1206e33ef37f",
         "dir": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261102T144534Z"
+      },
+      {
+        "sha256": "ea220cd5eae2d29fee60fcfd2b46af17648dc3a6b8bc3a760d64a447c2b7ea69",
+        "dir": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261103T133516Z"
+      },
+      {
+        "sha256": "3d32f0d29343090ecd2264daba8edcc32c1f24ddbad34f6fed954fbe55356777",
+        "dir": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261103T133552Z"
       }
     ],
-    "last_sha256": "81b8c43da92e4784ccf3742da6a2756e0a60304b82ab4fd7910b1206e33ef37f",
-    "last_text_sha256": "357e37363193df46b3138debaa5b24c2b2416b9a5815d8b096daa470e90d118c",
-    "last_capture": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261102T144534Z",
+    "last_sha256": "3d32f0d29343090ecd2264daba8edcc32c1f24ddbad34f6fed954fbe55356777",
+    "last_text_sha256": "6f058a47f3ca6c3ae4a380211da8148feef65fb3e67f78b5a5ac7e1af65f7cee",
+    "last_capture": "captures/bria-ai__fibo/aial-eval-page-b1f4e090/20261103T133552Z",
     "upstream_aliases": {
       "public/evals/bria-fibo/index.html": "17840e6dc0948e9c7a662adcda00b28996f02f7d",
       "public/evals/bria-fibo/version-2026-08-04.html": "6806cec4674e8cbacb1e5084ecee17394412b241"
@@ -9240,14 +9512,26 @@
       {
         "sha256": "cd4aec5f74ceb9b13bc68aa6c8801ff17eea57464d0229497c3e0352b2c9028a",
         "dir": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261102T144629Z"
+      },
+      {
+        "sha256": "b58018433c160461db79717c7be8f10cfa90fdadd2d7a386ef70e6c352c1104b",
+        "dir": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261103T133359Z"
+      },
+      {
+        "sha256": "bab6eba192ea6f4460833de8c591dc43945523723201abddbe89a73fe99d26bb",
+        "dir": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261103T133604Z"
+      },
+      {
+        "sha256": "67830dedaecb5635d8a53d5714fe7600419e0963d13c20cd854c420f2f9e87f8",
+        "dir": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261103T133814Z"
       }
     ],
-    "last_sha256": "cd4aec5f74ceb9b13bc68aa6c8801ff17eea57464d0229497c3e0352b2c9028a",
-    "last_text_sha256": "af46bfe3f7e1a771515956d74f9e9c985fbbc158ea5bf83798bc745b808f13fc",
-    "last_capture": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261102T144629Z",
+    "last_sha256": "67830dedaecb5635d8a53d5714fe7600419e0963d13c20cd854c420f2f9e87f8",
+    "last_text_sha256": "b125ff2951e3928e731209843c83736a0c9d68d45cfc968bb48f5860a24f8384",
+    "last_capture": "captures/microsoft__mai-code-1-flash/aial-eval-page-7e9a1eff/20261103T133814Z",
     "upstream_aliases": {
       "public/evals/microsoft-mai-code-1-flash/index.html": "a60297745d2cfac8d97ba149903ec6da5caf55de",
-      "public/evals/microsoft-mai-code-1-flash/version-2026-08-04.html": "a63618b668b539368c326db5b83148365cb2ef59"
+      "public/evals/microsoft-mai-code-1-flash/version-2026-08-04.html": "7c1b67abe25a6a519831c3dbe9d01d195acded40"
     }
   },
   "aial/tracker::aial-eval-page-4ef90e67": {
@@ -9396,14 +9680,22 @@
       {
         "sha256": "6358f2e9805cb02c19e26d70ba07a3358139ab72a8f63be264e5e814950eb591",
         "dir": "captures/microsoft__phi-4/aial-eval-page-d6a9bb86/20261102T144116Z"
+      },
+      {
+        "sha256": "4e6d5ecb4bb6448ba23c8bc30d3b70a30901326b980bae2865fb1fea1824a316",
+        "dir": "captures/microsoft__phi-4/aial-eval-page-d6a9bb86/20261103T133416Z"
+      },
+      {
+        "sha256": "06b75f9990b14d24f02c4b9084d4e3ccc9d050fd82cdebefe0688a8be5b97b58",
+        "dir": "captures/microsoft__phi-4/aial-eval-page-d6a9bb86/20261103T133845Z"
       }
     ],
-    "last_sha256": "6358f2e9805cb02c19e26d70ba07a3358139ab72a8f63be264e5e814950eb591",
-    "last_text_sha256": "02da73210b73180261335b4a86299e059a76e7d44d5204969e3e31477364469d",
-    "last_capture": "captures/microsoft__phi-4/aial-eval-page-d6a9bb86/20261102T144116Z",
+    "last_sha256": "06b75f9990b14d24f02c4b9084d4e3ccc9d050fd82cdebefe0688a8be5b97b58",
+    "last_text_sha256": "debbd63f911a0a5a8e3885e13886c73fb1f6e52669159aa9af3b3407123bd608",
+    "last_capture": "captures/microsoft__phi-4/aial-eval-page-d6a9bb86/20261103T133845Z",
     "upstream_aliases": {
       "public/evals/microsoft-phi-4/index.html": "509330a345ef60bf7d063771ca1779861d97bd1c",
-      "public/evals/microsoft-phi-4/version-2026-03-31.html": "add5dde492224e3c59686a15ffbda89f14d7684c"
+      "public/evals/microsoft-phi-4/version-2026-03-31.html": "8cb2eabd0d98f438e35b1c44653e5a4b33800949"
     }
   },
   "huggingface/smollm3::aial-eval-page-d0083176": {
@@ -9474,14 +9766,30 @@
       {
         "sha256": "c28f4f1656522c7998e505f7ec18f3641d61a37dc17311be290d526b0157c06e",
         "dir": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261102T144625Z"
+      },
+      {
+        "sha256": "1c6efda77988cb930d7f0cae2c04dbd7c9cec84b30ea05f8a2f9129227cfce95",
+        "dir": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261103T133346Z"
+      },
+      {
+        "sha256": "d4432bad71dc077f492d394c1eb6033d2a816983be3a68a104b299bc336865df",
+        "dir": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261103T133531Z"
+      },
+      {
+        "sha256": "ab977fe24f7a3d26a6257103128188ad070e27c6be379a4970fb4d339eaa62d1",
+        "dir": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261103T133558Z"
+      },
+      {
+        "sha256": "1130c3fc02acc07606fc0637743cb503c6f3e2482c27222bfdb7ecb7f76d9903",
+        "dir": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261103T133809Z"
       }
     ],
-    "last_sha256": "c28f4f1656522c7998e505f7ec18f3641d61a37dc17311be290d526b0157c06e",
-    "last_text_sha256": "e4da90fd6751eeebacf345d7a6512b7de2ce9f7c3508e2e53dd64121885222ff",
-    "last_capture": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261102T144625Z",
+    "last_sha256": "1130c3fc02acc07606fc0637743cb503c6f3e2482c27222bfdb7ecb7f76d9903",
+    "last_text_sha256": "307e093f7bc3292bfd5878dc67805fbc1293531f2b771c3dfd3a41791345461b",
+    "last_capture": "captures/huggingface__smollm3/aial-eval-page-7bcd14ff/20261103T133809Z",
     "upstream_aliases": {
       "public/evals/huggingface-smollm3/index.html": "c9768528100931906df0c6295fc9675ea9f3733f",
-      "public/evals/huggingface-smollm3/version-2026-03-31.html": "551ba0f64b53a5faba1a3024188d9882e0245ee5"
+      "public/evals/huggingface-smollm3/version-2026-03-31.html": "20e51ebddb799e2f5597965a0294125a114a2578"
     }
   },
   "aial/tracker::aial-eval-page-9370f2af": {
@@ -9844,14 +10152,22 @@
       {
         "sha256": "4e87299c205f3ac97f501493bf8f999dbdc085e1b26dd743ebd7c6a1992b6e74",
         "dir": "captures/anthropic__claude-opus-5/aial-eval-page-12fef77c/20261102T143835Z"
+      },
+      {
+        "sha256": "26f03dc67c223b5ddff1fc388caad18758c7daa88dd218744e0952857249747b",
+        "dir": "captures/anthropic__claude-opus-5/aial-eval-page-12fef77c/20261103T133318Z"
+      },
+      {
+        "sha256": "b8828e92940db985c545620029caf514d239e20e005d71a531027b347e8983f8",
+        "dir": "captures/anthropic__claude-opus-5/aial-eval-page-12fef77c/20261103T134948Z"
       }
     ],
-    "last_sha256": "4e87299c205f3ac97f501493bf8f999dbdc085e1b26dd743ebd7c6a1992b6e74",
-    "last_text_sha256": "ab2368df77a9fcc98146ea42d9380d6750bb1cc8ba80a7f39109dedee4bc2024",
-    "last_capture": "captures/anthropic__claude-opus-5/aial-eval-page-12fef77c/20261102T143835Z",
+    "last_sha256": "b8828e92940db985c545620029caf514d239e20e005d71a531027b347e8983f8",
+    "last_text_sha256": "6019b664eb2d62dc98da12ce63abc8a4d76c9c25296621fcdfc898c5b7ae80b0",
+    "last_capture": "captures/anthropic__claude-opus-5/aial-eval-page-12fef77c/20261103T134948Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-opus-5/index.html": "64c34982c6af3d41cb5fbca3549e33bb055bf9c3",
-      "public/evals/anthropic-claude-opus-5/version-2026-08-04.html": "12834d7364ddae032193c4af69e9c2a255f27263"
+      "public/evals/anthropic-claude-opus-5/version-2026-08-04.html": "0a40d9cd3e71190ca9fe9214b04c8963c4fa2dac"
     }
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34": {
@@ -9939,14 +10255,22 @@
       {
         "sha256": "73f937795d94b15c4097e818e092d6d0d3d24284f6000912ca144200f4e911ed",
         "dir": "captures/anthropic__claude-sonnet-5/aial-eval-page-6c36e430/20261102T143840Z"
+      },
+      {
+        "sha256": "d857098ee8eeae08d1b4eabfea0139c336575207fe08e361fabfba8551ba7cf8",
+        "dir": "captures/anthropic__claude-sonnet-5/aial-eval-page-6c36e430/20261103T133323Z"
+      },
+      {
+        "sha256": "f97899113c5e025fb29959bc18ba3da86d34718bf15aef2eafc21254fe3c9fa3",
+        "dir": "captures/anthropic__claude-sonnet-5/aial-eval-page-6c36e430/20261103T134952Z"
       }
     ],
-    "last_sha256": "73f937795d94b15c4097e818e092d6d0d3d24284f6000912ca144200f4e911ed",
-    "last_text_sha256": "fe3c8846446d611d73d96615c25d6af83558749a2f61a117260e410f85593e77",
-    "last_capture": "captures/anthropic__claude-sonnet-5/aial-eval-page-6c36e430/20261102T143840Z",
+    "last_sha256": "f97899113c5e025fb29959bc18ba3da86d34718bf15aef2eafc21254fe3c9fa3",
+    "last_text_sha256": "56aa9f0aabafe345b77362861764c2f9af9992e5aa7092ced99d0a140823672c",
+    "last_capture": "captures/anthropic__claude-sonnet-5/aial-eval-page-6c36e430/20261103T134952Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-sonnet-5/index.html": "64d5ccb5ef41de229507f879181f30e8a84f60fd",
-      "public/evals/anthropic-claude-sonnet-5/version-2026-08-04.html": "5d07b4c0821cb0a6e4c4d0711c4eb04973a8aec7"
+      "public/evals/anthropic-claude-sonnet-5/version-2026-08-04.html": "e7b23325fa0b1f2ddff82f76cdaafbb716d2cb3b"
     }
   },
   "cohere/command-a-plus::aial-eval-page-20c9a0e8": {
@@ -10380,14 +10704,26 @@
       {
         "sha256": "824a5856b27351229383bd152404f13bab839b99469cee62148f5ddfa14b4379",
         "dir": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261102T144652Z"
+      },
+      {
+        "sha256": "a563b601872de358addfb6363f6bde9d7ad4dbe7c42cff8b1029f9fe74111e69",
+        "dir": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261103T133410Z"
+      },
+      {
+        "sha256": "8d24a0f6b292f42b52c40cdcd46393c944e9fbc8c6bdf104abe0e6cc9cccd6df",
+        "dir": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261103T133616Z"
+      },
+      {
+        "sha256": "89c23b771085c5b510d105064577ed9af78850d7255439b186106be9280318dc",
+        "dir": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261103T133840Z"
       }
     ],
-    "last_sha256": "824a5856b27351229383bd152404f13bab839b99469cee62148f5ddfa14b4379",
-    "last_text_sha256": "7933256e748e4a9f6a0adb0887ed9929cd901723d4d8906d04ca36bafc3890af",
-    "last_capture": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261102T144652Z",
+    "last_sha256": "89c23b771085c5b510d105064577ed9af78850d7255439b186106be9280318dc",
+    "last_text_sha256": "858a330dc895f3c50928abe71100d00fb1fbf6f6d2464eaf4aa8797b7d16bced",
+    "last_capture": "captures/microsoft__mai-image-2-5/aial-eval-page-310db21f/20261103T133840Z",
     "upstream_aliases": {
       "public/evals/microsoft-mai-image-2_5/index.html": "847df8972be6044dedc1d04c557b4615c8e5de5a",
-      "public/evals/microsoft-mai-image-2_5/version-2026-08-04.html": "9a2febf56cf8494952620bb223d32b67376de8f6"
+      "public/evals/microsoft-mai-image-2_5/version-2026-08-04.html": "25e66c2fee50bc30bbb359777d5e3c3a4c3747c8"
     }
   },
   "microsoft/mai-image-2-5::aial-eval-page-d73e09fc": {
@@ -10462,14 +10798,30 @@
       {
         "sha256": "37aa2324d220b70db0998f93b7c80b9b579d10fa8c154537109a7c697c5ca43f",
         "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261102T144141Z"
+      },
+      {
+        "sha256": "69b8e0333aeed36ffe281e20be2bb51bac61a84319856b8bde2807d95b551404",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261103T133426Z"
+      },
+      {
+        "sha256": "4d5eea38eadc02c3e5502add2474a286f8cd5296a499916a7d01d7adfa775977",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261103T133859Z"
+      },
+      {
+        "sha256": "9b24e99f8e166db1784436a1819fd2b5bcb3f2820268911a6c2fb4453f21c45a",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261103T134535Z"
+      },
+      {
+        "sha256": "1d23c91ac53c0cb2ec7e1872f4bc10e4c9595fd3be537411abb53040acb5a396",
+        "dir": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261103T135221Z"
       }
     ],
-    "last_sha256": "37aa2324d220b70db0998f93b7c80b9b579d10fa8c154537109a7c697c5ca43f",
-    "last_text_sha256": "4c11296a16b254d3b921b06b9548adf4e6ba157b7928e25752e566d629777f51",
-    "last_capture": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261102T144141Z",
+    "last_sha256": "1d23c91ac53c0cb2ec7e1872f4bc10e4c9595fd3be537411abb53040acb5a396",
+    "last_text_sha256": "57dce2b388dd0b3d1e3375900ec56390bfccf2740a133d0b51bb09989a7b3c21",
+    "last_capture": "captures/mistral-ai__ministral-3-14b/aial-eval-page-7ac7cf78/20261103T135221Z",
     "upstream_aliases": {
       "public/evals/mistral-ministral-3-14B/index.html": "8d0b8f70322b68df1c04426b735bcb281b199990",
-      "public/evals/mistral-ministral-3-14B/version-2026-08-04.html": "c6d6a38c601fd4c1432cd7947e0b015cd9e3e0fe"
+      "public/evals/mistral-ministral-3-14B/version-2026-08-04.html": "c79a8a83a3e5b5c4b9670245f853813f0fce275b"
     }
   },
   "mistral-ai/ministral-3-3b::aial-eval-page-98e388b9": {
@@ -10556,14 +10908,30 @@
       {
         "sha256": "2325b9a425023d098c667aa6b3c8de2b0b9fc25cb661bbeb973f3c71f34b9dcd",
         "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261102T144151Z"
+      },
+      {
+        "sha256": "86411489e42237412480b88fddee9fe18b8301c641f5aeae2589839bc345cabb",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261103T133436Z"
+      },
+      {
+        "sha256": "4aa3f70a23a6dc612d74e87d6ed14068348a9f41de3c4a80a4d9d0ae47762d3c",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261103T133911Z"
+      },
+      {
+        "sha256": "c959d3ce57ea799c2b8087ddb89ae394bdc784b6053570c9b2b73843c3afe3f5",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261103T134547Z"
+      },
+      {
+        "sha256": "6c3e78f07f1724d1b5d7129de38223c07cedfcab071c30cd67ec1a5302cf9a0d",
+        "dir": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261103T135231Z"
       }
     ],
-    "last_sha256": "2325b9a425023d098c667aa6b3c8de2b0b9fc25cb661bbeb973f3c71f34b9dcd",
-    "last_text_sha256": "489ff093425d5f0afd650f4a82b0acacedf5f2c697952127248786032ccb5fca",
-    "last_capture": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261102T144151Z",
+    "last_sha256": "6c3e78f07f1724d1b5d7129de38223c07cedfcab071c30cd67ec1a5302cf9a0d",
+    "last_text_sha256": "0b34da6fb7454b2c0358686bb76ac8bb634483f4d97b146db0417f895c0f903d",
+    "last_capture": "captures/mistral-ai__ministral-3-8b/aial-eval-page-f77ed271/20261103T135231Z",
     "upstream_aliases": {
       "public/evals/mistral-ministral-3-8B/index.html": "80ddbb82fe23a4a6528427cd509b0b5c9b132301",
-      "public/evals/mistral-ministral-3-8B/version-2026-08-04.html": "4fcdb8c1bb1c1dc5a66824a356153f96eb035956"
+      "public/evals/mistral-ministral-3-8B/version-2026-08-04.html": "b74004064ef1291d20a14447aa3b22832dcc1676"
     }
   },
   "mistral-ai/mistral-large-3::aial-eval-page-5e46fb92": {
@@ -10611,14 +10979,30 @@
       {
         "sha256": "ffa5d3109d91d14c7a488ce63f3b6b8fbbdde6758a2a23a8ebcb6ed1111fcb88",
         "dir": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261102T144156Z"
+      },
+      {
+        "sha256": "c8871fcb5c847c23960fb5d30211af4f1dcc3657f89cfe839a13a54995747c5d",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261103T133441Z"
+      },
+      {
+        "sha256": "4d0bb98dde7eab2bdd6c87b7cc07c2bac812277d56dfc0c310fce0706b006006",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261103T133917Z"
+      },
+      {
+        "sha256": "8f06d5b935b192cbaab3f4203da3361a4150d1caec650aab66f30a6ad17fac61",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261103T134554Z"
+      },
+      {
+        "sha256": "6c2c2bcb869ba8f06a2b8a56396f87d4097f12cd98abfa66e5315dae70b8cc1b",
+        "dir": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261103T135237Z"
       }
     ],
-    "last_sha256": "ffa5d3109d91d14c7a488ce63f3b6b8fbbdde6758a2a23a8ebcb6ed1111fcb88",
-    "last_text_sha256": "b2065ce89858668e99b7b470967d8b92b7f41cfa998d4a1ca0b151a7bb09b985",
-    "last_capture": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261102T144156Z",
+    "last_sha256": "6c2c2bcb869ba8f06a2b8a56396f87d4097f12cd98abfa66e5315dae70b8cc1b",
+    "last_text_sha256": "f81729ef99fe688a179f32bca79aae9e1e719ba22247bb7079975b610b052874",
+    "last_capture": "captures/mistral-ai__mistral-large-3/aial-eval-page-5e46fb92/20261103T135237Z",
     "upstream_aliases": {
       "public/evals/mistral-mistral-large-3/index.html": "4d5d5f6ecd72ca58eedaa9455dba1be27a33993c",
-      "public/evals/mistral-mistral-large-3/version-2026-08-04.html": "779aea5c94422b9d9561c5a2c40b05ea824a93da"
+      "public/evals/mistral-mistral-large-3/version-2026-08-04.html": "3cc0bc1eca07ab21bd10881097682c565580fdda"
     }
   },
   "mistral-ai/mistral-small-4::aial-eval-page-b34ed896": {
@@ -10666,14 +11050,30 @@
       {
         "sha256": "4d4e8b7879d8af4c24daa37d4ebbc1b1369cd6bbd593cc8ce76bf6d33f4b2521",
         "dir": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261102T144201Z"
+      },
+      {
+        "sha256": "92af5d801700dbe226efbc2f9b2a31c439e9c64e89ef7548290ad7b308629608",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261103T133446Z"
+      },
+      {
+        "sha256": "18fb2c227ac5f949357996346e1b36e792bc4e07f0616dc7bca7b3d1c9d0460b",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261103T133924Z"
+      },
+      {
+        "sha256": "36aced54948d3c2303fbcc299b639245f5f2fd32b53f951c6bfc18876be3e7c1",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261103T134601Z"
+      },
+      {
+        "sha256": "308bd8cd187cc83932f72a3e4822a6b0e2a99c1ea67b4c5c589340607b63e4b7",
+        "dir": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261103T135242Z"
       }
     ],
-    "last_sha256": "4d4e8b7879d8af4c24daa37d4ebbc1b1369cd6bbd593cc8ce76bf6d33f4b2521",
-    "last_text_sha256": "5b616ee44f8ea84559ea7b721b121fc0866e2b2f0181baa2d84b8baf2ce6d96d",
-    "last_capture": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261102T144201Z",
+    "last_sha256": "308bd8cd187cc83932f72a3e4822a6b0e2a99c1ea67b4c5c589340607b63e4b7",
+    "last_text_sha256": "ef05c9c6b36bbe27ce2fbff5bf624286df17b51ddeb84ee64dd9b69834782d43",
+    "last_capture": "captures/mistral-ai__mistral-small-4/aial-eval-page-b34ed896/20261103T135242Z",
     "upstream_aliases": {
       "public/evals/mistral-mistral-small-4/index.html": "d71a8470423436bf63a633aa99e772d1a466e229",
-      "public/evals/mistral-mistral-small-4/version-2026-08-04.html": "c38b8dbe7722bf81032179d7fa5a3c05911c4ebd"
+      "public/evals/mistral-mistral-small-4/version-2026-08-04.html": "e71ab609fce8c806d6b27ac132238810aacd6c0c"
     }
   },
   "amazon/nova-2-lite::aial-eval-page-861f7c48": {
@@ -10771,14 +11171,22 @@
       {
         "sha256": "6fd39a06ead76ceae6c92e60038689005407af40f3d9f95c28d312852b677974",
         "dir": "captures/minimax__minimax-m3/aial-eval-page-78f961c5/20261102T144136Z"
+      },
+      {
+        "sha256": "f298c7a42ee3924de82f427ceca40c283725b495af453abc1d4437ee8b951e59",
+        "dir": "captures/minimax__minimax-m3/aial-eval-page-78f961c5/20261103T133421Z"
+      },
+      {
+        "sha256": "0df8120c701fdd74ca56f87c39774b656b6bd525f32fe32659e8897befa8b5a2",
+        "dir": "captures/minimax__minimax-m3/aial-eval-page-78f961c5/20261103T135115Z"
       }
     ],
-    "last_sha256": "6fd39a06ead76ceae6c92e60038689005407af40f3d9f95c28d312852b677974",
-    "last_text_sha256": "52840e08c661b4471997437c8b7e01539ccc304e4db659772b58a3a9d5353b4e",
-    "last_capture": "captures/minimax__minimax-m3/aial-eval-page-78f961c5/20261102T144136Z",
+    "last_sha256": "0df8120c701fdd74ca56f87c39774b656b6bd525f32fe32659e8897befa8b5a2",
+    "last_text_sha256": "5c2a9ee7e9cbe8a5eab632a488091187115226e31ff59fdbfeb56d27aba4e0d9",
+    "last_capture": "captures/minimax__minimax-m3/aial-eval-page-78f961c5/20261103T135115Z",
     "upstream_aliases": {
       "public/evals/minimax-minimax-m3/index.html": "72769e0765283a51ba225af74647d47d7c8cd94e",
-      "public/evals/minimax-minimax-m3/version-2026-08-05.html": "2e7b0fc85d7ecee0b08b563fd78130c9efbfeb63"
+      "public/evals/minimax-minimax-m3/version-2026-08-05.html": "3de921b69daec29c8ff6eda2d9aca02ab571ee80"
     }
   },
   "aial/tracker::aial-eval-page-af6ac608": {
@@ -10828,11 +11236,15 @@
       {
         "sha256": "558f1611871a8e65d5d03ea799d0c7ac35453101914cbd52ac1cf1dd6364e286",
         "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261102T143038Z"
+      },
+      {
+        "sha256": "e5ee9e596f11c84b7c673721cc2ed066b252b251eef9b283b3c6b7f8f0cdc97f",
+        "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261103T134046Z"
       }
     ],
-    "last_sha256": "558f1611871a8e65d5d03ea799d0c7ac35453101914cbd52ac1cf1dd6364e286",
-    "last_text_sha256": "3273c0d38981839b006e20b255a52f86878f36be6361d99b84dddf6dd2f75f03",
-    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261102T143038Z",
+    "last_sha256": "e5ee9e596f11c84b7c673721cc2ed066b252b251eef9b283b3c6b7f8f0cdc97f",
+    "last_text_sha256": "7cd3c058f6bdff0b1d73c641aa57faf1a402565c89c0034b5eadcd0a810b7ca9",
+    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-ec7531be/20261103T134046Z",
     "upstream_aliases": {
       "public/evals/swissai-apertus-1-5/index.html": "c5e95f022bd59d74af78e80810ab76d86d0111ea",
       "public/evals/swissai-apertus-1-5/version-2026-08-05.html": "c5e95f022bd59d74af78e80810ab76d86d0111ea"
@@ -10912,14 +11324,26 @@
       {
         "sha256": "adf5177fc219e1b4864f5505943470e9130f4d294ef07d034ab6187414689534",
         "dir": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261102T144359Z"
+      },
+      {
+        "sha256": "36ad11d40ac0ffd8b8b419e8c807d4f4ab10d573701589ad7e91f2ede2690f01",
+        "dir": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261103T133456Z"
+      },
+      {
+        "sha256": "42af46fadc600f13f2dc7b003670ad9310722486c4704cb1e3e33e8364dd4214",
+        "dir": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261103T134712Z"
+      },
+      {
+        "sha256": "ff7b6598a1078d5c51e4f80168de63f963d0622839396ea36af9ddc5d90b762a",
+        "dir": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261103T135135Z"
       }
     ],
-    "last_sha256": "adf5177fc219e1b4864f5505943470e9130f4d294ef07d034ab6187414689534",
-    "last_text_sha256": "3942e0656db6bb67903e63a26e06188898d7d9e30cf80ab1c02bf4f117683804",
-    "last_capture": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261102T144359Z",
+    "last_sha256": "ff7b6598a1078d5c51e4f80168de63f963d0622839396ea36af9ddc5d90b762a",
+    "last_text_sha256": "df0bfe02a863261bc6e7eb68386f2e6696392112f03025ed97bd2a9d32f84924",
+    "last_capture": "captures/thinking-machines__inkling-small/aial-eval-page-8cdf4d2f/20261103T135135Z",
     "upstream_aliases": {
       "public/evals/thinking-machines-inkling-small/index.html": "6d9d72f6249ce6c5741227ee7ae3b109faa226a6",
-      "public/evals/thinking-machines-inkling-small/version-2026-07-20.html": "be4cda86af0b5a854466dffbce039e0d83aab303"
+      "public/evals/thinking-machines-inkling-small/version-2026-07-20.html": "79753ee1da16f004b2efaee9778577a7a6c291cb"
     }
   },
   "aial/tracker::aial-method-cbb39bff": {
@@ -10999,11 +11423,23 @@
       {
         "sha256": "a53c49c1a2c3e14cd4f1b3c232e63713dad8231a30b5b79ce76695cd080e2d36",
         "dir": "captures/aial__tracker/aial-method-cbb39bff/20261102T143116Z"
+      },
+      {
+        "sha256": "8b8e754c6ba52a020d868cce2fbac07df64622931ab8887c96beff558e7edf5a",
+        "dir": "captures/aial__tracker/aial-method-cbb39bff/20261103T134121Z"
+      },
+      {
+        "sha256": "42675c9dfae350414942ceed187707e8138825939f4410f618cd8242dc3b93cb",
+        "dir": "captures/aial__tracker/aial-method-cbb39bff/20261103T134729Z"
+      },
+      {
+        "sha256": "d14e8db91fb76d22a07996c7edc1fc8d8f742715755adec9119f3f30aa56b6eb",
+        "dir": "captures/aial__tracker/aial-method-cbb39bff/20261103T135252Z"
       }
     ],
-    "last_sha256": "a53c49c1a2c3e14cd4f1b3c232e63713dad8231a30b5b79ce76695cd080e2d36",
-    "last_text_sha256": "0f1ed765cf7c9462972ab7e3954cd55010135278392f0088107872ef60aaaeef",
-    "last_capture": "captures/aial__tracker/aial-method-cbb39bff/20261102T143116Z"
+    "last_sha256": "d14e8db91fb76d22a07996c7edc1fc8d8f742715755adec9119f3f30aa56b6eb",
+    "last_text_sha256": "e65e3f56be689607b565ce20704be9c9842b5b8363cca6c42243c61983fbbb8d",
+    "last_capture": "captures/aial__tracker/aial-method-cbb39bff/20261103T135252Z"
   },
   "anthropic/claude-mythos-5-fable-5::aial-eval-page-d9b9a3d3": {
     "versions": [
@@ -11014,14 +11450,18 @@
       {
         "sha256": "ca1060f80c30df4714996090c6e26127a8011586be650cc4185aa8eb96374149",
         "dir": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-page-d9b9a3d3/20260831T113308Z"
+      },
+      {
+        "sha256": "d02d539b85fe15c8dc08f66a77ec3948ef2372e70062a6b34fbc89ecb8202055",
+        "dir": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-page-d9b9a3d3/20261103T134928Z"
       }
     ],
-    "last_sha256": "ca1060f80c30df4714996090c6e26127a8011586be650cc4185aa8eb96374149",
-    "last_text_sha256": "cd5e89a85df7405a666da4ef5056733600c4268f437870bd6e9b800854c9e0d9",
-    "last_capture": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-page-d9b9a3d3/20260831T113308Z",
+    "last_sha256": "d02d539b85fe15c8dc08f66a77ec3948ef2372e70062a6b34fbc89ecb8202055",
+    "last_text_sha256": "57e0ace81edf1d492a8fdf3079f5a2e82344cc746adb686af333b09a345a8934",
+    "last_capture": "captures/anthropic__claude-mythos-5-fable-5/aial-eval-page-d9b9a3d3/20261103T134928Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-mythos-5-fable-5/index.html": "bd3b89b2e47ba58659c3b30957aa386af801d0c3",
-      "public/evals/anthropic-claude-mythos-5-fable-5/version-2026-08-04.html": "bd3b89b2e47ba58659c3b30957aa386af801d0c3"
+      "public/evals/anthropic-claude-mythos-5-fable-5/version-2026-08-04.html": "4a31b498d4cf60d4d606e03b3bafe5f8058a8f78"
     }
   },
   "anthropic/claude-mythos-preview::aial-eval-page-338292e2": {
@@ -11033,14 +11473,18 @@
       {
         "sha256": "9561a8249573bc89bc58a462185bdb04ff4088e1bd2fb782f591f5d1b92d3b59",
         "dir": "captures/anthropic__claude-mythos-preview/aial-eval-page-338292e2/20260831T113323Z"
+      },
+      {
+        "sha256": "2a18d1c526edce9a8fa0c810e389ff075ef7bbe5e79525d548ab327676dfeba0",
+        "dir": "captures/anthropic__claude-mythos-preview/aial-eval-page-338292e2/20261103T134933Z"
       }
     ],
-    "last_sha256": "9561a8249573bc89bc58a462185bdb04ff4088e1bd2fb782f591f5d1b92d3b59",
-    "last_text_sha256": "218512b6d18b186cc2d4c81c3747518ed8986c544a26e46412a1b2e7f77c627c",
-    "last_capture": "captures/anthropic__claude-mythos-preview/aial-eval-page-338292e2/20260831T113323Z",
+    "last_sha256": "2a18d1c526edce9a8fa0c810e389ff075ef7bbe5e79525d548ab327676dfeba0",
+    "last_text_sha256": "9776cacb9c8f1ef24929f04914e937fc72b250685c8a7eda2b000694e23cd877",
+    "last_capture": "captures/anthropic__claude-mythos-preview/aial-eval-page-338292e2/20261103T134933Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-mythos-preview/index.html": "3eac3083e5f3a4b6f7aea7e6adea96f00ad6c8e6",
-      "public/evals/anthropic-claude-mythos-preview/version-2026-08-04.html": "3eac3083e5f3a4b6f7aea7e6adea96f00ad6c8e6"
+      "public/evals/anthropic-claude-mythos-preview/version-2026-08-04.html": "40a100bafcd803e2a118f85c34d5a675fc897017"
     }
   },
   "anthropic/claude-opus-4-7::aial-eval-page-0cbc4703": {
@@ -11056,14 +11500,22 @@
       {
         "sha256": "7785d3a035a3b30f3a592ed4ec796490e589c4b5082c6139b117e901f9cb6abe",
         "dir": "captures/anthropic__claude-opus-4-7/aial-eval-page-0cbc4703/20261102T143824Z"
+      },
+      {
+        "sha256": "46972dbcd78484914107d70fe182d2c7f098b95e761402b3d0f07f98a4e969fd",
+        "dir": "captures/anthropic__claude-opus-4-7/aial-eval-page-0cbc4703/20261103T133312Z"
+      },
+      {
+        "sha256": "6758e3decb0ee48520b4a45f43eb6dfc070b553c28e9e5dc72d303e81aa3bb0e",
+        "dir": "captures/anthropic__claude-opus-4-7/aial-eval-page-0cbc4703/20261103T134938Z"
       }
     ],
-    "last_sha256": "7785d3a035a3b30f3a592ed4ec796490e589c4b5082c6139b117e901f9cb6abe",
-    "last_text_sha256": "770c9d1b4d1a69362f86c6b31b27a4835cf7dc052b7330b081139becf2747e41",
-    "last_capture": "captures/anthropic__claude-opus-4-7/aial-eval-page-0cbc4703/20261102T143824Z",
+    "last_sha256": "6758e3decb0ee48520b4a45f43eb6dfc070b553c28e9e5dc72d303e81aa3bb0e",
+    "last_text_sha256": "b2105b60122990151a6e9bedf589dd90c3d042b24dacd172fbef18cd064d7e00",
+    "last_capture": "captures/anthropic__claude-opus-4-7/aial-eval-page-0cbc4703/20261103T134938Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-opus-4-7/index.html": "14758cc3288a38dae82f85ab33361b82a0505eaf",
-      "public/evals/anthropic-claude-opus-4-7/version-2026-08-04.html": "004097637a6260853d604e363d70ceef022e29ab"
+      "public/evals/anthropic-claude-opus-4-7/version-2026-08-04.html": "65e8cf4b0e16a3ea7c06332276cd3920723897c1"
     }
   },
   "anthropic/claude-opus-4-8::aial-eval-page-29ac6f46": {
@@ -11079,14 +11531,22 @@
       {
         "sha256": "2d56498898bc9baf38f81c3ca73e9a0684a09d2a626b46a8e9038970c50e0480",
         "dir": "captures/anthropic__claude-opus-4-8/aial-eval-page-29ac6f46/20261102T143830Z"
+      },
+      {
+        "sha256": "5b498fe4831e021df93da075a86446ab4b181c0080dbcb59424606b5de9c3b65",
+        "dir": "captures/anthropic__claude-opus-4-8/aial-eval-page-29ac6f46/20261103T133315Z"
+      },
+      {
+        "sha256": "bc37050ba90899b12172cce2a86984e506f90318f13f2519c1e083e1ee7727e7",
+        "dir": "captures/anthropic__claude-opus-4-8/aial-eval-page-29ac6f46/20261103T134943Z"
       }
     ],
-    "last_sha256": "2d56498898bc9baf38f81c3ca73e9a0684a09d2a626b46a8e9038970c50e0480",
-    "last_text_sha256": "93cea40d9acf5ae90928d394dcba935fb0f6398e6d7896e2817e3bb2a8b65266",
-    "last_capture": "captures/anthropic__claude-opus-4-8/aial-eval-page-29ac6f46/20261102T143830Z",
+    "last_sha256": "bc37050ba90899b12172cce2a86984e506f90318f13f2519c1e083e1ee7727e7",
+    "last_text_sha256": "3647e12f319d2ca6d1d527a2c3da10430d8b2055d653e8207aa7a00fb0d3aee3",
+    "last_capture": "captures/anthropic__claude-opus-4-8/aial-eval-page-29ac6f46/20261103T134943Z",
     "upstream_aliases": {
       "public/evals/anthropic-claude-opus-4-8/index.html": "2e9d0eef67a27243431d727be80705ac8bf5632b",
-      "public/evals/anthropic-claude-opus-4-8/version-2026-08-04.html": "321d228d9197bd1534528d74c030ddeea337c816"
+      "public/evals/anthropic-claude-opus-4-8/version-2026-08-04.html": "465b26ebf867fbd5d05a339968a3aecc090ae1c3"
     }
   },
   "anthropic/claude-opus-5::aial-eval-page-8dc98ce6": {
@@ -11140,14 +11600,18 @@
       {
         "sha256": "08e449f9961cdcc6f9174f1f1e759c7aa42a89cb4fdd457c5fa18612ea3d7000",
         "dir": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261001T121532Z"
+      },
+      {
+        "sha256": "b8a48a9f1e269d688c6c2a06218acf61065cd6e1cfaf5a7c971e8792cf9007ca",
+        "dir": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261103T134443Z"
       }
     ],
-    "last_sha256": "08e449f9961cdcc6f9174f1f1e759c7aa42a89cb4fdd457c5fa18612ea3d7000",
-    "last_text_sha256": "aedcd1f20c07bf7d5b99df67fd204f8a20d831b6a91ea103becf990bec01142e",
-    "last_capture": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261001T121532Z",
+    "last_sha256": "b8a48a9f1e269d688c6c2a06218acf61065cd6e1cfaf5a7c971e8792cf9007ca",
+    "last_text_sha256": "9b7313cc24fd54af9ad8c5afe10969195146d4a684a7414ef37e528a32cb0c60",
+    "last_capture": "captures/cohere__command-a-plus/aial-eval-page-ddf8ab1a/20261103T134443Z",
     "upstream_aliases": {
       "public/evals/cohere-command-a-plus/index.html": "97249d398f9dcb583ba2907b8ff41ea7d95ee889",
-      "public/evals/cohere-command-a-plus/version-2026-08-04.html": "decbe39b33dd4511600a490a3b1e0818c6d32595"
+      "public/evals/cohere-command-a-plus/version-2026-08-04.html": "83b617496b7c3135217e780bcea597d80a52e718"
     }
   },
   "bria-ai/fibo::aial-eval-page-1b582a40": {
@@ -11178,11 +11642,15 @@
       {
         "sha256": "b91717bc560c4f457ce707303e43622795d1c57ac0fa10790800b2aa0f4caf52",
         "dir": "captures/black-forest-labs__flux-3/aial-eval-page-49efe44c/20261102T143854Z"
+      },
+      {
+        "sha256": "a440a445c52a355c72663d272f7b63e4a9ebdd7be2a508803ed69cef84018216",
+        "dir": "captures/black-forest-labs__flux-3/aial-eval-page-49efe44c/20261103T133328Z"
       }
     ],
-    "last_sha256": "b91717bc560c4f457ce707303e43622795d1c57ac0fa10790800b2aa0f4caf52",
-    "last_text_sha256": "535bb725570597cfa031f49977e88606b517ee6feccadb13d4dd60d8ecf7d12c",
-    "last_capture": "captures/black-forest-labs__flux-3/aial-eval-page-49efe44c/20261102T143854Z",
+    "last_sha256": "a440a445c52a355c72663d272f7b63e4a9ebdd7be2a508803ed69cef84018216",
+    "last_text_sha256": "48d33c823c6e71915b0038aed3b34ae0349c4c10f75717c5cd0ebd85b377ebaa",
+    "last_capture": "captures/black-forest-labs__flux-3/aial-eval-page-49efe44c/20261103T133328Z",
     "upstream_aliases": {
       "public/evals/black-forest-labs-flux-3/index.html": "08f8841373e0521f06e59b4c1c8e48cd9732e664",
       "public/evals/black-forest-labs-flux-3/version-2026-08-04.html": "4ab39254e2847aa35545142623a2773e4df4a0fa"
@@ -11201,14 +11669,22 @@
       {
         "sha256": "b2e129d68de889e5eaff10f8aeb89d3a0dbf119b51c27ada4d6ceeab2f3f5057",
         "dir": "captures/google__gemma-4/aial-eval-page-16eb52c4/20261102T144022Z"
+      },
+      {
+        "sha256": "90ca1fac1e6e4966f9a7e4596444dc13e7540c8045bce730df233d5c6d8d81e3",
+        "dir": "captures/google__gemma-4/aial-eval-page-16eb52c4/20261103T133343Z"
+      },
+      {
+        "sha256": "19247efef863ce7732abe094565216406f678c42a04eefc35c72a4ca7b2b93f2",
+        "dir": "captures/google__gemma-4/aial-eval-page-16eb52c4/20261103T135102Z"
       }
     ],
-    "last_sha256": "b2e129d68de889e5eaff10f8aeb89d3a0dbf119b51c27ada4d6ceeab2f3f5057",
-    "last_text_sha256": "530d77792e6ab4877c8d2f2df8536a5bf5c1ab3c27ea2d8688c6e4eae9e59197",
-    "last_capture": "captures/google__gemma-4/aial-eval-page-16eb52c4/20261102T144022Z",
+    "last_sha256": "19247efef863ce7732abe094565216406f678c42a04eefc35c72a4ca7b2b93f2",
+    "last_text_sha256": "e900560b1c7d43f3060164706c30337ac63549f8874dbb9f2caa07861ffbfdcc",
+    "last_capture": "captures/google__gemma-4/aial-eval-page-16eb52c4/20261103T135102Z",
     "upstream_aliases": {
       "public/evals/google-gemma-4/index.html": "c03674e365092643741b7e516400d1b15bb14bcd",
-      "public/evals/google-gemma-4/version-2026-08-04.html": "1337456bd68ea89e29c02ef6e188146b2d9204c5"
+      "public/evals/google-gemma-4/version-2026-08-04.html": "15ad5f4bdd7ab80133c6224eba79555413e815d1"
     }
   },
   "openai/gpt-5-6-luna::aial-eval-page-387dd6a3": {
@@ -11232,14 +11708,26 @@
       {
         "sha256": "32a7e308f67071c4ca8ba0c96c28d6549a02fc1ff016548bf06e963852a6fb84",
         "dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261102T144229Z"
+      },
+      {
+        "sha256": "9ca95df35e3999918834a6ef08e8b08322241beb6eca2c9bb143573951996ec6",
+        "dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261103T133525Z"
+      },
+      {
+        "sha256": "8cedf01f3ece3cb096861ce6e2ce919d97139f22278fa754b3333302124aa945",
+        "dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261103T133945Z"
+      },
+      {
+        "sha256": "c4e3ddf39ccee4bedbeb164c58b84e39d3910b6a866ae3716b6faeae00222307",
+        "dir": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261103T134612Z"
       }
     ],
-    "last_sha256": "32a7e308f67071c4ca8ba0c96c28d6549a02fc1ff016548bf06e963852a6fb84",
-    "last_text_sha256": "3f9a072607f94de443112df0d06c615760a14a2758bd79db3aa2da98802d6891",
-    "last_capture": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261102T144229Z",
+    "last_sha256": "c4e3ddf39ccee4bedbeb164c58b84e39d3910b6a866ae3716b6faeae00222307",
+    "last_text_sha256": "d233c3507c150a68ad91483f7ccfeb1b6625b33bb1d7ea9ac49cc779a57a84ab",
+    "last_capture": "captures/openai__gpt-5-6-luna/aial-eval-page-387dd6a3/20261103T134612Z",
     "upstream_aliases": {
       "public/evals/openai-gpt-5-6-luna/index.html": "13da215bb7423f80c6a1fecb9a98de2d4fcb281c",
-      "public/evals/openai-gpt-5-6-luna/version-2026-08-04.html": "1e9cffae1b5b785d176b43c48042a3263c679fc9"
+      "public/evals/openai-gpt-5-6-luna/version-2026-08-04.html": "1e576768363a83071ee33d73976b996f464e2118"
     }
   },
   "microsoft/mai-code-1-flash::aial-eval-page-0fca279c": {
@@ -11282,14 +11770,30 @@
       {
         "sha256": "0d1b1bf01fe517f636bfc2a6445888d56962233d1553935b3bb10bc761393a7f",
         "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261102T144643Z"
+      },
+      {
+        "sha256": "cd8f5574168b055a2555ea8a66bab7de3891ee9e25d03194de43b07eaf01f498",
+        "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261103T133402Z"
+      },
+      {
+        "sha256": "ce9b1413a6068a5bf93ca0994f4a6bf8668dd2659aa27c71f1fdce338f82d83c",
+        "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261103T133608Z"
+      },
+      {
+        "sha256": "95f01a803521b664c4335170f907b29b3659ce1bec5338f652e8e4a4157cc0c5",
+        "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261103T133829Z"
+      },
+      {
+        "sha256": "83258cf66aa0cb028addb1bf07dfa939dccab556df4487ce166e6a8d974123b6",
+        "dir": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261103T134507Z"
       }
     ],
-    "last_sha256": "0d1b1bf01fe517f636bfc2a6445888d56962233d1553935b3bb10bc761393a7f",
-    "last_text_sha256": "2cf8a708bec78fccfc269f8b84647124046976a671b6e0a203b3150d6ec99523",
-    "last_capture": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261102T144643Z",
+    "last_sha256": "83258cf66aa0cb028addb1bf07dfa939dccab556df4487ce166e6a8d974123b6",
+    "last_text_sha256": "533c1d792b438eef346edddea55318fb37dffa18165ec4b4905d7cd9c72afa92",
+    "last_capture": "captures/microsoft__mai-cyber-1-flash/aial-eval-page-314d07e4/20261103T134507Z",
     "upstream_aliases": {
       "public/evals/microsoft-mai-cyber-1-flash/index.html": "9b8ee04a72470cbe2ad983d95a96a377f848cbab",
-      "public/evals/microsoft-mai-cyber-1-flash/version-2026-08-04.html": "04db0914c4058c20af281d3b4f4981c59c11bd42"
+      "public/evals/microsoft-mai-cyber-1-flash/version-2026-08-04.html": "62d7829fafb11ff1b2d854285f1a53e680a66b46"
     }
   },
   "microsoft/mai-image-2-5::aial-eval-page-7f392164": {
@@ -11350,14 +11854,30 @@
       {
         "sha256": "f9a5012037595c8b8a0af4b9e092cafc57b48fcfba9eb41170a0cc2a7e769c0f",
         "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261102T144146Z"
+      },
+      {
+        "sha256": "d927ac798afda3a9783af6cd99ef69fd1588100fc02986d1e4502a7e18dabda8",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261103T133431Z"
+      },
+      {
+        "sha256": "c11440ee43f59c1ccf1ffcc1e9b1c5e34eee087c7110390f210882f7e95ef8c6",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261103T133905Z"
+      },
+      {
+        "sha256": "32e88c0fb67d4a8e98ea73cd7486c9a1a491b4e98d38a0d4e88b5249c08c3b28",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261103T134541Z"
+      },
+      {
+        "sha256": "ee808acc8901dabe3b020c192645f3f14cc42f680839aa6372c19aa5ac9f674e",
+        "dir": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261103T135227Z"
       }
     ],
-    "last_sha256": "f9a5012037595c8b8a0af4b9e092cafc57b48fcfba9eb41170a0cc2a7e769c0f",
-    "last_text_sha256": "3820cec40fea3bb7cb00d03c09ada134e032a5def88dc88d5d9caefc997f9038",
-    "last_capture": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261102T144146Z",
+    "last_sha256": "ee808acc8901dabe3b020c192645f3f14cc42f680839aa6372c19aa5ac9f674e",
+    "last_text_sha256": "0bc1f7b478d1431404c4472f426315542d3330b83a49cccca33aeff4afa95ea0",
+    "last_capture": "captures/mistral-ai__ministral-3-3b/aial-eval-page-e1670ae7/20261103T135227Z",
     "upstream_aliases": {
       "public/evals/mistral-ministral-3-3B/index.html": "75a4aabcacb60f3d858de912130108b54e2423d2",
-      "public/evals/mistral-ministral-3-3B/version-2026-08-04.html": "72912ba43d01b526e4af7c2160ab4e5e39e22e4b"
+      "public/evals/mistral-ministral-3-3B/version-2026-08-04.html": "2603f51a56f4d7328378019e7fb3fb5c814c3e96"
     }
   },
   "mistral-ai/ministral-3-8b::aial-eval-page-7d3fd0ee": {
@@ -11426,14 +11946,22 @@
       {
         "sha256": "accdce08269ce2d08b49b6cdd8f72217d48fe8a1713dbc319b72ea1c753743f3",
         "dir": "captures/amazon__nova-2-lite/aial-eval-page-83f04b90/20261102T143820Z"
+      },
+      {
+        "sha256": "86ab614d20bc5df6926e1236878bc7f7b790f36fbbbdf432d7867ccd95830a68",
+        "dir": "captures/amazon__nova-2-lite/aial-eval-page-83f04b90/20261103T133308Z"
+      },
+      {
+        "sha256": "eb9c517b83999585e9169206f03637a61d8d16740bebe162a0eb9964586c505a",
+        "dir": "captures/amazon__nova-2-lite/aial-eval-page-83f04b90/20261103T134923Z"
       }
     ],
-    "last_sha256": "accdce08269ce2d08b49b6cdd8f72217d48fe8a1713dbc319b72ea1c753743f3",
-    "last_text_sha256": "0f919031e5c8df18c22d0d3517b1ec0c1b560f5431ec539bf0e89e2f81d9526d",
-    "last_capture": "captures/amazon__nova-2-lite/aial-eval-page-83f04b90/20261102T143820Z",
+    "last_sha256": "eb9c517b83999585e9169206f03637a61d8d16740bebe162a0eb9964586c505a",
+    "last_text_sha256": "694cb524593a8f954ca22ce2b283612058e2c02a68500dc9b64eb1741193b05f",
+    "last_capture": "captures/amazon__nova-2-lite/aial-eval-page-83f04b90/20261103T134923Z",
     "upstream_aliases": {
       "public/evals/amazon-nova-2-lite/index.html": "f4bd58a127b489978cbad8e6392c5d037cde9cc9",
-      "public/evals/amazon-nova-2-lite/version-2026-08-04.html": "37a26c5ff9014e2877da0a589edf27074e2b671d"
+      "public/evals/amazon-nova-2-lite/version-2026-08-04.html": "5c50514d08618d864db9a6d6377f5844bf880e7b"
     }
   },
   "openai/gpt-5-2::aial-eval-page-fa689f37": {
@@ -12667,11 +13195,15 @@
       {
         "sha256": "8c4a137bee1763c7e00729781e721e0d23aeea9cc520e64c7688aa63947754ce",
         "dir": "captures/meta__muse-glimmer/aial-eval-history-651ed4d8/20261102T144749Z"
+      },
+      {
+        "sha256": "7613e79b658091b321aef29d5c684c7fde0c272be12da9acd9901ce1d05554f4",
+        "dir": "captures/meta__muse-glimmer/aial-eval-history-651ed4d8/20261103T135144Z"
       }
     ],
-    "last_sha256": "8c4a137bee1763c7e00729781e721e0d23aeea9cc520e64c7688aa63947754ce",
-    "last_text_sha256": "3ce1208eb7c5e4ccd272099698abc2af6bf58c2505240fa343bb1534e9addcd0",
-    "last_capture": "captures/meta__muse-glimmer/aial-eval-history-651ed4d8/20261102T144749Z"
+    "last_sha256": "7613e79b658091b321aef29d5c684c7fde0c272be12da9acd9901ce1d05554f4",
+    "last_text_sha256": "45e6ba290bb3b3da052b72ea679deda49ed6c30edc4ad836b3df6fe297f61465",
+    "last_capture": "captures/meta__muse-glimmer/aial-eval-history-651ed4d8/20261103T135144Z"
   },
   "microsoft/mai-code-1-1-flash::aial-eval-history-e9e3e756": {
     "versions": [
@@ -12694,11 +13226,15 @@
       {
         "sha256": "ccadd4c7b15b6d632a09af666cf6d1287095b9a03f6555f0e839cca670abc0c2",
         "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-history-e9e3e756/20261102T144957Z"
+      },
+      {
+        "sha256": "dccfc611369f153233a675e7b1d1153abb8c404d81b8edd34a61cecba5d20e96",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-history-e9e3e756/20261103T134203Z"
       }
     ],
-    "last_sha256": "ccadd4c7b15b6d632a09af666cf6d1287095b9a03f6555f0e839cca670abc0c2",
-    "last_text_sha256": "1c5475e480ffeede29c1fd707ff78752d296d1b758bc562fde6e9e1e535c121d",
-    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-history-e9e3e756/20261102T144957Z"
+    "last_sha256": "dccfc611369f153233a675e7b1d1153abb8c404d81b8edd34a61cecba5d20e96",
+    "last_text_sha256": "fad4f70190389cb3c614adaa88517d5fa8f9ab09ee94ef26da85a9e10864ccf1",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-history-e9e3e756/20261103T134203Z"
   },
   "aial/tracker::aial-eval-history-bc86418b": {
     "versions": [
@@ -12781,11 +13317,19 @@
       {
         "sha256": "d96d9b7fc6cb1ca275b40650917d9b7b422efbedb7fee8d3e6503cfff694beb8",
         "dir": "captures/openai__gpt-5-2/aial-eval-history-dbed3211/20261102T144819Z"
+      },
+      {
+        "sha256": "707278448c92886d1a818f531192883b5297d256d7ed1b054833874b23d9d6e7",
+        "dir": "captures/openai__gpt-5-2/aial-eval-history-dbed3211/20261103T133653Z"
+      },
+      {
+        "sha256": "26ac571cb534473e100c69a8efab97cf22f94862478e8a8f4ea870d1bf843b5c",
+        "dir": "captures/openai__gpt-5-2/aial-eval-history-dbed3211/20261103T134259Z"
       }
     ],
-    "last_sha256": "d96d9b7fc6cb1ca275b40650917d9b7b422efbedb7fee8d3e6503cfff694beb8",
-    "last_text_sha256": "12d86900d1cec865bfbbb6fb3d1503ac64998b9a1b6e1041d21edcdb6505b7fe",
-    "last_capture": "captures/openai__gpt-5-2/aial-eval-history-dbed3211/20261102T144819Z"
+    "last_sha256": "26ac571cb534473e100c69a8efab97cf22f94862478e8a8f4ea870d1bf843b5c",
+    "last_text_sha256": "efb8618fd19925dd26313bde878b4e470e693da755608482b59982c0d8d70262",
+    "last_capture": "captures/openai__gpt-5-2/aial-eval-history-dbed3211/20261103T134259Z"
   },
   "openai/gpt-image-2::aial-eval-history-fc821018": {
     "versions": [
@@ -12808,11 +13352,19 @@
       {
         "sha256": "573f0751325e79e7e264f5361c69416f9a8fb1d27aaf933e216f98d62aa4e649",
         "dir": "captures/openai__gpt-image-2/aial-eval-history-fc821018/20261102T144823Z"
+      },
+      {
+        "sha256": "dbe99ddeb10f53e95b5ab17bf9788e78fcc4d2ef3b46119caacefdfc28f63247",
+        "dir": "captures/openai__gpt-image-2/aial-eval-history-fc821018/20261103T133658Z"
+      },
+      {
+        "sha256": "c8fc2c692818ee5b7358867a94d191e544c65ed68d6286e5045551516f192719",
+        "dir": "captures/openai__gpt-image-2/aial-eval-history-fc821018/20261103T134304Z"
       }
     ],
-    "last_sha256": "573f0751325e79e7e264f5361c69416f9a8fb1d27aaf933e216f98d62aa4e649",
-    "last_text_sha256": "1ddf57f8e323a83945bfb5cfdf57029f3d7119c4e538072cf0f52ba58b613471",
-    "last_capture": "captures/openai__gpt-image-2/aial-eval-history-fc821018/20261102T144823Z"
+    "last_sha256": "c8fc2c692818ee5b7358867a94d191e544c65ed68d6286e5045551516f192719",
+    "last_text_sha256": "48dede2fc31fdcb51e52eca35a670c5415c61379b6292bba8b96a22d4e061e5c",
+    "last_capture": "captures/openai__gpt-image-2/aial-eval-history-fc821018/20261103T134304Z"
   },
   "openai/gpt-5-4-nano::aial-eval-history-48cb0db6": {
     "versions": [
@@ -12831,11 +13383,19 @@
       {
         "sha256": "4c1b7cbc8c232c02aeda8404460f4fb0b4335adf0788078f307167f653f26dce",
         "dir": "captures/openai__gpt-5-4-nano/aial-eval-history-48cb0db6/20261102T144827Z"
+      },
+      {
+        "sha256": "d4f5e7baa9daac84b9d0c4ae9884fa0ab0fd73a3d512d4213f9cadf169854380",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-history-48cb0db6/20261103T133704Z"
+      },
+      {
+        "sha256": "466d0f477a0ace5108829dd6b81fc248f368a54c70662602bc04d95cfa9fa372",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-history-48cb0db6/20261103T134308Z"
       }
     ],
-    "last_sha256": "4c1b7cbc8c232c02aeda8404460f4fb0b4335adf0788078f307167f653f26dce",
-    "last_text_sha256": "9570901297e45e92a2ecd94471fc5bf9454a998136b57b15ab1871759de048ff",
-    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-history-48cb0db6/20261102T144827Z"
+    "last_sha256": "466d0f477a0ace5108829dd6b81fc248f368a54c70662602bc04d95cfa9fa372",
+    "last_text_sha256": "cc89807eb094ed4c754db4d5c4e0b727542f26ba2101f9f4fe960c341769a967",
+    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-history-48cb0db6/20261103T134308Z"
   },
   "aial/tracker::aial-eval-history-a900ea6c": {
     "versions": [
@@ -12944,11 +13504,15 @@
       {
         "sha256": "fa9d8041012a43a95be68bd8573c283a7e4d82af4e3f080028ce70d5d2ad680d",
         "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-history-60f29266/20261102T144857Z"
+      },
+      {
+        "sha256": "1bf0f512d420de33ae246d079520024c73a3c79154562ff4c2695ceb7cbe12cf",
+        "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-history-60f29266/20261103T134328Z"
       }
     ],
-    "last_sha256": "fa9d8041012a43a95be68bd8573c283a7e4d82af4e3f080028ce70d5d2ad680d",
-    "last_text_sha256": "101ba72b9bfa0959ac25e7051d852e8af9ea4709dc70b54261076d6bda755112",
-    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-history-60f29266/20261102T144857Z"
+    "last_sha256": "1bf0f512d420de33ae246d079520024c73a3c79154562ff4c2695ceb7cbe12cf",
+    "last_text_sha256": "56332056651537a3a626a9f7e5bd0d9e01dc38808139ad545b584a048db0a665",
+    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-history-60f29266/20261103T134328Z"
   },
   "aial/tracker::aial-eval-page-5a06c25a": {
     "versions": [
@@ -17133,22 +17697,30 @@
       {
         "sha256": "dcec6d7d77bb1b133a0f002d601cd3f2de8e0fb6eab1a9988e45f1c24449db40",
         "dir": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261102T144710Z"
+      },
+      {
+        "sha256": "68a9fc98456cfa1a06140a59c058d36aa2407655e69cd12215330014abe6f101",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261103T134808Z"
       }
     ],
-    "last_sha256": "dcec6d7d77bb1b133a0f002d601cd3f2de8e0fb6eab1a9988e45f1c24449db40",
-    "last_text_sha256": "5c9a492a743ae51358a012541c92b13226bd9186ca3262d10c40f85f58f7df5c",
-    "last_capture": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261102T144710Z"
+    "last_sha256": "68a9fc98456cfa1a06140a59c058d36aa2407655e69cd12215330014abe6f101",
+    "last_text_sha256": "cb1ec4927b2f359badcd8d054642cadb5ed7c7759f07969f77e71718c83e73bb",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-history-038ecb30/20261103T134808Z"
   },
   "microsoft/mai-image-2-6::aial-eval-history-bb9a8c63": {
     "versions": [
       {
         "sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
         "dir": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20260913T125651Z"
+      },
+      {
+        "sha256": "34b959715f94b2365264e30e494df81d3ca99c502a3264c09d716d6556cef81a",
+        "dir": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20261103T135301Z"
       }
     ],
-    "last_sha256": "fa99a3c59da567d521fdccfd3c84c3267d6aee948b2b4000f9dbc5a94c71b06e",
-    "last_text_sha256": "2fbd0f7976b735258f349ee538edfc0d88c8e2b9cdfcdc31ef466bef65397720",
-    "last_capture": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20260913T125651Z",
+    "last_sha256": "34b959715f94b2365264e30e494df81d3ca99c502a3264c09d716d6556cef81a",
+    "last_text_sha256": "e9aad949a7760878671159abe00ac97ef04a3a611a60dc618865867b17c9dc49",
+    "last_capture": "captures/microsoft__mai-image-2-6/aial-eval-history-bb9a8c63/20261103T135301Z",
     "upstream_aliases": {
       "evals/microsoft-mai-image-2_6.yaml": "1bf323f2cae93e8656d083905f2cd5624a579826"
     }
@@ -17946,11 +18518,19 @@
       {
         "sha256": "394f05b32bde16430c5dea1a3c0fd249e077bed961011e59151386bb47edb199",
         "dir": "captures/openai__gpt-5-6-luna/aial-eval-history-2b650963/20261102T143701Z"
+      },
+      {
+        "sha256": "06b94dcb2b51b59c97fce5379f3c1a094bf5882a3c064e1b4ca429b7034b97ea",
+        "dir": "captures/openai__gpt-5-6-luna/aial-eval-history-2b650963/20261103T133649Z"
+      },
+      {
+        "sha256": "cb7bc2a8f2a61c6899c4ec2eb747bbb9a25937a35c1c018dfdee48c384af97de",
+        "dir": "captures/openai__gpt-5-6-luna/aial-eval-history-2b650963/20261103T134254Z"
       }
     ],
-    "last_sha256": "394f05b32bde16430c5dea1a3c0fd249e077bed961011e59151386bb47edb199",
-    "last_text_sha256": "93fdd685d30a3875753322b95f761a6c29982f253eddf68ec1523d23e81a7b07",
-    "last_capture": "captures/openai__gpt-5-6-luna/aial-eval-history-2b650963/20261102T143701Z"
+    "last_sha256": "cb7bc2a8f2a61c6899c4ec2eb747bbb9a25937a35c1c018dfdee48c384af97de",
+    "last_text_sha256": "4590754738ccf29425e84062ad7bf427ede4422b23e782653a3624c71f997952",
+    "last_capture": "captures/openai__gpt-5-6-luna/aial-eval-history-2b650963/20261103T134254Z"
   },
   "openai/gpt-5-6-sol::aial-eval-history-9c491af9": {
     "versions": [],
@@ -21675,11 +22255,15 @@
       {
         "sha256": "96b3cb3cefb6d43e4ca19ef9c0f14baeebb09c071b2d96ad70b086b0c908dcd8",
         "dir": "captures/nvidia__nemotron-nano/aial-eval-history-a337bf3b/20261102T144808Z"
+      },
+      {
+        "sha256": "52d934c19887fed9731b809dce3252c7ea25e1872b6de278fbd21be0684cac71",
+        "dir": "captures/nvidia__nemotron-nano/aial-eval-history-a337bf3b/20261103T133640Z"
       }
     ],
-    "last_sha256": "96b3cb3cefb6d43e4ca19ef9c0f14baeebb09c071b2d96ad70b086b0c908dcd8",
-    "last_text_sha256": "cbcc10a32cdc185303e939ce42102cf1770055f6456ef8eabc2738540ee15509",
-    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-history-a337bf3b/20261102T144808Z"
+    "last_sha256": "52d934c19887fed9731b809dce3252c7ea25e1872b6de278fbd21be0684cac71",
+    "last_text_sha256": "282df0144a23ca27ccc4875c0b276790a6ee7b989dd77d5a5c6e6a0021778590",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-history-a337bf3b/20261103T133640Z"
   },
   "aial/tracker::aial-eval-history-516acf2e": {
     "versions": [
@@ -21716,11 +22300,15 @@
       {
         "sha256": "4b8d50dadfd6cba2264e95c64f16e562560dffc8fd0cb317bdb35d45569ac00e",
         "dir": "captures/nvidia__nemotron-nano/aial-eval-page-673816ec/20261102T144206Z"
+      },
+      {
+        "sha256": "7f235ecc5c6fdb1fd75ebcb9c5cabd01ec2c1da4602d5eab17cbb7b745e8df1b",
+        "dir": "captures/nvidia__nemotron-nano/aial-eval-page-673816ec/20261103T133929Z"
       }
     ],
-    "last_sha256": "4b8d50dadfd6cba2264e95c64f16e562560dffc8fd0cb317bdb35d45569ac00e",
-    "last_text_sha256": "edc9d9ae9cb463ff03fe8bb75b040a6fb339c681452f43a6c5b357421890003c",
-    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-page-673816ec/20261102T144206Z"
+    "last_sha256": "7f235ecc5c6fdb1fd75ebcb9c5cabd01ec2c1da4602d5eab17cbb7b745e8df1b",
+    "last_text_sha256": "dfcbf367a00c78f0e65e01bc23cd3aa97f93ceb1031a88374abd2298f11ed0b0",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-page-673816ec/20261103T133929Z"
   },
   "nvidia/nemotron-nano::aial-eval-page-4510e8bc": {
     "versions": [
@@ -21735,11 +22323,15 @@
       {
         "sha256": "4b8d50dadfd6cba2264e95c64f16e562560dffc8fd0cb317bdb35d45569ac00e",
         "dir": "captures/nvidia__nemotron-nano/aial-eval-page-4510e8bc/20261102T144210Z"
+      },
+      {
+        "sha256": "7f235ecc5c6fdb1fd75ebcb9c5cabd01ec2c1da4602d5eab17cbb7b745e8df1b",
+        "dir": "captures/nvidia__nemotron-nano/aial-eval-page-4510e8bc/20261103T133934Z"
       }
     ],
-    "last_sha256": "4b8d50dadfd6cba2264e95c64f16e562560dffc8fd0cb317bdb35d45569ac00e",
-    "last_text_sha256": "edc9d9ae9cb463ff03fe8bb75b040a6fb339c681452f43a6c5b357421890003c",
-    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-page-4510e8bc/20261102T144210Z"
+    "last_sha256": "7f235ecc5c6fdb1fd75ebcb9c5cabd01ec2c1da4602d5eab17cbb7b745e8df1b",
+    "last_text_sha256": "dfcbf367a00c78f0e65e01bc23cd3aa97f93ceb1031a88374abd2298f11ed0b0",
+    "last_capture": "captures/nvidia__nemotron-nano/aial-eval-page-4510e8bc/20261103T133934Z"
   },
   "aial/tracker::aial-eval-page-c2adc98c": {
     "versions": [
@@ -21765,11 +22357,19 @@
       {
         "sha256": "9c56e74f33c1f47ddec22a8814d3ae1c0efd72798b360854ab2189a294cfc30a",
         "dir": "captures/openai__gpt6/aial-eval-history-a900ea6c/20261102T144831Z"
+      },
+      {
+        "sha256": "904b63ae4943d871a228b4e33c44ffad8f8db1345ca0044d070a6c52a06c8b36",
+        "dir": "captures/openai__gpt6/aial-eval-history-a900ea6c/20261103T133709Z"
+      },
+      {
+        "sha256": "876e4feb96dd333e7276572091e46f94539ba39c35ad7f1d34078aa9993c72be",
+        "dir": "captures/openai__gpt6/aial-eval-history-a900ea6c/20261103T134312Z"
       }
     ],
-    "last_sha256": "9c56e74f33c1f47ddec22a8814d3ae1c0efd72798b360854ab2189a294cfc30a",
-    "last_text_sha256": "32b70e2cbc3a62e33e9a97d358e6e50ecfccb356c82e5dc0b699bb2762753f24",
-    "last_capture": "captures/openai__gpt6/aial-eval-history-a900ea6c/20261102T144831Z"
+    "last_sha256": "876e4feb96dd333e7276572091e46f94539ba39c35ad7f1d34078aa9993c72be",
+    "last_text_sha256": "f81880517bf3d3b98a8727889bd1c0e17a7bbc3a33956868e5d06364cb80bf5e",
+    "last_capture": "captures/openai__gpt6/aial-eval-history-a900ea6c/20261103T134312Z"
   },
   "openai/gpt-5-2::aial-eval-page-aae9c570": {
     "versions": [
@@ -21780,11 +22380,19 @@
       {
         "sha256": "fe6be7c99aa5a51e3e32d19b4dfb52bac9b88b6c2ad66cfeeca4ccdc96d711e0",
         "dir": "captures/openai__gpt-5-2/aial-eval-page-aae9c570/20261102T144234Z"
+      },
+      {
+        "sha256": "5f31770177124128ef59cb3fdbfde195f95a64371f82bf386e5bf160ef7e556a",
+        "dir": "captures/openai__gpt-5-2/aial-eval-page-aae9c570/20261103T133951Z"
+      },
+      {
+        "sha256": "c99dc4609503f731ae8c29ab277a60e1c393cac222b8404174be9cefdef8a88f",
+        "dir": "captures/openai__gpt-5-2/aial-eval-page-aae9c570/20261103T134618Z"
       }
     ],
-    "last_sha256": "fe6be7c99aa5a51e3e32d19b4dfb52bac9b88b6c2ad66cfeeca4ccdc96d711e0",
-    "last_text_sha256": "ab903ee19f1e48e5dff23c4ffb9c2cc20b58f79b34e35e3147ef679dd6587ad5",
-    "last_capture": "captures/openai__gpt-5-2/aial-eval-page-aae9c570/20261102T144234Z"
+    "last_sha256": "c99dc4609503f731ae8c29ab277a60e1c393cac222b8404174be9cefdef8a88f",
+    "last_text_sha256": "cf674d410432c2e53326e64116d35fd1c9b7ddb1ff5ea2e2ed833a0fba2793fb",
+    "last_capture": "captures/openai__gpt-5-2/aial-eval-page-aae9c570/20261103T134618Z"
   },
   "openai/gpt-5-2::aial-eval-page-39616802": {
     "versions": [
@@ -21795,11 +22403,19 @@
       {
         "sha256": "fe6be7c99aa5a51e3e32d19b4dfb52bac9b88b6c2ad66cfeeca4ccdc96d711e0",
         "dir": "captures/openai__gpt-5-2/aial-eval-page-39616802/20261102T144239Z"
+      },
+      {
+        "sha256": "5f31770177124128ef59cb3fdbfde195f95a64371f82bf386e5bf160ef7e556a",
+        "dir": "captures/openai__gpt-5-2/aial-eval-page-39616802/20261103T133957Z"
+      },
+      {
+        "sha256": "c99dc4609503f731ae8c29ab277a60e1c393cac222b8404174be9cefdef8a88f",
+        "dir": "captures/openai__gpt-5-2/aial-eval-page-39616802/20261103T134624Z"
       }
     ],
-    "last_sha256": "fe6be7c99aa5a51e3e32d19b4dfb52bac9b88b6c2ad66cfeeca4ccdc96d711e0",
-    "last_text_sha256": "ab903ee19f1e48e5dff23c4ffb9c2cc20b58f79b34e35e3147ef679dd6587ad5",
-    "last_capture": "captures/openai__gpt-5-2/aial-eval-page-39616802/20261102T144239Z"
+    "last_sha256": "c99dc4609503f731ae8c29ab277a60e1c393cac222b8404174be9cefdef8a88f",
+    "last_text_sha256": "cf674d410432c2e53326e64116d35fd1c9b7ddb1ff5ea2e2ed833a0fba2793fb",
+    "last_capture": "captures/openai__gpt-5-2/aial-eval-page-39616802/20261103T134624Z"
   },
   "openai/gpt-image-2::aial-eval-page-b6fba7ca": {
     "versions": [
@@ -21814,11 +22430,19 @@
       {
         "sha256": "bb4d6334ac7c4956dc44093dfe71f01905613c35411b4cc8f883207658ece4bd",
         "dir": "captures/openai__gpt-image-2/aial-eval-page-b6fba7ca/20261102T144243Z"
+      },
+      {
+        "sha256": "4e59310999c0f83a9dfdc5f51aeabf59849d31ce315a1d69a62db72831e8c060",
+        "dir": "captures/openai__gpt-image-2/aial-eval-page-b6fba7ca/20261103T134002Z"
+      },
+      {
+        "sha256": "7bf392034c431acf849bb2bb1485141ac4a108747de3ea40abb5527eb3a0ac5f",
+        "dir": "captures/openai__gpt-image-2/aial-eval-page-b6fba7ca/20261103T134629Z"
       }
     ],
-    "last_sha256": "bb4d6334ac7c4956dc44093dfe71f01905613c35411b4cc8f883207658ece4bd",
-    "last_text_sha256": "cc6581c2c192027027e60f20a6fc0659e69e2884ac18f94ccc6554f08ca2eafc",
-    "last_capture": "captures/openai__gpt-image-2/aial-eval-page-b6fba7ca/20261102T144243Z"
+    "last_sha256": "7bf392034c431acf849bb2bb1485141ac4a108747de3ea40abb5527eb3a0ac5f",
+    "last_text_sha256": "523ec7013f023f34b3586e843e0979c139bf643d028b1bfc61e0bd472cf77d90",
+    "last_capture": "captures/openai__gpt-image-2/aial-eval-page-b6fba7ca/20261103T134629Z"
   },
   "openai/gpt-image-2::aial-eval-page-5fca6747": {
     "versions": [
@@ -21833,11 +22457,19 @@
       {
         "sha256": "bb4d6334ac7c4956dc44093dfe71f01905613c35411b4cc8f883207658ece4bd",
         "dir": "captures/openai__gpt-image-2/aial-eval-page-5fca6747/20261102T144246Z"
+      },
+      {
+        "sha256": "4e59310999c0f83a9dfdc5f51aeabf59849d31ce315a1d69a62db72831e8c060",
+        "dir": "captures/openai__gpt-image-2/aial-eval-page-5fca6747/20261103T134006Z"
+      },
+      {
+        "sha256": "7bf392034c431acf849bb2bb1485141ac4a108747de3ea40abb5527eb3a0ac5f",
+        "dir": "captures/openai__gpt-image-2/aial-eval-page-5fca6747/20261103T134634Z"
       }
     ],
-    "last_sha256": "bb4d6334ac7c4956dc44093dfe71f01905613c35411b4cc8f883207658ece4bd",
-    "last_text_sha256": "cc6581c2c192027027e60f20a6fc0659e69e2884ac18f94ccc6554f08ca2eafc",
-    "last_capture": "captures/openai__gpt-image-2/aial-eval-page-5fca6747/20261102T144246Z"
+    "last_sha256": "7bf392034c431acf849bb2bb1485141ac4a108747de3ea40abb5527eb3a0ac5f",
+    "last_text_sha256": "523ec7013f023f34b3586e843e0979c139bf643d028b1bfc61e0bd472cf77d90",
+    "last_capture": "captures/openai__gpt-image-2/aial-eval-page-5fca6747/20261103T134634Z"
   },
   "openai/gpt-5-4-nano::aial-eval-page-4e17438f": {
     "versions": [
@@ -21848,11 +22480,19 @@
       {
         "sha256": "6a6082035c6db2f125722a87fe86425b9d3ebe6e8dc2a644368bd7f65d115f91",
         "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-4e17438f/20261102T144250Z"
+      },
+      {
+        "sha256": "2b37f1078ed26e06ba3e12f123bec013d127b1b3e8e95749bb7cd84556a1ad24",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-4e17438f/20261103T134011Z"
+      },
+      {
+        "sha256": "561b18d8dff54a89aaab4201032c1105a62700c3ea41971087e9e20752f631da",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-4e17438f/20261103T134639Z"
       }
     ],
-    "last_sha256": "6a6082035c6db2f125722a87fe86425b9d3ebe6e8dc2a644368bd7f65d115f91",
-    "last_text_sha256": "08c41aace7fc085e3f3975c850680566200fd336f0527ea768a38a82dd661cbd",
-    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-page-4e17438f/20261102T144250Z"
+    "last_sha256": "561b18d8dff54a89aaab4201032c1105a62700c3ea41971087e9e20752f631da",
+    "last_text_sha256": "c9f9c2facb67790192b93f4b45058c7edbdf0cb770bc4ec2a6bf8e5b20c86876",
+    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-page-4e17438f/20261103T134639Z"
   },
   "openai/gpt-5-4-nano::aial-eval-page-12236540": {
     "versions": [
@@ -21863,11 +22503,19 @@
       {
         "sha256": "6a6082035c6db2f125722a87fe86425b9d3ebe6e8dc2a644368bd7f65d115f91",
         "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-12236540/20261102T144254Z"
+      },
+      {
+        "sha256": "2b37f1078ed26e06ba3e12f123bec013d127b1b3e8e95749bb7cd84556a1ad24",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-12236540/20261103T134016Z"
+      },
+      {
+        "sha256": "561b18d8dff54a89aaab4201032c1105a62700c3ea41971087e9e20752f631da",
+        "dir": "captures/openai__gpt-5-4-nano/aial-eval-page-12236540/20261103T134644Z"
       }
     ],
-    "last_sha256": "6a6082035c6db2f125722a87fe86425b9d3ebe6e8dc2a644368bd7f65d115f91",
-    "last_text_sha256": "08c41aace7fc085e3f3975c850680566200fd336f0527ea768a38a82dd661cbd",
-    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-page-12236540/20261102T144254Z"
+    "last_sha256": "561b18d8dff54a89aaab4201032c1105a62700c3ea41971087e9e20752f631da",
+    "last_text_sha256": "c9f9c2facb67790192b93f4b45058c7edbdf0cb770bc4ec2a6bf8e5b20c86876",
+    "last_capture": "captures/openai__gpt-5-4-nano/aial-eval-page-12236540/20261103T134644Z"
   },
   "openai/gpt6::aial-eval-page-eda4d4a1": {
     "versions": [
@@ -21878,11 +22526,19 @@
       {
         "sha256": "07cc79cf177c1087bdc111dd847bf5c1c166ca415b5dbb9f799e26545cb7243a",
         "dir": "captures/openai__gpt6/aial-eval-page-eda4d4a1/20261102T144258Z"
+      },
+      {
+        "sha256": "5d9130b47c59d433962cb948662762f9c9d54d72242f61a8c433a5c3f1d72e1b",
+        "dir": "captures/openai__gpt6/aial-eval-page-eda4d4a1/20261103T134021Z"
+      },
+      {
+        "sha256": "49082e47d1227259675b8e643c4dd785f796c2fb1a3e3f661f871d24c0300022",
+        "dir": "captures/openai__gpt6/aial-eval-page-eda4d4a1/20261103T134649Z"
       }
     ],
-    "last_sha256": "07cc79cf177c1087bdc111dd847bf5c1c166ca415b5dbb9f799e26545cb7243a",
-    "last_text_sha256": "d5a5700accf6303e6af3ed7848c1ed5c2f362e2ff56b5756cf9a7d878d7b34c6",
-    "last_capture": "captures/openai__gpt6/aial-eval-page-eda4d4a1/20261102T144258Z"
+    "last_sha256": "49082e47d1227259675b8e643c4dd785f796c2fb1a3e3f661f871d24c0300022",
+    "last_text_sha256": "a7fdf8c8f71cc3b36c9f31f14e98109954752dffd3cd5879ef342f4dde89f3c9",
+    "last_capture": "captures/openai__gpt6/aial-eval-page-eda4d4a1/20261103T134649Z"
   },
   "openai/gpt6::aial-eval-page-551ce7fe": {
     "versions": [
@@ -21893,11 +22549,19 @@
       {
         "sha256": "07cc79cf177c1087bdc111dd847bf5c1c166ca415b5dbb9f799e26545cb7243a",
         "dir": "captures/openai__gpt6/aial-eval-page-551ce7fe/20261102T144303Z"
+      },
+      {
+        "sha256": "5d9130b47c59d433962cb948662762f9c9d54d72242f61a8c433a5c3f1d72e1b",
+        "dir": "captures/openai__gpt6/aial-eval-page-551ce7fe/20261103T134027Z"
+      },
+      {
+        "sha256": "49082e47d1227259675b8e643c4dd785f796c2fb1a3e3f661f871d24c0300022",
+        "dir": "captures/openai__gpt6/aial-eval-page-551ce7fe/20261103T134654Z"
       }
     ],
-    "last_sha256": "07cc79cf177c1087bdc111dd847bf5c1c166ca415b5dbb9f799e26545cb7243a",
-    "last_text_sha256": "d5a5700accf6303e6af3ed7848c1ed5c2f362e2ff56b5756cf9a7d878d7b34c6",
-    "last_capture": "captures/openai__gpt6/aial-eval-page-551ce7fe/20261102T144303Z"
+    "last_sha256": "49082e47d1227259675b8e643c4dd785f796c2fb1a3e3f661f871d24c0300022",
+    "last_text_sha256": "a7fdf8c8f71cc3b36c9f31f14e98109954752dffd3cd5879ef342f4dde89f3c9",
+    "last_capture": "captures/openai__gpt6/aial-eval-page-551ce7fe/20261103T134654Z"
   },
   "xai/grok-voice-think-fast-2::aial-eval-page-fb82c003": {
     "versions": [
@@ -21912,11 +22576,15 @@
       {
         "sha256": "8d94668513bec5d699e79202636828fa258899c0d450623c162bb925d257fdac",
         "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-page-fb82c003/20261102T144414Z"
+      },
+      {
+        "sha256": "22bc823746466fc5f900b6d10f84222b4ae2797b35f18d8c7bee18933397530c",
+        "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-page-fb82c003/20261103T134716Z"
       }
     ],
-    "last_sha256": "8d94668513bec5d699e79202636828fa258899c0d450623c162bb925d257fdac",
-    "last_text_sha256": "5d446214ac867261dad76fe424358ced10c3ed60b5c4f9c2098c9ee56d5d7b3c",
-    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-page-fb82c003/20261102T144414Z"
+    "last_sha256": "22bc823746466fc5f900b6d10f84222b4ae2797b35f18d8c7bee18933397530c",
+    "last_text_sha256": "9557c8d242351cd16202b2b75a1de7ee05e79cf45beef94ef333ed9e0c0fdfca",
+    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-page-fb82c003/20261103T134716Z"
   },
   "xai/grok-voice-think-fast-2::aial-eval-page-4bd0cf1b": {
     "versions": [
@@ -21931,11 +22599,15 @@
       {
         "sha256": "8d94668513bec5d699e79202636828fa258899c0d450623c162bb925d257fdac",
         "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-page-4bd0cf1b/20261102T144417Z"
+      },
+      {
+        "sha256": "22bc823746466fc5f900b6d10f84222b4ae2797b35f18d8c7bee18933397530c",
+        "dir": "captures/xai__grok-voice-think-fast-2/aial-eval-page-4bd0cf1b/20261103T134721Z"
       }
     ],
-    "last_sha256": "8d94668513bec5d699e79202636828fa258899c0d450623c162bb925d257fdac",
-    "last_text_sha256": "5d446214ac867261dad76fe424358ced10c3ed60b5c4f9c2098c9ee56d5d7b3c",
-    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-page-4bd0cf1b/20261102T144417Z"
+    "last_sha256": "22bc823746466fc5f900b6d10f84222b4ae2797b35f18d8c7bee18933397530c",
+    "last_text_sha256": "9557c8d242351cd16202b2b75a1de7ee05e79cf45beef94ef333ed9e0c0fdfca",
+    "last_capture": "captures/xai__grok-voice-think-fast-2/aial-eval-page-4bd0cf1b/20261103T134721Z"
   },
   "cohere/command-a-plus::aial-archive-fad6f72f": {
     "versions": [
@@ -22024,11 +22696,15 @@
       {
         "sha256": "558f1611871a8e65d5d03ea799d0c7ac35453101914cbd52ac1cf1dd6364e286",
         "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-a6589bac/20261102T143044Z"
+      },
+      {
+        "sha256": "e5ee9e596f11c84b7c673721cc2ed066b252b251eef9b283b3c6b7f8f0cdc97f",
+        "dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-a6589bac/20261103T134050Z"
       }
     ],
-    "last_sha256": "558f1611871a8e65d5d03ea799d0c7ac35453101914cbd52ac1cf1dd6364e286",
-    "last_text_sha256": "3273c0d38981839b006e20b255a52f86878f36be6361d99b84dddf6dd2f75f03",
-    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-a6589bac/20261102T143044Z"
+    "last_sha256": "e5ee9e596f11c84b7c673721cc2ed066b252b251eef9b283b3c6b7f8f0cdc97f",
+    "last_text_sha256": "7cd3c058f6bdff0b1d73c641aa57faf1a402565c89c0034b5eadcd0a810b7ca9",
+    "last_capture": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-a6589bac/20261103T134050Z"
   },
   "aial/tracker::aial-eval-history-90afe5ae": {
     "versions": [
@@ -22043,11 +22719,19 @@
       {
         "sha256": "ecadffbcc89e0161b90ec06ad7854a77ac11ca4d6fd08be429b499b5529a411b",
         "dir": "captures/aial__tracker/aial-eval-history-90afe5ae/20261102T144423Z"
+      },
+      {
+        "sha256": "db6d9c67a511500c12239f7faa018447f0451ef1ccce9d655a3fa7b12fc773e1",
+        "dir": "captures/aial__tracker/aial-eval-history-90afe5ae/20261103T134126Z"
+      },
+      {
+        "sha256": "8083b9de40f0f63f09c098c298f3df321935c7d5bb2a9488927b9d4ece1a9196",
+        "dir": "captures/aial__tracker/aial-eval-history-90afe5ae/20261103T134733Z"
       }
     ],
-    "last_sha256": "ecadffbcc89e0161b90ec06ad7854a77ac11ca4d6fd08be429b499b5529a411b",
-    "last_text_sha256": "16c19b0ca233d5af568afec188eaf15497e35f91445a031fe8a40f9599ea720f",
-    "last_capture": "captures/aial__tracker/aial-eval-history-90afe5ae/20261102T144423Z"
+    "last_sha256": "8083b9de40f0f63f09c098c298f3df321935c7d5bb2a9488927b9d4ece1a9196",
+    "last_text_sha256": "6b2b3eb332aa0e13fc183c4b59a632c3c979375e7ea2893d48fabae9c36167c2",
+    "last_capture": "captures/aial__tracker/aial-eval-history-90afe5ae/20261103T134733Z"
   },
   "aial/tracker::aial-archive-d01091c2": {
     "versions": [
@@ -22073,11 +22757,19 @@
       {
         "sha256": "0bd6704c443477c7886b2346cb97138a81016fed89de21750c08bb3b92f92821",
         "dir": "captures/aial__tracker/aial-eval-page-642ff88d/20261102T144526Z"
+      },
+      {
+        "sha256": "cbf0325bfd4d79b23a0d36ea165a22b6bdf0c3fb4647a61c7c710fe77a743e46",
+        "dir": "captures/aial__tracker/aial-eval-page-642ff88d/20261103T134351Z"
+      },
+      {
+        "sha256": "d3f9606603574b51100de4e93f40a58162ec2cf3e24f81e73ace6ca0b67710a6",
+        "dir": "captures/aial__tracker/aial-eval-page-642ff88d/20261103T134914Z"
       }
     ],
-    "last_sha256": "0bd6704c443477c7886b2346cb97138a81016fed89de21750c08bb3b92f92821",
-    "last_text_sha256": "10f9f9b2c849e2d1d2258a0ee6078395f04a99f749550abdbccb7e55da3221a4",
-    "last_capture": "captures/aial__tracker/aial-eval-page-642ff88d/20261102T144526Z"
+    "last_sha256": "d3f9606603574b51100de4e93f40a58162ec2cf3e24f81e73ace6ca0b67710a6",
+    "last_text_sha256": "73b0a9a44896f524079ab4b2b9c00cd4d0406ead9223d000beaa2c69da5bf3a9",
+    "last_capture": "captures/aial__tracker/aial-eval-page-642ff88d/20261103T134914Z"
   },
   "aial/tracker::aial-eval-page-37a08683": {
     "versions": [
@@ -22092,11 +22784,19 @@
       {
         "sha256": "0bd6704c443477c7886b2346cb97138a81016fed89de21750c08bb3b92f92821",
         "dir": "captures/aial__tracker/aial-eval-page-37a08683/20261102T144530Z"
+      },
+      {
+        "sha256": "cbf0325bfd4d79b23a0d36ea165a22b6bdf0c3fb4647a61c7c710fe77a743e46",
+        "dir": "captures/aial__tracker/aial-eval-page-37a08683/20261103T134356Z"
+      },
+      {
+        "sha256": "d3f9606603574b51100de4e93f40a58162ec2cf3e24f81e73ace6ca0b67710a6",
+        "dir": "captures/aial__tracker/aial-eval-page-37a08683/20261103T134918Z"
       }
     ],
-    "last_sha256": "0bd6704c443477c7886b2346cb97138a81016fed89de21750c08bb3b92f92821",
-    "last_text_sha256": "10f9f9b2c849e2d1d2258a0ee6078395f04a99f749550abdbccb7e55da3221a4",
-    "last_capture": "captures/aial__tracker/aial-eval-page-37a08683/20261102T144530Z"
+    "last_sha256": "d3f9606603574b51100de4e93f40a58162ec2cf3e24f81e73ace6ca0b67710a6",
+    "last_text_sha256": "73b0a9a44896f524079ab4b2b9c00cd4d0406ead9223d000beaa2c69da5bf3a9",
+    "last_capture": "captures/aial__tracker/aial-eval-page-37a08683/20261103T134918Z"
   },
   "anthropic/mythos5-1::aial-eval-page-5a06c25a": {
     "versions": [
@@ -22107,11 +22807,15 @@
       {
         "sha256": "40c9358fc736536f13a5d2e27c6991f5410de33429927521271761e7b2840e94",
         "dir": "captures/anthropic__mythos5-1/aial-eval-page-5a06c25a/20261102T143845Z"
+      },
+      {
+        "sha256": "8a8211b632e5d524630a8a24c54b885a96639b40017a91d3cbcde6f14bddf128",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-page-5a06c25a/20261103T134958Z"
       }
     ],
-    "last_sha256": "40c9358fc736536f13a5d2e27c6991f5410de33429927521271761e7b2840e94",
-    "last_text_sha256": "a6ec4e2340ec7b50a31467389f0fcec34bfc3613c4df029920050ad77cc0b5f8",
-    "last_capture": "captures/anthropic__mythos5-1/aial-eval-page-5a06c25a/20261102T143845Z"
+    "last_sha256": "8a8211b632e5d524630a8a24c54b885a96639b40017a91d3cbcde6f14bddf128",
+    "last_text_sha256": "7ff77e4493550f5bfb081122629a17806e224b037c39d86a2ddb2b80044bfbab",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-page-5a06c25a/20261103T134958Z"
   },
   "anthropic/mythos5-1::aial-eval-page-4f6a12c9": {
     "versions": [
@@ -22122,11 +22826,15 @@
       {
         "sha256": "40c9358fc736536f13a5d2e27c6991f5410de33429927521271761e7b2840e94",
         "dir": "captures/anthropic__mythos5-1/aial-eval-page-4f6a12c9/20261102T143849Z"
+      },
+      {
+        "sha256": "8a8211b632e5d524630a8a24c54b885a96639b40017a91d3cbcde6f14bddf128",
+        "dir": "captures/anthropic__mythos5-1/aial-eval-page-4f6a12c9/20261103T135001Z"
       }
     ],
-    "last_sha256": "40c9358fc736536f13a5d2e27c6991f5410de33429927521271761e7b2840e94",
-    "last_text_sha256": "a6ec4e2340ec7b50a31467389f0fcec34bfc3613c4df029920050ad77cc0b5f8",
-    "last_capture": "captures/anthropic__mythos5-1/aial-eval-page-4f6a12c9/20261102T143849Z"
+    "last_sha256": "8a8211b632e5d524630a8a24c54b885a96639b40017a91d3cbcde6f14bddf128",
+    "last_text_sha256": "7ff77e4493550f5bfb081122629a17806e224b037c39d86a2ddb2b80044bfbab",
+    "last_capture": "captures/anthropic__mythos5-1/aial-eval-page-4f6a12c9/20261103T135001Z"
   },
   "swiss-ai-initiative/apertus-1-5::aial-eval-page-c6f2b26a": {
     "versions": [
@@ -22178,11 +22886,23 @@
       {
         "sha256": "1552f4b4f3ce976d7e72e11d5e3ebfc9413182bb18c92af731230446e8fdd271",
         "dir": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261102T144854Z"
+      },
+      {
+        "sha256": "e5da84e4da432091c09f2a5a091f496defae45bcf21761d976a876ddad3749a2",
+        "dir": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261103T133733Z"
+      },
+      {
+        "sha256": "84edba116eb2326dcf8b4d04295e6cf9cab668769fed7e4ef52113d6a65a3a26",
+        "dir": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261103T134317Z"
+      },
+      {
+        "sha256": "eacd712d41c14709963a211e26935a23688057aafe44c7782bcae07d8663b2eb",
+        "dir": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261103T134900Z"
       }
     ],
-    "last_sha256": "1552f4b4f3ce976d7e72e11d5e3ebfc9413182bb18c92af731230446e8fdd271",
-    "last_text_sha256": "a778db652c22224685a0f21d1f13cdad88edf286442a46585ebc10f4442e5fab",
-    "last_capture": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261102T144854Z"
+    "last_sha256": "eacd712d41c14709963a211e26935a23688057aafe44c7782bcae07d8663b2eb",
+    "last_text_sha256": "bbd8431fd58a2ceac6fdf8274d1881a1c2c63ee891b4f779dc601b5a6d08f121",
+    "last_capture": "captures/tencent__hy3/aial-eval-history-a0e0c298/20261103T134900Z"
   },
   "tencent/hy3::aial-eval-page-58c01f9d": {
     "versions": [
@@ -22201,11 +22921,23 @@
       {
         "sha256": "f02361a560c39f532fdb1eb8f4ba2c8fe914ced7445236eebc86594f2ac84267",
         "dir": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261102T144923Z"
+      },
+      {
+        "sha256": "da75ea1e652dc336bb92ca7b54a0edac3133a58a6233da51681ddea754f8f3ca",
+        "dir": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261103T134106Z"
+      },
+      {
+        "sha256": "2eb0f001a71ef2f5a69d873de6c809b359ee8a528a2c5e65b4e68c19e7bc08d1",
+        "dir": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261103T134659Z"
+      },
+      {
+        "sha256": "554d584ce8262c9d039f3f0f938ffece5107b35bfc7f9d3d82312ffaeed1be3d",
+        "dir": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261103T135125Z"
       }
     ],
-    "last_sha256": "f02361a560c39f532fdb1eb8f4ba2c8fe914ced7445236eebc86594f2ac84267",
-    "last_text_sha256": "808c2d22fffb781bdaf59df0225ca578b4eaefff14b9d43cae9bd0137dd56a57",
-    "last_capture": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261102T144923Z"
+    "last_sha256": "554d584ce8262c9d039f3f0f938ffece5107b35bfc7f9d3d82312ffaeed1be3d",
+    "last_text_sha256": "3afde2c28469661ace53132f8661a457be2e3381f6d16cdec1d99286bc30b3b4",
+    "last_capture": "captures/tencent__hy3/aial-eval-page-58c01f9d/20261103T135125Z"
   },
   "tencent/hy3::aial-eval-page-bbeaceb4": {
     "versions": [
@@ -22224,11 +22956,23 @@
       {
         "sha256": "f02361a560c39f532fdb1eb8f4ba2c8fe914ced7445236eebc86594f2ac84267",
         "dir": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261102T144927Z"
+      },
+      {
+        "sha256": "da75ea1e652dc336bb92ca7b54a0edac3133a58a6233da51681ddea754f8f3ca",
+        "dir": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261103T134111Z"
+      },
+      {
+        "sha256": "2eb0f001a71ef2f5a69d873de6c809b359ee8a528a2c5e65b4e68c19e7bc08d1",
+        "dir": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261103T134706Z"
+      },
+      {
+        "sha256": "554d584ce8262c9d039f3f0f938ffece5107b35bfc7f9d3d82312ffaeed1be3d",
+        "dir": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261103T135130Z"
       }
     ],
-    "last_sha256": "f02361a560c39f532fdb1eb8f4ba2c8fe914ced7445236eebc86594f2ac84267",
-    "last_text_sha256": "808c2d22fffb781bdaf59df0225ca578b4eaefff14b9d43cae9bd0137dd56a57",
-    "last_capture": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261102T144927Z"
+    "last_sha256": "554d584ce8262c9d039f3f0f938ffece5107b35bfc7f9d3d82312ffaeed1be3d",
+    "last_text_sha256": "3afde2c28469661ace53132f8661a457be2e3381f6d16cdec1d99286bc30b3b4",
+    "last_capture": "captures/tencent__hy3/aial-eval-page-bbeaceb4/20261103T135130Z"
   },
   "bytedance/seed-2-0pro::aial-eval-history-727064e3": {
     "versions": [
@@ -22247,11 +22991,19 @@
       {
         "sha256": "b4a70bc6ae644d717665237ce0c1d46523575d80144f1b7a749198df5b9e71da",
         "dir": "captures/bytedance__seed-2-0pro/aial-eval-history-727064e3/20261102T144714Z"
+      },
+      {
+        "sha256": "7dc3c1f83950501156c9a6b254d986da5d74d02fe5ca6a0990fb558dc1690873",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-history-727064e3/20261103T134130Z"
+      },
+      {
+        "sha256": "98dd6cc1101c001774c1d712c0e0a186fd726acb8186a983bd996432df564cfa",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-history-727064e3/20261103T134815Z"
       }
     ],
-    "last_sha256": "b4a70bc6ae644d717665237ce0c1d46523575d80144f1b7a749198df5b9e71da",
-    "last_text_sha256": "fef46bd86d999a74de4817d2ed5b9c8b64aaf531ff8bd9ed56a1704fcc12e4ec",
-    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-history-727064e3/20261102T144714Z"
+    "last_sha256": "98dd6cc1101c001774c1d712c0e0a186fd726acb8186a983bd996432df564cfa",
+    "last_text_sha256": "d09485a1d8df16e533a4614d000fbfd80a9db43bb8a6020a178ccc259d276950",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-history-727064e3/20261103T134815Z"
   },
   "bytedance/seedream-5-0-pro::aial-eval-history-d0cdde0a": {
     "versions": [
@@ -22293,11 +23045,19 @@
       {
         "sha256": "497ad44e75d215544bcc59aed1d810331650bb31a3e1af2279b55ad2419b0101",
         "dir": "captures/bytedance__seedance2-0/aial-eval-history-c645cbe5/20261102T144725Z"
+      },
+      {
+        "sha256": "501965e2313518d5410e86eafb17f9c06fb879b2e8ad74e1b11d5281aed859fc",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-history-c645cbe5/20261103T134135Z"
+      },
+      {
+        "sha256": "45f3eb3076f1160a0a788fa4738315d431426c028bd8fa652956d599d8d5ba72",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-history-c645cbe5/20261103T134820Z"
       }
     ],
-    "last_sha256": "497ad44e75d215544bcc59aed1d810331650bb31a3e1af2279b55ad2419b0101",
-    "last_text_sha256": "4f3339c730c168ad4b6af42c8b149405bf03e59be52b3a2c2afc6a9e6728c597",
-    "last_capture": "captures/bytedance__seedance2-0/aial-eval-history-c645cbe5/20261102T144725Z"
+    "last_sha256": "45f3eb3076f1160a0a788fa4738315d431426c028bd8fa652956d599d8d5ba72",
+    "last_text_sha256": "eb80622fe1ee0685e177ebffe824bf8d463c3ab2b22b7e576fc81fa3602ad979",
+    "last_capture": "captures/bytedance__seedance2-0/aial-eval-history-c645cbe5/20261103T134820Z"
   },
   "bytedance/seedance2-5::aial-eval-history-21c8eebb": {
     "versions": [
@@ -22316,11 +23076,19 @@
       {
         "sha256": "3692d40b18cf19166b17779c5f2e4804b0df970a3db2d79e0783cefb989513df",
         "dir": "captures/bytedance__seedance2-5/aial-eval-history-21c8eebb/20261102T144730Z"
+      },
+      {
+        "sha256": "953aaa47afa9fde90b8834c702819dd6b5e3b81aa4b6f67e47dd57c6af8fb8c7",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-history-21c8eebb/20261103T134143Z"
+      },
+      {
+        "sha256": "b4efb265164310fe17be845d53a7159f749a58ade3876cc35dd494d245faad7b",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-history-21c8eebb/20261103T134825Z"
       }
     ],
-    "last_sha256": "3692d40b18cf19166b17779c5f2e4804b0df970a3db2d79e0783cefb989513df",
-    "last_text_sha256": "3c621cb874afec8565bfb57ab767f023391cfe3ffdc4b4a4de799346f337195d",
-    "last_capture": "captures/bytedance__seedance2-5/aial-eval-history-21c8eebb/20261102T144730Z"
+    "last_sha256": "b4efb265164310fe17be845d53a7159f749a58ade3876cc35dd494d245faad7b",
+    "last_text_sha256": "38b2f5bf1b0a9f4469e60ac271f4876ffc00d213ea000ca3e0b7340f67862d7d",
+    "last_capture": "captures/bytedance__seedance2-5/aial-eval-history-21c8eebb/20261103T134825Z"
   },
   "midjourney/midjourney::aial-eval-history-2b7b7e43": {
     "versions": [
@@ -22335,11 +23103,15 @@
       {
         "sha256": "438411a4ae1c008bbe666cf1324995e35ad1293266deb0779612b8e1f8fcc35d",
         "dir": "captures/midjourney__midjourney/aial-eval-history-2b7b7e43/20261102T144803Z"
+      },
+      {
+        "sha256": "d9e16c60dac952977739d811ce6090b374428670fc449180ffdd139799a826f2",
+        "dir": "captures/midjourney__midjourney/aial-eval-history-2b7b7e43/20261103T134218Z"
       }
     ],
-    "last_sha256": "438411a4ae1c008bbe666cf1324995e35ad1293266deb0779612b8e1f8fcc35d",
-    "last_text_sha256": "31654b07295c701ffa389376a966a7f6a9adc9bf736327a7e85dc9d2331d6097",
-    "last_capture": "captures/midjourney__midjourney/aial-eval-history-2b7b7e43/20261102T144803Z"
+    "last_sha256": "d9e16c60dac952977739d811ce6090b374428670fc449180ffdd139799a826f2",
+    "last_text_sha256": "d55d4f08f9aed449ccc30bf0d5931521580c76e43193606338f1771c74556cee",
+    "last_capture": "captures/midjourney__midjourney/aial-eval-history-2b7b7e43/20261103T134218Z"
   },
   "bytedance/seed-2-0pro::aial-eval-page-5d9e7362": {
     "versions": [
@@ -22354,11 +23126,19 @@
       {
         "sha256": "1871bccaf36af333b123eedfb80b20a227828db4bf811989be1c3d682108a8ae",
         "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-5d9e7362/20261102T144538Z"
+      },
+      {
+        "sha256": "343f2d28bbd872af62785eff4ba13b9aa828728dd68f0cf1bba1f8101594094c",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-5d9e7362/20261103T134402Z"
+      },
+      {
+        "sha256": "cd458001de24efa19afe66ce951aea079214f8206cfdf1f71ff4340c3c9a22d4",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-5d9e7362/20261103T135006Z"
       }
     ],
-    "last_sha256": "1871bccaf36af333b123eedfb80b20a227828db4bf811989be1c3d682108a8ae",
-    "last_text_sha256": "eff4cece22eca070bfe8b8e8fcec0d887cc9297482b5f405acadde01daf3f982",
-    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-page-5d9e7362/20261102T144538Z"
+    "last_sha256": "cd458001de24efa19afe66ce951aea079214f8206cfdf1f71ff4340c3c9a22d4",
+    "last_text_sha256": "f7334b66fe9132de13ac682e69b3be16d0ee4a70fe6e62a8506efc4272054e53",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-page-5d9e7362/20261103T135006Z"
   },
   "bytedance/seed-2-0pro::aial-eval-page-39321eaf": {
     "versions": [
@@ -22373,11 +23153,19 @@
       {
         "sha256": "1871bccaf36af333b123eedfb80b20a227828db4bf811989be1c3d682108a8ae",
         "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-39321eaf/20261102T144542Z"
+      },
+      {
+        "sha256": "343f2d28bbd872af62785eff4ba13b9aa828728dd68f0cf1bba1f8101594094c",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-39321eaf/20261103T134407Z"
+      },
+      {
+        "sha256": "cd458001de24efa19afe66ce951aea079214f8206cfdf1f71ff4340c3c9a22d4",
+        "dir": "captures/bytedance__seed-2-0pro/aial-eval-page-39321eaf/20261103T135011Z"
       }
     ],
-    "last_sha256": "1871bccaf36af333b123eedfb80b20a227828db4bf811989be1c3d682108a8ae",
-    "last_text_sha256": "eff4cece22eca070bfe8b8e8fcec0d887cc9297482b5f405acadde01daf3f982",
-    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-page-39321eaf/20261102T144542Z"
+    "last_sha256": "cd458001de24efa19afe66ce951aea079214f8206cfdf1f71ff4340c3c9a22d4",
+    "last_text_sha256": "f7334b66fe9132de13ac682e69b3be16d0ee4a70fe6e62a8506efc4272054e53",
+    "last_capture": "captures/bytedance__seed-2-0pro/aial-eval-page-39321eaf/20261103T135011Z"
   },
   "bytedance/seedream-5-0-pro::aial-eval-page-a5538e52": {
     "versions": [
@@ -22430,11 +23218,19 @@
       {
         "sha256": "4c8408f07fa9f63c0c3405ebe5f85dd8e394b4be96a75ab76b74c20befa531c6",
         "dir": "captures/bytedance__seedance2-0/aial-eval-page-ae786e38/20261102T144558Z"
+      },
+      {
+        "sha256": "d5fb903c0061ca79102b5c8d819854cbcb47730ccc94e64a295101b9265f250c",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-page-ae786e38/20261103T134413Z"
+      },
+      {
+        "sha256": "e32bd4549bfd83ff981726dd0307009d778c1e35c41072150c79e67ef9f160e1",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-page-ae786e38/20261103T135017Z"
       }
     ],
-    "last_sha256": "4c8408f07fa9f63c0c3405ebe5f85dd8e394b4be96a75ab76b74c20befa531c6",
-    "last_text_sha256": "aaedbac124a1cfa1ca5149b83c851b4da68cdcf4472a732ce6064875cf6f5c4f",
-    "last_capture": "captures/bytedance__seedance2-0/aial-eval-page-ae786e38/20261102T144558Z"
+    "last_sha256": "e32bd4549bfd83ff981726dd0307009d778c1e35c41072150c79e67ef9f160e1",
+    "last_text_sha256": "b8ad7d16125e234f727ad1cc6460655be5dcee9d55b058c644d21227463a898a",
+    "last_capture": "captures/bytedance__seedance2-0/aial-eval-page-ae786e38/20261103T135017Z"
   },
   "bytedance/seedance2-0::aial-eval-page-87162047": {
     "versions": [
@@ -22449,11 +23245,19 @@
       {
         "sha256": "4c8408f07fa9f63c0c3405ebe5f85dd8e394b4be96a75ab76b74c20befa531c6",
         "dir": "captures/bytedance__seedance2-0/aial-eval-page-87162047/20261102T144601Z"
+      },
+      {
+        "sha256": "d5fb903c0061ca79102b5c8d819854cbcb47730ccc94e64a295101b9265f250c",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-page-87162047/20261103T134418Z"
+      },
+      {
+        "sha256": "e32bd4549bfd83ff981726dd0307009d778c1e35c41072150c79e67ef9f160e1",
+        "dir": "captures/bytedance__seedance2-0/aial-eval-page-87162047/20261103T135022Z"
       }
     ],
-    "last_sha256": "4c8408f07fa9f63c0c3405ebe5f85dd8e394b4be96a75ab76b74c20befa531c6",
-    "last_text_sha256": "aaedbac124a1cfa1ca5149b83c851b4da68cdcf4472a732ce6064875cf6f5c4f",
-    "last_capture": "captures/bytedance__seedance2-0/aial-eval-page-87162047/20261102T144601Z"
+    "last_sha256": "e32bd4549bfd83ff981726dd0307009d778c1e35c41072150c79e67ef9f160e1",
+    "last_text_sha256": "b8ad7d16125e234f727ad1cc6460655be5dcee9d55b058c644d21227463a898a",
+    "last_capture": "captures/bytedance__seedance2-0/aial-eval-page-87162047/20261103T135022Z"
   },
   "bytedance/seedance2-5::aial-eval-page-2012fe67": {
     "versions": [
@@ -22468,11 +23272,19 @@
       {
         "sha256": "6057996d2c88aff6f0955382596735a142b94433e29ff02ad0eda1405c5d4578",
         "dir": "captures/bytedance__seedance2-5/aial-eval-page-2012fe67/20261102T144605Z"
+      },
+      {
+        "sha256": "2a145af77a2a74b6214a5fb2a674e97d59053c0a66a16e972cab686b15faf13e",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-page-2012fe67/20261103T134423Z"
+      },
+      {
+        "sha256": "d3a36f4dbb4184954849095ec1e954e8b7d51ae37b25f6551aa42d53518eea31",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-page-2012fe67/20261103T135027Z"
       }
     ],
-    "last_sha256": "6057996d2c88aff6f0955382596735a142b94433e29ff02ad0eda1405c5d4578",
-    "last_text_sha256": "746517616a4e3e219099a62748ed8cfdf4fc04fe8d5b08b4319b145fe3e8ec10",
-    "last_capture": "captures/bytedance__seedance2-5/aial-eval-page-2012fe67/20261102T144605Z"
+    "last_sha256": "d3a36f4dbb4184954849095ec1e954e8b7d51ae37b25f6551aa42d53518eea31",
+    "last_text_sha256": "6842d25dee82971ae2ed10c56a6d52564f70f4e990e454e3bc4782d5388af832",
+    "last_capture": "captures/bytedance__seedance2-5/aial-eval-page-2012fe67/20261103T135027Z"
   },
   "bytedance/seedance2-5::aial-eval-page-cf2937c0": {
     "versions": [
@@ -22487,11 +23299,19 @@
       {
         "sha256": "6057996d2c88aff6f0955382596735a142b94433e29ff02ad0eda1405c5d4578",
         "dir": "captures/bytedance__seedance2-5/aial-eval-page-cf2937c0/20261102T144610Z"
+      },
+      {
+        "sha256": "2a145af77a2a74b6214a5fb2a674e97d59053c0a66a16e972cab686b15faf13e",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-page-cf2937c0/20261103T134428Z"
+      },
+      {
+        "sha256": "d3a36f4dbb4184954849095ec1e954e8b7d51ae37b25f6551aa42d53518eea31",
+        "dir": "captures/bytedance__seedance2-5/aial-eval-page-cf2937c0/20261103T135032Z"
       }
     ],
-    "last_sha256": "6057996d2c88aff6f0955382596735a142b94433e29ff02ad0eda1405c5d4578",
-    "last_text_sha256": "746517616a4e3e219099a62748ed8cfdf4fc04fe8d5b08b4319b145fe3e8ec10",
-    "last_capture": "captures/bytedance__seedance2-5/aial-eval-page-cf2937c0/20261102T144610Z"
+    "last_sha256": "d3a36f4dbb4184954849095ec1e954e8b7d51ae37b25f6551aa42d53518eea31",
+    "last_text_sha256": "6842d25dee82971ae2ed10c56a6d52564f70f4e990e454e3bc4782d5388af832",
+    "last_capture": "captures/bytedance__seedance2-5/aial-eval-page-cf2937c0/20261103T135032Z"
   },
   "meta/muse-glimmer::aial-eval-page-dd457f94": {
     "versions": [
@@ -22502,11 +23322,15 @@
       {
         "sha256": "e750a19450fad87799129d28de9503dcc6c528f8a592fb3b28f3e23089640c54",
         "dir": "captures/meta__muse-glimmer/aial-eval-page-dd457f94/20261102T144913Z"
+      },
+      {
+        "sha256": "6dd76c986f3d9f2bc37eeb86afea04028dea9ecc3bbe3b7523612480c1cb0daa",
+        "dir": "captures/meta__muse-glimmer/aial-eval-page-dd457f94/20261103T135211Z"
       }
     ],
-    "last_sha256": "e750a19450fad87799129d28de9503dcc6c528f8a592fb3b28f3e23089640c54",
-    "last_text_sha256": "060e0efb88d61ddeaa634444151a075bcaef64e4a654be5e94277d2664b9bce0",
-    "last_capture": "captures/meta__muse-glimmer/aial-eval-page-dd457f94/20261102T144913Z"
+    "last_sha256": "6dd76c986f3d9f2bc37eeb86afea04028dea9ecc3bbe3b7523612480c1cb0daa",
+    "last_text_sha256": "a0782ee77512baa2b605ee2f80945ecedf0bf9caab5b80f6eeade96de9463bcb",
+    "last_capture": "captures/meta__muse-glimmer/aial-eval-page-dd457f94/20261103T135211Z"
   },
   "meta/muse-glimmer::aial-eval-page-51943846": {
     "versions": [
@@ -22517,11 +23341,15 @@
       {
         "sha256": "e750a19450fad87799129d28de9503dcc6c528f8a592fb3b28f3e23089640c54",
         "dir": "captures/meta__muse-glimmer/aial-eval-page-51943846/20261102T144918Z"
+      },
+      {
+        "sha256": "6dd76c986f3d9f2bc37eeb86afea04028dea9ecc3bbe3b7523612480c1cb0daa",
+        "dir": "captures/meta__muse-glimmer/aial-eval-page-51943846/20261103T135216Z"
       }
     ],
-    "last_sha256": "e750a19450fad87799129d28de9503dcc6c528f8a592fb3b28f3e23089640c54",
-    "last_text_sha256": "060e0efb88d61ddeaa634444151a075bcaef64e4a654be5e94277d2664b9bce0",
-    "last_capture": "captures/meta__muse-glimmer/aial-eval-page-51943846/20261102T144918Z"
+    "last_sha256": "6dd76c986f3d9f2bc37eeb86afea04028dea9ecc3bbe3b7523612480c1cb0daa",
+    "last_text_sha256": "a0782ee77512baa2b605ee2f80945ecedf0bf9caab5b80f6eeade96de9463bcb",
+    "last_capture": "captures/meta__muse-glimmer/aial-eval-page-51943846/20261103T135216Z"
   },
   "midjourney/midjourney::aial-eval-page-40f6b64a": {
     "versions": [
@@ -22532,11 +23360,15 @@
       {
         "sha256": "4e873c9e83f3c231afc10fbce385c0af349cf5bf091552827d647452657976ff",
         "dir": "captures/midjourney__midjourney/aial-eval-page-40f6b64a/20261102T144128Z"
+      },
+      {
+        "sha256": "a700174c4c93d8e0c0c1b2a061475d943ccc12036afa9ba0ecb1725e625918c8",
+        "dir": "captures/midjourney__midjourney/aial-eval-page-40f6b64a/20261103T134524Z"
       }
     ],
-    "last_sha256": "4e873c9e83f3c231afc10fbce385c0af349cf5bf091552827d647452657976ff",
-    "last_text_sha256": "02dc013e9c38a0cab4a222c60c9db69e42bed2b3e0f12424a59f426b307877a3",
-    "last_capture": "captures/midjourney__midjourney/aial-eval-page-40f6b64a/20261102T144128Z"
+    "last_sha256": "a700174c4c93d8e0c0c1b2a061475d943ccc12036afa9ba0ecb1725e625918c8",
+    "last_text_sha256": "cda77fa01674ceee2747b2a80bb7e03350bf42cb09bb16924a9c1fc7bb8b8ca0",
+    "last_capture": "captures/midjourney__midjourney/aial-eval-page-40f6b64a/20261103T134524Z"
   },
   "midjourney/midjourney::aial-eval-page-36ac763b": {
     "versions": [
@@ -22547,11 +23379,15 @@
       {
         "sha256": "4e873c9e83f3c231afc10fbce385c0af349cf5bf091552827d647452657976ff",
         "dir": "captures/midjourney__midjourney/aial-eval-page-36ac763b/20261102T144132Z"
+      },
+      {
+        "sha256": "a700174c4c93d8e0c0c1b2a061475d943ccc12036afa9ba0ecb1725e625918c8",
+        "dir": "captures/midjourney__midjourney/aial-eval-page-36ac763b/20261103T134530Z"
       }
     ],
-    "last_sha256": "4e873c9e83f3c231afc10fbce385c0af349cf5bf091552827d647452657976ff",
-    "last_text_sha256": "02dc013e9c38a0cab4a222c60c9db69e42bed2b3e0f12424a59f426b307877a3",
-    "last_capture": "captures/midjourney__midjourney/aial-eval-page-36ac763b/20261102T144132Z"
+    "last_sha256": "a700174c4c93d8e0c0c1b2a061475d943ccc12036afa9ba0ecb1725e625918c8",
+    "last_text_sha256": "cda77fa01674ceee2747b2a80bb7e03350bf42cb09bb16924a9c1fc7bb8b8ca0",
+    "last_capture": "captures/midjourney__midjourney/aial-eval-page-36ac763b/20261103T134530Z"
   },
   "ministry-of-digital-affairs-of-poland/pllum::aial-eval-history-492042ce": {
     "versions": [
@@ -22585,11 +23421,19 @@
       {
         "sha256": "7a63daeea6e0afdc161c88a7822eeb5db0e56c67bd5da2e317f386226080d9f6",
         "dir": "captures/deepseek__deepseek-v4/aial-eval-history-68c2c6e6/20261102T144940Z"
+      },
+      {
+        "sha256": "bd9dff5fc613512fb5fa03b9b18c007e1bea61f31fe49d073a3a650f3d9bb077",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-history-68c2c6e6/20261103T134159Z"
+      },
+      {
+        "sha256": "58705720f2b24330f68437b36afa4c2b262ce3aae22bc96619035366f2bf8435",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-history-68c2c6e6/20261103T134835Z"
       }
     ],
-    "last_sha256": "7a63daeea6e0afdc161c88a7822eeb5db0e56c67bd5da2e317f386226080d9f6",
-    "last_text_sha256": "7b3543180ecb6f5efb9e6f430d567f21974a8e222457624e71c41a6c68bd0d07",
-    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-history-68c2c6e6/20261102T144940Z"
+    "last_sha256": "58705720f2b24330f68437b36afa4c2b262ce3aae22bc96619035366f2bf8435",
+    "last_text_sha256": "349cd249ebd84c3a6b7134c7ffabfacc7f38a671fa72e15740466b9d7c26d915",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-history-68c2c6e6/20261103T134835Z"
   },
   "microsoft/phi4-reasoning-vision15b::aial-eval-history-bc86418b": {
     "versions": [
@@ -22608,11 +23452,19 @@
       {
         "sha256": "bfe7866c69740b8e4d9c27db5d44ebb167a3730ed5ef606cc445b9c2bed0d63d",
         "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-history-bc86418b/20261102T145021Z"
+      },
+      {
+        "sha256": "6c0a36006522afd73d406f5c89f41ff333ace69988bd4ccdb01f476c70914dfe",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-history-bc86418b/20261103T134213Z"
+      },
+      {
+        "sha256": "6ab296b9dabada5981c50883addd424d961be04186a863828eeb9aaa485bd1a8",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-history-bc86418b/20261103T134848Z"
       }
     ],
-    "last_sha256": "bfe7866c69740b8e4d9c27db5d44ebb167a3730ed5ef606cc445b9c2bed0d63d",
-    "last_text_sha256": "48e54fc942c62e0ecd73cb8bcdae28b1e1242e9e252acb8f3ac57079f87d84be",
-    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-history-bc86418b/20261102T145021Z"
+    "last_sha256": "6ab296b9dabada5981c50883addd424d961be04186a863828eeb9aaa485bd1a8",
+    "last_text_sha256": "968fbb6b2efc2825f3cdfdd8c6388a73151add70ee0809a8f1be3cfe72e7e97c",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-history-bc86418b/20261103T134848Z"
   },
   "openllm-france/luciole-base::aial-eval-history-29506391": {
     "versions": [
@@ -22653,11 +23505,15 @@
       {
         "sha256": "6b7d2966e370e4f4f6010e6ba2340991d5f4a49743b6250351d52150947af21f",
         "dir": "captures/pleias__baguettotron/aial-eval-history-82a693ba/20261102T144847Z"
+      },
+      {
+        "sha256": "3366a2627fcec7c11d1067b8347aabfb16df9263a3713d32d7c07249600aba56",
+        "dir": "captures/pleias__baguettotron/aial-eval-history-82a693ba/20261103T133713Z"
       }
     ],
-    "last_sha256": "6b7d2966e370e4f4f6010e6ba2340991d5f4a49743b6250351d52150947af21f",
-    "last_text_sha256": "05500d0266a9da7d7411b16ea708e24687c828120d85cdfd28882dde5e1101da",
-    "last_capture": "captures/pleias__baguettotron/aial-eval-history-82a693ba/20261102T144847Z"
+    "last_sha256": "3366a2627fcec7c11d1067b8347aabfb16df9263a3713d32d7c07249600aba56",
+    "last_text_sha256": "2180a99087a2f45c6a2b3bce17f334c6cdd77705b5e81a80368e619c8a689a66",
+    "last_capture": "captures/pleias__baguettotron/aial-eval-history-82a693ba/20261103T133713Z"
   },
   "pleias/pleias::aial-eval-history-045b7d15": {
     "versions": [
@@ -22709,11 +23565,23 @@
       {
         "sha256": "ee1f1d37c3b8759aef68010ebad4b9a3a7c215f9c6dd2ad9a2e0e594046225bf",
         "dir": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261102T144905Z"
+      },
+      {
+        "sha256": "a419bc4bb6a0813832a987ac88993f72a75bcd7e4c6feabd7ffb1cd000044c7d",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261103T133753Z"
+      },
+      {
+        "sha256": "bf1e258f2651641e6addeb8179e12fe722ab5d0753de4437c4b90c08fb0a743c",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261103T134447Z"
+      },
+      {
+        "sha256": "6915d1126a4ad8be537d21bfbfd5140fb2f50138865c297c538bf6e67c6bcf7c",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261103T135047Z"
       }
     ],
-    "last_sha256": "ee1f1d37c3b8759aef68010ebad4b9a3a7c215f9c6dd2ad9a2e0e594046225bf",
-    "last_text_sha256": "4dec42e69f1ce636e00ad32ac665bcc51fe424e52a88acf6187f401936302b4d",
-    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261102T144905Z"
+    "last_sha256": "6915d1126a4ad8be537d21bfbfd5140fb2f50138865c297c538bf6e67c6bcf7c",
+    "last_text_sha256": "65d2a3dacfa234aae47dc555b35cc90961a65368930430ab27cd600d6a93083e",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-page-a1e7caba/20261103T135047Z"
   },
   "deepseek/deepseek-v4::aial-eval-page-985f5352": {
     "versions": [
@@ -22728,11 +23596,23 @@
       {
         "sha256": "ee1f1d37c3b8759aef68010ebad4b9a3a7c215f9c6dd2ad9a2e0e594046225bf",
         "dir": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261102T144909Z"
+      },
+      {
+        "sha256": "a419bc4bb6a0813832a987ac88993f72a75bcd7e4c6feabd7ffb1cd000044c7d",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261103T133758Z"
+      },
+      {
+        "sha256": "bf1e258f2651641e6addeb8179e12fe722ab5d0753de4437c4b90c08fb0a743c",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261103T134452Z"
+      },
+      {
+        "sha256": "6915d1126a4ad8be537d21bfbfd5140fb2f50138865c297c538bf6e67c6bcf7c",
+        "dir": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261103T135052Z"
       }
     ],
-    "last_sha256": "ee1f1d37c3b8759aef68010ebad4b9a3a7c215f9c6dd2ad9a2e0e594046225bf",
-    "last_text_sha256": "4dec42e69f1ce636e00ad32ac665bcc51fe424e52a88acf6187f401936302b4d",
-    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261102T144909Z"
+    "last_sha256": "6915d1126a4ad8be537d21bfbfd5140fb2f50138865c297c538bf6e67c6bcf7c",
+    "last_text_sha256": "65d2a3dacfa234aae47dc555b35cc90961a65368930430ab27cd600d6a93083e",
+    "last_capture": "captures/deepseek__deepseek-v4/aial-eval-page-985f5352/20261103T135052Z"
   },
   "microsoft/mai-code-1-1-flash::aial-eval-page-22e79a91": {
     "versions": [
@@ -22743,11 +23623,19 @@
       {
         "sha256": "659a93386edbfb1407ba4f25b03bc8200ec0ea0991f7b4982ab5aa62030d7248",
         "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-22e79a91/20261102T144634Z"
+      },
+      {
+        "sha256": "c8611cc5a5e49999268f1f396fc6aaef9b132a67a40933fda71088f4ec0ba10f",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-22e79a91/20261103T133819Z"
+      },
+      {
+        "sha256": "4c03515e85ba9a0e195697a64f962d729e473df7ca1d82100d42dbd0da79039e",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-22e79a91/20261103T134458Z"
       }
     ],
-    "last_sha256": "659a93386edbfb1407ba4f25b03bc8200ec0ea0991f7b4982ab5aa62030d7248",
-    "last_text_sha256": "81177ecd55dc61bd3758456cff2112a9fc2115c0462e583ba394d2a9cfaf2ca5",
-    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-22e79a91/20261102T144634Z"
+    "last_sha256": "4c03515e85ba9a0e195697a64f962d729e473df7ca1d82100d42dbd0da79039e",
+    "last_text_sha256": "cbef23102aa4124d1869e9bdd888edc4b5392c40b31e5f9bb06144445ed55298",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-22e79a91/20261103T134458Z"
   },
   "microsoft/mai-code-1-1-flash::aial-eval-page-2c8e5ab7": {
     "versions": [
@@ -22758,11 +23646,19 @@
       {
         "sha256": "659a93386edbfb1407ba4f25b03bc8200ec0ea0991f7b4982ab5aa62030d7248",
         "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-2c8e5ab7/20261102T144639Z"
+      },
+      {
+        "sha256": "c8611cc5a5e49999268f1f396fc6aaef9b132a67a40933fda71088f4ec0ba10f",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-2c8e5ab7/20261103T133824Z"
+      },
+      {
+        "sha256": "4c03515e85ba9a0e195697a64f962d729e473df7ca1d82100d42dbd0da79039e",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-2c8e5ab7/20261103T134503Z"
       }
     ],
-    "last_sha256": "659a93386edbfb1407ba4f25b03bc8200ec0ea0991f7b4982ab5aa62030d7248",
-    "last_text_sha256": "81177ecd55dc61bd3758456cff2112a9fc2115c0462e583ba394d2a9cfaf2ca5",
-    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-2c8e5ab7/20261102T144639Z"
+    "last_sha256": "4c03515e85ba9a0e195697a64f962d729e473df7ca1d82100d42dbd0da79039e",
+    "last_text_sha256": "cbef23102aa4124d1869e9bdd888edc4b5392c40b31e5f9bb06144445ed55298",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-eval-page-2c8e5ab7/20261103T134503Z"
   },
   "microsoft/phi4-reasoning-vision15b::aial-eval-page-5a22db73": {
     "versions": [
@@ -22773,11 +23669,23 @@
       {
         "sha256": "2a5cde848b2451ec2dbc202c94f4b401d596e4299b11b741463fb63ef6702927",
         "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261102T144658Z"
+      },
+      {
+        "sha256": "655682958ce70ac60fb5770c717398a6409a37e52e4c7cd10b7e99b43822df65",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261103T133850Z"
+      },
+      {
+        "sha256": "e56843c16c0cac2373740aca700d293ce659f80af2bf9d0a7b9c9c58b4119d8b",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261103T134513Z"
+      },
+      {
+        "sha256": "d6acfe575137009e022a4dd916fe890ea8389cda71197ef26b41e0c5c7cab9be",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261103T135107Z"
       }
     ],
-    "last_sha256": "2a5cde848b2451ec2dbc202c94f4b401d596e4299b11b741463fb63ef6702927",
-    "last_text_sha256": "e2e989b92ad99cbe458d72be4cb4e363ad587e298b71fd8af3673292521a3832",
-    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261102T144658Z"
+    "last_sha256": "d6acfe575137009e022a4dd916fe890ea8389cda71197ef26b41e0c5c7cab9be",
+    "last_text_sha256": "7059e8eb8e19bbc09a08c5027ef4d8ce2f8a2152acb7a9c9065e699b64b6e327",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-5a22db73/20261103T135107Z"
   },
   "microsoft/phi4-reasoning-vision15b::aial-eval-page-10e4aef4": {
     "versions": [
@@ -22788,11 +23696,23 @@
       {
         "sha256": "2a5cde848b2451ec2dbc202c94f4b401d596e4299b11b741463fb63ef6702927",
         "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261102T144702Z"
+      },
+      {
+        "sha256": "655682958ce70ac60fb5770c717398a6409a37e52e4c7cd10b7e99b43822df65",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261103T133854Z"
+      },
+      {
+        "sha256": "e56843c16c0cac2373740aca700d293ce659f80af2bf9d0a7b9c9c58b4119d8b",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261103T134519Z"
+      },
+      {
+        "sha256": "d6acfe575137009e022a4dd916fe890ea8389cda71197ef26b41e0c5c7cab9be",
+        "dir": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261103T135111Z"
       }
     ],
-    "last_sha256": "2a5cde848b2451ec2dbc202c94f4b401d596e4299b11b741463fb63ef6702927",
-    "last_text_sha256": "e2e989b92ad99cbe458d72be4cb4e363ad587e298b71fd8af3673292521a3832",
-    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261102T144702Z"
+    "last_sha256": "d6acfe575137009e022a4dd916fe890ea8389cda71197ef26b41e0c5c7cab9be",
+    "last_text_sha256": "7059e8eb8e19bbc09a08c5027ef4d8ce2f8a2152acb7a9c9065e699b64b6e327",
+    "last_capture": "captures/microsoft__phi4-reasoning-vision15b/aial-eval-page-10e4aef4/20261103T135111Z"
   },
   "openllm-france/luciole-base::aial-eval-page-91100aae": {
     "versions": [
@@ -22843,22 +23763,30 @@
       {
         "sha256": "e5c0c7c9b13f9ea78e1a51ca0535b036538c96dd545b81477a50a1f296d9476e",
         "dir": "captures/pleias__baguettotron/aial-eval-page-ae2ce341/20261102T144327Z"
+      },
+      {
+        "sha256": "b3e9499abe09547ec5019a323fec6edbaa9eff815f95e8825319d83b1122dd6a",
+        "dir": "captures/pleias__baguettotron/aial-eval-page-ae2ce341/20261103T134032Z"
       }
     ],
-    "last_sha256": "e5c0c7c9b13f9ea78e1a51ca0535b036538c96dd545b81477a50a1f296d9476e",
-    "last_text_sha256": "970f69582a4fae2e7663cbe44a03eee182d1807c2097385e4f3e5d1ad3dc805d",
-    "last_capture": "captures/pleias__baguettotron/aial-eval-page-ae2ce341/20261102T144327Z"
+    "last_sha256": "b3e9499abe09547ec5019a323fec6edbaa9eff815f95e8825319d83b1122dd6a",
+    "last_text_sha256": "6ca86d4a226bc7d5edebc4459df49bcb4198951a6900a514ca8942f463eb816b",
+    "last_capture": "captures/pleias__baguettotron/aial-eval-page-ae2ce341/20261103T134032Z"
   },
   "pleias/baguettotron::aial-eval-page-9e6bf954": {
     "versions": [
       {
         "sha256": "e5c0c7c9b13f9ea78e1a51ca0535b036538c96dd545b81477a50a1f296d9476e",
         "dir": "captures/pleias__baguettotron/aial-eval-page-9e6bf954/20261102T144331Z"
+      },
+      {
+        "sha256": "b3e9499abe09547ec5019a323fec6edbaa9eff815f95e8825319d83b1122dd6a",
+        "dir": "captures/pleias__baguettotron/aial-eval-page-9e6bf954/20261103T134036Z"
       }
     ],
-    "last_sha256": "e5c0c7c9b13f9ea78e1a51ca0535b036538c96dd545b81477a50a1f296d9476e",
-    "last_text_sha256": "970f69582a4fae2e7663cbe44a03eee182d1807c2097385e4f3e5d1ad3dc805d",
-    "last_capture": "captures/pleias__baguettotron/aial-eval-page-9e6bf954/20261102T144331Z"
+    "last_sha256": "b3e9499abe09547ec5019a323fec6edbaa9eff815f95e8825319d83b1122dd6a",
+    "last_text_sha256": "6ca86d4a226bc7d5edebc4459df49bcb4198951a6900a514ca8942f463eb816b",
+    "last_capture": "captures/pleias__baguettotron/aial-eval-page-9e6bf954/20261103T134036Z"
   },
   "pleias/pleias::aial-eval-page-9d98c076": {
     "versions": [
@@ -22898,10 +23826,100 @@
       {
         "sha256": "63aa1477cff3909e4930f5604c86edf996c89be628764696cfa14994ae595c2a",
         "dir": "captures/bytedance__seedream-5-0-pro/aial-eval-history-072ce38c/20261102T144936Z"
+      },
+      {
+        "sha256": "f8710d51824bd696a93bded732a0cf99ee60715de29282818c820c5dbf290a9d",
+        "dir": "captures/bytedance__seedream-5-0-pro/aial-eval-history-072ce38c/20261103T134150Z"
+      },
+      {
+        "sha256": "3813e80fce549aed96d61b87cb81e4cbbc04e5fa8c5de3590e5360c1d8e9eff0",
+        "dir": "captures/bytedance__seedream-5-0-pro/aial-eval-history-072ce38c/20261103T134830Z"
       }
     ],
-    "last_sha256": "63aa1477cff3909e4930f5604c86edf996c89be628764696cfa14994ae595c2a",
-    "last_text_sha256": "0a6cdf8215dbe41ddff6694c3f738e72d2cab5ec64a592fffcf67f2a90aabbb2",
-    "last_capture": "captures/bytedance__seedream-5-0-pro/aial-eval-history-072ce38c/20261102T144936Z"
+    "last_sha256": "3813e80fce549aed96d61b87cb81e4cbbc04e5fa8c5de3590e5360c1d8e9eff0",
+    "last_text_sha256": "0ea5b77188180884df743a9e72a3a3950081dd1f0f8dc447cf74a8253eddbc22",
+    "last_capture": "captures/bytedance__seedream-5-0-pro/aial-eval-history-072ce38c/20261103T134830Z"
+  },
+  "aial/tracker::aial-eval-page-bdf74d54": {
+    "versions": [
+      {
+        "sha256": "5221307cd37cfe8d4d58914164d3f3719839cb1d5e5b4f28f38131cb3c111e9b",
+        "dir": "captures/aial__tracker/aial-eval-page-bdf74d54/20261103T133743Z"
+      },
+      {
+        "sha256": "d388d47f075f3deb71e91fe886731f8078dce5e617dc81cb6df4dbb65df89cc2",
+        "dir": "captures/aial__tracker/aial-eval-page-bdf74d54/20261103T134433Z"
+      },
+      {
+        "sha256": "d9199b0a1ce694dadebce15f3b545bf5715a2c29d06c56afb5926313a468e3a1",
+        "dir": "captures/aial__tracker/aial-eval-page-bdf74d54/20261103T135037Z"
+      }
+    ],
+    "last_sha256": "d9199b0a1ce694dadebce15f3b545bf5715a2c29d06c56afb5926313a468e3a1",
+    "last_text_sha256": "92beed3a10e109a24b04ab5df90203413216570b138025cc8d5d6c41059ab5ef",
+    "last_capture": "captures/aial__tracker/aial-eval-page-bdf74d54/20261103T135037Z"
+  },
+  "aial/tracker::aial-eval-page-c0f7eae3": {
+    "versions": [
+      {
+        "sha256": "5221307cd37cfe8d4d58914164d3f3719839cb1d5e5b4f28f38131cb3c111e9b",
+        "dir": "captures/aial__tracker/aial-eval-page-c0f7eae3/20261103T133748Z"
+      },
+      {
+        "sha256": "d388d47f075f3deb71e91fe886731f8078dce5e617dc81cb6df4dbb65df89cc2",
+        "dir": "captures/aial__tracker/aial-eval-page-c0f7eae3/20261103T134438Z"
+      },
+      {
+        "sha256": "d9199b0a1ce694dadebce15f3b545bf5715a2c29d06c56afb5926313a468e3a1",
+        "dir": "captures/aial__tracker/aial-eval-page-c0f7eae3/20261103T135042Z"
+      }
+    ],
+    "last_sha256": "d9199b0a1ce694dadebce15f3b545bf5715a2c29d06c56afb5926313a468e3a1",
+    "last_text_sha256": "92beed3a10e109a24b04ab5df90203413216570b138025cc8d5d6c41059ab5ef",
+    "last_capture": "captures/aial__tracker/aial-eval-page-c0f7eae3/20261103T135042Z"
+  },
+  "openai/gpt6::aial-archive-c6c42860": {
+    "versions": [
+      {
+        "sha256": "931d16d07381abe0c1e38962af78f08c937b88a1f310385e77bb42fd3fa088cb",
+        "dir": "captures/openai__gpt6/aial-archive-c6c42860/20261103T134334Z"
+      }
+    ],
+    "last_sha256": "931d16d07381abe0c1e38962af78f08c937b88a1f310385e77bb42fd3fa088cb",
+    "last_text_sha256": "c581f69986b8a584905ee0b3eaccf1656d505deee322e2c17d05dad21adfacab",
+    "last_capture": "captures/openai__gpt6/aial-archive-c6c42860/20261103T134334Z"
+  },
+  "microsoft/mai-code-1-1-flash::aial-archive-0f910d55": {
+    "versions": [
+      {
+        "sha256": "fac4efe11133b9d7f8bada16d820a888e69e47ba6e05a604efd0879a9641c22b",
+        "dir": "captures/microsoft__mai-code-1-1-flash/aial-archive-0f910d55/20261103T134341Z"
+      }
+    ],
+    "last_sha256": "fac4efe11133b9d7f8bada16d820a888e69e47ba6e05a604efd0879a9641c22b",
+    "last_text_sha256": "8424ffc5447e4ffdac24b4b33f74af89b9da9b5e653f5c2b862cb941c3befa76",
+    "last_capture": "captures/microsoft__mai-code-1-1-flash/aial-archive-0f910d55/20261103T134341Z"
+  },
+  "aial/tracker::aial-eval-history-1868079e": {
+    "versions": [
+      {
+        "sha256": "69ad90e625add80760c398140ed98ab4aed7233a41e8be885248a24944b8f4a1",
+        "dir": "captures/aial__tracker/aial-eval-history-1868079e/20261103T135257Z"
+      }
+    ],
+    "last_sha256": "69ad90e625add80760c398140ed98ab4aed7233a41e8be885248a24944b8f4a1",
+    "last_text_sha256": "5a1cf07792d693d1b12556207e3dd86c293d23d81112ff5f89314356dfe98fce",
+    "last_capture": "captures/aial__tracker/aial-eval-history-1868079e/20261103T135257Z"
+  },
+  "aial/tracker::aial-archive-17bf1214": {
+    "versions": [
+      {
+        "sha256": "a157f9b8db80443687b6f03ad41393b48ed67646cbb7fb3a684c22f2e613f8db",
+        "dir": "captures/aial__tracker/aial-archive-17bf1214/20261103T135306Z"
+      }
+    ],
+    "last_sha256": "a157f9b8db80443687b6f03ad41393b48ed67646cbb7fb3a684c22f2e613f8db",
+    "last_text_sha256": "2cb4ff2349b84ce144f3c61e12eae14d2e6e168fd4695065b3fe558d6b08e14d",
+    "last_capture": "captures/aial__tracker/aial-archive-17bf1214/20261103T135306Z"
   }
 }

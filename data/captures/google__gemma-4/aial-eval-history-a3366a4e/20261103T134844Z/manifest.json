@@ -1,0 +1,38 @@
+{
+  "source_id": "google/gemma-4",
+  "provider": "Google",
+  "model": "Gemma 4",
+  "target_kind": "aial-eval-history",
+  "sha256": "fd1a6c42e5ba01a662e5cbfadba7951b73cb9b89b42f5b9680384a1602bc12bc",
+  "size_bytes": 5327,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a84248aa00216fc99bdb084d50bbc905e085dc61a565db9cbc7f02ac77f3f621",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/google-gemma-4.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/google-gemma-4.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"98a44f482e815c90c165334413775100388968b1a52598a21bff67c0cccfc9b2\"",
+    "last_modified": null,
+    "content_length": "1387",
+    "fetched_at": "2026-11-03T13:48:44Z"
+  },
+  "prior_sha256": "07b63246359e29db3455f1b2e10c980e97011dc40d6625409c401ef003205c08",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "1679a6d8cb8e5afeff1119196409ddab955abedb",
+  "git_path": "evals/google-gemma-4.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:48:48Z"
+  }
+}

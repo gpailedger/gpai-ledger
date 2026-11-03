@@ -1,0 +1,39 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "AI Accountability Lab (AIAL)",
+  "model": "aleph-alpha-kolibri",
+  "target_kind": "aial-eval-page",
+  "sha256": "d3f9606603574b51100de4e93f40a58162ec2cf3e24f81e73ace6ca0b67710a6",
+  "size_bytes": 15560,
+  "stored_as": "raw.html",
+  "text_sha256": "73b0a9a44896f524079ab4b2b9c00cd4d0406ead9223d000beaa2c69da5bf3a9",
+  "doc_links_sha256": "7dda94ea73501d9b8f9937fd189af74fdbc53083b9064cc1c60bb2a6eb08d634",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/public/evals/aleph-alpha-kolibri/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/public/evals/aleph-alpha-kolibri/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f0339a388776a9954c5f2b2e384da2d295dbf356364047f8f594c57120d6808f\"",
+    "last_modified": null,
+    "content_length": "3285",
+    "fetched_at": "2026-11-03T13:49:14Z"
+  },
+  "prior_sha256": "cbf0325bfd4d79b23a0d36ea165a22b6bdf0c3fb4647a61c7c710fe77a743e46",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "c7b39d0272bf6c7bc6d301372950883e88681dc8",
+  "git_path": "public/evals/aleph-alpha-kolibri/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:49:17Z"
+  }
+}

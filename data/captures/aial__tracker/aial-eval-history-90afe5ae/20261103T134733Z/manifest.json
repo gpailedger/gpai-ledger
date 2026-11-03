@@ -1,0 +1,45 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Aleph Alpha",
+  "model": "Kolibri-1",
+  "target_kind": "aial-eval-history",
+  "sha256": "8083b9de40f0f63f09c098c298f3df321935c7d5bb2a9488927b9d4ece1a9196",
+  "size_bytes": 4066,
+  "stored_as": "raw.yaml",
+  "text_sha256": "6b2b3eb332aa0e13fc183c4b59a632c3c979375e7ea2893d48fabae9c36167c2",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/aleph-alpha-kolibri.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/aleph-alpha-kolibri.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b0c018fdd703abc965f6a7808772767fac2c48f710acc72cf89e915b9d542a4d\"",
+    "last_modified": null,
+    "content_length": "793",
+    "fetched_at": "2026-11-03T13:47:33Z"
+  },
+  "prior_sha256": "db6d9c67a511500c12239f7faa018447f0451ef1ccce9d655a3fa7b12fc773e1",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "7adb26e4b2909cbafdfec5852c64a48f0d2a73ae",
+  "git_path": "evals/aleph-alpha-kolibri.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:47:36Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "via": "spn2",
+    "requested_at": "2026-11-03T13:55:23Z",
+    "at": "2026-11-03T13:55:23Z"
+  }
+}

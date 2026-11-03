@@ -1,0 +1,39 @@
+{
+  "source_id": "openai/gpt-5-2",
+  "provider": "OpenAI",
+  "model": "GPT-5.2",
+  "target_kind": "aial-eval-page",
+  "sha256": "c99dc4609503f731ae8c29ab277a60e1c393cac222b8404174be9cefdef8a88f",
+  "size_bytes": 20388,
+  "stored_as": "raw.html",
+  "text_sha256": "cf674d410432c2e53326e64116d35fd1c9b7ddb1ff5ea2e2ed833a0fba2793fb",
+  "doc_links_sha256": "60d458b7268e7e2658fb445ace4c6aa951e38d8a400b69033cb3fb4d0cd12874",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/284536384028359cfc86ffbb17e6520c2ad76abf/public/evals/openai-gpt-5.2/version-2026-08-17%2008%3A00%3A00.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/284536384028359cfc86ffbb17e6520c2ad76abf/public/evals/openai-gpt-5.2/version-2026-08-17%2008%3A00%3A00.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"fc78f5613380a8cb97819c45742a084ad9eb737c0507130df61e317d10526f8b\"",
+    "last_modified": null,
+    "content_length": "3628",
+    "fetched_at": "2026-11-03T13:46:24Z"
+  },
+  "prior_sha256": "5f31770177124128ef59cb3fdbfde195f95a64371f82bf386e5bf160ef7e556a",
+  "git_commit": "284536384028359cfc86ffbb17e6520c2ad76abf",
+  "git_commit_date": "2026-10-26T20:41:58Z",
+  "git_blob_sha": "b31bbab5e4bb642f2deaef146ece002faf021f67",
+  "git_path": "public/evals/openai-gpt-5.2/version-2026-08-17 08:00:00.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:46:29Z"
+  }
+}

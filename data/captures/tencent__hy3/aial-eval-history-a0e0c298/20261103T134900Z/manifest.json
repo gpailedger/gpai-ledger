@@ -1,0 +1,38 @@
+{
+  "source_id": "tencent/hy3",
+  "provider": "Tencent",
+  "model": "Hy3",
+  "target_kind": "aial-eval-history",
+  "sha256": "eacd712d41c14709963a211e26935a23688057aafe44c7782bcae07d8663b2eb",
+  "size_bytes": 3824,
+  "stored_as": "raw.yaml",
+  "text_sha256": "bbd8431fd58a2ceac6fdf8274d1881a1c2c63ee891b4f779dc601b5a6d08f121",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/tencent-hy3.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/tencent-hy3.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"22bd3e18685b7c0f72b99fe614992e8ec49772b2ae909e47ccab3fde67888b58\"",
+    "last_modified": null,
+    "content_length": "631",
+    "fetched_at": "2026-11-03T13:49:00Z"
+  },
+  "prior_sha256": "84edba116eb2326dcf8b4d04295e6cf9cab668769fed7e4ef52113d6a65a3a26",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "692b1102af932c0ab8baaa3c3dc31250b92ef888",
+  "git_path": "evals/tencent-hy3.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:49:03Z"
+  }
+}

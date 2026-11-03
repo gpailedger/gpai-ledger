@@ -1,4 +1,4 @@
-# Live-vs-archive drift — 2026-11-02
+# Live-vs-archive drift — 2026-11-03
 
 | Model | Verdict | Similarity / note | Newest vs previous version |
 |---|---|---|---|
@@ -9,7 +9,7 @@
 | Muse Image | DRIFT-CANDIDATE | 0.9934 | changed (3 word(s), 5 moved) |
 | Muse Spark | DRIFT-CANDIDATE | 0.9902 | changed (10 word(s)) |
 | Apertus v1.5 | DRIFT-CANDIDATE | 0.704 | changed (1813 word(s), 20 moved) |
-| SmolLM3-3B | near-identical | 0.9973 — 14 word(s) differ | changed (14 word(s)) |
+| SmolLM3-3B | near-identical | 0.998 — 13 word(s) differ | changed (13 word(s)) |
 | Muse Glimmer | near-identical | 0.9968 — 12 word(s) differ, 2 moved | changed (12 word(s), 2 moved) |
 | Magma-8B | near-identical | 0.9996 — 3 word(s) differ | single version |
 | MAI-DS-R1 | near-identical | 0.9995 — 3 word(s) differ | single version |
@@ -26,14 +26,12 @@
 | Midjourney Image and Video family of models | format-mismatch | live captures are hub/portal HTML only — document URL needed | — |
 | Baguettotron and Monad | format-mismatch | live captures are hub/portal HTML only — document URL needed | — |
 | Pleias 1.0 | format-mismatch | live captures are hub/portal HTML only — document URL needed | — |
-| MAI-Code-1.1-Flash | incomplete | live=1 archive=n | — |
 | MAI-Cyber-1-Flash | incomplete | live=1 archive=n | — |
 | Phi-4 Multimodal Instruct | incomplete | live=1 archive=n | — |
 | Phi 4 Reasoning Vision 15B | incomplete | live=1 archive=n | — |
 | GPT-5.2 | incomplete | live=1 archive=n | — |
 | GPT-5.4 Nano | incomplete | live=1 archive=n | — |
 | GPT Image 2.0 | incomplete | live=1 archive=n | — |
-| GPT-6 Astra | incomplete | live=1 archive=n | — |
 | Luciole Base | incomplete | live=0 archive=y | — |
 | Luciole Instruct 1.1 | incomplete | live=0 archive=y | — |
 | Hy3 | incomplete | live=0 archive=y | — |
@@ -55,6 +53,7 @@
 | DeepSeek-V4 | identical-bytes |  | single version |
 | Gemini 3 Pro | identical-bytes |  | single version |
 | Gemma 4 | identical-bytes |  | single version |
+| MAI-Code-1.1-Flash | identical-bytes |  | single version |
 | MAI-Code-1-Flash | identical-bytes |  | single version |
 | MAI-Image-2 | identical-bytes |  | single version |
 | MAI-Image-2.5 | identical-bytes |  | single version |
@@ -72,6 +71,7 @@
 | Nemotron Nano | identical-bytes |  | single version |
 | GPT-5.5 | identical-bytes |  | single version |
 | GPT-5.6 Luna | identical-bytes |  | single version |
+| GPT-6 Astra | identical-bytes |  | single version |
 | Bielik v3 11B Instruct | identical-bytes |  | single version |
 | Apertus | identical-bytes |  | single version |
 | Inkling Small | identical-bytes |  | single version |

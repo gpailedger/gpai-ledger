@@ -1,0 +1,38 @@
+{
+  "source_id": "google/gemini-3-pro",
+  "provider": "Google",
+  "model": "Gemini 3 Pro",
+  "target_kind": "aial-eval-history",
+  "sha256": "f95b86fadf4c4864fd19ffb4874620c3efe436ed03c87b2751b6536dbcc4ddb4",
+  "size_bytes": 5358,
+  "stored_as": "raw.yaml",
+  "text_sha256": "92df411b86f6e07ef85550f847f83b15d2abe8f76fb87702d57cd8432f56440a",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/google-gemini-3-pro.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/724c551b43c870b409140e8b923e5c4324c30f22/evals/google-gemini-3-pro.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"8e0a2bcf36d9ced28057733d9d87cb29bbdf97767c01a365c76725d230c23213\"",
+    "last_modified": null,
+    "content_length": "1401",
+    "fetched_at": "2026-11-03T13:48:40Z"
+  },
+  "prior_sha256": "7624c38b253fc4e21db6731d5f4503dafe87f31a7697c4827dc3f59d14aca12c",
+  "git_commit": "724c551b43c870b409140e8b923e5c4324c30f22",
+  "git_commit_date": "2026-10-27T18:47:56Z",
+  "git_blob_sha": "1c884352fefdc0302f111a23e7bec29af6dbca0e",
+  "git_path": "evals/google-gemini-3-pro.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-03T13:48:44Z"
+  }
+}
