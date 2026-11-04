@@ -1,0 +1,51 @@
+{
+  "source_id": "aial/tracker",
+  "provider": "Anthropic",
+  "model": "Claude Haiku 5.5",
+  "target_kind": "aial-eval-history",
+  "sha256": "4127e6b6339f1735756546274abdbe0c1aa7c3b77858cbe48c779f37c74a8f0e",
+  "size_bytes": 4087,
+  "stored_as": "raw.yaml",
+  "text_sha256": "3ce1d6fcd5ae612d3fbd58b15226f0ff30e1c42cfc34b64a7a560a24911800f5",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bd18d83857fd56e8bb553c132781b9a6ca2dd4cb/evals/anthropic-claude-haiku-5-5.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bd18d83857fd56e8bb553c132781b9a6ca2dd4cb/evals/anthropic-claude-haiku-5-5.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"e9623c6a238520cb7226816787cfc5b71cfdbeaf94ac0d44be486d30f87c2a74\"",
+    "last_modified": null,
+    "content_length": "848",
+    "fetched_at": "2026-11-04T13:56:18Z"
+  },
+  "prior_sha256": "69ad90e625add80760c398140ed98ab4aed7233a41e8be885248a24944b8f4a1",
+  "git_commit": "bd18d83857fd56e8bb553c132781b9a6ca2dd4cb",
+  "git_commit_date": "2026-11-02T10:10:00Z",
+  "git_blob_sha": "c24b5366abaa23016cd0d6726db25200a8606279",
+  "git_path": "evals/anthropic-claude-haiku-5-5.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-04T13:56:22Z"
+  },
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261104135803/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/bd18d83857fd56e8bb553c132781b9a6ca2dd4cb/evals/anthropic-claude-haiku-5-5.yaml",
+    "snapshot_ts": "20261104135803",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-12266f9eb2bc6f2ede117ba9dca4dd718c01e59b",
+    "via": "spn2",
+    "requested_at": "2026-11-04T13:57:25Z",
+    "at": "2026-11-04T13:58:07Z"
+  }
+}
