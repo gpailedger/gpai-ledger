@@ -1,0 +1,42 @@
+{
+  "source_id": "openai/model-catalog",
+  "provider": "OpenAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "4c244b75c42b04c01527a6a87870075345e83e223d7b5004e386bef2d3e918c0",
+  "size_bytes": 407315,
+  "stored_as": "raw.html",
+  "text_sha256": "d8b773797dd9751b2faf4f26f41df5cd3a983b343663332417c7c179bbc5726d",
+  "doc_links_sha256": "eb1119ab46acbbe2ac257ea98091c12f07d8e27df4b37206292850dc5d301fda",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://developers.openai.com/api/docs/models",
+    "final_url": "https://developers.openai.com/api/docs/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-11-05T13:57:08Z"
+  },
+  "prior_sha256": "05eb68cf05855a591f422368b2cbb0a3ef0ed20aabf83a0823c7e6d72c2f1e37",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-1d7e8a5ad8f31418fe6dcefa60d872f262db8271 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-1d7e8a5ad8f31418fe6dcefa60d872f262db8271",
+    "via": "spn2",
+    "requested_at": "2026-11-05T13:57:09Z",
+    "at": "2026-11-05T13:58:04Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-05T13:58:07Z"
+  }
+}

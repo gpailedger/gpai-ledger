@@ -13639,6 +13639,22 @@
     "to_sha256": "286013b4ae11f3d6d081a6437e0238a8beb441ba2fef435a35ea6d35fd1b7e4a",
     "computed_at": "2026-10-31T11:44:17Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261031T113929Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261105T135815Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261031T113929Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261105T135815Z",
+    "from_sha256": "286013b4ae11f3d6d081a6437e0238a8beb441ba2fef435a35ea6d35fd1b7e4a",
+    "to_sha256": "6731bc1b2e7105dc9221dca8d2525e0a97a90b1f218ecbcfba89fabd02d2e39d",
+    "computed_at": "2026-11-05T14:05:47Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -26142,6 +26158,79 @@
     "from_sha256": "1036f9ee17764e97a36fe3e9a78b99830b5add0678d523f66ed168b9d099c2a5",
     "to_sha256": "0291f92c790e1765a1a7e3762969d593e07e20746d851633bbf6722f0e73595c",
     "computed_at": "2026-11-04T14:28:12Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261104T133350Z>captures/huggingface__smollm3/provider-live-c6d71781/20261105T134600Z": {
+    "verdict": "changed",
+    "similarity": 0.9976,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.03M 1.33k",
+        "new": "20 9.16M 1.33k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.95M 791",
+        "new": "2025 2.96M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 548k 1.07k",
+        "new": "2025 528k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 486k 2.75k",
+        "new": "2024 477k 2.75k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 438k 1.39k",
+        "new": "3.5B 435k 1.39k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 336k 332",
+        "new": "3.02B 331k 332"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54k 87",
+        "new": "380M 53.6k 87"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 50.3k 396",
+        "new": "48.3M 52.2k 396"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 39.3k 187",
+        "new": "8.61M 41.1k 187"
+      },
+      {
+        "op": "replace",
+        "old": "2024 27.5k 217",
+        "new": "2024 27.1k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 11.6k 673",
+        "new": "3 12k 673"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261104T133350Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261105T134600Z",
+    "from_sha256": "0291f92c790e1765a1a7e3762969d593e07e20746d851633bbf6722f0e73595c",
+    "to_sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
+    "computed_at": "2026-11-05T14:05:47Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -42524,6 +42613,39 @@
     "from_sha256": "6eec5dfe6149ee78dea34b4826a9b8c9dc82b90aec76570d22e9d6d66c045956",
     "to_sha256": "05eb68cf05855a591f422368b2cbb0a3ef0ed20aabf83a0823c7e6d72c2f1e37",
     "computed_at": "2026-11-04T14:28:13Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261104T134425Z>captures/openai__model-catalog/watch-page-0e5ba652/20261105T135709Z": {
+    "verdict": "changed",
+    "similarity": 0.9941,
+    "word_delta": 28,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Foundations Prompting Model selection",
+        "new": "Prompting Working with agents Model"
+      },
+      {
+        "op": "insert",
+        "old": "Agent security Prisma AIRS",
+        "new": "security Safety and security in dots Prisma"
+      },
+      {
+        "op": "insert",
+        "old": "editing GPT-Image-2.5 Sunburst",
+        "new": "editing GPT-Image-2.6 Sunburst Image generation and editing for detailed visual work GPT-Image-2.6 Flare Image generation and editing for fast iteration GPT-Image-2.5 Sunburst"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261104T134425Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261105T135709Z",
+    "from_sha256": "05eb68cf05855a591f422368b2cbb0a3ef0ed20aabf83a0823c7e6d72c2f1e37",
+    "to_sha256": "4c244b75c42b04c01527a6a87870075345e83e223d7b5004e386bef2d3e918c0",
+    "computed_at": "2026-11-05T14:05:47Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

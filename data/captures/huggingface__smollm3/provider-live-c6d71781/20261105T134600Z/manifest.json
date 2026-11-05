@@ -1,0 +1,51 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "provider-live",
+  "sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
+  "size_bytes": 202524,
+  "stored_as": "raw.html",
+  "text_sha256": "cfee5ee1a6d09c486f675525bd8f02c0ea911b77bd20b71708611c94968fc4fd",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "final_url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "202524",
+    "fetched_at": "2026-11-05T13:46:00Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 1,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": [
+      "https://hfmlsoc-smollm3-eu-data-transparency.hf.space/?__theme=system"
+    ]
+  },
+  "prior_sha256": "0291f92c790e1765a1a7e3762969d593e07e20746d851633bbf6722f0e73595c",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e4e3b9960914ff45f84fcf9fa29b9b3f84f8be35 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-e4e3b9960914ff45f84fcf9fa29b9b3f84f8be35",
+    "via": "spn2",
+    "requested_at": "2026-11-05T13:46:00Z",
+    "at": "2026-11-05T13:47:01Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [
+      "https://a.pool.opentimestamps.org: HTTPError('502 Server Error: Bad Gateway for url: https://a.pool.opentimestamps.org/digest')"
+    ],
+    "at": "2026-11-05T13:47:04Z"
+  }
+}
