@@ -1,0 +1,50 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "provider-live",
+  "sha256": "36d1a6bf2adb5c8122c40951ad0755d893d183f405e6577931feed2070b6cd54",
+  "size_bytes": 202528,
+  "stored_as": "raw.html",
+  "text_sha256": "6f11b0f7c9d086c1850d6ed73df719b2b4d7705ec955c52769dde0ca897eea6a",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "final_url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "202528",
+    "fetched_at": "2026-11-06T13:27:09Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 1,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": [
+      "https://hfmlsoc-smollm3-eu-data-transparency.hf.space/?__theme=system"
+    ]
+  },
+  "prior_sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
+  "wayback": {
+    "ok": false,
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-e4e3b9960914ff45f84fcf9fa29b9b3f84f8be35 (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "job_id": "spn2-e4e3b9960914ff45f84fcf9fa29b9b3f84f8be35",
+    "via": "spn2",
+    "requested_at": "2026-11-06T13:27:09Z",
+    "at": "2026-11-06T13:28:16Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-06T13:28:21Z"
+  }
+}

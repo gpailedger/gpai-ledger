@@ -26232,6 +26232,79 @@
     "to_sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
     "computed_at": "2026-11-05T14:05:47Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261105T134600Z>captures/huggingface__smollm3/provider-live-c6d71781/20261106T132709Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 15,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.16M 1.33k",
+        "new": "20 9.23M 1.33k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.96M 791",
+        "new": "2025 2.95M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 528k 1.07k",
+        "new": "2025 514k 1.07k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 477k 2.75k",
+        "new": "2024 469k 2.75k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 435k 1.39k",
+        "new": "3.5B 434k 1.39k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 331k 332",
+        "new": "3.02B 325k 332"
+      },
+      {
+        "op": "replace",
+        "old": "380M 53.6k 87 HuggingFaceTB/finemath",
+        "new": "380M 53.3k 88 HuggingFaceTB/finemath"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 52.2k 396 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 52.1k 397 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 41.1k 187 allenai/peS2o",
+        "new": "8.61M 43.1k 188 allenai/peS2o"
+      },
+      {
+        "op": "replace",
+        "old": "2024 27.1k 217",
+        "new": "2024 27.2k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 12k 673 Fetching",
+        "new": "3 12.4k 674 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261105T134600Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261106T132709Z",
+    "from_sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
+    "to_sha256": "36d1a6bf2adb5c8122c40951ad0755d893d183f405e6577931feed2070b6cd54",
+    "computed_at": "2026-11-06T13:46:15Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -42647,6 +42720,54 @@
     "to_sha256": "4c244b75c42b04c01527a6a87870075345e83e223d7b5004e386bef2d3e918c0",
     "computed_at": "2026-11-05T14:05:47Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261105T135709Z>captures/openai__model-catalog/watch-page-0e5ba652/20261106T133859Z": {
+    "verdict": "changed",
+    "similarity": 0.9911,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "optimization Reinforcement fine-tuning RFT use cases Best",
+        "new": "preference optimization Best practices"
+      },
+      {
+        "op": "delete",
+        "old": "Server Model catalogs GitHub",
+        "new": "App Server GitHub Action"
+      },
+      {
+        "op": "replace",
+        "old": "accounts Deployment and configuration Windows",
+        "new": "accounts Configuration Windows"
+      },
+      {
+        "op": "replace",
+        "old": "availability Amazon Bedrock Bedrock GovCloud configuration Connect",
+        "new": "availability Advanced deployment Amazon Bedrock GovCloud deployment Connect to"
+      },
+      {
+        "op": "delete",
+        "old": "gateway Gateway compatibility Bedrock through LiteLLM ChatGPT",
+        "new": "a gateway ChatGPT EDU"
+      },
+      {
+        "op": "replace",
+        "old": "defenders GPT-5.6 Cyber Our most advanced cybersecurity model",
+        "new": "defenders GPT-6-Cyber Investigate a vulnerability, reproduce it in an authorized test environment, or verify a fix. GPT-5.6 Cyber Cybersecurity model"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261105T135709Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261106T133859Z",
+    "from_sha256": "4c244b75c42b04c01527a6a87870075345e83e223d7b5004e386bef2d3e918c0",
+    "to_sha256": "adbed20b4b79a0df320f00f84832f3527054d6c4fee87bb8b86d69e92e31cd94",
+    "computed_at": "2026-11-06T13:46:15Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -46300,6 +46421,29 @@
     "to_sha256": "ff7b6598a1078d5c51e4f80168de63f963d0622839396ea36af9ddc5d90b762a",
     "computed_at": "2026-11-02T14:54:26Z",
     "changes_withheld": true
+  },
+  "thinking-machines/inkling-small::provider-live-2deffce3::captures/thinking-machines__inkling-small/provider-live-2deffce3/20260811T103840Z>captures/thinking-machines__inkling-small/provider-live-2deffce3/20261106T133743Z": {
+    "verdict": "method-changed",
+    "similarity": 0.9975,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Inkling Inkling-Small Models Inkling Inkling-Small Interaction",
+        "new": "Inkling-Small Inkling 2 Small Models Inkling Inkling 2 Small"
+      }
+    ],
+    "source": "thinking-machines/inkling-small",
+    "target": "provider-live-2deffce3",
+    "from_dir": "captures/thinking-machines__inkling-small/provider-live-2deffce3/20260811T103840Z",
+    "to_dir": "captures/thinking-machines__inkling-small/provider-live-2deffce3/20261106T133743Z",
+    "from_sha256": "a2bfa962f8ed746dce7080d9fca841dcb24ac7ad2b10cb6a8c5ac30459355770",
+    "to_sha256": "21a5f210d9b94b1b6d418095f36ea3a99ce7a2bc027c173144a77f12ae26eaec",
+    "computed_at": "2026-11-06T13:46:15Z"
   },
   "thinking-machines/inkling::aial-eval-b530c012::captures/thinking-machines__inkling/aial-eval-b530c012/20260916T075843Z>captures/thinking-machines__inkling/aial-eval-b530c012/20261102T142451Z": {
     "verdict": "changed",
