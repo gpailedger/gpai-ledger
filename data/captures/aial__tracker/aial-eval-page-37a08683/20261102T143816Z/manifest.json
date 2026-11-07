@@ -38,10 +38,10 @@
   },
   "wayback": {
     "ok": false,
-    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
     "via": "spn2",
-    "requested_at": "2026-11-06T13:43:24Z",
-    "at": "2026-11-06T13:45:25Z"
+    "requested_at": "2026-11-07T12:28:14Z",
+    "at": "2026-11-07T12:28:29Z"
   },
   "wayback_attempts": [
     {
@@ -64,6 +64,13 @@
       "via": "spn2",
       "requested_at": "2026-11-05T14:03:36Z",
       "at": "2026-11-05T14:03:36Z"
+    },
+    {
+      "ok": false,
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+      "via": "spn2",
+      "requested_at": "2026-11-06T13:43:24Z",
+      "at": "2026-11-06T13:45:25Z"
     }
   ]
 }

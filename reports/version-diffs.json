@@ -8232,6 +8232,29 @@
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:16Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261012T133545Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261107T115745Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261012T133545Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261107T115745Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:35Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-66991146::captures/anthropic__claude-mythos-preview/aial-eval-66991146/20260916T072605Z>captures/anthropic__claude-mythos-preview/aial-eval-66991146/20261102T135410Z": {
     "verdict": "changed",
     "similarity": 0.9982,
@@ -9034,6 +9057,29 @@
     "from_sha256": "611908435061a2d313f7c221da295e9cc60c5851b06fa0ade299804965266602",
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:16Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261012T133616Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261107T115912Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261012T133616Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261107T115912Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:35Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -10000,6 +10046,29 @@
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:16Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261012T133650Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261107T115948Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261012T133650Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261107T115948Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:36Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-ccf24ea3::captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20260916T072714Z>captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20261102T135449Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -10857,6 +10926,29 @@
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:16Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261012T133724Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261107T120019Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261012T133724Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261107T120019Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:36Z"
+  },
   "anthropic/claude-opus-5::aial-eval-5dbb196d::captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20260916T072732Z>captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20261102T135508Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -11713,6 +11805,29 @@
     "from_sha256": "611908435061a2d313f7c221da295e9cc60c5851b06fa0ade299804965266602",
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:17Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20261012T133801Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20261107T120059Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261012T133801Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261107T120059Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:36Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -12642,6 +12757,29 @@
     "from_sha256": "611908435061a2d313f7c221da295e9cc60c5851b06fa0ade299804965266602",
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:17Z"
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261012T134047Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261107T120157Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261012T134047Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261107T120157Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:36Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -13655,6 +13793,22 @@
     "to_sha256": "6731bc1b2e7105dc9221dca8d2525e0a97a90b1f218ecbcfba89fabd02d2e39d",
     "computed_at": "2026-11-05T14:05:47Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261105T135815Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261107T122456Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261105T135815Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261107T122456Z",
+    "from_sha256": "6731bc1b2e7105dc9221dca8d2525e0a97a90b1f218ecbcfba89fabd02d2e39d",
+    "to_sha256": "d87c530341411cac341a0b485b24450ef3ddbe867cceb5002c9cc71bc88a539c",
+    "computed_at": "2026-11-07T12:31:36Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -14122,6 +14276,29 @@
     "from_sha256": "611908435061a2d313f7c221da295e9cc60c5851b06fa0ade299804965266602",
     "to_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
     "computed_at": "2026-10-12T14:14:32Z"
+  },
+  "anthropic/mythos5-1::provider-live-e8cea877::captures/anthropic__mythos5-1/provider-live-e8cea877/20261012T134311Z>captures/anthropic__mythos5-1/provider-live-e8cea877/20261107T120233Z": {
+    "verdict": "changed",
+    "similarity": 0.9958,
+    "word_delta": 17,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Implementation Guide NIST Anthropic",
+        "new": "Guide Anthropic Business Associate Addendum Copy link for Anthropic Business Associate Addendum Request access Anthropic Business Associate Addendum NIST"
+      }
+    ],
+    "source": "anthropic/mythos5-1",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261012T134311Z",
+    "to_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261107T120233Z",
+    "from_sha256": "0faf3ab6c6c0e6f8716584ce4255c7d58847fe590b5793be2b8d559d66f94962",
+    "to_sha256": "0750454124ec862b87ab83e2644bc850cfd0933d424c2ad2251287ddccc22473",
+    "computed_at": "2026-11-07T12:31:37Z"
   },
   "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
     "verdict": "changed",
@@ -26304,6 +26481,74 @@
     "from_sha256": "b6c1f5bd724da68b73912413d8b6b286fab0befe0951236670eb85fac2a1327e",
     "to_sha256": "36d1a6bf2adb5c8122c40951ad0755d893d183f405e6577931feed2070b6cd54",
     "computed_at": "2026-11-06T13:46:15Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261106T132709Z>captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z": {
+    "verdict": "changed",
+    "similarity": 0.998,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.23M 1.33k",
+        "new": "20 9.31M 1.33k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.95M 791",
+        "new": "2025 2.98M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 514k 1.07k meta-llama/Llama-3.2-1B",
+        "new": "10, 2025 482k 1.08k meta-llama/Llama-3.2-1B"
+      },
+      {
+        "op": "replace",
+        "old": "2024 469k 2.75k",
+        "new": "2024 471k 2.75k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 434k 1.39k",
+        "new": "3.5B 440k 1.39k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 325k 332",
+        "new": "3.02B 327k 332"
+      },
+      {
+        "op": "replace",
+        "old": "380M 53.3k 88",
+        "new": "380M 55.4k 88"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 52.1k 397",
+        "new": "48.3M 52.8k 397"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 43.1k 188",
+        "new": "8.61M 44.4k 188"
+      },
+      {
+        "op": "replace",
+        "old": "3 12.4k 674",
+        "new": "3 12.8k 674"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261106T132709Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z",
+    "from_sha256": "36d1a6bf2adb5c8122c40951ad0755d893d183f405e6577931feed2070b6cd54",
+    "to_sha256": "8c903cde5bbe0ae1404fad7062fcee4cce4f3a9ed7310fb537bf19fd8c044b2f",
+    "computed_at": "2026-11-07T12:31:36Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -42767,6 +43012,34 @@
     "from_sha256": "4c244b75c42b04c01527a6a87870075345e83e223d7b5004e386bef2d3e918c0",
     "to_sha256": "adbed20b4b79a0df320f00f84832f3527054d6c4fee87bb8b86d69e92e31cd94",
     "computed_at": "2026-11-06T13:46:15Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261106T133859Z>captures/openai__model-catalog/watch-page-0e5ba652/20261107T122424Z": {
+    "verdict": "changed",
+    "similarity": 0.9982,
+    "word_delta": 4,
+    "moved_words": 2,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Amazon Bedrock",
+        "new": "Amazon Bedrock"
+      },
+      {
+        "op": "insert",
+        "old": "OpenAI CLI Resources Changelog",
+        "new": "CLI Cloud providers Google Cloud Resources"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261106T133859Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261107T122424Z",
+    "from_sha256": "adbed20b4b79a0df320f00f84832f3527054d6c4fee87bb8b86d69e92e31cd94",
+    "to_sha256": "66d5e801a780a97251450bd5cd63aa117648552eb812452860dd0dfea3662d1f",
+    "computed_at": "2026-11-07T12:31:36Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
