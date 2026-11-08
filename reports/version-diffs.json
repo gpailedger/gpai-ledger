@@ -26550,6 +26550,79 @@
     "to_sha256": "8c903cde5bbe0ae1404fad7062fcee4cce4f3a9ed7310fb537bf19fd8c044b2f",
     "computed_at": "2026-11-07T12:31:36Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z>captures/huggingface__smollm3/provider-live-c6d71781/20261108T122438Z": {
+    "verdict": "changed",
+    "similarity": 0.9971,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 9.31M 1.33k Qwen/Qwen3-32B",
+        "new": "20 9.23M 1.34k Qwen/Qwen3-32B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.98M 791",
+        "new": "2025 2.97M 791"
+      },
+      {
+        "op": "replace",
+        "old": "2025 482k 1.08k",
+        "new": "2025 433k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "2024 471k 2.75k Linked",
+        "new": "2024 432k 2.76k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 440k 1.39k",
+        "new": "3.5B 438k 1.39k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 327k 332",
+        "new": "3.02B 334k 332"
+      },
+      {
+        "op": "replace",
+        "old": "380M 55.4k 88",
+        "new": "380M 54.7k 88"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 52.8k 397",
+        "new": "48.3M 53.4k 397"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 44.4k 188",
+        "new": "8.61M 43.8k 188"
+      },
+      {
+        "op": "replace",
+        "old": "2024 27.2k 217",
+        "new": "2024 26.9k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 12.8k 674",
+        "new": "3 13.1k 674"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261108T122438Z",
+    "from_sha256": "8c903cde5bbe0ae1404fad7062fcee4cce4f3a9ed7310fb537bf19fd8c044b2f",
+    "to_sha256": "c547c2d10cb030927cb8b39ee79cfe17950634f3feb3cb401ac014ac680ef924",
+    "computed_at": "2026-11-08T12:40:09Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -43040,6 +43113,34 @@
     "from_sha256": "adbed20b4b79a0df320f00f84832f3527054d6c4fee87bb8b86d69e92e31cd94",
     "to_sha256": "66d5e801a780a97251450bd5cd63aa117648552eb812452860dd0dfea3662d1f",
     "computed_at": "2026-11-07T12:31:36Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261107T122424Z>captures/openai__model-catalog/watch-page-0e5ba652/20261108T123517Z": {
+    "verdict": "changed",
+    "similarity": 0.9991,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Reasoning models Reasoning best",
+        "new": "models Preserved reasoning Reasoning"
+      },
+      {
+        "op": "insert",
+        "old": "Reasoning models Reasoning best",
+        "new": "models Preserved reasoning Reasoning"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261107T122424Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261108T123517Z",
+    "from_sha256": "66d5e801a780a97251450bd5cd63aa117648552eb812452860dd0dfea3662d1f",
+    "to_sha256": "dae4d7043c8ba9bdff3be1800d5e8f7327313614c2ec53f889aec8c2aa2b369b",
+    "computed_at": "2026-11-08T12:40:09Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

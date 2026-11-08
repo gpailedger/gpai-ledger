@@ -755,125 +755,135 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "near-identical",
-    "similarity": 0.998,
+    "similarity": 0.9971,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.998,
-      "word_delta": 11,
+      "similarity": 0.9971,
+      "word_delta": 13,
       "moved_words": 0,
       "changes": [
         {
           "op": "replace",
-          "old": "20 9.23M 1.33k",
-          "new": "20 9.31M 1.33k"
+          "old": "20 9.31M 1.33k Qwen/Qwen3-32B",
+          "new": "20 9.23M 1.34k Qwen/Qwen3-32B"
         },
         {
           "op": "replace",
-          "old": "2025 2.95M 791",
-          "new": "2025 2.98M 791"
+          "old": "2025 2.98M 791",
+          "new": "2025 2.97M 791"
         },
         {
           "op": "replace",
-          "old": "2025 514k 1.07k meta-llama/Llama-3.2-1B",
-          "new": "10, 2025 482k 1.08k meta-llama/Llama-3.2-1B"
+          "old": "2025 482k 1.08k",
+          "new": "2025 433k 1.08k"
         },
         {
           "op": "replace",
-          "old": "2024 469k 2.75k",
-          "new": "2024 471k 2.75k"
+          "old": "2024 471k 2.75k Linked",
+          "new": "2024 432k 2.76k Linked"
         },
         {
           "op": "replace",
-          "old": "3.5B 434k 1.39k",
-          "new": "3.5B 440k 1.39k"
+          "old": "3.5B 440k 1.39k",
+          "new": "3.5B 438k 1.39k"
         },
         {
           "op": "replace",
-          "old": "3.02B 325k 332",
-          "new": "3.02B 327k 332"
+          "old": "3.02B 327k 332",
+          "new": "3.02B 334k 332"
         },
         {
           "op": "replace",
-          "old": "380M 53.3k 88",
-          "new": "380M 55.4k 88"
+          "old": "380M 55.4k 88",
+          "new": "380M 54.7k 88"
         },
         {
           "op": "replace",
-          "old": "48.3M 52.1k 397",
-          "new": "48.3M 52.8k 397"
+          "old": "48.3M 52.8k 397",
+          "new": "48.3M 53.4k 397"
         },
         {
           "op": "replace",
-          "old": "8.61M 43.1k 188",
-          "new": "8.61M 44.4k 188"
+          "old": "8.61M 44.4k 188",
+          "new": "8.61M 43.8k 188"
         },
         {
           "op": "replace",
-          "old": "3 12.4k 674",
-          "new": "3 12.8k 674"
+          "old": "2024 27.2k 217",
+          "new": "2024 26.9k 217"
+        },
+        {
+          "op": "replace",
+          "old": "3 12.8k 674",
+          "new": "3 13.1k 674"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261106T132709Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261107T121330Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261108T122438Z"
     },
-    "word_delta": 11,
+    "word_delta": 13,
     "moved_words": 0,
     "changes": [
       {
         "op": "replace",
-        "old": "20 9.23M 1.33k",
-        "new": "20 9.31M 1.33k"
+        "old": "20 9.31M 1.33k Qwen/Qwen3-32B",
+        "new": "20 9.23M 1.34k Qwen/Qwen3-32B"
       },
       {
         "op": "replace",
-        "old": "2025 2.95M 791",
-        "new": "2025 2.98M 791"
+        "old": "2025 2.98M 791",
+        "new": "2025 2.97M 791"
       },
       {
         "op": "replace",
-        "old": "2025 514k 1.07k meta-llama/Llama-3.2-1B",
-        "new": "10, 2025 482k 1.08k meta-llama/Llama-3.2-1B"
+        "old": "2025 482k 1.08k",
+        "new": "2025 433k 1.08k"
       },
       {
         "op": "replace",
-        "old": "2024 469k 2.75k",
-        "new": "2024 471k 2.75k"
+        "old": "2024 471k 2.75k Linked",
+        "new": "2024 432k 2.76k Linked"
       },
       {
         "op": "replace",
-        "old": "3.5B 434k 1.39k",
-        "new": "3.5B 440k 1.39k"
+        "old": "3.5B 440k 1.39k",
+        "new": "3.5B 438k 1.39k"
       },
       {
         "op": "replace",
-        "old": "3.02B 325k 332",
-        "new": "3.02B 327k 332"
+        "old": "3.02B 327k 332",
+        "new": "3.02B 334k 332"
       },
       {
         "op": "replace",
-        "old": "380M 53.3k 88",
-        "new": "380M 55.4k 88"
+        "old": "380M 55.4k 88",
+        "new": "380M 54.7k 88"
       },
       {
         "op": "replace",
-        "old": "48.3M 52.1k 397",
-        "new": "48.3M 52.8k 397"
+        "old": "48.3M 52.8k 397",
+        "new": "48.3M 53.4k 397"
       },
       {
         "op": "replace",
-        "old": "8.61M 43.1k 188",
-        "new": "8.61M 44.4k 188"
+        "old": "8.61M 44.4k 188",
+        "new": "8.61M 43.8k 188"
       },
       {
         "op": "replace",
-        "old": "3 12.4k 674",
-        "new": "3 12.8k 674"
+        "old": "2024 27.2k 217",
+        "new": "2024 26.9k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 12.8k 674",
+        "new": "3 13.1k 674"
       }
     ]
   },
