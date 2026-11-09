@@ -26623,6 +26623,79 @@
     "to_sha256": "c547c2d10cb030927cb8b39ee79cfe17950634f3feb3cb401ac014ac680ef924",
     "computed_at": "2026-11-08T12:40:09Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261108T122438Z>captures/huggingface__smollm3/provider-live-c6d71781/20261109T143820Z": {
+    "verdict": "changed",
+    "similarity": 0.9967,
+    "word_delta": 19,
+    "moved_words": 8,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "meta-llama/Llama-3.2-1B Text Generation 1B Updated Oct 24, 2024",
+        "new": "meta-llama/Llama-3.2-1B Text Generation 1B Updated Oct 24, 2024"
+      },
+      {
+        "op": "replace",
+        "old": "20 9.23M 1.34k",
+        "new": "20 9.13M 1.34k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 2.97M 791 HuggingFaceTB/SmolLM3-3B",
+        "new": "2025 2.98M 792 477k 2.76k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 433k 1.08k 432k 2.76k Linked",
+        "new": "10, 2025 386k 1.08k Linked"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 438k 1.39k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 435k 1.4k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 334k 332 epfml/FineWeb2-HQ",
+        "new": "3.02B 335k 333 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54.7k 88",
+        "new": "380M 54.1k 88"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 53.4k 397 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 53.2k 398 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 43.8k 188",
+        "new": "8.61M 43.7k 188"
+      },
+      {
+        "op": "replace",
+        "old": "2024 26.9k 217",
+        "new": "2024 26.6k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 13.1k 674",
+        "new": "3 13.5k 674"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261108T122438Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261109T143820Z",
+    "from_sha256": "c547c2d10cb030927cb8b39ee79cfe17950634f3feb3cb401ac014ac680ef924",
+    "to_sha256": "596ce8c03c6c72b110a09499ab265a657b4df1777a9bf1b71286dd9b1d7c935c",
+    "computed_at": "2026-11-09T15:01:51Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -43141,6 +43214,39 @@
     "from_sha256": "66d5e801a780a97251450bd5cd63aa117648552eb812452860dd0dfea3662d1f",
     "to_sha256": "dae4d7043c8ba9bdff3be1800d5e8f7327313614c2ec53f889aec8c2aa2b369b",
     "computed_at": "2026-11-08T12:40:09Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261108T123517Z>captures/openai__model-catalog/watch-page-0e5ba652/20261109T145034Z": {
+    "verdict": "changed",
+    "similarity": 0.9982,
+    "word_delta": 8,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "models Preserved reasoning Reasoning",
+        "new": "Reasoning models Reasoning best"
+      },
+      {
+        "op": "insert",
+        "old": "and quality Fast mode",
+        "new": "quality Keep the prefix unchanged Fast"
+      },
+      {
+        "op": "delete",
+        "old": "models Preserved reasoning Reasoning",
+        "new": "Reasoning models Reasoning best"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261108T123517Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261109T145034Z",
+    "from_sha256": "dae4d7043c8ba9bdff3be1800d5e8f7327313614c2ec53f889aec8c2aa2b369b",
+    "to_sha256": "1aef3204d2483a5bc9eeac691d583d971e4b3df6db7628492a73803e807e7c84",
+    "computed_at": "2026-11-09T15:01:52Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
