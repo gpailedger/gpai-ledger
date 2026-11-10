@@ -1,0 +1,51 @@
+{
+  "source_id": "meta/muse-ember",
+  "provider": "Meta",
+  "model": "Muse Ember",
+  "target_kind": "provider-live",
+  "sha256": "70b682e1ddc8b00d2f0d7838ff60bc3d7300f13b7608c7d8c2d1efa24626f986",
+  "size_bytes": 214284,
+  "stored_as": "raw.pdf",
+  "text_sha256": "d33e524df7984b6fa4b0851d9d4b906580015e726874c7a3cdd59b2c0e98d7fa",
+  "extraction_notes": [
+    "fetched via signed CDN URL embedded in transparency hub JSON; stable key = hub edition label (CDN path rotates per re-issue)",
+    {
+      "stable_base": "/m1/v/t0.84174-6/AQPyAvSKDxyhjCBndn6qAzGkyy_YnVrtcBBuXws2Ey6nXL5frxoIPwSsmYk1S3lL8G4mmyGtTeaPznwELHQIYqwc-OKdfK2ICMpIt8Od4BeIVgivdFuGAt12_uNy68ATTTF9_dWRLeWmaHb9fk3yzBZ3S3krBkqh-KoDSfbH0A",
+      "hub_period": "2026 - Muse Ember",
+      "edition_key": "meta-hub:2026 - Muse Ember"
+    }
+  ],
+  "http": {
+    "url": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t0.84174-6/AQPyAvSKDxyhjCBndn6qAzGkyy_YnVrtcBBuXws2Ey6nXL5frxoIPwSsmYk1S3lL8G4mmyGtTeaPznwELHQIYqwc-OKdfK2ICMpIt8Od4BeIVgivdFuGAt12_uNy68ATTTF9_dWRLeWmaHb9fk3yzBZ3S3krBkqh-KoDSfbH0A?_nc_gid=FHKH81y2JIv0C0l2Q_4nbg&_nc_oc=AdpfrZ-UlKugN4SDKCm44cQ3PEmFZDEoFhKVqNZ7kizL6viWp5_vPryo6pZSV-IcZL0&ccb=10-5&oh=00_AQSkkGQ1_0ij-nT4844P6lAWmQLcWDha6gSdDN2-iqn8bg&oe=6AF5143A&_nc_sid=68f2c3",
+    "final_url": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t0.84174-6/AQPyAvSKDxyhjCBndn6qAzGkyy_YnVrtcBBuXws2Ey6nXL5frxoIPwSsmYk1S3lL8G4mmyGtTeaPznwELHQIYqwc-OKdfK2ICMpIt8Od4BeIVgivdFuGAt12_uNy68ATTTF9_dWRLeWmaHb9fk3yzBZ3S3krBkqh-KoDSfbH0A?_nc_gid=FHKH81y2JIv0C0l2Q_4nbg&_nc_oc=AdpfrZ-UlKugN4SDKCm44cQ3PEmFZDEoFhKVqNZ7kizL6viWp5_vPryo6pZSV-IcZL0&ccb=10-5&oh=00_AQSkkGQ1_0ij-nT4844P6lAWmQLcWDha6gSdDN2-iqn8bg&oe=6AF5143A&_nc_sid=68f2c3",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "etag": "6636980856421074697",
+    "last_modified": null,
+    "content_length": "214284",
+    "fetched_at": "2026-11-10T14:21:09Z"
+  },
+  "prior_sha256": null,
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 302,
+    "snapshot": "https://web.archive.org/web/20261110142110/https://scontent-iad6-1.xx.fbcdn.net/m1/v/t0.84174-6/AQPyAvSKDxyhjCBndn6qAzGkyy_YnVrtcBBuXws2Ey6nXL5frxoIPwSsmYk1S3lL8G4mmyGtTeaPznwELHQIYqwc-OKdfK2ICMpIt8Od4BeIVgivdFuGAt12_uNy68ATTTF9_dWRLeWmaHb9fk3yzBZ3S3krBkqh-KoDSfbH0A?_nc_gid=FHKH81y2JIv0C0l2Q_4nbg&_nc_oc=AdpfrZ-UlKugN4SDKCm44cQ3PEmFZDEoFhKVqNZ7kizL6viWp5_vPryo6pZSV-IcZL0&ccb=10-5&oh=00_AQSkkGQ1_0ij-nT4844P6lAWmQLcWDha6gSdDN2-iqn8bg&oe=6AF5143A&_nc_sid=68f2c3",
+    "requested_at": "2026-11-10T14:21:10Z",
+    "at": "2026-11-10T14:21:18Z",
+    "fresh": true,
+    "snapshot_ts": "20261110142110",
+    "same_url": true
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-10T14:21:22Z"
+  }
+}

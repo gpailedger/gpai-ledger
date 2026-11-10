@@ -1,0 +1,41 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "ec653e062fa5c7b4e1bb0c0945839397b7c97c25d92e0dfc2e2823adda28ad0f",
+  "size_bytes": 522748,
+  "stored_as": "raw.html",
+  "text_sha256": "f5bf01fc887639d63332e046f85ea453038045388df313d2e88bce646ebaa0ea",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-11-10T14:17:44Z"
+  },
+  "prior_sha256": "d87c530341411cac341a0b485b24450ef3ddbe867cceb5002c9cc71bc88a539c",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-11-10T14:17:44Z",
+    "at": "2026-11-10T14:19:44Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-10T14:19:53Z"
+  }
+}
