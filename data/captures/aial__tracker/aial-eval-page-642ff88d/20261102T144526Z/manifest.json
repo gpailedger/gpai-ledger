@@ -38,10 +38,10 @@
   },
   "wayback": {
     "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x72cd755a1610>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
     "via": "spn2",
-    "requested_at": "2026-11-10T14:26:37Z",
-    "at": "2026-11-10T14:28:37Z"
+    "requested_at": "2026-11-11T13:30:54Z",
+    "at": "2026-11-11T13:31:09Z"
   },
   "wayback_attempts": [
     {
@@ -50,6 +50,13 @@
       "via": "spn2",
       "requested_at": "2026-11-07T12:30:41Z",
       "at": "2026-11-07T12:30:57Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x72cd755a1610>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "via": "spn2",
+      "requested_at": "2026-11-10T14:26:37Z",
+      "at": "2026-11-10T14:28:37Z"
     }
   ]
 }

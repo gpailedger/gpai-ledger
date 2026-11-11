@@ -16301,6 +16301,44 @@
     "to_sha256": "c723564465b8a4825d806429221e8d5aefd1d659345d73dbcec5350a8ee9d9b7",
     "computed_at": "2026-11-02T14:54:14Z"
   },
+  "bria-ai/bria::provider-live-5253ab97::captures/bria-ai__bria/provider-live-5253ab97/20261102T135836Z>captures/bria-ai__bria/provider-live-5253ab97/20261111T130403Z": {
+    "verdict": "changed",
+    "similarity": 0.9988,
+    "word_delta": 8,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "Page Explore APIs Explore",
+        "new": "Page Explore Bria"
+      },
+      {
+        "op": "insert",
+        "old": "Bria Create Open navigation",
+        "new": "Create Contact us Open"
+      },
+      {
+        "op": "delete",
+        "old": "Resources Explore APIs Explore",
+        "new": "Resources Explore Bria"
+      },
+      {
+        "op": "insert",
+        "old": "Bria Create EU AI",
+        "new": "Create Contact us EU"
+      }
+    ],
+    "source": "bria-ai/bria",
+    "target": "provider-live-5253ab97",
+    "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261102T135836Z",
+    "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261111T130403Z",
+    "from_sha256": "c723564465b8a4825d806429221e8d5aefd1d659345d73dbcec5350a8ee9d9b7",
+    "to_sha256": "0cf1f480bbbb345c451b3f4603dd0f3450eed637f4552c0157695ef91aaf91f3",
+    "computed_at": "2026-11-11T13:35:05Z"
+  },
   "bria-ai/fibo::aial-eval-b0eb23f7::captures/bria-ai__fibo/aial-eval-b0eb23f7/20260916T073140Z>captures/bria-ai__fibo/aial-eval-b0eb23f7/20260930T113232Z": {
     "verdict": "changed",
     "similarity": 0.9981,
@@ -27076,6 +27114,79 @@
     "to_sha256": "9de6106bf6da3a5adbd7a0c7640b8bb38b1c9174e4d59d3866e3e4fde613d81e",
     "computed_at": "2026-11-10T14:34:57Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261110T140418Z>captures/huggingface__smollm3/provider-live-c6d71781/20261111T131137Z": {
+    "verdict": "changed",
+    "similarity": 0.9961,
+    "word_delta": 18,
+    "moved_words": 7,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "HuggingFaceTB/finemath Viewer Updated Feb 6, 2025 48.3M",
+        "new": "HuggingFaceTB/finemath Viewer Updated Feb 6, 2025 48.3M"
+      },
+      {
+        "op": "replace",
+        "old": "Apr 20 9.04M 1.34k",
+        "new": "20 8.92M 1.34k"
+      },
+      {
+        "op": "insert",
+        "old": "2025 3M 792",
+        "new": "2025 3.06M 792"
+      },
+      {
+        "op": "replace",
+        "old": "2024 532k 2.76k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 556k 2.77k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 341k 1.08k",
+        "new": "2025 297k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 434k 1.4k",
+        "new": "3.5B 436k 1.4k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 333k 333 epfml/FineWeb2-HQ Viewer",
+        "new": "3.02B 304k 334 54.6k 398 epfml/FineWeb2-HQ"
+      },
+      {
+        "op": "replace",
+        "old": "380M 53.8k 88 53.6k 398 HuggingFaceTB/smoltalk2",
+        "new": "380M 54.4k 88 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 42.9k 188",
+        "new": "8.61M 43.2k 188"
+      },
+      {
+        "op": "replace",
+        "old": "2024 26.3k 217",
+        "new": "2024 26.2k 217"
+      },
+      {
+        "op": "replace",
+        "old": "3 11.9k 674 Fetching",
+        "new": "3 12.1k 675 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261110T140418Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261111T131137Z",
+    "from_sha256": "9de6106bf6da3a5adbd7a0c7640b8bb38b1c9174e4d59d3866e3e4fde613d81e",
+    "to_sha256": "0aa3da5566350329a8a7ed3729ec8c56e1a1ab428f1e60a9e5f4969d2cde01e3",
+    "computed_at": "2026-11-11T13:35:05Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -33378,6 +33489,99 @@
     "from_sha256": "ff0d9f068ee6952c323d046d06f4c47570d62f8f4502e24985148c0164a00a23",
     "to_sha256": "2c32723fee5f41e654b6a7ecf3d5188d1003e45013b68567def48c5f53179772",
     "computed_at": "2026-10-28T12:15:51Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261028T120202Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261111T132745Z": {
+    "verdict": "changed",
+    "similarity": 0.5989,
+    "word_delta": 675,
+    "moved_words": 47,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Delivers expressive, low-latency speech that holds up across long generations.",
+        "new": "Delivers expressive, low-latency speech that holds up across long generations."
+      },
+      {
+        "op": "moved",
+        "old": "leading FLEURS and Artificial Analysis accuracy scores.",
+        "new": "leading FLEURS and Artificial Analysis accuracy scores."
+      },
+      {
+        "op": "moved",
+        "old": "Privacy Cookies Terms Trademarks Microsoft.com LinkedIn Instagram X Off Accessibility Mode",
+        "new": "Privacy Cookies Terms Trademarks Microsoft.com LinkedIn Instagram X Off Accessibility Mode"
+      },
+      {
+        "op": "moved",
+        "old": "Discover and build with the latest",
+        "new": "Discover and build with the latest"
+      },
+      {
+        "op": "moved",
+        "old": "world-class models that are",
+        "new": "world-class models that are"
+      },
+      {
+        "op": "moved",
+        "old": "real work, and designed",
+        "new": "real work, and designed"
+      },
+      {
+        "op": "moved",
+        "old": "Privacy Cookies Terms Trademarks Microsoft.com",
+        "new": "Privacy Cookies Terms Trademarks Microsoft.com"
+      },
+      {
+        "op": "replace",
+        "old": "Models Latest models Discover the latest MAI models, designed for real-world intelligence MAI-Cyber-1.1-Flash MAI-Code-1.1-Flash MAI-Voice-2.1 MAI-Transcribe-2 MAI-Thinking-1 All models MAI-Cyber-1.1-Flash A new cybersecurity model built into MDASH, our multi-agent vulnerability identification and r",
+        "new": "Sitemap Models Transcribe Turn audio into precise transcripts Voice Generate custom voice from text Image Generate images from text Code Fast, lightweight agentic coding Cyber Agentic defense at codebase scale Thinking Expert reasoning for complex problems Custom Models Models tuned for your needs N"
+      },
+      {
+        "op": "replace",
+        "old": "price. Blog Featured stories The latest breakthroughs and updates from within our team MAI Image 2.7 debuts above GPT Image 2.5 Flare on Artificial Analysis and 3 on Arena 2 min read MAI Cyber 1.1 Flash: Sharper findings and fewer tokens inside MDASH 2 min read Building Medical Superintelligence 6 m",
+        "new": "mid-weight price. Learn more Cyber A"
+      },
+      {
+        "op": "delete",
+        "old": "more Learn more Foundational model MAI-Code-1.1-Flash Learn more Helps",
+        "new": "Learn more Code Helps"
+      },
+      {
+        "op": "delete",
+        "old": "more Learn more Foundational model MAI-Voice-2.1 Learn more Delivers expressive, low-latency speech that holds up across long generations. Learn more Learn more Foundational model MAI-Transcribe-2 Learn more Turn noisy audio into precise, domain-specific transcripts, with leading FLEURS and Artifici",
+        "new": "Learn more Image Create"
+      },
+      {
+        "op": "replace",
+        "old": "Learn more Learn more Custom Microsoft Frontier Tuning Learn more Your data,",
+        "new": "more Transcribe Turn noisy audio into precise, domain-specific transcripts, with Learn more Voice Learn more custom models Custom Models Your"
+      },
+      {
+        "op": "delete",
+        "old": "Learn more Learn more Try models Models Blog Careers Playground LinkedIn Instagram X Contact Microsoft 2026 This site",
+        "new": "Learn more This site"
+      },
+      {
+        "op": "insert",
+        "old": ". English United",
+        "new": ". Company News About Careers Contact Labs Models MAI Thinking MAI Code MAI Image MAI Voice MAI Transcribe MAI Cyber Custom Models All Models Terms Policies LinkedIn Instagram X Microsoft 2026 English"
+      },
+      {
+        "op": "insert",
+        "old": "Health Privacy Surface Laptop",
+        "new": "Privacy Data privacy Manage your Microsoft AI model-service data. Export your data Download a JSON copy of your conversations, messages, media references, and feedback. Delete all your data Permanently remove your conversations, media, and service account data. This permanently deletes your shared m"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261028T120202Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261111T132745Z",
+    "from_sha256": "2c32723fee5f41e654b6a7ecf3d5188d1003e45013b68567def48c5f53179772",
+    "to_sha256": "869801ca91e80fff6ac520b5458b8cf88211f3c7dc5816647c53013b013cd1f2",
+    "computed_at": "2026-11-11T13:35:06Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -43655,6 +43859,39 @@
     "from_sha256": "1aef3204d2483a5bc9eeac691d583d971e4b3df6db7628492a73803e807e7c84",
     "to_sha256": "ef43affda32d70cb3a715cc7bc787070c4e82041e013748e30934ce18d0e14d7",
     "computed_at": "2026-11-10T14:35:13Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261110T141532Z>captures/openai__model-catalog/watch-page-0e5ba652/20261111T132720Z": {
+    "verdict": "changed",
+    "similarity": 0.9951,
+    "word_delta": 18,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "posts Recent Build a retro",
+        "new": "Recent Pushing voice agents further: inside four GPT-Live builds Building a"
+      },
+      {
+        "op": "delete",
+        "old": "Codex Rethinking skills and prompts for GPT-6 Astra Topics",
+        "new": "and Codex Topics General"
+      },
+      {
+        "op": "insert",
+        "old": "for Students Codex for",
+        "new": "Students Student Collective Codex"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261110T141532Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261111T132720Z",
+    "from_sha256": "ef43affda32d70cb3a715cc7bc787070c4e82041e013748e30934ce18d0e14d7",
+    "to_sha256": "9c46724e81c2ffc01b7f7806d9642fbb51d424392b2668b335e6797f91b98eb0",
+    "computed_at": "2026-11-11T13:35:06Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",

@@ -1,0 +1,47 @@
+{
+  "source_id": "microsoft/model-catalog",
+  "provider": "Microsoft",
+  "model": "MAI models index",
+  "target_kind": "watch-page",
+  "sha256": "869801ca91e80fff6ac520b5458b8cf88211f3c7dc5816647c53013b013cd1f2",
+  "size_bytes": 198679,
+  "stored_as": "raw.html",
+  "text_sha256": "7f210e9ac9f8096e16d4a1965da9482cdfe794b7b8d129a1978ca12c98639dd4",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://microsoft.ai/models/",
+    "final_url": "https://microsoft.ai/models/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-11-11T13:27:45Z"
+  },
+  "prior_sha256": "2c32723fee5f41e654b6a7ecf3d5188d1003e45013b68567def48c5f53179772",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261111132748/https://microsoft.ai/models/",
+    "snapshot_ts": "20261111132748",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-8121800ef7d96a2a01c53946b60122ec6f9ffda9",
+    "via": "spn2",
+    "requested_at": "2026-11-11T13:27:45Z",
+    "at": "2026-11-11T13:28:01Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-11T13:28:08Z"
+  }
+}
