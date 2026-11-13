@@ -37,11 +37,17 @@
     "at": "2026-11-02T14:45:30Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261113135839/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/e3c492f6ba9e020ccc994e3892979c2cf8aa7ff8/public/evals/aleph-alpha-kolibri/index.html",
+    "snapshot_ts": "20261113135839",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a40c8ce6a74607b5cdad4c9ab6429ce89ad9ff7c",
     "via": "spn2",
-    "requested_at": "2026-11-12T14:31:36Z",
-    "at": "2026-11-12T14:31:51Z"
+    "requested_at": "2026-11-13T13:58:02Z",
+    "at": "2026-11-13T13:58:40Z"
   },
   "wayback_attempts": [
     {
@@ -64,6 +70,13 @@
       "via": "spn2",
       "requested_at": "2026-11-11T13:30:54Z",
       "at": "2026-11-11T13:31:09Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-11-12T14:31:36Z",
+      "at": "2026-11-12T14:31:51Z"
     }
   ]
 }

@@ -130,45 +130,45 @@
     "id": "bria-ai/bria",
     "model": "Bria 3.2",
     "verdict": "near-identical",
-    "similarity": 0.9994,
+    "similarity": 0.9982,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9994,
-      "word_delta": 4,
+      "similarity": 0.9982,
+      "word_delta": 12,
       "moved_words": 0,
       "changes": [
         {
           "op": "insert",
-          "old": "Page Explore Bria",
-          "new": "Page Explore APIs Explore"
+          "old": "Bria Create Bria Create Bria Create Technology Technology",
+          "new": "Create Platform Bria Create Platform Bria Create Visual Agents Bria Create Developer Platform RMBG 3.0 Upscaler Technology"
         },
         {
           "op": "insert",
-          "old": "Resources Explore Bria",
-          "new": "Explore APIs Explore Bria"
+          "old": "Bria Create Technology Licensed",
+          "new": "Create Platform Technology"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261111T130403Z",
-      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261112T140531Z"
+      "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261112T140531Z",
+      "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261113T133238Z"
     },
-    "word_delta": 4,
+    "word_delta": 12,
     "moved_words": 0,
     "changes": [
       {
         "op": "insert",
-        "old": "Page Explore Bria",
-        "new": "Page Explore APIs Explore"
+        "old": "Bria Create Bria Create Bria Create Technology Technology",
+        "new": "Create Platform Bria Create Platform Bria Create Visual Agents Bria Create Developer Platform RMBG 3.0 Upscaler Technology"
       },
       {
         "op": "insert",
-        "old": "Resources Explore Bria",
-        "new": "Explore APIs Explore Bria"
+        "old": "Bria Create Technology Licensed",
+        "new": "Create Platform Technology"
       }
     ]
   },
@@ -665,135 +665,135 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "near-identical",
-    "similarity": 0.9973,
+    "similarity": 0.9977,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.9973,
-      "word_delta": 15,
+      "similarity": 0.9977,
+      "word_delta": 13,
       "moved_words": 0,
       "changes": [
         {
           "op": "replace",
-          "old": "20 8.92M 1.34k Qwen/Qwen3-32B",
-          "new": "20 8.76M 1.35k Qwen/Qwen3-32B"
+          "old": "20 8.76M 1.35k",
+          "new": "20 8.62M 1.35k"
+        },
+        {
+          "op": "insert",
+          "old": "2025 3.1M 794",
+          "new": "2025 3.15M 794"
         },
         {
           "op": "replace",
-          "old": "2025 3.06M 792 meta-llama/Llama-3.2-1B",
-          "new": "2025 3.1M 794 meta-llama/Llama-3.2-1B"
+          "old": "2024 612k 2.77k HuggingFaceTB/SmolLM3-3B",
+          "new": "2024 633k 2.78k HuggingFaceTB/SmolLM3-3B"
         },
         {
           "op": "replace",
-          "old": "2024 556k 2.77k",
-          "new": "24, 2024 612k 2.77k"
+          "old": "2025 277k 1.08k",
+          "new": "2025 261k 1.08k"
         },
         {
           "op": "replace",
-          "old": "2025 297k 1.08k",
-          "new": "2025 277k 1.08k"
+          "old": "3.5B 435k 1.4k",
+          "new": "3.5B 423k 1.4k"
         },
         {
           "op": "replace",
-          "old": "3.5B 436k 1.4k",
-          "new": "3.5B 435k 1.4k"
+          "old": "3.02B 252k 334",
+          "new": "3.02B 262k 334"
         },
         {
           "op": "replace",
-          "old": "3.02B 304k 334",
-          "new": "3.02B 252k 334"
+          "old": "48.3M 55.6k 399",
+          "new": "48.3M 57.8k 399"
         },
         {
           "op": "replace",
-          "old": "48.3M 54.6k 398 epfml/FineWeb2-HQ",
-          "new": "48.3M 55.6k 399 epfml/FineWeb2-HQ"
+          "old": "380M 54.3k 88",
+          "new": "380M 55k 88"
         },
         {
           "op": "replace",
-          "old": "380M 54.4k 88",
-          "new": "380M 54.3k 88"
+          "old": "8.61M 43.3k 188",
+          "new": "8.61M 43.5k 188"
+        },
+        {
+          "op": "insert",
+          "old": "2024 23k 218",
+          "new": "2024 23.3k 218"
         },
         {
           "op": "replace",
-          "old": "8.61M 43.2k 188",
-          "new": "8.61M 43.3k 188"
-        },
-        {
-          "op": "replace",
-          "old": "2024 26.2k 217 bigcode/the-stack-v2",
-          "new": "2024 23k 218 bigcode/the-stack-v2"
-        },
-        {
-          "op": "replace",
-          "old": "3 12.1k 675",
-          "new": "3 12.5k 675"
+          "old": "3 12.5k 675 Fetching",
+          "new": "3 13.6k 677 Fetching"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261111T131137Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261112T141212Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261112T141212Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z"
     },
-    "word_delta": 15,
+    "word_delta": 13,
     "moved_words": 0,
     "changes": [
       {
         "op": "replace",
-        "old": "20 8.92M 1.34k Qwen/Qwen3-32B",
-        "new": "20 8.76M 1.35k Qwen/Qwen3-32B"
+        "old": "20 8.76M 1.35k",
+        "new": "20 8.62M 1.35k"
+      },
+      {
+        "op": "insert",
+        "old": "2025 3.1M 794",
+        "new": "2025 3.15M 794"
       },
       {
         "op": "replace",
-        "old": "2025 3.06M 792 meta-llama/Llama-3.2-1B",
-        "new": "2025 3.1M 794 meta-llama/Llama-3.2-1B"
+        "old": "2024 612k 2.77k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 633k 2.78k HuggingFaceTB/SmolLM3-3B"
       },
       {
         "op": "replace",
-        "old": "2024 556k 2.77k",
-        "new": "24, 2024 612k 2.77k"
+        "old": "2025 277k 1.08k",
+        "new": "2025 261k 1.08k"
       },
       {
         "op": "replace",
-        "old": "2025 297k 1.08k",
-        "new": "2025 277k 1.08k"
+        "old": "3.5B 435k 1.4k",
+        "new": "3.5B 423k 1.4k"
       },
       {
         "op": "replace",
-        "old": "3.5B 436k 1.4k",
-        "new": "3.5B 435k 1.4k"
+        "old": "3.02B 252k 334",
+        "new": "3.02B 262k 334"
       },
       {
         "op": "replace",
-        "old": "3.02B 304k 334",
-        "new": "3.02B 252k 334"
+        "old": "48.3M 55.6k 399",
+        "new": "48.3M 57.8k 399"
       },
       {
         "op": "replace",
-        "old": "48.3M 54.6k 398 epfml/FineWeb2-HQ",
-        "new": "48.3M 55.6k 399 epfml/FineWeb2-HQ"
+        "old": "380M 54.3k 88",
+        "new": "380M 55k 88"
       },
       {
         "op": "replace",
-        "old": "380M 54.4k 88",
-        "new": "380M 54.3k 88"
+        "old": "8.61M 43.3k 188",
+        "new": "8.61M 43.5k 188"
+      },
+      {
+        "op": "insert",
+        "old": "2024 23k 218",
+        "new": "2024 23.3k 218"
       },
       {
         "op": "replace",
-        "old": "8.61M 43.2k 188",
-        "new": "8.61M 43.3k 188"
-      },
-      {
-        "op": "replace",
-        "old": "2024 26.2k 217 bigcode/the-stack-v2",
-        "new": "2024 23k 218 bigcode/the-stack-v2"
-      },
-      {
-        "op": "replace",
-        "old": "3 12.1k 675",
-        "new": "3 12.5k 675"
+        "old": "3 12.5k 675 Fetching",
+        "new": "3 13.6k 677 Fetching"
       }
     ]
   },

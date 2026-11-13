@@ -16410,6 +16410,34 @@
     "to_sha256": "9af382accf91eaef8406b2c698cdced92dbd141b67f38c77ed72d0ef3dff4609",
     "computed_at": "2026-11-12T14:35:19Z"
   },
+  "bria-ai/bria::provider-live-5253ab97::captures/bria-ai__bria/provider-live-5253ab97/20261112T140531Z>captures/bria-ai__bria/provider-live-5253ab97/20261113T133238Z": {
+    "verdict": "changed",
+    "similarity": 0.9982,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Bria Create Bria Create Bria Create Technology Technology",
+        "new": "Create Platform Bria Create Platform Bria Create Visual Agents Bria Create Developer Platform RMBG 3.0 Upscaler Technology"
+      },
+      {
+        "op": "insert",
+        "old": "Bria Create Technology Licensed",
+        "new": "Create Platform Technology"
+      }
+    ],
+    "source": "bria-ai/bria",
+    "target": "provider-live-5253ab97",
+    "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261112T140531Z",
+    "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261113T133238Z",
+    "from_sha256": "9af382accf91eaef8406b2c698cdced92dbd141b67f38c77ed72d0ef3dff4609",
+    "to_sha256": "ad15e9650a6b740a2718f09a3030a2698505c20fdb26534aa14055a4ab34ff85",
+    "computed_at": "2026-11-13T14:00:52Z"
+  },
   "bria-ai/fibo::aial-eval-b0eb23f7::captures/bria-ai__fibo/aial-eval-b0eb23f7/20260916T073140Z>captures/bria-ai__fibo/aial-eval-b0eb23f7/20260930T113232Z": {
     "verdict": "changed",
     "similarity": 0.9981,
@@ -27330,6 +27358,79 @@
     "from_sha256": "0aa3da5566350329a8a7ed3729ec8c56e1a1ab428f1e60a9e5f4969d2cde01e3",
     "to_sha256": "f3572d6f3bcee3cb8f7a7819a404d53e5200feb807b318926faa997189992fb5",
     "computed_at": "2026-11-12T14:35:19Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261112T141212Z>captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 13,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.76M 1.35k",
+        "new": "20 8.62M 1.35k"
+      },
+      {
+        "op": "insert",
+        "old": "2025 3.1M 794",
+        "new": "2025 3.15M 794"
+      },
+      {
+        "op": "replace",
+        "old": "2024 612k 2.77k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 633k 2.78k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 277k 1.08k",
+        "new": "2025 261k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 435k 1.4k",
+        "new": "3.5B 423k 1.4k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 252k 334",
+        "new": "3.02B 262k 334"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 55.6k 399",
+        "new": "48.3M 57.8k 399"
+      },
+      {
+        "op": "replace",
+        "old": "380M 54.3k 88",
+        "new": "380M 55k 88"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 43.3k 188",
+        "new": "8.61M 43.5k 188"
+      },
+      {
+        "op": "insert",
+        "old": "2024 23k 218",
+        "new": "2024 23.3k 218"
+      },
+      {
+        "op": "replace",
+        "old": "3 12.5k 675 Fetching",
+        "new": "3 13.6k 677 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261112T141212Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z",
+    "from_sha256": "f3572d6f3bcee3cb8f7a7819a404d53e5200feb807b318926faa997189992fb5",
+    "to_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
+    "computed_at": "2026-11-13T14:00:52Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -44060,6 +44161,54 @@
     "to_sha256": "5179c9aab595c714aba84ec0e3a4579cc01a7821436bd5e267f798b350014cf0",
     "computed_at": "2026-11-12T14:35:19Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261112T142806Z>captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z": {
+    "verdict": "changed",
+    "similarity": 0.9941,
+    "word_delta": 28,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Factory Setup Security Review",
+        "new": "Setup Findings and fixes Import scanner findings Security"
+      },
+      {
+        "op": "insert",
+        "old": "threat model FAQ Codex",
+        "new": "model Notifications FAQ"
+      },
+      {
+        "op": "insert",
+        "old": "Managed configuration Self-host configuration",
+        "new": "configuration Desktop browser policies Self-host"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Pushing voice",
+        "new": "Recent Securing persistent agents like OpenClaw at OpenAI Pushing"
+      },
+      {
+        "op": "delete",
+        "old": "family Bringing my LED display to life with GPT-Live-1 and Codex Topics",
+        "new": "GPT-6 family Topics General"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-Realtime-2.1 Mini Reasoning",
+        "new": "GPT-Realtime-2.1 mini Reasoning"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261112T142806Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z",
+    "from_sha256": "5179c9aab595c714aba84ec0e3a4579cc01a7821436bd5e267f798b350014cf0",
+    "to_sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
+    "computed_at": "2026-11-13T14:00:52Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -50409,5 +50558,28 @@
     "from_sha256": "50c42256fa2da4d3dddf5ba0c045084ca1f1b1bc6b2613497f28640b20767102",
     "to_sha256": "fdd2129af1c90a9b4c852d69106ebe85555fe893ad8da0dc1e1abb7affdc9f62",
     "computed_at": "2026-11-01T12:33:14Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261101T122547Z>captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Products Grok Status Loading...",
+        "new": "Grok Grok Bot Grok Build Status"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261101T122547Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z",
+    "from_sha256": "fdd2129af1c90a9b4c852d69106ebe85555fe893ad8da0dc1e1abb7affdc9f62",
+    "to_sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
+    "computed_at": "2026-11-13T14:00:52Z"
   }
 }
