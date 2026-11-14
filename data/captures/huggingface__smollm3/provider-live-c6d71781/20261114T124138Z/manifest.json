@@ -1,0 +1,52 @@
+{
+  "source_id": "huggingface/smollm3",
+  "provider": "HuggingFace",
+  "model": "SmolLM3-3B",
+  "target_kind": "provider-live",
+  "sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
+  "size_bytes": 204260,
+  "stored_as": "raw.html",
+  "text_sha256": "bafed61ff7ddab5caf3cc27a285226a543ddb667b8d885e3fb32941bc798ce73",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "final_url": "https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "204260",
+    "fetched_at": "2026-11-14T12:41:38Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 1,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": [
+      "https://hfmlsoc-smollm3-eu-data-transparency.hf.space/?__theme=system"
+    ]
+  },
+  "prior_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
+  "wayback": {
+    "ok": false,
+    "status_code": 401,
+    "spn_status": 401,
+    "error": "You need to be logged in to use Save Page Now.",
+    "answered": false,
+    "via": "spn2",
+    "requested_at": "2026-11-14T12:41:38Z",
+    "at": "2026-11-14T12:41:38Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-14T12:41:42Z"
+  }
+}

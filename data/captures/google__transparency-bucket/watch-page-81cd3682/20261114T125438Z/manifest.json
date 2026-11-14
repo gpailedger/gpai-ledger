@@ -1,0 +1,45 @@
+{
+  "source_id": "google/transparency-bucket",
+  "provider": "Google",
+  "model": "Transparency-report file store (watched for summary drops)",
+  "target_kind": "watch-page",
+  "sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
+  "size_bytes": 77914,
+  "stored_as": "raw.bin",
+  "text_sha256": null,
+  "extraction_notes": [
+    "no extractor for .bin"
+  ],
+  "http": {
+    "url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "final_url": "https://storage.googleapis.com/transparencyreport?prefix=report-downloads/",
+    "status_code": 200,
+    "content_type": "application/xml",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "77914",
+    "fetched_at": "2026-11-14T12:54:38Z"
+  },
+  "prior_sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
+  "wayback": {
+    "ok": false,
+    "status_code": 401,
+    "spn_status": 401,
+    "error": "You need to be logged in to use Save Page Now.",
+    "answered": false,
+    "via": "spn2",
+    "requested_at": "2026-11-14T12:54:38Z",
+    "at": "2026-11-14T12:54:38Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-14T12:54:42Z"
+  }
+}

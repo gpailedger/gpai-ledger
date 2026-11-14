@@ -14108,6 +14108,29 @@
     "to_sha256": "47ffeca255c5063197683bdf5fecf2a2f3767349067a030f44f9bbbff74cc5ab",
     "computed_at": "2026-11-12T14:35:19Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261112T142836Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z": {
+    "verdict": "changed",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 336,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "moved",
+        "old": "Prompt and output performance Current Claude models excel in: Performance: Top-tier results in reasoning, coding, multilingual tasks, long-context handling, honesty, and image processing. See Prompting best practices for general and model-specific prompting guidance. Engaging responses: Claude model",
+        "new": "Prompt and output performance Current Claude models excel in: Performance: Top-tier results in reasoning, coding, multilingual tasks, long-context handling, honesty, and image processing. See Prompting best practices for general and model-specific prompting guidance. Engaging responses: Claude model"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261112T142836Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z",
+    "from_sha256": "47ffeca255c5063197683bdf5fecf2a2f3767349067a030f44f9bbbff74cc5ab",
+    "to_sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
+    "computed_at": "2026-11-14T12:58:18Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -23706,6 +23729,19 @@
     "to_sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
     "computed_at": "2026-11-03T13:58:16Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z>captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z",
+    "from_sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
+    "to_sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
+    "computed_at": "2026-11-14T12:58:17Z"
+  },
   "google/veo-3-1::aial-eval-page-fe6abacf::captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T103610Z>captures/google__veo-3-1/aial-eval-page-fe6abacf/20260831T111857Z": {
     "verdict": "identical-text",
     "similarity": 1.0,
@@ -27431,6 +27467,74 @@
     "from_sha256": "f3572d6f3bcee3cb8f7a7819a404d53e5200feb807b318926faa997189992fb5",
     "to_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
     "computed_at": "2026-11-13T14:00:52Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z>captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z": {
+    "verdict": "changed",
+    "similarity": 0.9976,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.62M 1.35k",
+        "new": "20 8.47M 1.35k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.15M 794",
+        "new": "2025 3.25M 794"
+      },
+      {
+        "op": "replace",
+        "old": "2024 633k 2.78k",
+        "new": "2024 657k 2.78k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 261k 1.08k",
+        "new": "2025 246k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 262k 334",
+        "new": "3.02B 266k 334"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 57.8k 399",
+        "new": "48.3M 60.3k 399"
+      },
+      {
+        "op": "replace",
+        "old": "380M 55k 88",
+        "new": "380M 56.9k 88"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 43.5k 188",
+        "new": "8.61M 44.4k 188"
+      },
+      {
+        "op": "replace",
+        "old": "2024 23.3k 218 bigcode/the-stack-v2",
+        "new": "2024 23.9k 219 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 13.6k 677",
+        "new": "3 14k 677"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z",
+    "from_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
+    "to_sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
+    "computed_at": "2026-11-14T12:58:17Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -44209,6 +44313,44 @@
     "to_sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
     "computed_at": "2026-11-13T14:00:52Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z>captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z": {
+    "verdict": "changed",
+    "similarity": 0.9896,
+    "word_delta": 47,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "ChatGPT Ads Publish",
+        "new": "ChatGPT Agent Access Allow verified ChatGPT browser visits to your website Ads Publish"
+      },
+      {
+        "op": "insert",
+        "old": "Your data Private Safety",
+        "new": "data Data residency Private"
+      },
+      {
+        "op": "insert",
+        "old": "Commerce Ads Workspace",
+        "new": "Commerce Agent Access Ads Workspace"
+      },
+      {
+        "op": "replace",
+        "old": "Home Guides Get started Best practices File Upload Overview Products API Overview Feeds Products Promotions Ads",
+        "new": "Home Partner Playbook Overview Commerce Partner Playbook Submit product feeds Help ensure cloud browser access Accept payments Build a plugin Integrate Sign in with ChatGPT Claim your business Product feeds Reference Product feed schema Ads"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z",
+    "from_sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
+    "to_sha256": "a61526af5e597632f779cc0fc3669f68d6ad218c977a0936237076b7a5e68d12",
+    "computed_at": "2026-11-14T12:58:17Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -50581,5 +50723,53 @@
     "from_sha256": "fdd2129af1c90a9b4c852d69106ebe85555fe893ad8da0dc1e1abb7affdc9f62",
     "to_sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
     "computed_at": "2026-11-13T14:00:52Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z>captures/xai__model-catalog/watch-page-905d5d7a/20261114T125408Z": {
+    "verdict": "changed",
+    "similarity": 0.9935,
+    "word_delta": 14,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide Imagine Overview Image",
+        "new": "Guide Image Video Overview"
+      },
+      {
+        "op": "replace",
+        "old": "Guides Imagine Image Quality Retirement Nov",
+        "new": "Guides Image Quality Model Retirement"
+      },
+      {
+        "op": "replace",
+        "old": "Guide Imagine Overview Image",
+        "new": "Guide Image Video Overview"
+      },
+      {
+        "op": "replace",
+        "old": "Guides Imagine Image Quality Retirement Nov",
+        "new": "Guides Image Quality Model Retirement"
+      },
+      {
+        "op": "replace",
+        "old": "playground Imagine API Turn",
+        "new": "playground Image Video API"
+      },
+      {
+        "op": "delete",
+        "old": "Images Grok Imagine Image 2.0 Videos Grok Imagine Video",
+        "new": "4.7 Images Image 2.0 Videos Video 1.5"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261114T125408Z",
+    "from_sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
+    "to_sha256": "fdd1a263ae9c6dd4729ac3bb31e1a217dd8d9bc37a9f5c8a8c9a6f7ff678661b",
+    "computed_at": "2026-11-14T12:58:18Z"
   }
 }

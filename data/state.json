@@ -1478,11 +1478,15 @@
       {
         "sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
         "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z"
+      },
+      {
+        "sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
+        "dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z"
       }
     ],
-    "last_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
-    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261113T133907Z",
-    "last_text_sha256": "b566d0646a0347bb77800a2593ec081dd0ccdb8b14e2dc6fe95cea22bf71336c"
+    "last_sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
+    "last_capture": "captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z",
+    "last_text_sha256": "bafed61ff7ddab5caf3cc27a285226a543ddb667b8d885e3fb32941bc798ce73"
   },
   "huggingface/smollm3::aial-archive-22eafaef": {
     "versions": [
@@ -2142,10 +2146,14 @@
       {
         "sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
         "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z"
+      },
+      {
+        "sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
+        "dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z"
       }
     ],
-    "last_sha256": "9ad65dfddf01e84c5f03905b873c8ce0c2830265c2d3b66ef12ff07ce7b0614c",
-    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261103T133042Z",
+    "last_sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
+    "last_capture": "captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z",
     "last_text_sha256": null
   },
   "openai/gpt-5-2::provider-live-e7ad6bc8": {
@@ -2507,11 +2515,15 @@
       {
         "sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
         "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z"
+      },
+      {
+        "sha256": "a61526af5e597632f779cc0fc3669f68d6ad218c977a0936237076b7a5e68d12",
+        "dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z"
       }
     ],
-    "last_sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
-    "last_text_sha256": "55064ea20589ac161b36f124d95cfe6e43c458dc2f2bfa2400f57397ce9d6120",
-    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261113T135317Z"
+    "last_sha256": "a61526af5e597632f779cc0fc3669f68d6ad218c977a0936237076b7a5e68d12",
+    "last_text_sha256": "34c66c8dac4c8e28df28f58e9ce8f1c574f11ecacb7dc4563d82682ef62dbc39",
+    "last_capture": "captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f": {
     "versions": [
@@ -2614,11 +2626,15 @@
       {
         "sha256": "47ffeca255c5063197683bdf5fecf2a2f3767349067a030f44f9bbbff74cc5ab",
         "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261112T142836Z"
+      },
+      {
+        "sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
+        "dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z"
       }
     ],
-    "last_sha256": "47ffeca255c5063197683bdf5fecf2a2f3767349067a030f44f9bbbff74cc5ab",
-    "last_text_sha256": "eaf2e43c6187d19abd75bf39e68309c4afbf73bdc03de754305f277cdfb3b7ee",
-    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261112T142836Z"
+    "last_sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
+    "last_text_sha256": "692110004fb63482bdc157774afebc6271437d082f5d3f782ced1c8a0824d854",
+    "last_capture": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z"
   },
   "mistral-ai/model-catalog::watch-page-de362d33": {
     "versions": [
@@ -2787,11 +2803,15 @@
       {
         "sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
         "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z"
+      },
+      {
+        "sha256": "fdd1a263ae9c6dd4729ac3bb31e1a217dd8d9bc37a9f5c8a8c9a6f7ff678661b",
+        "dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261114T125408Z"
       }
     ],
-    "last_sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
-    "last_text_sha256": "c54d56aec5a6abd5043ac732e8219f422636db553d655146885da670e99b5ce6",
-    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20261113T135441Z"
+    "last_sha256": "fdd1a263ae9c6dd4729ac3bb31e1a217dd8d9bc37a9f5c8a8c9a6f7ff678661b",
+    "last_text_sha256": "8088474446cf7fa55bf7220b2a6036192697f5c0dd6c071f113a5599967034be",
+    "last_capture": "captures/xai__model-catalog/watch-page-905d5d7a/20261114T125408Z"
   },
   "microsoft/model-catalog::watch-page-72b310dd": {
     "versions": [

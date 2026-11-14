@@ -1,0 +1,44 @@
+{
+  "source_id": "xai/model-catalog",
+  "provider": "xAI",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "fdd1a263ae9c6dd4729ac3bb31e1a217dd8d9bc37a9f5c8a8c9a6f7ff678661b",
+  "size_bytes": 395612,
+  "stored_as": "raw.html",
+  "text_sha256": "8088474446cf7fa55bf7220b2a6036192697f5c0dd6c071f113a5599967034be",
+  "doc_links_sha256": "13f163cb58bac465ff91304ae6e89f29219bf4e97e5df8391447e17621e5cc50",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://docs.x.ai/developers/models",
+    "final_url": "https://docs.x.ai/developers/models",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-11-14T12:54:08Z"
+  },
+  "prior_sha256": "1b9390e5d64a7265164d194cf4cb9715e77d84e96262f1d3702752e2e4fb6136",
+  "wayback": {
+    "ok": false,
+    "status_code": 401,
+    "spn_status": 401,
+    "error": "You need to be logged in to use Save Page Now.",
+    "answered": false,
+    "via": "spn2",
+    "requested_at": "2026-11-14T12:54:08Z",
+    "at": "2026-11-14T12:54:09Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-14T12:54:13Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "anthropic/model-catalog",
+  "provider": "Anthropic",
+  "model": "Model catalog (developer docs)",
+  "target_kind": "watch-page",
+  "sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
+  "size_bytes": 653946,
+  "stored_as": "raw.html",
+  "text_sha256": "692110004fb63482bdc157774afebc6271437d082f5d3f782ced1c8a0824d854",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "final_url": "https://platform.claude.com/docs/en/models/overview",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": null,
+    "fetched_at": "2026-11-14T12:53:51Z"
+  },
+  "prior_sha256": "47ffeca255c5063197683bdf5fecf2a2f3767349067a030f44f9bbbff74cc5ab",
+  "wayback": {
+    "ok": false,
+    "status_code": 401,
+    "spn_status": 401,
+    "error": "You need to be logged in to use Save Page Now.",
+    "answered": false,
+    "via": "spn2",
+    "requested_at": "2026-11-14T12:53:51Z",
+    "at": "2026-11-14T12:53:52Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-14T12:53:57Z"
+  }
+}
