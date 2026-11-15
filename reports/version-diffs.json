@@ -14131,6 +14131,34 @@
     "to_sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
     "computed_at": "2026-11-14T12:58:18Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261115T132812Z": {
+    "verdict": "changed",
+    "similarity": 0.9994,
+    "word_delta": 3,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "policy Ask Docs List",
+        "new": "Usage policy List Models"
+      },
+      {
+        "op": "insert",
+        "old": "next page.",
+        "new": "page. Console"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261114T125351Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261115T132812Z",
+    "from_sha256": "6482be4b51e9db4a805eb82e0e72d0d952bfc95c4dfbebd93050bb1bf8bd9109",
+    "to_sha256": "0b24f808bc0296a2497177a578847566c6cdbfb8e16734ebc6b6d746b301400a",
+    "computed_at": "2026-11-15T13:44:31Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -27535,6 +27563,74 @@
     "from_sha256": "2be4cb90f460ebca03fa76ab1f48034b44c68252f8fbea7b5090e0d56607a8d5",
     "to_sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
     "computed_at": "2026-11-14T12:58:17Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z>captures/huggingface__smollm3/provider-live-c6d71781/20261115T131245Z": {
+    "verdict": "changed",
+    "similarity": 0.9977,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.47M 1.35k",
+        "new": "20 8.27M 1.35k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.25M 794",
+        "new": "2025 3.37M 794"
+      },
+      {
+        "op": "replace",
+        "old": "2024 657k 2.78k",
+        "new": "2024 644k 2.78k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 246k 1.08k",
+        "new": "2025 229k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 423k 1.4k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 412k 1.41k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 266k 334",
+        "new": "3.02B 262k 334"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 60.3k 399",
+        "new": "48.3M 63.2k 399"
+      },
+      {
+        "op": "replace",
+        "old": "380M 56.9k 88",
+        "new": "380M 58.3k 88"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 44.4k 188",
+        "new": "8.61M 47.7k 188"
+      },
+      {
+        "op": "replace",
+        "old": "3 14k 677 Fetching",
+        "new": "3 14.4k 678 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261114T124138Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261115T131245Z",
+    "from_sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
+    "to_sha256": "877e0cd495b00d5961f67518faa0951ad0819b2a6b8ccd9d865c18b898354f60",
+    "computed_at": "2026-11-15T13:44:30Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
