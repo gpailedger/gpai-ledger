@@ -37,11 +37,26 @@
     "at": "2026-08-31T10:20:10Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-53269e71268080e701304ec011dcef728d4a6c23 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fc44a136300>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261116143454/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/fe4507357f7ac856440578c9ff9bb98e7d0bbae1/public/evals/claude-fable-5/index.html",
+    "snapshot_ts": "20261116143454",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-53269e71268080e701304ec011dcef728d4a6c23",
     "via": "spn2",
-    "requested_at": "2026-11-15T13:41:45Z",
-    "at": "2026-11-15T13:43:50Z"
-  }
+    "requested_at": "2026-11-16T14:34:54Z",
+    "at": "2026-11-16T14:34:59Z"
+  },
+  "wayback_attempts": [
+    {
+      "ok": false,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-53269e71268080e701304ec011dcef728d4a6c23 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7fc44a136300>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+      "job_id": "spn2-53269e71268080e701304ec011dcef728d4a6c23",
+      "via": "spn2",
+      "requested_at": "2026-11-15T13:41:45Z",
+      "at": "2026-11-15T13:43:50Z"
+    }
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "source_id": "bria-ai/bria",
+  "provider": "Bria AI",
+  "model": "Bria 3.2",
+  "target_kind": "provider-live",
+  "sha256": "b2f7c7b57ee756cc7048947420bd6ce9fa03dbfdb07dc7eeaad663e7f038c762",
+  "size_bytes": 244535,
+  "stored_as": "raw.html",
+  "text_sha256": "7e262deb05dd9dc3d0b64cde30f6d1f3f86c351536cb588ac5de7c926de171f4",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://bria.ai/eu-policy",
+    "final_url": "https://bria.ai/eu-policy",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "244535",
+    "fetched_at": "2026-11-16T14:08:06Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 2,
+    "frames_captured": []
+  },
+  "prior_sha256": "ad15e9650a6b740a2718f09a3030a2698505c20fdb26534aa14055a4ab34ff85",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261116140826/https://bria.ai/eu-policy",
+    "snapshot_ts": "20261116140826",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-a8f0862e90c2041aea478f5ca35d70778ea3fb96",
+    "via": "spn2",
+    "requested_at": "2026-11-16T14:08:06Z",
+    "at": "2026-11-16T14:08:38Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-16T14:08:42Z"
+  }
+}

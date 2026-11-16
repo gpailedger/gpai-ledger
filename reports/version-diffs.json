@@ -16489,6 +16489,29 @@
     "to_sha256": "ad15e9650a6b740a2718f09a3030a2698505c20fdb26534aa14055a4ab34ff85",
     "computed_at": "2026-11-13T14:00:52Z"
   },
+  "bria-ai/bria::provider-live-5253ab97::captures/bria-ai__bria/provider-live-5253ab97/20261113T133238Z>captures/bria-ai__bria/provider-live-5253ab97/20261116T140806Z": {
+    "verdict": "changed",
+    "similarity": 0.9998,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "3.0 Upscaler Technology",
+        "new": "RMBG 3.0 Technology Technology"
+      }
+    ],
+    "source": "bria-ai/bria",
+    "target": "provider-live-5253ab97",
+    "from_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261113T133238Z",
+    "to_dir": "captures/bria-ai__bria/provider-live-5253ab97/20261116T140806Z",
+    "from_sha256": "ad15e9650a6b740a2718f09a3030a2698505c20fdb26534aa14055a4ab34ff85",
+    "to_sha256": "b2f7c7b57ee756cc7048947420bd6ce9fa03dbfdb07dc7eeaad663e7f038c762",
+    "computed_at": "2026-11-16T14:38:41Z"
+  },
   "bria-ai/fibo::aial-eval-b0eb23f7::captures/bria-ai__fibo/aial-eval-b0eb23f7/20260916T073140Z>captures/bria-ai__fibo/aial-eval-b0eb23f7/20260930T113232Z": {
     "verdict": "changed",
     "similarity": 0.9981,
@@ -27631,6 +27654,79 @@
     "from_sha256": "a77428d0e3b1c9dceb826a367af5ec201ec90dfd1e56f19b1a731dd2f57876a5",
     "to_sha256": "877e0cd495b00d5961f67518faa0951ad0819b2a6b8ccd9d865c18b898354f60",
     "computed_at": "2026-11-15T13:44:30Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261115T131245Z>captures/huggingface__smollm3/provider-live-c6d71781/20261116T141458Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 11,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 8.27M 1.35k",
+        "new": "20 8.14M 1.35k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.37M 794",
+        "new": "2025 3.54M 794"
+      },
+      {
+        "op": "replace",
+        "old": "2024 644k 2.78k",
+        "new": "2024 636k 2.78k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 229k 1.08k",
+        "new": "2025 213k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 412k 1.41k",
+        "new": "3.5B 414k 1.41k"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 262k 334",
+        "new": "3.02B 260k 334"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 63.2k 399",
+        "new": "48.3M 65.1k 399"
+      },
+      {
+        "op": "replace",
+        "old": "380M 58.3k 88",
+        "new": "380M 59.6k 88"
+      },
+      {
+        "op": "replace",
+        "old": "2025 8.61M 47.7k 188",
+        "new": "8.61M 50.4k 188"
+      },
+      {
+        "op": "replace",
+        "old": "23.9k 219 bigcode/the-stack-v2",
+        "new": "23.9k 220 bigcode/the-stack-v2"
+      },
+      {
+        "op": "delete",
+        "old": "3 14.4k 678",
+        "new": "3 14k 678"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261115T131245Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261116T141458Z",
+    "from_sha256": "877e0cd495b00d5961f67518faa0951ad0819b2a6b8ccd9d865c18b898354f60",
+    "to_sha256": "c9f779a685d7662750565a58853e5ed5d2ec51a8fb42cfa747f8ef7e1d7e8b4b",
+    "computed_at": "2026-11-16T14:38:40Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -44446,6 +44542,39 @@
     "from_sha256": "bd1de4adb6e23228b49a022ad799ba414cd7494c297ad1df8fe48f3eaafc3921",
     "to_sha256": "a61526af5e597632f779cc0fc3669f68d6ad218c977a0936237076b7a5e68d12",
     "computed_at": "2026-11-14T12:58:17Z"
+  },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z>captures/openai__model-catalog/watch-page-0e5ba652/20261116T142839Z": {
+    "verdict": "changed",
+    "similarity": 0.9941,
+    "word_delta": 24,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "events Explore use cases Collections Home",
+        "new": "events Home All use cases Home Videos"
+      },
+      {
+        "op": "replace",
+        "old": "blog Explore use",
+        "new": "blog Home All use"
+      },
+      {
+        "op": "insert",
+        "old": "cases Collections Home Videos",
+        "new": "Collections Productivity Collaboration Business Operations Data Science Web development Game development Native development Production systems Security Finance Sales Life Sciences Education Home"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261114T125339Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261116T142839Z",
+    "from_sha256": "a61526af5e597632f779cc0fc3669f68d6ad218c977a0936237076b7a5e68d12",
+    "to_sha256": "ba35610304769a8d6a31d1ae5b85aa64b62bfa32bee668a48a0acb667469343a",
+    "computed_at": "2026-11-16T14:38:41Z"
   },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
