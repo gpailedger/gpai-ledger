@@ -1,7 +1,25 @@
-# HF org watch — 2026-11-09 16:46 UTC
+# HF org watch — 2026-11-16 16:18 UTC
 
 New models created in the last 14 days by tracked orgs (candidates for the summary hunt; not yet tracked sources).
 
-- **ibm-granite/granite-speech-5.0-2b-ONNX** (created 2026-10-28, 1,609 downloads)
-- **microsoft/Mage-VL-Cowork** (created 2026-10-30, 3,714 downloads)
-- **moonshotai/Kimi-K3.1-Pro** (created 2026-11-02, 27,926 downloads)
+- **speakleash/Bielik-11B-v3.0-Instruct-NVFP4A16** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-11B-v2.6-Instruct-NVFP4A16** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-4.5B-v3.0-Instruct-MLX-4bit** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-4.5B-v3.0-Instruct-AWQ** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-11B-v2.6-Instruct-NVFP4** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-11B-v3.0-Instruct-NVFP4** (created 2026-11-16, 0 downloads)
+- **speakleash/Bielik-1.5B-v3.0-Instruct-MLX-4bit** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-1.5B-v3.0-Instruct-NVFP4** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-1.5B-v3.0-Instruct-AWQ** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-4.5B-v3.0-Instruct-NVFP4A16** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-1.5B-v3.0-Instruct-NVFP4A16** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-Instruct-MLX-8bit** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-Instruct-MLX-4bit** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-Instruct-NVFP4** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-Instruct-AWQ** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-Instruct-NVFP4A16** (created 2026-11-15, 0 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-DFlash-FP8-Dynamic** (created 2026-11-15, 8 downloads)
+- **speakleash/Bielik-Minitron-7B-v3.0-DFlash-GGUF** (created 2026-11-15, 75 downloads)
+- **speakleash/Bielik-11B-v3.0-DFlash-FP8-Dynamic** (created 2026-11-15, 7 downloads)
+- **speakleash/Bielik-11B-v3.0-DFlash-GGUF** (created 2026-11-15, 75 downloads)
+- **briaai/RMBG-3.0** (created 2026-11-10, 0 downloads)
