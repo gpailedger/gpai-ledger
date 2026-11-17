@@ -1,0 +1,53 @@
+{
+  "source_id": "anthropic/claude-opus-4-7",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.7",
+  "target_kind": "provider-live",
+  "sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+  "size_bytes": 289405,
+  "stored_as": "raw.html",
+  "text_sha256": "1aec7415cd2deb5e9d5484f475cdd20957f327f912f099ad2c8cc7a086d9c8fb",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "289405",
+    "fetched_at": "2026-11-17T14:57:31Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "b0648898c008723771099749e068a15443e5a1cce2d9caf67549b905a00f69f4",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261117145740/https://trust.anthropic.com/resources",
+    "snapshot_ts": "20261117145740",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-860dce7cff4f5e89188c16a41828ee4f2ff40665",
+    "via": "spn2",
+    "requested_at": "2026-11-17T14:59:06Z",
+    "at": "2026-11-17T14:59:16Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T14:59:21Z"
+  }
+}

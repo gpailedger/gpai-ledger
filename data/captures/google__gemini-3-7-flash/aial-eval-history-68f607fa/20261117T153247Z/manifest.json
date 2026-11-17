@@ -1,0 +1,38 @@
+{
+  "source_id": "google/gemini-3-7-flash",
+  "provider": "Google",
+  "model": "Gemini 3.7 Flash",
+  "target_kind": "aial-eval-history",
+  "sha256": "b02e67a3756ce739e82388689a2321acedc69964063907d7ab16b9f72b921446",
+  "size_bytes": 3816,
+  "stored_as": "raw.yaml",
+  "text_sha256": "a39392f475a4a79abe72a6f0192def353fd9bbcdb6ccb17266d0a68204101102",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/google-gemini-3.7-flash.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/google-gemini-3.7-flash.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"d8afae215d5ad01fbf7e697966b678dfed7805f6327db050ef8393e43e04c9b8\"",
+    "last_modified": null,
+    "content_length": "562",
+    "fetched_at": "2026-11-17T15:32:47Z"
+  },
+  "prior_sha256": "a71a85f12f4506d921f93c704dba1c79c3b8978558bcab5f29bfcc9750f5f0ad",
+  "git_commit": "cc2352440587c2866f34260de64bfee74c9d6778",
+  "git_commit_date": "2026-11-17T09:30:31Z",
+  "git_blob_sha": "ccaa0d101fa69e7f156ade9ad28c0634e3201f78",
+  "git_path": "evals/google-gemini-3.7-flash.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:32:52Z"
+  }
+}

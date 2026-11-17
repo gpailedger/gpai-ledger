@@ -1,0 +1,38 @@
+{
+  "source_id": "google/veo-3-1",
+  "provider": "Google",
+  "model": "Veo 3.1",
+  "target_kind": "aial-eval-history",
+  "sha256": "e6921026a7c1ca454c17e701097a33c57682bf74b9af39af8d3c228bdf47a734",
+  "size_bytes": 3784,
+  "stored_as": "raw.yaml",
+  "text_sha256": "627647d480200b5ca6d1d62ab53418b68f9caee37dc6c6201788e3c177372971",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/veo-3-1.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/veo-3-1.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"28119db1151a7260580d712b74614a54a7f8667a952a26174a516d66448924a6\"",
+    "last_modified": null,
+    "content_length": "546",
+    "fetched_at": "2026-11-17T15:33:35Z"
+  },
+  "prior_sha256": "59c0b37894d37437cd9ebb01c20d3523ed943d8ae09abe124d05e271fed7786e",
+  "git_commit": "cc2352440587c2866f34260de64bfee74c9d6778",
+  "git_commit_date": "2026-11-17T09:30:31Z",
+  "git_blob_sha": "f6e0a43e3389f9eb173c63307bbd76227e4bbf6f",
+  "git_path": "evals/veo-3-1.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:33:41Z"
+  }
+}

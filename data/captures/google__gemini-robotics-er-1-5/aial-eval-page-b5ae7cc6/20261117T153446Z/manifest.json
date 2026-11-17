@@ -1,0 +1,39 @@
+{
+  "source_id": "google/gemini-robotics-er-1-5",
+  "provider": "Google",
+  "model": "Gemini Robotics ER 1.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "b6e492655dfd70b345bf126609601c0ef426981352debdde7b7275c7b0ee1702",
+  "size_bytes": 11825,
+  "stored_as": "raw.html",
+  "text_sha256": "c3d3ec7a6cad7245dcd907a1c587129418449e3bc446f8c2e8f3004f1de6c573",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/public/evals/google-gemini-robotics-er-1.5/index.html",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/public/evals/google-gemini-robotics-er-1.5/index.html",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"f36905b321f472339889d2e91944ab5eda851b65c2407918b7c1829daaf7f9c0\"",
+    "last_modified": null,
+    "content_length": "2430",
+    "fetched_at": "2026-11-17T15:34:46Z"
+  },
+  "prior_sha256": "94d135f6c85fb15450f0f536376c7d659fce40b8ef703e25d7a5293ce179d415",
+  "git_commit": "cc2352440587c2866f34260de64bfee74c9d6778",
+  "git_commit_date": "2026-11-17T09:30:31Z",
+  "git_blob_sha": "e732f6cacff267e5f914e42cc2ae25d97d4a6c9c",
+  "git_path": "public/evals/google-gemini-robotics-er-1.5/index.html",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:34:50Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source_id": "google/gemini-3-5-flash-lite",
+  "provider": "Google",
+  "model": "Gemini 3.5 Flash Lite",
+  "target_kind": "aial-eval-history",
+  "sha256": "b61d228b05199a9f57e18d1b14628196b22a4dfb919f4b59eac52ba821fc9cc5",
+  "size_bytes": 3825,
+  "stored_as": "raw.yaml",
+  "text_sha256": "bd445b937449aafd5f1e87a9aa8c65efd698dfcdcfbb7bc3ab3a91b87a69ced8",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/google-gemini-3.5-flash-lite.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/cc2352440587c2866f34260de64bfee74c9d6778/evals/google-gemini-3.5-flash-lite.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"b08d0956d2773fc82cda157f4f842909f72f2348983fd05e0de19cf5b34af5fd\"",
+    "last_modified": null,
+    "content_length": "571",
+    "fetched_at": "2026-11-17T15:32:37Z"
+  },
+  "prior_sha256": "70ca93366867810a7619551caea9accd3ddd67ad130b35c608877788660c68b8",
+  "git_commit": "cc2352440587c2866f34260de64bfee74c9d6778",
+  "git_commit_date": "2026-11-17T09:30:31Z",
+  "git_blob_sha": "87bc791b310de14205b414aaa2fb0d5750521cf6",
+  "git_path": "evals/google-gemini-3.5-flash-lite.yaml",
+  "harvested_from": "upstream git history",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:32:41Z"
+  }
+}

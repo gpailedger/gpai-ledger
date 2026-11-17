@@ -1,0 +1,33 @@
+{
+  "source_id": "google/gemini-3-5-flash-cyber",
+  "provider": "Google",
+  "model": "Gemini 3.5 Flash Cyber",
+  "target_kind": "aial-eval",
+  "sha256": "7654ce10e28bdb5c68596453478b7e8e7a9c2cf3fe08e0cb94d8a6bf51f8430a",
+  "size_bytes": 3825,
+  "stored_as": "raw.yaml",
+  "text_sha256": "73304a0439cd6c71fd54c2cf5dfda27cef8da0b85934ae657a41949d98891139",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-3.5-flash-cyber.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/google-gemini-3.5-flash-cyber.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ff79aa9126533839d3ccf32e30e909383cff15023dc7aaa970ddb43637aed9db\"",
+    "last_modified": null,
+    "content_length": "576",
+    "fetched_at": "2026-11-17T15:12:17Z"
+  },
+  "prior_sha256": "4eebd4754b7e16c257213172ae6032c21d5c628b44573ad9553b2478e8981fe7",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:12:22Z"
+  }
+}

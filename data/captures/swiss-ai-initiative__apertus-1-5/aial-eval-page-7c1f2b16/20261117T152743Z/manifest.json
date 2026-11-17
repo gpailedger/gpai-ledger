@@ -1,0 +1,34 @@
+{
+  "source_id": "swiss-ai-initiative/apertus-1-5",
+  "provider": "Swiss AI Initiative",
+  "model": "Apertus v1.5",
+  "target_kind": "aial-eval-page",
+  "sha256": "983f3422a295703862b0923a2ab166be2f2fb826f5ac6be0ee94bb459a8d8ef4",
+  "size_bytes": 16940,
+  "stored_as": "raw.html",
+  "text_sha256": "1483bd61b210a0dcac19a0840db62ba26e9187a254a900b98423452b5f14a004",
+  "doc_links_sha256": "acc3cf6a253b67bae76315d6a4e1f6040887ccaa084c354f9a3bcc0d10d4a90b",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://aial.ie/research/gpai-training-transparency/evals/swissai-apertus-1-5/",
+    "final_url": "https://aial.ie/research/gpai-training-transparency/evals/swissai-apertus-1-5/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"ton6i3d2k\"",
+    "last_modified": "Tue, 17 Nov 2026 10:30:03 GMT",
+    "content_length": null,
+    "fetched_at": "2026-11-17T15:27:43Z"
+  },
+  "prior_sha256": "e5ee9e596f11c84b7c673721cc2ed066b252b251eef9b283b3c6b7f8f0cdc97f",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-17T15:27:51Z"
+  }
+}
