@@ -8316,6 +8316,34 @@
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:49Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261117T145731Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261119T144354Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261117T145731Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261119T144354Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:19Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-66991146::captures/anthropic__claude-mythos-preview/aial-eval-66991146/20260916T072605Z>captures/anthropic__claude-mythos-preview/aial-eval-66991146/20261102T135410Z": {
     "verdict": "changed",
     "similarity": 0.9982,
@@ -9202,6 +9230,34 @@
     "from_sha256": "b0648898c008723771099749e068a15443e5a1cce2d9caf67549b905a00f69f4",
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:49Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261117T145813Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261119T144513Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261117T145813Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261119T144513Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:19Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -10252,6 +10308,34 @@
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:49Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261117T145906Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261119T144548Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261117T145906Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261119T144548Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:20Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-ccf24ea3::captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20260916T072714Z>captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20261102T135449Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -11193,6 +11277,34 @@
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:50Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261117T145939Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261119T144613Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261117T145939Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261119T144613Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:20Z"
+  },
   "anthropic/claude-opus-5::aial-eval-5dbb196d::captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20260916T072732Z>captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20261102T135508Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -12133,6 +12245,34 @@
     "from_sha256": "b0648898c008723771099749e068a15443e5a1cce2d9caf67549b905a00f69f4",
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:50Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20261117T150009Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20261119T144653Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261117T150009Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261119T144653Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:20Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -13146,6 +13286,34 @@
     "from_sha256": "b0648898c008723771099749e068a15443e5a1cce2d9caf67549b905a00f69f4",
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:50Z"
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261117T150053Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261119T144741Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261117T150053Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261119T144741Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:20Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -14357,6 +14525,29 @@
     "to_sha256": "0b24f808bc0296a2497177a578847566c6cdbfb8e16734ebc6b6d746b301400a",
     "computed_at": "2026-11-15T13:44:31Z"
   },
+  "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20261115T132812Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20261119T151345Z": {
+    "verdict": "changed",
+    "similarity": 0.9998,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "in Search Ctrl K",
+        "new": "Search K Ctrl"
+      }
+    ],
+    "source": "anthropic/model-catalog",
+    "target": "watch-page-2536dd9f",
+    "from_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261115T132812Z",
+    "to_dir": "captures/anthropic__model-catalog/watch-page-2536dd9f/20261119T151345Z",
+    "from_sha256": "0b24f808bc0296a2497177a578847566c6cdbfb8e16734ebc6b6d746b301400a",
+    "to_sha256": "1b0c9ed030bc9a282a152cfac12c9dc15624007359d561c39ae3a8d7a9297ea9",
+    "computed_at": "2026-11-19T15:23:21Z"
+  },
   "anthropic/mythos5-1::aial-eval-038ecb30::captures/anthropic__mythos5-1/aial-eval-038ecb30/20260913T114727Z>captures/anthropic__mythos5-1/aial-eval-038ecb30/20261020T103011Z": {
     "verdict": "changed",
     "similarity": 0.9985,
@@ -14908,6 +15099,34 @@
     "from_sha256": "b0648898c008723771099749e068a15443e5a1cce2d9caf67549b905a00f69f4",
     "to_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "computed_at": "2026-11-17T15:38:51Z"
+  },
+  "anthropic/mythos5-1::provider-live-e8cea877::captures/anthropic__mythos5-1/provider-live-e8cea877/20261117T150126Z>captures/anthropic__mythos5-1/provider-live-e8cea877/20261119T144826Z": {
+    "verdict": "changed",
+    "similarity": 0.992,
+    "word_delta": 36,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Other Documents SOC 2",
+        "new": "Documents Other resources SOC"
+      },
+      {
+        "op": "insert",
+        "old": "Code CLI Opens in",
+        "new": "CLI Other resources Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Copy link for Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Request access Anthropic 2026 SOC 2 Bridge Letter November 2026 .pdf Opens"
+      }
+    ],
+    "source": "anthropic/mythos5-1",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261117T150126Z",
+    "to_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261119T144826Z",
+    "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
+    "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "computed_at": "2026-11-19T15:23:21Z"
   },
   "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
     "verdict": "changed",
@@ -29144,6 +29363,79 @@
     "to_sha256": "9ccfd98f53bf7cea00705f560dad1000f740d99c97763e71810455dd5d6310ff",
     "computed_at": "2026-11-18T15:10:24Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261118T144724Z>captures/huggingface__smollm3/provider-live-c6d71781/20261119T150008Z": {
+    "verdict": "changed",
+    "similarity": 0.9963,
+    "word_delta": 15,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 7.89M 1.36k",
+        "new": "20 7.7M 1.36k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.88M 797",
+        "new": "2025 3.94M 797"
+      },
+      {
+        "op": "replace",
+        "old": "2024 636k 2.79k",
+        "new": "2024 653k 2.79k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 185k 1.08k",
+        "new": "2025 173k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 414k 1.41k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 424k 1.42k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 231k 336",
+        "new": "3.02B 225k 336"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 66.8k 399 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 68.3k 400 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 55.3k 188",
+        "new": "8.61M 56.9k 188"
+      },
+      {
+        "op": "replace",
+        "old": "380M 51.8k 88",
+        "new": "380M 49.6k 88"
+      },
+      {
+        "op": "replace",
+        "old": "2024 23.4k 221 bigcode/the-stack-v2",
+        "new": "2024 18k 223 bigcode/the-stack-v2"
+      },
+      {
+        "op": "replace",
+        "old": "3 14.8k 681 Fetching",
+        "new": "3 15k 684 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261118T144724Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261119T150008Z",
+    "from_sha256": "9ccfd98f53bf7cea00705f560dad1000f740d99c97763e71810455dd5d6310ff",
+    "to_sha256": "3a7c35e8ed68f85dec9829201a6ee2e24f86d1e7d11d8c4576c6c506156fdbbd",
+    "computed_at": "2026-11-19T15:23:20Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
@@ -35577,6 +35869,29 @@
     "from_sha256": "869801ca91e80fff6ac520b5458b8cf88211f3c7dc5816647c53013b013cd1f2",
     "to_sha256": "6c23bc9829325a9e841a0041bbe7c5ada356ae484b181d7a7e9af917f366d092",
     "computed_at": "2026-11-18T15:10:24Z"
+  },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261118T150246Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261119T151422Z": {
+    "verdict": "changed",
+    "similarity": 0.999,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Arena ELO scores",
+        "new": "Arena Elo scores"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261118T150246Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261119T151422Z",
+    "from_sha256": "6c23bc9829325a9e841a0041bbe7c5ada356ae484b181d7a7e9af917f366d092",
+    "to_sha256": "d4939c9f9c5ecb13ea2b65a5064e1f292a17d47fb39cdd3a78c658180e0e891a",
+    "computed_at": "2026-11-19T15:23:21Z"
   },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
@@ -49907,6 +50222,29 @@
     "from_sha256": "a2bfa962f8ed746dce7080d9fca841dcb24ac7ad2b10cb6a8c5ac30459355770",
     "to_sha256": "21a5f210d9b94b1b6d418095f36ea3a99ce7a2bc027c173144a77f12ae26eaec",
     "computed_at": "2026-11-06T13:46:15Z"
+  },
+  "thinking-machines/inkling-small::provider-live-2deffce3::captures/thinking-machines__inkling-small/provider-live-2deffce3/20261106T133743Z>captures/thinking-machines__inkling-small/provider-live-2deffce3/20261119T151236Z": {
+    "verdict": "changed",
+    "similarity": 0.999,
+    "word_delta": 2,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "Overview Docs Company",
+        "new": "Overview Docs Status Company"
+      }
+    ],
+    "source": "thinking-machines/inkling-small",
+    "target": "provider-live-2deffce3",
+    "from_dir": "captures/thinking-machines__inkling-small/provider-live-2deffce3/20261106T133743Z",
+    "to_dir": "captures/thinking-machines__inkling-small/provider-live-2deffce3/20261119T151236Z",
+    "from_sha256": "21a5f210d9b94b1b6d418095f36ea3a99ce7a2bc027c173144a77f12ae26eaec",
+    "to_sha256": "fcfcb5ccdf587e23ec03c25c2b3ebd5cee6bedcb7503cee06610bfb9fd8e3cbb",
+    "computed_at": "2026-11-19T15:23:20Z"
   },
   "thinking-machines/inkling::aial-eval-b530c012::captures/thinking-machines__inkling/aial-eval-b530c012/20260916T075843Z>captures/thinking-machines__inkling/aial-eval-b530c012/20261102T142451Z": {
     "verdict": "changed",
