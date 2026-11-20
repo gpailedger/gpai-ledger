@@ -8344,6 +8344,34 @@
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:19Z"
   },
+  "anthropic/claude-mythos-5-fable-5::provider-live-e8cea877::captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261119T144354Z>captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261120T142557Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-mythos-5-fable-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261119T144354Z",
+    "to_dir": "captures/anthropic__claude-mythos-5-fable-5/provider-live-e8cea877/20261120T142557Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:43Z"
+  },
   "anthropic/claude-mythos-preview::aial-eval-66991146::captures/anthropic__claude-mythos-preview/aial-eval-66991146/20260916T072605Z>captures/anthropic__claude-mythos-preview/aial-eval-66991146/20261102T135410Z": {
     "verdict": "changed",
     "similarity": 0.9982,
@@ -9258,6 +9286,34 @@
     "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:19Z"
+  },
+  "anthropic/claude-mythos-preview::provider-live-e8cea877::captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261119T144513Z>captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261120T142709Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-mythos-preview",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261119T144513Z",
+    "to_dir": "captures/anthropic__claude-mythos-preview/provider-live-e8cea877/20261120T142709Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:43Z"
   },
   "anthropic/claude-opus-4-1::aial-eval-page-d8efef16::captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T103131Z>captures/anthropic__claude-opus-4-1/aial-eval-page-d8efef16/20260831T111139Z": {
     "verdict": "identical-text",
@@ -10336,6 +10392,34 @@
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:20Z"
   },
+  "anthropic/claude-opus-4-7::provider-live-e8cea877::captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261119T144548Z>captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261120T142747Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-7",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261119T144548Z",
+    "to_dir": "captures/anthropic__claude-opus-4-7/provider-live-e8cea877/20261120T142747Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:44Z"
+  },
   "anthropic/claude-opus-4-8::aial-eval-ccf24ea3::captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20260916T072714Z>captures/anthropic__claude-opus-4-8/aial-eval-ccf24ea3/20261102T135449Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -11305,6 +11389,34 @@
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:20Z"
   },
+  "anthropic/claude-opus-4-8::provider-live-e8cea877::captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261119T144613Z>captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261120T142815Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-4-8",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261119T144613Z",
+    "to_dir": "captures/anthropic__claude-opus-4-8/provider-live-e8cea877/20261120T142815Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:44Z"
+  },
   "anthropic/claude-opus-5::aial-eval-5dbb196d::captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20260916T072732Z>captures/anthropic__claude-opus-5/aial-eval-5dbb196d/20261102T135508Z": {
     "verdict": "changed",
     "similarity": 0.9964,
@@ -12273,6 +12385,34 @@
     "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:20Z"
+  },
+  "anthropic/claude-opus-5::provider-live-e8cea877::captures/anthropic__claude-opus-5/provider-live-e8cea877/20261119T144653Z>captures/anthropic__claude-opus-5/provider-live-e8cea877/20261120T142849Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-opus-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261119T144653Z",
+    "to_dir": "captures/anthropic__claude-opus-5/provider-live-e8cea877/20261120T142849Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:44Z"
   },
   "anthropic/claude-sonnet-4-5::aial-eval-page-f97f1e34::captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T103210Z>captures/anthropic__claude-sonnet-4-5/aial-eval-page-f97f1e34/20260831T111221Z": {
     "verdict": "identical-text",
@@ -13314,6 +13454,34 @@
     "from_sha256": "f4fb6f152ddef3069433a00e47cc92d453072288481266b382a662f5aedd1cb2",
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:20Z"
+  },
+  "anthropic/claude-sonnet-5::provider-live-e8cea877::captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261119T144741Z>captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261120T142930Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/claude-sonnet-5",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261119T144741Z",
+    "to_dir": "captures/anthropic__claude-sonnet-5/provider-live-e8cea877/20261120T142930Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:44Z"
   },
   "anthropic/model-catalog::watch-page-2536dd9f::captures/anthropic__model-catalog/watch-page-2536dd9f/20260819T150334Z>captures/anthropic__model-catalog/watch-page-2536dd9f/20260821T111045Z": {
     "verdict": "changed",
@@ -15128,6 +15296,34 @@
     "to_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
     "computed_at": "2026-11-19T15:23:21Z"
   },
+  "anthropic/mythos5-1::provider-live-e8cea877::captures/anthropic__mythos5-1/provider-live-e8cea877/20261119T144826Z>captures/anthropic__mythos5-1/provider-live-e8cea877/20261120T143010Z": {
+    "verdict": "changed",
+    "similarity": 0.9927,
+    "word_delta": 30,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Guide v2.1 View",
+        "new": "Guide v2.2 View"
+      },
+      {
+        "op": "delete",
+        "old": "Claude Cowork and Unified Claude Security Best Practices Copy link for Claude Cowork and Unified Claude Security Best Practices v1.3 View Claude Cowork and Unified Claude Security Best Practices Claude Cowork",
+        "new": "Whitepaper Claude Cowork"
+      }
+    ],
+    "source": "anthropic/mythos5-1",
+    "target": "provider-live-e8cea877",
+    "from_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261119T144826Z",
+    "to_dir": "captures/anthropic__mythos5-1/provider-live-e8cea877/20261120T143010Z",
+    "from_sha256": "bd4b5db72a2e33c73ddfe055d6ec27942e896a30ead2b90fb4f58b47e10ca14b",
+    "to_sha256": "62182add12e765aaf36a5b062d2521ba89f3c90d24031111c252598a26febe9d",
+    "computed_at": "2026-11-20T15:08:45Z"
+  },
   "anthropic/trust-center-bundle::provider-live-9af5dc02::captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260819T202531Z>captures/anthropic__trust-center-bundle/provider-live-9af5dc02/20260902T061659Z": {
     "verdict": "changed",
     "similarity": 0.9204,
@@ -16085,6 +16281,54 @@
     "from_sha256": "467c340ca16ee8ff94b342a3e5d2018718b47a4a72df75d2eb1a9fe9ea2ea7b9",
     "to_sha256": "739f241f1dc9b102fc1cca66cac05c8fbf621a8d2b9e76de08ccc465db183d64",
     "computed_at": "2026-10-30T12:10:08Z"
+  },
+  "black-forest-labs/flux-3::provider-live-83752ad3::captures/black-forest-labs__flux-3/provider-live-83752ad3/20261030T114707Z>captures/black-forest-labs__flux-3/provider-live-83752ad3/20261120T143424Z": {
+    "verdict": "changed",
+    "similarity": 0.8961,
+    "word_delta": 73,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Forest Labs Models Research API Customize our models Pricing Resources Contact Sales",
+        "new": "Forest Labs Research Research Enterprise Enterprise Dev Dev Pricing Pricing Resources Resources Resources Blog News, launches and deep dives Creator program Make things with us Dashboard Keys, usage and billing Help desk Support and answers Company About us Who we are Careers Join our team Trust and"
+      },
+      {
+        "op": "replace",
+        "old": "2026 Hide PDF FLUX",
+        "new": "2026 View PDF"
+      },
+      {
+        "op": "replace",
+        "old": "Help Desk Blog",
+        "new": "Help desk Blog"
+      },
+      {
+        "op": "replace",
+        "old": "Creator Program Brand",
+        "new": "Creator program Brand"
+      },
+      {
+        "op": "replace",
+        "old": "About Us Careers",
+        "new": "About us Careers"
+      },
+      {
+        "op": "replace",
+        "old": "and Security Contact Us ISO",
+        "new": "and security Contact us ISO"
+      }
+    ],
+    "source": "black-forest-labs/flux-3",
+    "target": "provider-live-83752ad3",
+    "from_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261030T114707Z",
+    "to_dir": "captures/black-forest-labs__flux-3/provider-live-83752ad3/20261120T143424Z",
+    "from_sha256": "739f241f1dc9b102fc1cca66cac05c8fbf621a8d2b9e76de08ccc465db183d64",
+    "to_sha256": "23b738a0c99393d53f42af16625479a6706a6db7049fc8259ad725955eeb6442",
+    "computed_at": "2026-11-20T15:08:44Z"
   },
   "bria-ai/bria::aial-eval-61fc240e::captures/bria-ai__bria/aial-eval-61fc240e/20260916T073106Z>captures/bria-ai__bria/aial-eval-61fc240e/20260930T113209Z": {
     "verdict": "changed",
@@ -25161,6 +25405,19 @@
     "to_sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
     "computed_at": "2026-11-14T12:58:17Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z>captures/google__transparency-bucket/watch-page-81cd3682/20261120T150214Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261114T125438Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261120T150214Z",
+    "from_sha256": "7bc253434f4e9d77fdefcef1964208a3ef0a8737201e83541388e61b70f7f612",
+    "to_sha256": "d568356443ebe666923c89fdbedc31b38f1c38ba963074a7d4ed7200cd94c298",
+    "computed_at": "2026-11-20T15:08:45Z"
+  },
   "google/veo-3-1::aial-eval-3021560e::captures/google__veo-3-1/aial-eval-3021560e/20260829T143404Z>captures/google__veo-3-1/aial-eval-3021560e/20261117T152829Z": {
     "verdict": "changed",
     "similarity": 0.9968,
@@ -29435,6 +29692,79 @@
     "from_sha256": "9ccfd98f53bf7cea00705f560dad1000f740d99c97763e71810455dd5d6310ff",
     "to_sha256": "3a7c35e8ed68f85dec9829201a6ee2e24f86d1e7d11d8c4576c6c506156fdbbd",
     "computed_at": "2026-11-19T15:23:20Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261119T150008Z>captures/huggingface__smollm3/provider-live-c6d71781/20261120T144241Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 14,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "insert",
+        "old": "20 7.7M 1.36k",
+        "new": "20 7.57M 1.36k"
+      },
+      {
+        "op": "delete",
+        "old": "2025 3.94M 797",
+        "new": "26, 2025 4M 797"
+      },
+      {
+        "op": "replace",
+        "old": "2024 653k 2.79k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 656k 2.8k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 173k 1.08k",
+        "new": "2025 161k 1.08k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 424k 1.42k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 448k 1.43k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 225k 336",
+        "new": "3.02B 233k 336"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 68.3k 400",
+        "new": "48.3M 69.3k 400"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 56.9k 188",
+        "new": "8.61M 57.4k 188"
+      },
+      {
+        "op": "replace",
+        "old": "49.6k 88 allenai/peS2o",
+        "new": "49.6k 89 allenai/peS2o"
+      },
+      {
+        "op": "insert",
+        "old": "2024 18k 223",
+        "new": "2024 18.7k 223"
+      },
+      {
+        "op": "replace",
+        "old": "3 15k 684 Fetching",
+        "new": "3 15.3k 695 Fetching"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261119T150008Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261120T144241Z",
+    "from_sha256": "3a7c35e8ed68f85dec9829201a6ee2e24f86d1e7d11d8c4576c6c506156fdbbd",
+    "to_sha256": "8a55a19d0b697a0151ec5869db148225861e87ee06ecc27c52bad899c62e10a3",
+    "computed_at": "2026-11-20T15:08:45Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -35893,6 +36223,29 @@
     "to_sha256": "d4939c9f9c5ecb13ea2b65a5064e1f292a17d47fb39cdd3a78c658180e0e891a",
     "computed_at": "2026-11-19T15:23:21Z"
   },
+  "microsoft/model-catalog::watch-page-72b310dd::captures/microsoft__model-catalog/watch-page-72b310dd/20261119T151422Z>captures/microsoft__model-catalog/watch-page-72b310dd/20261120T150125Z": {
+    "verdict": "changed",
+    "similarity": 0.9975,
+    "word_delta": 4,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "Signal blog Official",
+        "new": "Signal magazine AI in Action Official"
+      }
+    ],
+    "source": "microsoft/model-catalog",
+    "target": "watch-page-72b310dd",
+    "from_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261119T151422Z",
+    "to_dir": "captures/microsoft__model-catalog/watch-page-72b310dd/20261120T150125Z",
+    "from_sha256": "d4939c9f9c5ecb13ea2b65a5064e1f292a17d47fb39cdd3a78c658180e0e891a",
+    "to_sha256": "105b01a3254ae8a539c5c49babe0850accf7d696e2a1877a33191c487f831f84",
+    "computed_at": "2026-11-20T15:08:45Z"
+  },
   "microsoft/phi-1-5::live-vs-archive::captures/microsoft__phi-1-5/aial-archive-73814f64/20260913T123516Z>captures/microsoft__phi-1-5/provider-live-9f089f58/20260913T123454Z": {
     "verdict": "changed",
     "similarity": 0.9995,
@@ -37424,6 +37777,42 @@
     "computed_at": "2026-11-02T14:54:21Z",
     "changes_withheld": true
   },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::aial-eval-6f7faf35::captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20261102T140341Z>captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20261120T143903Z": {
+    "verdict": "changed",
+    "similarity": 0.9964,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+    "target": "aial-eval-6f7faf35",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20261102T140341Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-6f7faf35/20261120T143903Z",
+    "from_sha256": "3680a5c31fdfa1bf788d425c77b3c482ec38894c04cf667f899f34de78de710a",
+    "to_sha256": "3d5ef1a159e7aab54d992f1c449e0e9f4e9d59f4fe406a6877cb6ba85c704903",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes_withheld": true
+  },
+  "ministry-of-digital-affairs-of-poland/pllum-instruct::aial-eval-history-6f7faf35::captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-history-6f7faf35/20261102T144735Z>captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-history-6f7faf35/20261120T150453Z": {
+    "verdict": "changed",
+    "similarity": 0.9964,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+    "target": "aial-eval-history-6f7faf35",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-history-6f7faf35/20261102T144735Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum-instruct/aial-eval-history-6f7faf35/20261120T150453Z",
+    "from_sha256": "3680a5c31fdfa1bf788d425c77b3c482ec38894c04cf667f899f34de78de710a",
+    "to_sha256": "3d5ef1a159e7aab54d992f1c449e0e9f4e9d59f4fe406a6877cb6ba85c704903",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes_withheld": true
+  },
   "ministry-of-digital-affairs-of-poland/pllum::aial-eval-492042ce::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20260913T115649Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20261102T140352Z": {
     "verdict": "changed",
     "similarity": 0.9174,
@@ -37442,6 +37831,24 @@
     "computed_at": "2026-11-02T14:54:21Z",
     "changes_withheld": true
   },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-492042ce::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20261102T140352Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20261120T143918Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "ministry-of-digital-affairs-of-poland/pllum",
+    "target": "aial-eval-492042ce",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20261102T140352Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-492042ce/20261120T143918Z",
+    "from_sha256": "bf40ae39eec7d92854a784b78a86711c361aaeef89720f7782a0c0e76fd26556",
+    "to_sha256": "3f7b2d22860881f857831fcad6a350d60047cbc98c983d2a52c1925835f2ce27",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes_withheld": true
+  },
   "ministry-of-digital-affairs-of-poland/pllum::aial-eval-history-492042ce::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261102T143522Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261102T144739Z": {
     "verdict": "changed",
     "similarity": 0.9316,
@@ -37458,6 +37865,24 @@
     "from_sha256": "7cfe647f1bf37e8896a1e1dac66891b3282b7fd34efb6dd6a3885672c5e8e79d",
     "to_sha256": "bf40ae39eec7d92854a784b78a86711c361aaeef89720f7782a0c0e76fd26556",
     "computed_at": "2026-11-02T14:54:30Z",
+    "changes_withheld": true
+  },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-history-492042ce::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261102T144739Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261120T150457Z": {
+    "verdict": "changed",
+    "similarity": 0.9973,
+    "word_delta": 1,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "ministry-of-digital-affairs-of-poland/pllum",
+    "target": "aial-eval-history-492042ce",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261102T144739Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-492042ce/20261120T150457Z",
+    "from_sha256": "bf40ae39eec7d92854a784b78a86711c361aaeef89720f7782a0c0e76fd26556",
+    "to_sha256": "3f7b2d22860881f857831fcad6a350d60047cbc98c983d2a52c1925835f2ce27",
+    "computed_at": "2026-11-20T15:08:45Z",
     "changes_withheld": true
   },
   "ministry-of-digital-affairs-of-poland/pllum::aial-eval-history-bdf9cd7e::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-bdf9cd7e/20260829T190541Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-history-bdf9cd7e/20260829T190548Z": {
@@ -37494,6 +37919,42 @@
     "from_sha256": "868c48a33b9b2aeecc10409778710f7c6cb6ea265537eaab7c8300919b3261d9",
     "to_sha256": "e80905e16c50eea9323e4af399d19e95331c8b831554a436886c6dde57eab93d",
     "computed_at": "2026-11-02T14:54:21Z",
+    "changes_withheld": true
+  },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-page-e4ead764::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-e4ead764/20261102T143952Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-e4ead764/20261120T150505Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "ministry-of-digital-affairs-of-poland/pllum",
+    "target": "aial-eval-page-e4ead764",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-e4ead764/20261102T143952Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-e4ead764/20261120T150505Z",
+    "from_sha256": "e80905e16c50eea9323e4af399d19e95331c8b831554a436886c6dde57eab93d",
+    "to_sha256": "29ea00af55f3d36896d2387d002992bd29675865df113f58071f0e5b57ce5ac8",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes": [],
+    "changes_withheld": true
+  },
+  "ministry-of-digital-affairs-of-poland/pllum::aial-eval-page-eb110d7a::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-eb110d7a/20261102T143957Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-eb110d7a/20261120T150509Z": {
+    "verdict": "identical-text",
+    "similarity": 1.0,
+    "word_delta": 0,
+    "moved_words": 0,
+    "same_tool": false,
+    "compared_via": "stored extracts",
+    "rule": "identity-v4",
+    "source": "ministry-of-digital-affairs-of-poland/pllum",
+    "target": "aial-eval-page-eb110d7a",
+    "from_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-eb110d7a/20261102T143957Z",
+    "to_dir": "captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-eb110d7a/20261120T150509Z",
+    "from_sha256": "e80905e16c50eea9323e4af399d19e95331c8b831554a436886c6dde57eab93d",
+    "to_sha256": "29ea00af55f3d36896d2387d002992bd29675865df113f58071f0e5b57ce5ac8",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes": [],
     "changes_withheld": true
   },
   "ministry-of-digital-affairs-of-poland/pllum::aial-eval-page-fc5a9ad1::captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-fc5a9ad1/20260831T110931Z>captures/ministry-of-digital-affairs-of-poland__pllum/aial-eval-page-fc5a9ad1/20260831T110946Z": {
@@ -46456,6 +46917,74 @@
     "to_sha256": "68ea415aded5deb14d5012bbe1988136f4dc5bacc6323baded77685c63d2d5f4",
     "computed_at": "2026-11-18T15:10:24Z"
   },
+  "openai/model-catalog::watch-page-0e5ba652::captures/openai__model-catalog/watch-page-0e5ba652/20261118T150214Z>captures/openai__model-catalog/watch-page-0e5ba652/20261120T145950Z": {
+    "verdict": "changed",
+    "similarity": 0.9882,
+    "word_delta": 53,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "delete",
+        "old": "ChatGPT Start searching API",
+        "new": "URL. ChatGPT API Dashboard"
+      },
+      {
+        "op": "replace",
+        "old": "Try ChatGPT Theme Light Dark System Home API",
+        "new": "ChatGPT Language Loading languages Theme Theme Home"
+      },
+      {
+        "op": "delete",
+        "old": "Resources Theme Light Dark System Search",
+        "new": "Resources Resources Search docs"
+      },
+      {
+        "op": "insert",
+        "old": "Flex processing Safety and",
+        "new": "processing Reserved Tier Safety"
+      },
+      {
+        "op": "insert",
+        "old": "posts Recent Securing persistent",
+        "new": "Recent Prompting GPT-Live for languages and regional accents Securing"
+      },
+      {
+        "op": "delete",
+        "old": "providers Maintaining software with the GPT-6 family Topics",
+        "new": "model providers Topics General"
+      },
+      {
+        "op": "replace",
+        "old": "generation Realtime Models for",
+        "new": "generation Voice and speech Models"
+      },
+      {
+        "op": "replace",
+        "old": "GPT-Live-1 Our premier model for natural, expressive voice conversations with smooth interruption handling. GPT-Realtime-2.1",
+        "new": "translation GPT-Live-1.1 Full-duplex voice model for multilingual conversations. GPT-Realtime-2.1 Reasoning"
+      },
+      {
+        "op": "delete",
+        "old": "tool use GPT-Realtime-2 Reasoning model with tool use",
+        "new": "tool use GPT-Realtime-Translate"
+      },
+      {
+        "op": "delete",
+        "old": "model GPT-Realtime-1.5 The best voice model for audio in, audio out Transcription",
+        "new": "translation model Transcription Models"
+      }
+    ],
+    "source": "openai/model-catalog",
+    "target": "watch-page-0e5ba652",
+    "from_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261118T150214Z",
+    "to_dir": "captures/openai__model-catalog/watch-page-0e5ba652/20261120T145950Z",
+    "from_sha256": "68ea415aded5deb14d5012bbe1988136f4dc5bacc6323baded77685c63d2d5f4",
+    "to_sha256": "f8c497fc6cba39d6eee22d6ff985cd9f9180dd667d468895ca6c035456e2e68e",
+    "computed_at": "2026-11-20T15:08:45Z"
+  },
   "openai/sora-2::aial-eval-page-971e3a11::captures/openai__sora-2/aial-eval-page-971e3a11/20260831T095613Z>captures/openai__sora-2/aial-eval-page-971e3a11/20260831T100417Z": {
     "verdict": "changed",
     "similarity": 0.9976,
@@ -47831,6 +48360,24 @@
     "computed_at": "2026-11-17T15:38:52Z",
     "changes_withheld": true
   },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-f0661242::captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261117T152736Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261120T145816Z": {
+    "verdict": "changed",
+    "similarity": 0.8705,
+    "word_delta": 136,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-f0661242",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261117T152736Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-f0661242/20261120T145816Z",
+    "from_sha256": "7c67b781c9da37acab895aecd42ac4d7904da2e4bbe9710562fc8dd0e7ee8177",
+    "to_sha256": "7ba201d398724f4cf06d7262d49d06f9767d553b3e25f177c69a00b083de003c",
+    "computed_at": "2026-11-20T15:08:45Z",
+    "changes_withheld": true
+  },
   "swiss-ai-initiative/apertus-1-5::aial-eval-history-c62d0ee4::captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T185726Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20260829T190527Z": {
     "verdict": "changed",
     "similarity": 0.8485,
@@ -47919,6 +48466,24 @@
     "from_sha256": "2846a8f24ed2300a6234e25b722e4a217665ea52d9bed47c518e549e90102471",
     "to_sha256": "7c67b781c9da37acab895aecd42ac4d7904da2e4bbe9710562fc8dd0e7ee8177",
     "computed_at": "2026-11-17T15:38:51Z",
+    "changes_withheld": true
+  },
+  "swiss-ai-initiative/apertus-1-5::aial-eval-history-c62d0ee4::captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261117T153155Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261120T150514Z": {
+    "verdict": "changed",
+    "similarity": 0.8705,
+    "word_delta": 136,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with no extractor for .yaml",
+    "rule": "identity-v4",
+    "changes": [],
+    "source": "swiss-ai-initiative/apertus-1-5",
+    "target": "aial-eval-history-c62d0ee4",
+    "from_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261117T153155Z",
+    "to_dir": "captures/swiss-ai-initiative__apertus-1-5/aial-eval-history-c62d0ee4/20261120T150514Z",
+    "from_sha256": "7c67b781c9da37acab895aecd42ac4d7904da2e4bbe9710562fc8dd0e7ee8177",
+    "to_sha256": "7ba201d398724f4cf06d7262d49d06f9767d553b3e25f177c69a00b083de003c",
+    "computed_at": "2026-11-20T15:08:45Z",
     "changes_withheld": true
   },
   "swiss-ai-initiative/apertus-1-5::aial-eval-page-208c3242::captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-208c3242/20260831T105747Z>captures/swiss-ai-initiative__apertus-1-5/aial-eval-page-208c3242/20260831T110911Z": {

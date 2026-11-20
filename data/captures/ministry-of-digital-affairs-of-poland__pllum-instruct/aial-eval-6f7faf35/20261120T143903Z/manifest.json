@@ -1,0 +1,33 @@
+{
+  "source_id": "ministry-of-digital-affairs-of-poland/pllum-instruct",
+  "provider": "Ministry of Digital Affairs of Poland",
+  "model": "PLLuM-12B-instruct-2512",
+  "target_kind": "aial-eval",
+  "sha256": "3d5ef1a159e7aab54d992f1c449e0e9f4e9d59f4fe406a6877cb6ba85c704903",
+  "size_bytes": 3614,
+  "stored_as": "raw.yaml",
+  "text_sha256": "7adf88abd305af6a3e80153598fe9f9ae5e9f2a32bccc0d91783bd0788487c76",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cyfragolvpl_pllum-instruct.yaml",
+    "final_url": "https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/main/evals/cyfragolvpl_pllum-instruct.yaml",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "etag": "W/\"ff341de374ee0c05838261fd99493d228ae8289b52d1aae718bd0cbb5429a5ee\"",
+    "last_modified": null,
+    "content_length": "439",
+    "fetched_at": "2026-11-20T14:39:03Z"
+  },
+  "prior_sha256": "3680a5c31fdfa1bf788d425c77b3c482ec38894c04cf667f899f34de78de710a",
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-20T14:39:08Z"
+  }
+}

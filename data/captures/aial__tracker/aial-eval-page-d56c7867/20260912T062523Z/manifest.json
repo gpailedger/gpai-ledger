@@ -37,11 +37,17 @@
     "at": "2026-09-12T06:25:26Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261120150643/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/de4ce42e6d48cdc2baf75200ac94b221a72016ae/public/evals/nvidia-nemotron3.5/index.html",
+    "snapshot_ts": "20261120150643",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-279a31afd24ea4bfe28f3f98da8c915d389fa65a",
     "via": "spn2",
-    "requested_at": "2026-11-19T15:17:40Z",
-    "at": "2026-11-19T15:18:04Z"
+    "requested_at": "2026-11-20T15:05:34Z",
+    "at": "2026-11-20T15:06:43Z"
   },
   "wayback_attempts": [
     {
@@ -50,6 +56,13 @@
       "via": "spn2",
       "requested_at": "2026-11-18T15:09:39Z",
       "at": "2026-11-18T15:09:54Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "via": "spn2",
+      "requested_at": "2026-11-19T15:17:40Z",
+      "at": "2026-11-19T15:18:04Z"
     }
   ]
 }
