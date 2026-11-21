@@ -1,0 +1,53 @@
+{
+  "source_id": "thinking-machines/inkling-small",
+  "provider": "Thinking Machines",
+  "model": "Inkling Small",
+  "target_kind": "provider-live",
+  "sha256": "30b572f42ebd26dcc67371e6fcd1ad52d790d465c0f132a2c03f1c8ab11dd954",
+  "size_bytes": 68096,
+  "stored_as": "raw.html",
+  "text_sha256": "3bfa166ffbc89a261c3346bb4dfbd7c035556d729712c6b5ad8378c062b5d72b",
+  "doc_links_sha256": "79cbf1c92e6b919a3ac2a0cdec6960ccb045c2c0238870bd48901526475c6056",
+  "extraction_notes": [],
+  "http": {
+    "url": "https://thinkingmachines.ai/training-data-documentation/",
+    "final_url": "https://thinkingmachines.ai/training-data-documentation/",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "68096",
+    "fetched_at": "2026-11-21T14:14:29Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "fcfcb5ccdf587e23ec03c25c2b3ebd5cee6bedcb7503cee06610bfb9fd8e3cbb",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261121141515/https://thinkingmachines.ai/training-data-documentation/",
+    "snapshot_ts": "20261121141515",
+    "fresh": true,
+    "same_url": true,
+    "job_id": "spn2-6f0cad17d4bf7681235a69e1e0fe5c8d5c9d03af",
+    "via": "spn2",
+    "requested_at": "2026-11-21T14:14:29Z",
+    "at": "2026-11-21T14:15:29Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-21T14:15:33Z"
+  }
+}

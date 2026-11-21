@@ -37,12 +37,17 @@
     "at": "2026-09-12T06:34:10Z"
   },
   "wayback": {
-    "ok": false,
-    "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-9076dc39ff5a36722ef3292aecb59de14f88d60e (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261121142007/https://raw.githubusercontent.com/AIAccountabilityLab/gpai-training-transparency/40ed45d5cdd76319e1ea94d0f42b2cb35eee7dfa/public/evals/nvidia-nemotron3.5/index.html",
+    "snapshot_ts": "20261121142007",
+    "fresh": true,
+    "same_url": true,
     "job_id": "spn2-9076dc39ff5a36722ef3292aecb59de14f88d60e",
     "via": "spn2",
-    "requested_at": "2026-11-20T15:06:55Z",
-    "at": "2026-11-20T15:07:26Z"
+    "requested_at": "2026-11-21T14:20:06Z",
+    "at": "2026-11-21T14:20:12Z"
   },
   "wayback_attempts": [
     {
@@ -51,6 +56,14 @@
       "via": "spn2",
       "requested_at": "2026-11-19T15:18:16Z",
       "at": "2026-11-19T15:20:16Z"
+    },
+    {
+      "ok": false,
+      "error": "ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'web.archive.org\\', port=443): Max retries exceeded with url: /save/status/spn2-9076dc39ff5a36722ef3292aecb59de14f88d60e (Caused by NewConnectionError(\"HTTPSConnection(host=\\'web.archive.org\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))'))",
+      "job_id": "spn2-9076dc39ff5a36722ef3292aecb59de14f88d60e",
+      "via": "spn2",
+      "requested_at": "2026-11-20T15:06:55Z",
+      "at": "2026-11-20T15:07:26Z"
     }
   ]
 }
