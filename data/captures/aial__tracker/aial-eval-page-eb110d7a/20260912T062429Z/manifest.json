@@ -35,5 +35,13 @@
     ],
     "errors": [],
     "at": "2026-09-12T06:24:33Z"
+  },
+  "wayback": {
+    "ok": false,
+    "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /save/status/spn2-21b592fb5ca833d0e7b9e129ce9fed0e81e65a08 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7833e6852cf0>, 'Connection to web.archive.org timed out. (connect timeout=120)'))\"))",
+    "job_id": "spn2-21b592fb5ca833d0e7b9e129ce9fed0e81e65a08",
+    "via": "spn2",
+    "requested_at": "2026-11-22T14:10:16Z",
+    "at": "2026-11-22T14:12:22Z"
   }
 }
