@@ -30198,6 +30198,74 @@
     "to_sha256": "d217a9c35deceb3dfe221f31aaea486c18d10f2151ebdb4c3a74f8c439c7b68f",
     "computed_at": "2026-11-22T14:20:50Z"
   },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261122T135109Z>captures/huggingface__smollm3/provider-live-c6d71781/20261123T164406Z": {
+    "verdict": "changed",
+    "similarity": 0.9979,
+    "word_delta": 12,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 7.25M 1.36k",
+        "new": "20 7.12M 1.36k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.79M 798",
+        "new": "2025 3.68M 798"
+      },
+      {
+        "op": "replace",
+        "old": "2025 136k 1.09k",
+        "new": "2025 123k 1.09k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 460k 1.45k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 465k 1.46k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 233k 337",
+        "new": "3.02B 231k 337"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 70.1k 400",
+        "new": "48.3M 70.3k 400"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 61.2k 188",
+        "new": "8.61M 63.6k 188"
+      },
+      {
+        "op": "replace",
+        "old": "380M 49.3k 89",
+        "new": "380M 48.9k 89"
+      },
+      {
+        "op": "replace",
+        "old": "2024 18.6k 235",
+        "new": "2024 18.8k 235"
+      },
+      {
+        "op": "replace",
+        "old": "3 14.7k 707 Fetching",
+        "new": "3 13.8k 720 Fetching metadata"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261122T135109Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261123T164406Z",
+    "from_sha256": "d217a9c35deceb3dfe221f31aaea486c18d10f2151ebdb4c3a74f8c439c7b68f",
+    "to_sha256": "f63ac38fdcf30aeef79963461be605c7fef6ead6caa7a9cbe3088e176562954d",
+    "computed_at": "2026-11-23T17:07:10Z"
+  },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
     "similarity": 0.9969,
