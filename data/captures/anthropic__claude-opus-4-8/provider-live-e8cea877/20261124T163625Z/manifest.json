@@ -1,0 +1,47 @@
+{
+  "source_id": "anthropic/claude-opus-4-8",
+  "provider": "Anthropic",
+  "model": "Claude Opus 4.8",
+  "target_kind": "provider-live",
+  "sha256": "503a08f5eed9a0528593c5729dbe06434c4e197a4ff4661823a69aa6ebc808c3",
+  "size_bytes": 298690,
+  "stored_as": "raw.html",
+  "text_sha256": "8ad5abb3b397d89f2f300ad595e8355e22d476276838a7df6cfc11175d8c711c",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://trust.anthropic.com/resources",
+    "final_url": "https://trust.anthropic.com/resources",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null,
+    "content_length": "298690",
+    "fetched_at": "2026-11-24T16:31:43Z",
+    "rendered": true,
+    "renderer": "playwright-chromium-headless",
+    "expand_clicks": 0,
+    "consent_dismissed": null,
+    "consent_nodes_removed": 0,
+    "frames_captured": []
+  },
+  "prior_sha256": "ad901b6fa50544252ac9f690f09a4917f28e257f52071b14de11d3b9cdd92afc",
+  "wayback": {
+    "ok": false,
+    "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=120)\"))",
+    "via": "spn2",
+    "requested_at": "2026-11-24T16:36:26Z",
+    "at": "2026-11-24T16:38:26Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-24T16:38:30Z"
+  }
+}
