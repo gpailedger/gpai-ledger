@@ -1,0 +1,47 @@
+{
+  "source_id": "eu-commission/gpai-code-of-practice",
+  "provider": "European Commission",
+  "model": "GPAI Code of Practice page (signatories)",
+  "target_kind": "watch-page",
+  "sha256": "6ced2a2fe9eb17c7c9e3cc4ac4d6e6ccf3b99247fdf1a7fc9569ea903d451750",
+  "size_bytes": 63422,
+  "stored_as": "raw.html",
+  "text_sha256": "448a69537c88151d23f4919bbaee5a3c3948caee43981f0d0ff431e1a5c644bb",
+  "doc_links_sha256": null,
+  "extraction_notes": [],
+  "http": {
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "final_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "status_code": 200,
+    "content_type": "text/html",
+    "etag": "\"1795624472-gzip\"",
+    "last_modified": "Wed, 25 Nov 2026 16:34:32 GMT",
+    "content_length": "11151",
+    "fetched_at": "2026-11-25T16:35:13Z"
+  },
+  "prior_sha256": "293dcd8a306d1acb7a242a4f54411db22b057c3d6ed70b00a776734a6106c69b",
+  "wayback": {
+    "ok": true,
+    "status_code": 200,
+    "spn_status": 200,
+    "snapshot": "https://web.archive.org/web/20261125114601/https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "snapshot_ts": "20261125114601",
+    "fresh": false,
+    "same_url": true,
+    "job_id": "spn2-9c4c02a70e480c863ca54c56b870daaeb4f866db",
+    "via": "spn2",
+    "requested_at": "2026-11-25T16:35:13Z",
+    "at": "2026-11-25T16:35:19Z"
+  },
+  "ots": {
+    "ok": true,
+    "calendars": [
+      "https://a.pool.opentimestamps.org",
+      "https://b.pool.opentimestamps.org",
+      "https://a.pool.eternitywall.com",
+      "https://ots.btc.catallaxy.com"
+    ],
+    "errors": [],
+    "at": "2026-11-25T16:35:25Z"
+  }
+}
