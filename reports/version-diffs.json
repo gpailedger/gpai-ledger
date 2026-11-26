@@ -25999,6 +25999,19 @@
     "to_sha256": "d568356443ebe666923c89fdbedc31b38f1c38ba963074a7d4ed7200cd94c298",
     "computed_at": "2026-11-20T15:08:45Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20261120T150214Z>captures/google__transparency-bucket/watch-page-81cd3682/20261126T162010Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261120T150214Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261126T162010Z",
+    "from_sha256": "d568356443ebe666923c89fdbedc31b38f1c38ba963074a7d4ed7200cd94c298",
+    "to_sha256": "1da9e3520188a5ad4066ad318a34b1874e4b3e31b69a8607288f1b5753f0a495",
+    "computed_at": "2026-11-26T16:29:16Z"
+  },
   "google/veo-3-1::aial-eval-3021560e::captures/google__veo-3-1/aial-eval-3021560e/20260829T143404Z>captures/google__veo-3-1/aial-eval-3021560e/20261117T152829Z": {
     "verdict": "changed",
     "similarity": 0.9968,
@@ -30686,6 +30699,54 @@
     "from_sha256": "093c1e25cebd8a3f14b5f879b619a1e1b04d12a8944270cca6d74929dc40efba",
     "to_sha256": "6d94016cbaeedcbf21a10bcc744598ecaba3055c262233927bd1c6b6544da358",
     "computed_at": "2026-11-25T16:40:54Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261125T162033Z>captures/huggingface__smollm3/provider-live-c6d71781/20261126T160530Z": {
+    "verdict": "changed",
+    "similarity": 0.9987,
+    "word_delta": 7,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 6.97M 1.36k",
+        "new": "20 6.81M 1.36k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.71M 800",
+        "new": "2025 3.77M 800"
+      },
+      {
+        "op": "replace",
+        "old": "2024 696k 2.81k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 706k 2.82k HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "op": "replace",
+        "old": "2025 130k 1.09k",
+        "new": "2025 132k 1.09k"
+      },
+      {
+        "op": "replace",
+        "old": "481k 1.49k mlfoundations/dclm-baseline-1.0",
+        "new": "481k 1.51k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "69.8k 188 epfml/FineWeb2-HQ",
+        "new": "69.8k 189 epfml/FineWeb2-HQ"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261125T162033Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261126T160530Z",
+    "from_sha256": "6d94016cbaeedcbf21a10bcc744598ecaba3055c262233927bd1c6b6544da358",
+    "to_sha256": "fcdb4362c3b51f78e233993dd7c6c291ac36398c0a639a54d1cff900a8ce4170",
+    "computed_at": "2026-11-26T16:29:16Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",

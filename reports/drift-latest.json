@@ -655,125 +655,85 @@
     "id": "huggingface/smollm3",
     "model": "SmolLM3-3B",
     "verdict": "near-identical",
-    "similarity": 0.997,
+    "similarity": 0.9987,
     "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
     "same_tool": true,
     "basis": "self-history",
     "note": "in-page document: compared to its own previous capture (cross-format archive comparison is structurally noisy)",
     "self_history": {
       "verdict": "changed",
-      "similarity": 0.997,
-      "word_delta": 14,
+      "similarity": 0.9987,
+      "word_delta": 7,
       "moved_words": 0,
       "changes": [
         {
           "op": "replace",
-          "old": "20 7.07M 1.36k",
-          "new": "20 6.97M 1.36k"
+          "old": "20 6.97M 1.36k",
+          "new": "20 6.81M 1.36k"
         },
         {
           "op": "replace",
-          "old": "2025 3.65M 800",
-          "new": "2025 3.71M 800"
+          "old": "2025 3.71M 800",
+          "new": "2025 3.77M 800"
         },
         {
           "op": "replace",
-          "old": "2024 662k 2.81k",
-          "new": "2024 696k 2.81k"
+          "old": "2024 696k 2.81k HuggingFaceTB/SmolLM3-3B",
+          "new": "2024 706k 2.82k HuggingFaceTB/SmolLM3-3B"
         },
         {
           "op": "replace",
-          "old": "2025 127k 1.09k",
-          "new": "2025 130k 1.09k"
+          "old": "2025 130k 1.09k",
+          "new": "2025 132k 1.09k"
         },
         {
           "op": "replace",
-          "old": "3.5B 470k 1.48k mlfoundations/dclm-baseline-1.0",
-          "new": "3.5B 481k 1.49k mlfoundations/dclm-baseline-1.0"
+          "old": "481k 1.49k mlfoundations/dclm-baseline-1.0",
+          "new": "481k 1.51k mlfoundations/dclm-baseline-1.0"
         },
         {
           "op": "replace",
-          "old": "48.3M 71.7k 401",
-          "new": "48.3M 73.5k 401"
-        },
-        {
-          "op": "replace",
-          "old": "8.61M 67.2k 188",
-          "new": "8.61M 69.8k 188"
-        },
-        {
-          "op": "replace",
-          "old": "380M 49k 90 allenai/peS2o Updated",
-          "new": "380M 49.8k 102 allenai/peS2o"
-        },
-        {
-          "op": "replace",
-          "old": "2024 18.5k 235 bigcode/the-stack-v2",
-          "new": "2024 19k 236 bigcode/the-stack-v2"
-        },
-        {
-          "op": "replace",
-          "old": "3 13k 732 Fetching",
-          "new": "3 12.6k 736 Fetching"
+          "old": "69.8k 188 epfml/FineWeb2-HQ",
+          "new": "69.8k 189 epfml/FineWeb2-HQ"
         }
       ],
       "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
       "same_tool": true,
-      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261124T165252Z",
-      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261125T162033Z"
+      "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261125T162033Z",
+      "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261126T160530Z"
     },
-    "word_delta": 14,
+    "word_delta": 7,
     "moved_words": 0,
     "changes": [
       {
         "op": "replace",
-        "old": "20 7.07M 1.36k",
-        "new": "20 6.97M 1.36k"
+        "old": "20 6.97M 1.36k",
+        "new": "20 6.81M 1.36k"
       },
       {
         "op": "replace",
-        "old": "2025 3.65M 800",
-        "new": "2025 3.71M 800"
+        "old": "2025 3.71M 800",
+        "new": "2025 3.77M 800"
       },
       {
         "op": "replace",
-        "old": "2024 662k 2.81k",
-        "new": "2024 696k 2.81k"
+        "old": "2024 696k 2.81k HuggingFaceTB/SmolLM3-3B",
+        "new": "2024 706k 2.82k HuggingFaceTB/SmolLM3-3B"
       },
       {
         "op": "replace",
-        "old": "2025 127k 1.09k",
-        "new": "2025 130k 1.09k"
+        "old": "2025 130k 1.09k",
+        "new": "2025 132k 1.09k"
       },
       {
         "op": "replace",
-        "old": "3.5B 470k 1.48k mlfoundations/dclm-baseline-1.0",
-        "new": "3.5B 481k 1.49k mlfoundations/dclm-baseline-1.0"
+        "old": "481k 1.49k mlfoundations/dclm-baseline-1.0",
+        "new": "481k 1.51k mlfoundations/dclm-baseline-1.0"
       },
       {
         "op": "replace",
-        "old": "48.3M 71.7k 401",
-        "new": "48.3M 73.5k 401"
-      },
-      {
-        "op": "replace",
-        "old": "8.61M 67.2k 188",
-        "new": "8.61M 69.8k 188"
-      },
-      {
-        "op": "replace",
-        "old": "380M 49k 90 allenai/peS2o Updated",
-        "new": "380M 49.8k 102 allenai/peS2o"
-      },
-      {
-        "op": "replace",
-        "old": "2024 18.5k 235 bigcode/the-stack-v2",
-        "new": "2024 19k 236 bigcode/the-stack-v2"
-      },
-      {
-        "op": "replace",
-        "old": "3 13k 732 Fetching",
-        "new": "3 12.6k 736 Fetching"
+        "old": "69.8k 188 epfml/FineWeb2-HQ",
+        "new": "69.8k 189 epfml/FineWeb2-HQ"
       }
     ]
   },
