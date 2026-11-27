@@ -26012,6 +26012,19 @@
     "to_sha256": "1da9e3520188a5ad4066ad318a34b1874e4b3e31b69a8607288f1b5753f0a495",
     "computed_at": "2026-11-26T16:29:16Z"
   },
+  "google/transparency-bucket::watch-page-81cd3682::captures/google__transparency-bucket/watch-page-81cd3682/20261126T162010Z>captures/google__transparency-bucket/watch-page-81cd3682/20261127T160621Z": {
+    "verdict": "no-text",
+    "same_tool": false,
+    "rule": "identity-v4",
+    "compared_via": "stored extracts (no extracted text for the previous and newest capture)",
+    "source": "google/transparency-bucket",
+    "target": "watch-page-81cd3682",
+    "from_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261126T162010Z",
+    "to_dir": "captures/google__transparency-bucket/watch-page-81cd3682/20261127T160621Z",
+    "from_sha256": "1da9e3520188a5ad4066ad318a34b1874e4b3e31b69a8607288f1b5753f0a495",
+    "to_sha256": "7fa8020192c311c83fa87919c2634960103b71a5527aff400a4dedd1b71c5112",
+    "computed_at": "2026-11-27T16:11:57Z"
+  },
   "google/veo-3-1::aial-eval-3021560e::captures/google__veo-3-1/aial-eval-3021560e/20260829T143404Z>captures/google__veo-3-1/aial-eval-3021560e/20261117T152829Z": {
     "verdict": "changed",
     "similarity": 0.9968,
@@ -30747,6 +30760,74 @@
     "from_sha256": "6d94016cbaeedcbf21a10bcc744598ecaba3055c262233927bd1c6b6544da358",
     "to_sha256": "fcdb4362c3b51f78e233993dd7c6c291ac36398c0a639a54d1cff900a8ce4170",
     "computed_at": "2026-11-26T16:29:16Z"
+  },
+  "huggingface/smollm3::provider-live-c6d71781::captures/huggingface__smollm3/provider-live-c6d71781/20261126T160530Z>captures/huggingface__smollm3/provider-live-c6d71781/20261127T155145Z": {
+    "verdict": "changed",
+    "similarity": 0.9962,
+    "word_delta": 15,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "20 6.81M 1.36k",
+        "new": "20 6.63M 1.36k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 3.77M 800",
+        "new": "2025 3.74M 800"
+      },
+      {
+        "op": "replace",
+        "old": "2024 706k 2.82k",
+        "new": "2024 736k 2.82k"
+      },
+      {
+        "op": "replace",
+        "old": "2025 132k 1.09k",
+        "new": "2025 133k 1.09k"
+      },
+      {
+        "op": "replace",
+        "old": "3.5B 481k 1.51k mlfoundations/dclm-baseline-1.0",
+        "new": "3.5B 494k 1.54k mlfoundations/dclm-baseline-1.0"
+      },
+      {
+        "op": "replace",
+        "old": "3.02B 229k 337",
+        "new": "3.02B 226k 337"
+      },
+      {
+        "op": "replace",
+        "old": "48.3M 73.5k 401 HuggingFaceTB/smoltalk2",
+        "new": "48.3M 76k 402 HuggingFaceTB/smoltalk2"
+      },
+      {
+        "op": "replace",
+        "old": "8.61M 69.8k 189",
+        "new": "8.61M 73.7k 189"
+      },
+      {
+        "op": "replace",
+        "old": "380M 49.8k 102",
+        "new": "380M 51.6k 102"
+      },
+      {
+        "op": "replace",
+        "old": "2024 19k 236 bigcode/the-stack-v2 Updated Aug 3 12.6k 736",
+        "new": "2024 20.3k 236 bigcode/the-stack-v2 Viewer Updated Aug 3 5.14B 16.5k 736"
+      }
+    ],
+    "source": "huggingface/smollm3",
+    "target": "provider-live-c6d71781",
+    "from_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261126T160530Z",
+    "to_dir": "captures/huggingface__smollm3/provider-live-c6d71781/20261127T155145Z",
+    "from_sha256": "fcdb4362c3b51f78e233993dd7c6c291ac36398c0a639a54d1cff900a8ce4170",
+    "to_sha256": "7067162d6d27b963c78511a1759a6d82fb4abd7eb27a5f4927d545e40b940852",
+    "computed_at": "2026-11-27T16:11:57Z"
   },
   "ibm/granite-4-0-h::aial-eval-history-31396dc4::captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T184757Z>captures/ibm__granite-4-0-h/aial-eval-history-31396dc4/20260829T190847Z": {
     "verdict": "changed",
@@ -54737,5 +54818,43 @@
     "from_sha256": "66e233e1caf92b97d5329874964bc2d6d57bc33ce3829c47936e9b3b6c94b87e",
     "to_sha256": "c61675a0e180f8410f7c9138cf0b8f29d6a37144cb28ce686d6149c14b003ac4",
     "computed_at": "2026-11-24T17:20:54Z"
+  },
+  "xai/model-catalog::watch-page-905d5d7a::captures/xai__model-catalog/watch-page-905d5d7a/20261124T171101Z>captures/xai__model-catalog/watch-page-905d5d7a/20261127T160548Z": {
+    "verdict": "changed",
+    "similarity": 0.9791,
+    "word_delta": 50,
+    "moved_words": 0,
+    "same_tool": true,
+    "compared_via": "re-extracted from the stored bytes with beautifulsoup4 4.12.3 (html.parser)",
+    "rule": "identity-v4",
+    "changes": [
+      {
+        "op": "replace",
+        "old": "size: 20MiB Maximum number",
+        "new": "size: 25 MiB per image Maximum"
+      },
+      {
+        "op": "replace",
+        "old": "images: No limit Supported",
+        "new": "images: no fixed limit"
+      },
+      {
+        "op": "replace",
+        "old": "types: jpg/jpeg or png . Any image/text",
+        "new": "types: JPEG, PNG, WebP, and ICO Minimum image size: both width and height at least 8 pixels, and at least 512 pixels in total for example, 16 32 or 23 23 Image URLs must use https:// , be publicly reachable and download within 5 seconds Any"
+      },
+      {
+        "op": "replace",
+        "old": "updated: September 21, 2026",
+        "new": "updated: November 25, 2026"
+      }
+    ],
+    "source": "xai/model-catalog",
+    "target": "watch-page-905d5d7a",
+    "from_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261124T171101Z",
+    "to_dir": "captures/xai__model-catalog/watch-page-905d5d7a/20261127T160548Z",
+    "from_sha256": "c61675a0e180f8410f7c9138cf0b8f29d6a37144cb28ce686d6149c14b003ac4",
+    "to_sha256": "7a501722efdc245511ffccea187421a15df5e9795bc9de96f67539342ebe05f3",
+    "computed_at": "2026-11-27T16:11:57Z"
   }
 }
